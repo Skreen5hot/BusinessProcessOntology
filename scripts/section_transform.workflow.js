@@ -12,11 +12,13 @@ export const meta = {
 }
 
 // ---- args: { section, section_name, out, context, groups:[{h,tsv,name}] } ----
-const SECTION = args.section
-const SECTION_NAME = args.section_name
-const OUT = args.out
-const CONTEXT = args.context
-const GROUPS = args.groups
+// args may arrive as an object or as a JSON string depending on the caller; handle both.
+const A = (typeof args === 'string') ? JSON.parse(args) : (args || {})
+const SECTION = A.section
+const SECTION_NAME = A.section_name
+const OUT = A.out
+const CONTEXT = A.context
+const GROUPS = A.groups
 
 const COMMON = `You are transforming APQC section ${SECTION} "${SECTION_NAME}" into a BFO 2020 / CCO 2.0 reality-layer module.
 FIRST read and treat as binding, in order:
