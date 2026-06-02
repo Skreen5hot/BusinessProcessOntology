@@ -27,7 +27,7 @@ FIRST read and treat as binding, in order:
   - ontology/slices/apqc_1_1_1.ttl     (GOLD pattern; copy house style + prefixes exactly)
   - ontology/apqc-ext.ttl              (shared genera — REUSE, never re-mint)
 Verify every cco:ont… IRI in vendor/cco/CommonCoreOntologiesMerged.ttl before use (read the definition, not just the label).
-IRI scheme: process class ex:P<pcfID>; catalog node ex:PCF_<pcfID>; supporting classes readable ex: names, no pcf ids.
+IRI scheme (STRICT, D7): EVERY primary process class IRI MUST be exactly ex:P<pcfID> (e.g. PCF 10399 -> ex:P10399) -- NEVER a readable name like ex:ResolveComplaint. Each pcfID maps to exactly ONE class (no duplicates). Readable ex: CamelCase names are ONLY for supporting classes (ICEs/agents/roles/capabilities/genera), which carry NO ex:pcfID. Catalog node = ex:PCF_<pcfID>.
 GOLDEN PRINCIPLE: act genus must agree with output kind — Appraisal/Analysis/Information-Processing → DESCRIPTIVE ICE; Planning/Formulation/Selection → DIRECTIVE ICE.`
 
 const VOCAB_SCHEMA = {
@@ -117,8 +117,9 @@ log(`Assembled ${assembled?.written_path}: ${assembled?.n_processes} processes`)
 phase('Validate')
 const VAL_SCHEMA = { type: 'object', required: ['final_status', 'gate_a', 'gate_b', 'gate_c', 'gate_d', 'attempts'], properties: { final_status: { type: 'string' }, gate_a: { type: 'string' }, gate_b: { type: 'string' }, gate_c: { type: 'string' }, gate_d: { type: 'string' }, attempts: { type: 'integer' }, remaining_issues: { type: 'string' } } }
 const validation = await agent(
-  `TASK: Validate and self-repair ${OUT} until Gates A-D are clean.
-Loop (max 6): run \`python -m src.apqc_transform.validate ${OUT}\`; read the gate table + ontology/reports/gate-${slug.replace('_0','_0')}.json (file: ontology/reports/gate-apqc_${slug}.json); fix any FAIL by editing ${OUT} (A syntax; B verify the cco:/obo: IRI in vendor/cco/CommonCoreOntologiesMerged.ttl; C read the SHACL message — common: a Directive ICE anchored only under CCO Plan/Objective needs an explicit rdfs:subClassOf cco:ont00000965, and an act under a CCO Act outside the shape allowlist needs an explicit rdfs:subClassOf cco:ont00000228 Planned Act; D find contradictory restrictions). Preserve intent; never delete a process to silence a gate. Stop when no FAIL remains. Delete ontology/reports/_reasoned_*.ttl when done. Return final gate statuses + attempts.`,
+  `TASK: Normalize, then validate and self-repair ${OUT} until Gates A-D are clean.
+FIRST run \`python scripts/normalize_iris.py ${OUT}\` to enforce the D7 scheme (ex:P<pcfID> on every primary class). If it reports a DUPLICATE pcfID, two classes carry the same ex:pcfID: find the mis-keyed one in ${OUT} (cross-check the group TSVs), correct its ex:pcfID to the right value, and re-run the normalizer until it succeeds with no duplicates.
+THEN loop (max 6): run \`python -m src.apqc_transform.validate ${OUT}\`; read the gate table + ontology/reports/gate-${slug.replace('_0','_0')}.json (file: ontology/reports/gate-apqc_${slug}.json); fix any FAIL by editing ${OUT} (A syntax; B verify the cco:/obo: IRI in vendor/cco/CommonCoreOntologiesMerged.ttl; C read the SHACL message — common: a Directive ICE anchored only under CCO Plan/Objective needs an explicit rdfs:subClassOf cco:ont00000965, and an act under a CCO Act outside the shape allowlist needs an explicit rdfs:subClassOf cco:ont00000228 Planned Act; D find contradictory restrictions). Preserve intent; never delete a process to silence a gate. Stop when no FAIL remains. Delete ontology/reports/_reasoned_*.ttl when done. Return final gate statuses + attempts.`,
   { label: `validate:${SECTION}`, phase: 'Validate', schema: VAL_SCHEMA },
 )
 log(`Validate: ${validation?.final_status} after ${validation?.attempts} attempt(s) — C:${validation?.gate_c} D:${validation?.gate_d}`)

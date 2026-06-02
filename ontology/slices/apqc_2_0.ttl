@@ -168,9 +168,9 @@ ex:CustomerRole a owl:Class ;
 ex:ProductServicePortfolioManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:EvaluateExistingProductPerformance ] ,
+          owl:someValuesFrom ex:P10063 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:PrioritizeAndSelectNewConcepts ] ;
+          owl:someValuesFrom ex:P10074 ] ;
     rdfs:label "Product/Service Portfolio Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to maintain and revamp a portfolio of product/service offerings in alignment with business strategy and market opportunities." ;
     rdfs:comment "Models APQC 2.1.1 (PCF 10061) as a standing function, not a process (R5/R6); realized in its bounded child acts. Bearer is an Organization." .
@@ -178,9 +178,9 @@ ex:ProductServicePortfolioManagementCapability a owl:Class ;
 ex:ProductServiceLifecycleManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:IntroduceNewProducts ] ,
+          owl:someValuesFrom ex:P10077 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:RetireOutdatedProducts ] ;
+          owl:someValuesFrom ex:P10078 ] ;
     rdfs:label "Product/Service Lifecycle Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to introduce, sustain, and withdraw product/service offerings across their life cycle." ;
     rdfs:comment "Models APQC 2.1.2 (PCF 10067) as a standing function, not a process (R5/R6)." .
@@ -188,9 +188,9 @@ ex:ProductServiceLifecycleManagementCapability a owl:Class ;
 ex:IntellectualPropertyManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:ReviewInfringement ] ,
+          owl:someValuesFrom ex:P16826 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:ManageRegulatoryRequirements ] ;
+          owl:someValuesFrom ex:P12771 ] ;
     rdfs:label "Intellectual Property Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to protect, value, and govern patents, copyrights, and regulatory requirements for its products and services." ;
     rdfs:comment "Models APQC 2.1.3 (PCF 19985) as a standing function, not a process (R5/R6)." .
@@ -198,9 +198,9 @@ ex:IntellectualPropertyManagementCapability a owl:Class ;
 ex:ProductDataManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:ManageMaterialsMasterLists ] ,
+          owl:someValuesFrom ex:P11741 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom ex:ReviewAndApproveDataAccessRequests ] ;
+          owl:someValuesFrom ex:P11750 ] ;
     rdfs:label "Product/Service Master Data Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to securely store, control, and govern access to product/service master data and other critical data." ;
     rdfs:comment "Models APQC 2.1.4 (PCF 11740) as a standing function, not a process (R5/R6); realized in ex:ActOfDataManagement instances." .
@@ -381,7 +381,7 @@ ex:StrategicAlignmentAssessment a owl:Class ;
           owl:someValuesFrom ex:BusinessStrategy ] ;
     rdfs:label "Strategic Alignment Assessment" ;
     skos:definition "A Descriptive Information Content Entity that describes a judgement of whether a product/service concept aligns with the organization's business strategy." ;
-    rdfs:comment "Gate-F mint: output of 2.1.1.2. Distinct from ex:FeasibilityAssessment, which judges practicability/realizability; this judges STRATEGIC ALIGNMENT, a different subject. Replacing the FeasibilityAssessment filler on ex:ConfirmConceptStrategyAlignment corrects an inclusiveness/exclusiveness violation (the output ICE described the wrong subject)." .
+    rdfs:comment "Gate-F mint: output of 2.1.1.2. Distinct from ex:FeasibilityAssessment, which judges practicability/realizability; this judges STRATEGIC ALIGNMENT, a different subject. Replacing the FeasibilityAssessment filler on ex:P10066 corrects an inclusiveness/exclusiveness violation (the output ICE described the wrong subject)." .
 
 ex:TechnicalAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Technical Assessment" ;
@@ -530,7 +530,7 @@ ex:Market a owl:Class ;
 #    DUPLICATE RECONCILED: ex:BillOfMaterials was minted as Descriptive
 #    in group 2.1 and Directive in group 2.3; reconciled to ONE Directive
 #    declaration (a BOM prescribes the required components/parts), so the
-#    2.1 master-data act ex:ManageBillsOfMaterial and the 2.3 design act
+#    2.1 master-data act ex:P11742 and the 2.3 design act
 #    ex:P16818 both reference the same coherent class.
 ####################################################################
 
@@ -551,7 +551,7 @@ ex:SupplyChainEffectivenessReview a owl:Class ; rdfs:subClassOf cco:ont00000853 
 ex:SupplyChainMethodologyAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Supply Chain Methodology Analysis" ;
     skos:definition "A Descriptive Information Content Entity that describes a data-analytics conclusion correlating gaps and efficiencies across an organization's existing supply-chain methodologies." ;
-    rdfs:comment "Gate-F mint: output of the 2.1.2.5.4 analysis act (ex:ReviewSupplyChainMethodologies). Distinct from ex:SupplyChainEffectivenessReview (the 2.1.2.5.3 appraisal verdict): the .4 source ('Collecting and examining raw data ... drawing conclusions ... Apply the information to make better business decisions') yields an analytic conclusion, not an effectiveness judgement. Previously both sibling acts shared the same effectiveness-review filler despite different act genera (Analysis vs Appraisal); giving .4 a distinct output resolves that inconsistent anchoring. Descriptive." .
+    rdfs:comment "Gate-F mint: output of the 2.1.2.5.4 analysis act (ex:P19647). Distinct from ex:SupplyChainEffectivenessReview (the 2.1.2.5.3 appraisal verdict): the .4 source ('Collecting and examining raw data ... drawing conclusions ... Apply the information to make better business decisions') yields an analytic conclusion, not an effectiveness judgement. Previously both sibling acts shared the same effectiveness-review filler despite different act genera (Analysis vs Appraisal); giving .4 a distinct output resolves that inconsistent anchoring. Descriptive." .
 
 ex:QualityPerformanceReview a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Quality Performance Review" ;
@@ -593,7 +593,7 @@ ex:MaterialsMasterList a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:BillOfMaterials a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Bill of Materials" ;
     skos:definition "A Directive Information Content Entity that lists and prescribes the raw materials, components, and parts (across design, manufacturing, and service variants) required to produce an end product." ;
-    rdfs:comment "DUPLICATE RECONCILED to ONE Directive class: a BOM prescribes which components/parts must be used to build the product. Output of the 2.3 design act ex:P16818 and the managed master-data object of the 2.1 act ex:ManageBillsOfMaterial." ;
+    rdfs:comment "DUPLICATE RECONCILED to ONE Directive class: a BOM prescribes which components/parts must be used to build the product. Output of the 2.3 design act ex:P16818 and the managed master-data object of the 2.1 act ex:P11742." ;
     skos:example "An engineering, manufacturing, and service BOM for a new appliance." .
 
 ex:Routing a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -690,7 +690,7 @@ ex:CustomerTestReport a owl:Class ;
 
 # ---- 2.1.1.x (parts of the Portfolio Management Capability) ----
 
-ex:EvaluateExistingProductPerformance a owl:Class ;
+ex:P10063 a owl:Class ;
     ex:pcfID "10063" ; ex:hierarchyID "2.1.1.1" ;
     ex:apqcSourceText "Assessing the capabilities and performance of existing products/services, in light of market opportunities. Examine performance of the existing line of products/services, including measures of profitability, penetration, and value delivered. Identify gaps between existing solutions' portfolio or their performance levels, on the one hand, and the current market demand, available technologies, and/or customer expectations, on the other. Consider opportunities in the present market environment and any relation with the performance. Consider input from professional services providers." ;
     rdfs:label "Evaluate performance of existing products/services against market opportunities" ;
@@ -702,7 +702,7 @@ ex:EvaluateExistingProductPerformance a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:MarketOpportunityData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProductServicePerformanceEvaluation ] .
 
-ex:ConfirmConceptStrategyAlignment a owl:Class ;
+ex:P10066 a owl:Class ;
     ex:pcfID "10066" ; ex:hierarchyID "2.1.1.2" ;
     ex:apqcSourceText "Checking the alignment of product/service portfolio, and its individual offerings, with the organization's overall strategy and planning for the development of new or revised solutions. Conduct reality checks on new product/service concepts prior to committing significant investment to ensure that the revamped solutions' portfolio is in line with the overall business strategy, aligns organizational processes for their development, and creates a plan for assimilating these changes in the organization's offerings. Enlist senior management executives." ;
     rdfs:label "Confirm alignment of product/service concepts with business strategy" ;
@@ -715,7 +715,7 @@ ex:ConfirmConceptStrategyAlignment a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:StrategicAlignmentAssessment ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:SeniorManagement ] .
 
-ex:PrioritizeAndSelectNewConcepts a owl:Class ;
+ex:P10074 a owl:Class ;
     ex:pcfID "10074" ; ex:hierarchyID "2.1.1.3" ;
     ex:apqcSourceText "Selecting from among the potential new/revised solutions and capitalizing on market opportunities so that they meet the cost and quality prerequisites. Create an index of product/service concepts, and arrange them in order of preference. Base prioritization on adherence to Plan and develop cost and quality targets [10073], and choose options that would comprise the revised solution portfolio." ;
     rdfs:label "Prioritize and select new product/service concepts" ;
@@ -726,7 +726,7 @@ ex:PrioritizeAndSelectNewConcepts a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:ProductServiceConcept ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProductServicePriorityList ] .
 
-ex:PlanCostAndQualityTargets a owl:Class ;
+ex:P10073 a owl:Class ;
     ex:pcfID "10073" ; ex:hierarchyID "2.1.1.4" ;
     ex:apqcSourceText "Setting prerequisites for the cost of development and quality standards for the new solutions' portfolio and/or its individual offerings. Set targets for the budget and quality standards for the revamped portfolio of solution offerings. Prepare a plan for the outlay required for revising and adding new product/services. Identify intended levels of quality for these, bearing in mind the existing standards of solutions offered by the organization and its competitors. Enlist senior management executives, particularly those responsible for finance and budgeting, product/service design, manufacturing/processing, delivery, and quality control." ;
     rdfs:label "Plan and develop cost and quality targets" ;
@@ -738,7 +738,7 @@ ex:PlanCostAndQualityTargets a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityTarget ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:SeniorManagement ] .
 
-ex:SpecifyDevelopmentTimingTargets a owl:Class ;
+ex:P10075 a owl:Class ;
     ex:pcfID "10075" ; ex:hierarchyID "2.1.1.5" ;
     ex:apqcSourceText "Determining the individual and collective timeframe for realizing new/revised solutions. Create a schedule that clearly demarcates the timeframes designated for the development of every new solution and/or revising each of the existing ones. Create a timetable by setting deadlines for each step in overhauling the product/service portfolio." ;
     rdfs:label "Specify development timing targets" ;
@@ -748,7 +748,7 @@ ex:SpecifyDevelopmentTimingTargets a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DevelopmentSchedule ] .
 
-ex:PlanProductModifications a owl:Class ;
+ex:P10076 a owl:Class ;
     ex:pcfID "10076" ; ex:hierarchyID "2.1.1.6" ;
     ex:apqcSourceText "Developing a programmatic procedure for changing products/services while paying heed to all stakeholders involved and the prerequisites identified. Create a plan for changing the existing portfolio of solution offerings. Develop a systematic program for the design, processing, and delivery of the new product/service concepts. Construct project-flow diagrams. Identify the stakeholders involved and personnel responsible for each stage, as well as the necessary decisions. Earmark the budgetary outlay, and conduct any strategic planning required." ;
     rdfs:label "Plan for product/service offering modifications" ;
@@ -760,7 +760,7 @@ ex:PlanProductModifications a owl:Class ;
 
 # ---- 2.1.2.x (parts of the Lifecycle Management Capability) ----
 
-ex:DevelopLaunchPlan a owl:Class ;
+ex:P16824 a owl:Class ;
     ex:pcfID "16824" ; ex:hierarchyID "2.1.2.1" ;
     ex:apqcSourceText "Developing a program and managing a perspective for new product/service introduction and launch." ;
     rdfs:label "Develop plan for new product/service development and introduction/launch" ;
@@ -770,7 +770,7 @@ ex:DevelopLaunchPlan a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:LaunchPlan ] .
 
-ex:IntroduceNewProducts a owl:Class ;
+ex:P10077 a owl:Class ;
     ex:pcfID "10077" ; ex:hierarchyID "2.1.2.2" ;
     ex:apqcSourceText "Launching revamped product/service portfolio in to the market. Introduction in to the marketplace is done by deploying effective channels for marketing, sales, delivery, and after-sales servicing. Introduce new/revised solution offerings in a concerted effort. Coordinate a cross-functional effort." ;
     rdfs:label "Introduce new products/services" ;
@@ -779,7 +779,7 @@ ex:IntroduceNewProducts a owl:Class ;
     skos:example "A cross-functional team launches a revamped product line across marketing and distribution channels." ;
     rdfs:subClassOf cco:ont00000228 .
 
-ex:RetireOutdatedProducts a owl:Class ;
+ex:P10078 a owl:Class ;
     ex:pcfID "10078" ; ex:hierarchyID "2.1.2.3" ;
     ex:apqcSourceText "Removing nonconforming products and services. Withdraw those products/services that do not conform to market realities and are not positioned to take advantage of prevailing opportunities. Coordinate with processing/delivery teams within the organization and key stakeholders in the supply chain. Create mechanisms for continued after-sales servicing, as well as deploy effective public relations efforts in order to preserve the image and goodwill of the organization through the process." ;
     rdfs:label "Retire outdated products/services" ;
@@ -788,7 +788,7 @@ ex:RetireOutdatedProducts a owl:Class ;
     skos:example "A firm retires an obsolete product line and stands up continued spares support." ;
     rdfs:subClassOf cco:ont00000228 .
 
-ex:RefinePerformanceIndicators a owl:Class ;
+ex:P10079 a owl:Class ;
     ex:pcfID "10079" ; ex:hierarchyID "2.1.2.4" ;
     ex:apqcSourceText "Attuning the performance measures of products/services to better reflect the revamped portfolio of solution offerings. Revise the parameters used to measure performance, apropos the organization's product/service offerings. (Modify these standards in consideration of the changes made to the portfolio by Introduce new products/services [10077] and Retire outdated products/services [10078].)" ;
     rdfs:label "Identify and refine performance indicators" ;
@@ -798,7 +798,7 @@ ex:RefinePerformanceIndicators a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:PerformanceIndicatorSpecification ] .
 
-ex:ConductPostLaunchReview a owl:Class ;
+ex:P11423 a owl:Class ;
     ex:pcfID "11423" ; ex:hierarchyID "2.1.2.5" ;
     ex:apqcSourceText "Learning from either a test or a full production run within the consumer market. Companies use this as an opportunity to both test and react to new products, ideas, or innovations based on the initial reaction of consumers on an individual level. Within this process, analytics are used to determine the relative success of a new product offering. Within this process, companies will launch key analytics to test a products acceptance. They will also review market performance and compare to similar products and against the business case or the financial plan. Companies can also measure the effectiveness of their supply chain network, and can apply what is learned from the post launch review to other new products, processes, and procedures to ensure and enhance the product quality." ;
     rdfs:label "Conduct post launch review" ;
@@ -807,15 +807,15 @@ ex:ConductPostLaunchReview a owl:Class ;
     skos:example "A team runs post-launch analytics and compiles a review comparing actual market performance against the business case." ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:PostLaunchReview ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:CarryOutPostLaunchAnalytics ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ReviewMarketPerformance ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ReviewSupplyChainEffectiveness ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ReviewSupplyChainMethodologies ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ReviewProductQualityPerformance ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ConductFinancialReview ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ConductNPDProcessAssessment ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P19646 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P11424 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P11425 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P19647 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P11426 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P11427 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P11428 ] .
 
-ex:CarryOutPostLaunchAnalytics a owl:Class ;
+ex:P19646 a owl:Class ;
     ex:pcfID "19646" ; ex:hierarchyID "2.1.2.5.1" ;
     ex:apqcSourceText "Measuring the performance of marketing once the product/services are launched. This broadly covers measuring user engagement and product's/service's performance in the market." ;
     rdfs:label "Carry out post launch analytics to test the acceptability in the market" ;
@@ -826,7 +826,7 @@ ex:CarryOutPostLaunchAnalytics a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:ProductServicePerformanceData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:MarketAcceptanceAnalysis ] .
 
-ex:ReviewMarketPerformance a owl:Class ;
+ex:P11424 a owl:Class ;
     ex:pcfID "11424" ; ex:hierarchyID "2.1.2.5.2" ;
     ex:apqcSourceText "Conducting customer and market analysis to review progress and identify opportunities for increasing market position. Track and review product/service response through sales reports, website statistics, direct response from customers, and survey reports." ;
     rdfs:label "Review market performance" ;
@@ -838,7 +838,7 @@ ex:ReviewMarketPerformance a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:MarketStudy ] .
 
-ex:ReviewSupplyChainEffectiveness a owl:Class ;
+ex:P11425 a owl:Class ;
     ex:pcfID "11425" ; ex:hierarchyID "2.1.2.5.3" ;
     ex:apqcSourceText "Determining the performance of supply chain to all departments and logistics from input to shop floor. Seeking performance reviews at each intersection and communication channels. Review effectiveness of supply chain and distribution to check if it is meeting the demands of the various groups and organizations that are concerned with its activities (groups might include customers, partners, suppliers, and vendors)." ;
     rdfs:label "Review effectiveness of supply chain and distribution network" ;
@@ -849,18 +849,18 @@ ex:ReviewSupplyChainEffectiveness a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:SupplyChainPerformanceData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:SupplyChainEffectivenessReview ] .
 
-ex:ReviewSupplyChainMethodologies a owl:Class ;
+ex:P19647 a owl:Class ;
     ex:pcfID "19647" ; ex:hierarchyID "2.1.2.5.4" ;
     ex:apqcSourceText "Collecting and examining raw data with the purpose of drawing conclusions about that information and correlate gaps and efficiencies to the existing supply chain channels. Apply the information to make better business decisions to the related supply chain methodologies to meet efficiency." ;
     rdfs:label "Apply data and analytics to review supply chain methodologies" ;
     skos:definition "An Act of Analysis that has as input supply chain performance data and has as output a supply chain methodology analysis correlating gaps and efficiencies across supply-chain channels." ;
-    rdfs:comment "Genus is analysis; output is a Descriptive ICE per the GOLDEN PRINCIPLE. Gate-F: the output filler was changed from the shared ex:SupplyChainEffectivenessReview to the distinct ex:SupplyChainMethodologyAnalysis, so this analysis act (.4) and the sibling appraisal act (.3, ex:ReviewSupplyChainEffectiveness) no longer collapse to the same output class while carrying different act genera. The .4 source is genuine analysis (drawing conclusions from raw data), producing a data-analytics conclusion distinct from the .3 effectiveness verdict." ;
+    rdfs:comment "Genus is analysis; output is a Descriptive ICE per the GOLDEN PRINCIPLE. Gate-F: the output filler was changed from the shared ex:SupplyChainEffectivenessReview to the distinct ex:SupplyChainMethodologyAnalysis, so this analysis act (.4) and the sibling appraisal act (.3, ex:P11425) no longer collapse to the same output class while carrying different act genera. The .4 source is genuine analysis (drawing conclusions from raw data), producing a data-analytics conclusion distinct from the .3 effectiveness verdict." ;
     skos:example "Analysts examine raw supply-chain data to correlate efficiency gaps across channels." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:SupplyChainPerformanceData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:SupplyChainMethodologyAnalysis ] .
 
-ex:ReviewProductQualityPerformance a owl:Class ;
+ex:P11426 a owl:Class ;
     ex:pcfID "11426" ; ex:hierarchyID "2.1.2.5.5" ;
     ex:apqcSourceText "Identifying the quality and performance of the product/service delivered to customers. Analyze data from the customer feedback, audits, measures of customer satisfaction (such as product quality complaints and recalls), and organizational policies on delivery." ;
     rdfs:label "Review quality and performance of the product/service" ;
@@ -871,7 +871,7 @@ ex:ReviewProductQualityPerformance a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityPerformanceReview ] .
 
-ex:ConductFinancialReview a owl:Class ;
+ex:P11427 a owl:Class ;
     ex:pcfID "11427" ; ex:hierarchyID "2.1.2.5.6" ;
     ex:apqcSourceText "Evaluating organization's financial reports and financial reporting processes. Review and document the ROI catered by the product/service delivery to the customer in the market." ;
     rdfs:label "Conduct financial review" ;
@@ -881,7 +881,7 @@ ex:ConductFinancialReview a owl:Class ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:FinancialReview ] .
 
-ex:ConductNPDProcessAssessment a owl:Class ;
+ex:P11428 a owl:Class ;
     ex:pcfID "11428" ; ex:hierarchyID "2.1.2.5.7" ;
     ex:apqcSourceText "Analyzing the steps involved in the development of new product, its effect on existing product, resources, and functions related to the development of the new product until its sale in the competitive market place." ;
     rdfs:label "Conduct new product development process assessment" ;
@@ -893,7 +893,7 @@ ex:ConductNPDProcessAssessment a owl:Class ;
 
 # ---- 2.1.3.x (parts of the IP Management Capability) ----
 
-ex:ConductMandatoryAndElectiveReviews a owl:Class ;
+ex:P19941 a owl:Class ;
     ex:pcfID "19941" ; ex:hierarchyID "2.1.3.1" ;
     ex:apqcSourceText "Conducting necessary performance reviews on enforcement of processes and steps to ensure protection. Determine policies and reviews for Manage patents, copyrights, and regulatory requirements [19985]." ;
     rdfs:label "Conduct mandatory and elective reviews" ;
@@ -903,7 +903,7 @@ ex:ConductMandatoryAndElectiveReviews a owl:Class ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RegulatoryReview ] .
 
-ex:ReviewInfringement a owl:Class ;
+ex:P16826 a owl:Class ;
     ex:pcfID "16826" ; ex:hierarchyID "2.1.3.2" ;
     ex:apqcSourceText "Reviewing activities in regards to patentability and infringement. The usage of Open Source in commercial product development will be reviewed in regard to licensing, community development, etc." ;
     rdfs:label "Review infringement of patents and copyrights" ;
@@ -913,7 +913,7 @@ ex:ReviewInfringement a owl:Class ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:InfringementAssessment ] .
 
-ex:DeterminePatentAndCopyrightNeeds a owl:Class ;
+ex:P16827 a owl:Class ;
     ex:pcfID "16827" ; ex:hierarchyID "2.1.3.3" ;
     ex:apqcSourceText "Determining the business need for patents and copyrights. The patents and copyrights are managed by Manage copyrights and patents [11062]." ;
     rdfs:label "Determine patent and copyright needs" ;
@@ -923,7 +923,7 @@ ex:DeterminePatentAndCopyrightNeeds a owl:Class ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:IPNeedsAssessment ] .
 
-ex:DefineTechnicalDocumentationRequirements a owl:Class ;
+ex:P19697 a owl:Class ;
     ex:pcfID "19697" ; ex:hierarchyID "2.1.3.4" ;
     ex:apqcSourceText "Defining sourcing and procurement requirements for new product technical documentation management. Make sourcing-based decisions that identify the capabilities that will be required in order to launch the new product. This documentation will be used to support the product following entry into service. It is compiled and managed in Manage product and process related data [12082], but the capability to manage and maintain this documentation must be defined and established." ;
     rdfs:label "Define product technical documentation management requirements" ;
@@ -933,7 +933,7 @@ ex:DefineTechnicalDocumentationRequirements a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProductServiceRequirementSpecification ] .
 
-ex:ManageRegulatoryRequirements a owl:Class ;
+ex:P12771 a owl:Class ;
     ex:pcfID "12771" ; ex:hierarchyID "2.1.3.5" ;
     ex:apqcSourceText "Aligning regulatory activities related to managing industry requirements. Train employees on regulatory requirements. Records for the appropriate regulatory agencies must be maintained and the new product process must be approved by the appropriate regulatory body before it is published to the organization. The submission lifecycle - i.e. creation, review, and approval of the submission and its components must be managed in a collaborative fashion." ;
     rdfs:label "Manage regulatory requirements" ;
@@ -944,11 +944,11 @@ ex:ManageRegulatoryRequirements a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:RegulatoryRequirementData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RegulatoryRecord ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:RegulatoryAuthority ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:TrainEmployeesOnRegulations ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:MaintainRegulatoryRecords ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageRegulatorySubmissionLifecycle ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P12772 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P12773 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P12776 ] .
 
-ex:TrainEmployeesOnRegulations a owl:Class ;
+ex:P12772 a owl:Class ;
     ex:pcfID "12772" ; ex:hierarchyID "2.1.3.5.1" ;
     ex:apqcSourceText "Conducting training and impart learning to existing and new employees. Training will relate to the most recent/enforced regulations of the business to meet Manage regulatory requirements [12771]." ;
     rdfs:label "Train employees on appropriate regulatory requirements" ;
@@ -958,7 +958,7 @@ ex:TrainEmployeesOnRegulations a owl:Class ;
     rdfs:subClassOf cco:ont00000234 , cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:RegulatoryRequirementData ] .
 
-ex:MaintainRegulatoryRecords a owl:Class ;
+ex:P12773 a owl:Class ;
     ex:pcfID "12773" ; ex:hierarchyID "2.1.3.5.2" ;
     ex:apqcSourceText "Identifying steps and procedures to manage and regularly update the records for regulatory agencies. Updates will be made to safety procedures, identity and access management, software tools and applications, internal accessibility policies, internal quality parameters, etc." ;
     rdfs:label "Maintain records for regulatory agencies" ;
@@ -968,7 +968,7 @@ ex:MaintainRegulatoryRecords a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RegulatoryRecord ] .
 
-ex:ManageRegulatorySubmissionLifecycle a owl:Class ;
+ex:P12776 a owl:Class ;
     ex:pcfID "12776" ; ex:hierarchyID "2.1.3.5.3" ;
     ex:apqcSourceText "Determine and follow the timely input and update of regulatory information by assessing reforms, regulatory policies, and guidelines." ;
     rdfs:label "Manage regulatory submission life cycle" ;
@@ -981,7 +981,7 @@ ex:ManageRegulatorySubmissionLifecycle a owl:Class ;
 
 # ---- 2.1.4.x (parts of the Master Data Management Capability) ----
 
-ex:ManageMaterialsMasterLists a owl:Class ;
+ex:P11741 a owl:Class ;
     ex:pcfID "11741" ; ex:hierarchyID "2.1.4.1" ;
     ex:apqcSourceText "Controlling the details of materials' storage and utilization, supplier details linked to materials, in a defined sequential manner and ensuring regular updates with permissible accessibility." ;
     rdfs:label "Manage materials master lists" ;
@@ -991,7 +991,7 @@ ex:ManageMaterialsMasterLists a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:MaterialsMasterList ] .
 
-ex:ManageBillsOfMaterial a owl:Class ;
+ex:P11742 a owl:Class ;
     ex:pcfID "11742" ; ex:hierarchyID "2.1.4.2" ;
     ex:apqcSourceText "Managing the purchase details/bills through regular and error free updates to applications. Create manual entries wherever necessary and ensure timely review of the laid processes and systems." ;
     rdfs:label "Manage bills of material" ;
@@ -1001,7 +1001,7 @@ ex:ManageBillsOfMaterial a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:BillOfMaterials ] .
 
-ex:ManageRoutings a owl:Class ;
+ex:P11743 a owl:Class ;
     ex:pcfID "11743" ; ex:hierarchyID "2.1.4.3" ;
     ex:apqcSourceText "Controlling and executing the flow of operations from raw form to finished product in a defined format using industry applications/routing sheets for the specific product/service layout." ;
     rdfs:label "Manage routings" ;
@@ -1011,7 +1011,7 @@ ex:ManageRoutings a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:Routing ] .
 
-ex:ManageSpecifications a owl:Class ;
+ex:P11744 a owl:Class ;
     ex:pcfID "11744" ; ex:hierarchyID "2.1.4.4" ;
     ex:apqcSourceText "Direct, supervise, and control the product/service details necessary to execute the process. Adhere to details and descriptions for product/service through identified or guided parameters towards final outcome in the market with due critical analysis formed on organizational objectives." ;
     rdfs:label "Manage specifications" ;
@@ -1021,7 +1021,7 @@ ex:ManageSpecifications a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProductServiceCharacteristicsSpecification ] .
 
-ex:ManageDrawings a owl:Class ;
+ex:P11745 a owl:Class ;
     ex:pcfID "11745" ; ex:hierarchyID "2.1.4.5" ;
     ex:apqcSourceText "Administering the specifications of the product/service and ensure accessibility for product alteration/new product development." ;
     rdfs:label "Manage drawings" ;
@@ -1031,7 +1031,7 @@ ex:ManageDrawings a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DesignSpecification ] .
 
-ex:ManageProductClassification a owl:Class ;
+ex:P11746 a owl:Class ;
     ex:pcfID "11746" ; ex:hierarchyID "2.1.4.6" ;
     ex:apqcSourceText "Controlling the details of the product and the input materials. Manage classification throughout the production process, and for future accessibility to new product development or product enrichment." ;
     rdfs:label "Manage product/material classification" ;
@@ -1041,7 +1041,7 @@ ex:ManageProductClassification a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProductMaterialClassification ] .
 
-ex:DevelopQualityInspectionDocuments a owl:Class ;
+ex:P11747 a owl:Class ;
     ex:pcfID "11747" ; ex:hierarchyID "2.1.4.7" ;
     ex:apqcSourceText "Determining procedures required to assess the sustainability of defined criterion for product/service delivery to customers. Retain results for further review as a procedural practice." ;
     rdfs:label "Develop and maintain quality/inspection documents" ;
@@ -1051,7 +1051,7 @@ ex:DevelopQualityInspectionDocuments a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityInspectionDocument ] .
 
-ex:MaintainProcessSpecificationData a owl:Class ;
+ex:P11748 a owl:Class ;
     ex:pcfID "11748" ; ex:hierarchyID "2.1.4.8" ;
     ex:apqcSourceText "Directing and handling data with respect to the procedures followed across different functions and mission critical applications." ;
     rdfs:label "Maintain process specification data" ;
@@ -1061,7 +1061,7 @@ ex:MaintainProcessSpecificationData a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProcessSpecificationData ] .
 
-ex:ManageTraceabilityData a owl:Class ;
+ex:P11749 a owl:Class ;
     ex:pcfID "11749" ; ex:hierarchyID "2.1.4.9" ;
     ex:apqcSourceText "Identifying and handling data accessed by the permitted touch points. Ensure that no data is accessible to any unnecessary recipient. Data flow should be controlled through secured access and free from unauthorized access." ;
     rdfs:label "Manage traceability data" ;
@@ -1071,7 +1071,7 @@ ex:ManageTraceabilityData a owl:Class ;
     rdfs:subClassOf ex:ActOfDataManagement ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TraceabilityData ] .
 
-ex:ReviewAndApproveDataAccessRequests a owl:Class ;
+ex:P11750 a owl:Class ;
     ex:pcfID "11750" ; ex:hierarchyID "2.1.4.10" ;
     ex:apqcSourceText "Determining the requests pertaining to data accessibility. Review the requester details based on internal data security policies and permit data access only if internal policies and data access parameters are met." ;
     rdfs:label "Review and approve data access requests" ;
@@ -1768,45 +1768,45 @@ ex:P19998 a owl:Class ;
 ####################################################################
 
 ex:PCF_10061 ex:designatesProcessType ex:ProductServicePortfolioManagementCapability .
-ex:PCF_10063 ex:designatesProcessType ex:EvaluateExistingProductPerformance .
-ex:PCF_10066 ex:designatesProcessType ex:ConfirmConceptStrategyAlignment .
-ex:PCF_10074 ex:designatesProcessType ex:PrioritizeAndSelectNewConcepts .
-ex:PCF_10073 ex:designatesProcessType ex:PlanCostAndQualityTargets .
-ex:PCF_10075 ex:designatesProcessType ex:SpecifyDevelopmentTimingTargets .
-ex:PCF_10076 ex:designatesProcessType ex:PlanProductModifications .
+ex:PCF_10063 ex:designatesProcessType ex:P10063 .
+ex:PCF_10066 ex:designatesProcessType ex:P10066 .
+ex:PCF_10074 ex:designatesProcessType ex:P10074 .
+ex:PCF_10073 ex:designatesProcessType ex:P10073 .
+ex:PCF_10075 ex:designatesProcessType ex:P10075 .
+ex:PCF_10076 ex:designatesProcessType ex:P10076 .
 ex:PCF_10067 ex:designatesProcessType ex:ProductServiceLifecycleManagementCapability .
-ex:PCF_16824 ex:designatesProcessType ex:DevelopLaunchPlan .
-ex:PCF_10077 ex:designatesProcessType ex:IntroduceNewProducts .
-ex:PCF_10078 ex:designatesProcessType ex:RetireOutdatedProducts .
-ex:PCF_10079 ex:designatesProcessType ex:RefinePerformanceIndicators .
-ex:PCF_11423 ex:designatesProcessType ex:ConductPostLaunchReview .
-ex:PCF_19646 ex:designatesProcessType ex:CarryOutPostLaunchAnalytics .
-ex:PCF_11424 ex:designatesProcessType ex:ReviewMarketPerformance .
-ex:PCF_11425 ex:designatesProcessType ex:ReviewSupplyChainEffectiveness .
-ex:PCF_19647 ex:designatesProcessType ex:ReviewSupplyChainMethodologies .
-ex:PCF_11426 ex:designatesProcessType ex:ReviewProductQualityPerformance .
-ex:PCF_11427 ex:designatesProcessType ex:ConductFinancialReview .
-ex:PCF_11428 ex:designatesProcessType ex:ConductNPDProcessAssessment .
+ex:PCF_16824 ex:designatesProcessType ex:P16824 .
+ex:PCF_10077 ex:designatesProcessType ex:P10077 .
+ex:PCF_10078 ex:designatesProcessType ex:P10078 .
+ex:PCF_10079 ex:designatesProcessType ex:P10079 .
+ex:PCF_11423 ex:designatesProcessType ex:P11423 .
+ex:PCF_19646 ex:designatesProcessType ex:P19646 .
+ex:PCF_11424 ex:designatesProcessType ex:P11424 .
+ex:PCF_11425 ex:designatesProcessType ex:P11425 .
+ex:PCF_19647 ex:designatesProcessType ex:P19647 .
+ex:PCF_11426 ex:designatesProcessType ex:P11426 .
+ex:PCF_11427 ex:designatesProcessType ex:P11427 .
+ex:PCF_11428 ex:designatesProcessType ex:P11428 .
 ex:PCF_19985 ex:designatesProcessType ex:IntellectualPropertyManagementCapability .
-ex:PCF_19941 ex:designatesProcessType ex:ConductMandatoryAndElectiveReviews .
-ex:PCF_16826 ex:designatesProcessType ex:ReviewInfringement .
-ex:PCF_16827 ex:designatesProcessType ex:DeterminePatentAndCopyrightNeeds .
-ex:PCF_19697 ex:designatesProcessType ex:DefineTechnicalDocumentationRequirements .
-ex:PCF_12771 ex:designatesProcessType ex:ManageRegulatoryRequirements .
-ex:PCF_12772 ex:designatesProcessType ex:TrainEmployeesOnRegulations .
-ex:PCF_12773 ex:designatesProcessType ex:MaintainRegulatoryRecords .
-ex:PCF_12776 ex:designatesProcessType ex:ManageRegulatorySubmissionLifecycle .
+ex:PCF_19941 ex:designatesProcessType ex:P19941 .
+ex:PCF_16826 ex:designatesProcessType ex:P16826 .
+ex:PCF_16827 ex:designatesProcessType ex:P16827 .
+ex:PCF_19697 ex:designatesProcessType ex:P19697 .
+ex:PCF_12771 ex:designatesProcessType ex:P12771 .
+ex:PCF_12772 ex:designatesProcessType ex:P12772 .
+ex:PCF_12773 ex:designatesProcessType ex:P12773 .
+ex:PCF_12776 ex:designatesProcessType ex:P12776 .
 ex:PCF_11740 ex:designatesProcessType ex:ProductDataManagementCapability .
-ex:PCF_11741 ex:designatesProcessType ex:ManageMaterialsMasterLists .
-ex:PCF_11742 ex:designatesProcessType ex:ManageBillsOfMaterial .
-ex:PCF_11743 ex:designatesProcessType ex:ManageRoutings .
-ex:PCF_11744 ex:designatesProcessType ex:ManageSpecifications .
-ex:PCF_11745 ex:designatesProcessType ex:ManageDrawings .
-ex:PCF_11746 ex:designatesProcessType ex:ManageProductClassification .
-ex:PCF_11747 ex:designatesProcessType ex:DevelopQualityInspectionDocuments .
-ex:PCF_11748 ex:designatesProcessType ex:MaintainProcessSpecificationData .
-ex:PCF_11749 ex:designatesProcessType ex:ManageTraceabilityData .
-ex:PCF_11750 ex:designatesProcessType ex:ReviewAndApproveDataAccessRequests .
+ex:PCF_11741 ex:designatesProcessType ex:P11741 .
+ex:PCF_11742 ex:designatesProcessType ex:P11742 .
+ex:PCF_11743 ex:designatesProcessType ex:P11743 .
+ex:PCF_11744 ex:designatesProcessType ex:P11744 .
+ex:PCF_11745 ex:designatesProcessType ex:P11745 .
+ex:PCF_11746 ex:designatesProcessType ex:P11746 .
+ex:PCF_11747 ex:designatesProcessType ex:P11747 .
+ex:PCF_11748 ex:designatesProcessType ex:P11748 .
+ex:PCF_11749 ex:designatesProcessType ex:P11749 .
+ex:PCF_11750 ex:designatesProcessType ex:P11750 .
 ex:PCF_19698 ex:designatesProcessType ex:P19698 .
 ex:PCF_10065 ex:designatesProcessType ex:P10065 .
 ex:PCF_10070 ex:designatesProcessType ex:P10070 .

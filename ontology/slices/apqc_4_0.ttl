@@ -764,10 +764,10 @@ ex:ProductionCapability a owl:Class ; rdfs:subClassOf ex:SupplyChainManagementCa
 
 ex:LogisticsManagementCapability a owl:Class ;
     rdfs:subClassOf ex:SupplyChainManagementCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:ProvideLogisticsGovernance ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:PlanAndManageInboundMaterialFlow ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:OperateWarehousing ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:OperateOutboundTransportation ] ;
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P10338 ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P20936 ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P10340 ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P10341 ] ;
     rdfs:label "Logistics Management Capability" ;
     skos:definition "A Supply Chain Management Capability that is realized in acts of governing logistics, managing inbound material flow, operating warehousing, and operating outbound transportation." ;
     rdfs:comment "R5/R6: APQC group 4.4 'Manage logistics and warehousing' (PCF 10219) is a standing oversight function with no natural end, so it is modeled as this Organization Capability rather than a process. It is realized in the four bounded sub-processes 4.4.1-4.4.4. Reconciled: the realization axioms (originally added to ex:LogisticsManagementCapability in the 4.4 group module) are folded into this single shared declaration." .
@@ -781,10 +781,10 @@ ex:RawMaterialInventoryManagementCapability a owl:Class ;
 
 ex:FleetManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:OperateOutboundTransportation ] ;
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P10341 ] ;
     rdfs:label "Fleet Management Capability" ;
     skos:definition "An Organization Capability that inheres in a supply-chain organization in virtue of its capacity to administer the transportation vehicles used for delivering end products, covering vehicle financing, maintenance, telematics, driver, speed, fuel, and health-and-safety management." ;
-    rdfs:comment "Gate-F R5 fix for APQC 4.4.4.3 'Manage transportation fleet' [10362]: the source is a textbook STANDING administrative function with no natural end ('Taking care of a range of functions... Manage vehicle financing, maintenance, telematics, driver management, speed management, fuel management, and health and safety management'), so it is modeled as an Organization Capability rather than a bounded Planned Act -- mirroring how group 10219 is handled as ex:LogisticsManagementCapability. Realized in ex:OperateOutboundTransportation, the bounded outbound-transport operations (including fleet maintenance and telematics-monitoring acts) that exercise the fleet. The catalog node ex:PCF_10362 designates this capability per the ADR-001 R4 bridge." .
+    rdfs:comment "Gate-F R5 fix for APQC 4.4.4.3 'Manage transportation fleet' [10362]: the source is a textbook STANDING administrative function with no natural end ('Taking care of a range of functions... Manage vehicle financing, maintenance, telematics, driver management, speed management, fuel management, and health and safety management'), so it is modeled as an Organization Capability rather than a bounded Planned Act -- mirroring how group 10219 is handled as ex:LogisticsManagementCapability. Realized in ex:P10341, the bounded outbound-transport operations (including fleet maintenance and telematics-monitoring acts) that exercise the fleet. The catalog node ex:PCF_10362 designates this capability per the ADR-001 R4 bridge." .
 
 
 ####################################################################
@@ -2118,7 +2118,7 @@ ex:P10377 a owl:Class ;
 # 4.4.1 Provide logistics governance
 ####################################################################
 
-ex:ProvideLogisticsGovernance a owl:Class ;
+ex:P10338 a owl:Class ;
     ex:pcfID "10338" ; ex:hierarchyID "4.4.1" ;
     ex:apqcSourceText "Outlining the strategy for managing logistics. Translate customer requirements logistic requirements. Create an efficient logistic network and outsourcing portions of logistics activities. Design a logistics strategy that optimizes transportation costs and schedule. Define key performance indicators." ;
     rdfs:label "Provide logistics governance" ;
@@ -2126,15 +2126,15 @@ ex:ProvideLogisticsGovernance a owl:Class ;
     rdfs:comment "Planning/Formulation -> DIRECTIVE outputs (GOLDEN PRINCIPLE). Its APQC children are process parts, not subclasses." ;
     skos:example "A logistics function's annual governance cycle producing an updated logistics strategy and KPI set." ;
     rdfs:subClassOf ex:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:TranslateCustomerServiceRequirements ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:DesignLogisticsNetwork ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:CommunicateOutsourcingNeeds ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:DevelopDeliveryServicePolicy ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:OptimizeTransportationSchedulesAndCosts ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:DefineLogisticsKeyPerformanceMeasures ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:DefineReverseLogisticsStrategy ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10343 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10344 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10345 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10346 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10347 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10348 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P16905 ] .
 
-ex:TranslateCustomerServiceRequirements a owl:Class ;
+ex:P10343 a owl:Class ;
     ex:pcfID "10343" ; ex:hierarchyID "4.4.1.1" ;
     ex:apqcSourceText "Determining the requirements for managing the flow of things between the point of origin and the point of consumption by assessing the service requirements of the customers." ;
     rdfs:label "Translate customer service requirements into logistics requirements" ;
@@ -2143,7 +2143,7 @@ ex:TranslateCustomerServiceRequirements a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:LogisticsRequirementSpecification ] .
 
-ex:DesignLogisticsNetwork a owl:Class ;
+ex:P10344 a owl:Class ;
     ex:pcfID "10344" ; ex:hierarchyID "4.4.1.2" ;
     ex:apqcSourceText "Developing a network for logistical activities. Create a network of entities through which materials and information flow, encompassing all related activities associated with the flow of transformation of products." ;
     rdfs:label "Design logistics network" ;
@@ -2152,7 +2152,7 @@ ex:DesignLogisticsNetwork a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:LogisticsNetworkDesign ] .
 
-ex:CommunicateOutsourcingNeeds a owl:Class ;
+ex:P10345 a owl:Class ;
     ex:pcfID "10345" ; ex:hierarchyID "4.4.1.3" ;
     ex:apqcSourceText "Conveying outsourcing needs within the organization, with the objective of sourcing the assistance required. Define the portion of logistical activities that can be transferred to outside suppliers. Assess third-party agencies to carefully select the most appropriate agencies for outsourcing. Convey these needs to management or the appropriate authority." ;
     rdfs:label "Communicate outsourcing needs" ;
@@ -2163,7 +2163,7 @@ ex:CommunicateOutsourcingNeeds a owl:Class ;
         cco:ont00000228 ,               # Planned Act (explicit; entailed via ont00000402, asserted so S2 resolves standalone)
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:OutsourcingNeedsStatement ] .
 
-ex:DevelopDeliveryServicePolicy a owl:Class ;
+ex:P10346 a owl:Class ;
     ex:pcfID "10346" ; ex:hierarchyID "4.4.1.4" ;
     ex:apqcSourceText "Establishing rules and regulations, as well as the terms and conditions regarding the delivery of service by the company. Develop a delivery plan that specifies what, how, when, and in which way to deliver services to the customer." ;
     rdfs:label "Develop and maintain delivery service policy" ;
@@ -2172,7 +2172,7 @@ ex:DevelopDeliveryServicePolicy a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DeliveryServicePolicy ] .
 
-ex:OptimizeTransportationSchedulesAndCosts a owl:Class ;
+ex:P10347 a owl:Class ;
     ex:pcfID "10347" ; ex:hierarchyID "4.4.1.5" ;
     ex:apqcSourceText "Optimizing the schedule and costs of transportation services. Design a logistics strategy by strategically creating delivery routes and systems, which optimizes the overall transportation schedules and costs. Evaluate different transportation sources in order to select the most appropriate and cost-effective sources." ;
     rdfs:label "Optimize transportation schedules and costs" ;
@@ -2182,7 +2182,7 @@ ex:OptimizeTransportationSchedulesAndCosts a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:LogisticsStrategy ] .
 
-ex:DefineLogisticsKeyPerformanceMeasures a owl:Class ;
+ex:P10348 a owl:Class ;
     ex:pcfID "10348" ; ex:hierarchyID "4.4.1.6" ;
     ex:apqcSourceText "Establishing measures for evaluating the performance of the logistics strategy of the organization. Establish key performance indicators, including the logistics performance index, delivery in full, and delivery on time." ;
     rdfs:label "Define key performance measures" ;
@@ -2191,7 +2191,7 @@ ex:DefineLogisticsKeyPerformanceMeasures a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:KeyPerformanceIndicatorSpecification ] .
 
-ex:DefineReverseLogisticsStrategy a owl:Class ;
+ex:P16905 a owl:Class ;
     ex:pcfID "16905" ; ex:hierarchyID "4.4.1.7" ;
     ex:apqcSourceText "Establish a strategy that includes rules and regulations for the physical handling, information processing, and disposition of product and packaging returned by the buyer to the seller or an intermediary. Include return approval, transportation coordination, advance communication, product tracking, receipt, disposition of the return, and processing warranty claims in the strategy." ;
     rdfs:label "Define reverse logistics strategy" ;
@@ -2204,7 +2204,7 @@ ex:DefineReverseLogisticsStrategy a owl:Class ;
 # 4.4.2 Plan and manage inbound material flow
 ####################################################################
 
-ex:PlanAndManageInboundMaterialFlow a owl:Class ;
+ex:P20936 a owl:Class ;
     ex:pcfID "20936" ; ex:hierarchyID "4.4.2" ;
     ex:apqcSourceText "Creating and executing a strategy for all the internal activities related to the flow/transfer of inbound materials. This process includes planning inbound material receipts, managing inbound material flow, monitoring inbound delivery performance, managing the flow of returned products, controlling the quality of returned parts, and salvaging or repairing returned products." ;
     rdfs:label "Plan and manage inbound material flow" ;
@@ -2212,13 +2212,13 @@ ex:PlanAndManageInboundMaterialFlow a owl:Class ;
     rdfs:comment "Heterogeneous operational aggregate (planning + material handling + monitoring + returns) anchored at the generic cco:ont00000228 (Planned Act). Its APQC children are process parts. The standing oversight aspect is realized by ex:LogisticsManagementCapability." ;
     skos:example "An inbound-logistics team's per-shipment cycle from receipt plan through put-away and returns disposition." ;
     rdfs:subClassOf cco:ont00000228 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:PlanInboundMaterialReceipts ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageInboundMaterialFlow ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:MonitorInboundDeliveryPerformance ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageFlowOfReturnedProducts ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageDispositionOfReturnedProducts ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10349 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10350 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10351 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10352 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P20109 ] .
 
-ex:PlanInboundMaterialReceipts a owl:Class ;
+ex:P10349 a owl:Class ;
     ex:pcfID "10349" ; ex:hierarchyID "4.4.2.1" ;
     ex:apqcSourceText "Managing the receipts of inbound materials. Create a plan accounting for the materials procured from the source of supply and the materials delivered to the distribution center or the warehouse." ;
     rdfs:label "Plan inbound material receipts" ;
@@ -2227,7 +2227,7 @@ ex:PlanInboundMaterialReceipts a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:InboundMaterialReceiptPlan ] .
 
-ex:ManageInboundMaterialFlow a owl:Class ;
+ex:P10350 a owl:Class ;
     ex:pcfID "10350" ; ex:hierarchyID "4.4.2.2" ;
     ex:apqcSourceText "Managing all the internal activities related to the flow/transfer of materials. Manage materials being delivered to distribution center or warehouse. Gauge the time taken for delivery and if the delivery process is on time." ;
     rdfs:label "Manage inbound material flow" ;
@@ -2237,7 +2237,7 @@ ex:ManageInboundMaterialFlow a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:InventoryItem ] .
 
-ex:MonitorInboundDeliveryPerformance a owl:Class ;
+ex:P10351 a owl:Class ;
     ex:pcfID "10351" ; ex:hierarchyID "4.4.2.3" ;
     ex:apqcSourceText "Overseeing the performance of an inbound delivery system. Check the present delivery system's efficiency, cost effectiveness, and adherence to a delivery schedule." ;
     rdfs:label "Monitor inbound delivery performance" ;
@@ -2246,7 +2246,7 @@ ex:MonitorInboundDeliveryPerformance a owl:Class ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DeliveryPerformanceReport ] .
 
-ex:ManageFlowOfReturnedProducts a owl:Class ;
+ex:P10352 a owl:Class ;
     ex:pcfID "10352" ; ex:hierarchyID "4.4.2.4" ;
     ex:apqcSourceText "Tracking and taking care of the products that have been internally returned either because of their deficiency or in cases of incorrect delivery." ;
     rdfs:label "Manage flow of returned products" ;
@@ -2256,7 +2256,7 @@ ex:ManageFlowOfReturnedProducts a owl:Class ;
     rdfs:subClassOf ex:ActOfTransportation ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:ReturnedProduct ] .
 
-ex:ManageDispositionOfReturnedProducts a owl:Class ;
+ex:P20109 a owl:Class ;
     ex:pcfID "20109" ; ex:hierarchyID "4.4.2.5" ;
     ex:apqcSourceText "Determining if a returned product can be salvaged or repaired. Salvage or repair is dependent upon the product, the condition of the product, or the availability of a like item." ;
     rdfs:label "Manage disposition of returned products" ;
@@ -2265,12 +2265,12 @@ ex:ManageDispositionOfReturnedProducts a owl:Class ;
     skos:example "A disposition analyst decides a returned unit will be repaired rather than salvaged based on its condition." ;
     rdfs:subClassOf ex:ActOfSelection ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DispositionDecision ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:DetermineQualityOfControlledPart ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:PerformSalvageActivities ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageRepairRefurbishment ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ReturnToFinishedGoodsInventory ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P12708 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10366 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P21604 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P21605 ] .
 
-ex:DetermineQualityOfControlledPart a owl:Class ;
+ex:P12708 a owl:Class ;
     ex:pcfID "12708" ; ex:hierarchyID "4.4.2.5.1" ;
     ex:apqcSourceText "Implement a checks and balances system to verify that returned parts meet acceptable quality standards to determine appropriate disposition activity." ;
     rdfs:label "Determine quality of controlled part" ;
@@ -2282,7 +2282,7 @@ ex:DetermineQualityOfControlledPart a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:QualityStandard ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ReturnedPartQualityAssessment ] .
 
-ex:PerformSalvageActivities a owl:Class ;
+ex:P10366 a owl:Class ;
     ex:pcfID "10366" ; ex:hierarchyID "4.4.2.5.2" ;
     ex:apqcSourceText "Executing activities for reinstating the returned products. Present the customer with additional incentives of compensation in case of any defective products delivery or any discrepancy in the product specifications in order to save the order from being permanently returned." ;
     rdfs:label "Perform salvage activities" ;
@@ -2293,7 +2293,7 @@ ex:PerformSalvageActivities a owl:Class ;
         cco:ont00000228 ,               # Planned Act (explicit; entailed via ont00000402, asserted so S2/S5 resolve standalone)
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CustomerCompensationOffer ] .
 
-ex:ManageRepairRefurbishment a owl:Class ;
+ex:P21604 a owl:Class ;
     ex:pcfID "21604" ; ex:hierarchyID "4.4.2.5.3" ;
     ex:apqcSourceText "Administering the reinstatement of the returned product in order to return them back to customers. Repair or remanufacture the defective or ineffective products returned by the customer. Process the delivery of the repaired or remanufactured products back to the customer." ;
     rdfs:label "Manage repair/refurbishment" ;
@@ -2304,7 +2304,7 @@ ex:ManageRepairRefurbishment a owl:Class ;
         cco:ont00000228 ,               # Planned Act (explicit; entailed via ont00000950, asserted so S2/S5 resolve standalone)
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:ReturnedProduct ] .
 
-ex:ReturnToFinishedGoodsInventory a owl:Class ;
+ex:P21605 a owl:Class ;
     ex:pcfID "21605" ; ex:hierarchyID "4.4.2.5.4" ;
     ex:apqcSourceText "Moving a returned product back to inventory or stock. Whether a product is sufficient as returned, repaired, or refurbished, moving that product back to inventory for resale or returning to customer is the fnal step in Manage disposition of returned products." ;
     rdfs:label "Return to finished goods inventory" ;
@@ -2318,7 +2318,7 @@ ex:ReturnToFinishedGoodsInventory a owl:Class ;
 # 4.4.3 Operate warehousing
 ####################################################################
 
-ex:OperateWarehousing a owl:Class ;
+ex:P10340 a owl:Class ;
     ex:pcfID "10340" ; ex:hierarchyID "4.4.3" ;
     ex:apqcSourceText "Tracking the inventory deployment. Accept and store products. Ship the products. Measure the accuracy of the inventory. Assess the performance of the outsourced logistics activities." ;
     rdfs:label "Operate warehousing" ;
@@ -2326,16 +2326,16 @@ ex:OperateWarehousing a owl:Class ;
     rdfs:comment "Heterogeneous operational aggregate anchored at the generic cco:ont00000228 (Planned Act). Its APQC children are process parts. The standing operate-warehousing function is realized by ex:LogisticsManagementCapability." ;
     skos:example "A distribution center's daily warehousing cycle from inbound put-away through outbound pick-pack-ship." ;
     rdfs:subClassOf cco:ont00000228 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageAndTrackInventoryDeployment ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ReceiveInspectAndStoreInboundDeliveries ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:TrackProductAvailability ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:PickPackAndShipProduct ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:TrackInventoryAccuracy ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:TrackThirdPartyLogisticsPerformance ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManagePhysicalFinishedGoodsInventory ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ManageWarehouseTransfers ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10353 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10354 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10355 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10356 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10357 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10358 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10359 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P20957 ] .
 
-ex:ManageAndTrackInventoryDeployment a owl:Class ;
+ex:P10353 a owl:Class ;
     ex:pcfID "10353" ; ex:hierarchyID "4.4.3.1" ;
     ex:apqcSourceText "Tracking the logistical act of delivering or releasing an inventory item or entity to targeted end users. Track how much inventory has been deployed at all the distribution centers, individually." ;
     rdfs:label "Manage and track inventory deployment" ;
@@ -2344,7 +2344,7 @@ ex:ManageAndTrackInventoryDeployment a owl:Class ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:InventoryRecord ] .
 
-ex:ReceiveInspectAndStoreInboundDeliveries a owl:Class ;
+ex:P10354 a owl:Class ;
     ex:pcfID "10354" ; ex:hierarchyID "4.4.3.2" ;
     ex:apqcSourceText "Coordinating the incoming inbound materials/products. Accept the delivery of these materials and the subsequent storage. Track them at the warehouse/distribution center." ;
     rdfs:label "Receive, inspect, and store inbound deliveries" ;
@@ -2355,7 +2355,7 @@ ex:ReceiveInspectAndStoreInboundDeliveries a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:InventoryItem ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Warehouse ] .
 
-ex:TrackProductAvailability a owl:Class ;
+ex:P10355 a owl:Class ;
     ex:pcfID "10355" ; ex:hierarchyID "4.4.3.3" ;
     ex:apqcSourceText "Keeping track of the availability of different materials/products at the warehouse and distribution centers." ;
     rdfs:label "Track product availability" ;
@@ -2364,7 +2364,7 @@ ex:TrackProductAvailability a owl:Class ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:InventoryRecord ] .
 
-ex:PickPackAndShipProduct a owl:Class ;
+ex:P10356 a owl:Class ;
     ex:pcfID "10356" ; ex:hierarchyID "4.4.3.4" ;
     ex:apqcSourceText "Packing and shipping the product to deliver to the customer. Take care of the internal and external packaging of the products in order to ensure safe transportation of the products from the warehouse to delivery locations. Notify the ERP system and/or Accounts Receivable Dept." ;
     rdfs:label "Pick, pack, and ship product for delivery" ;
@@ -2374,7 +2374,7 @@ ex:PickPackAndShipProduct a owl:Class ;
     rdfs:subClassOf ex:ActOfTransportation ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:FinishedProduct ] .
 
-ex:TrackInventoryAccuracy a owl:Class ;
+ex:P10357 a owl:Class ;
     ex:pcfID "10357" ; ex:hierarchyID "4.4.3.5" ;
     ex:apqcSourceText "Monitoring any discrepancies between electronic records that represent the inventory and the physical state of the inventory. Look for discrepancies such as phantom inventory, which includes products that an inventory accounting system considers to be available at the storage location but are not actually available." ;
     rdfs:label "Track inventory accuracy" ;
@@ -2383,7 +2383,7 @@ ex:TrackInventoryAccuracy a owl:Class ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:InventoryAccuracyReport ] .
 
-ex:TrackThirdPartyLogisticsPerformance a owl:Class ;
+ex:P10358 a owl:Class ;
     ex:pcfID "10358" ; ex:hierarchyID "4.4.3.6" ;
     ex:apqcSourceText "Keeping a track on the storage and shipping performance of third-party agencies. Monitor logistics storage and shipping performance for third-party agencies. Use measures such as a logistics scoreboard, activity-based costing, economic value analysis, and balanced scorecards." ;
     rdfs:label "Track third-party logistics storage and shipping performance" ;
@@ -2392,7 +2392,7 @@ ex:TrackThirdPartyLogisticsPerformance a owl:Class ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ThirdPartyLogisticsPerformanceReport ] .
 
-ex:ManagePhysicalFinishedGoodsInventory a owl:Class ;
+ex:P10359 a owl:Class ;
     ex:pcfID "10359" ; ex:hierarchyID "4.4.3.7" ;
     ex:apqcSourceText "Administering the movement of the finished products that are processed by the organization through its warehouses. Track goods through the use of systems such as barcodes in order to monitor the volumes available, quantity of out-flowing goods, remaining shelf life of the product, etc.--ultimately, to best manage the warehouse capacity." ;
     rdfs:label "Manage physical finished goods inventory" ;
@@ -2402,7 +2402,7 @@ ex:ManagePhysicalFinishedGoodsInventory a owl:Class ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:InventoryRecord ] .
 
-ex:ManageWarehouseTransfers a owl:Class ;
+ex:P20957 a owl:Class ;
     ex:pcfID "20957" ; ex:hierarchyID "4.4.3.8" ;
     ex:apqcSourceText "Shipping items from one warehouse to another in a multi-warehouse environment. A warehouse transfer is typically handled electronically in a system designed to replicate the physical processes involved with transferring items from one warehouse to another." ;
     rdfs:label "Manage warehouse transfers" ;
@@ -2416,7 +2416,7 @@ ex:ManageWarehouseTransfers a owl:Class ;
 # 4.4.4 Operate outbound transportation
 ####################################################################
 
-ex:OperateOutboundTransportation a owl:Class ;
+ex:P10341 a owl:Class ;
     ex:pcfID "10341" ; ex:hierarchyID "4.4.4" ;
     ex:apqcSourceText "Creating a plan that specifies the schedule and system for transportation and delivery of the outbound products, as well as tracking the performance of the carrier delivery system. Conduct vehicle management and processing of all carrier-related documents." ;
     rdfs:label "Operate outbound transportation" ;
@@ -2424,11 +2424,11 @@ ex:OperateOutboundTransportation a owl:Class ;
     rdfs:comment "Heterogeneous operational aggregate anchored at the generic cco:ont00000228 (Planned Act). Its APQC children are process parts. Gate-F: 4.4.4.3 'Manage transportation fleet' [10362] is NOT a process part here -- it is a standing function demoted to ex:FleetManagementCapability (R5), which is in turn realized in this bounded outbound-transport cycle." ;
     skos:example "A transportation team's cycle from outbound dispatch planning through carrier-invoice audit." ;
     rdfs:subClassOf cco:ont00000228 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:PlanTransportAndDeliverOutboundProduct ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:TrackCarrierDeliveryPerformance ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:ProcessAndAuditCarrierInvoices ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10360 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10361 ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10363 ] .
 
-ex:PlanTransportAndDeliverOutboundProduct a owl:Class ;
+ex:P10360 a owl:Class ;
     ex:pcfID "10360" ; ex:hierarchyID "4.4.4.1" ;
     ex:apqcSourceText "Organizing the transportation and delivery of outbound products. Plan and organize the transportation, shipping, and delivery of the end products. Create a plan that specifies dispatch and delivery of the product to its destination, as well the transportation." ;
     rdfs:label "Plan, transport, and deliver outbound product" ;
@@ -2438,7 +2438,7 @@ ex:PlanTransportAndDeliverOutboundProduct a owl:Class ;
     rdfs:subClassOf ex:ActOfTransportation ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:FinishedProduct ] .
 
-ex:TrackCarrierDeliveryPerformance a owl:Class ;
+ex:P10361 a owl:Class ;
     ex:pcfID "10361" ; ex:hierarchyID "4.4.4.2" ;
     ex:apqcSourceText "Monitoring delivery performance when carrying products from the warehouse/distribution centers to the retailers or end consumers. Create a performance metrics based on the key performance indicators." ;
     rdfs:label "Track carrier delivery performance" ;
@@ -2453,7 +2453,7 @@ ex:TrackCarrierDeliveryPerformance a owl:Class ;
 # realized in the bounded outbound-transport acts. ex:PCF_10362 designates that
 # capability in the catalog->reality bridge below.
 
-ex:ProcessAndAuditCarrierInvoices a owl:Class ;
+ex:P10363 a owl:Class ;
     ex:pcfID "10363" ; ex:hierarchyID "4.4.4.4" ;
     ex:apqcSourceText "Organizing and inspecting all account statements and any other documentation for the carriers used in delivery. Create, manage, and inspect all documents related to the financial, regulatory, and administrative accounts of all the carriers/freights. Generate receipts for all freight transactions." ;
     rdfs:label "Process and audit carrier invoices and documents" ;
@@ -2583,36 +2583,36 @@ ex:PCF_12046 ex:designatesProcessType ex:P12046 .
 ex:PCF_10370 ex:designatesProcessType ex:P10370 .
 ex:PCF_10376 ex:designatesProcessType ex:P10376 .
 ex:PCF_10377 ex:designatesProcessType ex:P10377 .
-ex:PCF_10338 ex:designatesProcessType ex:ProvideLogisticsGovernance .
-ex:PCF_10343 ex:designatesProcessType ex:TranslateCustomerServiceRequirements .
-ex:PCF_10344 ex:designatesProcessType ex:DesignLogisticsNetwork .
-ex:PCF_10345 ex:designatesProcessType ex:CommunicateOutsourcingNeeds .
-ex:PCF_10346 ex:designatesProcessType ex:DevelopDeliveryServicePolicy .
-ex:PCF_10347 ex:designatesProcessType ex:OptimizeTransportationSchedulesAndCosts .
-ex:PCF_10348 ex:designatesProcessType ex:DefineLogisticsKeyPerformanceMeasures .
-ex:PCF_16905 ex:designatesProcessType ex:DefineReverseLogisticsStrategy .
-ex:PCF_20936 ex:designatesProcessType ex:PlanAndManageInboundMaterialFlow .
-ex:PCF_10349 ex:designatesProcessType ex:PlanInboundMaterialReceipts .
-ex:PCF_10350 ex:designatesProcessType ex:ManageInboundMaterialFlow .
-ex:PCF_10351 ex:designatesProcessType ex:MonitorInboundDeliveryPerformance .
-ex:PCF_10352 ex:designatesProcessType ex:ManageFlowOfReturnedProducts .
-ex:PCF_20109 ex:designatesProcessType ex:ManageDispositionOfReturnedProducts .
-ex:PCF_12708 ex:designatesProcessType ex:DetermineQualityOfControlledPart .
-ex:PCF_10366 ex:designatesProcessType ex:PerformSalvageActivities .
-ex:PCF_21604 ex:designatesProcessType ex:ManageRepairRefurbishment .
-ex:PCF_21605 ex:designatesProcessType ex:ReturnToFinishedGoodsInventory .
-ex:PCF_10340 ex:designatesProcessType ex:OperateWarehousing .
-ex:PCF_10353 ex:designatesProcessType ex:ManageAndTrackInventoryDeployment .
-ex:PCF_10354 ex:designatesProcessType ex:ReceiveInspectAndStoreInboundDeliveries .
-ex:PCF_10355 ex:designatesProcessType ex:TrackProductAvailability .
-ex:PCF_10356 ex:designatesProcessType ex:PickPackAndShipProduct .
-ex:PCF_10357 ex:designatesProcessType ex:TrackInventoryAccuracy .
-ex:PCF_10358 ex:designatesProcessType ex:TrackThirdPartyLogisticsPerformance .
-ex:PCF_10359 ex:designatesProcessType ex:ManagePhysicalFinishedGoodsInventory .
-ex:PCF_20957 ex:designatesProcessType ex:ManageWarehouseTransfers .
-ex:PCF_10341 ex:designatesProcessType ex:OperateOutboundTransportation .
-ex:PCF_10360 ex:designatesProcessType ex:PlanTransportAndDeliverOutboundProduct .
-ex:PCF_10361 ex:designatesProcessType ex:TrackCarrierDeliveryPerformance .
+ex:PCF_10338 ex:designatesProcessType ex:P10338 .
+ex:PCF_10343 ex:designatesProcessType ex:P10343 .
+ex:PCF_10344 ex:designatesProcessType ex:P10344 .
+ex:PCF_10345 ex:designatesProcessType ex:P10345 .
+ex:PCF_10346 ex:designatesProcessType ex:P10346 .
+ex:PCF_10347 ex:designatesProcessType ex:P10347 .
+ex:PCF_10348 ex:designatesProcessType ex:P10348 .
+ex:PCF_16905 ex:designatesProcessType ex:P16905 .
+ex:PCF_20936 ex:designatesProcessType ex:P20936 .
+ex:PCF_10349 ex:designatesProcessType ex:P10349 .
+ex:PCF_10350 ex:designatesProcessType ex:P10350 .
+ex:PCF_10351 ex:designatesProcessType ex:P10351 .
+ex:PCF_10352 ex:designatesProcessType ex:P10352 .
+ex:PCF_20109 ex:designatesProcessType ex:P20109 .
+ex:PCF_12708 ex:designatesProcessType ex:P12708 .
+ex:PCF_10366 ex:designatesProcessType ex:P10366 .
+ex:PCF_21604 ex:designatesProcessType ex:P21604 .
+ex:PCF_21605 ex:designatesProcessType ex:P21605 .
+ex:PCF_10340 ex:designatesProcessType ex:P10340 .
+ex:PCF_10353 ex:designatesProcessType ex:P10353 .
+ex:PCF_10354 ex:designatesProcessType ex:P10354 .
+ex:PCF_10355 ex:designatesProcessType ex:P10355 .
+ex:PCF_10356 ex:designatesProcessType ex:P10356 .
+ex:PCF_10357 ex:designatesProcessType ex:P10357 .
+ex:PCF_10358 ex:designatesProcessType ex:P10358 .
+ex:PCF_10359 ex:designatesProcessType ex:P10359 .
+ex:PCF_20957 ex:designatesProcessType ex:P20957 .
+ex:PCF_10341 ex:designatesProcessType ex:P10341 .
+ex:PCF_10360 ex:designatesProcessType ex:P10360 .
+ex:PCF_10361 ex:designatesProcessType ex:P10361 .
 ex:PCF_10362 ex:designatesProcessType ex:FleetManagementCapability .
-ex:PCF_10363 ex:designatesProcessType ex:ProcessAndAuditCarrierInvoices .
+ex:PCF_10363 ex:designatesProcessType ex:P10363 .
 ex:PCF_10219 ex:designatesProcessType ex:LogisticsManagementCapability .
