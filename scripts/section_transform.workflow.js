@@ -57,7 +57,8 @@ TASK: Build the SHARED supporting vocabulary for ALL of section ${SECTION} so th
 Read every group TSV listed here: ${GROUPS.map(g => g.tsv).join(', ')} (and build/section_${SECTION.split('.')[0]}.0/all.json).
 Across the section, mint ONCE each input/output ICE (Descriptive cco:ont00000853 vs Directive cco:ont00000965 — judge describe-vs-prescribe), agent/org (cco:ont00001017/ont00001180), role (BFO_0000023), capability (cco:ont00001379/ont00000568). For operations sections, MATERIAL inputs/outputs (bfo:material entity) are legal. Add 'is about' (cco:ont00001808) on output ICEs that describe a subject. Genus-differentia skos:definition + rdfs:label on each. Reuse reference-module classes where they already fit.
 Also propose any NEW recurring act genus the section needs beyond ext (anchored under a CCO Act) as ext_proposals.
-Return vocab Turtle, a manifest of every IRI, and the ext proposals. No process classes here.`,
+Return vocab Turtle, a manifest of every IRI, and the ext proposals. No process classes here.
+IMPORTANT: do NOT write or create any .ttl file on disk — return everything via the structured result only. The assembly stage is the sole writer.`,
   { label: `vocab:${SECTION}`, phase: 'Vocabulary', schema: VOCAB_SCHEMA },
 )
 const manifestText = (vocab?.manifest || []).map(m => `${m.iri}  [${m.kind}]  ${m.label}`).join('\n')
@@ -74,7 +75,8 @@ For each process: mint ex:P<pcfID>, engineer the act genus from the verb (GOLDEN
 REUSE these shared vocab IRIs (do not redefine):
 ${manifestText}
 Available shared genera in apqc-ext.ttl (REUSE these, do not re-mint): ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition${(vocab?.ext_proposals || []).length ? '; new proposals this section: ' + (vocab.ext_proposals || []).map(e => e.iri).join(', ') : ''}.
-Emit a bridge ex:PCF_<pcfID> → ex:P<pcfID> for every modeled node. Return process Turtle, R5 log, any unavoidable extra supporting classes, and bridges.`,
+Emit a bridge ex:PCF_<pcfID> → ex:P<pcfID> for every modeled node. Return process Turtle, R5 log, any unavoidable extra supporting classes, and bridges.
+IMPORTANT: do NOT write or create any .ttl file on disk — return everything via the structured result only. The assembly stage is the sole writer.`,
     { label: `model:${g.h}`, phase: 'Model', schema: GROUP_SCHEMA },
   )
 )).then(rs => rs.filter(Boolean))
