@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Validation output (regenerated; evidence records kept selectively)
+ontology/reports/*.json
+ontology/reports/*.txt
+ontology/reports/_reasoned_*.ttl    # throwaway ROBOT reason output
+!ontology/reports/.gitkeep
+
+# Vendored dependency closure is large; pin + fetch via script, do not commit
+vendor/cco/*.ttl
+vendor/cco/*.owl
+!vendor/cco/README.md
+
+# ROBOT jar (Gate D reasoner, ~82MB); fetch via README, do not commit
+tools/robot.jar
+
+# Secrets
+.env
+*.key

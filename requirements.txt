@@ -1,0 +1,21 @@
+# APQC -> BFO/CCO transform toolchain (Python 3.13)
+#
+# Catalog generation (deliverable 0.2) is intentionally STDLIB-ONLY so the
+# deterministic layer reproduces with zero dependencies. Everything below is
+# for the validation harness (0.4) and the section daemon (0.5).
+
+# --- Validation harness: Gates A-C ---
+rdflib>=7.1            # Gate A (parse) + Gate B (IRI resolution over local closure)
+pyshacl>=0.30          # Gate C (SHACL, advanced mode: pyshacl -a)
+
+# --- Validation harness: Gate D (reasoner) ---
+# Choose one during task 5 based on what installs cleanly on this host:
+owlready2>=0.47        # HermiT/Pellet bridge (bundles a reasoner; needs Java)
+# ELK alternative is run via `robot` (Java jar), not pip -- see vendor/ notes.
+
+# --- Section daemon: per-section LLM transform (deliverable 0.5) ---
+claude-agent-sdk>=0.1  # spawns the per-section transform agent
+anthropic>=0.40        # underlying API client
+
+# --- Dev ---
+pytest>=8.0

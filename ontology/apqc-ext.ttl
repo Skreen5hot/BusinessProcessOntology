@@ -1,0 +1,45 @@
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix cco:   <https://www.commoncoreontologies.org/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix ex:    <http://example.org/apqc#> .
+
+####################################################################
+# APQC SHARED EXTENSION MODULE  (apqc-ext.ttl)  v0.1.0
+#
+# D9: recurring local act genera live here ONCE and are imported by
+# every slice module -- never re-minted per slice. Each genus is
+# anchored under the nearest correct CCO Act class (verify-before-assert,
+# Methodology §6). Slice modules `owl:imports` this file.
+#
+# Growth policy (PHASE0 §5.1): the section daemon may PROPOSE a new
+# recurring genus; it is added here only after human approval, to keep
+# this the single source of truth for local universals.
+#
+# CCO pin: v2.0 (2024-11-06).
+####################################################################
+
+<http://example.org/apqc/ext> a owl:Ontology ;
+    dct:title "APQC Shared Extension: recurring local act genera (D9)" ;
+    owl:versionInfo "0.1.0" ;
+    rdfs:comment "Imported by every reality-layer slice module. Anchors local act genera under CCO Act classes." .
+    # owl:imports <https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged> .
+
+####################################################################
+# Seed genera (lifted from the reference module apqc_1_1_1.ttl, where
+# they were proven against CCO v2.0).
+####################################################################
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
