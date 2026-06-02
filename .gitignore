@@ -20,6 +20,9 @@ vendor/cco/*.owl
 # ROBOT jar (Gate D reasoner, ~82MB); fetch via README, do not commit
 tools/robot.jar
 
+# Intermediate per-section data bundles (regeneratable via scripts/stage_section.py)
+build/
+
 # Secrets
 .env
 *.key

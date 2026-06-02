@@ -66,6 +66,21 @@ def _closure_files() -> list[Path]:
     )
 
 
+def _supporting_graphs(module: Path) -> list[Path]:
+    """Modules that IMPORT the shared extension (D9) need it loaded alongside,
+    or subclass-chain checks (S2/S5) and the reasoner can't see the genus
+    anchors. Slice modules import apqc-ext.ttl; the reference defines its genera
+    inline and needs nothing extra.
+    """
+    try:
+        in_slices = module.resolve().parent == config.SLICES_DIR.resolve()
+    except OSError:
+        in_slices = False
+    if in_slices and config.EXT_TTL.exists() and module.name != "apqc_1_1_1.ttl":
+        return [config.EXT_TTL]
+    return []
+
+
 # --- Gate A -----------------------------------------------------------------
 def gate_a_syntax(module: Path) -> GateResult:
     try:
@@ -137,6 +152,10 @@ def gate_c_shacl(module: Path, shapes: Path | None = None) -> GateResult:
         # Subclass-chain checks (S2/S5) are satisfied in-module because each local
         # genus carries its `rdfs:subClassOf cco:<Act>` axiom locally.
         data = rdflib.Graph(); data.parse(str(module), format="turtle")
+        # Load imported shared-extension genera so S2/S5 subclass chains resolve
+        # (the CCO closure is still NOT merged here -- see note above).
+        for sup in _supporting_graphs(module):
+            data.parse(str(sup), format="turtle")
         conforms, _report_graph, report_text = pyshacl_validate(
             data,
             shacl_graph=str(shapes),
@@ -181,6 +200,8 @@ def gate_d_reasoner(module: Path) -> GateResult:
     config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     reasoned = config.REPORTS_DIR / f"_reasoned_{module.stem}.ttl"
     cmd = ["java", "-jar", str(config.ROBOT_JAR), "merge", "--input", str(module)]
+    for f in _supporting_graphs(module):       # imported shared-extension genera
+        cmd += ["--input", str(f)]
     for f in closure:
         cmd += ["--input", str(f)]
     cmd += ["reason", "--reasoner", config.REASONER, "--output", str(reasoned)]
