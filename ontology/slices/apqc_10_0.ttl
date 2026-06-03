@@ -61,7 +61,7 @@ ex:ActOfAcquisition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Acquisition" ;
     skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0). Also rejected cco:ont00001334 (Act of Purchasing) and cco:ont00000389 (Act of Buying): both require a Financial Instrument and descend from cco:ont00000836 (Act of Financial Instrument Use), too narrow for non-purchase acquisitions such as obtaining permits/licenses from an authority or securing financing; purchasing is a species of acquisition, not its genus." .
 
 ex:ActOfAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
@@ -69,11 +69,18 @@ ex:ActOfAnalysis a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
     rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
 
+ex:ActOfForecasting a owl:Class ;
+    rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
+        cco:ont00000228 ;               # Planned Act (allowlisted process anchor; co-asserted because 371 is outside the S2 allowlist)
+    rdfs:label "Act of Forecasting" ;
+    skos:definition "An Act of Prediction in which an Agent examines present information about an entity and generates a Predictive Information Content Entity that describes an uncertain future event, value, or condition of that entity." ;
+    rdfs:comment "Local extension (D9). Genus cco:ont00000371 (Act of Prediction, a Planned Act). Used where a process's definitional output is a forecast/projection of an uncertain future state (a Predictive ICE, cco:ont00000626), as opposed to ex:ActOfAnalysis whose output is a plain Descriptive ICE about an existing subject. cco:ont00000228 co-asserted locally so the class still anchors to an S2-allowlisted Planned Act. Recurs corpus-wide (slices 5.0/6.0/8.0/10.0)." .
+
 ex:ActOfDisposition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Disposition" ;
     skos:definition "A Planned Act in which an Agent removes an asset or portion of material from active service, ownership, or possession at its end-of-life by retiring, selling, dismantling, recycling, abandoning, or otherwise applying a terminal disposition to it or its parts in accordance with applicable requirements." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic disposal/disposition Act. Anchored at the generic cco:ont00000228 (Planned Act) because disposition spans physical destruction/recycling AND ownership transfer (sale/trade) AND waste-stream removal -- not all of which physically process a material artifact. Rejected cco:ont00000908 (Act of Material Artifact Processing: too narrow -- excludes sale/abandonment), cco:ont00000950 (Act of Maintenance: preserves/restores Qualities, the opposite of retiring an asset), and cco:ont00000970 (Act of Artifact Modification: changes an artifact's qualities, not its service/ownership status). Recurs across asset end-of-life: decommission, sale/trade, recycle, abandonment, hazardous-material/waste disposition (10.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic disposal/disposition Act. Anchored at the generic cco:ont00000228 (Planned Act) because disposition spans physical destruction/recycling AND ownership transfer (sale/trade) AND waste-stream removal -- not all of which physically process a material artifact. Rejected cco:ont00000908 (Act of Material Artifact Processing: too narrow -- excludes sale/abandonment), cco:ont00000950 (Act of Maintenance: preserves/restores Qualities, the opposite of retiring an asset), and cco:ont00000970 (Act of Artifact Modification: changes an artifact's qualities, not its service/ownership status). Recurs across asset end-of-life: decommission, sale/trade, recycle, abandonment, hazardous-material/waste disposition (10.0). Also rejected cco:ont00001336 (Act of Ownership) and its parent cco:ont00001232 (Act of Possession): these model an agent HOLDING / exercising control over property (a state of possession), not relinquishing or transferring it; CCO 2.0 has no Act of Selling / Act of Ownership Transfer." .
 
 ex:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
@@ -126,9 +133,11 @@ ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:comment "Catalog->reality bridge. Links an APQC catalog node (ex:PCF_<pcfID>) to the reality-layer class (process, capability) that it designates." .
 
 ####################################################################
-# 1. PROPOSE-EXT: promote to apqc-ext.ttl after review
-#    New recurring act genera needed corpus-wide. Minted locally here
-#    and flagged for human promotion (D9). Declared ONCE.
+# 1. PROPOSE-EXT ACT GENERA
+#    None new in this slice. All shared act genera used here are
+#    inlined in the ACT GENERA section above (from the apqc-ext.ttl
+#    registry), so the module validates standalone -- no apqc-ext.ttl
+#    import is required.
 ####################################################################
 
 ####################################################################
@@ -158,8 +167,8 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 
 ex:BusinessStrategy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Business Strategy" ;
-    skos:definition "A Descriptive Information Content Entity that describes an organization's overall direction, goals, and competitive positioning, used as a reference against which asset requirements are aligned." ;
-    rdfs:comment "Shared input across 10.0 (e.g. confirm property requirements align with business strategy). Modeled as Descriptive (a standing reference document) rather than Directive; the prescriptive strategy artifacts produced within 10.0 are typed separately (e.g. ex:PropertyStrategy, ex:ConstructionStrategy)." .
+    skos:definition "A Directive Information Content Entity that prescribes an organization's overall direction, goals, and competitive positioning, against which asset requirements are aligned." ;
+    rdfs:comment "Shared has-input across 10.0 (e.g. confirm property requirements align with business strategy). Directive (cco:ont00000965): harmonized to Directive corpus-wide (cf. slice 2.0) so the shared class stays satisfiable across slices; the further prescriptive strategy artifacts produced within 10.0 are typed separately (e.g. ex:PropertyStrategy, ex:ConstructionStrategy). (The definition/comment formerly read 'Descriptive', contradicting the harmonized 965 anchor; corrected here.)" .
 
 ex:ExternalEnvironmentAppraisal a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "External Environment Appraisal" ;
@@ -176,8 +185,8 @@ ex:BudgetAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 ex:Budget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Budget" ;
-    skos:definition "A Descriptive Information Content Entity that describes the planned allocation of funds for a project or program." ;
-    rdfs:comment "Input to budget-feasibility and capital-program work. Modeled Descriptive (a financial statement of planned figures); the prescriptive commitment of funds is captured by ex:CapitalInvestmentPlan." .
+    skos:definition "A Directive Information Content Entity that prescribes the planned allocation of funds for a project or program." ;
+    rdfs:comment "Has-input to budget-feasibility and capital-program work. Directive (cco:ont00000965): a budget prescribes intended fund allocation, constraining subsequent spending; harmonized to Directive corpus-wide (slices 9.0/12.0). The realized commitment of funds is captured by ex:CapitalInvestmentPlan. (The definition/comment formerly read 'Descriptive', contradicting the harmonized 965 anchor; corrected here.)" .
 
 ex:CapitalProgramReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Capital Program Report" ;
@@ -201,11 +210,12 @@ ex:WorkAndAssetRecord a owl:Class ;
     rdfs:comment "Shared record across 10.2.4.3 (create) and 10.3.2.4 (update). Descriptive: a record of past events." .
 
 ex:MaintenanceRequirementsForecast a owl:Class ;
-    rdfs:subClassOf cco:ont00000853 ,
+    rdfs:subClassOf cco:ont00000626 ,   # Predictive Information Content Entity
+        cco:ont00000853 ,               # Descriptive ICE (allowlisted ICE anchor; co-asserted because 626 is outside the S3/S4 allowlist)
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:ProductiveAsset ] ;
     rdfs:label "Maintenance Requirements Forecast" ;
-    skos:definition "A Descriptive Information Content Entity, about an asset, that describes a projection of that asset's future maintenance requirements based on its present working condition." ;
-    rdfs:comment "Descriptive: it represents projected requirements (an analysis/prediction), not a prescription." .
+    skos:definition "A Predictive Information Content Entity, about an asset, that describes a projection of that asset's uncertain future maintenance requirements based on its present working condition." ;
+    rdfs:comment "Predictive (cco:ont00000626, a specialization of Descriptive cco:ont00000853): it describes an UNCERTAIN FUTURE state (projected requirements), not a record of an existing or past subject. Re-anchored from plain cco:ont00000853 to preserve the forecast/prediction semantics; cco:ont00000853 co-asserted locally because 626 is outside the S3/S4 ICE allowlist {958,853,965}. Output of ex:P10967 (ex:ActOfForecasting)." .
 
 ex:MaintenancePerformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Maintenance Performance Report" ;
@@ -251,7 +261,8 @@ ex:MaterialSafetyDataSheet a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:HazardousMaterial ] ;
     rdfs:label "Material Safety Data Sheet" ;
     skos:definition "A Descriptive Information Content Entity, about a hazardous material, that records the safety properties and required handling and disposal information for that material." ;
-    rdfs:comment "Descriptive: an MSDS records material properties; the handling requirements it cites are described, not authored, by it." .
+    rdfs:comment "Descriptive: an MSDS records material properties; the handling requirements it cites are described, not authored, by it." ;
+    rdfs:comment "False-friend caution (Descriptive vs Directive): an MSDS is descriptive content (cco:ont00000853); any directive handling or disposal PROCEDURE it quotes is a separate Prescriptive ICE (cco:ont00000965) authored by the relevant authority, modeled as its own class if needed. Do not re-anchor the sheet to Directive on the strength of the rules it cites." .
 
 ex:ComplianceAuditReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compliance Audit Report" ;
@@ -404,7 +415,8 @@ ex:DispositionDecision a owl:Class ;
 ex:RegulatoryRequirementsStatement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Regulatory Requirements Statement" ;
     skos:definition "A Directive Information Content Entity that prescribes the regulatory requirements applicable to hazardous-material handling, disposal, and reporting." ;
-    rdfs:comment "Directive: it conveys externally-authored prescriptions that the organization must satisfy and communicate." .
+    rdfs:comment "Directive: it conveys externally-authored prescriptions that the organization must satisfy and communicate." ;
+    rdfs:comment "False-friend caution (Directive vs Descriptive): this Regulatory Requirements STATEMENT is the prescriptive content -- the externally-authored requirements the organization must satisfy (cco:ont00000965). It is NOT ex:RegulatoryRequirementsBriefing (cco:ont00000853), the descriptive account GIVEN ABOUT those requirements to compliance personnel; a reporting act (e.g. ex:P12181) takes this Statement as has-input and produces the Briefing as has-output." .
 
 ex:PropertySelectionDecision a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Property Selection Decision" ;
@@ -422,7 +434,8 @@ ex:PropertySelectionDecision a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 ex:RealProperty a owl:Class ; rdfs:subClassOf obo:BFO_0000040 ;
     rdfs:label "Real Property" ;
     skos:definition "A Material Entity, comprising land together with any buildings or fixtures on it, that an organization may build, buy, lease, retain, or dispose of." ;
-    rdfs:comment "Anchored at BFO material entity rather than Material Artifact because raw land is not an artifact. Subject of property-selection and build/buy/lease decisions." .
+    rdfs:comment "Anchored at BFO material entity rather than Material Artifact because raw land is not an artifact. Subject of property-selection and build/buy/lease decisions." ;
+    rdfs:comment "Scope caution (material asset vs legal interest): this class denotes the MATERIAL real-property asset (land + buildings/fixtures, obo:BFO_0000040). It does NOT represent legal rights or interests in the property (title, freehold/leasehold, easements, liens); those are generically-dependent continuants, not material entities, and would be modeled separately (e.g. a Directive/role-bearing ICE) if the corpus later covers property law." .
 
 ex:Facility a owl:Class ; rdfs:subClassOf cco:ont00000192 ;
     rdfs:label "Facility (asset)" ;
@@ -1170,10 +1183,10 @@ ex:P10967 a owl:Class ;
     ex:pcfID "10967" ; ex:hierarchyID "10.3.1.2" ;
     ex:apqcSourceText "Evaluating assets in order to project future requirements for maintenance. Evaluate the present working condition of assets. Determine the future maintenance requirements of assets." ;
     rdfs:label "Analyze assets and predict maintenance requirements" ;
-    skos:definition "An Act of Analysis that examines the present condition of productive assets and has as output a maintenance requirements forecast projecting their future maintenance needs." ;
-    rdfs:comment "Anchored under ex:ActOfAnalysis (Act of Information Processing): its definitional output is a Descriptive ICE (Maintenance Requirements Forecast), per the GOLDEN PRINCIPLE." ;
+    skos:definition "An Act of Forecasting that examines the present working condition of productive assets and has as output a maintenance requirements forecast projecting their uncertain future maintenance needs." ;
+    rdfs:comment "Anchored under ex:ActOfForecasting (Act of Prediction, cco:ont00000371): the definitional output is a Predictive ICE (ex:MaintenanceRequirementsForecast) describing an UNCERTAIN FUTURE state -- the source text 'project future requirements' / 'determine the future maintenance requirements' makes this a prediction, not a plain analysis of an existing subject. Re-anchored from ex:ActOfAnalysis (Act of Information Processing): that genus fits acts whose output is a plain Descriptive ICE about an EXISTING subject; a forecast of an uncertain future is the Predictive specialization (cco:ont00000626 subClassOf cco:ont00000853), produced by an Act of Prediction." ;
     skos:example "An asset analyst reviews equipment condition data and forecasts the parts and servicing needed next year." ;
-    rdfs:subClassOf ex:ActOfAnalysis ,
+    rdfs:subClassOf ex:ActOfForecasting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:MaintenanceRequirementsForecast ] .
 
 # --- 10.3.1.3 (PCF 19241) : Formulation -> Directive output
