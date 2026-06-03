@@ -7,7 +7,7 @@
 @prefix ex:    <http://example.org/apqc#> .
 
 ####################################################################
-# APQC SHARED EXTENSION MODULE  (apqc-ext.ttl)  v0.3.0
+# APQC SHARED EXTENSION MODULE  (inlined)  v0.3.0
 #
 # D9: recurring local act genera live here ONCE and are imported by
 # every slice module -- never re-minted per slice. Each genus is
@@ -196,7 +196,7 @@ ex:ActOfProduction a owl:Class ;
         cco:ont00000228 ;               # Planned Act (explicit; entailed via ont00000908, asserted so SHACL S2/S5 resolve standalone)
     rdfs:label "Act of Production" ;
     skos:definition "An Act of Material Artifact Processing in which an Agent transforms raw materials and components into finished Material Artifacts according to a production specification or schedule." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing, verified: 'A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), not has output (reserved for ICEs). Recurs in physical-production categories (4.0, 6.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing, verified: 'A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), NOT has output -- a deliberate CORPUS-LOCAL CONVENTION (not a missing output): cco:has output is used only for informational (ICE) outputs in these reality slices, so material products produced or moved by operations attach via bfo:has participant. CCO itself permits a material has-output; adopting that pattern corpus-wide is an open policy option (see methodology section 10). Recurs in physical-production categories (4.0, 6.0)." .
 
 ex:ActOfTransportation a owl:Class ;
     rdfs:subClassOf cco:ont00000065 ,   # Act of Location Change

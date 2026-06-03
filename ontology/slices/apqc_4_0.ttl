@@ -103,7 +103,7 @@ ex:ActOfProduction a owl:Class ;
         cco:ont00000228 ;               # Planned Act (explicit; entailed via ont00000908, asserted so SHACL S2/S5 resolve standalone)
     rdfs:label "Act of Production" ;
     skos:definition "An Act of Material Artifact Processing in which an Agent transforms raw materials and components into finished Material Artifacts according to a production specification or schedule." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing, verified: 'A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), not has output (reserved for ICEs). Recurs in physical-production categories (4.0, 6.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing, verified: 'A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), NOT has output -- a deliberate CORPUS-LOCAL CONVENTION (not a missing output): cco:has output is used only for informational (ICE) outputs in these reality slices, so material products produced or moved by operations attach via bfo:has participant. CCO itself permits a material has-output; adopting that pattern corpus-wide is an open policy option (see methodology section 10). Recurs in physical-production categories (4.0, 6.0)." .
 
 ex:ActOfScheduling a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
@@ -244,7 +244,7 @@ ex:ConstrainedMaterialsPlan a owl:Class ; rdfs:subClassOf ex:MaterialsPlan ;
 ex:ProductionNetworkModel a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Production Network Model" ;
     skos:definition "A Directive Information Content Entity that represents the logical production system, providing the framework of sequential flow and capacity relationships among raw materials, parts, resources, and finished products to enable simulation and optimization." ;
-    rdfs:comment "Modeled as Directive: a model that frames how the production network is to attain strategic objectives functions as a prescriptive blueprint. Reused for the plant model (4.3.1.1)." .
+    rdfs:comment "Modeled as Directive when the model functions as a prescriptive blueprint for how the production network is to be configured or operated. A descriptive network representation (a model OF the current network for simulation/analysis) would instead be a Descriptive ICE; that reading is out of scope here. Reused for the plant model (4.3.1.1)." .
 
 ex:MasterProductionSchedule a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Master Production Schedule" ;
@@ -429,7 +429,8 @@ ex:ForecastingMethodologyAssessment a owl:Class ;
 # --- materials / capacity / supplier data ---
 ex:MaterialSpecification a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Material Specification" ;
-    skos:definition "A Descriptive Information Content Entity that describes the attributes and characteristics of an inventory item, such as density, volume, and size." .
+    skos:definition "A Descriptive Information Content Entity that describes the attributes and characteristics of an inventory item, such as density, volume, and size." ;
+    rdfs:comment "Despite the 'Specification' label, this class is DESCRIPTIVE: it records observed material attributes (density, volume, size), not a prescriptive requirement. A prescriptive material requirement should be modeled separately as a Directive ICE (e.g. a Material Requirement Specification). Label-driven false-friend guard (D6)." .
 
 ex:CapacityAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Capacity Assessment" ;
@@ -1422,10 +1423,11 @@ ex:P10373 a owl:Class ;
     ex:pcfID "10373" ; ex:hierarchyID "4.1.8.3" ;
     ex:apqcSourceText "Communicating the desired quality specifications to the manufacturing units, as well as the distribution centers, to avoid any misunderstanding or misinterpretation." ;
     rdfs:label "Communicate quality specifications" ;
-    skos:definition "An Act of Information Processing that has as input a quality standard and transfers the desired quality specifications to manufacturing units and distribution centers." ;
-    rdfs:comment "Anchored to Act of Information Processing (transfer sense): an existing Directive ICE is communicated, not newly formulated." ;
+    skos:definition "An Act of Communication that has as input a quality standard and transfers the desired quality specifications to manufacturing units and distribution centers." ;
+    rdfs:comment "Re-anchored (Gate-F) to cco:ont00000402 (Act of Communication, co-anchored to cco:ont00000228 Planned Act): the act TRANSFERS an existing Directive ICE (the quality standard) to manufacturing units and distribution centers; it does not formulate the standard. Aligns with the communication anchoring of P10345 and P10366." ;
     skos:example "QA circulates the approved quality spec sheet to all plants and DCs." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    rdfs:subClassOf cco:ont00000402 ,
+        cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:QualityStandard ] .
 
 ####################################################################
@@ -1775,7 +1777,7 @@ ex:P10302 a owl:Class ;
 # ===== GROUP 4.3  Produce/Assemble/Test product (PCF 10217)
 # Reuses ex:ActOfProduction, ex:ActOfScheduling, ex:ActOfMonitoring
 # (section genera above) and ex:ActOfFormulation, ex:ActOfAnalysis
-# (apqc-ext.ttl). Quality testing anchors at cco:ont00000345 (Act of
+# (inlined). Quality testing anchors at cco:ont00000345 (Act of
 # Measuring); calibration at cco:ont00000950 (Act of Maintenance).
 ####################################################################
 
@@ -2131,7 +2133,7 @@ ex:P10377 a owl:Class ;
 # The standing group-level function (PCF 10219) is the Organization
 # Capability ex:LogisticsManagementCapability (section F), realized in
 # the four bounded sub-processes below. Reuses ex:ActOfFormulation,
-# ex:ActOfSelection (apqc-ext.ttl), ex:ActOfTransportation,
+# ex:ActOfSelection (inlined), ex:ActOfTransportation,
 # ex:ActOfMonitoring (section genera), and CCO Acts directly:
 # cco:ont00000636 (Appraisal), cco:ont00000950 (Maintenance),
 # cco:ont00000366 (Info Processing), cco:ont00000228 (Planned Act).

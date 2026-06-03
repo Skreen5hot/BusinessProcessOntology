@@ -2662,7 +2662,7 @@ ex:P10880 a owl:Class ;
     ex:apqcSourceText "Explaining policies and procedures related to reimbursements requests by employees. Set policies regarding reimbursement process and amount limits etc. Inform employees." ;
     rdfs:label "Establish and communicate expense reimbursement policies and approval limits" ;
     skos:definition "An Act of Formulation that sets the policies and approval limits governing employee expense reimbursements and produces a financial policy." ;
-    rdfs:comment "Anchored to ex:ActOfFormulation (apqc-ext.ttl; cco:ont00000511): setting reimbursement policy and limits composes a Directive ICE (GOLDEN PRINCIPLE). Communicating it to employees is a typical downstream adjunct, not a separate definitional output." ;
+    rdfs:comment "Anchored to ex:ActOfFormulation (inlined; cco:ont00000511): setting reimbursement policy and limits composes a Directive ICE (GOLDEN PRINCIPLE). Communicating it to employees is a typical downstream adjunct, not a separate definitional output." ;
     skos:example "Finance issuing an updated travel-and-expense policy with per-diem caps." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:FinancialPolicy ] .
@@ -2751,7 +2751,7 @@ ex:P20932 a owl:Class ;
     ex:apqcSourceText "Obtaining credit cards for business-related expenses." ;
     rdfs:label "Order corporate credit cards" ;
     skos:definition "An Act of Acquisition that obtains corporate credit cards, not previously held, for business-related expenses." ;
-    rdfs:comment "Anchored to ex:ActOfAcquisition (apqc-ext.ttl; cco:ont00000228 Planned Act): obtaining a card from an issuer that the organization did not previously hold. The card obtained is a MATERIAL participant (obo:BFO_0000057), not has output." ;
+    rdfs:comment "Anchored to ex:ActOfAcquisition (inlined; cco:ont00000228 Planned Act): obtaining a card from an issuer that the organization did not previously hold. The card obtained is a MATERIAL participant (obo:BFO_0000057), not has output." ;
     skos:example "Ordering newly approved corporate purchasing cards from the issuing bank." ;
     rdfs:subClassOf ex:ActOfAcquisition ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:CorporateCreditCard ] .
@@ -3961,7 +3961,7 @@ ex:P14098 a owl:Class ;
     ex:apqcSourceText "Creating a document assuring that a seller will receive payment when certain delivery conditions are met. (If the buyer is unable to make payment on the purchase, a bank covers the outstanding amount.)" ;
     rdfs:label "Prepare letter of credit" ;
     skos:definition "An Act of Formulation that composes a letter of credit prescribing the conditions under which a bank guarantees payment to a seller upon fulfilment of specified delivery conditions." ;
-    rdfs:comment "Anchored to ex:ActOfFormulation (apqc-ext.ttl, subClassOf cco:ont00000511, Act of Planning) because creating a letter of credit composes a Directive ICE that prescribes a payment guarantee, satisfying the GOLDEN PRINCIPLE." ;
+    rdfs:comment "Anchored to ex:ActOfFormulation (inlined, subClassOf cco:ont00000511, Act of Planning) because creating a letter of credit composes a Directive ICE that prescribes a payment guarantee, satisfying the GOLDEN PRINCIPLE." ;
     skos:example "A bank issues a documentary letter of credit guaranteeing payment to an exporter on presentation of shipping documents." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:LetterOfCredit ] .

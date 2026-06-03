@@ -243,6 +243,7 @@ A regression fixture of deliberately non-conformant classes (`apqc_bad_examples.
 
 - **Existential over-commitment.** See the Phase 3 existential-necessity rule; thin classes are re-checked at Gate D.
 - **Precedence discipline.** Assert ordering only where the source licenses it. Parallel facets of one scan get none.
+- **Material-output convention (corpus-local).** In the operations categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0) a process often produces or moves a *material* product. The reality slices use `cco:has output` only for **informational** (ICE) outputs and attach the material product/result via `bfo:has participant` (keeping `has output` aligned with the Descriptive/Directive ICE pattern). This is a **deliberate convention, not a missing output** — CCO's `has output` *does* permit a material continuant filler (Phase 3 allows material I/O fillers), so adopting a material `has output` pattern for production/logistics acts is a legitimate alternative; it is left as an open corpus-wide policy choice. Whichever is chosen, apply it uniformly and state it in the act-genus comment (e.g. `ex:ActOfProduction`).
 
 *(The Category-as-aggregate question, formerly here, is now foundational — D8.)*
 
