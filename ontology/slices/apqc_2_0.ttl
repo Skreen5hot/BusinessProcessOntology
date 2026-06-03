@@ -52,8 +52,67 @@
     dct:title "APQC reality-layer slice 2.0: Develop and Manage Products and Services" ;
     dct:source "APQC Process Classification Framework (Cross-Industry), Category 2.0" ;
     owl:versionInfo "0.1.0" ;
-    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 2.0 (groups 2.1-2.3). CCO pin v2.0 (2024-11-06). Follows ADR-001 two-layer policy: this is the reality layer only; the curatorial catalog (skos) lives in apqc-catalog.ttl. Imports apqc-ext.ttl (shared act genera), which anchors under CCO (which imports BFO 2020). Category 2.0 and the three process groups are catalog-only at the Category level (R3); transformation begins at the process-group level. Validate offline alongside CommonCoreOntologiesMerged.ttl." .
+
+####################################################################
+# ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
+# apqc-ext.ttl, the D9 shared registry). Inlined so this module
+# validates standalone against CCO without merging the extension.
+####################################################################
+
+ex:ActOfAcquisition a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Acquisition" ;
+    skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfDataManagement a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Data Management" ;
+    skos:definition "An Act of Information Processing in which an Agent stores, controls, updates, maintains, or governs access to a body of Information Content Entities so as to keep it accurate, secure, and available." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000366 (Act of Information Processing: ICEs are received, manipulated, transferred, or stored). Covers maintain-records / maintain-repository / control-access / document acts. Rejected cco:ont00001158 (Act of Data Transformation: requires executing an algorithm to transform inputs into outputs) and cco:ont00000950 (Act of Maintenance: modifies Material Artifacts, not ICEs). A standing 'Manage business information' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs in information-management categories (2.0, 8.0)." .
+
+ex:ActOfDesign a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Design" ;
+    skos:definition "An Act of Planning in which an Agent devises and specifies the form, structure, and behavior of a prospective product, service, solution, process, or architecture and produces a Directive Information Content Entity (a design specification) that prescribes how it is to be realized." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic design act; designing produces a Directive ICE (a design/architecture specification) prescribing an artifact-to-be, so it is anchored under cco:ont00000511 (Act of Planning), not under cco:ont00000908 (Act of Material Artifact Processing), which physically operates on existing matter. Rejected cco:ont00000051 (Act of Construction) and cco:ont00001359 (Act of Manufacturing) as both build/mass-produce finished goods rather than authoring a concept-stage design. Recurs across develop/design categories (2.0, 4.0, 7.0, 8.0)." .
+
+ex:ActOfDevelopment a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Development" ;
+    skos:definition "A Planned Act in which an Agent brings a novel product, service, solution, technology, component, prototype, or process from a specification or concept into an existent realized state." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored at the generic cco:ont00000228 (Planned Act) because development spans both informational and material outputs (new technologies, software/hardware components, prototypes, delivery processes) and is broader than cco:ont00001359 (Act of Manufacturing, mass production) and cco:ont00000051 (Act of Construction, building to contract); a development act whose product is specifically a built/mass-produced material artifact should instead use those narrower CCO acts, attaching the material product via obo:BFO_0000057 (has participant), not has output (reserved for ICEs). Recurs across develop/build categories (2.0, 4.0, 8.0)." .
+
+ex:ActOfFormulation a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Formulation" ;
+    skos:definition "An Act of Planning in which an Agent composes and articulates a Directive Information Content Entity - such as a mission, strategy, objective, design, roadmap, or business model - that prescribes an organization's intended course of action." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000511 (Act of Planning) because formulating a strategy/mission/design is making a plan to achieve an objective; its output is a Directive ICE. Recurs across develop/define/compose-a-directive processes corpus-wide." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
+
+ex:ActOfSelection a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Selection" ;
+    skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
+
+ex:ActOfVerification a owl:Class ;
+    rdfs:subClassOf cco:ont00000636 ;   # Act of Appraisal
+    rdfs:label "Act of Verification" ;
+    skos:definition "An Act of Appraisal in which an Agent subjects a product, service, solution, system, plan, control, or process to a test, audit, trial, or review against specified requirements and produces a Descriptive Information Content Entity that records whether and to what extent the requirements are met." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic verification/checking/testing class. ANCHOR CONFLICT RESOLVED: slices 2.0 and 8.0 anchored under cco:ont00000636 (Act of Appraisal); slice 11.0 anchored under cco:ont00000366 (Act of Information Processing). CHOSEN cco:ont00000636 'Act of Appraisal' (verified: 'An Act of Measuring that involves evaluating, assessing, estimating, or judging the nature, value, importance, condition, or quality of something or someone'; parent cco:ont00000345 Act of Measuring -> cco:ont00000228). Verification is the criterion-referenced JUDGEMENT of conformance of a realized artifact, system, or run against a standard -- it acts on a real entity and renders a measured pass/fail or conformance value, which is exactly what Act of Appraisal/Measuring captures (it determines quality 'relative to some standard'). The 11.0 information-processing reading over-generalizes (it would collapse audit/test/validate into mere ICE manipulation) and loses the standard-referenced measuring genus; the 2.0/8.0 appraisal reading is the nearer correct parent. Per the GOLDEN PRINCIPLE the definitional output remains a Descriptive (conformance) ICE, which is consistent under Appraisal. Rejected cco:ont00000366 (Act of Information Processing: too generic -- omits the against-a-standard measuring that individuates verification) and cco:ont00000345 (Act of Measuring per se: lacks the evaluative judgement). Distinct from ex:ActOfAnalysis (examines input ICEs) by acting on a realized artifact or run. Recurs in test/review/validate/audit/penetration-test processes corpus-wide (2.0, 4.0, 6.0, 8.0, 9.0, 11.0)." .
 
 ####################################################################
 # 0. ANNOTATION PROPERTIES (provenance + catalog->reality bridge)

@@ -17,8 +17,80 @@
     dct:title "APQC reality-layer slice 9.0: Manage Financial Resources" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 9.0. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test). The validator merges apqc-ext.ttl separately; the example.org import is commented so ROBOT does not attempt a live fetch. Validate offline by loading CommonCoreOntologiesMerged.ttl and apqc-ext.ttl alongside this file." .
+
+####################################################################
+# ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
+# apqc-ext.ttl, the D9 shared registry). Inlined so this module
+# validates standalone against CCO without merging the extension.
+####################################################################
+
+ex:ActOfAccounting a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Accounting" ;
+    skos:definition "An Act of Information Processing in which an Agent records, classifies, posts, or reconciles financial transactions and produces or updates a Descriptive Information Content Entity (such as a ledger, journal, or account record) that registers the organization's financial state." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic bookkeeping/record-keeping class; recording and reconciling transactions manipulates input ICEs into an updated record ICE, so it anchors under cco:ont00000366 (Act of Information Processing), per the GOLDEN PRINCIPLE. Rejected cco:ont00000950 'Act of Maintenance' (modifies Material Artifacts, not records). Distinct from ex:ActOfFinancialTransaction (which moves the money itself). Recurs in accounting categories (9.0; likely 8.0)." .
+
+ex:ActOfAcquisition a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Acquisition" ;
+    skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfCardAdministration a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Card Administration" ;
+    skos:definition "A Planned Act in which an Agent issues, handles, processes a request for, or deactivates a payment card on behalf of an Organization, thereby establishing or altering the card's status without itself transferring money or a Financial Instrument." ;
+    rdfs:comment "PROPOSE-EXT (D9). Minted for the corporate-credit-card lifecycle family (issue/handle, process requests, deactivate). REJECTED ex:ActOfFinancialTransaction: card issuance/handling/blocking transfers no money and settles no obligation, so it falls outside that genus's differentia ('transfers money or a Financial Instrument in settlement') -- anchoring it there was a false friend driven by the surface theme 'credit card'. Anchored at the generic cco:ont00000228 (Planned Act) because the act operates on the card artifact (a material participant) rather than manipulating only ICEs (cco:ont00000366) or obtaining a not-previously-held entity (ex:ActOfAcquisition, which covers ordering a card). Recurs in 9.0." .
+
+ex:ActOfFinancialTransaction a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Financial Transaction" ;
+    skos:definition "A Planned Act in which an Agent transfers money or a Financial Instrument to or from another Agent in settlement of an obligation, an investment, or an exchange." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act). Rejected cco:ont00000389 'Act of Buying' (specifically acquiring ownership of a good, too narrow for payments/remittances/trades), cco:ont00001334 'Act of Purchasing' (acquires a good/service, too narrow), and cco:ont00000366 'Act of Information Processing' (a payment moves a material/financial-instrument filler, not only an ICE). Broader than ex:ActOfPayment (which is specifically settlement via Financial Instrument Use); financial transaction also covers investments and exchanges. Recurs in payment/treasury/trade categories (9.0)." .
+
+ex:ActOfFormulation a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Formulation" ;
+    skos:definition "An Act of Planning in which an Agent composes and articulates a Directive Information Content Entity - such as a mission, strategy, objective, design, roadmap, or business model - that prescribes an organization's intended course of action." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000511 (Act of Planning) because formulating a strategy/mission/design is making a plan to achieve an objective; its output is a Directive ICE. Recurs across develop/define/compose-a-directive processes corpus-wide." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
+
+ex:ActOfMonitoring a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Monitoring" ;
+    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state, progress, or performance of some process, system, or quantity over time and produces a Descriptive Information Content Entity that represents its tracked status against expected conditions, targets, or requirements." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class. Anchored under cco:ont00000366 (Act of Information Processing) because monitoring ingests repeated observations (including electronic records, not only senses) and yields a descriptive status/deviation ICE -- the GOLDEN PRINCIPLE (descriptive output => information-processing genus) holds. Rejected cco:ont00000037 (Act of Observation: a single sense-based acquisition, too narrow -- monitoring also processes ICEs and is sustained); cco:ont00000636 (Act of Appraisal: renders a single bounded value/quality judgement rather than tracking status over time); and cco:ont00000345 (Act of Measuring: a single quantification against a standard at one time -- at most a method sub-step of the monitoring cycle; a node that is purely one quantification, e.g. Calculate performance measures, anchors to cco:ont00000345 directly, not here). Distinct from ex:ActOfAnalysis (one-shot examination of a fixed input set) by its continuous, longitudinal character. A standing 'Manage/Monitor X' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs corpus-wide (slices 3.0/4.0/5.0/6.0/8.0/9.0/10.0/11.0/12.0/13.0). Reconciled from 10 divergent slice restatements to one definition." .
+
+ex:ActOfOrganizationalEstablishment a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Organizational Establishment" ;
+    skos:definition "A Planned Act in which an Agent constitutes and seats an Organization or organizational body (such as a board, committee, or unit), bringing the body into existence and conferring its mandate." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no Act-of-Establishment/Organization class (verified: no 'Act of Establish/Organiz/Constitut/Found' label in the closure). REJECTED ex:ActOfFormulation (Act of Planning): formulating composes a Directive ICE, but establishing a committee primarily constitutes an independent continuant (the body) rather than authoring a directive; the responsibility-assignment directive is a downstream byproduct of seating the body, not the act's primary product. Anchored at the generic cco:ont00000228 (Planned Act). Recurs in 9.0." .
+
+ex:ActOfReporting a owl:Class ;
+    rdfs:subClassOf cco:ont00000379 ,   # Act of Representative Communication
+        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; ont00000379 -> ont00000402 -> ont00000228 in the CCO closure, asserted locally so the standalone SHACL S2 Act-anchor chain resolves)
+    rdfs:label "Act of Reporting" ;
+    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity (such as a report, statement, scorecard, or filing) that asserts, as true, a representation of an organization's condition or results." ;
+    rdfs:comment "PROPOSE-EXT (D9). ANCHOR CONFLICT RESOLVED: slices 9.0 and 11.0 anchored under cco:ont00000366 (Act of Information Processing, emphasizing report COMPILATION); slice 12.0 anchored under cco:ont00000379 (Act of Representative Communication, emphasizing the asserted-true TRANSFER). CHOSEN cco:ont00000379 'Act of Representative Communication' (verified: 'An Act of Communication that commits a speaker to the truth of the expressed proposition'; parent cco:ont00000402 Act of Communication -> cco:ont00000228; its scopeNote enumerates 'announcing, disclosing, informing, reporting, stating'). Reporting's differentia is the truth-committing inter-agent assertion of a representation -- the speech act of reporting -- which Representative Communication captures exactly and which CCO already models for its own narrower cco:ont00000151 'Act of Reporting' (ont00000151 ⊑ ont00000379). Anchoring at ont00000379 (rather than reusing the leaf ont00000151, whose definition 'giving a detailed account or statement' is narrower than the corpus's scorecards/filings/disclosures) gives one coherent genus across all reporting verbs while staying inside the verified CCO Representative-Communication branch. Rejected cco:ont00000366 (Act of Information Processing): the 9.0/11.0 'compilation' framing models the internal preparation step, but the recurring APQC act is the OUTWARD assertion to an audience, not mere internal ICE manipulation -- pure compilation with no assertion is better left to ex:ActOfAnalysis/ex:ActOfAccounting. Per the GOLDEN PRINCIPLE the conveyed content is a Descriptive ICE. A node that only forwards an already-prepared report without asserting it (pure transfer/submission) may use cco:ont00000402 or cco:ont00000151 directly. Recurs corpus-wide (9.0, 11.0, 12.0)." .
+
+ex:ActOfSelection a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Selection" ;
+    skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
 
 ####################################################################
 # 0. ANNOTATION PROPERTIES (provenance / traceability)

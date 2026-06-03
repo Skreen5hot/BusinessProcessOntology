@@ -259,8 +259,8 @@ A regression fixture of deliberately non-conformant classes (`apqc_bad_examples.
 ## 12. Module architecture, artifacts, and versioning
 
 **Architecture.**
-- One **shared extension module** (`apqc-ext.ttl`, D9): recurring local act genera and any cross-slice patterns; imports the pinned CCO closure.
-- One **slice module** per PCF subtree (`apqc_<hierarchy>.ttl`): imports the shared extension; contains the PCF-derived classes and their slice-local supporting classes.
+- One **shared genus registry** (`apqc-ext.ttl`, D9): the canonical, CCO-verified definition of every recurring local act genus, reconciled across slices. It is the single source of truth (and the generator source for the inlined copies), **not a runtime import**.
+- One **slice module** per PCF subtree (`apqc_<hierarchy>.ttl`): **self-contained** — it inlines the canonical genus anchors it uses (mirrored verbatim from the registry) alongside its PCF-derived classes and slice-local supporting classes, so it validates standalone against the pinned CCO closure with no extension merge. This is what an external reviewer loads; relying on `owl:imports` resolution proved too fragile for review and distribution.
 - A single **Category policy** (D8) applied across all slice modules.
 
 **Artifacts & versioning.**

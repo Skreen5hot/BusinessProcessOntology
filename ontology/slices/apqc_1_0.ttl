@@ -26,15 +26,13 @@
 # RECONCILIATION (collisions across the four group slices):
 #  * One prefix block, one owl:Ontology header, one set of annotation
 #    properties.
-#  * ex:ActOfFormulation / ex:ActOfSelection / ex:ActOfCommunication:
-#    emitted ONCE here as PROPOSE-EXT genera (definitions reconciled to
-#    the section brief). Per-group re-mints removed. ActOfSelection is
-#    anchored under cco:ont00000366 (Act of Information Processing); the
-#    group-1.3 variant that anchored it under Act of Planning is dropped
-#    in favour of this single coherent definition.
-#  * ex:ActOfAcquisition (group 1.4) kept as a genuinely new PROPOSE-EXT.
-#  * Communication acts REUSE verified cco:ont00000402 directly (the
-#    minted ex:ActOfCommunication is a proposal, not used as a genus).
+#  * Act genera (ex:ActOfAnalysis / Identification / Formulation /
+#    Selection / Acquisition) are INLINED below as the canonical
+#    definitions from the apqc-ext.ttl registry, so this module is
+#    self-contained (validates against CCO with no extension merge).
+#    ex:ActOfSelection is anchored under cco:ont00000366 (Act of
+#    Information Processing). Communication acts in this section reuse the
+#    verified cco:ont00000402 directly (no local communication genus).
 #  * Group-1.1 support ICEs/agents/roles (ex:CompetitorData, ...,
 #    ex:MarketData) are carried over from the GOLD module so every
 #    filler is declared here, since this module imports only apqc/ext.
@@ -46,8 +44,43 @@
     dct:title "APQC reality-layer slice 1.0: Develop Vision and Strategy" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC Category 1.0 (groups 1.1-1.4). CCO pin v2.0 (2024-11-06). Follows ADR-001 two-layer policy: this is the reality layer only; the curatorial catalog (skos) lives in apqc-catalog.ttl. Imports apqc-ext.ttl (shared act genera ex:ActOfAnalysis, ex:ActOfIdentification), which anchors under CCO (which imports BFO 2020). Validate offline alongside CommonCoreOntologiesMerged.ttl." .
+
+####################################################################
+# ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
+# apqc-ext.ttl, the D9 shared registry). Inlined so this module
+# validates standalone against CCO without merging the extension.
+####################################################################
+
+ex:ActOfAcquisition a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Acquisition" ;
+    skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfFormulation a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Formulation" ;
+    skos:definition "An Act of Planning in which an Agent composes and articulates a Directive Information Content Entity - such as a mission, strategy, objective, design, roadmap, or business model - that prescribes an organization's intended course of action." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000511 (Act of Planning) because formulating a strategy/mission/design is making a plan to achieve an objective; its output is a Directive ICE. Recurs across develop/define/compose-a-directive processes corpus-wide." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
+
+ex:ActOfSelection a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Selection" ;
+    skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES

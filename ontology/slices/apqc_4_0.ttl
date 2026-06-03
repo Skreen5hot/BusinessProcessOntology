@@ -54,8 +54,75 @@
     dct:title "APQC reality-layer slice 4.0: Manage Supply Chain for Physical Products" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 4.0 (groups 4.1-4.4) plus the section-wide shared supporting vocabulary. CCO pin v2.0 (2024-11-06); modeling decisions follow ADR-001 (reality layer only; the SKOS catalog lives in apqc-catalog.ttl). Validate offline by merging this file with CommonCoreOntologiesMerged.ttl and apqc-ext.ttl. The owl:imports of apqc-ext.ttl is LIVE; ontology/slices/catalog-v001.xml resolves it to the local apqc-ext.ttl offline, and the validator also merges apqc-ext.ttl and the CCO closure as explicit reasoner inputs." .
+
+####################################################################
+# ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
+# apqc-ext.ttl, the D9 shared registry). Inlined so this module
+# validates standalone against CCO without merging the extension.
+####################################################################
+
+ex:ActOfAcquisition a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Acquisition" ;
+    skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfFormulation a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Formulation" ;
+    skos:definition "An Act of Planning in which an Agent composes and articulates a Directive Information Content Entity - such as a mission, strategy, objective, design, roadmap, or business model - that prescribes an organization's intended course of action." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000511 (Act of Planning) because formulating a strategy/mission/design is making a plan to achieve an objective; its output is a Directive ICE. Recurs across develop/define/compose-a-directive processes corpus-wide." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
+
+ex:ActOfMonitoring a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Monitoring" ;
+    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state, progress, or performance of some process, system, or quantity over time and produces a Descriptive Information Content Entity that represents its tracked status against expected conditions, targets, or requirements." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class. Anchored under cco:ont00000366 (Act of Information Processing) because monitoring ingests repeated observations (including electronic records, not only senses) and yields a descriptive status/deviation ICE -- the GOLDEN PRINCIPLE (descriptive output => information-processing genus) holds. Rejected cco:ont00000037 (Act of Observation: a single sense-based acquisition, too narrow -- monitoring also processes ICEs and is sustained); cco:ont00000636 (Act of Appraisal: renders a single bounded value/quality judgement rather than tracking status over time); and cco:ont00000345 (Act of Measuring: a single quantification against a standard at one time -- at most a method sub-step of the monitoring cycle; a node that is purely one quantification, e.g. Calculate performance measures, anchors to cco:ont00000345 directly, not here). Distinct from ex:ActOfAnalysis (one-shot examination of a fixed input set) by its continuous, longitudinal character. A standing 'Manage/Monitor X' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs corpus-wide (slices 3.0/4.0/5.0/6.0/8.0/9.0/10.0/11.0/12.0/13.0). Reconciled from 10 divergent slice restatements to one definition." .
+
+ex:ActOfProcessControl a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Process Control" ;
+    skos:definition "A Planned Act in which an Agent, or an automation system acting for an Agent, regulates a running production process or plant by closing the loop between observation and actuation -- adjusting setpoints, parameters, and equipment so as to keep the process within target or optimize its performance." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act): closed-loop control ACTS ON the plant (it changes setpoints and equipment state), so its product is a change in the controlled material participants, not a Descriptive ICE. Rejected ex:ActOfMonitoring (cco:ont00000366, Act of Information Processing): monitoring is the OBSERVE half only and over-commits to a descriptive output, whereas advanced process control / real-time optimization also ACTUATE. The controlled equipment is attached via obo:BFO_0000057 (has participant). Recurs across automate/control-plant and industrial-control activities (4.0)." .
+
+ex:ActOfProduction a owl:Class ;
+    rdfs:subClassOf cco:ont00000908 ,   # Act of Material Artifact Processing
+        cco:ont00000228 ;               # Planned Act (explicit; entailed via ont00000908, asserted so SHACL S2/S5 resolve standalone)
+    rdfs:label "Act of Production" ;
+    skos:definition "An Act of Material Artifact Processing in which an Agent transforms raw materials and components into finished Material Artifacts according to a production specification or schedule." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing, verified: 'A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), not has output (reserved for ICEs). Recurs in physical-production categories (4.0, 6.0)." .
+
+ex:ActOfScheduling a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Scheduling" ;
+    skos:definition "An Act of Planning in which an Agent fixes the timing, sequencing, and resource allocation of future activities and produces a schedule (a Directive Information Content Entity) that prescribes when, in what order, and by whom those activities are to be performed." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000511 (Act of Planning, verified: 'A Planned Act that involves making a Plan to achieve some specified Objective'): a schedule is a plan whose differentia is the temporal/resource ordering of activities; its output is a Directive ICE, satisfying the GOLDEN PRINCIPLE. Distinct from ex:ActOfFormulation (mission/strategy/design) by its specifically temporal/resource-allocation product. Recurs across operations and project categories (4.0, 6.0, 8.0)." .
+
+ex:ActOfSelection a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Selection" ;
+    skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
+
+ex:ActOfTransportation a owl:Class ;
+    rdfs:subClassOf cco:ont00000065 ,   # Act of Location Change
+        cco:ont00000228 ;               # Planned Act (explicit; entailed via ont00000065, asserted so SHACL S2/S5 resolve standalone)
+    rdfs:label "Act of Transportation" ;
+    skos:definition "An Act of Location Change in which an Agent moves materials or finished products from one supply-chain location to another, such as from a source to a warehouse, distribution center, or customer." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000065 (Act of Location Change, verified: 'An Act of Motion in which the location of some Object is changed by some Agent'; parent cco:ont00000357 Act of Motion -> ... -> Planned Act), the parent of cco:ont00000595 'Act of Cargo Transportation'. Generalizes inbound/outbound movement, picking-packing-shipping, and warehouse transfers; cco:ont00000595 is a close fit but is scoped to a Payload being conveyed, whereas ex:ActOfTransportation also covers internal warehouse transfers and deployment. Recurs across physical-logistics categories (4.0, 6.0, 9.0)." .
 
 ####################################################################
 # 0. ANNOTATION PROPERTIES (provenance + catalog->reality bridge)

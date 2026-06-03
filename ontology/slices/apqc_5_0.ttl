@@ -53,8 +53,55 @@
 <http://example.org/apqc/slice/5.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 5.0: Deliver Services" ;
     owl:versionInfo "0.1.0" ;
-    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer BFO 2020 / CCO 2.0 module for APQC section 5.0 'Deliver Services'. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE genus<->output agreement). Imports apqc-ext.ttl (merged separately by the validator)." .
+
+####################################################################
+# ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
+# apqc-ext.ttl, the D9 shared registry). Inlined so this module
+# validates standalone against CCO without merging the extension.
+####################################################################
+
+ex:ActOfAcquisition a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Acquisition" ;
+    skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfFormulation a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Formulation" ;
+    skos:definition "An Act of Planning in which an Agent composes and articulates a Directive Information Content Entity - such as a mission, strategy, objective, design, roadmap, or business model - that prescribes an organization's intended course of action." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000511 (Act of Planning) because formulating a strategy/mission/design is making a plan to achieve an objective; its output is a Directive ICE. Recurs across develop/define/compose-a-directive processes corpus-wide." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
+
+ex:ActOfMonitoring a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Monitoring" ;
+    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state, progress, or performance of some process, system, or quantity over time and produces a Descriptive Information Content Entity that represents its tracked status against expected conditions, targets, or requirements." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class. Anchored under cco:ont00000366 (Act of Information Processing) because monitoring ingests repeated observations (including electronic records, not only senses) and yields a descriptive status/deviation ICE -- the GOLDEN PRINCIPLE (descriptive output => information-processing genus) holds. Rejected cco:ont00000037 (Act of Observation: a single sense-based acquisition, too narrow -- monitoring also processes ICEs and is sustained); cco:ont00000636 (Act of Appraisal: renders a single bounded value/quality judgement rather than tracking status over time); and cco:ont00000345 (Act of Measuring: a single quantification against a standard at one time -- at most a method sub-step of the monitoring cycle; a node that is purely one quantification, e.g. Calculate performance measures, anchors to cco:ont00000345 directly, not here). Distinct from ex:ActOfAnalysis (one-shot examination of a fixed input set) by its continuous, longitudinal character. A standing 'Manage/Monitor X' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs corpus-wide (slices 3.0/4.0/5.0/6.0/8.0/9.0/10.0/11.0/12.0/13.0). Reconciled from 10 divergent slice restatements to one definition." .
+
+ex:ActOfSelection a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Selection" ;
+    skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
+
+ex:ActOfServiceProvision a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Service Provision" ;
+    skos:definition "A Planned Act in which an Agent renders a service to a customer by carrying out and completing the tasks that fulfil an agreed service need." ;
+    rdfs:comment "PROPOSE-EXT (D9). Operations-category signature genus for 'deliver/render/execute/deploy/operate a service' processes. Anchored at the generic cco:ont00000228 (Planned Act) because service provision need not produce or modify an artifact and need not transfer an ICE. Rejected cco:ont00000908 (Act of Material Artifact Processing: its product is a modified Material Artifact, whereas a service need not modify matter) and cco:ont00000402 (Act of Communication: mere ICE transfer). Recurs in operations/IT-service categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0)." .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES

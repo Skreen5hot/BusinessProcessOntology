@@ -67,17 +67,12 @@ def _closure_files() -> list[Path]:
 
 
 def _supporting_graphs(module: Path) -> list[Path]:
-    """Modules that IMPORT the shared extension (D9) need it loaded alongside,
-    or subclass-chain checks (S2/S5) and the reasoner can't see the genus
-    anchors. Slice modules import apqc-ext.ttl; the frozen reference template
-    (ontology/reference/) defines its genera inline and needs nothing extra.
+    """Slices are SELF-CONTAINED: each inlines the canonical act-genus anchors
+    (mirrored from apqc-ext.ttl) so it validates standalone against CCO with no
+    extension merge. Returns nothing extra -- Gate C/D test the module exactly
+    as an external reviewer loads it (module + pinned CCO closure). apqc-ext.ttl
+    remains the master registry but is no longer a validation dependency.
     """
-    try:
-        in_slices = module.resolve().parent == config.SLICES_DIR.resolve()
-    except OSError:
-        in_slices = False
-    if in_slices and config.EXT_TTL.exists():
-        return [config.EXT_TTL]
     return []
 
 

@@ -17,8 +17,55 @@
     dct:title "APQC reality-layer slice 7.0: Develop and Manage Human Capital" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 7.0. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test). Validate offline by loading CommonCoreOntologiesMerged.ttl and apqc-ext.ttl alongside this file (the example.org import is commented so ROBOT does not attempt a live fetch)." .
+
+####################################################################
+# ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
+# apqc-ext.ttl, the D9 shared registry). Inlined so this module
+# validates standalone against CCO without merging the extension.
+####################################################################
+
+ex:ActOfAcquisition a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Acquisition" ;
+    skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+
+ex:ActOfAdministration a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Administration" ;
+    skos:definition "A Planned Act in which an Agent carries out, enforces, delivers, coordinates, and maintains an already-established arrangement (such as a policy, program, plan, scheme, record set, or relationship) on behalf of an Organization in accordance with a Directive Information Content Entity, without itself creating that arrangement." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored at the generic cco:ont00000228 (Planned Act), neutral on output kind, so administrative acts yielding a Descriptive record or a Directive schedule both fit. Rejected cco:ont00000950 'Act of Maintenance' (modifies Material Artifacts to restore designed Qualities/Functions, whereas administration executes a directive arrangement rather than repairing an artifact), cco:ont00000511 'Act of Planning' (planning creates the arrangement; administering merely runs an existing one), and cco:ont00000366 'Act of Information Processing' (too narrow: administration provisions resources and enacts directives, not only ICE manipulation). Differentia is execution-and-upkeep of a settled arrangement. Recurs in 7.0." .
+
+ex:ActOfAnalysis a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Analysis" ;
+    skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
+    rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
+
+ex:ActOfFormulation a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Formulation" ;
+    skos:definition "An Act of Planning in which an Agent composes and articulates a Directive Information Content Entity - such as a mission, strategy, objective, design, roadmap, or business model - that prescribes an organization's intended course of action." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000511 (Act of Planning) because formulating a strategy/mission/design is making a plan to achieve an objective; its output is a Directive ICE. Recurs across develop/define/compose-a-directive processes corpus-wide." .
+
+ex:ActOfIdentification a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Identification (discernment sense)" ;
+    skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
+    rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
+
+ex:ActOfNegotiation a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Negotiation" ;
+    skos:definition "A Planned Act in which two or more Agents confer and bargain over terms and conditions, exchanging proposals and concessions, in order to reach and record a mutually binding Directive Information Content Entity such as an agreement or contract." ;
+    rdfs:comment "PROPOSE-EXT (D9). ANCHOR CONFLICT RESOLVED: slices 7.0 and 10.0 anchored under cco:ont00000228 (Planned Act); slice 12.0 added cco:ont00001327 as a parent. CHOSEN cco:ont00000228 'Planned Act' (verified: 'An Act in which at least one Agent plays a causative role and which is prescribed by some Prescriptive Information Content Entity held by at least one of the Agents'). FALSE-FRIEND CORRECTION: the consolidation note flagged cco:ont00001327 as 'Act of Social Movement (WRONG)', but verification of the closure shows cco:ont00001327 is actually 'Social Act' (def: 'A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons'; parent cco:ont00000228) -- 'Act of Social Movement' is the DIFFERENT IRI cco:ont00000079 (⊑ ont00001327). The premise of the rejection was thus mistaken, but cco:ont00001327 'Social Act' is still rejected on its merits: negotiation is bilateral bargaining between specific counterparties toward an agreement, not an act whose objective is directed at a community/group of Persons, so the Social-Act differentia does not fit. The neutral Planned Act (cco:ont00000228) is the nearest correct, non-over-committing anchor; its definitional output is a Directive ICE (the agreement), satisfying the GOLDEN PRINCIPLE. Also rejected cco:ont00000511 (Act of Planning: single-agent composition of a plan, whereas negotiation needs two or more parties jointly authoring the directive); cco:ont00000402 (Act of Communication: a one-directional ICE transfer, not bilateral term-setting toward agreement); cco:ont00001162 (Act of Commissive Communication: commits one speaker only, not a multi-party settlement); and cco:ont00000684 (Act of Contract Formation, ⊑ Act of Promising ⊑ Commissive Communication: this is the consummating promise, narrower than the bargaining process that precedes and produces it). Distinct from ex:ActOfAdministration (which runs an already-established arrangement) because negotiation CREATES a novel directive arrangement. Recurs in procurement, contracting, and engaging/retaining-counsel processes (7.0, 10.0, 12.0)." .
+
+ex:ActOfSelection a owl:Class ;
+    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
+    rdfs:label "Act of Selection" ;
+    skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
+    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
 
 ####################################################################
 # 0. ANNOTATION PROPERTIES (provenance / traceability)
