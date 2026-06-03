@@ -27,8 +27,8 @@
 <http://example.org/apqc/slice/11.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 11.0: Manage Enterprise Risk, Compliance, Remediation, and Resiliency" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.1.0" ;
-    rdfs:comment "Reality-layer module for APQC section 11.0. CCO pin v2.0 (2024-11-06). Modeling rules per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE). The shared act genera ex:ActOfAnalysis / ex:ActOfIdentification / ex:ActOfFormulation / ex:ActOfSelection / ex:ActOfAcquisition are REUSED from apqc-ext.ttl; the validator merges apqc-ext.ttl separately. New recurring genera (ex:ActOfMonitoring, ex:ActOfReporting, ex:ActOfVerification, ex:ActOfInvestigation) are emitted below as PROPOSE-EXT." .
+    owl:versionInfo "0.2.0" ;
+    rdfs:comment "Reality-layer module for APQC section 11.0. CCO pin v2.0 (2024-11-06). Modeling rules per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE). The shared act genera ex:ActOfAnalysis / ex:ActOfIdentification / ex:ActOfFormulation / ex:ActOfSelection / ex:ActOfAcquisition are REUSED from apqc-ext.ttl; the validator merges apqc-ext.ttl separately. ALL act genera used here -- including ex:ActOfMonitoring, ex:ActOfReporting, ex:ActOfVerification, ex:ActOfInvestigation -- are defined ONCE in apqc-ext.ttl v0.3.0 (consolidated; the local copies were removed from this slice). RELEASE NOTE: this slice is NOT a standalone module. Gate B (IRI resolution) and Gate D (reasoner) are run over the declared merge closure -- this slice + apqc-ext.ttl + apqc-catalog.ttl + the pinned CCO/BFO closure -- not the file alone; the owl:imports line is left commented because the example.org IRI is not network-resolvable (it would break ROBOT's offline merge). The ex:PCF_<pcfID> catalog nodes referenced by the bridges below are declared and typed in apqc-catalog.ttl." .
     # owl:imports <http://example.org/apqc/ext> .
 
 ####################################################################
@@ -49,25 +49,26 @@ ex:apqcSourceText a owl:AnnotationProperty ;
 
 ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:label "designates process type" ;
-    rdfs:comment "Bridges a catalog node (ex:PCF_<pcfID>) to its reality-layer class (ex:P<pcfID> or a supporting capability)." .
+    rdfs:comment "Bridges a catalog node (ex:PCF_<pcfID>) to its reality-layer class (ex:P<pcfID> or a supporting capability). The catalog nodes themselves are declared and typed (owl:NamedIndividual, cco:ont00000853 Descriptive ICE, skos:Concept) in apqc-catalog.ttl. An ANNOTATION property is used (not an object property) deliberately, to keep the slice in OWL DL and avoid ICE-to-class punning (ADR-001 R4)." .
 
 ####################################################################
-# 1. NEW RECURRING ACT GENERA -- PROPOSE-EXT (D9)
+# 1. ACT GENERA -- DEFINED IN apqc-ext.ttl (D9), reused here
 #
-# These four genera recur across section 11.0 (and are expected
-# corpus-wide in audit / assurance / compliance / incident
-# categories). Each is minted ONCE here under the nearest correct CCO
-# Act, with a clearly-marked PROPOSE-EXT block so a human can promote
-# it into apqc-ext.ttl. Duplicate per-group proposals from the four
-# transforms have been RECONCILED to one coherent definition each.
+# ex:ActOfMonitoring, ex:ActOfReporting, ex:ActOfVerification, and
+# ex:ActOfInvestigation -- together with the seed genera ex:ActOfAnalysis
+# / Identification / Formulation / Selection / Acquisition -- are defined
+# ONCE in apqc-ext.ttl v0.3.0 and merged in for validation. They were
+# proposed per-group during the transform, then consolidated corpus-wide;
+# the local definitions have been removed from this slice.
 #
-# Reconciliation note for ex:ActOfVerification: the 11.4 transform had
-# proposed it under cco:ont00000345 (Act of Measuring); the 11.1/11.2
-# transforms under cco:ont00000636 (Act of Appraisal). Per the section
-# brief it is anchored under cco:ont00000366 (Act of Information
-# Processing): verification compares an observed state against a
-# reference ICE and yields a Descriptive conformance ICE (GOLDEN
-# PRINCIPLE). The single anchor below supersedes the per-group anchors.
+# CANONICAL ANCHOR for ex:ActOfVerification (consolidated): Act of
+# Appraisal (cco:ont00000636) -- verification renders a criterion-
+# referenced conformance judgement of a realized artifact, system, or run
+# against a standard. (The per-group transforms had variously proposed Act
+# of Measuring 345 and Act of Information Processing 366. Several inline
+# process comments below still read "Act of Information Processing"; those
+# predate the consolidation and are SUPERSEDED by apqc-ext.ttl. Many
+# verification acts also retain an information-processing character.)
 ####################################################################
 
 ####################################################################
@@ -132,22 +133,22 @@ ex:EnterpriseRiskReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:RiskMonitoringReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Risk Monitoring Report" ;
     skos:definition "A Descriptive Information Content Entity that describes the observed status of risks and risk-mitigation actions tracked over time against expected parameters." ;
-    rdfs:comment "Output of monitoring acts (11.1.2.5, 11.1.3.5) produced by ex:ActOfMonitoring (PROPOSE-EXT). NOTE (Gate-F): this is a continuous time-series monitoring artifact and is a FALSE FRIEND for one-shot verification findings; verification acts (11.1.2.4, 11.1.2.8, 11.1.2.9) use the dedicated conformance-finding ICEs below instead." .
+    rdfs:comment "Output of monitoring acts (11.1.2.5, 11.1.3.5) produced by ex:ActOfMonitoring (in apqc-ext.ttl). NOTE (Gate-F): this is a continuous time-series monitoring artifact and is a FALSE FRIEND for one-shot verification findings; verification acts (11.1.2.4, 11.1.2.8, 11.1.2.9) use the dedicated conformance-finding ICEs below instead." .
 
 ex:RiskMitigationVerificationReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Risk Mitigation Verification Report" ;
     skos:definition "A Descriptive Information Content Entity that describes the finding of a bounded check of whether business-unit and functional risk mitigation plans have been correctly implemented." ;
-    rdfs:comment "Output of 11.1.2.4 (verify mitigation plans are implemented), produced by ex:ActOfVerification (PROPOSE-EXT). Gate-F mint: a dedicated one-shot conformance-finding ICE, separating verification findings from the continuous-monitoring ex:RiskMonitoringReport (a false friend) so that genus (Verification) and output ICE share semantic traceability. Both are Descriptive (cco:ont00000853)." .
+    rdfs:comment "Output of 11.1.2.4 (verify mitigation plans are implemented), produced by ex:ActOfVerification (in apqc-ext.ttl). Gate-F mint: a dedicated one-shot conformance-finding ICE, separating verification findings from the continuous-monitoring ex:RiskMonitoringReport (a false friend) so that genus (Verification) and output ICE share semantic traceability. Both are Descriptive (cco:ont00000853)." .
 
 ex:ERMProcessConformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "ERM Process Conformance Report" ;
     skos:definition "A Descriptive Information Content Entity that describes the finding of a check of whether each business unit and function follows the enterprise risk management process." ;
-    rdfs:comment "Output of 11.1.2.8 (ensure each unit follows the ERM process), produced by ex:ActOfVerification (PROPOSE-EXT). Gate-F mint: a dedicated process-conformance finding ICE replacing the false-friend ex:RiskMonitoringReport (a time-series monitoring artifact) so the verification genus and its output ICE agree. Descriptive (cco:ont00000853)." .
+    rdfs:comment "Output of 11.1.2.8 (ensure each unit follows the ERM process), produced by ex:ActOfVerification (in apqc-ext.ttl). Gate-F mint: a dedicated process-conformance finding ICE replacing the false-friend ex:RiskMonitoringReport (a time-series monitoring artifact) so the verification genus and its output ICE agree. Descriptive (cco:ont00000853)." .
 
 ex:ERMReportingConformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "ERM Reporting Conformance Report" ;
     skos:definition "A Descriptive Information Content Entity that describes the finding of a check of whether each business unit and function follows the enterprise risk reporting process." ;
-    rdfs:comment "Output of 11.1.2.9 (ensure each unit follows the ERM reporting process), produced by ex:ActOfVerification (PROPOSE-EXT). Gate-F mint: a dedicated reporting-process-conformance finding ICE replacing the false-friend ex:RiskMonitoringReport so the verification genus and its output ICE agree. Sibling of ex:ERMProcessConformanceReport. Descriptive (cco:ont00000853)." .
+    rdfs:comment "Output of 11.1.2.9 (ensure each unit follows the ERM reporting process), produced by ex:ActOfVerification (in apqc-ext.ttl). Gate-F mint: a dedicated reporting-process-conformance finding ICE replacing the false-friend ex:RiskMonitoringReport so the verification genus and its output ICE agree. Sibling of ex:ERMProcessConformanceReport. Descriptive (cco:ont00000853)." .
 
 ex:ComplianceAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compliance Assessment" ;
@@ -157,7 +158,7 @@ ex:ComplianceAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:ComplianceMonitoringReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compliance Monitoring Report" ;
     skos:definition "A Descriptive Information Content Entity that describes the observed compliance position of an organization and the robustness of its existing controls, tracked and tested over time against regulatory requirements." ;
-    rdfs:comment "Output of 11.2.2.6 (monitor and test regulatory compliance position), produced by ex:ActOfVerification (PROPOSE-EXT)." .
+    rdfs:comment "Output of 11.2.2.6 (monitor and test regulatory compliance position), produced by ex:ActOfVerification (in apqc-ext.ttl)." .
 
 ex:ComplianceScorecard a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compliance Scorecard" ;
@@ -172,7 +173,7 @@ ex:ComplianceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:RegulatoryEnvironmentAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Regulatory Environment Analysis" ;
     skos:definition "A Descriptive Information Content Entity that describes an examination of the regulatory environment to spot changing or emerging regulations relevant to an organization." ;
-    rdfs:comment "Output of 11.2.2.3 (monitor the regulatory environment), produced by ex:ActOfMonitoring (PROPOSE-EXT)." .
+    rdfs:comment "Output of 11.2.2.3 (monitor the regulatory environment), produced by ex:ActOfMonitoring (in apqc-ext.ttl)." .
 
 ex:ApplicableRequirementsDetermination a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,
@@ -189,14 +190,14 @@ ex:ExpertAdvice a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:LegalAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Legal Analysis" ;
     skos:definition "A Descriptive Information Content Entity that describes an examination of regulatory and legislative frameworks bearing on an organization's remediation obligations, including liabilities for compensation, fines, and corrective effort." ;
-    rdfs:comment "Output of 11.3.4 (investigate legal aspects), produced by ex:ActOfInvestigation (PROPOSE-EXT)." .
+    rdfs:comment "Output of 11.3.4 (investigate legal aspects), produced by ex:ActOfInvestigation (in apqc-ext.ttl)." .
 
 ex:DamageCauseAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:Damage ] ;
+        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:DamagedMaterialEntity ] ;
     rdfs:label "Damage Cause Analysis" ;
     skos:definition "A Descriptive Information Content Entity, about an instance of damage, that describes a study of the environmental, physical, or social causes of that damage in order to inform better policies and regulations." ;
-    rdfs:comment "Output of 11.3.5 (investigate damage cause), produced by ex:ActOfInvestigation (PROPOSE-EXT)." .
+    rdfs:comment "Output of 11.3.5 (investigate damage cause), produced by ex:ActOfInvestigation (in apqc-ext.ttl)." .
 
 ex:ResourceRequirementsAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Resource Requirements Assessment" ;
@@ -211,7 +212,7 @@ ex:BusinessOperationsEvaluation a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:ContinuityTestResult a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Continuity Test Result" ;
     skos:definition "A Descriptive Information Content Entity that describes the results of assessing whether continuous business operations perform as intended under test conditions." ;
-    rdfs:comment "Output of 11.4.3 (test continuous business operations), produced by ex:ActOfVerification (PROPOSE-EXT)." .
+    rdfs:comment "Output of 11.4.3 (test continuous business operations), produced by ex:ActOfVerification (in apqc-ext.ttl)." .
 
 ex:RiskKnowledge a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Risk Knowledge" ;
@@ -293,12 +294,12 @@ ex:BusinessContinuityPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 ex:Risk a owl:Class ; rdfs:subClassOf obo:BFO_0000017 ;
     rdfs:label "Risk" ;
     skos:definition "A Realizable Entity that is the disposition of some entity to give rise, under specified conditions, to an adverse or uncertain consequence for an organization's objectives." ;
-    rdfs:comment "Subject of ex:RiskRegister / ex:RiskAssessment (cco:ont00001808 'is about'). Modeled as a BFO Realizable Entity (obo:BFO_0000017) because a risk is the standing possibility/disposition of an adverse outcome, not a process or an information artifact." .
+    rdfs:comment "ex:Risk is the REALITY-LAYER risk disposition (BFO Realizable Entity, obo:BFO_0000017): the standing possibility of an adverse outcome borne by some entity -- NOT a process and NOT an information artifact. CAUTION for contributors: information artifacts ABOUT risks are modeled separately as ICEs -- ex:RiskRegister, ex:RiskAssessment, ex:RiskAnalysisReport, etc. (each cco:ont00000853 Descriptive ICE, 'is about' some ex:Risk). Do NOT use ex:Risk as an ICE / has-output filler; use the corresponding artifact class." .
 
-ex:Damage a owl:Class ; rdfs:subClassOf obo:BFO_0000040 ;
-    rdfs:label "Damage" ;
+ex:DamagedMaterialEntity a owl:Class ; rdfs:subClassOf obo:BFO_0000040 ;
+    rdfs:label "Damaged Material Entity" ;
     skos:definition "A Material Entity that has undergone harmful physical, environmental, or social alteration whose causes are studied in order to inform better policies and regulations." ;
-    rdfs:comment "Subject of ex:DamageCauseAnalysis (cco:ont00001808 'is about'). Modeled as a Material Entity (obo:BFO_0000040): in 11.3 the investigated damage is concrete adulteration/harm to a site or system." .
+    rdfs:comment "The damaged site or system that is the subject of ex:DamageCauseAnalysis (cco:ont00001808 'is about'). Renamed from ex:Damage so the label matches its BFO category: it is a Material Entity (obo:BFO_0000040) that has undergone harm -- the damaged thing, not the damage condition itself. (If a contributor needs the harm qua condition, model it separately as a BFO Quality borne by this entity.)" .
 
 ####################################################################
 # 2.4 MATERIAL ENTITY  (obo:BFO_0000040)
@@ -573,7 +574,7 @@ ex:P16449 a owl:Class ;
     ex:apqcSourceText "Checking that the blueprint created for managing risk in individual business units and divisions is correctly effectuated. Validate the implementation of all activities geared to mitigate risks." ;
     rdfs:label "Verify business unit and functional risk mitigation plans are implemented" ;
     skos:definition "An Act of Verification that checks whether business-unit and functional risk mitigation plans have been correctly implemented and produces a risk mitigation verification report recording the conformance finding." ;
-    rdfs:comment "Genus ex:ActOfVerification (under Act of Information Processing): confirming conformance of implementation to the plan; output is a Descriptive ICE (the verification finding). Gate-F fix (1): the `has input some ex:RiskMitigationPlan` restriction was REMOVED -- per the Phase-3 existential-necessity rule the mitigation plan is a TYPICAL input (it is the conformance reference, but the comment formerly labeled it 'typical' while encoding it existentially), so it is demoted to this annotation. Gate-F fix (2): the output was changed from the FALSE-FRIEND ex:RiskMonitoringReport (a continuous-monitoring time-series artifact) to the dedicated one-shot conformance ICE ex:RiskMitigationVerificationReport, restoring genus/output semantic traceability (both Descriptive)." ;
+    rdfs:comment "Genus ex:ActOfVerification (apqc-ext.ttl: Act of Appraisal cco:ont00000636; also information-processing in character): confirming conformance of implementation to the plan; output is a Descriptive ICE (the verification finding). Gate-F fix (1): the `has input some ex:RiskMitigationPlan` restriction was REMOVED -- per the Phase-3 existential-necessity rule the mitigation plan is a TYPICAL input (it is the conformance reference, but the comment formerly labeled it 'typical' while encoding it existentially), so it is demoted to this annotation. Gate-F fix (2): the output was changed from the FALSE-FRIEND ex:RiskMonitoringReport (a continuous-monitoring time-series artifact) to the dedicated one-shot conformance ICE ex:RiskMitigationVerificationReport, restoring genus/output semantic traceability (both Descriptive)." ;
     skos:example "Auditing a division to confirm its mitigation controls are in place and operating." ;
     rdfs:subClassOf ex:ActOfVerification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RiskMitigationVerificationReport ] .
@@ -622,7 +623,7 @@ ex:P16453 a owl:Class ;
     ex:apqcSourceText "Checking each business unit's/function's options and activities to improve opportunities and lessen threats." ;
     rdfs:label "Ensure that each business unit/function follows the enterprise risk management process" ;
     skos:definition "An Act of Verification that checks whether each business unit and function follows the enterprise risk management process and produces an ERM process conformance report." ;
-    rdfs:comment "Genus ex:ActOfVerification (under Act of Information Processing): confirming process conformance; output is a Descriptive ICE. Gate-F fix (1): the `has input some ex:EnterpriseRiskPolicy` restriction was REMOVED -- the source text ('checking each business unit's/function's options and activities') does not establish the policy as present for EVERY instance, so per the Phase-3 existential-necessity rule it is demoted to this annotation as the typical conformance reference. Gate-F fix (2): the output was changed from the FALSE-FRIEND ex:RiskMonitoringReport (a time-series monitoring artifact) to the dedicated ex:ERMProcessConformanceReport, restoring genus/output traceability (both Descriptive)." ;
+    rdfs:comment "Genus ex:ActOfVerification (apqc-ext.ttl: Act of Appraisal cco:ont00000636; also information-processing in character): confirming process conformance; output is a Descriptive ICE. Gate-F fix (1): the `has input some ex:EnterpriseRiskPolicy` restriction was REMOVED -- the source text ('checking each business unit's/function's options and activities') does not establish the policy as present for EVERY instance, so per the Phase-3 existential-necessity rule it is demoted to this annotation as the typical conformance reference. Gate-F fix (2): the output was changed from the FALSE-FRIEND ex:RiskMonitoringReport (a time-series monitoring artifact) to the dedicated ex:ERMProcessConformanceReport, restoring genus/output traceability (both Descriptive)." ;
     skos:example "Reviewing a division against the ERM process checklist." ;
     rdfs:subClassOf ex:ActOfVerification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ERMProcessConformanceReport ] .
@@ -634,7 +635,7 @@ ex:P16454 a owl:Class ;
     ex:apqcSourceText "Checking the reporting process of each business unit's/function's options and activities to improve opportunities and lessen threats." ;
     rdfs:label "Ensure that each business unit/function follows the enterprise risk reporting process" ;
     skos:definition "An Act of Verification that checks whether each business unit and function follows the enterprise risk reporting process and produces an ERM reporting conformance report." ;
-    rdfs:comment "Genus ex:ActOfVerification (under Act of Information Processing): confirming conformance of the reporting process; output is a Descriptive ICE. Sibling of P16453. Gate-F fix (1): the `has input some ex:EnterpriseRiskPolicy` restriction was REMOVED -- the source text ('checking the reporting process ...') does not establish the policy as present for EVERY instance, so per the Phase-3 existential-necessity rule it is demoted to this annotation as the typical conformance reference. Gate-F fix (2): the output was changed from the FALSE-FRIEND ex:RiskMonitoringReport (a time-series monitoring artifact) to the dedicated ex:ERMReportingConformanceReport, restoring genus/output traceability (both Descriptive)." ;
+    rdfs:comment "Genus ex:ActOfVerification (apqc-ext.ttl: Act of Appraisal cco:ont00000636; also information-processing in character): confirming conformance of the reporting process; output is a Descriptive ICE. Sibling of P16453. Gate-F fix (1): the `has input some ex:EnterpriseRiskPolicy` restriction was REMOVED -- the source text ('checking the reporting process ...') does not establish the policy as present for EVERY instance, so per the Phase-3 existential-necessity rule it is demoted to this annotation as the typical conformance reference. Gate-F fix (2): the output was changed from the FALSE-FRIEND ex:RiskMonitoringReport (a time-series monitoring artifact) to the dedicated ex:ERMReportingConformanceReport, restoring genus/output traceability (both Descriptive)." ;
     skos:example "Confirming each unit submits its risk report on the prescribed cadence and template." ;
     rdfs:subClassOf ex:ActOfVerification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ERMReportingConformanceReport ] .
@@ -825,7 +826,7 @@ ex:P16466 a owl:Class ;
     ex:apqcSourceText "Analyzing and overseeing the regulatory environment in order to spot any changing or emerging regulations. This process element calls upon the organization to monitor the regulatory environment for any new statutes, policies, and enactments issued by the respective government authorities or those which have been updated." ;
     rdfs:label "Monitor the regulatory environment for changing or emerging regulations" ;
     skos:definition "An Act of Monitoring that repeatedly observes and analyzes the regulatory environment to detect new or changed statutes, policies, and enactments, producing a regulatory environment analysis." ;
-    rdfs:comment "Anchored under ex:ActOfMonitoring (PROPOSE-EXT). Output is a Descriptive ICE (ex:RegulatoryEnvironmentAnalysis), satisfying the GOLDEN PRINCIPLE." ;
+    rdfs:comment "Anchored under ex:ActOfMonitoring (in apqc-ext.ttl). Output is a Descriptive ICE (ex:RegulatoryEnvironmentAnalysis), satisfying the GOLDEN PRINCIPLE." ;
     skos:example "A regulatory-affairs team continuously scans government bulletins and reports newly issued rules affecting the firm." ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RegulatoryEnvironmentAnalysis ] .
@@ -857,7 +858,7 @@ ex:P16469 a owl:Class ;
     ex:apqcSourceText "Monitoring, appraising, and evaluating the compliance position of the organization in order to fine-tune for effective remediation. Track efforts for handling regulatory and compliance requirements necessitated by law. Test the robustness of internal frameworks, procedures, and approaches for dealing with these requirements, in order to clearly identify any necessary changes." ;
     rdfs:label "Monitor and test regulatory compliance position and existing controls" ;
     skos:definition "An Act of Verification that tests the robustness of the organization's compliance controls, frameworks, and procedures against regulatory requirements, producing a compliance monitoring report of their performance and any necessary changes." ;
-    rdfs:comment "Anchored under ex:ActOfVerification (PROPOSE-EXT): the act tests whether existing controls satisfy requirements. Output is a Descriptive ICE (ex:ComplianceMonitoringReport) per the GOLDEN PRINCIPLE." ;
+    rdfs:comment "Anchored under ex:ActOfVerification (in apqc-ext.ttl): the act tests whether existing controls satisfy requirements. Output is a Descriptive ICE (ex:ComplianceMonitoringReport) per the GOLDEN PRINCIPLE." ;
     skos:example "An assurance team runs control tests and reports which compliance controls hold and which must be revised." ;
     rdfs:subClassOf ex:ActOfVerification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ComplianceMonitoringReport ] .
@@ -1080,7 +1081,7 @@ ex:P11223 a owl:Class ;
     ex:apqcSourceText "Assessing ongoing activities within the organization that are not intended to stop except for in an emergency." ;
     rdfs:label "Test continuous business operations" ;
     skos:definition "An Act of Verification that exercises the organization's ongoing, non-stop activities against the business continuity plan and produces a continuity test result recording whether those operations perform as intended." ;
-    rdfs:comment "Anchored to ex:ActOfVerification (PROPOSE-EXT, under cco:ont00000366 Act of Information Processing): testing exercises operations against a standard and yields a Descriptive ICE (a test result), per the GOLDEN PRINCIPLE. The business continuity plan is a typical (not definitional) input, so it is noted here rather than promoted to a restriction." ;
+    rdfs:comment "Anchored to ex:ActOfVerification (apqc-ext.ttl: Act of Appraisal cco:ont00000636; also information-processing in character): testing exercises operations against a standard and yields a Descriptive ICE (a test result), per the GOLDEN PRINCIPLE. The business continuity plan is a typical (not definitional) input, so it is noted here rather than promoted to a restriction." ;
     skos:example "A resilience team runs a failover drill and records the continuity test result." ;
     rdfs:subClassOf ex:ActOfVerification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ContinuityTestResult ] .
