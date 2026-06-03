@@ -101,6 +101,13 @@ ex:ActOfSelection a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
     rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
 
+ex:ActOfReporting a owl:Class ;
+    rdfs:subClassOf cco:ont00000379 ,   # Act of Representative Communication
+        cco:ont00000228 ;   # Planned Act -- explicit so Gate C (S2) sees the Act anchor without the CCO closure
+    rdfs:label "Act of Reporting" ;
+    skos:definition "An Act of Representative Communication in which an Agent gives a detailed account or statement of some subject matter and shares it with a target audience." ;
+    rdfs:comment "Registry genus (D9) for DISSEMINATE-class reporting acts whose source makes sharing/reporting-to-an-audience definitional (vs COMPILE-class acts that merely create/record/summarize a report ICE, which stay at cco:ont00000366 Act of Information Processing). VERIFIED in vendored CCO: cco:ont00000151 'Act of Reporting' subClassOf cco:ont00000379 (Act of Representative Communication) subClassOf cco:ont00000402 (Act of Communication), def 'performed by giving a detailed account or statement'. Co-asserts cco:ont00000228 because 379 is outside the standalone-SHACL S2 process allowlist {366,636,511,228}." .
+
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES
 ####################################################################
@@ -119,10 +126,18 @@ ex:apqcSourceText a owl:AnnotationProperty ;
 
 ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:label "designates process type" ;
-    rdfs:comment "Bridges a catalog node (ex:PCF_<pcfID>) to its reality-layer class (ex:P<pcfID> or a supporting capability)." .
+    rdfs:comment "Bridges a catalog node (ex:PCF_<pcfID>) to its reality-layer class (ex:P<pcfID> or a supporting capability). The catalog nodes themselves are declared and typed (owl:NamedIndividual, cco:ont00000853 Descriptive ICE, skos:Concept) in apqc-catalog.ttl. An ANNOTATION property is used (not an object property) deliberately, to keep the slice in OWL DL and avoid ICE-to-class punning (ADR-001 R4)." .
 
 ####################################################################
-# 1. NEW ACT-GENUS PROPOSALS  (PROPOSE-EXT: promote to apqc-ext.ttl)
+# 1. DOMAIN ACT-GENUS LAYER
+#    Canonical shared genera used by this slice are inlined from the
+#    apqc-ext.ttl registry so the module validates standalone against
+#    the pinned CCO/BFO closure -- no apqc-ext.ttl import is required.
+#    Section-specific genera remain marked PROPOSE-EXT where they should
+#    be reviewed for promotion. Each genus appears ONCE (canonical
+#    definition); every cco: anchor verified against
+#    CommonCoreOntologiesMerged v2.0 (2024-11-06): definition + parent.
+#
 #    Reused without re-minting (from apqc-ext.ttl): ex:ActOfAnalysis,
 #    ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection,
 #    ex:ActOfAcquisition. Reused CCO acts directly: Act of Appraisal
@@ -131,7 +146,7 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    Act of Information Processing (cco:ont00000366), Planned Act
 #    (cco:ont00000228).
 #
-# ----- §6 VERIFIED CORE TERMS (CCO v2.0, 2024-11-06) -----------------
+# ----- VERIFIED CORE TERMS (CCO v2.0, 2024-11-06) -------------------
 # D6 verify-before-assert: every opaque cco:ont... IRI written below was
 # read (label + definition + parent chain) from
 # vendor/cco/CommonCoreOntologiesMerged.ttl, not matched on label alone.
@@ -466,12 +481,18 @@ ex:ProcessScopeStatement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Process Scope Statement" ;
     skos:definition "A Directive Information Content Entity that prescribes the extent and limits of a business process in terms of the activities and tasks it comprises." .
 
+ex:BusinessProcess a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;   # process (occurrent)
+    rdfs:label "Business Process" ;
+    skos:definition "A Process consisting of a structured set of related activities and tasks carried out by the participants of one or more Organizations to achieve a business goal." ;
+    rdfs:comment "Minted as the aboutness referent for descriptive process ICEs (e.g. ex:ProcessAnalysis, ex:ProcessModel). A business process is an occurrent (obo:BFO_0000015), NOT an ICE and NOT the ex:ProcessOwner Agent. S8 (is-about-on-ICE) is subject-only and does not constrain this filler." .
+
 ex:ProcessAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:ProcessOwner ] ;
+        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:BusinessProcess ] ;
     rdfs:label "Process Analysis" ;
     skos:definition "A Descriptive Information Content Entity that describes how a business process works and how participants from different groups work together to achieve a business goal." ;
-    rdfs:comment "is-about filler is illustrative of the subject business process; group agent may narrow it." .
+    rdfs:comment "is-about target is the subject ex:BusinessProcess (an occurrent), NOT the ex:ProcessOwner Agent who is accountable for it. S8 (is-about-on-ICE) is subject-only and confirmed not to constrain the filler kind, so an occurrent filler is legal here." .
 
 ex:BestPracticesRegister a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Best Practices Register" ;
@@ -551,7 +572,7 @@ ex:ProjectScopeStatement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 ex:ProjectRequirementsStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Project Requirements Statement" ;
     skos:definition "A Descriptive Information Content Entity that describes the discerned capabilities, features, and attributes a project's deliverables are required to have, as recognized and registered by a requirements-discernment act." ;
-    rdfs:comment "Descriptive (a registration of stated/discerned requirements), parallel to the sibling outputs ex:ProjectResourceRequirementsStatement (853, P16412) and ex:ITRequirementsStatement (853, P11124). Output of ex:P11117 'Identify project requirements and objectives'. Any directive force (deliverables MUST satisfy X) would be a separate downstream Directive ICE composed by a Formulation act -- mirroring how ex:BusinessCase (P11120) stays descriptive and leaves the go/no-go as a separate Directive -- and is not modeled by this discernment act." .
+    rdfs:comment "FALSE FRIEND: despite the label 'Requirement', this is a DESCRIPTIVE (853) record of requirements gathered by a discernment act; the directive requirement itself (deliverables MUST satisfy X) is modeled separately. Parallel to the sibling outputs ex:ProjectResourceRequirementsStatement (853, P16412) and ex:ITRequirementsStatement (853, P11124). Output of ex:P11117 'Identify project requirements and objectives'. Any directive force would be a separate downstream Directive ICE composed by a Formulation act -- mirroring how ex:BusinessCase (P11120) stays descriptive and leaves the go/no-go as a separate Directive -- and is not modeled by this discernment act." .
 
 ex:ProjectReadinessAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Project Readiness Assessment" ;
@@ -604,12 +625,12 @@ ex:ProjectReviewRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:ProjectResourceRequirementsStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Project Resource Requirements Statement" ;
     skos:definition "A Descriptive Information Content Entity that describes the people, skills, capital, facilities, equipment, material, and information a project requires." ;
-    rdfs:comment "Descriptive (an enumeration of identified prerequisites). Output of ex:P16412 'Identify project resource requirements'." .
+    rdfs:comment "FALSE FRIEND: despite the label 'Requirement', this is a DESCRIPTIVE (853) record of requirements gathered by a discernment act; the directive requirement itself is modeled separately. An enumeration of identified resource prerequisites. Output of ex:P16412 'Identify project resource requirements'." .
 
 ex:ITRequirementsStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "IT Requirements Statement" ;
     skos:definition "A Descriptive Information Content Entity that describes the information-technology requirements -- computers and telecommunications equipment to store, retrieve, transmit, and manipulate data -- of a specific project." ;
-    rdfs:comment "Descriptive (an enumeration of discerned IT requirements). Output of ex:P11124 'Identify specific IT requirements'." .
+    rdfs:comment "FALSE FRIEND: despite the label 'Requirement', this is a DESCRIPTIVE (853) record of requirements gathered by a discernment act; the directive requirement itself is modeled separately. An enumeration of discerned IT requirements. Output of ex:P11124 'Identify specific IT requirements'." .
 
 ex:ProjectPortfolioSelection a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Project Portfolio Selection" ;
@@ -903,7 +924,7 @@ ex:AnalyticsProjectScopeStatement a owl:Class ; rdfs:subClassOf cco:ont00000965 
 ex:Hypothesis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Hypothesis" ;
     skos:definition "A Descriptive Information Content Entity that describes a proposed explanation of empirical data, used to guide feature selection during data collection." ;
-    rdfs:comment "Descriptive: a hypothesis asserts a candidate account of how reality is, not a prescription." .
+    rdfs:comment "Descriptive (853): a hypothesis is a proposed explanation -- a candidate account of how reality is -- not a prescription. CAUTION: the study-design / data-collection PLAN that prescribes how to TEST the hypothesis (what to sample, measure, and collect) is a separate Directive (965) ICE; do not conflate the descriptive conjecture with the directive test plan." .
 
 ex:AnalyticsDataset a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Analytics Dataset" ;
@@ -921,7 +942,7 @@ ex:DataAnalysisResult a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:DataModel a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Data Model" ;
     skos:definition "A Directive Information Content Entity that prescribes the conceptual and physical structure and storage of data." ;
-    rdfs:comment "Directive: a data model prescribes how data is to be structured and stored (a model/blueprint), per CCO's notion of prescription for Continuants." .
+    rdfs:comment "Directive: a data model prescribes how data is to be structured and stored (a model/blueprint), per CCO's notion of prescription for Continuants. CAUTION (false friend): this is the Directive (965) design/specification sense of 'model' (a blueprint for structuring data); a statistical, learned, or predictive 'model' that DESCRIBES patterns in data is a separate Descriptive (853) or Predictive (626) ICE, not this class." .
 
 ex:DataModelReviewRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Data Model Review Record" ;
@@ -1359,6 +1380,7 @@ ex:P17473 a owl:Class ;
     ex:apqcSourceText "Outlining characteristics crucial for managing enterprise quality. Translate broad customer needs into specific, actionable, measurable performance requirements. Define the key measurable characteristics of key products and processes." ;
     rdfs:label "Define critical-to-quality characteristics" ;
     skos:definition "An Act of Formulation that translates customer needs into a critical-to-quality characteristic specification of measurable product and process requirements." ;
+    rdfs:comment "Act of Formulation: composing measurable requirements from customer needs yields a Directive ex:CriticalToQualityCharacteristicSpecification (a prescription of what products/processes MUST achieve), not a description of present quality." ;
     skos:example "An engineer converts a customer expectation into a measurable tolerance on a key product dimension." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CriticalToQualityCharacteristicSpecification ] .
@@ -1395,6 +1417,7 @@ ex:P17476 a owl:Class ;
     ex:apqcSourceText "Establishing the steps for developing quality controls. Conduct Alpha testing. Have the product team conduct rework. Send the product/service for Beta testing, and carry on rework as needed." ;
     rdfs:label "Define process steps for controls (or integration points)" ;
     skos:definition "An Act of Formulation that establishes the process steps and integration points of a quality control as a process control point specification." ;
+    rdfs:comment "Act of Formulation: establishing control steps/integration points composes a Directive ex:ProcessControlPointSpecification prescribing where quality is checked, not a record of testing already done." ;
     skos:example "A quality lead specifies alpha-test, rework, and beta-test gates as control points." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProcessControlPointSpecification ] .
@@ -1405,6 +1428,7 @@ ex:P17477 a owl:Class ;
     ex:apqcSourceText "Establishing a detailed summary including measures, on which material, in what manner, and by whom. Identify the parameters to be measured, the range of possible values, and the required resolution. Provide a sampling scheme that details how and when samples will be taken. Select sample sizes. Assign roles and responsibilities." ;
     rdfs:label "Define sampling plan" ;
     skos:definition "An Act of Formulation that produces a sampling plan specifying the parameters, sample sizes, scheme, and responsibilities for taking quality samples." ;
+    rdfs:comment "Act of Formulation: authoring a ex:SamplingPlan composes a Directive ICE that prescribes how samples are to be drawn; the data later collected under it is a separate Descriptive record." ;
     skos:example "A quality engineer authors a sampling plan fixing sample sizes and inspection timing." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:SamplingPlan ] .
@@ -1426,6 +1450,7 @@ ex:P17479 a owl:Class ;
     ex:apqcSourceText "Defining the competencies required for developing quality controls. Define the required competencies including compliance management, audit management, and document control and document management." ;
     rdfs:label "Define required competencies" ;
     skos:definition "An Act of Formulation that specifies the competencies required to perform quality-control activities as a competency requirement specification." ;
+    rdfs:comment "Act of Formulation: specifying required competencies composes a Directive ex:CompetencyRequirementSpecification (a prescription of what operators MUST be able to do); appraisal of whether staff hold them is modeled separately." ;
     skos:example "A quality manager documents that control operators must hold audit-management and document-control competencies." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CompetencyRequirementSpecification ] .
@@ -1447,6 +1472,7 @@ ex:P17481 a owl:Class ;
     ex:apqcSourceText "Establishing how the critical-to-quality characteristics will be achieved, controlled, ensured, and managed throughout the lifecycle of a product/service. Address quality requirements and critical-to-quality characteristics. Conduct a preventive quality assessment. Describe how to verify the product/service, verification criteria, and response to nonconformance. Keep records to demonstrate conformity." ;
     rdfs:label "Finalize quality plan" ;
     skos:definition "An Act of Formulation that consolidates the quality requirements, controls, and verification approach into a finalized quality plan governing a product or service lifecycle." ;
+    rdfs:comment "Act of Formulation: consolidating requirements, controls, and verification into a finalized ex:QualityPlan composes a single governing Directive ICE; the conformance records kept under it are separate Descriptive outputs." ;
     skos:example "A quality manager issues the approved quality plan covering verification criteria and nonconformance response." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityPlan ] .
@@ -1471,7 +1497,7 @@ ex:P17483 a owl:Class ;
     ex:apqcSourceText "Examining the quality of organizational processes. Conduct tests. Collect information and data. Record the results of these tests. Determine the dispositions of the test results." ;
     rdfs:label "Test against quality plan" ;
     skos:definition "An Act of Information Processing that conducts quality tests against the quality plan, records the resulting test data, and determines their disposition." ;
-    rdfs:comment "Aggregating process anchored at cco:ont00000366 (Act of Information Processing); its APQC children are process parts." ;
+    rdfs:comment "Aggregating process anchored at cco:ont00000366 (Act of Information Processing): the parent's OWN definitional product is the Descriptive ex:QualityTestDataRecord, satisfying the GOLDEN PRINCIPLE (info-processing -> descriptive). It is a mixed aggregate -- its children span measuring (ex:P17484, cco:ont00000345), recording (ex:P17485, cco:ont00000366), and a Directive-producing disposition (ex:P17486, ex:ActOfSelection). The directive disposition facet is delegated to the child ex:P17486 and is deliberately NOT lifted onto this parent; 366 (a subClassOf cco:ont00000228) is therefore retained rather than re-anchored to the bare Planned Act, preserving the descriptive-output agreement. Its APQC children are process parts." ;
     skos:example "An inspector runs tests, logs the data, and assigns a disposition to each result." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:QualityPlan ] ,
@@ -1498,6 +1524,7 @@ ex:P17485 a owl:Class ;
     ex:apqcSourceText "Maintaining and recording the results of Test against the quality plan [17483] electronically and in standard formats. Assign ownership to a designated function or role." ;
     rdfs:label "Record result(s)" ;
     skos:definition "An Act of Information Processing that records and stores quality test results in standard formats as a quality test data record." ;
+    rdfs:comment "Act of Information Processing (cco:ont00000366): recording/storing results into a standard format yields the Descriptive ex:QualityTestDataRecord; this is data capture, not the judgement of those results (which is the sibling Appraisal 17488)." ;
     skos:example "A quality clerk enters test outcomes into the QMS in the standard template." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityTestDataRecord ] .
@@ -1536,6 +1563,7 @@ ex:P17488 a owl:Class ;
     ex:apqcSourceText "Assessing the significance of the sample chosen for the test in order to determine whether or not the sample is representative of the larger output or outcome. Determine if the sample meets or does not meet the requirements. Identify the conditions for acceptance, rejection, remediation, and prevention." ;
     rdfs:label "Assess sample significance" ;
     skos:definition "An Act of Appraisal that judges whether a test sample is representative of the larger output and produces a sample significance assessment." ;
+    rdfs:comment "Act of Appraisal (cco:ont00000636): judging sample representativeness produces a Descriptive ex:SampleSignificanceAssessment; the underlying ex:QualityTestDataRecord is the has-input evidence, not the output." ;
     skos:example "A statistician evaluates whether an inspection sample is representative of a production run." ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:QualityTestDataRecord ] ,
@@ -1547,6 +1575,7 @@ ex:P17489 a owl:Class ;
     ex:apqcSourceText "Outlining the major facts and figures of the quality test results in order to provide insights and information. Use charts, tables, statistical test results, and written findings and conclusions in a summary of results." ;
     rdfs:label "Summarize result(s)" ;
     skos:definition "An Act of Information Processing that condenses quality test results into a quality test summary of findings and conclusions." ;
+    rdfs:comment "Act of Information Processing (cco:ont00000366): summarizing/compiling results into an ex:QualityTestSummary is a Descriptive condensation act, NOT a reporting/communication act -- the source text makes summarizing (not disseminating to an audience) definitional." ;
     skos:example "An analyst compiles charts and conclusions into a quality test summary report." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:QualityTestDataRecord ] ,
@@ -1598,6 +1627,7 @@ ex:P17493 a owl:Class ;
     ex:apqcSourceText "Analyzing any nonconformance events. Determine the need for corrective and/or preventative action(s). Leverage root-cause analysis, risk exposure, and other evaluations to properly review and approve/reject subsequent actions." ;
     rdfs:label "Assess potential impact" ;
     skos:definition "An Act of Appraisal that evaluates a nonconformance event and produces a nonconformance impact assessment determining the need for corrective or preventive action." ;
+    rdfs:comment "Act of Appraisal (cco:ont00000636): rating risk exposure of a nonconformity yields a Descriptive ex:NonconformanceImpactAssessment; the resulting choice of action is the separate Selection act 13.3.3.2." ;
     skos:example "An analyst rates the risk exposure of a nonconformity to decide whether CAPA is warranted." ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:NonconformanceRecord ] ,
@@ -1645,6 +1675,8 @@ ex:P17497 a owl:Class ;
     ex:apqcSourceText "Closing nonconformance. Perform all the final processes related to the nonconformance, including documenting root causes. Document corrective and preventive actions." ;
     rdfs:label "Close non-conformance" ;
     skos:definition "An Act of Information Processing that documents the root causes and corrective and preventive actions and closes the nonconformance record." ;
+    rdfs:comment "Act of Information Processing (cco:ont00000366): this act documents root causes and the corrective/preventive actions taken and closes the Descriptive ex:NonconformanceRecord; the actual remediation (enacting the CAPA) is modeled separately as the Implementation act 13.3.3.4 (ex:P17496). The ex:CorrectiveAndPreventiveActionSpecification is the governing has-input, not a fresh output." ;
+    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): this is a pure compiling/recording act -- it documents root causes and CAPA into, and closes, the nonconformance record. It is NOT reporting/communication (cco:ont00000379/151), since no dissemination to an audience is definitional, and NOT formulation, since no new Directive is authored: the governing ex:CorrectiveAndPreventiveActionSpecification (Directive) is the has-INPUT being documented, and the has-output ex:NonconformanceRecord is Descriptive, preserving info-processing -> descriptive agreement (GOLDEN PRINCIPLE)." ;
     skos:example "A quality clerk finalizes and closes the nonconformance record after CAPA verification." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CorrectiveAndPreventiveActionSpecification ] ,
@@ -1673,6 +1705,7 @@ ex:P17499 a owl:Class ;
     ex:apqcSourceText "Outlining the strategy for managing enterprise quality. Define and formalize quality techniques and standards. Assign responsibilities for achieving the required quality levels. Standardize the quality maintenance procedure, tools and techniques, recording and reporting, the timing of quality maintenance activities, and the roles and responsibilities for the quality management team." ;
     rdfs:label "Define the quality strategy" ;
     skos:definition "An Act of Formulation that formalizes the techniques, standards, and responsibilities for managing enterprise quality as a quality strategy." ;
+    rdfs:comment "Act of Formulation: formalizing enterprise-quality techniques, standards, and responsibilities composes a Directive ex:QualityStrategy (a prescriptive strategy ICE), consistent with the corpus-wide treatment of strategy as a Directive (965)." ;
     skos:example "A quality director issues the enterprise quality strategy standardizing tools, reporting, and roles." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityStrategy ] .
@@ -1706,6 +1739,7 @@ ex:P17502 a owl:Class ;
     ex:apqcSourceText "Setting the process limits. Gather required information. Align with other documents and processes. Define the document structure." ;
     rdfs:label "Develop and document EQMS policies, procedures, standards, and measures" ;
     skos:definition "An Act of Formulation that composes and documents the EQMS policies, procedures, standards, and measures as a process governance framework." ;
+    rdfs:comment "Act of Formulation: authoring EQMS policies, procedures, and standards composes a Directive ex:ProcessGovernanceFramework that prescribes how the EQMS is governed." ;
     skos:example "A quality team authors the EQMS procedure manual and document hierarchy." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProcessGovernanceFramework ] .
@@ -1716,6 +1750,7 @@ ex:P17503 a owl:Class ;
     ex:apqcSourceText "Benchmarking current performance in quality metrics that span across the value chain. Identify gaps in performance as compared to industry peers. Identify and implement complementary EQMS capabilities. Enable a continuous improvement environment." ;
     rdfs:label "Assess the EQMS performance" ;
     skos:definition "An Act of Appraisal that benchmarks EQMS quality metrics against industry peers and produces an EQMS performance assessment identifying performance gaps." ;
+    rdfs:comment "Act of Appraisal (cco:ont00000636): benchmarking EQMS metrics against peers yields a Descriptive ex:EQMSPerformanceAssessment of gaps; implementing the resulting improvements is the separate Improvement act 13.3.4.6." ;
     skos:example "A quality lead benchmarks the EQMS against peers and reports the capability gaps." ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:EQMSPerformanceAssessment ] .
@@ -1753,6 +1788,7 @@ ex:P17506 a owl:Class ;
     ex:apqcSourceText "Establishing and maintaining partnerships with third-party sources to achieve quality excellence. Source and evaluate third-party sources both public and private to ensure that the most effective and efficient partnerships are formed." ;
     rdfs:label "Create and maintain quality partnerships" ;
     skos:definition "An Act of Implementation that forms and maintains partnerships with third-party sources to advance quality excellence and produces a quality partnership agreement." ;
+    rdfs:comment "Act of Implementation (PROPOSE-EXT): forming/maintaining third-party partnerships is an enactment act; its definitional artifact is the Directive ex:QualityPartnershipAgreement governing the established partnership (minted, per the output comment at the registry entry)." ;
     skos:example "A quality director establishes a supplier-quality partnership with shared audit rights." ;
     rdfs:subClassOf ex:ActOfImplementation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:QualityPartnershipAgreement ] .
@@ -1852,6 +1888,7 @@ ex:P11140 a owl:Class ;
     ex:apqcSourceText "Identifying and communicating with shareholders affected by the change. Consider internal and external stakeholders that will be affected by the change. Determine the amount of influence the change will have on them. Ensure the involvement of these stakeholders in the change process by effectively communicating with them." ;
     rdfs:label "Determine stakeholders" ;
     skos:definition "An Act of Identification that discerns the internal and external stakeholders affected by a change and produces a stakeholder assessment registering them and their influence." ;
+    rdfs:comment "Act of Identification (discernment): the definitional product is the Descriptive ex:StakeholderAssessment registering the discerned stakeholders and their influence; the stakeholders themselves are continuant participants (has-agent), not the output." ;
     skos:example "A change team enumerates affected departments and external parties and rates their influence." ;
     rdfs:subClassOf ex:ActOfIdentification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:StakeholderAssessment ] ,
@@ -1906,6 +1943,7 @@ ex:P11144 a owl:Class ;
     ex:apqcSourceText "Using graphical and statistical tools such as pareto diagrams, process flow diagrams, cause-and-effect diagrams, check sheets, histograms, run charts, and scatter diagrams." ;
     rdfs:label "Understand current state" ;
     skos:definition "An Act of Analysis that examines the organization's as-is processes and conditions using graphical and statistical tools and produces a current state assessment." ;
+    rdfs:comment "Act of Analysis: characterizing the as-is baseline yields a Descriptive ex:CurrentStateAssessment of how things presently are; the prescribed target is the separate Formulation act 13.4.1.7 (ex:FutureStateSpecification)." ;
     skos:example "Analysts chart current process flows and defect Pareto diagrams to characterize the baseline." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CurrentStateAssessment ] .
@@ -1927,6 +1965,7 @@ ex:P11146 a owl:Class ;
     ex:apqcSourceText "Looking beyond the immediate consequences of the threat to a critical asset and placing it in the context of what is important to the organization. Identify the impact of threats to critical assets. Create risk evaluation criteria. Evaluate the impact of threats to critical assets. Incorporate probability into the risk analysis." ;
     rdfs:label "Conduct organizational risk analysis" ;
     skos:definition "An Act of Analysis that examines threats to the organization's critical assets in light of their probability and consequence and produces an organizational risk analysis." ;
+    rdfs:comment "Act of Analysis: weighing asset threats by probability and consequence yields a Descriptive ex:OrganizationalRiskAnalysis (an explanatory account of exposure), not a directive risk-treatment plan." ;
     skos:example "A risk team scores asset threats by likelihood and impact for the change." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:OrganizationalRiskAnalysis ] .
@@ -1981,6 +2020,7 @@ ex:P11149 a owl:Class ;
     ex:apqcSourceText "Recognizing the circumstances or obstacles that keep the organization from progressing. Identify who and what are the resources resisting change. Identify integration failures, threats by competitive forces, and complexity failures." ;
     rdfs:label "Identify barriers to change" ;
     skos:definition "An Act of Identification that discerns the obstacles and sources of resistance impeding a change and registers them in a change barrier analysis." ;
+    rdfs:comment "Act of Identification (discernment): recognizing obstacles and resistance registers them in the Descriptive ex:ChangeBarrierAnalysis; choosing how to overcome them is modeled by downstream Formulation/Selection acts." ;
     skos:example "The team catalogs integration, resistance, and complexity obstacles to the change." ;
     rdfs:subClassOf ex:ActOfIdentification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ChangeBarrierAnalysis ] .
@@ -2041,6 +2081,7 @@ ex:P11153 a owl:Class ;
     ex:apqcSourceText "Creating a detailed structure summary for the purposes of managing the change. Demonstrate the reasons for the change. Define the type and scope of change. Form a change management team. Create a communication plan." ;
     rdfs:label "Develop change management plans" ;
     skos:definition "An Act of Formulation that composes a detailed change management plan structuring how a change will be managed." ;
+    rdfs:comment "Act of Formulation: composing the ex:ChangeManagementPlan yields a Directive ICE prescribing how the change is to be managed (rationale, type, scope); enacting it is downstream implementation." ;
     skos:example "The team drafts the master change management plan covering rationale, type, and scope." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ChangeManagementPlan ] .
@@ -2051,6 +2092,7 @@ ex:P11154 a owl:Class ;
     ex:apqcSourceText "Creating a detailed summary of all the actions relevant to teaching a person a particular skill or type of behavior. Determine who will deliver the training. Determine when and where the apprentice or trainee needs to go to receive the structured component of the training." ;
     rdfs:label "Develop training plan" ;
     skos:definition "An Act of Formulation that composes a training plan prescribing the actions, delivery, timing, and location for teaching the skills a change requires." ;
+    rdfs:comment "Act of Formulation: composing the shared Directive ex:TrainingPlan prescribes how training is to be delivered; conducting the training itself is the separate Act of Training (cf. ex:P17507)." ;
     skos:example "The team specifies the courses, trainers, and schedule to equip staff for the change." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TrainingPlan ] .
@@ -2061,6 +2103,7 @@ ex:P11155 a owl:Class ;
     ex:apqcSourceText "Developing a plan for imparting or exchanging information relevant the to change. Define goals, objectives, and audience. Gather tools for all communications." ;
     rdfs:label "Develop communication plan" ;
     skos:definition "An Act of Formulation that composes a communication plan prescribing the goals, audiences, and channels for imparting information about a change." ;
+    rdfs:comment "Act of Formulation: composing the shared Directive ex:CommunicationPlan prescribes the goals, audiences, and channels for change communication; the act of actually communicating is a separate reporting/communication act." ;
     skos:example "The team plans the announcements, channels, and cadence for the change rollout." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CommunicationPlan ] .
@@ -2082,6 +2125,7 @@ ex:P11156 a owl:Class ;
     ex:apqcSourceText "Creating and designing the plan for rewarding the employees exhibiting the desired behavior. Specify rewards in recognition of service, effort, or achievement regarding the change, including bonuses, compensation, stock options, profit sharing, vacations, and flexible time." ;
     rdfs:label "Develop rewards/incentives plan" ;
     skos:definition "An Act of Formulation that composes a rewards and incentives plan prescribing how employees who exhibit the desired change behaviors are to be rewarded." ;
+    rdfs:comment "Act of Formulation: composing the Directive ex:RewardsAndIncentivesPlan prescribes how desired change behaviors are to be rewarded; granting the rewards is a separate enactment act (cf. ex:P17505)." ;
     skos:example "The team designs a bonus-and-recognition scheme for early adopters of the change." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RewardsAndIncentivesPlan ] .
@@ -2092,6 +2136,7 @@ ex:P11157 a owl:Class ;
     ex:apqcSourceText "Establishing a system or standard of measurement for measuring the adoption of the change. Consider activities such as the number of people who have adopted the change, how quickly have they adopted, number of unique adopters, and adopters by teams/divisions." ;
     rdfs:label "Establish change adoption measures" ;
     skos:definition "An Act of Formulation that establishes the standards of measurement for tracking change adoption, producing a change adoption measure specification." ;
+    rdfs:comment "Act of Formulation: establishing adoption metrics composes the Directive ex:ChangeAdoptionMeasureSpecification (a prescription of what to measure and how); the adoption data later gathered against it is a separate Descriptive record." ;
     skos:example "The team defines adoption-rate and unique-adopter metrics for the change." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ChangeAdoptionMeasureSpecification ] .
@@ -2102,6 +2147,7 @@ ex:P11158 a owl:Class ;
     ex:apqcSourceText "Establishing and explaining the new roles to employees. Assign roles and responsibilities to resources." ;
     rdfs:label "Establish/Clarify new roles" ;
     skos:definition "An Act of Formulation that defines and assigns the new roles and responsibilities a change introduces, producing a role definition specification." ;
+    rdfs:comment "Act of Formulation: defining the new roles composes the Directive ex:RoleDefinitionSpecification; this is the rightful home of that output (P11148 'Establish accountability' was de-coupled from it and re-anchored to a Planned Act, per the comment there)." ;
     skos:example "The team documents and explains each employee's role under the new operating model." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RoleDefinitionSpecification ] .
@@ -2176,10 +2222,10 @@ ex:P20146 a owl:Class ;
     ex:pcfID "20146" ; ex:hierarchyID "13.4.3.5" ;
     ex:apqcSourceText "Reporting on the outcome of the change. Document changes and the impact those changes had on critical assets. Share findings with those within the target audience: those impacted by the change, change champions, stakeholders, etc." ;
     rdfs:label "Report on change" ;
-    skos:definition "An Act of Information Processing that documents the outcome and impact of a change and produces a change report shared with its affected audience." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): reporting compiles observations into a Descriptive ICE (the change report)." ;
+    skos:definition "An Act of Reporting that documents the outcome and impact of a change and shares the resulting change report with its affected target audience." ;
+    rdfs:comment "RE-ANCHORED from cco:ont00000366 (Act of Information Processing) to ex:ActOfReporting (subClassOf cco:ont00000379 Act of Representative Communication + cco:ont00000228): the source makes dissemination definitional -- 'Share findings with those within the target audience: those impacted by the change, change champions, stakeholders, etc.' -- so this is a DISSEMINATE-class reporting act, not a mere COMPILE. The has_output ICE restriction (ex:ChangeReport) is retained." ;
     skos:example "The change office issues a closeout report to stakeholders and champions." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    rdfs:subClassOf ex:ActOfReporting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ChangeReport ] .
 
 # --- 13.4.4 (PCF 11137) : sustain improvement -> Improvement
@@ -2734,7 +2780,7 @@ ex:P10275 a owl:Class ;
     ex:apqcSourceText "Creating reports that systematically record and represent the performance planning. Construct a detailed report specifying the performance, and include indicators such as the performance gaps, performance trends, and analysis." ;
     rdfs:label "Prepare performance reports" ;
     skos:definition "An Act of Information Processing that assembles performance measurements, trends, and analyses into a performance report that systematically records and represents performance." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): input ICEs (measurements, trends, analyses) are manipulated and assembled into an output Descriptive ICE (performance report)." ;
+    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): input ICEs (measurements, trends, analyses) are manipulated and assembled into an output Descriptive ICE (performance report). COMPILE-class (kept at 366, not re-anchored to ex:ActOfReporting): the source leads with 'Creating reports ... Construct a detailed report' -- composing the report ICE -- with no sharing-to-an-audience verb, so dissemination is not definitional." ;
     skos:example "A reporting analyst compiles the quarterly performance report including gaps, trends, and commentary." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:PerformanceTrendAnalysis ] ,
@@ -3059,7 +3105,7 @@ ex:P16415 a owl:Class ;
     ex:apqcSourceText "Recording and documenting the current status and position of the project. Record and report items such as completed tasks, incomplete tasks, planned tasks, and problems faced." ;
     rdfs:label "Report the status of project" ;
     skos:definition "An Act of Information Processing that records and documents the current status of a project -- completed, incomplete, and planned tasks and problems -- and produces a project status report." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): recording/documenting status assembles a Descriptive ICE (the project status report)." ;
+    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): recording/documenting status assembles a Descriptive ICE (the project status report). COMPILE-class (kept at 366): the source leads with 'Recording and documenting the current status'; the phrase 'Record and report items such as completed/incomplete/planned tasks' enumerates the CONTENT recorded into the report, not dissemination to a named audience, so it is not a DISSEMINATE reporting act." ;
     skos:example "A project manager issues the weekly status report of tasks done, pending, and blocked." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ProjectStatusReport ] .
@@ -3350,7 +3396,7 @@ ex:P11189 a owl:Class ;
     ex:apqcSourceText "Evaluating any risks and opportunities that might affect the environmental, health, and safety of products/services. Leverage techniques such as cost-benefit analysis, trend extrapolation, systems analysis, social surveys, historical surveys, historical analogy, Delphi, conferences, workshops, briefings, hearings, advisory committees, moot courts, artistic judgment, on-site field investigation, scaling techniques, and scenario creation." ;
     rdfs:label "Assess future risks and opportunities" ;
     skos:definition "An Act of Appraisal that evaluates the future risks and opportunities affecting the environmental, health, and safety of products and services and produces an EHS risk and opportunity assessment." ;
-    rdfs:comment "Anchored to cco:ont00000636 (Act of Appraisal): 'Assess' yields a descriptive judgement; output is the descriptive ex:EHSRiskAndOpportunityAssessment, agreeing with the appraisal genus (GOLDEN PRINCIPLE)." ;
+    rdfs:comment "Anchored to cco:ont00000636 (Act of Appraisal): 'Assess' yields a descriptive judgement; output is the descriptive ex:EHSRiskAndOpportunityAssessment, agreeing with the appraisal genus (GOLDEN PRINCIPLE). PREDICTIVE-CONTENT CAUTION: the label and the source techniques (trend extrapolation, Delphi, scenario creation) give this assessment forward-looking content. It is deliberately kept as a Descriptive assessment (cco:ont00000853), NOT re-typed to Predictive ICE (cco:ont00000626) and NOT re-anchored to an Act of Prediction/Forecasting (cco:ont00000371): the definitional product is a judgement of the significance of risks and opportunities, not a standalone forecast. Because Predictive ICE is a subClassOf Descriptive ICE, any predictive sub-content remains validly subsumed by the 853 assessment." ;
     skos:example "An EHS planner runs scenario and cost-benefit analysis to assess emerging safety risks." ;
     rdfs:subClassOf cco:ont00000636 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:EHSRiskAndOpportunityAssessment ] .
@@ -3615,10 +3661,10 @@ ex:P21601 a owl:Class ;
     ex:pcfID "21601" ; ex:hierarchyID "13.9.2.3" ;
     ex:apqcSourceText "Conducting and supporting sustainability reporting. Collect, analyze, and report sustainability performance to requirements. Align reporting across functional units and support teams." ;
     rdfs:label "Perform sustainability reporting" ;
-    skos:definition "An Act of Information Processing that collects, analyzes, and reports sustainability performance against requirements and produces a sustainability statement." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): an aggregating reporting parent over measuring (21602) and statement preparation (21603). Output is the descriptive ex:SustainabilityStatement. Its APQC children are process parts." ;
-    skos:example "An ESG reporting team consolidates measured sustainability data into the annual statement." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    skos:definition "An Act of Reporting that collects, analyzes, and reports sustainability performance against requirements, aligning reporting across functional units, and disseminates the resulting sustainability statement to its reporting audiences." ;
+    rdfs:comment "RE-ANCHORED from cco:ont00000366 (Act of Information Processing) to ex:ActOfReporting (subClassOf cco:ont00000379 + cco:ont00000228): as the aggregating reporting parent its definitional act is reporting performance OUT ('Collect, analyze, and report sustainability performance to requirements. Align reporting across functional units and support teams') -- a DISSEMINATE signature. The COMPILE sub-step (assembling the statement) is delegated to child ex:P21603 (which stays cco:ont00000366); measurement to ex:P21602. The has_output ICE restriction (ex:SustainabilityStatement) and both has-process-part restrictions are retained." ;
+    skos:example "An ESG reporting team consolidates measured sustainability data into the annual statement and reports it across functional units." ;
+    rdfs:subClassOf ex:ActOfReporting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:SustainabilityStatement ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P21602 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P21603 ] .
@@ -3641,7 +3687,7 @@ ex:P21603 a owl:Class ;
     ex:apqcSourceText "Preparing sustainability statements. Given the multitude of potential audiences for reporting, alignment and consistency of sustainability statements provides clarity and reusability for those audiences." ;
     rdfs:label "Prepare sustainability statements" ;
     skos:definition "An Act of Information Processing that assembles measured sustainability performance into aligned, consistent sustainability statements for an organization's reporting audiences." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing), mirroring the sibling-analog ex:P10275 'Prepare performance reports': input ICEs are assembled into an output Descriptive ICE. Input is ex:SustainabilityPerformanceMeasurement; output is ex:SustainabilityStatement." ;
+    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing), mirroring the sibling-analog ex:P10275 'Prepare performance reports': input ICEs are assembled into an output Descriptive ICE. Input is ex:SustainabilityPerformanceMeasurement; output is ex:SustainabilityStatement. COMPILE-class (kept at 366): lead verb is 'Preparing ... statements' (composing the ICE); 'audiences' is cited only as the rationale for alignment/consistency, not as a share-action. This is the compile sub-step under the DISSEMINATE parent ex:P21601 (re-anchored to ex:ActOfReporting), giving a clean compile/disseminate split." ;
     skos:example "An ESG reporting analyst compiles the validated metrics into the published sustainability statement." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:SustainabilityPerformanceMeasurement ] ,
