@@ -411,7 +411,7 @@ ex:Invoice a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:PaymentRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Payment Record" ;
     skos:definition "A Descriptive Information Content Entity that records a payment made to a service provider in settlement of an obligation, including payer, payee, amount, and the invoice settled." ;
-    rdfs:comment "Definitional informational output of 12.4.5.5 (Process payment for legal services). The remittance/payment record is the ICE output of the act; the transferred money itself is the material entity ex:Payment, modeled as a definitional participant rather than as an informational output (per S3 OutputIsICE: process outputs in this domain are ICEs)." .
+    rdfs:comment "Definitional informational output of 12.4.5.5 (Process payment for legal services). The remittance/payment record is the ICE output of the act; the transferred money itself is the material entity ex:PaymentInstrument, modeled as a definitional participant rather than as an informational output (per S3 OutputIsICE: process outputs in this domain are ICEs)." .
 
 ex:RegulatoryRequirement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Regulatory Requirement" ;
@@ -428,18 +428,16 @@ ex:RegulatoryRequirement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Dir
 # ---- Descriptive outputs (reports / assessments / records) ----
 
 ex:RelationshipAssessment a owl:Class ;
-    rdfs:subClassOf cco:ont00000853 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:RelationshipData ] ;
+    rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Relationship Assessment" ;
     skos:definition "A Descriptive Information Content Entity that describes a judgement of the state of an organization's relationship with an external party and areas needing growth." ;
-    rdfs:comment "Output of 12.2.1.1 (Assess relationships). 'is about' the relationship the assessment characterizes." .
+    rdfs:comment "Output of 12.2.1.1 (Assess relationships). The subject (the external-party relationship) is named in the definition; no formal 'is about' (cco:ont00001808) restriction is asserted because no reality-layer relationship class exists in the slice, and the only candidate filler ex:RelationshipData is the Descriptive ICE consumed as this act's has-input -- pointing is-about at the input data would mis-state the subject as the data rather than the relationship." .
 
 ex:RelationshipStatusReport a owl:Class ;
-    rdfs:subClassOf cco:ont00000853 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:RelationshipData ] ;
+    rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Relationship Status Report" ;
     skos:definition "A Descriptive Information Content Entity that describes the current standing of an organization's relationships as observed through ongoing monitoring." ;
-    rdfs:comment "Output of monitoring rows (12.2.1.3 Monitor relationships, 12.2.3.2 Monitor partnership success)." .
+    rdfs:comment "Output of monitoring rows (12.2.1.3 Monitor relationships, 12.2.3.2 Monitor partnership success). The subject (the monitored external-party relationships) is named in the definition; no formal 'is about' (cco:ont00001808) restriction is asserted -- the only candidate filler ex:RelationshipData is these acts' has-input, so an is-about to it would mis-state the subject as the input data." .
 
 ex:FinancialResultsReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Financial Results Report" ;
@@ -524,7 +522,7 @@ ex:LicensingTerms a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive 
 ex:IntellectualPropertyRight a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Intellectual Property Right" ;
     skos:definition "A Directive Information Content Entity that prescribes the exclusive legal entitlement an organization holds over a patent, copyright, or trademark." ;
-    rdfs:comment "Subject/output of 12.4.6.1 (Manage copyrights, patents, and trademarks). Directive: an enforceable entitlement prescribing permitted and prohibited uses." .
+    rdfs:comment "Subject/output of 12.4.6.1 (Manage copyrights, patents, and trademarks). Directive: an enforceable entitlement prescribing permitted and prohibited uses. Scope note (two-layer model): this class captures only the DIRECTIVE prescriptive content of the right (the permitted/prohibited-use rules) -- hence Directive ICE (cco:ont00000965), admissible as the definitional has-output of the output-neutral ex:ActOfAcquisition at P11062. The legal ENTITLEMENT/STATUS itself (the holder's standing over the protected subject matter) is a distinct reality-layer legal relation/role and is deliberately NOT modeled here; if later represented it should be a separate entity, not this ICE." .
 
 ex:Contract a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Contract" ;
@@ -562,10 +560,12 @@ ex:PressRelease a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 # 7. MATERIAL ENTITY  (operations-style material I/O, ADR-001/D4)
 ####################################################################
 
-ex:Payment a owl:Class ; rdfs:subClassOf obo:BFO_0000040 ;   # material entity
-    rdfs:label "Payment" ;
-    skos:definition "A Material Entity consisting of a quantity of money or a monetary instrument transferred from a payer to a payee in settlement of an obligation." ;
-    rdfs:comment "Modeled as a material entity (not an ICE): the transferred funds in 12.4.5.5 (Process payment for legal services). It is the material participant moved by the act (obo:BFO_0000057), while the act's informational has-output is the separate Descriptive ICE ex:PaymentRecord (process outputs in this domain are ICEs, S3)." .
+ex:PaymentInstrument a owl:Class ;
+    rdfs:subClassOf cco:ont00000537 ,   # Financial Instrument (a legally-sanctioned tradeable Material Artifact)
+        obo:BFO_0000040 ;               # material entity (co-asserted so material ancestry is visible to the standalone Gate-C SHACL run)
+    rdfs:label "Payment Instrument" ;
+    skos:definition "A Financial Instrument consisting of a quantity of money (cash or funds) transferred from one Agent to another in settlement of an obligation or exchange." ;
+    rdfs:comment "Material participant of the Act of Payment in 12.4.5.5 (Process payment for legal services): the transferred MONEY moved by the act (obo:BFO_0000057), never the act, while the act's informational has-output is the separate Descriptive ICE ex:PaymentRecord (process outputs in this domain are ICEs, S3). Renamed from ex:Payment and re-anchored to cco:ont00000537 to mirror slice 9 and match CCO's treatment of money as a Financial Instrument (cf. Portion of Cash cco:ont00000475 subClassOf 537)." .
 
 ####################################################################
 # ================  PROCESS CLASSES + CAPABILITIES  ================
@@ -823,7 +823,7 @@ ex:P12877 a owl:Class ;
     ex:apqcSourceText "Keeping a repository of documents that contain information about the network of partners, prospects and customers. Keep records up-to-date with routine reviews and modify as needed." ;
     rdfs:label "Maintain documentation of contacts" ;
     skos:definition "An Act of Information Processing that has as output contact records and that stores and updates documents describing the organization's network of partners, prospects, and customers." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing: input ICEs are received, manipulated, or stored). 'Maintain' here is record-keeping of informational ICEs, NOT cco:ont00000950 'Act of Maintenance' (which modifies Material Artifacts). GOLDEN PRINCIPLE: descriptive output (contact records) agrees with the information-processing genus." ;
+    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing: input ICEs are received, manipulated, or stored). 'Maintain' here is record-keeping of informational ICEs, NOT cco:ont00000950 'Act of Maintenance' (which modifies Material Artifacts). GOLDEN PRINCIPLE: descriptive output (contact records) agrees with the information-processing genus. Also considered cco:ont00000438 'Act of Official Documentation' (verified def: 'An Act of Declarative Communication in which an Agent records some information for official use by ANOTHER Agent') but retained cco:ont00000366: this node is INTERNAL record maintenance -- keeping the organization's own contact repository current through routine reviews -- not declarative documentation prepared for official use by another agent, so 438's declarative-communication differentia does not fit (a themed false friend)." ;
     skos:example "A relationship manager keeps a CRM repository of agency contacts current through routine reviews." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ContactRecord ] .
@@ -1090,12 +1090,12 @@ ex:P11060 a owl:Class ;
     ex:apqcSourceText "Making payments to legal advisers for their services. Payments include addressing issues or suits by customers, suppliers, competitors, bankers, government agencies, etc." ;
     rdfs:label "Process payment for legal services" ;
     skos:definition "An Act of Payment that transfers consideration to a legal adviser for services rendered, taking an invoice as input, transferring a payment as a material participant, and having a payment record as its informational output." ;
-    rdfs:comment "Reuses PROPOSE-EXT genus ex:ActOfPayment. Definitional informational output is the Descriptive ICE ex:PaymentRecord (the remittance/payment record); the transferred money ex:Payment is the material entity moved by the act and is modeled as a definitional participant (obo:BFO_0000057), not as a has-output filler, because process outputs in this domain are ICEs (S3 OutputIsICE). Invoice is the informational (Descriptive ICE) input; Advisor is a definitional participant." ;
+    rdfs:comment "Reuses PROPOSE-EXT genus ex:ActOfPayment. Definitional informational output is the Descriptive ICE ex:PaymentRecord (the remittance/payment record); the transferred money ex:PaymentInstrument is the material entity moved by the act and is modeled as a definitional participant (obo:BFO_0000057), not as a has-output filler, because process outputs in this domain are ICEs (S3 OutputIsICE). Invoice is the informational (Descriptive ICE) input; Advisor is a definitional participant." ;
     skos:example "Accounts payable settles an outside-counsel invoice for litigation services and logs the remittance." ;
     rdfs:subClassOf ex:ActOfPayment ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:Invoice ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:PaymentRecord ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Payment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Advisor ] .
 
 # --- 12.4.5.6 (PCF 11061) : Monitoring -> Descriptive ICE (LegalActivityRecord)
