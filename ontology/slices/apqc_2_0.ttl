@@ -52,7 +52,7 @@
     dct:title "APQC reality-layer slice 2.0: Develop and Manage Products and Services" ;
     dct:source "APQC Process Classification Framework (Cross-Industry), Category 2.0" ;
     owl:versionInfo "0.1.0" ;
-    # owl:imports <http://example.org/apqc/ext> .   # Logical import of apqc-ext.ttl. Recorded as a comment (GOLD house-style): the example.org IRI is not network-resolvable, so a live owl:imports breaks ROBOT's offline merge. The validator merges apqc-ext.ttl separately as an --input for both Gate C and Gate D, so the shared genera (ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition) are present in the reasoned closure.
+    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 2.0 (groups 2.1-2.3). CCO pin v2.0 (2024-11-06). Follows ADR-001 two-layer policy: this is the reality layer only; the curatorial catalog (skos) lives in apqc-catalog.ttl. Imports apqc-ext.ttl (shared act genera), which anchors under CCO (which imports BFO 2020). Category 2.0 and the three process groups are catalog-only at the Category level (R3); transformation begins at the process-group level. Validate offline alongside CommonCoreOntologiesMerged.ttl." .
 
 ####################################################################

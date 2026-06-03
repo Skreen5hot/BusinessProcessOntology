@@ -45,8 +45,8 @@
     dct:title "APQC reality-layer slice 13.0: Develop and Manage Business Capabilities" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
+    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 13.0. CCO pin v2.0 (2024-11-06) per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE). The shared act genera ex:ActOfAnalysis / ex:ActOfIdentification / ex:ActOfFormulation / ex:ActOfSelection / ex:ActOfAcquisition are REUSED from apqc-ext.ttl; the validator merges apqc-ext.ttl separately. New recurring genera (ex:ActOfMonitoring, ex:ActOfImplementation, ex:ActOfImprovement) are emitted below as PROPOSE-EXT for human promotion." .
-    # owl:imports <http://example.org/apqc/ext> .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES

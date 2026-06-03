@@ -17,7 +17,7 @@
     dct:title "APQC reality-layer slice 7.0: Develop and Manage Human Capital" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    # owl:imports <http://example.org/apqc/ext> .
+    owl:imports <http://example.org/apqc/ext> ;
     rdfs:comment "Reality-layer module for APQC section 7.0. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test). Validate offline by loading CommonCoreOntologiesMerged.ttl and apqc-ext.ttl alongside this file (the example.org import is commented so ROBOT does not attempt a live fetch)." .
 
 ####################################################################

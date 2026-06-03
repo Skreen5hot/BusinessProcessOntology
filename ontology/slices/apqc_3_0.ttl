@@ -46,8 +46,8 @@
     dct:title "APQC reality-layer slice 3.0: Market and Sell Products and Services" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    rdfs:comment "Reality-layer module for APQC section 3.0 (groups 3.1-3.5) plus the section-wide shared supporting vocabulary. CCO pin v2.0 (2024-11-06); two-layer policy per ADR-001 (reality layer only; the SKOS catalog lives in apqc-catalog.ttl). Validate offline by merging this file with CommonCoreOntologiesMerged.ttl and apqc-ext.ttl. The owl:imports of apqc-ext.ttl is recorded on the commented line below because the validator merges apqc-ext.ttl separately as --input; a live example.org import breaks ROBOT." .
-    # owl:imports <http://example.org/apqc/ext> .
+    owl:imports <http://example.org/apqc/ext> ;
+    rdfs:comment "Reality-layer module for APQC section 3.0 (groups 3.1-3.5) plus the section-wide shared supporting vocabulary. CCO pin v2.0 (2024-11-06); two-layer policy per ADR-001 (reality layer only; the SKOS catalog lives in apqc-catalog.ttl). Validate offline by merging this file with CommonCoreOntologiesMerged.ttl and apqc-ext.ttl. The owl:imports of apqc-ext.ttl is LIVE; ontology/slices/catalog-v001.xml resolves it to the local apqc-ext.ttl offline, and the validator also merges apqc-ext.ttl and the CCO closure as explicit reasoner inputs." .
 
 ####################################################################
 # 0. ANNOTATION PROPERTIES (provenance + catalog->reality bridge)
