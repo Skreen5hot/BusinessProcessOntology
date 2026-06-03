@@ -2537,7 +2537,7 @@ ex:P21585 a owl:Class ;
     ex:apqcSourceText "Creating and implementing a strategy for managing organizational performance. The strategy should include approaches for measuring, tracking, streamlining, and improving internal performance. It encompasses a blueprint for the tactical measurement of internal processes and work force improvement, in alignment with Employee Metrics Developed and Managed [10526]." ;
     rdfs:label "Define and manage organizational performance strategy" ;
     skos:definition "An Act of Formulation that composes an organizational performance strategy prescribing how an organization measures, tracks, streamlines, and improves its internal performance." ;
-    rdfs:comment "Anchored to ex:ActOfFormulation (apqc-ext) because its definitional output is a Directive ICE (strategy). The 'and manage'/implementation facet is carried by its child processes; the parent itself produces the strategy." ;
+    rdfs:comment "Anchored to ex:ActOfFormulation (inlined) because its definitional output is a Directive ICE (strategy). The 'and manage'/implementation facet is carried by its child processes; the parent itself produces the strategy." ;
     skos:example "A performance management office drafts and ratifies the firm's organizational performance strategy for the planning cycle." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:OrganizationalPerformanceStrategy ] ,
@@ -2621,7 +2621,7 @@ ex:P11087 a owl:Class ;
     ex:apqcSourceText "Examining performance against benchmarked organizations or entities. Determine how much performance needs to change to meet expectations. Reach strategic goals." ;
     rdfs:label "Conduct gap analysis" ;
     skos:definition "An Act of Analysis that examines performance against benchmarked organizations and produces a gap and needs analysis quantifying how much performance must change to meet expectations." ;
-    rdfs:comment "Anchored to ex:ActOfAnalysis (apqc-ext): it processes benchmark inputs into a representation of the performance gap (Descriptive ICE)." ;
+    rdfs:comment "Anchored to ex:ActOfAnalysis (inlined): it processes benchmark inputs into a representation of the performance gap (Descriptive ICE)." ;
     skos:example "An analyst computes the percentage improvement in cycle time needed to match the benchmark leader." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:BenchmarkAnalysis ] ,
@@ -2710,7 +2710,7 @@ ex:P10273 a owl:Class ;
     ex:apqcSourceText "Recognizing the trends in performance. Carefully and strategically assess the results in order to effectively spot the trends." ;
     rdfs:label "Identify performance trends" ;
     skos:definition "An Act of Analysis that examines performance measurements over time and produces a performance trend analysis representing the recognized trends." ;
-    rdfs:comment "Anchored to ex:ActOfAnalysis (apqc-ext): it processes measurement ICEs into a representation of trends (Descriptive ICE). Not ex:ActOfIdentification because the emphasis is analytic trend-detection rather than enumeration." ;
+    rdfs:comment "Anchored to ex:ActOfAnalysis (inlined): it processes measurement ICEs into a representation of trends (Descriptive ICE). Not ex:ActOfIdentification because the emphasis is analytic trend-detection rather than enumeration." ;
     skos:example "An analyst plots twelve months of KPI data and identifies a declining-quality trend." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:PerformanceMeasurement ] ,

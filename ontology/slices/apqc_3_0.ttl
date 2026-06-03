@@ -1703,7 +1703,7 @@ ex:P17684 a owl:Class ;
     ex:apqcSourceText "Obtaining internal price approvals and governmental approvals that are required for licensed products and for products that can be reimbursed by the government." ;
     rdfs:label "Achieve regulatory approval for pricing" ;
     skos:definition "An Act of Acquisition that obtains the internal and governmental pricing approvals required for licensed or reimbursable products." ;
-    rdfs:comment "Reuses ex:ActOfAcquisition (apqc-ext): an approval not previously held is obtained from an authority. Directive output (a pricing approval)." ;
+    rdfs:comment "Reuses ex:ActOfAcquisition (inlined): an approval not previously held is obtained from an authority. Directive output (a pricing approval)." ;
     skos:example "A regulatory team secures government price approval for a reimbursable drug." ;
     rdfs:subClassOf ex:ActOfAcquisition ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:PricingApproval ] .
@@ -1733,7 +1733,7 @@ ex:P10160 a owl:Class ;
     ex:apqcSourceText "Determining the appropriate audience to direct marketing efforts at. Identify the particular group of customers to target. Discover the appropriate customer groups at a micro-level. Use techniques such as segmentation analysis, whereby the entire population is sliced according to certain demographic or behavioral attributes." ;
     rdfs:label "Define target audience" ;
     skos:definition "An Act of Selection that chooses the target customer segment from candidate segments and produces a target segment definition." ;
-    rdfs:comment "Reuses ex:ActOfSelection (apqc-ext): a target is chosen from candidate segments. Directive output (a target-segment definition) agrees with the selection genus." ;
+    rdfs:comment "Reuses ex:ActOfSelection (inlined): a target is chosen from candidate segments. Directive output (a target-segment definition) agrees with the selection genus." ;
     skos:example "A marketer selects the micro-segment to target after segmentation analysis." ;
     rdfs:subClassOf ex:ActOfSelection ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TargetSegmentDefinition ] .

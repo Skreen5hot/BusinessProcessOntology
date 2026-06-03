@@ -2116,7 +2116,7 @@ ex:P10844 a owl:Class ;
     ex:apqcSourceText "Creating procedures and policies to follow for investing in capital projects. Create rules and regulations regarding large investment plans, which require in-depth forecasting for expenditure and revenue." ;
     rdfs:label "Develop capital investment policies and procedures" ;
     skos:definition "An Act of Formulation that composes the financial policies and procedures governing investment in capital projects." ;
-    rdfs:comment "Anchored to ex:ActOfFormulation (apqc-ext) because creating policies/procedures composes Directive ICEs (Golden Principle: Formulation -> Directive)." ;
+    rdfs:comment "Anchored to ex:ActOfFormulation (inlined) because creating policies/procedures composes Directive ICEs (Golden Principle: Formulation -> Directive)." ;
     skos:example "Treasury drafts the corporate capital-investment policy and the accompanying approval procedure." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:FinancialPolicy ] ,

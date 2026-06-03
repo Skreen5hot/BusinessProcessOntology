@@ -15,10 +15,9 @@
 # via cco:ont00001777 has process part; no rdfs:subClassOf between
 # processes). Composed from group modules 6.1, 6.2, 6.3, 6.4, 6.5 over
 # ONE shared supporting vocabulary, with duplicate IRIs reconciled to a
-# single coherent definition.
-#
-# by the validator; the live example.org import is commented out so it
-# does not break ROBOT). Per ADR-001.
+# single coherent definition. Self-contained: shared act genera used by
+# this slice are inlined from the apqc-ext.ttl registry so it validates
+# standalone against the pinned CCO/BFO closure.
 #
 #   ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation,
 #   ex:ActOfSelection, ex:ActOfAcquisition.
@@ -163,11 +162,10 @@ ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:comment "Catalog->reality bridge: relates an APQC catalog node (ex:PCF_<pcfID>) to the reality-layer class (process or capability) it designates." .
 
 ####################################################################
-# 1. NEW SHARED ACT GENERA  (PROPOSE-EXT: promote to apqc-ext.ttl
-#    after review). Each minted ONCE here, reconciled across all five
-#    group inputs. Reused genera (ex:ActOfAnalysis, ex:ActOfIdentification,
-#    ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition) live in
-#    apqc-ext.ttl and are NOT re-declared.
+# 1. ACT GENERA -- all inlined in the self-contained section above
+#    (canonical shared genera mirrored from the apqc-ext.ttl registry;
+#    section-specific genera reconciled across the five group inputs and
+#    flagged PROPOSE-EXT for promotion review).
 ####################################################################
 
 ####################################################################
@@ -230,14 +228,14 @@ ex:SalesTeam a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom ex:SalesAgentRole ] ;
     rdfs:label "Sales Team" ;
     skos:definition "An Agent that bears a sales-agent role and to which qualified sales leads are delivered for follow-up." ;
-    rdfs:comment "Minted. Recipient named in 6.2.2.6 (Deliver opportunity to sales team)." .
+    rdfs:comment "Minted. Recipient named in 6.2.2.6 (Deliver opportunity to sales team). Denotes a team-level COLLECTIVE agent (not an individual); kept under cco:Agent (CCO's Group of Agents cco:ont00000300 is an Object Aggregate, not an Agent)." .
 
 ex:ProductManagementTeam a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom ex:ProductManagerRole ] ;
     rdfs:label "Product Management Team" ;
     skos:definition "An Agent that bears a product-manager role and to which customer feedback and improvement insights are routed for use in improving offerings." ;
-    rdfs:comment "Minted. Recipient named in 6.5.1.3, 6.5.3.5 (Provide feedback/insights to product management / appropriate teams)." .
+    rdfs:comment "Minted. Recipient named in 6.5.1.3, 6.5.3.5 (Provide feedback/insights to product management / appropriate teams). Denotes a team-level COLLECTIVE agent (not an individual). Kept under cco:Agent: CCO's Group of Agents (cco:ont00000300) is an Object Aggregate, not an Agent, so it would not bear the agent/recipient role used here." .
 
 ex:ManagementPersonnel a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
@@ -419,7 +417,7 @@ ex:CustomerServiceStrategy a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Customer Service Strategy" ;
     skos:definition "A Directive Information Content Entity that prescribes an organization's plan for removing customer obstacles and delivering customer service." ;
-    rdfs:comment "Output of 6.1 (Develop customer service strategy). Directive -> producing act is a Formulation (apqc-ext)." .
+    rdfs:comment "Output of 6.1 (Develop customer service strategy). Directive -> producing act is a Formulation (inlined)." .
 
 ex:CustomerServiceRequirementSpecification a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
@@ -560,10 +558,11 @@ ex:CustomerProfile a owl:Class ;
     rdfs:comment "Output of 6.3.4.1.2 (Create customer profile); about a Customer." .
 
 ex:ContactVolumeForecast a owl:Class ;
-    rdfs:subClassOf cco:ont00000853 ;   # Descriptive ICE
+    rdfs:subClassOf cco:ont00000626 ,   # Predictive ICE
+        cco:ont00000853 ;   # parent Descriptive ICE, asserted so standalone SHACL S3 resolves
     rdfs:label "Contact Volume Forecast" ;
-    skos:definition "A Descriptive Information Content Entity that describes the projected volume of customer service contacts and the work force required to service them." ;
-    rdfs:comment "Output of 6.2.1.1. Descriptive/predictive: it represents a projection, not a prescription." .
+    skos:definition "A Predictive Information Content Entity that estimates the future volume of customer service contacts and the workforce required to service them." ;
+    rdfs:comment "Output of 6.2.1.1. PREDICTIVE ICE (cco:ont00000626 subClassOf Descriptive ICE): estimates an uncertain future volume, matching the forecast pattern in slices 3 and 5. Produced by ex:ActOfForecasting." .
 
 ex:WorkforceUtilizationReport a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;   # Descriptive ICE
@@ -781,7 +780,7 @@ ex:RecallCommunication a owl:Class ;
 
 ####################################################################
 # ===== GROUP 6.1  "Develop customer service strategy" (PCF 10378) =====
-# Act genera: ex:ActOfFormulation (apqc-ext) for define/develop/establish
+# Act genera: ex:ActOfFormulation (inlined) for define/develop/establish
 # of a directive; cco:ont00000684 (Act of Contract Formation) for 6.1.6.3
 # (re-anchored from Act of Promising per Gate-F: two-party legal obligation);
 # cco:ont00000402 (Act of Communication) for 6.1.6.4 and 6.1.6.5.
@@ -1263,7 +1262,7 @@ ex:P20097 a owl:Class ;
     ex:apqcSourceText "Executing investigational and analysis of warranty claims. This involves notification and definition of a warranty issue, includes the scheduling of a field service agent to perform further investigation; the request and receipt of defective parts; and diagnosis/root cause analysis. This concludes with the receipt of the result and recommendation for corrective action." ;
     rdfs:label "Investigate warranty issues" ;
     skos:definition "An Act of Analysis that examines a warranty issue and produces a root cause analysis and a recommendation for corrective action." ;
-    rdfs:comment "Genus ex:ActOfAnalysis (apqc-ext): investigation is information processing producing a descriptive understanding. Its APQC children are process parts." ;
+    rdfs:comment "Genus ex:ActOfAnalysis (inlined): investigation is information processing producing a descriptive understanding. Its APQC children are process parts." ;
     skos:example "The warranty team defines the issue, schedules field service, examines a returned part, and reports a root cause." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RootCauseAnalysis ] ,
@@ -1302,7 +1301,7 @@ ex:P12678 a owl:Class ;
     ex:apqcSourceText "Requesting receipt of a defective part for further investigation." ;
     rdfs:label "Request and receive defective part" ;
     skos:definition "An Act of Acquisition that obtains a defective part for further investigation." ;
-    rdfs:comment "Genus ex:ActOfAcquisition (apqc-ext): the organization obtains a part it did not previously hold. Operations category, so the defective part is a Material Entity participant (obo:BFO_0000057), not an ICE." ;
+    rdfs:comment "Genus ex:ActOfAcquisition (inlined): the organization obtains a part it did not previously hold. Operations category, so the defective part is a Material Entity participant (obo:BFO_0000057), not an ICE." ;
     skos:example "The warranty team requests and receives the failed component from the customer." ;
     rdfs:subClassOf ex:ActOfAcquisition ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:DefectivePart ] .
@@ -1357,7 +1356,7 @@ ex:P12668 a owl:Class ;
     ex:apqcSourceText "Following Defining issue [20098], an approval or rejection with be made against the warranty claim. If it is deemed that the claim falls within the warranty parameters, the claim will be approved. If the claim is deemed to fall outside warranty parameters, the claim with be rejected." ;
     rdfs:label "Approve or reject warranty claim" ;
     skos:definition "An Act of Selection that has as input a warranty claim validation and chooses between approval and rejection, producing a claim disposition." ;
-    rdfs:comment "Genus ex:ActOfSelection (apqc-ext): chooses from a binary candidate set (approve/reject) and emits a Directive ClaimDisposition, agreeing with the GOLDEN PRINCIPLE." ;
+    rdfs:comment "Genus ex:ActOfSelection (inlined): chooses from a binary candidate set (approve/reject) and emits a Directive ClaimDisposition, agreeing with the GOLDEN PRINCIPLE." ;
     skos:example "The warranty team approves a claim found to be within warranty parameters." ;
     rdfs:subClassOf ex:ActOfSelection ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:WarrantyClaimValidation ] ,
@@ -1446,7 +1445,7 @@ ex:P10218 a owl:Class ;
     ex:apqcSourceText "Validating specific service requirements for individual customers. Determine and schedule resource to fulfill these requirements. Provide service to specific individual customers. Ensure the quality of service delivery." ;
     rdfs:label "Service products" ;
     skos:definition "An Act of Service Provision that validates a customer's service requirements, schedules resources, renders the service, and assures its quality." ;
-    rdfs:comment "Genus ex:ActOfServiceProvision (operations shared genus): bounded end-to-end service delivery. Its APQC children are process parts." ;
+    rdfs:comment "Although the APQC label is 'Service products', the Element Description denotes an end-to-end individual service-delivery process. Genus ex:ActOfServiceProvision (operations shared genus): bounded end-to-end service delivery. Its APQC children are process parts." ;
     skos:example "A field-service operation confirms requirements, schedules a technician, performs the repair, and follows up on quality." ;
     rdfs:subClassOf ex:ActOfServiceProvision ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10320 ] ,
@@ -1495,7 +1494,7 @@ ex:P10326 a owl:Class ;
     ex:apqcSourceText "Designing a short-term agreement between the service provider and customer. One-time services are ordered by the service recipient and resource-related billing is performed upon completion. Use the service order to document service and customer service work." ;
     rdfs:label "Generate service order" ;
     skos:definition "An Act of Formulation that designs a short-term service agreement and produces a service order." ;
-    rdfs:comment "Genus ex:ActOfFormulation (apqc-ext): composing the service agreement yields a Directive ServiceOrder." ;
+    rdfs:comment "Genus ex:ActOfFormulation (inlined): composing the service agreement yields a Directive ServiceOrder." ;
     skos:example "An agent creates a service order specifying the one-time repair to be performed." ;
     rdfs:subClassOf ex:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CustomerServiceRequirementSpecification ] ,
@@ -1764,10 +1763,11 @@ ex:P11687 a owl:Class ;
     ex:pcfID "11687" ; ex:hierarchyID "6.5.1.1" ;
     ex:apqcSourceText "Creating an avenue for which the customer can provide feedback on their experience with how their inquiry, problem, or request was handled." ;
     rdfs:label "Solicit customer feedback on customer service experience" ;
-    skos:definition "An Act of Information Processing that engages the customer to elicit and collect customer feedback about their customer service experience." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): the act elicits, receives, and stores input ICEs (customer feedback) rather than rendering a value judgement; its definitional output is the Descriptive ex:CustomerFeedback (GOLDEN PRINCIPLE: information-processing -> descriptive). The Customer participates (has participant)." ;
+    skos:definition "An Act of Communication that engages the customer to elicit and collect customer feedback about their customer service experience." ;
+    rdfs:comment "Re-anchored (Gate-F) to cco:ont00000402 (Act of Communication, co-anchored cco:ont00000228 Planned Act for standalone SHACL); the act SOLICITS/OBTAINS feedback from the customer (the customer transfers the feedback ICE), consistent with the other solicit-feedback acts and P10336: the act elicits, receives, and stores input ICEs (customer feedback) rather than rendering a value judgement; its definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
     skos:example "A service desk emails a short post-resolution survey inviting the customer to rate the handling of their request." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    rdfs:subClassOf cco:ont00000402 ,
+        cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Customer ] .
 
@@ -1811,10 +1811,11 @@ ex:P11236 a owl:Class ;
     ex:pcfID "11236" ; ex:hierarchyID "6.5.2.1" ;
     ex:apqcSourceText "Requesting customer feedback on the process of handling and resolving customer complaints. Obtain information about the effectiveness and performance of the customer complaint handling process from the customers through various means (e.g., online and by phone)." ;
     rdfs:label "Solicit customer feedback on complaint handling and resolution" ;
-    skos:definition "An Act of Information Processing that engages the customer to elicit and collect customer feedback on how complaints are handled and resolved." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): it requests, receives, and stores input ICEs (customer feedback); definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
+    skos:definition "An Act of Communication that engages the customer to elicit and collect customer feedback on how complaints are handled and resolved." ;
+    rdfs:comment "Re-anchored (Gate-F) to cco:ont00000402 (Act of Communication, co-anchored cco:ont00000228 Planned Act for standalone SHACL); the act SOLICITS/OBTAINS feedback from the customer (the customer transfers the feedback ICE), consistent with the other solicit-feedback acts and P10336: it requests, receives, and stores input ICEs (customer feedback); definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
     skos:example "An agent invites the customer by phone and email to rate how their complaint was resolved." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    rdfs:subClassOf cco:ont00000402 ,
+        cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Customer ] .
 
@@ -1859,10 +1860,11 @@ ex:P11238 a owl:Class ;
     ex:pcfID "11238" ; ex:hierarchyID "6.5.3.1" ;
     ex:apqcSourceText "Obtaining customer feedback/review on the quality and utility derived from the products/services after the sale is complete. Use techniques such as surveys, feedback boxes, and user activity and usability tests." ;
     rdfs:label "Gather and solicit post-sale customer feedback on products and services" ;
-    skos:definition "An Act of Information Processing that engages the customer after sale to elicit and collect customer feedback on the quality and utility of products and services." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): it gathers/receives input ICEs (customer feedback) via surveys and usability tests; definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
+    skos:definition "An Act of Communication that engages the customer after sale to elicit and collect customer feedback on the quality and utility of products and services." ;
+    rdfs:comment "Re-anchored (Gate-F) to cco:ont00000402 (Act of Communication, co-anchored cco:ont00000228 Planned Act for standalone SHACL); the act SOLICITS/OBTAINS feedback from the customer (the customer transfers the feedback ICE), consistent with the other solicit-feedback acts and P10336: it gathers/receives input ICEs (customer feedback) via surveys and usability tests; definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
     skos:example "A team runs a post-purchase survey and usability test to collect feedback on a product's utility." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    rdfs:subClassOf cco:ont00000402 ,
+        cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Customer ] .
 
@@ -1882,10 +1884,11 @@ ex:P20117 a owl:Class ;
     ex:pcfID "20117" ; ex:hierarchyID "6.5.3.3" ;
     ex:apqcSourceText "Engaging with the customer to understand their cross-channel experience. Find out what channels were effective and what areas need improvement." ;
     rdfs:label "Solicit customer feedback on cross-channel experience" ;
-    skos:definition "An Act of Information Processing that engages the customer to elicit and collect customer feedback on their cross-channel service experience." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): it elicits and stores input ICEs (customer feedback) about channel effectiveness; definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
+    skos:definition "An Act of Communication that engages the customer to elicit and collect customer feedback on their cross-channel service experience." ;
+    rdfs:comment "Re-anchored (Gate-F) to cco:ont00000402 (Act of Communication, co-anchored cco:ont00000228 Planned Act for standalone SHACL); the act SOLICITS/OBTAINS feedback from the customer (the customer transfers the feedback ICE), consistent with the other solicit-feedback acts and P10336: it elicits and stores input ICEs (customer feedback) about channel effectiveness; definitional output is the Descriptive ex:CustomerFeedback. The Customer participates (has participant)." ;
     skos:example "A survey asks customers which channels (chat, phone, app) worked best for them and where they struggled." ;
-    rdfs:subClassOf cco:ont00000366 ,
+    rdfs:subClassOf cco:ont00000402 ,
+        cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Customer ] .
 
