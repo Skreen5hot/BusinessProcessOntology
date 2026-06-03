@@ -17,11 +17,9 @@
 # shared supporting vocabulary, with duplicate IRIs reconciled to a
 # single coherent definition.
 #
-# CCO pin: v2.0 (2024-11-06). Imports apqc-ext.ttl (merged separately
 # by the validator; the live example.org import is commented out so it
 # does not break ROBOT). Per ADR-001.
 #
-# Reused (never re-minted) shared act genera from apqc-ext.ttl:
 #   ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation,
 #   ex:ActOfSelection, ex:ActOfAcquisition.
 # New recurring genera proposed for promotion are marked # PROPOSE-EXT
@@ -53,7 +51,7 @@
 <http://example.org/apqc/slice/5.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 5.0: Deliver Services" ;
     owl:versionInfo "0.1.0" ;
-    rdfs:comment "Reality-layer BFO 2020 / CCO 2.0 module for APQC section 5.0 'Deliver Services'. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE genus<->output agreement). Imports apqc-ext.ttl (merged separately by the validator)." .
+    rdfs:comment "Reality-layer BFO 2020 / CCO 2.0 module for APQC section 5.0 'Deliver Services'. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE genus<->output agreement). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################
 # ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from

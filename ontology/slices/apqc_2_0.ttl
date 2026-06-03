@@ -52,7 +52,7 @@
     dct:title "APQC reality-layer slice 2.0: Develop and Manage Products and Services" ;
     dct:source "APQC Process Classification Framework (Cross-Industry), Category 2.0" ;
     owl:versionInfo "0.1.0" ;
-    rdfs:comment "Reality-layer module for APQC section 2.0 (groups 2.1-2.3). CCO pin v2.0 (2024-11-06). Follows ADR-001 two-layer policy: this is the reality layer only; the curatorial catalog (skos) lives in apqc-catalog.ttl. Imports apqc-ext.ttl (shared act genera), which anchors under CCO (which imports BFO 2020). Category 2.0 and the three process groups are catalog-only at the Category level (R3); transformation begins at the process-group level. Validate offline alongside CommonCoreOntologiesMerged.ttl." .
+    rdfs:comment "Reality-layer module for APQC section 2.0 (groups 2.1-2.3). CCO pin v2.0 (2024-11-06). Follows ADR-001 two-layer policy: this is the reality layer only; the curatorial catalog (skos) lives in apqc-catalog.ttl. Category 2.0 and the three process groups are catalog-only at the Category level (R3); transformation begins at the process-group level. Validate offline alongside CommonCoreOntologiesMerged.ttl. Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################
 # ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from

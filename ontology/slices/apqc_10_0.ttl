@@ -49,7 +49,7 @@
     dct:title "APQC reality-layer slice 10.0: Acquire, Construct, and Manage Assets" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    rdfs:comment "Reality-layer BFO 2020 / CCO 2.0 module for APQC section 10.0. CCO pin: v2.0 (2024-11-06). Modeling decisions per ADR-001 (two-layer model; R5 bounded-occurrent test; GOLDEN PRINCIPLE genus<->output agreement). The owl:imports of apqc-ext.ttl is LIVE, resolved offline by ontology/slices/catalog-v001.xml; the validator also merges apqc-ext.ttl as an explicit reasoner input." .
+    rdfs:comment "Reality-layer BFO 2020 / CCO 2.0 module for APQC section 10.0. CCO pin: v2.0 (2024-11-06). Modeling decisions per ADR-001 (two-layer model; R5 bounded-occurrent test; GOLDEN PRINCIPLE genus<->output agreement). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################
 # ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from

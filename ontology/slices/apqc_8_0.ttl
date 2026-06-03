@@ -17,7 +17,7 @@
     dct:title "APQC reality-layer slice 8.0: Manage Information Technology (IT)" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.1.0" ;
-    rdfs:comment "Reality-layer module for APQC section 8.0. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test). The validator merges apqc-ext.ttl separately; the example.org import is commented so ROBOT does not attempt a live fetch. Validate offline by loading CommonCoreOntologiesMerged.ttl and apqc-ext.ttl alongside this file." .
+    rdfs:comment "Reality-layer module for APQC section 8.0. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################
 # ACT GENERA -- SELF-CONTAINED (canonical defs mirrored from
