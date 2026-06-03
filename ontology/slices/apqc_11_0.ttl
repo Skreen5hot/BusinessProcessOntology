@@ -106,23 +106,22 @@ ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:comment "Bridges a catalog node (ex:PCF_<pcfID>) to its reality-layer class (ex:P<pcfID> or a supporting capability). The catalog nodes themselves are declared and typed (owl:NamedIndividual, cco:ont00000853 Descriptive ICE, skos:Concept) in apqc-catalog.ttl. An ANNOTATION property is used (not an object property) deliberately, to keep the slice in OWL DL and avoid ICE-to-class punning (ADR-001 R4)." .
 
 ####################################################################
-# 1. ACT GENERA -- DEFINED IN apqc-ext.ttl (D9), reused here
+# 1. ACT GENERA -- INLINED ABOVE (Section 0.5), canonical defs
+#    mirrored from the D9 shared registry ontology/apqc-ext.ttl v0.3.0.
 #
-# ex:ActOfMonitoring, ex:ActOfReporting, ex:ActOfVerification, and
+# ex:ActOfMonitoring, ex:ActOfReporting, ex:ActOfVerification and
 # ex:ActOfInvestigation -- together with the seed genera ex:ActOfAnalysis
-# / Identification / Formulation / Selection / Acquisition -- are defined
-# ONCE in apqc-ext.ttl v0.3.0 and merged in for validation. They were
-# proposed per-group during the transform, then consolidated corpus-wide;
-# the local definitions have been removed from this slice.
+# / Identification / Formulation / Selection -- are inlined verbatim above
+# so this module validates standalone against the pinned CCO/BFO closure
+# with NO extension merge. apqc-ext.ttl remains the canonical source of
+# truth; the inlined copies are kept consistent with it.
 #
 # CANONICAL ANCHOR for ex:ActOfVerification (consolidated): Act of
 # Appraisal (cco:ont00000636) -- verification renders a criterion-
 # referenced conformance judgement of a realized artifact, system, or run
-# against a standard. (The per-group transforms had variously proposed Act
-# of Measuring 345 and Act of Information Processing 366. Several inline
-# process comments below still read "Act of Information Processing"; those
-# predate the consolidation and are SUPERSEDED by apqc-ext.ttl. Many
-# verification acts also retain an information-processing character.)
+# against a standard. (Per-group transforms had variously proposed Act of
+# Measuring 345 and Act of Information Processing 366; both are SUPERSEDED.
+# Many verification acts also retain an information-processing character.)
 ####################################################################
 
 ####################################################################
@@ -1032,10 +1031,10 @@ ex:P11202 a owl:Class ;
     ex:pcfID "11202" ; ex:hierarchyID "11.3.2" ;
     ex:apqcSourceText "Discussing and soliciting advice from experts for in order to incorporate their suggestion (regarding Create remediation plans [11201])." ;
     rdfs:label "Contact and confer with experts" ;
-    skos:definition "An Act of Directive Communication in which an Agent solicits and confers advice with subject matter experts, conveying their expert advice so that their suggestions can be incorporated into remediation planning." ;
-    rdfs:comment "Gate-F fix (false-friend genus: acquisition vs communication): RE-ANCHORED from ex:ActOfAcquisition to cco:ont00000133 (Act of Directive Communication). Verified cco:ont00000133: 'An Act of Communication that is intended to cause the hearer to take a particular action' (subClassOf cco:ont00000402 Act of Communication), scope-note examples include asking, requesting, advising, suggesting -- a direct fit for 'DISCUSSING and SOLICITING advice from experts'. Rejected ex:ActOfAcquisition: its own definition is 'obtains from some authority or supplier an entity (such as an authorization, license, or resource)' and its provenance EXPLICITLY rejected cco:ont00000402 and scopes the genus to procurement/asset-acquisition; treating 'soliciting/conferring advice' as procurement ('obtain advice' ~ 'acquire') is a surface-word false friend that contradicts that genus's stated scope. ex:ExpertAdvice (a Descriptive ICE) is the communicated content (has output / received content). ex:SubjectMatterExpert remains a definitional participant and is the sender of the advice (cco:ont00001844 'has sender', verified). See the corrected group-11.3 banner above (the 'not communication' claim no longer applies to this row)." ;
+    skos:definition "An Act of Representative Communication in which subject matter experts, conferred with by the organization, convey their expert advice -- committing to its truth -- so that their suggestions can be incorporated into remediation planning." ;
+    rdfs:comment "Gate-F reconciliation: anchored under cco:ont00000379 (Act of Representative Communication, a truth-committed conveyance; subClassOf cco:ont00000402 Act of Communication), with cco:ont00000228 (Planned Act) co-asserted for the standalone S2 act anchor (379 is outside the allowlist {366,636,511,228}). The act's defining axioms -- ex:SubjectMatterExpert as the has-sender (cco:ont00001844) and ex:ExpertAdvice (a Descriptive ICE) as the conveyed has-output -- describe the SME->organization advice transfer, which is a representative communication. Previously modeled as cco:ont00000133 (Act of Directive Communication) on the 'soliciting' reading; but that genus casts the soliciting organization as sender and the SME as hearer, contradicting the asserted SME-as-sender axiom, so the genus was reconciled to 379. The earlier rejection of ex:ActOfAcquisition still stands: obtaining advice by conferral is communication, not procurement (cco:ont00000228-scoped acquisition of an authorization/license/resource). ex:SubjectMatterExpert is also a definitional participant (obo:BFO_0000057)." ;
     skos:example "A remediation lead convenes subject matter experts and captures their advice to refine the remediation plan." ;
-    rdfs:subClassOf cco:ont00000133 ,
+    rdfs:subClassOf cco:ont00000379 ,
         cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ExpertAdvice ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001844 ; owl:someValuesFrom ex:SubjectMatterExpert ] ,
