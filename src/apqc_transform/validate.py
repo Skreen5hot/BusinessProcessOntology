@@ -69,14 +69,14 @@ def _closure_files() -> list[Path]:
 def _supporting_graphs(module: Path) -> list[Path]:
     """Modules that IMPORT the shared extension (D9) need it loaded alongside,
     or subclass-chain checks (S2/S5) and the reasoner can't see the genus
-    anchors. Slice modules import apqc-ext.ttl; the reference defines its genera
-    inline and needs nothing extra.
+    anchors. Slice modules import apqc-ext.ttl; the frozen reference template
+    (ontology/reference/) defines its genera inline and needs nothing extra.
     """
     try:
         in_slices = module.resolve().parent == config.SLICES_DIR.resolve()
     except OSError:
         in_slices = False
-    if in_slices and config.EXT_TTL.exists() and module.name != "apqc_1_1_1.ttl":
+    if in_slices and config.EXT_TTL.exists():
         return [config.EXT_TTL]
     return []
 
@@ -245,8 +245,8 @@ def gates(module: Path, shapes: Path | None = None) -> Report:
 
 def main(argv: list[str]) -> int:
     if not argv:
-        # self-test: reference module should be clean; fixture should violate
-        targets = [config.SLICES_DIR / "apqc_1_1_1.ttl", config.CATALOG_TTL]
+        # self-test: frozen reference + catalog should be clean
+        targets = [config.REFERENCE_TTL, config.CATALOG_TTL]
     else:
         targets = [Path(a) for a in argv]
     failed = False

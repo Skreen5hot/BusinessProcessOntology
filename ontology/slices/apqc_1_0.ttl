@@ -109,7 +109,7 @@ ex:SeniorManagerRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Senior Manager Role" ;
     skos:definition "A Role that is borne by an Agent in virtue of exercising senior managerial or executive authority over the strategy and direction of an Organization." ;
-    rdfs:comment "Narrower than ex:ManagerRole (carried over from the 1.1.1 reference module); used where APQC text specifies senior executives / senior strategy personnel." .
+    rdfs:comment "Narrower than the 1.1.1 reference module's ex:ManagerRole; used where APQC text specifies senior executives / senior strategy personnel. MERGE DECISION: this Senior pair (ex:SeniorManagerRole / ex:SeniorManagement) deliberately supersedes the reference's generic ex:ManagerRole / ex:ManagementPersonnel for the 1.1.1.8 (P10024) participant, which APQC scopes to 'mid- to senior-level management'. The generic role/agent pair is intentionally not carried over: no process in this merged module requires a non-senior management universal, so re-adding it would leave orphaned classes. Re-mint ex:ManagerRole (and ex:ManagementPersonnel bearing it) as the rdfs:subClassOf parent of this pair only if a future merged process needs the generic universal." .
 
 ex:StrategyPersonnelRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
@@ -295,7 +295,8 @@ ex:InternalEnvironmentAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 ex:ExternalEnvironmentAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "External Environment Assessment" ;
     skos:definition "A Descriptive Information Content Entity that describes a big-picture understanding of an organization's external environment." ;
-    rdfs:comment "Carried over from the 1.1.1 reference module so this module is self-contained." .
+    rdfs:comment "Carried over from the 1.1.1 reference module so this module is self-contained." ;
+    skos:example "A strategy team's annual environmental scan report." .
 
 ex:OrganizationalCharacteristicsAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Organizational Characteristics Analysis" ;
@@ -384,7 +385,8 @@ ex:CompetitorAnalysis a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom ex:Competitor ] ;
     rdfs:label "Competitor Analysis" ;
     skos:definition "A Descriptive Information Content Entity that describes one or more competitors with respect to their strengths and weaknesses relative to a focal organization." ;
-    rdfs:comment "Carried over from the 1.1.1 reference module. Descriptive (not Directive)." .
+    rdfs:comment "Carried over from the 1.1.1 reference module. Descriptive (not Directive) because it represents competitors rather than prescribing a course of action." ;
+    skos:example "A report comparing two competitors' pricing, product capabilities, and market position." .
 
 ex:CompetitiveForcesAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Competitive Forces Assessment" ;
@@ -603,7 +605,8 @@ ex:GoNoGoDecision a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 ex:IPThreatMeasureSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "IP Threat Measure Specification" ;
     skos:definition "A Directive Information Content Entity that prescribes measures and procedures for identifying intellectual-property threats." ;
-    rdfs:comment "Carried over from the 1.1.1 reference module." .
+    rdfs:comment "Carried over from the 1.1.1 reference module." ;
+    skos:example "A documented procedure listing IP-threat indicators and the steps to screen for them." .
 
 # --- Gate-F minted Directive output ICEs (review fixes) ---
 
@@ -657,14 +660,15 @@ ex:CompetitiveIntelligenceAnalyst a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001954 ; owl:someValuesFrom ex:CompetitiveAnalysisCapability ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom ex:CompetitiveIntelligenceAnalystRole ] ;
     rdfs:label "Competitive Intelligence Analyst" ;
-    skos:definition "An Agent that has a competitive analysis capability and bears a competitive-intelligence analyst role." .
+    skos:definition "An Agent that has a competitive analysis capability and bears a competitive-intelligence analyst role." ;
+    rdfs:comment "Narrower than BFO material entity: cco:Agent excludes tools, animals, and arbitrary material objects from being analysts." .
 
 ex:Competitor a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,   # Organization
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom ex:CompetitorRole ] ;
     rdfs:label "Competitor" ;
     skos:definition "An Organization that bears a competitor role in relation to some focal organization or market." ;
-    rdfs:comment "Modeled as Organization per APQC 'competing firms'." .
+    rdfs:comment "Modeled as Organization per APQC 'competing firms'. Use cco:Agent for individual (non-organizational) competitors." .
 
 ####################################################################
 # 3. PROCESS CLASSES
@@ -713,9 +717,9 @@ ex:P10017 a owl:Class ;
 ex:P19945 a owl:Class ;
     ex:pcfID "19945" ; ex:hierarchyID "1.1.1.1" ;
     ex:apqcSourceText "Identifying your competitors, their service and/or product. Evaluating competitors strategies to determine their strengths and weaknesses relative to those of your own product or service." ;
-    rdfs:label "Identify competitors" ;
+    rdfs:label "Analyze competitors" ;
     skos:definition "An Act of Analysis that has as input competitor data and has as output a competitor analysis about one or more competitors." ;
-    rdfs:comment "Carried over from GOLD module (ex:AnalyzeCompetitors)." ;
+    rdfs:comment "Carried over from GOLD module (ex:AnalyzeCompetitors). Represents APQC 1.1.1.1 as an occurrent, not as the analysis artifact (that is ex:CompetitorAnalysis) nor an organizational function." ;
     skos:example "A competitive-intelligence team reviews market reports and produces a competitor analysis." ;
     rdfs:subClassOf ex:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CompetitorData ] ,
@@ -740,10 +744,11 @@ ex:P21421 a owl:Class ;
     ex:apqcSourceText "Examining if there are other existing products or services in the marketplace, and building the business case to make a go/no go decision based upon substitutions." ;
     rdfs:label "Identify potential product or service alternatives" ;
     skos:definition "An Act of Selection that examines substitute products or services on the market and produces a go/no-go decision on the alternative." ;
-    rdfs:comment "Re-anchored (Gate-F) from cco:ont00000636 (Act of Appraisal) to ex:ActOfSelection: the source builds a business case in order to 'make a go/no go decision', and the definitional output is the Directive ex:GoNoGoDecision (a chosen-option commitment), which the Golden Principle ties to a Selection act, not an Appraisal. The ex:SubstitutionBusinessCase is an intermediate working document supporting the decision, not a definitional output for every instance (Phase-3), so it is demoted from an existential has-output to this comment. Was ex:EvaluateSubstituteProducts in the GOLD module." ;
+    rdfs:comment "Re-anchored (Gate-F) from cco:ont00000636 (Act of Appraisal) to ex:ActOfSelection: the source builds a business case in order to 'make a go/no go decision', and the definitional output is the Directive ex:GoNoGoDecision (a chosen-option commitment), which the Golden Principle ties to a Selection act, not an Appraisal. This supersedes the 1.1.1 reference module's Act-of-Appraisal + dual-output model (the Selection genus is the cleaner anchor for an act culminating in a decision). The source explicitly says the act is 'building the business case to make a go/no go decision', so ex:SubstitutionBusinessCase is restored as a SECOND (Descriptive) has-output produced by this act en route to the decision -- a Selection act may carry a secondary descriptive output -- rather than demoted to prose; this answers the CQ 'what document supports the substitution go/no-go?'. Was ex:EvaluateSubstituteProducts in the GOLD module." ;
     skos:example "A product team weighs a substitute on the market and commits to a no-go decision." ;
     rdfs:subClassOf ex:ActOfSelection ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:MarketData ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:SubstitutionBusinessCase ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:GoNoGoDecision ] .
 
 ex:P10022 a owl:Class ;

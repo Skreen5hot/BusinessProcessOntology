@@ -9,6 +9,24 @@
 @prefix ex:    <http://example.org/apqc#> .
 
 ####################################################################
+# *** FROZEN / SUPERSEDED -- NOT PART OF THE VALIDATED CORPUS ***
+#
+# This hand-built reference template predates ADR-001 (two-layer model)
+# and the D7 ex:P<pcfID> IRI scheme. It has been MERGED INTO and
+# SUPERSEDED BY ontology/slices/apqc_1_0.ttl: section 1 -- including this
+# entire 1.1.1 subtree -- is now canonically modeled there under D7 IRIs
+# and the ADR-001 policy, with every valuable detail here folded in
+# (audited + adversarially verified). Differences resolved in production:
+#   * readable IRIs (ex:AnalyzeCompetitors) -> D7 (ex:P19945);
+#   * Category 10002 modeled as a process here -> catalog-only (ADR-001);
+#   * 21421 Act-of-Appraisal + dual output here -> Act of Selection with
+#     both outputs in production (cleaner genus; business case retained).
+# Kept FROZEN for historical / pedagogical reference only. It uses
+# readable IRIs by design for legibility and validates standalone (it
+# defines its own act genera rather than importing apqc-ext.ttl).
+####################################################################
+
+####################################################################
 # APQC PCF -> BFO 2020 / CCO  REFERENCE TEMPLATE  (v0.2.0)
 # Slice 1.1.1 "Analyze the external business environment" (PCF 10017)
 #

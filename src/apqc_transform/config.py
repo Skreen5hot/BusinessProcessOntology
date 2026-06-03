@@ -21,6 +21,8 @@ REASONER = "ELK"
 
 CATALOG_TTL = ONTOLOGY_DIR / "apqc-catalog.ttl"
 EXT_TTL = ONTOLOGY_DIR / "apqc-ext.ttl"
+# Frozen pre-ADR-001 worked example, merged into apqc_1_0.ttl; validated standalone.
+REFERENCE_TTL = ONTOLOGY_DIR / "reference" / "apqc_1_1_1.ttl"
 SHAPES_TTL = ONTOLOGY_DIR / "apqc_shapes.ttl"
 BAD_EXAMPLES_TTL = ONTOLOGY_DIR / "apqc_bad_examples.ttl"
 STATE_JSON = REPORTS_DIR / "state.json"

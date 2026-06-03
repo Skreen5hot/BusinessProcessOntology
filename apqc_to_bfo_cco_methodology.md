@@ -212,7 +212,7 @@ Every class **MUST** carry `rdfs:label`. Every **process** class **MUST** additi
 
 ## 8. Canonical patterns
 
-The reference module `apqc_1_1_1.ttl` is the authoritative pattern library. The five reusable patterns are:
+The canonical pattern source is the production section module `ontology/slices/apqc_1_0.ttl` (and the other twelve slices). The original hand-built `apqc_1_1_1.ttl` was audited, merged into `apqc_1_0.ttl`, and is now **frozen** under `ontology/reference/` as a pre-ADR-001 worked example (it keeps readable IRIs for legibility and is not part of the validated corpus). The five reusable patterns are:
 
 - **Process** — `ex:Proc rdfs:subClassOf <act genus>, [has input some <ICE>], [has output some <ICE>], [has participant some <Agent>]` (each restriction subject to the Phase 3 existential-necessity rule).
 - **Descriptive output with aboutness** — `ex:Report rdfs:subClassOf cco:Descriptive-ICE, [is about some <Subject>]`.
