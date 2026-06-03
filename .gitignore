@@ -9,8 +9,10 @@ venv/
 # Validation output (regenerated; evidence records kept selectively)
 ontology/reports/*.json
 ontology/reports/*.txt
-ontology/reports/_reasoned_*.ttl    # throwaway ROBOT reason output
-ontology/reports/_corpus_reasoned.ttl   # throwaway corpus-merge reason output
+# throwaway ROBOT reason output (inline comments are NOT valid in .gitignore -- keep on own lines)
+ontology/reports/_reasoned_*.ttl
+# throwaway corpus-merge reason output
+ontology/reports/_corpus_reasoned.ttl
 !ontology/reports/.gitkeep
 
 # Vendored dependency closure is large; pin + fetch via script, do not commit
