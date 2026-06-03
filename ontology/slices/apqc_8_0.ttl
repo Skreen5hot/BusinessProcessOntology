@@ -62,6 +62,13 @@ ex:ActOfDevelopment a owl:Class ;
     skos:definition "A Planned Act in which an Agent brings a novel product, service, solution, technology, component, prototype, or process from a specification or concept into an existent realized state." ;
     rdfs:comment "PROPOSE-EXT (D9). Anchored at the generic cco:ont00000228 (Planned Act) because development spans both informational and material outputs (new technologies, software/hardware components, prototypes, delivery processes) and is broader than cco:ont00001359 (Act of Manufacturing, mass production) and cco:ont00000051 (Act of Construction, building to contract); a development act whose product is specifically a built/mass-produced material artifact should instead use those narrower CCO acts, attaching the material product via obo:BFO_0000057 (has participant), not has output (reserved for ICEs). Recurs across develop/build categories (2.0, 4.0, 8.0)." .
 
+ex:ActOfForecasting a owl:Class ;
+    rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
+        cco:ont00000228 ;               # Planned Act (explicit; Act of Prediction subClassOf Planned Act in CCO, asserted so standalone SHACL S2 resolves)
+    rdfs:label "Act of Forecasting" ;
+    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates a future quantity such as demand, volume, revenue, or value." ;
+    rdfs:comment "Inlined canonical shared genus (apqc-ext.ttl registry). Anchored under cco:ont00000371 (Act of Prediction; parent cco:ont00000228), whose definitional output is a Predictive ICE (cco:ont00000626 subClassOf cco:ont00000853) -- exactly the genus of a demand/sales/volume forecast. Recurs in 3.0, 5.0, 6.0 and 8.0." .
+
 ex:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
     rdfs:label "Act of Formulation" ;
@@ -125,13 +132,13 @@ ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:comment "Catalog-to-reality bridge: links an APQC catalog node (ex:PCF_<pcfID>) to the reality-layer class (process or capability) it designates." .
 
 ####################################################################
-# 1. ACT-GENUS LAYER -- PROPOSE-EXT genera (promote to apqc-ext.ttl
-#    after review). REUSED from apqc-ext.ttl (inlined here):
-#    ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation,
-#    ex:ActOfSelection, ex:ActOfAcquisition. The eight genera below are
-#    section-8.0 PROPOSE-EXT proposals; each appears ONCE (the group
-#    modules' standalone re-declarations are reconciled to these single
-#    canonical definitions). Every cco: anchor verified against
+# 1. DOMAIN ACT-GENUS LAYER
+#    Canonical shared genera used by this slice are inlined from the
+#    apqc-ext.ttl registry so the module validates standalone against
+#    the pinned CCO/BFO closure -- no apqc-ext.ttl import is required.
+#    Section-specific genera remain marked PROPOSE-EXT where they should
+#    be reviewed for promotion. Each genus appears ONCE (canonical
+#    definition); every cco: anchor verified against
 #    CommonCoreOntologiesMerged v2.0 (2024-11-06): definition + parent.
 ####################################################################
 
@@ -542,10 +549,11 @@ ex:ITSolutionValidationResult a owl:Class ;
     rdfs:comment "Section-8.0 shared output. APQC 8.5.4.1.5 validation, 8.6.4.6 verify implementation success, 8.6.4.4 confirm completion, 8.6.4.1 confirm operational status. Descriptive: it records a validation judgement (output of ex:ActOfVerification)." .
 
 ex:ITServiceDemandForecast a owl:Class ;
-    rdfs:subClassOf cco:ont00000853 ;
+    rdfs:subClassOf cco:ont00000626 ,   # Predictive ICE (subClassOf cco:ont00000853 Descriptive ICE)
+        cco:ont00000853 ;               # Descriptive ICE (explicit; retained for generic report/description queries and standalone SHACL S3)
     rdfs:label "IT Service Demand Forecast" ;
-    skos:definition "A Descriptive Information Content Entity that describes the anticipated future demand and usage of an organization's IT services." ;
-    rdfs:comment "Section-8.0 shared output. APQC 8.1.5.2 forecast IT service demand, 8.1.3.2 define future IT services, 8.7.5.1 support demand patterns. Descriptive (a forecast describes an expected future state)." .
+    skos:definition "A Predictive Information Content Entity that estimates the anticipated future demand and usage of an organization's IT services." ;
+    rdfs:comment "Section-8.0 shared output. APQC 8.1.5.2 forecast IT service demand, 8.1.3.2 define future IT services, 8.7.5.1 support demand patterns. Modeled as Predictive ICE (cco:ont00000626) because a forecast represents an uncertain future demand state; co-asserted Descriptive ICE (cco:ont00000853, its CCO parent) so generic report/description queries still resolve. Mirrors the corpus forecast pattern (3.0 SalesForecast, 5.0 DemandForecast, 6.0 ContactVolumeForecast)." .
 
 ex:TechnologyAssessment a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;
@@ -609,7 +617,7 @@ ex:ITPerformanceIndicatorSpecification a owl:Class ; rdfs:subClassOf cco:ont0000
 ex:ITMarketingMessage a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "IT Marketing Message" ;
     skos:definition "A Directive Information Content Entity that positions the value proposition of IT offerings to a segment of IT customers in order to influence their choices." ;
-    rdfs:comment "Minted locally (8.1.3.4): no shared ICE captures persuasive marketing content. Directive (persuasive) rather than descriptive." ;
+    rdfs:comment "Minted locally (8.1.3.4): no shared ICE captures persuasive marketing content. Modeled as Directive ICE when the message prescribes expected actions, commitments, or positioning to be used; a purely informational communication about an already-determined state should be modeled as Descriptive ICE (cco:ont00000853)." ;
     skos:example "A one-line value statement promoting a self-service portal to internal IT users." .
 
 ex:ITMarketingPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -1432,10 +1440,10 @@ ex:P20634 a owl:Class ;
     ex:pcfID "20634" ; ex:hierarchyID "8.1.5.2" ;
     ex:apqcSourceText "Forecasting demand for IT services using current business growth, research, and customer feedback. Refine these forecasts, inspect the approach used in creating forecasts, and determine its accuracy." ;
     rdfs:label "Forecast IT service demand" ;
-    skos:definition "An Act of Analysis that examines business growth, research, and customer feedback and produces an IT service demand forecast." ;
-    rdfs:comment "Descriptive output (a forecast representing expected demand)." ;
+    skos:definition "An Act of Forecasting that extrapolates from business growth, research, and customer feedback to produce an IT service demand forecast." ;
+    rdfs:comment "Re-anchored from ex:ActOfAnalysis to ex:ActOfForecasting: the source leads with 'Forecasting demand for IT services' and its output is a Predictive ICE (ex:ITServiceDemandForecast). Analysis is part of the method, but the act's defining output is a forecast -- matches the corpus forecasting pattern (3.0/5.0/6.0)." ;
     skos:example "A capacity planner projects next year's demand for a cloud service." ;
-    rdfs:subClassOf ex:ActOfAnalysis ,
+    rdfs:subClassOf ex:ActOfForecasting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:ITCustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ITServiceDemandForecast ] .
 
@@ -2626,7 +2634,7 @@ ex:P20746 a owl:Class ;
     ex:apqcSourceText "Execute IT compliance reporting in order to review processes, standards, regulations, and laws are followed as laid out by the regulatory bodies." ;
     rdfs:label "Perform IT compliance reporting" ;
     skos:definition "An Act of Information Processing that compiles the results of IT compliance review and produces an IT compliance audit report." ;
-    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing): compiling compliance results into a report manipulates input ICEs into a descriptive report." ;
+    rdfs:comment "Anchored to cco:ont00000366 (Act of Information Processing) for the report-compilation sense (the definition says 'compiles'): compiling compliance results into a report manipulates input ICEs into a descriptive report. If an implementation instead treats this row as submission/communication of the report to an auditor or regulator, use the corpus reporting genus ex:ActOfReporting (cco:ont00000379 + cco:ont00000228)." ;
     skos:example "A compliance analyst issues the quarterly IT compliance report to regulators." ;
     rdfs:subClassOf cco:ont00000366 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ITComplianceAuditReport ] .
@@ -3651,7 +3659,7 @@ ex:P20840 a owl:Class ;
 ex:P20841 a owl:Class ;
     ex:pcfID "20841" ; ex:hierarchyID "8.6.3.1" ;
     ex:apqcSourceText "Evaluating the impact of IT change/release on the business." ;
-    rdfs:label "Asses IT change/release impact" ;
+    rdfs:label "Assess IT change/release impact" ;
     skos:definition "An Act of Appraisal that evaluates the impact of an IT change or release on the business and produces an IT deployment impact assessment." ;
     rdfs:comment "Anchored to cco:ont00000636 (Act of Appraisal): judging change/release impact yields a Descriptive ICE (GOLDEN PRINCIPLE)." ;
     skos:example "A reviewer scores the blast radius of a proposed configuration change." ;
