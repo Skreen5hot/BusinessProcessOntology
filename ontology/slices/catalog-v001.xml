@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+  OASIS XML catalog for the APQC reality-layer slices.
+
+  Each slice declares `owl:imports <http://example.org/apqc/ext>` (the shared
+  extension's ontology IRI). That IRI is an example.org placeholder and does not
+  resolve over the network, so this catalog maps it to the local apqc-ext.ttl.
+  ROBOT and Protege auto-discover a `catalog-v001.xml` in the input file's
+  directory and use it to resolve imports offline, keeping the import LIVE
+  (semantically correct) while staying network-independent.
+
+  The pinned CCO/BFO closure is NOT mapped here: it is large, vendored separately
+  under vendor/cco/ (gitignored), and supplied to the reasoner as an explicit
+  input by the validation harness. apqc-ext.ttl keeps its own CCO `owl:imports`
+  commented for the same reason.
+-->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <uri name="http://example.org/apqc/ext" uri="../apqc-ext.ttl"/>
+</catalog>
