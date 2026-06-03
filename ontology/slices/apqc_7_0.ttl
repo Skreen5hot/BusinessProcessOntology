@@ -89,9 +89,10 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 
 ####################################################################
 # 1. DOMAIN ACT-GENUS LAYER
-#    Reused from apqc-ext.ttl (inlined): ex:ActOfAnalysis,
-#    ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection,
-#    ex:ActOfAcquisition.
+#    Canonical shared genera used by this slice are inlined from the
+#    apqc-ext.ttl registry (ex:ActOfAnalysis, ex:ActOfIdentification,
+#    ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition) so the
+#    module validates standalone against the pinned CCO/BFO closure.
 #    One NEW recurring genus is minted locally AND proposed for ext.
 ####################################################################
 
@@ -106,7 +107,7 @@ ex:HumanResourcesFunction a owl:Class ;
           owl:someValuesFrom ex:HumanResourcesFunctionRole ] ;
     rdfs:label "Human Resources Function" ;
     skos:definition "An Organization that bears a human-resources-function role within a larger organization in virtue of being tasked with developing and managing the organization's human capital." ;
-    rdfs:comment "The HR department/function as an organizational unit. Bearer of the HR management capability and the agent of most section 7.0 acts." .
+    rdfs:comment "The HR department/function as an organizational unit (an Organization), NOT a realizable function/capability despite the 'Function' label. Bearer of the HR management capability and the agent of most section 7.0 acts." .
 
 ex:HumanResourcesProfessional a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
@@ -335,11 +336,13 @@ ex:PerformanceData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 ex:LegalAndRegulatoryRequirements a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Legal and Regulatory Requirements" ;
-    skos:definition "A Descriptive Information Content Entity that describes the employment-related legislation and regulatory requirements applicable to an organization's jurisdictions." .
+    skos:definition "A Descriptive Information Content Entity that describes the employment-related legislation and regulatory requirements applicable to an organization's jurisdictions." ;
+    rdfs:comment "Despite the 'Requirements' label this is DESCRIPTIVE (D6 false-friend guard): it records/describes the applicable legislation and regulatory requirements; the directive rules themselves are Directive ICEs modeled separately." .
 
 ex:StakeholderRequirements a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Stakeholder Requirements" ;
-    skos:definition "A Descriptive Information Content Entity that describes the requirements expressed by enterprise stakeholders, used as input to analytics and planning." .
+    skos:definition "A Descriptive Information Content Entity that describes the requirements expressed by enterprise stakeholders, used as input to analytics and planning." ;
+    rdfs:comment "Despite the 'Requirements' label this is DESCRIPTIVE (D6 false-friend guard): it records/describes requirements expressed by stakeholders, not the directive rule or obligation itself, which would be a Directive ICE modeled separately." .
 
 ex:EmployeeFeedback a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Employee Feedback" ;
@@ -551,7 +554,8 @@ ex:WorkforceAnalysis a owl:Class ;
 
 ex:ResearchQuestion a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Research Question" ;
-    skos:definition "A Descriptive Information Content Entity that registers a discrete research question framed from stakeholder requirements to guide workforce analytics." .
+    skos:definition "A Descriptive Information Content Entity that registers a discrete research question framed from stakeholder requirements to guide workforce analytics." ;
+    rdfs:comment "Modeled as Descriptive because it RECORDS the question to be investigated; the methodology or analytics plan that prescribes HOW to conduct the investigation is modeled separately as a Directive ICE." .
 
 ex:HRReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "HR Report" ;
@@ -663,7 +667,7 @@ ex:RegulatoryEnvironmentAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853
 ex:CompensationRequirement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compensation Requirement" ;
     skos:definition "A Descriptive Information Content Entity that describes the compensation an employee or role requires given the organization's financial, benefits, and HR policies." ;
-    rdfs:comment "Minted locally (group 7.5, used by P10501): no reuse-list ICE captures discerned compensation requirements; SkillRequirementData concerns skills, not pay. Descriptive (it represents requirements) rather than Directive." .
+    rdfs:comment "Minted locally (group 7.5, used by P10501): no reuse-list ICE captures discerned compensation requirements; SkillRequirementData concerns skills, not pay. Descriptive (it represents requirements) rather than Directive (D6 false-friend guard: the 'Requirement' label is descriptive here; the directive obligation, if needed, is separate)." .
 
 ####################################################################
 # ============ PROCESS CLASSES + GROUP CAPABILITIES ============
@@ -1336,10 +1340,10 @@ ex:P10464 a owl:Class ;
     ex:pcfID "10464" ; ex:hierarchyID "7.2.4.2" ;
     ex:apqcSourceText "Negotiating an offer with selected candidates. Discuss the job offer with the candidate to ensure a mutual understanding." ;
     rdfs:label "Negotiate offer" ;
-    skos:definition "An Act of Administration that conducts negotiation of a job offer with a selected candidate to reach mutual agreement on its terms." ;
-    rdfs:comment "Modeled as administration of a bilateral negotiation; the revised ex:JobOffer is a typical but non-definitional output, recorded here rather than as a restriction. The candidate is a participant." ;
+    skos:definition "An Act of Negotiation that has as input a job offer and involves a selected candidate in order to reach mutual agreement on the offer's terms." ;
+    rdfs:comment "Re-anchored (Gate-F) from ex:ActOfAdministration to ex:ActOfNegotiation: the source denotes bilateral bargaining over offer terms ('Negotiating an offer... Discuss the job offer with the candidate to ensure mutual understanding'), not mere execution of an established administrative arrangement; the slice already uses ex:ActOfNegotiation for P10484. The job offer is the input and the selected candidate participates; a revised offer remains typical (non-definitional) unless every instance produces one." ;
     skos:example "HR and the candidate negotiate the start date and signing bonus." ;
-    rdfs:subClassOf ex:ActOfAdministration ,
+    rdfs:subClassOf ex:ActOfNegotiation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:JobOffer ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:JobCandidate ] .
 
