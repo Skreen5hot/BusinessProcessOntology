@@ -126,7 +126,7 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 
 ####################################################################
 # 1. ACT-GENUS LAYER -- PROPOSE-EXT genera (promote to apqc-ext.ttl
-#    after review). REUSED from apqc-ext.ttl (NOT re-minted here):
+#    after review). REUSED from apqc-ext.ttl (inlined here):
 #    ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation,
 #    ex:ActOfSelection, ex:ActOfAcquisition. The eight genera below are
 #    section-8.0 PROPOSE-EXT proposals; each appears ONCE (the group

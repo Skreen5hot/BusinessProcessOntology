@@ -125,7 +125,7 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 
 ####################################################################
 # 1. ACT-GENUS LAYER  (PROPOSE-EXT: new recurring genera section 3.0
-#    needs beyond apqc-ext.ttl). Reused-as-is from ext (NOT re-minted):
+#    are section-specific). Inlined from the apqc-ext.ttl registry:
 #      ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation,
 #      ex:ActOfSelection, ex:ActOfAcquisition.
 #    Reused-as-is from CCO: cco:ont00000371 (Act of Prediction);
@@ -473,7 +473,7 @@ ex:PromotionalPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 ex:MarketingMessage a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Marketing Message" ;
     skos:definition "A Directive Information Content Entity that prescribes a central promotional statement positioning an offering's value for a customer segment." ;
-    rdfs:comment "Output of 3.3.4.2. Directive: crafted to persuade and to be disseminated as a prescribed message (Formulation genus)." .
+    rdfs:comment "Output of 3.3.4.2. Directive: this is the approved/prescribed message SPECIFICATION, crafted to persuade and to be disseminated (Formulation genus). The message content as actually communicated to a customer is descriptive/representational and, where a group needs it, is modeled separately as a Descriptive ICE." .
 
 ex:PromotionalPerformanceEvaluation a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Promotional Performance Evaluation" ;
@@ -753,11 +753,11 @@ ex:MarketingChannel a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom ex:ChannelPartnerRole ] ;
     rdfs:label "Marketing Channel" ;
     skos:definition "An Organization, such as a distributor, wholesaler, or retailer, through which an organization markets and distributes its offerings to customers." ;
-    rdfs:comment "Subject of ChannelEvaluation / ChannelPerformanceAnalysis (is about). Modeled as the partner Organization that constitutes the channel; the abstract 'channel type' (print, radio, digital) is a medium and is left to group modules if needed." .
+    rdfs:comment "Subject of ChannelEvaluation / ChannelPerformanceAnalysis (is about). Modeled as the partner Organization that constitutes the channel; this class denotes ONLY an organizational channel partner -- NOT a medium, route, platform, or distribution arrangement (print, radio, digital, etc.), which are left to group modules if needed." .
 
 ex:Offering a owl:Class ;
     rdfs:subClassOf obo:BFO_0000040 ;   # material entity
-    rdfs:label "Offering (Product or Service)" ;
+    rdfs:label "Offering (product)" ;
     skos:definition "A Material Entity that an organization produces or provides and markets and sells to customers." ;
     rdfs:comment "Subject of marketing content, sales forecasts, training material (is about). Anchored at bfo:material entity (a product is a material object); operations material I/O is legal for this section. A service offering, where a group needs it specifically, should be modeled separately -- this shared class covers the predominant product sense and the generic 'offering' subject of descriptive ICEs." .
 
@@ -1281,7 +1281,7 @@ ex:ChannelManagementCapability
     ex:pcfID "20006" ;
     ex:hierarchyID "3.2.4" ;
     ex:apqcSourceText "Monitoring marketing and distribution efforts of all channels individually and as a network. Re-distribute or add resources to channels that perform better than expected. Purge or consolidate under-performing channels, and find more promising replacements." ;
-    rdfs:label "Analyze and manage channel performance" ;
+    skos:altLabel "Analyze and manage channel performance" ;
     rdfs:comment "Models APQC 3.2.4 (PCF 20006) as a standing Organization Capability (R5/R6), NOT a process: 'monitor ... re-distribute ... purge or consolidate ... find replacements' is an ongoing management function with no natural end. The IRI ex:ChannelManagementCapability (subClassOf cco:ont00000568) is declared in the shared supporting vocab; the realized-in axioms below wire it to this group's bounded child acts." ;
     rdfs:subClassOf
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P16573 ] ,

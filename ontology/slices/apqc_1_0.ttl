@@ -106,7 +106,7 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 ####################################################################
 # 1. PROPOSED-EXT ACT GENERA
 #    ex:ActOfAnalysis / ex:ActOfIdentification are imported from
-#    apqc-ext.ttl and are NOT re-minted here.
+#    apqc-ext.ttl and are inlined here.
 ####################################################################
 
 # Act genera ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition were

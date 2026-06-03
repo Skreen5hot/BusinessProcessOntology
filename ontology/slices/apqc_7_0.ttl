@@ -89,7 +89,7 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 
 ####################################################################
 # 1. DOMAIN ACT-GENUS LAYER
-#    Reused from apqc-ext.ttl (NOT re-minted): ex:ActOfAnalysis,
+#    Reused from apqc-ext.ttl (inlined): ex:ActOfAnalysis,
 #    ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection,
 #    ex:ActOfAcquisition.
 #    One NEW recurring genus is minted locally AND proposed for ext.

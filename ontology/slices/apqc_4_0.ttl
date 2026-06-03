@@ -145,10 +145,10 @@ ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:comment "ADR-001 R4 bridge: catalog node (ex:PCF_<id>, defined in apqc-catalog.ttl) -> reality-layer process universal or capability. Populated during reality-layer modeling, NOT by the catalog generator." .
 
 ####################################################################
-# 1. ACT-GENUS LAYER  (PROPOSE-EXT: new recurring genera that section
-#    4.0 needs beyond apqc-ext.ttl). Each appears ONCE here; the group
-#    modules below reference them. Reused-as-is from apqc-ext.ttl (NOT
-#    re-minted): ex:ActOfAnalysis, ex:ActOfIdentification,
+# 1. ACT-GENUS LAYER  (section-specific genera; canonical shared genera
+#    are inlined above from the apqc-ext.ttl registry). Each appears ONCE
+#    here; the group modules below reference them. Inlined shared genera:
+#    ex:ActOfAnalysis, ex:ActOfIdentification,
 #    ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition.
 #    Reused-as-is from CCO: cco:ont00000366 (Act of Information
 #    Processing), cco:ont00000636 (Act of Appraisal), cco:ont00000511
