@@ -118,27 +118,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 # anchor without the CCO closure merged.
 ####################################################################
 
-# PROPOSE-EXT
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent observes an ongoing process, system, or condition over time, ingests successive performance or status data, and produces an Information Content Entity that describes the observed state." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Rejected cco:ont00000037 'Act of Observation' (a Planned Act of sense-acquisition from a source) and cco:ont00000636 'Act of Appraisal' (judges/values without necessarily tracking over time). Also dispositioned cco:ont00000345 'Act of Measuring' (verified §6: 'A Planned Act that involves determining the extent, dimensions, quanity, or quality of an Entity relative to some standard', parent cco:ont00000228): a single Act of Measuring determines one quantity of an entity at one time against a standard, whereas monitoring is the repeated ingestion of successive performance/status data over time to produce a descriptive status/report ICE; the measuring is at most a method sub-step of the monitoring cycle. Where a node is purely a single quantification against a standard (e.g. 13.6.3.4 Calculate performance measures, 13.3.2.1.1 Conduct test) it is anchored to cco:ont00000345 directly, not to ex:ActOfMonitoring. APQC monitoring/tracking/oversight ingests performance-data ICEs and yields a descriptive status ICE, i.e. information processing. Recurs corpus-wide in operations and management categories (13.1.4.3, 13.4.3.4, 13.4.4.1)." .
-
-# PROPOSE-EXT
-ex:ActOfImplementation a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Implementation" ;
-    skos:definition "A Planned Act in which an Agent executes, deploys, or puts into operation a previously specified plan, program, methodology, or system so as to bring about the state of affairs it prescribes." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Anchored under cco:ont00000228 (Planned Act): carrying out a Directive ICE is realizing a plan, and its effect is a change in the world rather than a new ICE. Distinct from ex:ActOfFormulation (which composes the plan). Rejected cco:ont00000950 'Act of Maintenance' (restricted to modifying Material Artifacts). Recurs in execute/deploy/implement processes corpus-wide (13.1.4.2, 13.3.3.4, 13.3.4, 13.4.3, 13.5.3.3, 13.5.4.2)." .
-
-# PROPOSE-EXT
-ex:ActOfImprovement a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Improvement" ;
-    skos:definition "A Planned Act in which an Agent modifies an existing process, system, or capability with the intent of raising its performance, quality, or fitness against stated objectives." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Anchored under cco:ont00000228 (Planned Act): it alters an existing occurrent-type or system rather than merely processing information or composing a new plan. Distinct from ex:ActOfImplementation (enacts a fixed directive). Rejected cco:ont00000950 'Act of Maintenance' (restores/preserves a Material Artifact's state). Recurs in improve/reengineer/enhance/sustain processes corpus-wide (13.1.5, 13.4.4, 13.5.3.4, 13.5.4, 13.6.1.2, 13.6.2.2)." .
-
 ####################################################################
 # 2. REALIZABLE ROLES (obo:BFO_0000023; borne by Agents/Orgs only -- D4)
 ####################################################################

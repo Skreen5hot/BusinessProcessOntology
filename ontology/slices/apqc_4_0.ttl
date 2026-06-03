@@ -90,43 +90,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    cco:ont00000684 (Act of Contract Formation).
 ####################################################################
 
-# PROPOSE-EXT: promote ex:ActOfScheduling to apqc-ext.ttl after review.
-ex:ActOfScheduling a owl:Class ;
-    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
-    rdfs:label "Act of Scheduling" ;
-    skos:definition "An Act of Planning in which an Agent fixes the timing, sequencing, and resource allocation of future activities and produces a schedule (a Directive Information Content Entity) prescribing when and in what order those activities are to occur." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000511 (Act of Planning): a schedule is a plan whose differentia is the temporal ordering of activities; its output is a Directive ICE. Distinct from the generic ex:ActOfFormulation (mission/strategy/design) by its specifically temporal product. Recurs across 4.0: 4.1.4 master production schedule, 4.3.1 schedule production, plus distribution dispatch/load planning, and is expected corpus-wide (operations + project categories)." .
-
-# PROPOSE-EXT: promote ex:ActOfProduction to apqc-ext.ttl after review.
-ex:ActOfProduction a owl:Class ;
-    rdfs:subClassOf cco:ont00000908 ,   # Act of Material Artifact Processing
-        cco:ont00000228 ;               # Planned Act (explicit anchor; entailed via ont00000908, asserted so S2/S5 resolve standalone)
-    rdfs:label "Act of Production" ;
-    skos:definition "An Act of Material Artifact Processing in which an Agent transforms raw materials and components into finished Material Artifacts according to a production specification or schedule." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing), the verified CCO parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes 'Produce/Assemble product' (4.3.2) where APQC covers both mass manufacturing and assembly; cco:ont00001359 (Manufacturing) alone is too narrow (mass production for sale) and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. First genus in 4.0 whose acts bring forth a MATERIAL product; the product is attached via obo:has participant (BFO_0000057), not has output, since has output is reserved for ICEs (methodology D3 / shape S3). Expected to recur in 6.0 and other physical-production categories." .
-
-# PROPOSE-EXT: promote ex:ActOfTransportation to apqc-ext.ttl after review.
-ex:ActOfTransportation a owl:Class ;
-    rdfs:subClassOf cco:ont00000065 ,   # Act of Location Change
-        cco:ont00000228 ;               # Planned Act (explicit anchor; entailed via ont00000065, asserted so S2/S5 resolve standalone)
-    rdfs:label "Act of Transportation" ;
-    skos:definition "An Act of Location Change in which an Agent moves materials or finished products from one supply-chain location to another, such as from a source to a warehouse, distribution center, or customer." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000065 (Act of Location Change), the verified CCO parent of Act of Cargo Transportation (cco:ont00000595). Generalizes inbound/outbound movement, picking-packing-shipping, and warehouse transfers (4.4.2, 4.4.3, 4.4.4). cco:ont00000595 (Cargo Transportation) is a close fit but is scoped to a Payload being conveyed; the broader ex:ActOfTransportation also covers internal warehouse transfers and deployment. Recurs across 4.4 and other physical-logistics categories (9.0 facilities, 6.0 delivery)." .
-
-# PROPOSE-EXT: promote ex:ActOfMonitoring to apqc-ext.ttl after review.
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes an ongoing process, system, or quantity and produces a Descriptive Information Content Entity reporting its current state and any deviations from expectation." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000366 (Act of Information Processing): monitoring/tracking consumes streaming observations and yields a descriptive state/deviation report (Descriptive ICE), agreeing with the GOLDEN PRINCIPLE. Distinct from ex:ActOfAnalysis (one-shot examination producing an understanding) by its ongoing, deviation-detecting character. Rejected cco:ont00000037 (Act of Observation, sensory acquisition) as too narrow -- monitoring also processes electronic records, not only senses. Recurs across 4.0: tracking forecasts/inventory/delivery/carrier/3PL performance (4.1.2, 4.2.4, 4.4.3, 4.4.4) and corpus-wide control activities. (Reconciled: a single ex:ActOfMonitoring definition for the whole section; the per-group restatements in 3.0/4.4 collapse to this one.)" .
-
-# PROPOSE-EXT: promote ex:ActOfProcessControl to apqc-ext.ttl after review.
-ex:ActOfProcessControl a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Process Control" ;
-    skos:definition "A Planned Act in which an Agent, or an automation system acting for an Agent, regulates a running production process or plant by closing the loop between observation and actuation -- adjusting setpoints, parameters, and equipment so as to keep the process within target or optimize its performance." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act): closed-loop control ACTS ON the plant (it changes setpoints and equipment state), so its product is a change in the controlled material participants, not a Descriptive ICE. Rejected ex:ActOfMonitoring (cco:ont00000366, Act of Information Processing): monitoring is the OBSERVE half only and over-commits the act to a descriptive output, whereas automation/APC/RTO also ACTUATE. The controlled equipment is attached via obo:has participant (BFO_0000057), like the other operational acts that act on material participants (P20956, P10309). Recurs across 4.3.2.5 (automate/control plant, advanced process control, real-time optimization) and corpus-wide industrial-control activities." .
-
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY -- APQC Section 4.0
 # "Manage Supply Chain for Physical Products"
@@ -155,7 +118,6 @@ ex:ActOfProcessControl a owl:Class ;
 #   Portion of Material cco:ont00000457
 #   Facility          cco:ont00000192   (corrected from ont00000130)
 ####################################################################
-
 
 ####################################################################
 # A. DIRECTIVE INFORMATION CONTENT ENTITIES  (cco:ont00000965)
@@ -360,7 +322,6 @@ ex:DispositionDecision a owl:Class ;
     rdfs:label "Disposition Decision" ;
     skos:definition "A Directive Information Content Entity that prescribes whether a returned product is to be salvaged, repaired, refurbished, or returned to inventory." ;
     rdfs:comment "Directive because it authorizes a course of action on the returned product (Phase 3). Output of an Act of Selection over disposition options." .
-
 
 ####################################################################
 # B. DESCRIPTIVE INFORMATION CONTENT ENTITIES  (cco:ont00000853)
@@ -611,7 +572,6 @@ ex:SupplierCertification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:comment "Minted: shared vocab has no supplier-certification artifact. Directive because it grants and governs an authorized status rather than describing one." ;
     skos:example "A certificate designating a vendor as an approved supplier for a given material category." .
 
-
 ####################################################################
 # C. MATERIAL ENTITIES  (operations I/O is legal here; bfo:material
 #    entity fillers permitted). Anchored under cco:Material Artifact
@@ -665,7 +625,6 @@ ex:TransportationVehicle a owl:Class ; rdfs:subClassOf cco:ont00000713 , obo:BFO
     rdfs:label "Transportation Vehicle" ;
     skos:definition "A Vehicle used to convey inbound or outbound products between supply-chain locations." .
 
-
 ####################################################################
 # D. AGENTS AND ORGANIZATIONS  (cco:Agent / cco:Organization)
 ####################################################################
@@ -715,7 +674,6 @@ ex:SupplyChainOrganization a owl:Class ;
     skos:definition "An Organization that has a supply-chain management capability realized in supply-chain planning, procurement, production, and logistics acts." ;
     rdfs:comment "The focal agent for section 4.0 standing functions (R5 capability bearers). Group modules attach Organization Capabilities to this class." .
 
-
 ####################################################################
 # E. ROLES  (obo:BFO_0000023)
 ####################################################################
@@ -739,7 +697,6 @@ ex:LogisticsServiceProviderRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
 ex:ManagerRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Manager Role" ;
     skos:definition "A Role that is borne by an Agent in virtue of exercising managerial authority within an organization." .
-
 
 ####################################################################
 # F. CAPABILITIES  (Organization Capability cco:ont00000568)
@@ -785,7 +742,6 @@ ex:FleetManagementCapability a owl:Class ;
     rdfs:label "Fleet Management Capability" ;
     skos:definition "An Organization Capability that inheres in a supply-chain organization in virtue of its capacity to administer the transportation vehicles used for delivering end products, covering vehicle financing, maintenance, telematics, driver, speed, fuel, and health-and-safety management." ;
     rdfs:comment "Gate-F R5 fix for APQC 4.4.4.3 'Manage transportation fleet' [10362]: the source is a textbook STANDING administrative function with no natural end ('Taking care of a range of functions... Manage vehicle financing, maintenance, telematics, driver management, speed management, fuel management, and health and safety management'), so it is modeled as an Organization Capability rather than a bounded Planned Act -- mirroring how group 10219 is handled as ex:LogisticsManagementCapability. Realized in ex:P10341, the bounded outbound-transport operations (including fleet maintenance and telematics-monitoring acts) that exercise the fleet. The catalog node ex:PCF_10362 designates this capability per the ADR-001 R4 bridge." .
-
 
 ####################################################################
 # 3. PROCESS CLASSES

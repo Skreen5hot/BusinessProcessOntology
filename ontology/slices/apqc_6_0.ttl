@@ -106,55 +106,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    apqc-ext.ttl and are NOT re-declared.
 ####################################################################
 
-# PROPOSE-EXT: promote ex:ActOfScheduling to apqc-ext.ttl after review.
-# (Already proposed identically in slice 4.0; single source of truth once promoted.)
-ex:ActOfScheduling a owl:Class ;
-    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
-    rdfs:label "Act of Scheduling" ;
-    skos:definition "An Act of Planning in which an Agent fixes the timing, sequencing, and resource allocation of future activities and produces a schedule (a Directive Information Content Entity) that prescribes when and by whom those activities are to be performed." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000511 (Act of Planning): a schedule is a plan whose differentia is the temporal/resource allocation of activities; its output is a Directive ICE, satisfying the GOLDEN PRINCIPLE. Distinct from ex:ActOfFormulation (mission/strategy/design) by its specifically temporal/resource-allocation product. Recurs in 6.0 at 6.2.1.2, 6.3.2.3.2, 6.3.4.2, 6.3.4.2.1, 6.3.4.2.2, 6.3.4.3.1; already proposed in 4.0." .
-
-# PROPOSE-EXT: promote ex:ActOfMonitoring to apqc-ext.ttl after review.
-# (Already proposed identically in slices 3.0/4.0/5.0; single source of truth once promoted.)
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes an ongoing process, system, or quantity and produces a Descriptive Information Content Entity that represents its status, utilization, or effectiveness over time." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class; monitoring ingests repeated observations (including electronic records, not only senses) and yields a descriptive status/utilization report (Descriptive ICE), per the GOLDEN PRINCIPLE. Anchored under cco:ont00000366 (Act of Information Processing) alongside ex:ActOfAnalysis. Distinct from ex:ActOfAnalysis (one-shot examination of a fixed input set) by being continuous/longitudinal tracking. Rejected cco:ont00000037 (Act of Observation) as too narrow -- its acquisition is restricted to the senses, whereas monitoring also processes ICEs. Recurs in 6.0 at 6.2.1.3, 6.2.1.4, 6.3.4.3.3, 6.4.5, 6.5.4.2; already proposed in 3.0/4.0/5.0." .
-
-# PROPOSE-EXT: promote ex:ActOfResolution to apqc-ext.ttl after review.
-# RECONCILED: the group inputs anchored this at cco:ont00000366 (for the
-# leaf resolve acts) AND at cco:ont00000228 (for the end-to-end case-
-# resolution processes 6.3.2 / 6.3.3 / 6.4.6). Reconciled to ONE definition
-# under the generic cco:ont00000228 (Planned Act).
-# Gate-F NOTE: 6.2.2.3 (P10395) was RE-ANCHORED away from Resolution to
-# cco:ont00000402 (Act of Communication) -- its source describes routing,
-# not settlement. Remaining genuine settlement act among the leaves is
-# 6.2.3.3 (P10399 'Resolve customer complaints').
-ex:ActOfResolution a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Resolution" ;
-    skos:definition "A Planned Act in which an Agent settles a raised case - such as a customer inquiry, complaint, warranty claim, supplier-recovery matter, or product recall - by determining and recording its disposition, comprising as needed the receipt, investigation, decision, and closure of the case." ;
-    rdfs:comment "PROPOSE-EXT (D9). RECONCILED to a single anchor: CCO 2.0 has no generic resolution/case-management class. A leaf resolve act (6.2.3.3) settles one complaint and records a Descriptive resolution; an end-to-end case-resolution process (6.3.2 process warranty claims, 6.3.3 supplier recovery, 6.4.6 recall termination) composes information-processing/appraisal/planning/communication sub-acts and is individuated by carrying a case from open to closed. Both are Planned Acts that settle a matter, so the coherent genus is the generic cco:ont00000228 (Planned Act), which is neutral on output kind. Rejected cco:ont00000636 (Act of Appraisal) - resolution settles a matter rather than merely judging value; cco:ont00000402 (Act of Communication) - the downstream RESPONSE/notify to the customer is a separate communication act, kept distinct. Recurs in 6.0 at 6.2.3.3, 6.3.2, 6.3.3, 6.4.6; expected corpus-wide in service/support case management. Gate-F: 6.2.2.3 (P10395) was re-anchored to Act of Communication (routing, not settlement) and is no longer a use site." .
-
-# PROPOSE-EXT: promote ex:ActOfServiceProvision to apqc-ext.ttl after review.
-# (Already proposed identically in slice 5.0; the operations 'deliver/render/
-#  execute/deploy a service' genus. Single source of truth once promoted.)
-ex:ActOfServiceProvision a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Service Provision" ;
-    skos:definition "A Planned Act in which an Agent renders a service to a customer by carrying out and completing the tasks that fulfil an agreed service need." ;
-    rdfs:comment "PROPOSE-EXT (D9). Operations-category genus. Rejected cco:ont00000908 (Act of Material Artifact Processing) - service provision need not produce or modify an artifact - and cco:ont00000402 (Act of Communication) - mere ICE transfer. The generic rendering/execution of a service anchors at cco:ont00000228 (Planned Act). Signature genus of operations 'deliver/render/execute/deploy' processes; used in 6.0 at 6.3.4, 6.3.4.3; recurs in 4.0/5.0/8.0/9.0/10.0." .
-
-# PROPOSE-EXT: promote ex:ActOfForecasting to apqc-ext.ttl after review.
-# (Already proposed identically in slice 3.0. Single source of truth once promoted.)
-ex:ActOfForecasting a owl:Class ;
-    rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
-        cco:ont00000228 ;   # Planned Act (explicit: Act of Prediction is a Planned Act in CCO; stated in-module so the standalone S2 Act-anchor check resolves)
-    rdfs:label "Act of Forecasting" ;
-    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates a future quantity such as demand, volume, revenue, or value." ;
-    rdfs:comment "PROPOSE-EXT (section 3.0). Anchored under cco:ont00000371 (Act of Prediction), whose definitional output is a Predictive Information Content Entity - exactly the genus of a contact-volume forecast. Output is a Predictive ICE (a Descriptive ICE about an uncertain future), per the GOLDEN PRINCIPLE. Used in 6.0 at 6.2.1.1; recurs in 3.x." .
-
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY
 #    Minted ONCE for the whole section so all five group modules
@@ -198,7 +149,7 @@ ex:FieldServiceAgent a owl:Class ;
     rdfs:comment "Minted. Named in 6.3.2.3.2 (Schedule field service) and 6.3.4.3 (Provide service to specific customers)." .
 
 ex:Supplier a owl:Class ;
-    rdfs:subClassOf cco:ont00001017 ,   # Agent
+    rdfs:subClassOf cco:ont00001180 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom ex:SupplierRole ] ;
     rdfs:label "Supplier" ;
     skos:definition "An Agent that bears a supplier role in relation to an organization to which it furnishes goods, parts, or services and with which it shares warranty obligations." ;

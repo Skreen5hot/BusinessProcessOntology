@@ -87,34 +87,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    anchored at the generic Planned Act, not at Act of Planning.
 ####################################################################
 
-# PROPOSE-EXT: promote ex:ActOfDesign to apqc-ext.ttl
-ex:ActOfDesign a owl:Class ;
-    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
-    rdfs:label "Act of Design" ;
-    skos:definition "An Act of Planning in which an Agent devises and specifies the form, structure, and behavior of a prospective product, service, or process and produces a Directive Information Content Entity (a design specification) that prescribes how it is to be realized." ;
-    rdfs:comment "Local extension (D9). CCO 2.1 has no generic design act; designing produces a Directive ICE (a design specification / blueprint) prescribing an artifact-to-be, so it is anchored under cco:ont00000511 (Act of Planning), not under cco:ont00000908 (Act of Material Artifact Processing), which physically operates on existing matter. Rejected cco:ont00000051 (Act of Construction) and cco:ont00001359 (Act of Manufacturing) as both build/mass-produce finished goods rather than authoring a concept-stage design. Recurs across develop/design categories (2.0, 4.0, 7.0)." .
-
-# PROPOSE-EXT: promote ex:ActOfDevelopment to apqc-ext.ttl
-ex:ActOfDevelopment a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Development" ;
-    skos:definition "A Planned Act in which an Agent brings a novel product, service, technology, prototype, or process from a specification or concept into an existent realized state." ;
-    rdfs:comment "Local extension (D9). Anchored at the generic cco:ont00000228 (Planned Act) because development spans both informational and material outputs (new technologies, prototypes, delivery processes) and is broader than cco:ont00001359 (Act of Manufacturing, mass production in a facility) and cco:ont00000051 (Act of Construction, building to contract). A development act whose output is specifically a mass-produced or built material artifact should instead use those narrower CCO acts. Recurs across develop/build categories (2.0, 4.0)." .
-
-# PROPOSE-EXT: promote ex:ActOfVerification to apqc-ext.ttl
-ex:ActOfVerification a owl:Class ;
-    rdfs:subClassOf cco:ont00000636 ;   # Act of Appraisal
-    rdfs:label "Act of Verification" ;
-    skos:definition "An Act of Appraisal in which an Agent subjects a product, service, prototype, or process to a trial, test, or review against specified requirements and produces a Descriptive Information Content Entity that records whether and to what extent the requirements are met." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00000636 (Act of Appraisal, itself an Act of Measuring) because testing/validating/reviewing evaluates an entity against a standard and yields a descriptive judgement. Distinct from ex:ActOfAnalysis (examines input ICEs) by acting on a realized artifact or run. Recurs across test/review/validate processes corpus-wide (2.0, 4.0, 6.0, 9.0)." .
-
-# PROPOSE-EXT: promote ex:ActOfDataManagement to apqc-ext.ttl
-ex:ActOfDataManagement a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Data Management" ;
-    skos:definition "An Act of Information Processing in which an Agent stores, controls, updates, or governs access to a body of Information Content Entities so as to keep it accurate, secure, and available." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing: ICEs are received, manipulated, transferred, or stored). Covers maintain-records / update-master-data / control-access / document acts. Rejected cco:ont00001158 (Act of Data Transformation, requires executing an algorithm) and cco:ont00000950 (Act of Maintenance, modifies Material Artifacts not ICEs). NOTE: a standing 'Manage ... master data' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs across master-data and records categories (2.0, 7.0, 8.0)." .
-
 ####################################################################
 # 2. AGENTS, ORGANIZATIONS, ROLES, CAPABILITIES (D4)
 #    Minted ONCE here (shared supporting vocabulary across groups

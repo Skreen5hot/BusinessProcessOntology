@@ -82,20 +82,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    duplicated. Both verified absent from CCO v2.0 (2024-11-06).
 ####################################################################
 
-# PROPOSE-EXT: recurring act genus for operations categories (4.0,5.0,6.0,8.0,9.0,10.0)
-ex:ActOfServiceProvision a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Service Provision" ;
-    skos:definition "A Planned Act in which an Agent renders a service to a customer by carrying out and completing the tasks that fulfil an agreed service need." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000908 'Act of Material Artifact Processing' (its product is a modified Material Artifact, whereas service provision need not produce or modify an artifact) and cco:ont00000402 'Act of Communication' (mere ICE transfer). The generic rendering/execution/deployment of a service therefore anchors at the generic Planned Act (cco:ont00000228). Signature genus of operations 'deliver/render/execute/deploy' processes; expected to recur in 4.0, 6.0, 8.0, 9.0, 10.0." .
-
-# PROPOSE-EXT: recurring descriptive-output act genus
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly observes an ongoing process or quantity and produces a Descriptive Information Content Entity that represents its status over time." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000037 'Act of Observation' because its definition restricts acquisition to 'the use of one or more senses', whereas organizational monitoring (e.g. tracking a sales pipeline or activity against forecast) ingests and processes input ICEs. Output is Descriptive, so it anchors under cco:ont00000366 alongside ex:ActOfAnalysis. Recurs across track/monitor/oversee processes in operations and management categories." .
-
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY
 # (ICEs, material I/O, agents/orgs, roles, capabilities)
@@ -382,7 +368,7 @@ ex:ServiceProvider a owl:Class ;
     rdfs:comment "Shared section-5.0 agent: the focal organization rendering service. Capability borne on the Organization, not on any ICE (D4)." .
 
 ex:Supplier a owl:Class ;
-    rdfs:subClassOf cco:ont00001017 ,   # Agent
+    rdfs:subClassOf cco:ont00001180 ,   # Agent
         [ a owl:Restriction ;
           owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom ex:SupplierRole ] ;

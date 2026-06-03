@@ -48,26 +48,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    One NEW recurring genus is minted locally AND proposed for ext.
 ####################################################################
 
-# PROPOSE-EXT: promote ex:ActOfAdministration to apqc-ext.ttl after review.
-# Recurs across APQC "Administer/Manage/Maintain/Conduct/Handle/Process"
-# execution nodes throughout section 7.0 (7.1.1.7, 7.1.2.12, 7.1.3,
-# 7.2.x, 7.3.x, 7.4.x, 7.5.x, 7.6.x, 7.7.x) and is expected corpus-wide.
-ex:ActOfAdministration a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Administration" ;
-    skos:definition "A Planned Act in which an Agent carries out, enforces, delivers, coordinates, and maintains an already-established arrangement (such as a policy, program, plan, scheme, record set, or relationship) on behalf of an Organization in accordance with a Directive Information Content Entity, without itself creating that arrangement." ;
-    rdfs:comment "Local extension (D9), PROPOSE-EXT. Anchored at the generic Planned Act (cco:ont00000228), which is neutral on output kind, so administrative acts yielding a Descriptive record or a Directive schedule both fit. Rejected cco:ont00000950 'Act of Maintenance' (it modifies Material Artifacts to restore designed Qualities/Functions, whereas administration executes a directive arrangement rather than repairing an artifact), cco:ont00000511 'Act of Planning' (planning creates the arrangement; administering merely runs an existing one), and cco:ont00000366 'Act of Information Processing' (too narrow: administration provisions resources and enacts directives, not only ICE manipulation). Differentia is execution-and-upkeep of a settled arrangement." .
-
-# PROPOSE-EXT: promote ex:ActOfNegotiation to apqc-ext.ttl after review.
-# Recurs wherever an APQC node has two or more parties jointly produce a
-# binding directive agreement (collective bargaining, contract/agreement
-# formation), expected corpus-wide (categories 7.0, 8.0, 9.0).
-ex:ActOfNegotiation a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Negotiation" ;
-    skos:definition "A Planned Act in which two or more parties confer and bargain to reconcile their positions and jointly produce a binding Directive Information Content Entity (such as an agreement or contract) that prescribes the terms they have settled upon." ;
-    rdfs:comment "Local extension (D9), PROPOSE-EXT. Distinct from ex:ActOfAdministration (which carries out an already-established arrangement without creating it) because negotiation CREATES a novel directive arrangement; distinct from cco:ont00000511 'Act of Planning' (single-agent composition of a plan) because negotiation requires two or more bargaining parties jointly authoring the directive. Anchored at the generic Planned Act (cco:ont00000228); its definitional output is a Directive ICE (the agreement), so it satisfies the GOLDEN PRINCIPLE." .
-
 ####################################################################
 # 2. AGENTS / ORGANIZATIONS
 #    Independent continuants bearing roles/capabilities (D4).

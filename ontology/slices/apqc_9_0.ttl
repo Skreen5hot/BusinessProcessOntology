@@ -52,54 +52,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 # definition + parent read, not just label.
 ####################################################################
 
-# PROPOSE-EXT: pervasive in 9.1-9.7 (record transactions, post journal
-# entries, maintain ledgers/master files, reconcile accounts).
-ex:ActOfAccounting a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Accounting" ;
-    skos:definition "An Act of Information Processing in which an Agent records, classifies, posts, or reconciles financial transactions and produces or updates a Descriptive Information Content Entity (such as a ledger, journal, or account record) that registers the organization's financial state." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). CCO 2.0 has no generic bookkeeping/record-keeping class; recording and reconciling transactions manipulates input ICEs into an updated record ICE, so it anchors under cco:ont00000366. Rejected cco:ont00000950 'Act of Maintenance' (modifies Material Artifacts, not records). Recurs corpus-wide in accounting categories (9.0; likely 8.0)." .
-
-# PROPOSE-EXT: pervasive (prepare financial statements, AR/AP reports,
-# regulatory filings, performance reports, shareholder reports).
-ex:ActOfReporting a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Reporting" ;
-    skos:definition "An Act of Information Processing in which an Agent compiles financial or operational data into a Descriptive Information Content Entity (such as a report, statement, or filing) that represents an organization's condition or results for an audience." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Distinct from cco:ont00000402 'Act of Communication' (mere transfer of an ICE between Agents): reporting is the production/compilation of the report ICE. Where a node only transmits an already-prepared report to a party, the group module reuses cco:ont00000402 instead. cco:ont00000402 VERIFIED against CCO v2.0 (2024-11-06): rdfs:label 'Act of Communication'@en; skos:definition 'A Planned Act in which some Information Content Entity is transferred from some Agent to Another'; rdfs:subClassOf cco:ont00000228 (Planned Act). It is the correct verified communication anchor (NOT the §6 false-friend reject cco:ont00001261 'Act of Identifying'). Recurs corpus-wide." .
-
-# PROPOSE-EXT: pervasive (monitor compliance, monitor treasury/credit,
-# track spending, oversee transactions, audit procedures).
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent observes an ongoing process, control, or position over time and produces a Descriptive Information Content Entity that represents its observed status against expected parameters." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Anchored under cco:ont00000366 because continuous observation receives status ICEs and yields an observation/status ICE. Distinct from cco:ont00000636 'Act of Appraisal' (a bounded value/quality judgement). Recurs in control/treasury/risk categories." .
-
-# PROPOSE-EXT: pervasive (process payments, distribute salaries,
-# receive/deposit payments, execute trades, transfer/remit funds).
-ex:ActOfFinancialTransaction a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Financial Transaction" ;
-    skos:definition "A Planned Act in which an Agent transfers money or a Financial Instrument to or from another Agent in settlement of an obligation, an investment, or an exchange." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Anchored under cco:ont00000228 (Planned Act). Rejected cco:ont00000389 'Act of Buying' (specifically acquiring ownership of a good, too narrow for payments/remittances/trades) and cco:ont00000366 'Act of Information Processing' (a payment moves a material/financial-instrument filler, not only an ICE). Recurs in payment/treasury/trade categories." .
-
-# PROPOSE-EXT: card-lifecycle administration (issue/handle/process-request/
-# deactivate/cancel a payment card). Distinct from a money transfer.
-ex:ActOfCardAdministration a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Card Administration" ;
-    skos:definition "A Planned Act in which an Agent issues, handles, processes a request for, or deactivates a payment card on behalf of an Organization, thereby establishing or altering the card's status without itself transferring money or a Financial Instrument." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Minted for the corporate-credit-card lifecycle family in 9.6.3 (issue/handle ex:P20929, process requests ex:P20931, deactivate ex:P20935). REJECTED ex:ActOfFinancialTransaction: card issuance/handling/blocking transfers no money and settles no obligation, so it falls outside that genus's differentia ('transfers money or a Financial Instrument in settlement'); anchoring card administration there was a false friend driven by the surface theme 'credit card' rather than the verbs 'issue/handle/block'. Anchored at the generic cco:ont00000228 (Planned Act) because the act operates on the card artifact (a material participant) rather than manipulating only ICEs (cco:ont00000366) or obtaining a not-previously-held entity (ex:ActOfAcquisition, which covers ordering a card -- ex:P20932)." .
-
-# PROPOSE-EXT: constituting/seating a governance or organizational body
-# (establish a board, audit committee, or organizational unit).
-ex:ActOfOrganizationalEstablishment a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Organizational Establishment" ;
-    skos:definition "A Planned Act in which an Agent constitutes and seats an Organization or organizational body (such as a board, committee, or unit), bringing the body into existence and conferring its mandate." ;
-    rdfs:comment "Local extension (D9, PROPOSE-EXT). Minted for ex:P10914 ('Establish board of directors and audit committee'). CCO 2.0 has no Act-of-Establishment/Organization class (verified: no 'Act of Establish/Organiz/Constitut/Found' label in the closure). REJECTED ex:ActOfFormulation (Act of Planning): formulating composes a Directive ICE, but establishing a committee primarily constitutes an independent continuant (the body) rather than authoring a directive; the responsibility-assignment directive is a downstream byproduct of seating the body, not the act's primary product. Anchored at the generic cco:ont00000228 (Planned Act)." .
-
 ####################################################################
 # 1b. CCO SUPERCLASS BRIDGES (for standalone Gate-C SHACL only)
 # Gate C validates this module STANDALONE without merging the CCO
@@ -282,7 +234,7 @@ ex:Customer a owl:Class ;
     skos:definition "An Agent that bears a customer role in relation to a focal Organization." .
 
 ex:Supplier a owl:Class ;
-    rdfs:subClassOf cco:ont00001017 ,   # Agent
+    rdfs:subClassOf cco:ont00001180 ,   # Agent
         [ a owl:Restriction ;
           owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom ex:SupplierRole ] ;

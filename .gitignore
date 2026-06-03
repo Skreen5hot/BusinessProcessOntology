@@ -10,6 +10,7 @@ venv/
 ontology/reports/*.json
 ontology/reports/*.txt
 ontology/reports/_reasoned_*.ttl    # throwaway ROBOT reason output
+ontology/reports/_corpus_reasoned.ttl   # throwaway corpus-merge reason output
 !ontology/reports/.gitkeep
 
 # Vendored dependency closure is large; pin + fetch via script, do not commit

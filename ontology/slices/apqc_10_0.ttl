@@ -78,20 +78,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    and flagged for human promotion (D9). Declared ONCE.
 ####################################################################
 
-# PROPOSE-EXT: promote to apqc-ext.ttl after review
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state, progress, or performance of some entity over a period of time and produces a Descriptive Information Content Entity reporting it against expected conditions, targets, or regulatory requirements." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class. Anchored under cco:ont00000366 (Act of Information Processing) because monitoring receives repeated observations and yields a Descriptive status/assessment ICE, so the GOLDEN PRINCIPLE holds (descriptive output). Rejected cco:ont00000037 (Act of Observation: a single sensory acquisition, not sustained criterion-referenced processing) and cco:ont00000636 (Act of Appraisal: renders a single value/quality judgement rather than tracking/reporting status over time). Recurs across 10.0 (monitor capital program 10.2.1.2, monitor work performance 10.2.4.1, monitor maintenance performance 10.3.2.7, monitor useful life of assets 10.4.1.1, monitor site 10.4.10.3) and is expected corpus-wide (operations/compliance sections)." .
-
-# PROPOSE-EXT: promote to apqc-ext.ttl after review
-ex:ActOfDisposition a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Disposition" ;
-    skos:definition "A Planned Act in which an Agent removes an asset or portion of material from active service, ownership, or possession at its end-of-life by retiring, selling, dismantling, recycling, abandoning, or otherwise applying a terminal disposition to it or its parts in accordance with applicable requirements." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic disposal/disposition Act. Anchored at the generic cco:ont00000228 (Planned Act) because disposition across 10.4 spans physical destruction/recycling AND ownership transfer (sale/trade) and waste-stream removal -- not all of which physically process a material artifact. Rejected cco:ont00000908 (Act of Material Artifact Processing: too narrow -- excludes sale/abandonment), cco:ont00000950 (Act of Maintenance: preserves/restores Qualities -- the opposite of retiring an asset) and cco:ont00000970 (Act of Artifact Modification: changes an artifact's qualities, not its service/ownership status). Recurs across 10.4: decommission productive assets (10.4.2), sale/trade (10.4.3), recycle parts (10.4.7), abandonment (10.4.10), and hazardous-material/waste disposition (10.4.11)." .
-
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY (section 10.0)
 #    ICEs / material entities / agents / roles / capabilities reused by
@@ -117,7 +103,7 @@ ex:ActOfDisposition a owl:Class ;
 
 # --- 2a. DESCRIPTIVE ICEs (cco:ont00000853) ---
 
-ex:BusinessStrategy a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
+ex:BusinessStrategy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Business Strategy" ;
     skos:definition "A Descriptive Information Content Entity that describes an organization's overall direction, goals, and competitive positioning, used as a reference against which asset requirements are aligned." ;
     rdfs:comment "Shared input across 10.0 (e.g. confirm property requirements align with business strategy). Modeled as Descriptive (a standing reference document) rather than Directive; the prescriptive strategy artifacts produced within 10.0 are typed separately (e.g. ex:PropertyStrategy, ex:ConstructionStrategy)." .
@@ -135,7 +121,7 @@ ex:BudgetAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Budget Analysis" ;
     skos:definition "A Descriptive Information Content Entity that describes a judgement of the feasibility of a budget prepared for construction or acquisition." .
 
-ex:Budget a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
+ex:Budget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Budget" ;
     skos:definition "A Descriptive Information Content Entity that describes the planned allocation of funds for a project or program." ;
     rdfs:comment "Input to budget-feasibility and capital-program work. Modeled Descriptive (a financial statement of planned figures); the prescriptive commitment of funds is captured by ex:CapitalInvestmentPlan." .
@@ -769,16 +755,6 @@ ex:P10966 a owl:Class ;
 ex:FacilityManagementCapability rdfs:subClassOf
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P10965 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom ex:P10966 ] .
-
-# --- EXTRA SUPPORTING ACT GENUS for 10.1 (PROPOSE-EXT) ---
-# PROPOSE-EXT: promote to apqc-ext.ttl after review.
-# ex:ActOfNegotiation recurs corpus-wide (procurement, contracting,
-# facilities, partnerships).
-ex:ActOfNegotiation a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Negotiation" ;
-    skos:definition "A Planned Act in which two or more Agents discuss and bargain over terms and conditions in order to reach and record a mutually binding Directive Information Content Entity such as an agreement or contract." ;
-    rdfs:comment "Local extension (PROPOSE-EXT for apqc-ext.ttl). Anchored under cco:ont00000228 (Planned Act). Rejected cco:ont00000511 (Act of Planning): negotiation is inter-agent bargaining producing an agreement, not the making of a plan to achieve an objective; rejected cco:ont00000402 (Act of Communication) as too generic (it captures the discussion but not the term-setting/agreement-producing nature). Expected to recur in procurement and contracting processes corpus-wide." .
 
 ####################################################################
 # ================================================================

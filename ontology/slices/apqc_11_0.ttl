@@ -70,34 +70,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 # PRINCIPLE). The single anchor below supersedes the per-group anchors.
 ####################################################################
 
-# PROPOSE-EXT: promote to apqc-ext.ttl after review
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state, progress, or performance of some entity over a period of time and produces a Descriptive Information Content Entity reporting it against expected conditions, targets, or regulatory requirements." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class. Anchored under cco:ont00000366 (Act of Information Processing) because monitoring receives repeated observations and yields a Descriptive status ICE, so the GOLDEN PRINCIPLE holds. Rejected cco:ont00000037 (Act of Observation: a single sensory acquisition, not sustained criterion-referenced processing) and cco:ont00000636 (Act of Appraisal: a single bounded value/quality judgement rather than tracking status over time). In 11.0 recurs at 11.1.2.5, 11.1.3.5, 11.2.2.3, 11.2.2.6. Already proposed (not yet promoted) in sections 9.0 and 10.0 -- promote once." .
-
-# PROPOSE-EXT: promote to apqc-ext.ttl after review
-ex:ActOfReporting a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Reporting" ;
-    skos:definition "An Act of Information Processing in which an Agent compiles data into a Descriptive Information Content Entity (such as a report, scorecard, or filing) that represents an organization's condition or results for an audience." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic compilation-reporting class. Anchored under cco:ont00000366 (Act of Information Processing): reporting compiles input ICEs into an output Descriptive ICE, so the GOLDEN PRINCIPLE holds. Distinct from cco:ont00000151 (Act of Reporting, an Act of Representative Communication: mere transfer of an existing account -- this genus CREATES the report ICE; the subsequent submission/presentation is a separate communication act). The 11.1 transform deliberately reused cco:ont00000151 for its 'communicate/present' reporting verbs; the 11.2 scorecard-creation verb foregrounds producing the report ICE and uses this genus instead. In 11.0 recurs at 11.2.2.7 (P19595, scorecard creation). Gate-F note: 11.2.2.8 (P19596) was RE-ANCHORED to cco:ont00000151 because its verbatim source describes only 'Submitting' an existing report (a transfer, not creation), so it no longer uses this genus. Already proposed (not yet promoted) in section 9.0 -- promote once." .
-
-# PROPOSE-EXT: promote to apqc-ext.ttl after review
-ex:ActOfVerification a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Verification" ;
-    skos:definition "An Act of Information Processing in which an Agent checks or tests whether some entity, plan, control, or process conforms to a specified requirement, expectation, or standard, and produces a Descriptive Information Content Entity reporting the conformance result." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic verification/checking/testing class. Anchored under cco:ont00000366 (Act of Information Processing) because verification compares an observed state against a reference ICE and yields a Descriptive conformance ICE (GOLDEN PRINCIPLE). Distinct from cco:ont00000636 (Act of Appraisal: judges value/quality on an open scale, whereas verification renders a pass/fail conformance check against a fixed criterion); also distinct from cco:ont00000345 (Act of Measuring) per se, which lacks the criterion-referenced informational output. In 11.0 recurs at 11.1.2.4, 11.1.2.8, 11.1.2.9, 11.2.2.6, 11.4.3. Expected to recur in audit/quality/compliance categories corpus-wide." .
-
-# PROPOSE-EXT: promote to apqc-ext.ttl after review
-ex:ActOfInvestigation a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Investigation" ;
-    skos:definition "An Act of Information Processing in which an Agent systematically examines and gathers evidence about a situation, framework, or cause in order to produce a Descriptive Information Content Entity establishing the relevant facts." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic investigation/examination class. Anchored under cco:ont00000366 (Act of Information Processing) because investigation gathers and manipulates evidence into a Descriptive findings ICE (GOLDEN PRINCIPLE). Distinct from ex:ActOfAnalysis (examines GIVEN input ICEs) in that investigation also acquires the evidence; retained as a separate genus because 'investigate' recurs as a distinct verb. Rejected cco:ont00000636 (Act of Appraisal: judges value/condition, not factual examination of causes) and cco:ont00000151 (Act of Reporting: a communication act). In 11.0 recurs at 11.3.4 and 11.3.5; expected in audit/forensics/incident categories corpus-wide." .
-
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY  (section 11.0)
 #

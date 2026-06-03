@@ -81,28 +81,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #      Information Processing).
 ####################################################################
 
-# PROPOSE-EXT: promote to apqc-ext.ttl after review.
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state of a process, channel, or population and produces a Descriptive Information Content Entity that reports its tracked condition over time." ;
-    rdfs:comment "PROPOSE-EXT (section 3.0). Local extension (D9). CCO 2.0 has no generic monitoring/tracking class; monitoring receives observations and yields a descriptive status report, so it is anchored under cco:ont00000366 (Act of Information Processing). Rejected cco:ont00000636 (Act of Appraisal) -- monitoring tracks state rather than judging value; and the single sense-based Act of Observation (cco:ont00000037) -- monitoring is the ongoing information-processing wrapper around repeated observation. Output is a DESCRIPTIVE ICE (GOLDEN PRINCIPLE). NOTE: a standing 'Manage/Monitor X' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs in 3.2.4, 3.3.5, 3.3.6 and corpus-wide." .
-
-# PROPOSE-EXT: promote to apqc-ext.ttl after review.
-ex:ActOfForecasting a owl:Class ;
-    rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
-        cco:ont00000228 ;               # Planned Act (explicit: Act of Prediction is a Planned Act in CCO; asserted locally so the standalone SHACL anchor chain resolves without the CCO closure)
-    rdfs:label "Act of Forecasting" ;
-    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates a future quantity such as demand, revenue, or value." ;
-    rdfs:comment "PROPOSE-EXT (section 3.0). Local extension (D9). Anchored under cco:ont00000371 (Act of Prediction), whose definitional output is a Predictive Information Content Entity (cco:ont00000626) -- exactly the genus of a sales/demand/ROI forecast. A thin specialization (quantitative, history-driven business projection) kept shared so slice agents need not re-derive the anchor. Output is a PREDICTIVE ICE (a Descriptive ICE about an uncertain future). Recurs in 3.1, 3.3, 3.4." .
-
-# PROPOSE-EXT: promote to apqc-ext.ttl after review.
-ex:ActOfSelling a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
-    rdfs:label "Act of Selling" ;
-    skos:definition "A Planned Act in which an Agent (the seller) transfers ownership of a good or the provision of a service to another Agent (the buyer) in exchange for a Financial Instrument." ;
-    rdfs:comment "PROPOSE-EXT (section 3.0). Local extension (D9). CCO 2.0 models only the BUYER side (cco:ont00001334 Act of Purchasing; cco:ont00000836 Act of Financial Instrument Use); APQC 3.5 makes the seller the focal Agent, so a complementary seller-side act is anchored at the generic cco:ont00000228 (Planned Act). Rejected cco:ont00000402 (Act of Communication) -- a sale transfers a good/value, not merely an ICE. This is a transactional Planned Act, not an information-processing or appraisal act, so it carries no descriptive/directive ICE-output requirement of its own. Recurs across all of 3.5." .
-
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY  (section-3.0 single source of truth)
 #    Mints ONCE every input/output ICE, agent/organization, role, and
@@ -330,7 +308,7 @@ ex:ExecutionRoadmap a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     skos:definition "A Directive Information Content Entity that prescribes the actions, ordering, timing, and dependencies for executing a strategy or delivering a proposed solution." ;
     rdfs:comment "Output of 3.2.3.8, 3.4.2.6, and 3.5.3.7. Directive (Formulation)." .
 
-ex:PerformanceMeasure a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
+ex:PerformanceMeasure a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Measure Specification" ;
     skos:definition "A Directive Information Content Entity that prescribes the metrics, benchmarks, and targets used to gauge performance." ;
     rdfs:comment "Output of 3.2.4.1, 3.3.1, 3.4.4. Directive: establishing a measure prescribes what to track and the target to meet (Formulation genus)." .
@@ -3023,7 +3001,6 @@ ex:P21429 a owl:Class ;
     skos:example "A customer completes a purchase through the organization's e-commerce site." ;
     rdfs:subClassOf ex:ActOfSelling ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:SalesOrder ] .
-
 
 ####################################################################
 # 8. CATALOG -> REALITY BRIDGES  (ADR-001 R4: ex:designatesProcessType)

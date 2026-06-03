@@ -68,59 +68,6 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 #    the nearest correct CCO Act (verify-before-assert).
 ####################################################################
 
-# PROPOSE-EXT: recurs across 12.1.x, 12.2.x, 12.5.x and corpus-wide
-# stakeholder/partner/IP management.
-ex:ActOfRelationshipManagement a owl:Class ;
-    rdfs:subClassOf cco:ont00000433 ,   # Act of Association (a Social Act, cco:ont00001327)
-        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; ont00000433 -> Social Act -> Planned Act in CCO closure)
-    rdfs:label "Act of Relationship Management" ;
-    skos:definition "An Act of Association in which an Agent builds, maintains, extends, or advances an ongoing relationship between an organization and one or more external parties or held assets." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00000433 'Act of Association' (verified: 'A Social Act wherein an Agent unites with some other Agent in a Planned Act, enterprise or business') because relationship-building is a sustained social uniting, not mere ICE transfer. Rejected cco:ont00000402 'Act of Communication' (a single ICE-transfer event, too narrow), cco:ont00000511 'Act of Planning' (output is a relationship, not a plan), and cco:ont00000168 'Act of Interpersonal Relationship' (restricted to Persons, whereas the external counterparties here are typically Organizations). Recurs across 'Plan/build/manage ... relations', 'Manage government/community/media relations', and IP-portfolio administration." .
-
-# PROPOSE-EXT: recurs in 12.2.1.3, 12.2.3.2, 12.4.5.4, 12.4.5.6 and
-# corpus-wide tracking/oversight.
-ex:ActOfMonitoring a owl:Class ;
-    rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Monitoring" ;
-    skos:definition "An Act of Information Processing in which an Agent repeatedly observes the state of some entity or relationship over time and produces a Descriptive Information Content Entity recording its status or performance." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 'Act of Information Processing' because monitoring receives and manipulates status information to yield a descriptive status ICE (GOLDEN PRINCIPLE: descriptive output => information-processing genus). Distinct from ex:ActOfAnalysis (one-time examination) and cco:ont00000636 Act of Appraisal (one-time value/quality judgement) by its continuous, tracking character. Recurs in 'Monitor relationships', 'Monitor the success of the partnerships', 'Track legal activity/performance', 'manage/monitor case'." .
-
-# PROPOSE-EXT: recurs in 12.4.9, 12.4.5.2, and corpus-wide deal/contract
-# formation.
-ex:ActOfNegotiation a owl:Class ;
-    rdfs:subClassOf cco:ont00001327 ,   # Social Act
-        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; Social Act -> Planned Act in CCO closure)
-    rdfs:label "Act of Negotiation" ;
-    skos:definition "A Social Act in which two or more Agents exchange proposals and concessions to reach a mutually acceptable agreement, producing a Directive Information Content Entity such as a contract that prescribes the agreed terms." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00001327 'Social Act' (verified: 'A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons'). Rejected cco:ont00000402 'Act of Communication' (a one-directional ICE transfer, not a bilateral bargaining toward agreement) and cco:ont00001162 'Act of Commissive Communication' (commits one speaker only, not a multi-party settlement). Recurs in 'Negotiate and document agreements/contracts' and engaging/retaining counsel." .
-
-# PROPOSE-EXT: recurs in 12.4.5.5 and corpus-wide procurement/finance
-# (e.g. 9.0, 10.0).
-ex:ActOfPayment a owl:Class ;
-    rdfs:subClassOf cco:ont00000836 ,   # Act of Financial Instrument Use
-        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; Act of Financial Instrument Use -> Planned Act in CCO closure)
-    rdfs:label "Act of Payment" ;
-    skos:definition "An Act of Financial Instrument Use in which an Agent (the payer) transfers money or a monetary instrument to another Agent (the payee) in settlement of an obligation." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00000836 'Act of Financial Instrument Use' (verified: 'An Act of Artifact Employment in which some Agent uses some Financial Instrument'). Rejected cco:ont00001334 'Act of Purchasing' (acquires a good/service in exchange, whereas payment may settle a pre-existing debt without acquisition). The transferred money is a material entity (ex:Payment) moved as a participant; the act's definitional informational output is a Descriptive ICE payment record. Recurs in 'Process payment for legal services' and procurement/disbursement processes." .
-
-# PROPOSE-EXT: recurs in 12.5.3 civic/political advocacy and corpus-wide
-# influence/advocacy nodes (public affairs, lobbying-adjacent promotion).
-ex:ActOfAdvocacy a owl:Class ;
-    rdfs:subClassOf cco:ont00001327 ,   # Social Act
-        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; Social Act -> Planned Act in CCO closure)
-    rdfs:label "Act of Advocacy" ;
-    skos:definition "A Social Act in which an Agent promotes, encourages, or supports a cause, position, or change in the societal or political environment through campaigns, programs, or public engagement, on behalf of an organization." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00001327 'Social Act' (verified: 'A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons') because advocacy/promotion targets a community or society rather than uniting with a single counterpart. Evaluated cco:ont00000079 'Act of Social Movement' (verified: 'A Social Act composed of a series of performances, displays and campaigns directed at implementing, resisting or undoing a change in society') as the nearest sibling: it fits campaign-driven activism but is narrower than the general supporting/promoting intent here (supporting civic programs and connection platforms is not necessarily a movement to undo a societal change), so a dedicated advocacy genus is minted under the shared Social Act parent. Rejected cco:ont00000433 'Act of Association' (a bilateral uniting-with-an-Agent, whereas advocacy influences a societal/political environment rather than uniting into a shared enterprise -- the verb 'promote/encourage/support' is influence, not association). Recurs across promote/encourage/support-the-environment nodes corpus-wide. (NOTE: cco:ont00000478 is NOT 'Act of Social Movement' -- it is 'Cuboidal', a Three Dimensional Shape; verified against the closure, an example of the false-friend caution applied to the review note itself.)" .
-
-# PROPOSE-EXT: recurs corpus-wide (every "Report X" / "Disclose X" /
-# "Announce X" node, pervasive in section 12.0 external relations).
-ex:ActOfReporting a owl:Class ;
-    rdfs:subClassOf cco:ont00000379 ,   # Act of Representative Communication
-        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; Act of Representative Communication -> Act of Communication -> Planned Act in CCO closure)
-    rdfs:label "Act of Reporting" ;
-    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity that asserts, as true, a representation of some portion of reality." ;
-    rdfs:comment "Local extension (D9). Anchored under cco:ont00000379 'Act of Representative Communication' (verified: 'An Act of Communication that commits a speaker to the truth of the expressed proposition'), whose scopeNote enumerates announcing/disclosing/informing/reporting/stating. Rejected cco:ont00000366 'Act of Information Processing': reporting is not mere internal manipulation of ICEs but the inter-agent transfer of an asserted-true representation. Per the GOLDEN PRINCIPLE its definitional output is a Descriptive ICE." .
-
 ####################################################################
 # APQC Section 12.0 "Manage External Relationships"
 # SHARED SUPPORTING VOCABULARY (ICEs, agents/orgs, roles,
