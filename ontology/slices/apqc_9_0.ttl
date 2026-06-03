@@ -50,10 +50,18 @@ ex:ActOfCardAdministration a owl:Class ;
     rdfs:comment "PROPOSE-EXT (D9). Minted for the corporate-credit-card lifecycle family (issue/handle, process requests, deactivate). REJECTED ex:ActOfFinancialTransaction: card issuance/handling/blocking transfers no money and settles no obligation, so it falls outside that genus's differentia ('transfers money or a Financial Instrument in settlement') -- anchoring it there was a false friend driven by the surface theme 'credit card'. Anchored at the generic cco:ont00000228 (Planned Act) because the act operates on the card artifact (a material participant) rather than manipulating only ICEs (cco:ont00000366) or obtaining a not-previously-held entity (ex:ActOfAcquisition, which covers ordering a card). Recurs in 9.0." .
 
 ex:ActOfFinancialTransaction a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:subClassOf cco:ont00000836 ,   # Act of Financial Instrument Use
+        cco:ont00000228 ;               # Planned Act (co-asserted: 836 is outside the S2 standalone-SHACL process-anchor allowlist {366,636,511,228}; 836 -> 566 -> 228 in the CCO closure)
     rdfs:label "Act of Financial Transaction" ;
-    skos:definition "A Planned Act in which an Agent transfers money or a Financial Instrument to or from another Agent in settlement of an obligation, an investment, or an exchange." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act). Rejected cco:ont00000389 'Act of Buying' (specifically acquiring ownership of a good, too narrow for payments/remittances/trades), cco:ont00001334 'Act of Purchasing' (acquires a good/service, too narrow), and cco:ont00000366 'Act of Information Processing' (a payment moves a material/financial-instrument filler, not only an ICE). Broader than ex:ActOfPayment (which is specifically settlement via Financial Instrument Use); financial transaction also covers investments and exchanges. Recurs in payment/treasury/trade categories (9.0)." .
+    skos:definition "A Planned Act in which an Agent transfers or uses money or a Financial Instrument to or from another Agent in settlement of an obligation, an investment, or an exchange." ;
+    rdfs:comment "PROPOSE-EXT (D9). Re-anchored from the bare cco:ont00000228 to cco:ont00000836 (Act of Financial Instrument Use): every subclass here uses/transfers a Financial Instrument (money and cash are Financial Instruments in CCO -- cf. Portion of Cash cco:ont00000475 subClassOf 537), and CCO models settlements, loans, purchases, deposits, withdrawals and exchanges uniformly under 836, so the earlier claim that this genus is 'broader than financial-instrument use' was incorrect (investments and exchanges still USE financial instruments). Rejected cco:ont00001334 'Act of Purchasing' and cco:ont00000389 'Act of Buying' (both acquire a good/service -- too narrow for payments/remittances/trades/deposits) and cco:ont00000366 'Act of Information Processing' (a payment moves a material/financial-instrument filler, not only an ICE). cco:ont00000228 co-asserted because 836 falls outside the S2 standalone-SHACL allowlist. Recurs in payment/treasury/trade categories (9.0)." .
+
+ex:ActOfRemuneration a owl:Class ;
+    rdfs:subClassOf cco:ont00000449 ,   # Act of Remuneration (Employer compensates Employee)
+        cco:ont00000228 ;               # Planned Act (co-asserted: 449 -> 1334 -> 836 -> 566 -> 228; 449 is outside the S2 allowlist {366,636,511,228})
+    rdfs:label "Act of Remuneration" ;
+    skos:definition "An Act of Remuneration in which an Employer disburses a Financial Instrument (salary, wages, bonus, or other compensation) to an Employee for services performed." ;
+    rdfs:comment "PROPOSE-EXT (D9). Inlines the verified CCO leaf cco:ont00000449 (Act of Remuneration, subClassOf cco:ont00001334 Act of Purchasing subClassOf cco:ont00000836) for payroll rows whose APQC text is salary/compensation disbursement to employees -- a closer genus than ex:ActOfFinancialTransaction. NOT used for payroll-TAX remittance to a government authority (the recipient is not the compensated employee; those keep ex:ActOfFinancialTransaction). cco:ont00000228 co-asserted because 449 is outside the standalone-SHACL S2 process-anchor allowlist." .
 
 ex:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
@@ -113,15 +121,18 @@ ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:comment "Catalog-to-reality bridge: links an APQC catalog node (ex:PCF_<pcfID>) to the reality-layer class (process or capability) it designates." .
 
 ####################################################################
-# 1. ACT-GENUS LAYER
-# PROPOSE-EXT: promote to apqc-ext.ttl after review.
-# REUSED from apqc-ext.ttl (inlined here): ex:ActOfAnalysis,
-# ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection,
-# ex:ActOfAcquisition. The four genera below recur across section 9.0
-# and are emitted ONCE (the group modules' standalone re-declarations
-# are reconciled to these single canonical definitions). Every cco:
-# anchor verified against CommonCoreOntologiesMerged v2.0 (2024-11-06):
-# definition + parent read, not just label.
+# 1. DOMAIN ACT-GENUS LAYER
+#    Canonical shared genera used by this slice are inlined from the
+#    apqc-ext.ttl registry so the module validates standalone against
+#    the pinned CCO/BFO closure -- no apqc-ext.ttl import is required.
+#    Inlined genera: ex:ActOfAnalysis, ex:ActOfIdentification,
+#    ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition --
+#    these recur across section 9.0 and are emitted ONCE (the group
+#    modules' standalone re-declarations are reconciled to these single
+#    canonical definitions). Section-specific genera remain marked
+#    PROPOSE-EXT where they should be reviewed for promotion. Every cco:
+#    anchor verified against CommonCoreOntologiesMerged v2.0
+#    (2024-11-06): definition + parent read, not just label.
 ####################################################################
 
 ####################################################################
@@ -253,13 +264,13 @@ ex:InternalControlCapability a owl:Class ;
 ####################################################################
 
 ex:FinanceFunction a owl:Class ;
-    rdfs:subClassOf cco:ont00001017 ,   # Agent
+    rdfs:subClassOf cco:ont00001180 ,   # Organization
         [ a owl:Restriction ;
           owl:onProperty obo:BFO_0000196 ;   # bearer of
           owl:someValuesFrom ex:FinanceFunctionRole ] ;
     rdfs:label "Finance Function" ;
-    skos:definition "An Agent that bears a finance function role and carries out the financial management activities of an Organization." ;
-    rdfs:comment "Models the organizational finance unit (or chief financial officer) named throughout 9.0." .
+    skos:definition "An Organization that bears a finance-function role within a larger organization in virtue of being tasked with carrying out its financial management activities." ;
+    rdfs:comment "Models the finance department/function as an organizational unit (an Organization), NOT a realizable function/capability despite the 'Function' label. Mirrors the slice-7 ex:HumanResourcesFunction precedent: cco:ont00001180 (Organization) is a Group of Agents / Object Aggregate, not an Agent (cco:ont00001017). Bearer of the finance-function role and the agent/participant of section 9.0 acts." .
 
 ex:Accountant a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
@@ -351,11 +362,12 @@ ex:GovernanceBody a owl:Class ;
 #     material I/O; informational I/O stays as ICEs in section 2e/2f.
 ####################################################################
 
-ex:MonetaryPayment a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
-    rdfs:label "Monetary Payment" ;
-    skos:definition "A Material Entity consisting of a quantity of money transferred from one Agent to another in settlement of an obligation or exchange." ;
-    rdfs:comment "Material output/input of Acts of Financial Transaction (payments, salary disbursements, deposits, remittances) in 9.2, 9.5, 9.6, 9.7, 9.10, 9.11." .
+ex:PaymentInstrument a owl:Class ;
+    rdfs:subClassOf cco:ont00000537 ,   # Financial Instrument (a legally-sanctioned tradeable Material Artifact)
+        obo:BFO_0000040 ;               # material entity (co-asserted so material ancestry is visible to the standalone Gate-C SHACL run)
+    rdfs:label "Payment Instrument" ;
+    skos:definition "A Financial Instrument consisting of a quantity of money (cash or funds) transferred from one Agent to another in settlement of an obligation or exchange." ;
+    rdfs:comment "Material input/participant of Acts of Financial Transaction (payments, salary disbursements, deposits, remittances) in 9.2, 9.5, 9.6, 9.7, 9.10, 9.11. Renamed from ex:PaymentInstrument, whose label misread as the payment EVENT; this class is the transferred MONEY (a material filler), never the act. Anchored to cco:ont00000537 to match CCO's treatment of money as a Financial Instrument (cf. Portion of Cash cco:ont00000475 subClassOf 537)." .
 
 ex:FinancialInstrument a owl:Class ;
     rdfs:subClassOf cco:ont00000537 ,   # Financial Instrument (a Material Artifact)
@@ -367,10 +379,11 @@ ex:FinancialInstrument a owl:Class ;
     rdfs:comment "Specializes the verified CCO class cco:ont00000537 (a legally-sanctioned tradeable Material Artifact) for the treasury and trade instruments in 9.7, 9.10, 9.11." .
 
 ex:CorporateCreditCard a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:subClassOf cco:ont00000995 ,   # Material Artifact (a Material Entity designed to realize a Function); subClassOf obo:BFO_0000040 in CCO
+        obo:BFO_0000040 ;               # material entity (co-asserted so material ancestry is visible to the standalone Gate-C SHACL run)
     rdfs:label "Corporate Credit Card" ;
-    skos:definition "A Material Entity issued to an Organization or its personnel that authorizes charging business expenses to a corporate credit account." ;
-    rdfs:comment "Material object handled in 9.6.3 (manage corporate credit cards): ordered, issued, deactivated." .
+    skos:definition "A Material Artifact issued to an Organization or its personnel that is designed to realize the function of authorizing the charging of business expenses to a corporate credit account." ;
+    rdfs:comment "Material object handled in 9.6.3 (manage corporate credit cards): ordered, issued, deactivated. Anchored to cco:ont00000995 (Material Artifact), NOT cco:ont00000537 (Financial Instrument): a credit card is an access/authorization device, not a tradeable asset, so 537's 'designed to be a tradeable asset' differentia is unsatisfied (a finance-theme false friend). Genuinely tradeable instruments are modeled separately under 537 via ex:FinancialInstrument." .
 
 ####################################################################
 # 2e. DESCRIPTIVE INFORMATION CONTENT ENTITIES  (cco:ont00000853)
@@ -450,7 +463,8 @@ ex:ProfitabilityAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 ex:PerformanceMeasure a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Measure" ;
-    skos:definition "A Descriptive Information Content Entity that describes a quantified measure of financial or operational performance." .
+    skos:definition "A Descriptive Information Content Entity that describes a quantified measure of financial or operational performance." ;
+    rdfs:comment "Modeled as Descriptive ICE when it records/reports a quantified performance value; a KPI specification prescribing what to measure, how, and against what target should be modeled separately as a Directive ICE (cco:ont00000965)." .
 
 ex:CreditAssessment a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,
@@ -593,7 +607,8 @@ ex:ProjectContinuationDecision a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 ex:LetterOfCredit a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Letter of Credit" ;
     skos:definition "A Directive Information Content Entity issued by a bank that prescribes payment to a seller upon satisfaction of specified delivery conditions." ;
-    rdfs:comment "Directive: it commits a bank to pay under stated conditions (9.11)." .
+    rdfs:comment "Directive: it commits a bank to pay under stated conditions (9.11)." ;
+    rdfs:comment "FALSE-FRIEND note: this class models the CONTENT of a letter of credit (the bank's prescriptive payment commitment), hence Directive ICE -- it is the 9.11 process output (has output cco:ont00001986). It does NOT model the document/artifact that bears this content, nor the trade-finance sense in which a letter of credit is a negotiable instrument; that artifact, if needed, is a separate Material Artifact (cco:ont00000995). Do not re-anchor this ICE class to cco:ont00000537." .
 
 ####################################################################
 # 2g. EXTRA SUPPORTING CLASSES (minted in group modules; reconciled
@@ -1498,7 +1513,7 @@ ex:P10800 a owl:Class ;
     rdfs:comment "Operations category permits material I/O: the input is a Monetary Payment (material entity); the booked entries are a Descriptive transaction record." ;
     skos:example "A cashier deposits a customer's cash payment and records the receipt." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TransactionRecord ] .
 
 ex:P10801 a owl:Class ;
@@ -1510,7 +1525,7 @@ ex:P10801 a owl:Class ;
     rdfs:comment "Material input is a Monetary Payment (the remitted funds); the BankingPartner participates as the authorized remittance agent." ;
     skos:example "Treasury applies an inbound cross-border remittance to the customer's account via an authorized agent." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TransactionRecord ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:BankingPartner ] .
 
@@ -2246,7 +2261,7 @@ ex:P10732 a owl:Class ;
     rdfs:comment "Models APQC group 9.5 as a bounded payroll-run occurrent. Its three APQC children are process parts, not subclasses. The disbursed monetary payment is a MATERIAL participant (obo:BFO_0000057, not has output: cco:ont00001986 has output is reserved for ICE outputs); time records and tax filings are produced by its parts." ;
     skos:example "A company's biweekly payroll cycle that pays employees and remits withheld taxes." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10753 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10754 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10755 ] .
@@ -2330,7 +2345,7 @@ ex:P10754 a owl:Class ;
     rdfs:comment "Despite the 'Manage' label this denotes the bounded pay-disbursement run; its eight APQC activities are process parts. The disbursed monetary payment is a MATERIAL participant (obo:BFO_0000057), not has output." ;
     skos:example "Running a pay cycle that calculates and pays each employee's net salary and bonuses." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10858 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10859 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10860 ] ,
@@ -2389,11 +2404,11 @@ ex:P10862 a owl:Class ;
     ex:hierarchyID "9.5.2.5" ;
     ex:apqcSourceText "Processing and distributing salaries to all employees. Execute the payroll management function through the dispensation of employee salaries. Leverage a centralized database of all payroll expenses." ;
     rdfs:label "Process and distribute payments" ;
-    skos:definition "An Act of Financial Transaction that disburses salaries to employees, producing a monetary payment to each employee." ;
-    rdfs:comment "The disbursed monetary payment is a MATERIAL participant (obo:BFO_0000057), not has output (has output cco:ont00001986 is reserved for ICE outputs); operations material I/O is licensed in section 9.0." ;
+    skos:definition "An Act of Remuneration that disburses salaries to employees, producing a monetary payment to each employee in compensation for services performed." ;
+    rdfs:comment "Re-anchored from ex:ActOfFinancialTransaction to ex:ActOfRemuneration (the verified CCO leaf cco:ont00000449): an unambiguous employer->employee salary disbursement -- the exact differentia of Remuneration. The disbursed payment is a MATERIAL participant (obo:BFO_0000057), not has output." ;
     skos:example "Paying every employee's net salary by direct deposit on payday." ;
-    rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+    rdfs:subClassOf ex:ActOfRemuneration ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Employee ] .
 
 ex:P10863 a owl:Class ;
@@ -2402,10 +2417,10 @@ ex:P10863 a owl:Class ;
     ex:apqcSourceText "Handling incorrect/omitted salary payments." ;
     rdfs:label "Process and distribute manual checks" ;
     skos:definition "An Act of Financial Transaction that issues a manual payment to correct an incorrect or omitted salary payment, producing a monetary payment to the affected employee." ;
-    rdfs:comment "The monetary payment is a MATERIAL participant (obo:BFO_0000057), not has output; the off-cycle manual check corrects a prior payroll error." ;
+    rdfs:comment "The monetary payment is a MATERIAL participant (obo:BFO_0000057), not has output; the off-cycle manual check corrects a prior payroll error. Substantively an Act of Remuneration (cco:ont00000449) but kept under ex:ActOfFinancialTransaction: as an error-correction disbursement its differentia is rectifying an omission, one step removed from the canonical compensation-for-services run (cf. ex:P10862, which moves to ex:ActOfRemuneration)." ;
     skos:example "Cutting a manual check for an employee whose overtime was missed in the main run." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] .
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] .
 
 ex:P10864 a owl:Class ;
     ex:pcfID "10864" ;
@@ -2439,7 +2454,7 @@ ex:P10755 a owl:Class ;
     rdfs:comment "Bounded payroll-tax process; its modeled APQC children are process parts. 9.5.3.2 'Manage tax plan' is excluded as a process (standing oversight = capability, R6). The tax remittance is a MATERIAL participant Monetary Payment (obo:BFO_0000057), not has output." ;
     skos:example "Withholding income tax from salaries and paying it to the revenue authority." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P14075 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10866 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom ex:P10867 ] ,
@@ -2466,7 +2481,7 @@ ex:P10866 a owl:Class ;
     skos:example "Computing and remitting withheld income tax for the period to the revenue authority." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:TaxData ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] .
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] .
 
 ex:P10867 a owl:Class ;
     ex:pcfID "10867" ;
@@ -2608,7 +2623,7 @@ ex:P10876 a owl:Class ;
     rdfs:comment "Anchored to ex:ActOfFinancialTransaction (cco:ont00000228). The disbursed monetary payment is a MATERIAL participant (obo:BFO_0000057), not has output (operations material-I/O rule). The supplier is a definitional participant (it receives the payment)." ;
     skos:example "Releasing a scheduled ACH run to suppliers on invoice due dates." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Supplier ] .
 
 ex:P10877 a owl:Class ;
@@ -2696,7 +2711,7 @@ ex:P10883 a owl:Class ;
     rdfs:comment "Anchored to ex:ActOfFinancialTransaction (cco:ont00000228). The disbursed monetary payment is a MATERIAL participant; the employee is the definitional recipient. The source cross-reference licenses bfo:precedes from 10882 (see precedence block)." ;
     skos:example "Paying an employee's approved expense claim by direct deposit." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Employee ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:PaymentApproval ] .
 
@@ -2949,10 +2964,10 @@ ex:P10895 a owl:Class ;
     ex:apqcSourceText "Supervising all online transactions." ;
     rdfs:label "Process and oversee electronic fund transfers (EFTs)" ;
     skos:definition "An Act of Financial Transaction in which monetary payments are transferred electronically between accounts." ;
-    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Operations category: the material filler ex:MonetaryPayment is the transferred MATERIAL participant (obo:BFO_0000057), not has output (has output is reserved for ICE outputs)." ;
+    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Operations category: the material filler ex:PaymentInstrument is the transferred MATERIAL participant (obo:BFO_0000057), not has output (has output is reserved for ICE outputs)." ;
     skos:example "Treasury executes a wire transfer to settle a supplier invoice." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] .
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] .
 
 ex:P10896 a owl:Class ;
     ex:pcfID "10896" ; ex:hierarchyID "9.7.2.4" ;
@@ -3037,11 +3052,12 @@ ex:P10902 a owl:Class ;
     ex:pcfID "10902" ; ex:hierarchyID "9.7.3.2" ;
     ex:apqcSourceText "Arranging loans for subsidiaries from in-house banks." ;
     rdfs:label "Manage and facilitate inter-company borrowing transactions" ;
-    skos:definition "An Act of Financial Transaction in which the in-house bank extends a loan to a subsidiary, with the subsidiary bearing a debtor role." ;
-    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). The loaned Monetary Payment is a MATERIAL participant (obo:BFO_0000057), not has output. Reuses shared ex:Subsidiary as a participating organization." ;
+    skos:definition "An Act of Loaning in which the in-house bank (Creditor) extends a loan to a subsidiary (Debtor) to receive repayments of greater financial value." ;
+    rdfs:comment "Re-anchored from ex:ActOfFinancialTransaction to the verified CCO leaf cco:ont00000884 (Act of Loaning): the in-house bank gives a Financial Instrument to the subsidiary as Debtor to receive repayments -- exactly 884's differentia, closer than the generic transaction genus. cco:ont00000228 (Planned Act) co-asserted because 884 is outside the standalone-SHACL S2 allowlist (884 -> 836 -> 566 -> 228). The loaned funds are a MATERIAL participant (obo:BFO_0000057)." ;
     skos:example "The in-house bank books an intercompany loan to a foreign subsidiary." ;
-    rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+    rdfs:subClassOf cco:ont00000884 ,
+        cco:ont00000228 ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Subsidiary ] .
 
 ex:P10903 a owl:Class ;
@@ -3049,10 +3065,10 @@ ex:P10903 a owl:Class ;
     ex:apqcSourceText "Handling payments made for subsidiaries by parent company." ;
     rdfs:label "Manage centralized outgoing payments on behalf of subsidiaries" ;
     skos:definition "An Act of Financial Transaction in which the parent disburses monetary payments outward on behalf of its subsidiaries." ;
-    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Material filler ex:MonetaryPayment is the definitional MATERIAL participant (obo:BFO_0000057, the payment disbursed), not has output." ;
+    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Material filler ex:PaymentInstrument is the definitional MATERIAL participant (obo:BFO_0000057, the payment disbursed), not has output." ;
     skos:example "The parent pays a subsidiary's vendor through the central payments factory." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Subsidiary ] .
 
 ex:P10904 a owl:Class ;
@@ -3060,10 +3076,10 @@ ex:P10904 a owl:Class ;
     ex:apqcSourceText "Handling payments received by parent company for subsidiaries." ;
     rdfs:label "Manage central incoming payments on behalf of subsidiaries" ;
     skos:definition "An Act of Financial Transaction in which the parent collects monetary payments inward on behalf of its subsidiaries." ;
-    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Material filler ex:MonetaryPayment is definitional (the payment collected)." ;
+    rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Material filler ex:PaymentInstrument is definitional (the payment collected)." ;
     skos:example "The parent receives a customer remittance owed to a subsidiary." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Subsidiary ] .
 
 ex:P10905 a owl:Class ;
@@ -3074,7 +3090,7 @@ ex:P10905 a owl:Class ;
     rdfs:comment "Genus ex:ActOfFinancialTransaction (Planned Act). Recording produces a transaction record (Descriptive ICE), the definitional has output; the netted monetary payment is the MATERIAL participant (obo:BFO_0000057)." ;
     skos:example "The in-house bank nets intercompany balances and posts the residual settlement." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TransactionRecord ] .
 
 ex:P10906 a owl:Class ;
@@ -3828,10 +3844,10 @@ ex:P10768 a owl:Class ;
     ex:apqcSourceText "Managing any transfer of funds in the course of conducting cross-border trades or investments, including conversion across currencies. Find the most suitable alternative for making payments, while saving taxes and avoiding any unwarranted regulation, with the objective of protecting capital." ;
     rdfs:label "Manage transactions" ;
     skos:definition "An Act of Financial Transaction that transfers funds across borders in the course of trade or investment, converting between currencies, and produces a monetary payment and a record of the transaction." ;
-    rdfs:comment "Anchored to ex:ActOfFinancialTransaction (cco:ont00000228). Operations process: the transferred funds are a MATERIAL participant (ex:MonetaryPayment via obo:BFO_0000057, not has output); the audit record is the informational has output (ex:TransactionRecord). Tax-optimization and regulatory-avoidance objectives are typical sub-considerations, recorded here rather than as definitional restrictions." ;
+    rdfs:comment "Anchored to ex:ActOfFinancialTransaction (cco:ont00000228). Operations process: the transferred funds are a MATERIAL participant (ex:PaymentInstrument via obo:BFO_0000057, not has output); the audit record is the informational has output (ex:TransactionRecord). Tax-optimization and regulatory-avoidance objectives are typical sub-considerations, recorded here rather than as definitional restrictions." ;
     skos:example "A treasury operation converts EUR to USD and remits an intercompany payment to settle a cross-border purchase." ;
     rdfs:subClassOf ex:ActOfFinancialTransaction ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:MonetaryPayment ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:PaymentInstrument ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:TransactionRecord ] .
 
 ex:P10769 a owl:Class ;
