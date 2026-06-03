@@ -16,7 +16,7 @@
 <http://example.org/apqc/slice/8.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 8.0: Manage Information Technology (IT)" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.3.0" ;
     rdfs:comment "Reality-layer module for APQC section 8.0. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################
@@ -102,7 +102,7 @@ ex:ActOfVerification a owl:Class ;
     rdfs:subClassOf cco:ont00000636 ;   # Act of Appraisal
     rdfs:label "Act of Verification" ;
     skos:definition "An Act of Appraisal in which an Agent subjects a product, service, solution, system, plan, control, or process to a test, audit, trial, or review against specified requirements and produces a Descriptive Information Content Entity that records whether and to what extent the requirements are met." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic verification/checking/testing class. ANCHOR CONFLICT RESOLVED: slices 2.0 and 8.0 anchored under cco:ont00000636 (Act of Appraisal); slice 11.0 anchored under cco:ont00000366 (Act of Information Processing). CHOSEN cco:ont00000636 'Act of Appraisal' (verified: 'An Act of Measuring that involves evaluating, assessing, estimating, or judging the nature, value, importance, condition, or quality of something or someone'; parent cco:ont00000345 Act of Measuring -> cco:ont00000228). Verification is the criterion-referenced JUDGEMENT of conformance of a realized artifact, system, or run against a standard -- it acts on a real entity and renders a measured pass/fail or conformance value, which is exactly what Act of Appraisal/Measuring captures (it determines quality 'relative to some standard'). The 11.0 information-processing reading over-generalizes (it would collapse audit/test/validate into mere ICE manipulation) and loses the standard-referenced measuring genus; the 2.0/8.0 appraisal reading is the nearer correct parent. Per the GOLDEN PRINCIPLE the definitional output remains a Descriptive (conformance) ICE, which is consistent under Appraisal. Rejected cco:ont00000366 (Act of Information Processing: too generic -- omits the against-a-standard measuring that individuates verification) and cco:ont00000345 (Act of Measuring per se: lacks the evaluative judgement). Distinct from ex:ActOfAnalysis (examines input ICEs) by acting on a realized artifact or run. Recurs in test/review/validate/audit/penetration-test processes corpus-wide (2.0, 4.0, 6.0, 8.0, 9.0, 11.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic verification/checking/testing class. Anchored under cco:ont00000636 (Act of Appraisal): verification checks a product, service, solution, system, plan, control, or process against specified requirements and produces a descriptive judgement. Many verification acts also have an information-processing character, but Act of Appraisal is the canonical genus for this corpus." .
 
 ####################################################################
 # 0. ANNOTATION PROPERTIES (provenance / traceability)

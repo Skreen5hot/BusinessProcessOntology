@@ -44,7 +44,7 @@
 <http://example.org/apqc/slice/1.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 1.0: Develop Vision and Strategy" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.3.0" ;
     rdfs:comment "Reality-layer module for APQC Category 1.0 (groups 1.1-1.4). CCO pin v2.0 (2024-11-06). Follows ADR-001 two-layer policy: this is the reality layer only; the curatorial catalog (skos) lives in apqc-catalog.ttl. Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################

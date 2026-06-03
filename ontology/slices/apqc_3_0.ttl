@@ -45,7 +45,7 @@
 <http://example.org/apqc/slice/3.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 3.0: Market and Sell Products and Services" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.3.0" ;
     rdfs:comment "Reality-layer module for APQC section 3.0 (groups 3.1-3.5) plus the section-wide shared supporting vocabulary. CCO pin v2.0 (2024-11-06); two-layer policy per ADR-001 (reality layer only; the SKOS catalog lives in apqc-catalog.ttl). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################

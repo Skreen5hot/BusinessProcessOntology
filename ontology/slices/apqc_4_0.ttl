@@ -53,7 +53,7 @@
 <http://example.org/apqc/slice/4.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 4.0: Manage Supply Chain for Physical Products" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.3.0" ;
     rdfs:comment "Reality-layer module for APQC section 4.0 (groups 4.1-4.4) plus the section-wide shared supporting vocabulary. CCO pin v2.0 (2024-11-06); modeling decisions follow ADR-001 (reality layer only; the SKOS catalog lives in apqc-catalog.ttl). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################
