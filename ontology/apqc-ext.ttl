@@ -9,10 +9,11 @@
 ####################################################################
 # APQC SHARED EXTENSION MODULE  (inlined)  v0.3.0
 #
-# D9: recurring local act genera live here ONCE and are imported by
-# every slice module -- never re-minted per slice. Each genus is
-# anchored under the nearest correct CCO Act class (verify-before-assert,
-# Methodology §6). Slice modules `owl:imports` this file.
+# D9: recurring local act genera live here ONCE as the canonical source
+# of truth -- never re-minted per slice. Each genus is anchored under the
+# nearest correct CCO Act class (verify-before-assert, Methodology §6).
+# Each self-contained slice INLINES (mirrors) the genera it uses; slice
+# modules no longer `owl:imports` this file (post-self-containment refactor).
 #
 # Growth policy (PHASE0 §5.1): the section daemon may PROPOSE a new
 # recurring genus; it is added here only after human approval, to keep
@@ -24,7 +25,7 @@
 <http://example.org/apqc/ext> a owl:Ontology ;
     dct:title "APQC Shared Extension: recurring local act genera (D9)" ;
     owl:versionInfo "0.3.0" ;
-    rdfs:comment "Imported by every reality-layer slice module. Anchors local act genera under CCO Act classes." .
+    rdfs:comment "Canonical registry of recurring local act genera (D9); its definitions are inlined (mirrored) into each self-contained reality-layer slice module (slices no longer import it). Anchors local act genera under CCO Act classes." .
     # owl:imports <https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged> .
 
 ####################################################################
@@ -243,10 +244,18 @@ ex:ActOfAccounting a owl:Class ;
     rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic bookkeeping/record-keeping class; recording and reconciling transactions manipulates input ICEs into an updated record ICE, so it anchors under cco:ont00000366 (Act of Information Processing), per the GOLDEN PRINCIPLE. Rejected cco:ont00000950 'Act of Maintenance' (modifies Material Artifacts, not records). Distinct from ex:ActOfFinancialTransaction (which moves the money itself). Recurs in accounting categories (9.0; likely 8.0)." .
 
 ex:ActOfFinancialTransaction a owl:Class ;
-    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:subClassOf cco:ont00000836 ,   # Act of Financial Instrument Use
+        cco:ont00000228 ;               # Planned Act (co-asserted: 836 is outside the S2 standalone-SHACL process-anchor allowlist {366,636,511,228}; 836 -> 566 -> 228 in the CCO closure)
     rdfs:label "Act of Financial Transaction" ;
-    skos:definition "A Planned Act in which an Agent transfers money or a Financial Instrument to or from another Agent in settlement of an obligation, an investment, or an exchange." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act). Rejected cco:ont00000389 'Act of Buying' (specifically acquiring ownership of a good, too narrow for payments/remittances/trades), cco:ont00001334 'Act of Purchasing' (acquires a good/service, too narrow), and cco:ont00000366 'Act of Information Processing' (a payment moves a material/financial-instrument filler, not only an ICE). Broader than ex:ActOfPayment (which is specifically settlement via Financial Instrument Use); financial transaction also covers investments and exchanges. Recurs in payment/treasury/trade categories (9.0)." .
+    skos:definition "A Planned Act in which an Agent transfers or uses money or a Financial Instrument to or from another Agent in settlement of an obligation, an investment, or an exchange." ;
+    rdfs:comment "PROPOSE-EXT (D9). Re-anchored from the bare cco:ont00000228 to cco:ont00000836 (Act of Financial Instrument Use): every subclass uses/transfers a Financial Instrument (money and cash are Financial Instruments in CCO -- cf. Portion of Cash cco:ont00000475 subClassOf 537), and CCO models settlements, loans, purchases, deposits, withdrawals and exchanges uniformly under 836. Rejected cco:ont00001334 'Act of Purchasing' and cco:ont00000389 'Act of Buying' (both acquire a good/service -- too narrow) and cco:ont00000366 'Act of Information Processing' (a payment moves a material/financial-instrument filler, not only an ICE). cco:ont00000228 co-asserted because 836 falls outside the S2 standalone-SHACL allowlist. Recurs in payment/treasury/trade categories (9.0)." .
+
+ex:ActOfRemuneration a owl:Class ;
+    rdfs:subClassOf cco:ont00000449 ,   # Act of Remuneration (Employer compensates Employee)
+        cco:ont00000228 ;               # Planned Act (co-asserted: 449 -> 1334 -> 836 -> 566 -> 228; 449 is outside the S2 allowlist {366,636,511,228})
+    rdfs:label "Act of Remuneration" ;
+    skos:definition "An Act of Remuneration in which an Employer disburses a Financial Instrument (salary, wages, bonus, or other compensation) to an Employee for services performed." ;
+    rdfs:comment "PROPOSE-EXT (D9). Inlines the verified CCO leaf cco:ont00000449 (Act of Remuneration, subClassOf cco:ont00001334 Act of Purchasing subClassOf cco:ont00000836) for payroll rows whose APQC text is salary/compensation disbursement to employees -- a closer genus than ex:ActOfFinancialTransaction. NOT used for payroll-TAX remittance to a government authority. cco:ont00000228 co-asserted because 449 is outside the standalone-SHACL S2 process-anchor allowlist." .
 
 ex:ActOfCardAdministration a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act

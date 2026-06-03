@@ -74,6 +74,13 @@ ex:ActOfAnalysis a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
     rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
 
+ex:ActOfForecasting a owl:Class ;
+    rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
+        cco:ont00000228 ;               # Planned Act (explicit; Act of Prediction subClassOf Planned Act in CCO, asserted so standalone SHACL S2 resolves)
+    rdfs:label "Act of Forecasting" ;
+    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates a future quantity such as demand, volume, revenue, or value." ;
+    rdfs:comment "Inlined canonical shared genus (apqc-ext.ttl registry). Anchored under cco:ont00000371 (Act of Prediction; parent cco:ont00000228), whose definitional output is a Predictive ICE (cco:ont00000626 subClassOf cco:ont00000853) -- exactly the genus of a demand/sales/volume forecast. Recurs in 3.0/5.0/6.0/8.0/10.0/4.0." .
+
 ex:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
     rdfs:label "Act of Formulation" ;
@@ -395,10 +402,12 @@ ex:DispositionDecision a owl:Class ;
 ####################################################################
 
 # --- demand / forecasting ---
-ex:DemandForecast a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
+ex:DemandForecast a owl:Class ;
+    rdfs:subClassOf cco:ont00000626 ,   # Predictive Information Content Entity
+        cco:ont00000853 ;               # Descriptive ICE (allowlisted ICE anchor; co-asserted because 626 is outside the S3/S4 allowlist)
     rdfs:label "Demand Forecast" ;
-    skos:definition "A Descriptive Information Content Entity that describes the anticipated future demand for an organization's products or services." ;
-    rdfs:comment "Descriptive: a forecast represents (estimates) future demand rather than prescribing action. Genus for baseline and consensus forecasts." .
+    skos:definition "A Predictive Information Content Entity that estimates the anticipated future demand for an organization's products or services." ;
+    rdfs:comment "Predictive (cco:ont00000626, a specialization of Descriptive cco:ont00000853): a forecast estimates an uncertain future demand state rather than prescribing action. Re-anchored from plain cco:ont00000853 to match the corpus forecast pattern (slice 5's identical ex:DemandForecast is 626+853); cco:ont00000853 co-asserted because 626 is outside the S3/S4 ICE allowlist. Genus for baseline and consensus forecasts." .
 
 ex:BaselineDemandForecast a owl:Class ; rdfs:subClassOf ex:DemandForecast ;
     rdfs:label "Baseline Demand Forecast" ;
@@ -957,10 +966,10 @@ ex:P10236 a owl:Class ;
     ex:pcfID "10236" ; ex:hierarchyID "4.1.2.2" ;
     ex:apqcSourceText "Working closely with the organization's customers to understand their drives and behavior, with the objective of estimating future demand. Reach out to customers through various means to understand their behavior patterns, usage elasticity, and degree of variability--and ultimately determine demand for each offering." ;
     rdfs:label "Collaborate demand with customers" ;
-    skos:definition "An Act of Analysis that has the customer as participant and produces a demand forecast informed by customer behavior and feedback." ;
-    rdfs:comment "Customer is a definitional participant (the act is constituted by working with customers)." ;
+    skos:definition "An Act of Forecasting that works with customers to understand their behavior and, with that input, estimates future demand, producing a demand forecast." ;
+    rdfs:comment "Re-anchored from ex:ActOfAnalysis to ex:ActOfForecasting: the act's definitional output is a Predictive ICE (ex:DemandForecast) and the source's objective is 'estimating future demand'. Customer collaboration is the method; the product is a forecast, matching the corpus pattern (slice 5's demand-forecast acts P20043/P20045 use ex:ActOfForecasting). Customer is a definitional participant (the act is constituted by working with customers)." ;
     skos:example "Planners run joint demand-review sessions with key accounts to refine the forecast." ;
-    rdfs:subClassOf ex:ActOfAnalysis ,
+    rdfs:subClassOf ex:ActOfForecasting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DemandForecast ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:Customer ] .
 
