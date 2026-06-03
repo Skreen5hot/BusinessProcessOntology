@@ -71,6 +71,13 @@ ex:ActOfAnalysis a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
     rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
 
+ex:ActOfForecasting a owl:Class ;
+    rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
+        cco:ont00000228 ;               # Planned Act (explicit; Act of Prediction subClassOf Planned Act in CCO, asserted so standalone SHACL S2 resolves)
+    rdfs:label "Act of Forecasting" ;
+    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates a future quantity such as demand, volume, revenue, or value." ;
+    rdfs:comment "Inlined canonical shared genus (apqc-ext.ttl registry). Anchored under cco:ont00000371 (Act of Prediction; parent cco:ont00000228), whose definitional output is a Predictive ICE (cco:ont00000626 subClassOf cco:ont00000853) -- exactly the genus of a demand/sales/volume forecast. Recurs in 3.0 and 6.0." .
+
 ex:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
     rdfs:label "Act of Formulation" ;
@@ -120,12 +127,6 @@ ex:apqcSourceText a owl:AnnotationProperty ;
 ex:designatesProcessType a owl:AnnotationProperty ;
     rdfs:label "designates process type" ;
     rdfs:comment "Catalog->reality bridge: relates an APQC catalog node (ex:PCF_<pcfID>) to the reality-layer class (process or capability) it designates." .
-
-####################################################################
-# 1. PROPOSE-EXT: new recurring act genera (promote to apqc-ext.ttl
-#    after review). Minted ONCE here and flagged; not silently
-#    duplicated. Both verified absent from CCO v2.0 (2024-11-06).
-####################################################################
 
 ####################################################################
 # 2. SHARED SUPPORTING VOCABULARY
@@ -185,10 +186,11 @@ ex:CustomerBusinessObjectives a owl:Class ;
 ####################################################################
 
 ex:DemandForecast a owl:Class ;
-    rdfs:subClassOf cco:ont00000853 ;
+    rdfs:subClassOf cco:ont00000626 ,   # Predictive ICE
+        cco:ont00000853 ;   # its parent Descriptive ICE, asserted so standalone SHACL S3 resolves
     rdfs:label "Demand Forecast" ;
-    skos:definition "A Descriptive Information Content Entity that describes the anticipated future level of customer demand for an organization's services." ;
-    rdfs:comment "Shared section-5.0 output. Baseline (5.2.1.2) and consensus (5.2.1.4) forecasts are both Demand Forecasts; ex:ConsensusDemandForecast specialises this. Descriptive: a forecast describes an expected state of affairs." .
+    skos:definition "A Predictive Information Content Entity that describes the anticipated (uncertain, future) level of customer demand for an organization's services." ;
+    rdfs:comment "Shared section-5.0 output. Baseline (5.2.1.2) and consensus (5.2.1.4) forecasts are both Demand Forecasts; ex:ConsensusDemandForecast specialises this. PREDICTIVE (cco:ont00000626, a Descriptive ICE about an uncertain future), matching the Slice-3 forecast pattern -- produced by ex:ActOfForecasting." .
 
 ex:ConsensusDemandForecast a owl:Class ;
     rdfs:subClassOf ex:DemandForecast ;
@@ -272,7 +274,7 @@ ex:TrainingMaterialSpecification a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;   # Descriptive ICE
     rdfs:label "Training Material Specification" ;
     skos:definition "A Descriptive Information Content Entity that describes the content and structure of the training materials developed to teach service-delivery skills or behaviours." ;
-    rdfs:comment "Shared section-5.0 output (5.2.3.2). The informational deliverable of training-material development: every process has output is an ICE (D3 / S3), whereas the produced ex:TrainingMaterial artifact (a material entity) is consumed downstream only as an input. Descriptive: it describes the materials' content." .
+    rdfs:comment "Shared section-5.0 output (5.2.3.2). Despite the 'Specification' label this is DESCRIPTIVE (D6 false-friend guard): it records the content and structure of produced training materials, not a prescriptive requirement. A prescriptive training-material requirement would be a Directive ICE, modeled separately. The informational deliverable of training-material development (every has-output is an ICE, D3/S3); the produced ex:TrainingMaterial bearer is consumed downstream as an input." .
 
 ex:SolutionBuildRecord a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;   # Descriptive ICE
@@ -379,15 +381,16 @@ ex:ProceedApprovalDecision a owl:Class ;
 ####################################################################
 
 ex:TrainingMaterial a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:subClassOf cco:ont00000253 ,   # Information Bearing Entity
+        obo:BFO_0000040 ;   # Material Entity (IBE transitive BFO parent; asserted so standalone SHACL S4 resolves)
     rdfs:label "Training Material" ;
-    skos:definition "A Material Entity produced to support the comprehensive training of personnel in skills or behaviours needed to deliver services." ;
-    rdfs:comment "Shared section-5.0 output (5.2.3.2). Modeled as a material entity per the operations-category material-I/O allowance; the informational content it carries may itself be an ICE, but APQC 'materials ... such as classroom or computer based' denotes the physical/digital artifact." .
+    skos:definition "An Information Bearing Entity (manual, slide deck, e-learning file, workbook, CBT module) produced to support the comprehensive training of personnel in skills or behaviours needed to deliver services." ;
+    rdfs:comment "Shared section-5.0 output (5.2.3.2). Re-anchored to cco:ont00000253 (Information Bearing Entity) -- the right mid-level for a material/digital bearer of training content -- which is still a material entity (IBE subClassOf Object subClassOf Material Entity), so the material-I/O usage holds. Non-informational training equipment, if needed, would be a separate class." .
 
 ex:ServiceDeliverySolution a owl:Class ;
     rdfs:subClassOf obo:BFO_0000040 ;   # material entity
-    rdfs:label "Service Delivery Solution" ;
-    skos:definition "A Material Entity that is built or purchased and deployed to a customer to fulfil a service-delivery need." ;
+    rdfs:label "Service Delivery Solution (deployed artifact)" ;
+    skos:definition "A Material Entity (a built or purchased artifact) that is deployed to a customer to fulfil a service-delivery need." ;
     rdfs:comment "Shared section-5.0 output (5.3.2.6, 5.3.2.7). Modeled as a material entity per the operations material-I/O allowance; where a particular solution is purely informational, group agents may instead use ex:SolutionSpecification. ex:SolutionSpecification (Directive ICE) prescribes it; this class is the delivered artifact." .
 
 ####################################################################
@@ -589,7 +592,7 @@ ex:ServiceDeliveryCompletionConfirmation a owl:Class ;
 # ===== APQC PROCESS GROUP 5.1 (PCF 20026)
 # "Establish service delivery governance and strategies"
 # Partonomy via cco:ont00001777; no rdfs:subClassOf between processes.
-# Act genera REUSED from apqc-ext.ttl (ex:ActOfFormulation,
+# Act genera: inlined canonical shared genera (ex:ActOfFormulation,
 # ex:ActOfAnalysis) and CCO (cco:ont00000636 Act of Appraisal).
 ####################################################################
 
@@ -803,10 +806,10 @@ ex:P20043 a owl:Class ;
     ex:pcfID "20043" ; ex:hierarchyID "5.2.1.2" ;
     ex:apqcSourceText "Identifying the demand anticipated for the organization's services. Estimate future demand for services using historical data, analysis of the market environment, and external data." ;
     rdfs:label "Develop baseline forecasts" ;
-    skos:definition "An Act of Analysis that has as input historical demand data and market environment data and has as output a demand forecast for the organization's services." ;
-    rdfs:comment "Descriptive output (a forecast estimates rather than prescribes), so anchored at ex:ActOfAnalysis per the GOLDEN PRINCIPLE." ;
+    skos:definition "An Act of Forecasting that has as input historical demand data and market environment data and has as output a demand forecast for the organization's services." ;
+    rdfs:comment "Re-anchored (Gate-F) to ex:ActOfForecasting (Act of Prediction): the output ex:DemandForecast is a PREDICTIVE ICE about uncertain future demand, matching the Slice-3 forecast pattern rather than generic analysis." ;
     skos:example "A demand planner estimates next quarter's service demand from prior-year volumes and market trends." ;
-    rdfs:subClassOf ex:ActOfAnalysis ,
+    rdfs:subClassOf ex:ActOfForecasting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:HistoricalDemandData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:MarketEnvironmentData ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:DemandForecast ] .
@@ -828,10 +831,10 @@ ex:P20045 a owl:Class ;
     ex:pcfID "20045" ; ex:hierarchyID "5.2.1.4" ;
     ex:apqcSourceText "Arriving at a consensus over the forecasted levels of demand for services by analyzing baseline forecasts and customer input." ;
     rdfs:label "Develop consensus forecast" ;
-    skos:definition "An Act of Analysis that has as input a demand forecast and customer feedback and has as output a consensus demand forecast." ;
-    rdfs:comment "Reconciles the baseline demand forecast with customer input into an agreed forecast; descriptive output anchors it at ex:ActOfAnalysis." ;
+    skos:definition "An Act of Forecasting that has as input a demand forecast and customer feedback and has as output a consensus demand forecast." ;
+    rdfs:comment "Re-anchored (Gate-F) to ex:ActOfForecasting: reconciles the baseline forecast with customer input into an agreed PREDICTIVE forecast (ex:ConsensusDemandForecast)." ;
     skos:example "Sales and delivery leaders reconcile the baseline forecast with customer commitments into one agreed number." ;
-    rdfs:subClassOf ex:ActOfAnalysis ,
+    rdfs:subClassOf ex:ActOfForecasting ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:DemandForecast ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CustomerFeedback ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ConsensusDemandForecast ] .
@@ -854,7 +857,7 @@ ex:P20047 a owl:Class ;
     ex:apqcSourceText "Overseeing all activities necessary to deliver services to customer. Revise forecast to account for any issues that may arise. This could be changes in market trend, resource changes, etc." ;
     rdfs:label "Monitor activity against forecast and revise forecast" ;
     skos:definition "An Act of Monitoring that has as input a consensus demand forecast and has as output a revised demand forecast reflecting observed delivery activity and emerging issues." ;
-    rdfs:comment "Anchored at ex:ActOfMonitoring: it oversees delivery activity against the forecast and emits an updated forecast. The output revision is a Descriptive demand forecast (reusing ex:DemandForecast)." ;
+    rdfs:comment "Anchored at ex:ActOfMonitoring: the DOMINANT act is oversight of delivery activity against the forecast (source: 'Overseeing all activities'); the emitted revised forecast is a byproduct. Its output ex:DemandForecast is a PREDICTIVE ICE (cco:ont00000626 subClassOf Descriptive ICE), so the Information-Processing genus still agrees with the descriptive-kind output (GOLDEN PRINCIPLE). The pure forecast-production acts P20043/P20045 use ex:ActOfForecasting." ;
     skos:example "A delivery manager tracks actuals against forecast and updates the forecast when a key resource leaves." ;
     rdfs:subClassOf ex:ActOfMonitoring ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:ConsensusDemandForecast ] ,
