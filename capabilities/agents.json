@@ -1,0 +1,4 @@
+[
+ {"agent_id":"agent.market_analysis.v1","capabilities":["ex:CompetitiveAnalysisCapability"],"roles":["ex:MarketAnalystRole"]},
+ {"agent_id":"agent.planner.v1","capabilities":["ex:PlanAuthoringCapability"],"roles":["ex:PlannerRole"]}
+]

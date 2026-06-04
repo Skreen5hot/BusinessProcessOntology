@@ -71,6 +71,17 @@ Full table in methodology §6 and `src/apqc_transform/config.py` (`CCO` dict). H
 
 ## CURRENT PHASE — capability/role module (`capabilities_roles.ttl`)
 
+**Authoritative brief: `PHASE1.md`.** A validated **v0.1.0 seed** exists in `capabilities/`
+(`capabilities_roles.ttl`, `capabilities_roles_shapes.ttl` with 7 shapes C1–C7, `agents.json`);
+the next build is a **daemon** that generalizes it to the full corpus. Governing distinction:
+**Capability** (`cco:ont00001379` Agent Capability — competence, feasibility filter) ≠ **Role**
+(`obo:BFO_0000023`; reuse `cco:ont00000984` Occupation / `cco:ont00000187` Authority) ≠ **Process**.
+Matching is **species-satisfies-genus** (`subClassOf*`). Key fact: **`568 ⊑ 1379`**, so the slice
+Organization Capabilities already reach Agent Capability — match on "reaches 1379," leave slices
+untouched. `AuthorRoadmap`/`AuthorImplementationPlan` are delivery-process universals that **don't
+exist yet** and need a home. Permissions (`cco:ont00000751`) are RDM/IEE's to author (the seam is
+stubbed). See `PHASE1.md` §9 for the daemon directions and the four gating decisions.
+
 The process→agent bridge. Today, capabilities and roles are declared **per-slice and scattered**:
 **111 `*Capability`** classes (⊑ `cco:ont00000568` Organization Capability; base `ex:Capability`) and
 **87 `*Role`** classes (⊑ `obo:BFO_0000023` Role). 10 of them recur across slices (e.g. `CustomerRole`
