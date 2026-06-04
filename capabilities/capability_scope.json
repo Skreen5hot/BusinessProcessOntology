@@ -1,3 +1,239 @@
 {
-  "_doc": "standing capability IRI (no realized-in restriction) -> [process IRIs it enables]. Filled by the judgment pass (judge per capability). enablesProcess + derived requiresCapability are generated from this."
+  "_doc": "standing capability IRI (no realized-in restriction) -> [process IRIs it enables]. Filled by the judgment pass (judge per capability). enablesProcess + derived requiresCapability are generated from this.",
+  "ex:StrategicPlanningCapability": [
+    "ex:P10037",
+    "ex:P10045",
+    "ex:P10039",
+    "ex:P10043",
+    "ex:P10020",
+    "ex:P19949"
+  ],
+  "ex:CustomerExperienceManagementCapability": [
+    "ex:P19959",
+    "ex:P19960",
+    "ex:P19964",
+    "ex:P19971"
+  ],
+  "ex:ResearchAndDevelopmentCapability": [
+    "ex:P10070",
+    "ex:P10071",
+    "ex:P10072"
+  ],
+  "ex:MarketIntelligenceCapability": [
+    "ex:P10101",
+    "ex:P10106",
+    "ex:P10107"
+  ],
+  "ex:PartnerManagementCapability": [
+    "ex:P10130",
+    "ex:P10187"
+  ],
+  "ex:SupplyChainPlanningCapability": [
+    "ex:P10215"
+  ],
+  "ex:ProcurementCapability": [
+    "ex:P10216"
+  ],
+  "ex:ProductionCapability": [
+    "ex:P10217"
+  ],
+  "ex:SupplyChainManagementCapability": [
+    "ex:P10215",
+    "ex:P10216",
+    "ex:P10217",
+    "ex:P10338",
+    "ex:P20936",
+    "ex:P10340",
+    "ex:P10341"
+  ],
+  "ex:ServiceDeliveryGovernanceCapability": [
+    "ex:P20027",
+    "ex:P20026"
+  ],
+  "ex:ServiceDeliveryCapability": [
+    "ex:P20058",
+    "ex:P20059",
+    "ex:P20069",
+    "ex:P20076",
+    "ex:P20077"
+  ],
+  "ex:ResourceManagementCapability": [
+    "ex:P20056",
+    "ex:P20050"
+  ],
+  "ex:DemandForecastingCapability": [
+    "ex:P20043",
+    "ex:P20045",
+    "ex:P20041"
+  ],
+  "ex:CustomerServiceCapability": [
+    "ex:P10394",
+    "ex:P13482",
+    "ex:P10395",
+    "ex:P10396",
+    "ex:P16928",
+    "ex:P10397",
+    "ex:P10398",
+    "ex:P10399",
+    "ex:P10400",
+    "ex:P19072"
+  ],
+  "ex:CustomerServiceManagementCapability": [
+    "ex:P20595"
+  ],
+  "ex:WarrantyManagementCapability": [
+    "ex:P12669",
+    "ex:P12672"
+  ],
+  "ex:HumanCapitalManagementCapability": [
+    "ex:P20958",
+    "ex:P17045",
+    "ex:P10417",
+    "ex:P17046",
+    "ex:P10410",
+    "ex:P10413"
+  ],
+  "ex:WorkforcePlanningCapability": [
+    "ex:P20958",
+    "ex:P17045",
+    "ex:P10417",
+    "ex:P17046"
+  ],
+  "ex:TalentAcquisitionCapability": [
+    "ex:P10410"
+  ],
+  "ex:EmployeeDevelopmentCapability": [
+    "ex:P10474",
+    "ex:P11243",
+    "ex:P17050",
+    "ex:P10479",
+    "ex:P21434",
+    "ex:P10481",
+    "ex:P10487",
+    "ex:P10488",
+    "ex:P17051",
+    "ex:P10490",
+    "ex:P16940",
+    "ex:P10491",
+    "ex:P10492",
+    "ex:P10493",
+    "ex:P20125",
+    "ex:P21436"
+  ],
+  "ex:EmployeeRelationsCapability": [
+    "ex:P10484",
+    "ex:P10531",
+    "ex:P21437"
+  ],
+  "ex:WorkforceDeploymentCapability": [
+    "ex:P10413"
+  ],
+  "ex:ITInfrastructureManagementCapability": [
+    "ex:P20888",
+    "ex:P20889",
+    "ex:P20890",
+    "ex:P20891",
+    "ex:P20892",
+    "ex:P20893",
+    "ex:P20915",
+    "ex:P20916",
+    "ex:P20917",
+    "ex:P20918",
+    "ex:P20919",
+    "ex:P20920"
+  ],
+  "ex:ITRiskManagementCapability": [
+    "ex:P20706",
+    "ex:P20721"
+  ],
+  "ex:ITSupportCapability": [
+    "ex:P20921",
+    "ex:P20923"
+  ],
+  "ex:AccountingCapability": [
+    "ex:P10729",
+    "ex:P10730"
+  ],
+  "ex:TreasuryManagementCapability": [
+    "ex:P10885",
+    "ex:P10893",
+    "ex:P14079",
+    "ex:P12974"
+  ],
+  "ex:FinancialManagementCapability": [
+    "ex:P10729",
+    "ex:P10730",
+    "ex:P10732",
+    "ex:P10733"
+  ],
+  "ex:AssetConstructionCapability": [
+    "ex:P19209",
+    "ex:P20139",
+    "ex:P19229",
+    "ex:P19224"
+  ],
+  "ex:AssetDispositionCapability": [
+    "ex:P19258",
+    "ex:P21579",
+    "ex:P21581",
+    "ex:P21582"
+  ],
+  "ex:EnterpriseRiskManagementCapability": [
+    "ex:P16439",
+    "ex:P16445",
+    "ex:P17462"
+  ],
+  "ex:StakeholderRelationshipManagementCapability": [
+    "ex:P11038",
+    "ex:P11039",
+    "ex:P11040",
+    "ex:P11041",
+    "ex:P11012"
+  ],
+  "ex:InvestorRelationsCapability": [
+    "ex:P11010"
+  ],
+  "ex:LegalAndComplianceCapability": [
+    "ex:P11013",
+    "ex:P11045",
+    "ex:P11047",
+    "ex:P11048",
+    "ex:P11049"
+  ],
+  "ex:IntellectualPropertyManagementCapability": [
+    "ex:P11049"
+  ],
+  "ex:AnalystRelationsManagementCapability": [
+    "ex:P11036"
+  ],
+  "ex:LenderRelationsManagementCapability": [
+    "ex:P11035"
+  ],
+  "ex:ChangeManagementCapability": [
+    "ex:P21457",
+    "ex:P11135",
+    "ex:P11136",
+    "ex:P11137"
+  ],
+  "ex:EnterpriseQualityManagementCapability": [
+    "ex:P17472",
+    "ex:P17482",
+    "ex:P17492",
+    "ex:P17498"
+  ],
+  "ex:PortfolioProgramProjectManagementCapability": [
+    "ex:P16402",
+    "ex:P16403",
+    "ex:P16404",
+    "ex:P16406",
+    "ex:P16407",
+    "ex:P16408",
+    "ex:P16409",
+    "ex:P16411",
+    "ex:P11119",
+    "ex:P16413",
+    "ex:P16414",
+    "ex:P16417",
+    "ex:P16418"
+  ]
 }
