@@ -163,7 +163,7 @@ ex:DesignStaffRole a owl:Class ;
 ex:RegulatoryAuthorityRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Regulatory Authority Role" ;
-    skos:definition "A Role that is borne by an Organization in virtue of issuing, administering, or enforcing public-policy and regulatory requirements that apply to another organization." ;
+    skos:definition "A Role that is borne by an Organization in virtue of issuing, administering, or enforcing laws, statutes, permits, codes, or regulatory requirements binding on a focal organization, and overseeing its compliance with them." ;
     rdfs:comment "Borne by the external authority Organization, not by the regulatory ICEs it issues (group 2.1.3)." .
 
 ex:SupplyChainPartnerRole a owl:Class ;
@@ -211,7 +211,7 @@ ex:IntellectualPropertyManagementCapability a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
           owl:someValuesFrom ex:P12771 ] ;
     rdfs:label "Intellectual Property Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to protect, value, and govern patents, copyrights, and regulatory requirements for its products and services." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to secure, maintain, protect, value, and govern its intellectual property rights, such as patents and copyrights, for its products and services." ;
     rdfs:comment "Models APQC 2.1.3 (PCF 19985) as a standing function, not a process (R5/R6)." .
 
 ex:ProductDataManagementCapability a owl:Class ;

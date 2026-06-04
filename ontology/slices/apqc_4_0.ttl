@@ -757,7 +757,7 @@ ex:SupplyChainOrganization a owl:Class ;
 
 ex:SupplierRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Supplier Role" ;
-    skos:definition "A Role that is borne by an Organization in virtue of supplying materials or services to a procuring organization." .
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of furnishing goods, materials, resources, or services to a procuring organization, typically for consideration." .
 
 ex:CustomerRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Customer Role" ;

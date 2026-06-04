@@ -1,0 +1,12 @@
+{
+  "_doc": "role IRI -> CCO role subclass anchor (null = leave bare obo:BFO_0000023). Filled by the judgment pass. Authority cco:ont00000187 / Occupation cco:ont00000984 / Contractor cco:ont00000506.",
+  "ex:CompetitiveIntelligenceAnalystRole": "cco:ont00000984",
+  "ex:SeniorManagerRole": "cco:ont00000984",
+  "ex:StrategyPersonnelRole": "cco:ont00000984",
+  "ex:ProfessionalServicesProviderRole": "cco:ont00000506",
+  "ex:BusinessUnitRole": null,
+  "ex:CompetitorRole": null,
+  "ex:CustomerRole": null,
+  "ex:PartnerRole": null,
+  "ex:StakeholderRole": null
+}

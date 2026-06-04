@@ -507,7 +507,7 @@ ex:ConstructionContractorRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
 
 ex:RegulatoryAuthorityRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Regulatory Authority Role" ;
-    skos:definition "A Role that is borne by an Organization in virtue of issuing permits, codes, or requirements and overseeing compliance for construction, maintenance, or hazardous-material activities." ;
+    skos:definition "A Role that is borne by an Organization in virtue of issuing, administering, or enforcing laws, statutes, permits, codes, or regulatory requirements binding on a focal organization, and overseeing its compliance with them." ;
     rdfs:comment "Borne by the authority Organization, never by the permit or requirements ICE it issues." .
 
 # --- 4b. CAPABILITIES (Organization: cco:ont00000568) ---

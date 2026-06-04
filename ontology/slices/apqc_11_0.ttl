@@ -414,7 +414,7 @@ ex:RiskManagerRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
 
 ex:ComplianceOfficerRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Compliance Officer Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of being tasked with ensuring an organization's enduring compliance with industry regulations and government legislation." .
+    skos:definition "A Role that is borne by an Agent in virtue of being tasked with validating, maintaining, and ensuring an organization's enduring compliance with applicable regulations and legislation." .
 
 ex:SubjectMatterExpertRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Subject Matter Expert Role" ;
@@ -422,7 +422,7 @@ ex:SubjectMatterExpertRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
 
 ex:RegulatoryAuthorityRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Regulatory Authority Role" ;
-    skos:definition "A Role that is borne by an Organization in virtue of issuing laws, statutes, permits, or requirements and overseeing an organization's compliance with them." ;
+    skos:definition "A Role that is borne by an Organization in virtue of issuing, administering, or enforcing laws, statutes, permits, codes, or regulatory requirements binding on a focal organization, and overseeing its compliance with them." ;
     rdfs:comment "Borne by the authority Organization, never by the requirement or report ICE it issues or receives." .
 
 ex:ExecutiveManagementRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;

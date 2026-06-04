@@ -271,7 +271,7 @@ ex:FieldServiceAgentRole a owl:Class ;
 ex:SupplierRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Supplier Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of furnishing goods, parts, or services to an organization and sharing warranty obligations with it." .
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of furnishing goods, materials, resources, or services to a procuring organization, typically for consideration." .
 
 ex:SalesAgentRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
@@ -286,7 +286,7 @@ ex:ProductManagerRole a owl:Class ;
 ex:ManagerRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Manager Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of exercising managerial authority within an Organization." .
+    skos:definition "A Role that is borne by an Agent in virtue of exercising managerial authority within an organization." .
 
 ####################################################################
 # 2.3 CAPABILITIES  (Agent / Organization Capability; realized-in acts, R6)

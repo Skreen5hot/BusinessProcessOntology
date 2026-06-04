@@ -184,7 +184,7 @@ ex:TreasurerRole a owl:Class ;
 ex:AuditorRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Auditor Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of being tasked with independently examining and attesting to an Organization's financial records or controls." ;
+    skos:definition "A Role that is borne by an Agent in virtue of independently examining and attesting to an organization's records, controls, or compliance." ;
     rdfs:comment "Covers both internal and external auditors; the bearer (a Person or Organization) carries the role." .
 
 ex:RegulatorRole a owl:Class ;
@@ -200,13 +200,13 @@ ex:CustomerRole a owl:Class ;
 ex:SupplierRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Supplier Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of providing goods or services to an Organization for which the Organization owes payment." ;
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of furnishing goods, materials, resources, or services to a procuring organization, typically for consideration." ;
     rdfs:comment "Used for accounts-payable counterparties (vendors) in 9.6." .
 
 ex:EmployeeRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Employee Role" ;
-    skos:definition "A Role that is borne by a Person in virtue of being employed by an Organization and entitled to compensation from it." ;
+    skos:definition "A Role that is borne by an Agent in virtue of being engaged or employed by an organization to perform assigned activities in exchange for compensation." ;
     rdfs:comment "Used for payroll and expense-reimbursement subjects in 9.5 and 9.6." .
 
 ex:DebtorRole a owl:Class ;

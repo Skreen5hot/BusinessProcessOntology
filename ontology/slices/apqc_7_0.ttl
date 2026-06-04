@@ -196,7 +196,7 @@ ex:HumanResourcesProfessionalRole a owl:Class ;
 ex:EmployeeRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Employee Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of being engaged by an organization to perform assigned activities in exchange for compensation." .
+    skos:definition "A Role that is borne by an Agent in virtue of being engaged or employed by an organization to perform assigned activities in exchange for compensation." .
 
 ex:JobCandidateRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;

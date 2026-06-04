@@ -1,0 +1,3 @@
+{
+  "_doc": "standing capability IRI (no realized-in restriction) -> [process IRIs it enables]. Filled by the judgment pass (judge per capability). enablesProcess + derived requiresCapability are generated from this."
+}
