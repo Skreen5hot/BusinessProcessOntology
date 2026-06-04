@@ -235,5 +235,10 @@
     "ex:P16414",
     "ex:P16417",
     "ex:P16418"
+  ],
+  "ex:InternalAuditManagementCapability": [
+    "ex:P10871",
+    "ex:P10889",
+    "ex:P20782"
   ]
 }
