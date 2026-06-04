@@ -1,12 +1,16 @@
 #!/usr/bin/env bash
-# Corpus-wide coherence: merge all 13 slices + ext + catalog + CCO closure, reason with ELK.
+# Corpus-wide coherence: merge all 13 slices + ext + catalog + the Phase-1
+# capability/role layer (capabilities_roles + delivery_processes) + CCO
+# closure, reason with ELK. The capability layer is a merge-only shared
+# layer (no slice imports it); it is included here so it cannot perturb the
+# v0.3.0 ELK consistency unnoticed (PHASE1 definition-of-done).
 set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 INPUTS=""
-for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
+for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl ontology/capabilities_roles.ttl ontology/delivery_processes.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
   INPUTS="$INPUTS --input $f"
 done
-echo "Merging 13 slices + ext + catalog + CCO; reasoning with ELK..."
+echo "Merging 13 slices + ext + catalog + capability layer + CCO; reasoning with ELK..."
 java -jar tools/robot.jar merge $INPUTS reason --reasoner ELK --output ontology/reports/_corpus_reasoned.ttl
 echo "EXIT $?  (0 = consistent, no unsatisfiable classes)"

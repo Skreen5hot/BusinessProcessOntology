@@ -4,13 +4,23 @@
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
 
 # =====================================================================
-# capabilities_roles.ttl  (v0.1.0)
+# capabilities_roles.ttl  (v0.2.0 -- promoted from the capabilities/ seed)
 # The bridge from PROCESS (requiresCapability/requiresRole/requiresPermission)
 # to AGENT (registry: capabilities[]/roles[]).
 #
-# Grounding (verified against CCO 2024-11 / BFO 2020):
+# This is the Phase 1 SHARED capability/role layer. Per the four gating
+# decisions (PHASE1 §6/§8): it is a standalone module MERGED ONLY at
+# corpus-check + dispatch time (it preserves slice self-containment -- no
+# slice owl:imports it); slice Organization Capabilities are LEFT at
+# cco:ont00000568 and matched by the "reaches cco:ont00001379" test, not
+# re-homed under ex:Capability; ex:enablesProcess is the authored direction
+# and ex:requiresCapability is DERIVED from it (never hand-authored both);
+# delivery-process universals live in delivery_processes.ttl.
+#
+# Grounding (verified against CCO v2.0 2024-11-06 / BFO 2020):
 #   Agent Capability  cco:ont00001379  (Realizable Entity; bearer = Material Entity)
 #   has capability    cco:ont00001954  (Agent bearer_of Agent Capability)
 #   Role              obo:BFO_0000023  (Realizable Entity; a position a bearer occupies)
@@ -22,6 +32,11 @@
 #   Role       = the position in which it acts (framing + authority; deontic hook).
 #   Neither is a Process. Processes are the actions; these are borne by agents.
 # =====================================================================
+
+<http://example.org/apqc/capabilities> a owl:Ontology ;
+    dct:title "APQC Phase 1: Capability / Role bridge layer" ;
+    owl:versionInfo "0.2.0" ;
+    rdfs:comment "Shared capability/role registry and the process->agent dispatch bridge. CCO pin v2.0 (2024-11-06); ADR-001. Merge-only shared layer: no slice imports it; merged into the corpus only for the coherence check and for dispatch/matchability. Promoted from the capabilities/ v0.1.0 seed; the three ex:requires* properties were promoted from shape-referenced markers to declared object properties." .
 
 # ---- local marker genera (let SHACL and the daemon classify cleanly) ----
 
@@ -45,22 +60,40 @@ ex:bearsPermission a owl:AnnotationProperty ;
     rdfs:label "bears permission" ;
     rdfs:comment "Role -> Action Permission class the role carries. The deontic hook (RDM/IEE authors the permission)." .
 
-# =====================================================================
-# CAPABILITIES  (granularity = the coherent bundle one agent can own;
-#                this is also the decomposition stop-condition, spec 8.1)
-# =====================================================================
+# ---- the three process-side wiring properties (promoted from the seed's
+#      shape-referenced markers to declared object properties) ----
+# Range is enforced by SHACL (coherence shapes C5-C7), NOT by rdfs:range:
+# asserting rdfs:domain/range here would force class entailments into the
+# merged corpus and risk perturbing the v0.3.0 ELK closure. The intended
+# domain/range is documented per property and tested structurally instead.
 
-ex:CompetitiveAnalysisCapability a owl:Class ;
-    rdfs:subClassOf ex:Capability ;
-    rdfs:label "Competitive analysis capability" ;
-    skos:definition "Competence to identify competitors and analyze competitive forces, producing sourced competitor analyses." ;
-    ex:enablesProcess ex:P19945 , ex:P10021 .   # Identify competitors; Analyze and evaluate competition
+ex:requiresCapability a owl:ObjectProperty ;
+    rdfs:label "requires capability" ;
+    rdfs:comment "Process class -> the capability an agent must bear to perform it. DERIVED from ex:enablesProcess (author scope once on the capability; generate this inverse onto the process, so the two never drift -- PHASE1 §8). Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
 
-ex:StrategicPlanningCapability a owl:Class ;
-    rdfs:subClassOf ex:Capability ;
-    rdfs:label "Strategic planning capability" ;
-    skos:definition "Competence to formulate mission, strategy, and strategic options grounded in objectives." ;
-    ex:enablesProcess ex:P10037 , ex:P10045 .   # Develop mission statement; Formulate mission
+ex:requiresRole a owl:ObjectProperty ;
+    rdfs:label "requires role" ;
+    rdfs:comment "Process class -> the role in whose capacity the work must be performed. Intended domain: a process universal; intended range: a class reaching obo:BFO_0000023 Role (typically a cco:ont00000984 Occupation Role or cco:ont00000187 Authority Role). Same species-satisfies-genus matching as ex:requiresCapability. Range enforced by SHACL C6." .
+
+ex:requiresPermission a owl:ObjectProperty ;
+    rdfs:label "requires permission" ;
+    rdfs:comment "Process class -> the Action Permission that must be held for the work to be authorized. Intended range: a class reaching cco:ont00000751 Action Permission. The RDM/IEE layer owns the permission catalogue and the gate conflict-resolution; this seam is declared but LEFT UNPOPULATED in Phase 1. Range enforced by SHACL C7." .
+
+# =====================================================================
+# CAPABILITIES
+# Granularity is NOT free choice: a capability is the coherent bundle one
+# agent can own, which in this corpus is exactly the R5/R6 stop node -- a
+# standing function demoted to an Organization Capability (R6). The 111
+# slice *Capability classes already encode those stop nodes; the harvest
+# step reuses them rather than re-deriving granularity. The example below
+# is a delivery-process capability owned by THIS layer (it has no slice
+# home). The two strategy examples from the v0.1.0 seed
+# (ex:CompetitiveAnalysisCapability, ex:StrategicPlanningCapability) were
+# dropped here: both IRIs are already declared in ontology/slices/apqc_1_0.ttl
+# (the former ⊑ 1379, the latter ⊑ 568), so re-declaring them here would
+# duplicate/contradict the slice anchor. Their ex:enablesProcess wiring is
+# authored against the slice IRIs in the harvest step, not in the foundation.
+# =====================================================================
 
 ex:PlanAuthoringCapability a owl:Class ;
     rdfs:subClassOf ex:Capability ;
@@ -90,7 +123,7 @@ ex:PlannerRole a owl:Class ;
 ex:ApproverRole a owl:Class ;
     rdfs:subClassOf ex:Role , cco:ont00000187 ;   # Authority Role
     rdfs:label "Approver role" ;
-    skos:definition "The authority role occupied by the party who may approve passage through a review gate (spec 8.8)." ;
+    skos:definition "The authority role occupied by the party who may approve passage through a review/approval gate." ;
     ex:bearsPermission ex:ApproveImplementationPlanPermission .
 
 # ---- deontic stub (normally authored by the RDM/IEE layer; shown for the seam) ----
