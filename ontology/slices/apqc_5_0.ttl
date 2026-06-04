@@ -449,7 +449,7 @@ ex:ServiceDeliveryPersonnel a owl:Class ;
 ex:CustomerRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;   # role
     rdfs:label "Customer Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of receiving, or contracting to receive, a service from a service-providing organization." .
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of acquiring, consuming, contracting for, or being a target acquirer of the goods or services of a focal organization." .
 
 ex:SupplierRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;

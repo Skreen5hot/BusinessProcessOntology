@@ -265,7 +265,7 @@ ex:SustainabilityManagerRole a owl:Class ;
 ex:StakeholderRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Stakeholder Role" ;
-    skos:definition "A Role that is borne by an Agent or Organization in virtue of having an interest in, or being affected by, an Organization's process, program, project, change initiative, or analytics effort." ;
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of having an interest in, or being affected by, the operations, strategy, processes, programs, or policies of a focal organization." ;
     rdfs:comment "Minted for the cross-cutting 'stakeholder' participant referenced across 13.2, 13.4, 13.7, 13.8, 13.9." .
 
 ex:TraineeRole a owl:Class ;

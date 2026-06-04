@@ -175,7 +175,7 @@ ex:SupplyChainPartnerRole a owl:Class ;
 ex:CustomerRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Customer Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of consuming, evaluating, or being targeted by a focal organization's products or services." ;
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of acquiring, consuming, contracting for, or being a target acquirer of the goods or services of a focal organization." ;
     rdfs:comment "Borne by the (organizational or individual) customer; recurs in customer-test and market-review processes (2.1.2.5, 2.3.2.2)." .
 
 # --- 2b. Capabilities ---

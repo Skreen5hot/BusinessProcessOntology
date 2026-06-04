@@ -648,7 +648,7 @@ ex:SalesTrainingMaterial a owl:Class ; rdfs:subClassOf cco:ont00000853 ,
 
 ex:CustomerRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Customer Role" ;
-    skos:definition "A Role that is borne by an Agent or Organization in virtue of purchasing or being marketed an organization's products or services." ;
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of acquiring, consuming, contracting for, or being a target acquirer of the goods or services of a focal organization." ;
     rdfs:comment "Borne by an independent continuant (the purchasing Agent/Organization)." .
 
 ex:ProspectiveCustomerRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;

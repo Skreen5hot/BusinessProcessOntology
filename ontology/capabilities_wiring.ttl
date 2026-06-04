@@ -1,0 +1,74 @@
+@prefix ex:   <http://example.org/apqc#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+
+# =====================================================================
+# capabilities_wiring.ttl  (v0.1.0)
+#
+# The process<->agent BRIDGE WIRING, harvested per APQC section by
+# scripts/harvest_caps_roles.py + scripts/derive_wiring.py (deterministic):
+#   ex:<cap>  ex:enablesProcess     ex:<proc>   (from the capability's realized-in)
+#   ex:<proc> ex:requiresCapability ex:<cap>    (derived inverse -- PHASE1 decision ii)
+#   ex:<proc> ex:requiresRole       ex:<role>   (from the role bearer -> process participant triad)
+# plus role ENRICHMENT co-anchors under the correct CCO role subclass.
+#
+# This is an OVERLAY: it references class IRIs declared in the self-contained
+# slices (ex:P*, ex:*Capability, ex:*Role) and is validated against the
+# PROCESS GRAPH (slices + CCO) -- the coherence test family (C5-C7). The
+# self-contained slices do not import it; it is merged only at corpus-check
+# + dispatch time. The foundation module (capabilities_roles.ttl) stays
+# self-validating (structural C1-C4, module + CCO).
+#
+# Role enrichment taxonomy (refines PHASE1 §6 "Occupation/Authority"):
+#   Authority Role  cco:ont00000187  -- gate/approval/regulatory authority (deontic seam)
+#   Occupation Role cco:ont00000984  -- employed positions
+#   Contractor Role cco:ont00000506  -- externally engaged providers under contract
+#   (relational / party roles -- customer, competitor, partner, stakeholder --
+#    have NO precise CCO parent and are LEFT at bare obo:BFO_0000023; forcing
+#    them under Occupation Role would falsely assert employment.)
+#
+# CCO pin: v2.0 (2024-11-06).
+# =====================================================================
+
+<http://example.org/apqc/capabilities/wiring> a owl:Ontology ;
+    dct:title "APQC Phase 1: capability/role bridge wiring (harvested overlay)" ;
+    owl:versionInfo "0.1.0" ;
+    rdfs:comment "Per-section requiresCapability / requiresRole / enablesProcess wiring + role enrichment co-anchors, derived from the slices' existing realized-in and bearer/participant restrictions. Merge-only overlay over the self-contained slices." .
+
+# =====================================================================
+# SECTION 1 -- Develop Vision and Strategy
+#   requiresCapability: 2   requiresRole: 10   enrichment: 3 occupation + 1 contractor
+#   capability scope-gaps (no realized-in; enablesProcess needs a judged scope):
+#     ex:CustomerExperienceManagementCapability, ex:StrategicPlanningCapability
+# =====================================================================
+
+# --- enablesProcess (capability -> process, from realized-in) ---
+ex:BusinessModelGovernanceCapability ex:enablesProcess ex:P20955 .
+ex:CompetitiveAnalysisCapability ex:enablesProcess ex:P19945 .
+
+# --- requiresCapability (process -> capability, derived inverse) ---
+ex:P19945 ex:requiresCapability ex:CompetitiveAnalysisCapability .
+ex:P20955 ex:requiresCapability ex:BusinessModelGovernanceCapability .
+
+# --- requiresRole (process -> role, from bearer/participant triad) ---
+ex:P10024 ex:requiresRole ex:SeniorManagerRole .
+ex:P10030 ex:requiresRole ex:SeniorManagerRole .
+ex:P10035 ex:requiresRole ex:StrategyPersonnelRole .
+ex:P10036 ex:requiresRole ex:StrategyPersonnelRole .
+ex:P10046 ex:requiresRole ex:StakeholderRole .
+ex:P10052 ex:requiresRole ex:StrategyPersonnelRole .
+ex:P10059 ex:requiresRole ex:SeniorManagerRole .
+ex:P18916 ex:requiresRole ex:StakeholderRole .
+ex:P19945 ex:requiresRole ex:CompetitiveIntelligenceAnalystRole .
+ex:P19977 ex:requiresRole ex:StakeholderRole .
+
+# --- role enrichment co-anchors (correct CCO role subclass) ---
+# (relational roles left bare: ex:BusinessUnitRole, ex:CompetitorRole,
+#  ex:CustomerRole, ex:PartnerRole, ex:StakeholderRole)
+ex:CompetitiveIntelligenceAnalystRole rdfs:subClassOf cco:ont00000984 .   # occupation
+ex:ProfessionalServicesProviderRole rdfs:subClassOf cco:ont00000506 .     # contractor
+ex:SeniorManagerRole rdfs:subClassOf cco:ont00000984 .                    # occupation
+ex:StrategyPersonnelRole rdfs:subClassOf cco:ont00000984 .                # occupation

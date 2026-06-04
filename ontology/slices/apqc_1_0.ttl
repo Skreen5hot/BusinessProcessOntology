@@ -130,13 +130,13 @@ ex:designatesProcessType a owl:AnnotationProperty ;
 ex:CustomerRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Customer Role" ;
-    skos:definition "A Role that is borne by an Agent or Organization in virtue of acquiring, or being a target acquirer of, the products or services of a focal organization." ;
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of acquiring, consuming, contracting for, or being a target acquirer of the goods or services of a focal organization." ;
     rdfs:comment "Minted because CCO 2.0 has no Customer class/role. Borne by an independent continuant (the buying Agent/Organization), never by the customer-profile ICE that is about it." .
 
 ex:StakeholderRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Stakeholder Role" ;
-    skos:definition "A Role that is borne by an Agent or Organization in virtue of having an interest in, or being affected by, the operations and strategy of a focal organization." ;
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of having an interest in, or being affected by, the operations, strategy, processes, programs, or policies of a focal organization." ;
     rdfs:comment "Minted because CCO 2.0 has no Stakeholder class/role. Superset of customer, partner, and regulator relations relative to a focal organization." .
 
 ex:SeniorManagerRole a owl:Class ;

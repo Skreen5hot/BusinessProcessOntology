@@ -1,4 +1,5 @@
 [
- {"agent_id":"agent.market_analysis.v1","capabilities":["ex:CompetitiveAnalysisCapability"],"roles":["ex:MarketAnalystRole"]},
+ {"agent_id":"agent.market_analysis.v1","capabilities":["ex:CompetitiveAnalysisCapability"],"roles":["ex:MarketAnalystRole","ex:CompetitiveIntelligenceAnalystRole"]},
+ {"agent_id":"agent.strategy_lead.v1","capabilities":["ex:StrategicPlanningCapability"],"roles":["ex:StrategyPersonnelRole","ex:SeniorManagerRole"]},
  {"agent_id":"agent.planner.v1","capabilities":["ex:PlanAuthoringCapability"],"roles":["ex:PlannerRole"]}
 ]

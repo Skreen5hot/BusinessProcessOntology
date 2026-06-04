@@ -8,9 +8,9 @@ set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 INPUTS=""
-for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl ontology/capabilities_roles.ttl ontology/delivery_processes.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
+for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl ontology/capabilities_roles.ttl ontology/delivery_processes.ttl ontology/capabilities_wiring.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
   INPUTS="$INPUTS --input $f"
 done
-echo "Merging 13 slices + ext + catalog + capability layer + CCO; reasoning with ELK..."
+echo "Merging 13 slices + ext + catalog + capability layer (roles+delivery+wiring) + CCO; reasoning with ELK..."
 java -jar tools/robot.jar merge $INPUTS reason --reasoner ELK --output ontology/reports/_corpus_reasoned.ttl
 echo "EXIT $?  (0 = consistent, no unsatisfiable classes)"

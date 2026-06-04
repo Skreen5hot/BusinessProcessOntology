@@ -216,7 +216,7 @@ ex:ManagerRole a owl:Class ;
 ex:StakeholderRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
     rdfs:label "Stakeholder Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of being able to affect or be affected by an organization's HR actions, objectives, and policies." .
+    skos:definition "A Role that is borne by an Agent or Organization in virtue of having an interest in, or being affected by, the operations, strategy, processes, programs, or policies of a focal organization." .
 
 ex:RecruitmentVendorRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
