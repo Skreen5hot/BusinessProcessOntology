@@ -1,5 +1,14 @@
 [
  {"agent_id":"agent.market_analysis.v1","capabilities":["ex:CompetitiveAnalysisCapability"],"roles":["ex:MarketAnalystRole","ex:CompetitiveIntelligenceAnalystRole"]},
  {"agent_id":"agent.strategy_lead.v1","capabilities":["ex:StrategicPlanningCapability"],"roles":["ex:StrategyPersonnelRole","ex:SeniorManagerRole"]},
- {"agent_id":"agent.planner.v1","capabilities":["ex:PlanAuthoringCapability"],"roles":["ex:PlannerRole"]}
+ {"agent_id":"agent.planner.v1","capabilities":["ex:PlanAuthoringCapability"],"roles":["ex:PlannerRole"]},
+ {"agent_id":"agent.product_designer.v1","capabilities":["ex:DesignCapability","ex:ResearchAndDevelopmentCapability"],"roles":["ex:DesignStaffRole","ex:ResearchAndDevelopmentRole"]},
+ {"agent_id":"agent.marketing.v1","capabilities":["ex:MarketingManagementCapability"],"roles":["ex:MarketingProfessionalRole"]},
+ {"agent_id":"agent.sales.v1","capabilities":["ex:SalesManagementCapability"],"roles":["ex:SalesProfessionalRole"]},
+ {"agent_id":"agent.supply_chain.v1","capabilities":["ex:SupplyChainManagementCapability"],"roles":["ex:ManagerRole"]},
+ {"agent_id":"agent.customer_service.v1","capabilities":["ex:CustomerServiceCapability"],"roles":["ex:CustomerServiceRepresentativeRole"]},
+ {"agent_id":"agent.hr.v1","capabilities":["ex:HumanCapitalManagementCapability"],"roles":["ex:HumanResourcesProfessionalRole"]},
+ {"agent_id":"agent.finance.v1","capabilities":["ex:FinancialManagementCapability","ex:AccountingCapability"],"roles":["ex:AccountantRole"]},
+ {"agent_id":"agent.it_ops.v1","capabilities":["ex:ITInfrastructureManagementCapability"],"roles":["ex:EnterpriseArchitectRole"]},
+ {"agent_id":"agent.risk.v1","capabilities":["ex:EnterpriseRiskManagementCapability"],"roles":["ex:RiskManagerRole"]}
 ]

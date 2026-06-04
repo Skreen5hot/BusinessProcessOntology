@@ -69,45 +69,49 @@ Full table in methodology §6 and `src/apqc_transform/config.py` (`CCO` dict). H
 `1986` has output · `1808` is about. BFO: `0000015` process · `0000040` material entity ·
 `0000017` realizable entity · `0000023` role · `0000054` realized in · `0000196` bearer of.
 
-## CURRENT PHASE — capability/role module (`capabilities_roles.ttl`)
+## CURRENT PHASE — capability/role bridge **DELIVERED** (`ontology/capabilities_*.ttl`)
 
-**Authoritative brief: `PHASE1.md`.** A validated **v0.1.0 seed** exists in `capabilities/`
-(`capabilities_roles.ttl`, `capabilities_roles_shapes.ttl` with 7 shapes C1–C7, `agents.json`);
-the next build is a **daemon** that generalizes it to the full corpus. Governing distinction:
-**Capability** (`cco:ont00001379` Agent Capability — competence, feasibility filter) ≠ **Role**
-(`obo:BFO_0000023`; reuse `cco:ont00000984` Occupation / `cco:ont00000187` Authority) ≠ **Process**.
-Matching is **species-satisfies-genus** (`subClassOf*`). Key fact: **`568 ⊑ 1379`**, so the slice
-Organization Capabilities already reach Agent Capability — match on "reaches 1379," leave slices
-untouched. `AuthorRoadmap`/`AuthorImplementationPlan` are delivery-process universals that **don't
-exist yet** and need a home. Permissions (`cco:ont00000751`) are RDM/IEE's to author (the seam is
-stubbed). See `PHASE1.md` §9 for the daemon directions and the four gating decisions.
+**Authoritative brief: `PHASE1.md`.** The process→agent dispatch bridge is built and validated
+across all 13 sections. Governing distinction: **Capability** (`cco:ont00001379` Agent Capability —
+competence, feasibility filter) ≠ **Role** (`obo:BFO_0000023`) ≠ **Process**. Matching is
+**species-satisfies-genus** (`subClassOf*`); **`568 ⊑ 1379`** so slice Organization Capabilities
+already reach Agent Capability (match on "reaches 1379," slices left at 568). The four gating
+decisions were settled: (i) leave slice caps at 568; (ii) author `ex:enablesProcess`, **derive**
+`ex:requiresCapability`; (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
+capability layer is a **merge-only shared overlay** (no slice imports it).
 
-The process→agent bridge. Today, capabilities and roles are declared **per-slice and scattered**:
-**111 `*Capability`** classes (⊑ `cco:ont00000568` Organization Capability; base `ex:Capability`) and
-**87 `*Role`** classes (⊑ `obo:BFO_0000023` Role). 10 of them recur across slices (e.g. `CustomerRole`
-in 7 slices, `SupplierRole`/`RegulatoryAuthorityRole` in 4) — duplicated, not shared.
+**Artifacts (in `ontology/`):**
+- `capabilities_roles.ttl` — foundation: `ex:Capability`/`ex:Role` markers; `ex:enablesProcess`/
+  `ex:bearsPermission` (annotation) + `ex:requiresCapability`/`ex:requiresRole`/`ex:requiresPermission`
+  (object properties — range enforced by SHACL C5–C7, **not** `rdfs:range`, to avoid forcing
+  entailments into the merged corpus). `requiresPermission` seam declared but **unpopulated** (RDM/IEE
+  owns the permission catalogue, `cco:ont00000751`).
+- `delivery_processes.ttl` — `AuthorRoadmap`/`AuthorImplementationPlan` (⊑ `ex:ActOfFormulation`) +
+  `ApproveImplementationPlan` gate act. (The "agile-loop" set PHASE1 §6b cites does not exist in the
+  methodology, which ends at §12; left as a scope note, not invented.)
+- `capabilities_roles_shapes.ttl` — C1–C7. `capabilities_wiring.ttl` — **generated** merge-only overlay:
+  354 `requiresCapability` + 197 `requiresRole` + 197 `enablesProcess` + 62 role enrichment anchors.
 
-Existing wiring: an Organization **has capability** (`cco:ont00001954`) some `*Capability`; a capability
-is **realized in** (`obo:BFO_0000054`) the acts that perform it (R6); an Agent **bears** (`obo:BFO_0000196`)
-a `*Role`. **S7** (`NoRoleInGDCShape`) forbids an ICE/GDC from bearing a role — roles inhere only in
-independent continuants (Agent/Organization).
+**Pipeline (deterministic, reproducible):** `scripts/harvest_caps_roles.py` (manifest) →
+`scripts/derive_wiring.py` (heuristic draft) → judgment tables `capabilities/role_anchors.json` +
+`capabilities/capability_scope.json` → `scripts/assemble_wiring.py` (regenerates the wiring; **edit
+the tables, not the ttl**) → `scripts/validate_caps.py` (C1–C7) + `scripts/matchability.py`
+(routability + coverage-gap report) + `corpus_check.sh` (ELK).
 
-New in this phase (do **not** exist yet — grep confirms zero occurrences):
-`ex:requiresCapability` and `ex:requiresRole` — object properties on **process** classes pointing at
-capability/role classes. The registry maps to the new module.
+**Role enrichment taxonomy** (refines the brief's blunt "Occupation/Authority"): Authority `187`
+(deontic seam — 4 roles: Regulatory/Regulator/GovernmentBody/CertificationAuthority) / Occupation
+`984` (44) / Contractor `506` (6) / **relational-party left bare** `BFO_0000023` (33 — customer,
+competitor, partner, stakeholder, supplier, board, function roles; CCO has no parent, forcing
+Occupation would falsely assert employment). All 87 distinct roles classified; all 10 cross-slice
+recurrences converged to one canonical definition each.
 
-Decisions the phase must settle (none decided yet):
-1. **Consolidation** — does `capabilities_roles.ttl` become the single home for the 198 capability/role
-   classes (slices reference it), or a shared layer alongside the still-self-contained slices? How does
-   this interact with the no-`owl:imports` self-containment rule and Gate-C-without-CCO?
-2. **Property semantics** — domain/range of `requiresCapability` (process → Organization Capability)
-   and `requiresRole` (process → Role); relation to the existing `has capability` / `realized in` /
-   `bearer of` wiring (a `requires*` is a TBox necessity on the universal, distinct from the ABox
-   realization). Watch OWL-DL / SHACL implications.
-3. **Dedup + harmonization** — the 10 recurring roles/capabilities need one canonical definition
-   (same lesson as the shared-class harmonization above).
-4. **Validation** — extend the Gate-C shapes (a `requires*` analogue of S2/S3 anchoring) and re-run
-   `corpus_check.sh` after each change.
+**Validate the layer:** `python scripts/validate_caps.py` (C1–C7 zero violations) ·
+`python scripts/matchability.py` (12-agent fleet: 60 routable / 385 gaps over 445 required processes) ·
+`bash scripts/corpus_check.sh` EXIT 0 (now merges the capability layer + wiring).
+
+**Remaining / handoff:** 6 standing capabilities have no scopeable process (honest gaps); the 12-agent
+`agents.json` is a representative demo fleet, not a real roster; `requiresPermission` + the RDM/IEE
+permission catalogue are future work.
 
 ## Open decisions from v0.3.0 (non-blocking, may resurface here)
 
