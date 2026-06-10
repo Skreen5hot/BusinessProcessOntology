@@ -101,6 +101,26 @@ ex:PlanAuthoringCapability a owl:Class ;
     skos:definition "Competence to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance criteria." ;
     ex:enablesProcess ex:AuthorRoadmap , ex:AuthorImplementationPlan .
 
+# ---- Process-Contract participant capabilities (FNSR factory; see delivery_processes.ttl) ----
+
+ex:CodeImplementationCapability a owl:Class ;
+    rdfs:subClassOf ex:Capability ;
+    rdfs:label "Code implementation capability" ;
+    skos:definition "An Agent Capability that enables its bearer to implement a planned module as a working code change set." ;
+    ex:enablesProcess ex:ImplementPhase .
+
+ex:ArchitectureCapability a owl:Class ;
+    rdfs:subClassOf ex:Capability ;
+    rdfs:label "Architecture capability" ;
+    skos:definition "An Agent Capability that enables its bearer to author a build's structural plan: its module boundaries, exported interfaces, and layering." ;
+    ex:enablesProcess ex:AuthorArchitecture .
+
+ex:EvaluationCapability a owl:Class ;
+    rdfs:subClassOf ex:Capability ;
+    rdfs:label "Evaluation capability" ;
+    skos:definition "An Agent Capability that enables its bearer to evaluate an artifact against its acceptance criteria." ;
+    ex:enablesProcess ex:EvaluateOutput .
+
 # =====================================================================
 # ROLES  (reuse CCO role taxonomy: Occupation Role / Authority Role)
 # =====================================================================
@@ -119,6 +139,21 @@ ex:PlannerRole a owl:Class ;
     rdfs:subClassOf ex:Role , cco:ont00000984 ;
     rdfs:label "Planner role" ;
     skos:definition "The occupation role of an agent producing planning documents in a delivery loop." .
+
+ex:DeveloperRole a owl:Class ;
+    rdfs:subClassOf ex:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Developer role" ;
+    skos:definition "The occupation role of an agent implementing planned modules as code change sets." .
+
+ex:ArchitectRole a owl:Class ;
+    rdfs:subClassOf ex:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Architect role" ;
+    skos:definition "The occupation role of an agent authoring and reviewing a build's structural decisions." .
+
+ex:EvaluatorRole a owl:Class ;
+    rdfs:subClassOf ex:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Evaluator role" ;
+    skos:definition "The occupation role of an agent evaluating artifacts against their acceptance criteria." .
 
 ex:ApproverRole a owl:Class ;
     rdfs:subClassOf ex:Role , cco:ont00000187 ;   # Authority Role
