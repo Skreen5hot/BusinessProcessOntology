@@ -38,7 +38,7 @@ def q(u: str) -> str:
 
 # CCO anchor ids that mark an ICE (for kind=ice classification, no closure needed)
 ICE_ANCHORS = {"cco:ont00000958", "cco:ont00000853", "cco:ont00000965", "cco:ont00000626",
-               "cco:ont00000686", "cco:ont00001163", "cco:ont00000537"}
+               "cco:ont00000686", "cco:ont00001163", "cco:ont00000537", "cco:ont00000974"}
 AGENT_ANCHORS = {"cco:ont00001017", "cco:ont00001180", "cco:ont00000300"}
 CAP_ANCHORS = {"cco:ont00001379", "cco:ont00000568"}
 
@@ -56,21 +56,24 @@ def main() -> int:
         ("apqc-ext.ttl", "apqc-catalog.ttl", "capabilities_roles.ttl",
          "delivery_processes.ttl", "capabilities_wiring.ttl")]
 
-    # 1) wiring (from the merged wiring overlay) keyed by process / capability
-    wiring = rdflib.Graph(); wiring.parse(str(ROOT / "ontology" / "capabilities_wiring.ttl"), format="turtle")
+    # 1) parse every module once; collect requires*/enablesProcess wiring from ALL of
+    #    them (capabilities_wiring.ttl AND delivery_processes.ttl AND any slice), so the
+    #    wiring column reflects every authored direction, not just the harvest overlay.
+    graphs = []
     req_cap = collections.defaultdict(list); req_role = collections.defaultdict(list)
     enables = collections.defaultdict(list)
-    for s, _, o in wiring.triples((None, URIRef(EX + "requiresCapability"), None)):
-        req_cap[q(str(s))].append(q(str(o)))
-    for s, _, o in wiring.triples((None, URIRef(EX + "requiresRole"), None)):
-        req_role[q(str(s))].append(q(str(o)))
-    for s, _, o in wiring.triples((None, URIRef(EX + "enablesProcess"), None)):
-        enables[q(str(s))].append(q(str(o)))
+    for f in files:
+        g = rdflib.Graph(); g.parse(f, format="turtle")
+        graphs.append((section_of(f), g))
+        for s, _, o in g.triples((None, URIRef(EX + "requiresCapability"), None)):
+            req_cap[q(str(s))].append(q(str(o)))
+        for s, _, o in g.triples((None, URIRef(EX + "requiresRole"), None)):
+            req_role[q(str(s))].append(q(str(o)))
+        for s, _, o in g.triples((None, URIRef(EX + "enablesProcess"), None)):
+            enables[q(str(s))].append(q(str(o)))
 
     rows = {}            # iri -> row dict (dedup across files; first definition wins)
-    for f in files:
-        sec = section_of(f)
-        g = rdflib.Graph(); g.parse(f, format="turtle")
+    for sec, g in graphs:
         for s in set(g.subjects(RDF.type, OWL.Class)) | set(g.subjects(RDF.type, OWL.NamedIndividual)) \
                 | set(g.subjects(RDF.type, OWL.AnnotationProperty)) | set(g.subjects(RDF.type, OWL.ObjectProperty)):
             if not isinstance(s, URIRef) or not (str(s).startswith(EX) or str(s).startswith(PERF)):
@@ -95,10 +98,10 @@ def main() -> int:
                 kind = "capability"
             elif ln.endswith("Role") or "ex:Role" in parents:
                 kind = "role"
-            elif pcf:
-                kind = "process"
             elif ln.startswith("ActOf"):
                 kind = "act-genus"
+            elif pcf or any(p.startswith("ex:ActOf") for p in parents):
+                kind = "process"
             elif set(parents) & ICE_ANCHORS:
                 kind = "ice"
             elif set(parents) & AGENT_ANCHORS:
