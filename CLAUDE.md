@@ -17,6 +17,15 @@ decision), `RELEASE_NOTES.md` (v0.3.0 state), `PHASE0.md` (repo/daemon setup).
   registry `ontology/apqc-ext.ttl` (the D9 single source of truth, mirrored into slices). No
   `owl:imports`; every slice validates standalone against the pinned CCO/BFO closure.
 
+## Navigating the corpus — grep the index, don't read whole slices
+
+`ontology/index/corpus_index.tsv` is a generated, greppable index of every `ex:`/`perf:` term
+(iri · kind · section · hierarchy · pcf · label · parents · requires*/enables wiring · definition).
+**Prefer `grep -i "<label>" ontology/index/corpus_index.tsv` over `Read`-ing a 3,000-line slice** —
+it returns only matching rows (far fewer tokens). Regenerate after ANY corpus change:
+`python scripts/build_index.py` (see `ontology/index/README.md`). For CCO terms, grep
+`vendor/cco/CommonCoreOntologiesMerged.ttl` (the D6 verify-before-assert source).
+
 ## Validation — ALWAYS run before committing a slice change
 
 ```
