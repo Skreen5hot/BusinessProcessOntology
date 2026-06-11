@@ -71,12 +71,12 @@ ex:ActOfVerification a owl:Class ;
 #   JudgeVerdict -> Descriptive ICE 853 (a verdict describes an outcome; appraisal->descriptive)
 # =====================================================================
 
-ex:Roadmap a owl:Class ;
+ex:RoadmapPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Roadmap" ;
     skos:definition "A Directive Information Content Entity that lays out, in phases over time, the intended sequence of outcomes and the work to reach them." .
 
-ex:ImplementationPlan a owl:Class ;
+ex:ImplementationPlanArtifact a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Implementation plan" ;
     skos:definition "A Directive Information Content Entity that prescribes the concrete tasks, owners, and falsifiable acceptance criteria by which a roadmap phase is to be delivered." .
@@ -102,7 +102,7 @@ ex:JudgeVerdict a owl:Class ;
 
 ex:AuthorRoadmap a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:Roadmap ] ;   # has output
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:RoadmapPlan ] ;   # has output
     rdfs:label "Author roadmap" ;
     skos:definition "An Act of Formulation in which a planning agent composes a phased roadmap from a normative specification." ;
     ex:routable true ;
@@ -111,7 +111,7 @@ ex:AuthorRoadmap a owl:Class ;
 
 ex:AuthorImplementationPlan a owl:Class ;
     rdfs:subClassOf ex:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ImplementationPlan ] ;   # has output
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:ImplementationPlanArtifact ] ;   # has output
     rdfs:label "Author implementation plan" ;
     skos:definition "An Act of Formulation in which a planning agent composes a tactical implementation plan, with falsifiable acceptance criteria, for a roadmap phase." ;
     ex:routable true ;
