@@ -435,7 +435,7 @@ The loop (ABox) — corrected genera in action
       ActionRecord
   ex:PmObservation-SiteA-2026-06  follow-up (+ corrective-rate, downtime observations)
   ex:PmLearningReviewAct-SiteA (Act of Appraisal) inputs ActionRecord + follow-ups → LearningRecord
-```
+```   
 
 The corrected patterns: each act anchors to a verified/existing genus agreeing with its output; the
 observation is about the **process individual** (not `ex:PCF_19238`); the individual instantiates a
