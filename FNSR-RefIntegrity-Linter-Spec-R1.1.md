@@ -1,4 +1,4 @@
-# FNSR Referential-Integrity Linter — Spec R1.0
+# FNSR Referential-Integrity Linter — Spec R1.1
 
 A small, offline linter that closes the gap the IRI_Linter bake-off proved empirically: a dangling
 `ex:NonexistentCapability` reference passes **both** the IRI_Linter (CCO-only) **and** Gate B
@@ -24,6 +24,15 @@ snapshot-forward, and edit-tolerant `before_match` on a real model, while the to
 (reads local files only; no network), safe under an `accept_unenforced` grant.
 
 The key words **MUST**, **SHALL**, **MUST NOT**, **SHOULD**, **MAY** are per RFC 2119.
+
+**R1.1 (from R1.0, empirical hardening).** The first corpus run of the as-built linter (the dangling-ref
+core + a partial scheme check) over the live BPO corpus, post-build, returned `dangling_ref 0` and
+`capability-as-process 39` — both exactly right — but `pcf-without-P-iri` produced **1,921 false
+positives**: every catalog `ex:PCF_<id>` node, which is an `owl:NamedIndividual` using the *correct*
+catalog scheme yet carries `ex:pcfID`. R1.1 closes that hole with a precision edit (no new capability,
+in the spirit of the IRI_Linter spec's R1.1/R1.2): **FR-12** now restricts both scheme rules to
+`owl:Class` subjects (the catalog individuals are exempt), and **FR-18** states the exact falsifiable
+baseline — `dangling_ref 0 · readable_label 0 · capability-as-process 39 · pcf-without-P-iri 0`.
 
 **Deliberate departure from R1.2.** The IRI_Linter is lexical-only, single-file, and browser-runnable
 (R1.2 §1.3, §9.1). This tool operates over the **merged set** of corpus modules and **MAY** use an RDF
@@ -120,14 +129,20 @@ build loop prefers JS, provided it meets the language-neutral acceptance criteri
   register holds a matching normalized alias (R1.2 FR-13) — **MUST** append the suggested opaque IRI
   (`cco:has_output -> cco:ont00001986`). CCO/OBO **existence** remains Gate B's responsibility; this is a
   superior *diagnostic*, not a replacement (the two compose).
-- **FR-12 (§5.2) — D7 scheme conformance.** `flag_extra` **MUST** flag as `scheme_violation`, with a
-  `rule` field:
-  - **`capability-as-process`** — a declared `ex:` **Process IRI** (`^P\d+$` + `ex:pcfID`) that is also
-    `rdfs:subClassOf cco:ont00000568` (Organization Capability): a capability wearing a process IRI (the
-    39 cases the index found);
-  - **`pcf-without-P-iri`** — a declared `ex:` class that bears `ex:pcfID` but whose local name is **not**
-    `P<pcfID>` and which is **not** a capability/supporting class (the inverse D7 slip
-    `scripts/normalize_iris.py` repairs).
+- **FR-12 (§5.2) — D7 scheme conformance.** Both scheme rules apply **only to subjects typed
+  `owl:Class`** — a subject typed `owl:NamedIndividual` (or `skos:Concept`) is **MUST NOT** be a
+  `scheme_violation`, because the catalog layer's `ex:PCF_<pcfID>` nodes are individuals that
+  legitimately carry `ex:pcfID` and use the **correct** catalog scheme; flagging them is a false
+  positive (R1.0 empirical: 1,921 catalog nodes were wrongly flagged when this restriction was
+  omitted). `flag_extra` **MUST** flag as `scheme_violation`, with a `rule` field:
+  - **`capability-as-process`** — a declared `ex:` `owl:Class` **Process IRI** (`^P\d+$` + `ex:pcfID`)
+    that is also `rdfs:subClassOf cco:ont00000568` (Organization Capability): a capability wearing a
+    process IRI (the 39 cases the index found);
+  - **`pcf-without-P-iri`** — a declared `ex:` `owl:Class` that bears `ex:pcfID`, is **not**
+    `⊑ cco:ont00000568`, and whose local name is **not** `P<pcfID>` (the inverse D7 slip
+    `scripts/normalize_iris.py` repairs). **The `ex:PCF_<pcfID>` catalog scheme is exempt** (those are
+    `owl:NamedIndividual`s, already excluded by the `owl:Class`-only restriction above). Over the
+    current corpus this rule's count is **0** (every process class is already `ex:P<pcfID>`).
 - **FR-13 (§5.3)** The label/scheme rules **MUST** be added by **editing** `resolve` and the report
   formatting — not replacing them. The `dangling_ref` detection (FR-8/FR-9) **MUST** continue to pass
   after this edit (regression).
@@ -162,10 +177,15 @@ build loop prefers JS, provided it meets the language-neutral acceptance criteri
 - **FR-18 (§7.3) — clean / corpus baseline.** Run over the **live merged corpus** (the current module
   set), the linter **MUST** report **zero `dangling_ref`** (referential integrity holds — the overlays'
   `ex:P…`/capability/role references all resolve) and **zero `readable_label`** (proven by the bake-off).
-  `scheme_violation` over the live corpus **MUST** equal the known baseline of **39**
-  (`capability-as-process`); the test asserts that exact count so a regression (a new mis-IRI'd class, or
-  a silent fix) is visible. Exit `1` while the 39 stand (they are real findings); exit `0` once they are
-  resolved or explicitly waived.
+  `scheme_violation` over the live corpus **MUST** total exactly **39**, all
+  `rule = capability-as-process`, and **0** `pcf-without-P-iri` (every process class is already
+  `ex:P<pcfID>`, and the 1,921 catalog `ex:PCF_<id>` individuals are exempt per FR-12). The test asserts
+  these exact counts so a regression (a new mis-IRI'd class, a silent fix, or a catalog false positive
+  resurfacing) is visible. **R1.0 empirical (this corpus):** `dangling_ref 0`, `readable_label 0`,
+  `capability-as-process 39`, `pcf-without-P-iri 0` once the FR-12 `owl:Class` restriction is applied
+  (the as-built linter reported 1,921 false `pcf-without-P-iri` on catalog individuals — the fix is the
+  FR-12 restriction, not a corpus change). Exit `1` while the 39 stand (real findings); exit `0` once
+  they are resolved or explicitly waived.
 
 ## §8 Delivery plan (structural backbone)
 
