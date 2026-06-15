@@ -14,3 +14,7 @@ done
 echo "Merging 13 slices + ext + catalog + capability layer (roles+delivery+wiring) + CCO; reasoning with ELK..."
 java -jar tools/robot.jar merge $INPUTS reason --reasoner ELK --output ontology/reports/_corpus_reasoned.ttl
 echo "EXIT $?  (0 = consistent, no unsatisfiable classes)"
+
+echo
+echo "Gate F -- referential integrity + D7 scheme (vendored RefIntegrity linter; needs node)..."
+python scripts/refintegrity_check.py

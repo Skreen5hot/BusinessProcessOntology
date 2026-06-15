@@ -30,13 +30,19 @@ it returns only matching rows (far fewer tokens). Regenerate after ANY corpus ch
 
 ```
 PYTHONPATH=src python -m apqc_transform.validate ontology/slices/apqc_N_0.ttl   # Gates A–D
-bash scripts/corpus_check.sh        # merge all 13 + ext + catalog + CCO, reason with ELK
+bash scripts/corpus_check.sh        # ELK over 13 slices + ext + catalog + capability layer + CCO, then Gate F
 python scripts/consistency_audit.py # cross-slice anchor / drift audit
 ```
 
 - **Gate A** rdflib parse · **B** every `cco:`/`obo:` IRI resolves in vendored closure ·
   **C** SHACL (`ontology/apqc_shapes.ttl`, shapes S1–S8), zero violations ·
   **D** ELK reasoner (`tools/robot.jar`), no unsatisfiable classes.
+- **Gate F** (`scripts/refintegrity_check.py`, run by `corpus_check.sh`) — `ex:`/`perf:` **referential
+  integrity** (every reference resolves to a declared term) + **D7 scheme** conformance, via the
+  vendored RefIntegrity linter (`tools/refintegrity/`, needs `node`; SKIPs if absent). Asserts the
+  FR-18 baseline: `dangling_ref 0 · readable_label 0 · capability-as-process 39 · pcf-without-P-iri 0`
+  — the 39 (capabilities wearing `ex:P<id>` IRIs, `⊑568`) are a tracked backlog, so a **deviation**
+  fails, not the known 39. Update `BASELINE` in the script deliberately if the corpus changes.
 - **Gate C does NOT merge CCO** — it validates the slice alone. Each slice's
   `# 1b. CCO SUPERCLASS BRIDGES` block locally asserts the chains the shapes need offline
   (e.g. `371⊑228`, `626⊑853`). This is why a class anchored to an out-of-allowlist CCO term still
