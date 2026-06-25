@@ -1,0 +1,89 @@
+# Publish the Business Process Ontology docs site to GitHub Pages.
+#
+# The site GENERATOR is jonathanvajda/ontology-webhost-template (GPL-2.0). To keep
+# this repository purely MIT, that tool is NOT vendored -- it is checked out at a
+# pinned commit and used only at build time (using a GPL tool to build does not
+# place this repo or the generated output under the GPL, the same way compiling
+# with GCC does not). The MIT-licensed inputs (ontology-site.yml, qa/queries/**,
+# docs/patterns/**, this workflow) live here; nothing GPL is committed.
+name: Publish ontology site
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  WEBHOST_REPO: jonathanvajda/ontology-webhost-template
+  WEBHOST_REF: 61821cae5d2e27031e4fd59eccdfa03cf0bb91dc   # pinned; bump deliberately
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out this repository (MIT)
+        uses: actions/checkout@v4
+
+      - name: Check out the site generator (GPL-2.0, build-time tool, pinned)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ env.WEBHOST_REPO }}
+          ref: ${{ env.WEBHOST_REF }}
+          path: webhost-tool
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install docs dependencies
+        run: pip install -r requirements-docs.txt
+
+      - name: Pull ROBOT image
+        run: docker pull obolibrary/robot:latest
+
+      - name: Translate QA profile to ROBOT verify commands
+        run: python webhost-tool/scripts/run_robot_qa.py --config ontology-site.yml --write-script build/qa/run_robot_queries.sh
+
+      - name: Show ROBOT verify commands
+        run: cat build/qa/run_robot_queries.sh
+
+      - name: Run SPARQL QA with ROBOT verify (non-blocking)
+        run: docker run --rm -v "$PWD:/work" -w /work obolibrary/robot:latest sh build/qa/run_robot_queries.sh
+
+      - name: Summarize ontology QA
+        run: python webhost-tool/scripts/run_robot_qa.py --config ontology-site.yml --summarize-only --no-fail
+
+      - name: Generate MkDocs pages
+        run: python webhost-tool/scripts/generate_ontology_site.py --config ontology-site.yml
+
+      - name: Build MkDocs site
+        run: mkdocs build --strict
+
+      - name: Upload Pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

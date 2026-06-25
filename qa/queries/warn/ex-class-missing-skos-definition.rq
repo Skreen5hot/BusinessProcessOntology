@@ -1,0 +1,11 @@
+# QA (warn): project-minted (ex:) classes that lack a skos:definition.
+# MIT-authored for the Business Process Ontology. Scoped to the ex: namespace so
+# it does not flag vendored CCO/BFO classes. Run by ROBOT verify (non-blocking).
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?entity WHERE {
+  ?entity a owl:Class .
+  FILTER(STRSTARTS(STR(?entity), "http://example.org/apqc#"))
+  FILTER NOT EXISTS { ?entity skos:definition ?def }
+}
+ORDER BY ?entity

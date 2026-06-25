@@ -1,0 +1,33 @@
+flowchart TB
+  subgraph UPPER["Upper ontology — BFO 2020 / CCO 2.0 (pinned)"]
+    Act["CCO Act genera (Analysis, Planning, Appraisal, ...)"]
+    ICE["cco:ICE - Descriptive 853 / Directive 965"]
+    BRole["bfo:Role - Occupation 984 / Authority 187"]
+    Cap["cco:Agent Capability 1379 / Org Capability 568"]
+    Agent["cco:Agent 1017"]
+  end
+
+  subgraph CAT["Catalog layer - APQC PCF (conceptual, lossless)"]
+    Concept["ex:PCF_id - skos:Concept + Descriptive ICE (1,921)"]
+  end
+
+  subgraph REAL["Reality layer - what the work IS (13 slices)"]
+    Proc["ex:P_id - process universal (~1,784)"]
+  end
+
+  subgraph DISP["Capability / Role dispatch bridge"]
+    ECap["ex:*Capability"]
+    ERole["ex:*Role"]
+    Fleet["agent (agents.json)"]
+  end
+
+  Concept -. "designatesProcessType (R4); R5 fails -> R6 capability" .-> Proc
+  Proc -->|subClassOf| Act
+  Proc -->|requiresCapability| ECap
+  Proc -->|requiresRole| ERole
+  ECap -->|enablesProcess| Proc
+  ECap -->|subClassOf 568/1379| Cap
+  ERole -->|subClassOf 984/187| BRole
+  Fleet -->|has capability| ECap
+  Fleet -->|bearer of| ERole
+  Fleet -->|subClassOf| Agent

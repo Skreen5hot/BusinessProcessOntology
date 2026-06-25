@@ -1,0 +1,388 @@
+# Generated config for the ontology docs site (edit freely; consumed by the
+# ontology-webhost-template generator fetched at CI -- see .github/workflows/static.yml).
+site:
+  name: Business Process Ontology
+  repo_url: https://github.com/Skreen5hot/BusinessProcessOntology
+  description: A BFO/CCO-compatible ontology of business processes based on the APQC Process Classification
+    Framework.
+metadata:
+  introduction: 'The Business Process Ontology (BPO) is a BFO-2020 / CCO-2.0 formalization of the APQC
+    Process Classification Framework (Cross-Industry, v7.4). Two layers (ADR-001): a lossless **catalog**
+    of every PCF element, and a **reality layer** of BFO process universals -- plus a **capability/role**
+    dispatch bridge that maps each process to the agents that can perform it. Every class is anchored
+    to a verified BFO/CCO term and validated (Gates A-F). Each module below has its own page, term table,
+    and Turtle download.'
+  license:
+    label: MIT
+    url: ../LICENSE
+  contacts:
+  - name: Aaron Damiano (maintainer)
+  users:
+  - name: Ontology engineers
+    website: https://github.com/Skreen5hot/BusinessProcessOntology
+  - name: Process & data analysts
+    website: https://github.com/Skreen5hot/BusinessProcessOntology
+generation:
+  output_dir: docs
+  generated_dir: docs/ontologies
+  artifact_dir: docs/artifacts
+  qa_results_dir: build/qa
+  fail_on_missing_ontology: true
+  term_table:
+    enabled: true
+    include_deprecated: false
+    include_imported_terms: false
+    types:
+    - owl:Class
+    - owl:ObjectProperty
+    - owl:NamedIndividual
+    - owl:DatatypeProperty
+    - owl:AnnotationProperty
+ontologies:
+- id: apqc_1
+  path: ontology/slices/apqc_1_0.ttl
+  page: apqc_1.md
+  artifact_label: APQC 1.0 - Develop Vision and Strategy
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 1.0, Develop Vision and Strategy.
+      Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities
+      (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_1_0.ttl
+  qa:
+    profile: default
+- id: apqc_2
+  path: ontology/slices/apqc_2_0.ttl
+  page: apqc_2.md
+  artifact_label: APQC 2.0 - Develop and Manage Products and Services
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 2.0, Develop and Manage Products and
+      Services. Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization
+      Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_2_0.ttl
+  qa:
+    profile: default
+- id: apqc_3
+  path: ontology/slices/apqc_3_0.ttl
+  page: apqc_3.md
+  artifact_label: APQC 3.0 - Market and Sell Products and Services
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 3.0, Market and Sell Products and
+      Services. Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization
+      Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_3_0.ttl
+  qa:
+    profile: default
+- id: apqc_4
+  path: ontology/slices/apqc_4_0.ttl
+  page: apqc_4.md
+  artifact_label: APQC 4.0 - Manage Supply Chain (Deliver Physical Products)
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 4.0, Manage Supply Chain (Deliver
+      Physical Products). Bounded acts are anchored to CCO Act genera; standing functions are modeled
+      as Organization Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_4_0.ttl
+  qa:
+    profile: default
+- id: apqc_5
+  path: ontology/slices/apqc_5_0.ttl
+  page: apqc_5.md
+  artifact_label: APQC 5.0 - Deliver Services
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 5.0, Deliver Services. Bounded acts
+      are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_5_0.ttl
+  qa:
+    profile: default
+- id: apqc_6
+  path: ontology/slices/apqc_6_0.ttl
+  page: apqc_6.md
+  artifact_label: APQC 6.0 - Manage Customer Service
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 6.0, Manage Customer Service. Bounded
+      acts are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities
+      (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_6_0.ttl
+  qa:
+    profile: default
+- id: apqc_7
+  path: ontology/slices/apqc_7_0.ttl
+  page: apqc_7.md
+  artifact_label: APQC 7.0 - Develop and Manage Human Capital
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 7.0, Develop and Manage Human Capital.
+      Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities
+      (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_7_0.ttl
+  qa:
+    profile: default
+- id: apqc_8
+  path: ontology/slices/apqc_8_0.ttl
+  page: apqc_8.md
+  artifact_label: APQC 8.0 - Manage Information Technology
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 8.0, Manage Information Technology.
+      Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities
+      (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_8_0.ttl
+  qa:
+    profile: default
+- id: apqc_9
+  path: ontology/slices/apqc_9_0.ttl
+  page: apqc_9.md
+  artifact_label: APQC 9.0 - Manage Financial Resources
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 9.0, Manage Financial Resources. Bounded
+      acts are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities
+      (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_9_0.ttl
+  qa:
+    profile: default
+- id: apqc_10
+  path: ontology/slices/apqc_10_0.ttl
+  page: apqc_10.md
+  artifact_label: APQC 10.0 - Acquire, Construct, and Manage Assets
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 10.0, Acquire, Construct, and Manage
+      Assets. Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization
+      Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_10_0.ttl
+  qa:
+    profile: default
+- id: apqc_11
+  path: ontology/slices/apqc_11_0.ttl
+  page: apqc_11.md
+  artifact_label: APQC 11.0 - Manage Enterprise Risk, Compliance, Remediation, and Resiliency
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 11.0, Manage Enterprise Risk, Compliance,
+      Remediation, and Resiliency. Bounded acts are anchored to CCO Act genera; standing functions are
+      modeled as Organization Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_11_0.ttl
+  qa:
+    profile: default
+- id: apqc_12
+  path: ontology/slices/apqc_12_0.ttl
+  page: apqc_12.md
+  artifact_label: APQC 12.0 - Manage External Relationships
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 12.0, Manage External Relationships.
+      Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization Capabilities
+      (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_12_0.ttl
+  qa:
+    profile: default
+- id: apqc_13
+  path: ontology/slices/apqc_13_0.ttl
+  page: apqc_13.md
+  artifact_label: APQC 13.0 - Develop and Manage Business Capabilities
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Reality-layer process universals for APQC category 13.0, Develop and Manage Business
+      Capabilities. Bounded acts are anchored to CCO Act genera; standing functions are modeled as Organization
+      Capabilities (R5/R6).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/slices/apqc_13_0.ttl
+  qa:
+    profile: default
+- id: apqc_ext
+  path: ontology/apqc-ext.ttl
+  page: apqc_ext.md
+  artifact_label: Shared act-genus registry (D9)
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Canonical CCO-anchored act genera (Act of Analysis, Formulation, Monitoring, ...) reused
+      across the reality-layer slices.
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/apqc-ext.ttl
+  qa:
+    profile: default
+- id: apqc_catalog
+  path: ontology/apqc-catalog.ttl
+  page: apqc_catalog.md
+  artifact_label: APQC PCF Catalog Layer
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Lossless catalog of every APQC PCF element as a skos:Concept plus a Descriptive ICE (1,921
+      rows).
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/apqc-catalog.ttl
+  qa:
+    profile: default
+- id: capabilities_roles
+  path: ontology/capabilities_roles.ttl
+  page: capabilities_roles.md
+  artifact_label: Capability / Role bridge
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: 'The process-to-agent dispatch foundation: ex:Capability / ex:Role markers and the requires*/enables/bears
+      properties.'
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/capabilities_roles.ttl
+  qa:
+    profile: default
+- id: delivery_processes
+  path: ontology/delivery_processes.ttl
+  page: delivery_processes.md
+  artifact_label: Delivery processes + participants
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: Delivery-process universals (author / implement / evaluate / approval-gate acts) and
+      their output ICEs, outside the APQC PCF.
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/delivery_processes.ttl
+  qa:
+    profile: default
+- id: capabilities_wiring
+  path: ontology/capabilities_wiring.ttl
+  page: capabilities_wiring.md
+  artifact_label: Capability/role wiring (generated)
+  elicit:
+    title: true
+    description: false
+    contributors: false
+    import_diagram: false
+  overrides:
+    description: 'Generated overlay: requiresCapability / requiresRole / enablesProcess wiring plus role
+      enrichment anchors across all sections.'
+    contributors: []
+  downloads:
+  - label: Turtle
+    path: ontology/capabilities_wiring.ttl
+  qa:
+    profile: default
+design_patterns:
+- title: BPO layer architecture
+  path: docs/patterns/layer-architecture.mmd
+qa:
+  summary_page: qa.md
+  profiles:
+    default:
+      fail: []
+      warn:
+      - qa/queries/warn/ex-class-missing-skos-definition.rq
+      - qa/queries/warn/ex-class-missing-rdfs-label.rq

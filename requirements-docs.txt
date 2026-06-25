@@ -1,0 +1,6 @@
+# Docs-site build deps only (kept separate from requirements.txt so the Pages CI
+# does not pull the daemon/validation stack). Used by .github/workflows/static.yml.
+mkdocs-material>=9.5
+pymdown-extensions>=10.0
+PyYAML>=6.0
+rdflib>=7.1

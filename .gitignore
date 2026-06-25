@@ -26,6 +26,16 @@ tools/robot.jar
 # Intermediate per-section data bundles (regeneratable via scripts/stage_section.py)
 build/
 
+# Generated ontology docs site (sources are ontology-site.yml + qa/queries/ +
+# docs/patterns/; everything below is produced by the webhost generator at build time).
+/site/
+/mkdocs.yml
+/docs/index.md
+/docs/qa.md
+/docs/ontologies/
+/docs/artifacts/
+webhost-tool/
+
 # Secrets
 .env
 *.key
