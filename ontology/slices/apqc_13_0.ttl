@@ -6,8 +6,8 @@
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix cco:   <https://www.commoncoreontologies.org/> .
-@prefix ex:    <http://example.org/apqc#> .
-@prefix apqc:  <http://example.org/apqc/scheme#> .
+@prefix ex:    <https://fandaws.com/ontology/bpo#> .
+@prefix apqc:  <https://fandaws.com/ontology/bpo/scheme#> .
 
 ####################################################################
 # APQC PCF -> BFO 2020 / CCO 2.0  REALITY-LAYER MODULE
@@ -41,10 +41,10 @@
 # to one definition each.
 ####################################################################
 
-<http://example.org/apqc/slice/13.0> a owl:Ontology ;
+<https://fandaws.com/ontology/bpo/slice/13.0> a owl:Ontology ;
     dct:title "APQC reality-layer slice 13.0: Develop and Manage Business Capabilities" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.3.0" ;
+    owl:versionInfo "0.4.0" ;
     rdfs:comment "Reality-layer module for APQC section 13.0. CCO pin v2.0 (2024-11-06) per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE). New recurring genera (ex:ActOfMonitoring, ex:ActOfImplementation, ex:ActOfImprovement) are emitted below as PROPOSE-EXT for human promotion. Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
 ####################################################################

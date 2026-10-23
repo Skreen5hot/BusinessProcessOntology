@@ -1,14 +1,14 @@
 // src/ri-resolve.mjs — RI4: resolver + readable_label + scheme_violation (D7)
 const LOCAL_NS = [
-  'http://example.org/apqc#',
-  'http://example.org/apqc/perf#',
+  'https://fandaws.com/ontology/bpo#',
+  'https://fandaws.com/ontology/bpo/perf#',
 ];
 
 const CCO_NS_LIST = [
   'https://www.commoncoreontologies.org/',
   'http://www.ontologyrepository.com/CommonCoreOntologies/',
 ];
-const EX_NS = 'http://example.org/apqc#';
+const EX_NS = 'https://fandaws.com/ontology/bpo#';
 const OPAQUE_RE = /^ont\d+$/;
 const ORG_CAPABILITY_LOCAL = 'ont00000568';
 

@@ -9,7 +9,7 @@ import rdflib
 from rdflib import RDFS, URIRef
 from rdflib.namespace import OWL
 
-EX = "http://example.org/apqc#"
+EX = "https://fandaws.com/ontology/bpo#"
 CCO = "https://www.commoncoreontologies.org/"
 BFO = "http://purl.obolibrary.org/obo/"
 
@@ -43,7 +43,7 @@ print("="*70); print("1. HEADER / VERSION / IMPORTS / STALE-PROSE DRIFT"); print
 stale_pat = re.compile(r"REUSED from apqc-ext|validator merges|merged in for validation|"
                        r"DEFINED IN apqc-ext|local definitions (have been )?removed|"
                        r"PROPOSE-EXT: promote|NEW ACT-GENUS PROPOSALS|owl:imports|"
-                       r'versionInfo "0\.[012]\.', re.I)
+                       r'versionInfo "0\.[0-3]\.', re.I)
 for fp in files:
     txt = pathlib.Path(fp).read_text(encoding="utf-8")
     fn = pathlib.Path(fp).name
@@ -52,7 +52,7 @@ for fp in files:
     for m in stale_pat.finditer(txt):
         ln = txt[:m.start()].count("\n") + 1
         hits.append(f"L{ln}:{m.group(0)[:40]}")
-    flag = "" if (ver and ver.group(1) == "0.3.0" and not hits) else "  <<<"
+    flag = "" if (ver and ver.group(1) == "0.4.0" and not hits) else "  <<<"
     print(f"{fn:20} ver={ver.group(1) if ver else '?':7}{flag}")
     for h in hits: print(f"      {h}")
 

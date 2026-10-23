@@ -22,7 +22,7 @@ import rdflib
 from rdflib import RDF, OWL, URIRef
 
 ROOT = Path(__file__).resolve().parents[1]
-EX = "http://example.org/apqc#"
+EX = "https://fandaws.com/ontology/bpo#"
 JUDGMENT = ROOT / "capabilities" / "_judgment.json"
 ROLE_ANCHORS = ROOT / "capabilities" / "role_anchors.json"
 CAP_SCOPE = ROOT / "capabilities" / "capability_scope.json"

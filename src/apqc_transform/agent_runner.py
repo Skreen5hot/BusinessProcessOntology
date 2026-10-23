@@ -78,11 +78,11 @@ _DRY_RUN_TEMPLATE = textwrap.dedent(
     @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
     @prefix dct:  <http://purl.org/dc/terms/> .
     @prefix cco:  <https://www.commoncoreontologies.org/> .
-    @prefix ex:   <http://example.org/apqc#> .
+    @prefix ex:   <https://fandaws.com/ontology/bpo#> .
 
     # DRY-RUN PLACEHOLDER for section {section} ({name}).
     # The live daemon replaces this with the agent's reality-layer module.
-    <http://example.org/apqc/slice/{slug}> a owl:Ontology ;
+    <https://fandaws.com/ontology/bpo/slice/{slug}> a owl:Ontology ;
         dct:title "APQC reality-layer slice {section}: {name} (DRY RUN)" ;
         owl:versionInfo "0.0.0" ;
         rdfs:comment "Placeholder. CCO pin: {cco}. Not for release." .

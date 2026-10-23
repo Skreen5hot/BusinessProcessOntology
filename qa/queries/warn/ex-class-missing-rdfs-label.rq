@@ -4,7 +4,7 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?entity WHERE {
   ?entity a owl:Class .
-  FILTER(STRSTARTS(STR(?entity), "http://example.org/apqc#"))
+  FILTER(STRSTARTS(STR(?entity), "https://fandaws.com/ontology/bpo#"))
   FILTER NOT EXISTS { ?entity rdfs:label ?label }
 }
 ORDER BY ?entity

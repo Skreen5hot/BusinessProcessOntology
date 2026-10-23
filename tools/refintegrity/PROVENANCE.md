@@ -11,6 +11,13 @@ reproducibly (same discipline as the pinned CCO closure and `tools/robot.jar`).
   (`capability-as-process`, `pcf-without-P-iri`, gated on `owl:Class` per FR-12). `readable_label`
   (FR-11) fires only with `--register` and is not used by Gate F.
 
+## Local modification (v0.4.0, ADR-002)
+The linter hard-codes BPO's namespaces. In `src/ri-collect.mjs` (`EX`, `PERF`, `PCF_ID_PRED`) and
+`src/ri-resolve.mjs` (`LOCAL_NS`, `EX_NS`) the base `http://example.org/apqc` is replaced by
+`https://fandaws.com/ontology/bpo`. That is the only divergence from the commit above. On a
+re-sync, re-apply it, unless upstream has made the namespaces configurable by then. Upstream is
+not changed from this repo.
+
 ## Files
 - `src/ri-cli.mjs`, `src/ri-collect.mjs`, `src/ri-resolve.mjs` — the linter (copied verbatim from `src/`).
 - `vendor/n3.mjs` + `vendor/PROVENANCE.md` — the pinned N3.js parser (SHA-256 in that file; ADR-008 upstream).

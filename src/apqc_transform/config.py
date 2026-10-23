@@ -47,8 +47,8 @@ NS = {
     "dct": "http://purl.org/dc/terms/",
     "obo": "http://purl.obolibrary.org/obo/",
     "cco": "https://www.commoncoreontologies.org/",
-    "ex": "http://example.org/apqc#",
-    "apqc": "http://example.org/apqc/scheme#",  # the skos:ConceptScheme
+    "ex": "https://fandaws.com/ontology/bpo#",
+    "apqc": "https://fandaws.com/ontology/bpo/scheme#",  # the skos:ConceptScheme
 }
 EX = NS["ex"]
 

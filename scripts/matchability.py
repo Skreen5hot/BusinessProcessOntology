@@ -21,7 +21,7 @@ import rdflib
 from rdflib import RDFS, URIRef
 
 ROOT = Path(__file__).resolve().parents[1]
-EX = "http://example.org/apqc#"
+EX = "https://fandaws.com/ontology/bpo#"
 CCO = ROOT / "vendor" / "cco" / "CommonCoreOntologiesMerged.ttl"
 AGENTS = ROOT / "capabilities" / "agents.json"
 REQ = {

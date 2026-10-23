@@ -1,5 +1,28 @@
 # Release Notes
 
+## v0.4.0 — Namespace moves to fandaws.com (2026-10-23)
+
+**Breaking for every consumer that references BPO IRIs.** The only change to the ontology is its
+namespace (ADR-002): every IRI BPO owns moves from the `http://example.org/apqc` placeholder to
+`https://fandaws.com/ontology/bpo`, by one base substitution. That covers the `ex:` terms,
+the `apqc:` scheme, the shapes, `perf:` and the module ontology IRIs. Local names are unchanged.
+
+| Old base | New base |
+|---|---|
+| `http://example.org/apqc#` | `https://fandaws.com/ontology/bpo#` |
+| `http://example.org/apqc/…` | `https://fandaws.com/ontology/bpo/…` |
+
+- To migrate, re-pin to this release and rewrite references with the table above. Earlier
+  commits stay reachable with their old IRIs.
+- The prefix label is still `ex:`. A later phase renames it to `bpo:`.
+- Every module's `owl:versionInfo` is `0.4.0`.
+- Proof that nothing else changed: every module's graph is isomorphic to its v0.3.x graph under the
+  mapping, the generators reproduce their outputs, and every gate gives the same results.
+- `corpus_check.sh` now refuses the retired base. Gate F's linter timeout is raised from 300s to
+  900s: on Windows/OneDrive the linter already took about 343s on the unchanged corpus, so the
+  old limit failed even when nothing was wrong.
+- The BCO, which vendors `apqc-ext.ttl`, is told in `communications/bco/outgoing/`.
+
 ## v0.3.0 — Reality-layer corpus complete (2026-06-03)
 
 First complete, expert-reviewed release of the **BFO-2020 / CCO-2.0 ontology of the APQC

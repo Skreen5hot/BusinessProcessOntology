@@ -1,14 +1,14 @@
 import { Parser } from '../vendor/n3.mjs';
 
-const EX = 'http://example.org/apqc#';
-const PERF = 'http://example.org/apqc/perf#';
+const EX = 'https://fandaws.com/ontology/bpo#';
+const PERF = 'https://fandaws.com/ontology/bpo/perf#';
 const CCO_NS_LIST = [
   'https://www.commoncoreontologies.org/',
   'http://www.ontologyrepository.com/CommonCoreOntologies/',
 ];
 const RDF_TYPE = 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type';
 const RDFS_SUBCLASSOF = 'http://www.w3.org/2000/01/rdf-schema#subClassOf';
-const PCF_ID_PRED = 'http://example.org/apqc#pcfID';
+const PCF_ID_PRED = 'https://fandaws.com/ontology/bpo#pcfID';
 const OWL_CLASS = 'http://www.w3.org/2002/07/owl#Class';
 
 const DEFINING_TYPES = new Set([

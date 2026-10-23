@@ -95,8 +95,8 @@ const assembled = await agent(
 
 TASK: Assemble ONE valid Turtle module and WRITE it to ${OUT} with the Write tool, then return a summary.
 Compose in order:
-1) Prefixes (copy from ontology/slices/apqc_1_1_1.ttl) PLUS @prefix apqc: <http://example.org/apqc/scheme#> .
-2) owl:Ontology header for <http://example.org/apqc/slice/${SECTION}>: dct:title "APQC reality-layer slice ${SECTION}: ${SECTION_NAME}", owl:versionInfo "0.1.0", rdfs:comment recording CCO pin v2.0 (2024-11-06) + ADR-001. Put owl:imports <http://example.org/apqc/ext> on a COMMENTED line (the validator merges apqc-ext.ttl separately; a live example.org import breaks ROBOT).
+1) Prefixes (copy from ontology/slices/apqc_1_1_1.ttl) PLUS @prefix apqc: <https://fandaws.com/ontology/bpo/scheme#> .
+2) owl:Ontology header for <https://fandaws.com/ontology/bpo/slice/${SECTION}>: dct:title "APQC reality-layer slice ${SECTION}: ${SECTION_NAME}", owl:versionInfo "0.1.0", rdfs:comment recording CCO pin v2.0 (2024-11-06) + ADR-001. Put owl:imports <https://fandaws.com/ontology/bpo/ext> on a COMMENTED line (the validator merges apqc-ext.ttl separately; a live ext import breaks ROBOT).
 3) Provenance annotation properties: ex:pcfID, ex:hierarchyID, ex:apqcSourceText, ex:designatesProcessType.
 4) PROPOSED-EXT genera under a '# PROPOSE-EXT: promote to apqc-ext.ttl after review' comment:
 ${extLocal || '# (none)'}

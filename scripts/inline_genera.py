@@ -22,7 +22,7 @@ from rdflib import RDFS
 ROOT = Path(__file__).resolve().parents[1]
 EXT = ROOT / "ontology" / "apqc-ext.ttl"
 SLICES = ROOT / "ontology" / "slices"
-EX = "http://example.org/apqc#"
+EX = "https://fandaws.com/ontology/bpo#"
 
 
 def _is_terminator(line: str) -> bool:

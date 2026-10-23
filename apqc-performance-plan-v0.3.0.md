@@ -118,7 +118,7 @@ misses):
 ### 3.1 Module, merge, and the TBox/ABox split (D18, D19)
 
 - **One TBox module:** `ontology/apqc-performance.ttl`, namespaces `perf:`
-  (`http://example.org/apqc/perf#`) for layer-local terms and `ex:` (`http://example.org/apqc#`) where
+  (`https://fandaws.com/ontology/bpo/perf#`) for layer-local terms and `ex:` (`https://fandaws.com/ontology/bpo#`) where
   it reuses corpus terms. **Self-contained** (it inlines the `apqc-ext` genera it reuses, exactly as
   the slices do) so it validates standalone against the pinned CCO closure.
 - **Merge-only overlay:** no slice `owl:imports` it; it is merged into `scripts/corpus_check.sh`

@@ -24,8 +24,8 @@ from rdflib import RDF, RDFS, OWL, URIRef
 from rdflib.namespace import SKOS
 
 ROOT = Path(__file__).resolve().parents[1]
-EX = "http://example.org/apqc#"
-PERF = "http://example.org/apqc/perf#"
+EX = "https://fandaws.com/ontology/bpo#"
+PERF = "https://fandaws.com/ontology/bpo/perf#"
 OUT = ROOT / "ontology" / "index" / "corpus_index.tsv"
 
 PFX = {EX: "ex:", PERF: "perf:", "https://www.commoncoreontologies.org/": "cco:",

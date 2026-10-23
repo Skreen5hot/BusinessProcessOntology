@@ -17,6 +17,14 @@ decision), `RELEASE_NOTES.md` (v0.3.0 state), `PHASE0.md` (repo/daemon setup).
   registry `ontology/apqc-ext.ttl` (the D9 single source of truth, mirrored into slices). No
   `owl:imports`; every slice validates standalone against the pinned CCO/BFO closure.
 
+## Namespace (ADR-002, v0.4.0)
+
+BPO's base is **`https://fandaws.com/ontology/bpo`** (`ex:` = `…/bpo#`, `apqc:` = `…/bpo/scheme#`,
+`perf:` = `…/bpo/perf#`). The prefix *label* is still `ex:`; renaming it to `bpo:` is a planned
+later phase. The retired `http://example.org/apqc` base is refused by `corpus_check.sh`. The BCO
+vendors `apqc-ext.ttl` from us: tell it about namespace, CCO-pin or act-genus changes through
+`communications/bco/` (`python scripts/communications.py` checks the record).
+
 ## Navigating the corpus — grep the index, don't read whole slices
 
 `ontology/index/corpus_index.tsv` is a generated, greppable index of every `ex:`/`perf:` term

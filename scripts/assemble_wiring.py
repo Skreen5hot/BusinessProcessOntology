@@ -39,7 +39,7 @@ SECTION_NAMES = {
     "12": "Manage External Relationships", "13": "Develop and Manage Business Capabilities",
 }
 HEADER = """\
-@prefix ex:   <http://example.org/apqc#> .
+@prefix ex:   <https://fandaws.com/ontology/bpo#> .
 @prefix cco:  <https://www.commoncoreontologies.org/> .
 @prefix obo:  <http://purl.obolibrary.org/obo/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
@@ -65,9 +65,9 @@ HEADER = """\
 # CCO pin: v2.0 (2024-11-06).
 # =====================================================================
 
-<http://example.org/apqc/capabilities/wiring> a owl:Ontology ;
+<https://fandaws.com/ontology/bpo/capabilities/wiring> a owl:Ontology ;
     dct:title "APQC Phase 1: capability/role bridge wiring (generated overlay)" ;
-    owl:versionInfo "0.2.0" ;
+    owl:versionInfo "0.4.0" ;
     rdfs:comment "Per-section requiresCapability / requiresRole / enablesProcess wiring + role enrichment co-anchors, generated from the slices plus the role_anchors / capability_scope judgment tables." .
 """
 

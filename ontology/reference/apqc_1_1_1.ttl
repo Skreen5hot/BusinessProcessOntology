@@ -6,7 +6,7 @@
 @prefix dct:   <http://purl.org/dc/terms/> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix cco:   <https://www.commoncoreontologies.org/> .
-@prefix ex:    <http://example.org/apqc#> .
+@prefix ex:    <https://fandaws.com/ontology/bpo#> .
 
 ####################################################################
 # *** FROZEN / SUPERSEDED -- NOT PART OF THE VALIDATED CORPUS ***
@@ -60,10 +60,10 @@
 #   (4) Roles inhere only in independent continuants (agents, subjects).
 ####################################################################
 
-<http://example.org/apqc> a owl:Ontology ;
+<https://fandaws.com/ontology/bpo> a owl:Ontology ;
     dct:title "APQC PCF to BFO/CCO Reference Template: Slice 1.1.1" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
-    owl:versionInfo "0.2.0" ;
+    owl:versionInfo "0.4.0" ;
     rdfs:comment "Production-oriented module. Imports CCO (which imports BFO 2020). Validate offline by loading CommonCoreOntologiesMerged.ttl alongside this file." .
     # owl:imports <https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged> .
 

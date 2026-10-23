@@ -25,14 +25,14 @@ from rdflib.namespace import SKOS
 
 ROOT = Path(__file__).resolve().parents[1]
 SLICES = sorted(glob.glob(str(ROOT / "ontology" / "slices" / "apqc_*_0.ttl")))
-EX = "http://example.org/apqc#"
+EX = "https://fandaws.com/ontology/bpo#"
 BFO_REALIZED_IN = URIRef("http://purl.obolibrary.org/obo/BFO_0000054")
 BFO_BEARER_OF = URIRef("http://purl.obolibrary.org/obo/BFO_0000196")
 BFO_HAS_PART = URIRef("http://purl.obolibrary.org/obo/BFO_0000057")  # has participant
 HAS_CAPABILITY = URIRef("https://www.commoncoreontologies.org/ont00001954")
 
 PFX = {
-    "http://example.org/apqc#": "ex:",
+    "https://fandaws.com/ontology/bpo#": "ex:",
     "https://www.commoncoreontologies.org/": "cco:",
     "http://purl.obolibrary.org/obo/": "obo:",
 }

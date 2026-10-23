@@ -63,7 +63,7 @@ This is the load-bearing decision and it shapes every artifact.
 | **D9** Shared extension | `ontology/apqc-ext.ttl`, imported by every slice. Seeds: `ex:ActOfAnalysis`, `ex:ActOfIdentification` (from reference module); grows as recurring genera are discovered. |
 | **§6** Upper anchor | CCO Act classes: Information Processing `ont00000366`, Appraisal `ont00000636`, Planning `ont00000511`, Planned Act `ont00000228`. Verify-before-assert per term. |
 | **CCO pin** | CommonCoreOntologies **Merged v2.0 (2024-11-06)**, vendored under `vendor/cco/` for Gate B offline determinism. |
-| **Namespace** | `ex: <http://example.org/apqc#>` (matches reference; swap to a real base before publication). |
+| **Namespace** | `ex: <https://fandaws.com/ontology/bpo#>` -- moved from the `http://example.org/apqc` placeholder in v0.4.0 (ADR-002). |
 
 ---
 

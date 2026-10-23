@@ -7,6 +7,12 @@
 set -e
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
+# Namespace guard (ADR-002): the retired placeholder base must not come back.
+# (Prose may cite it; the [c] keeps this line from matching itself.)
+if git grep -n "example\.org/apq[c]" -- ontology src scripts tools qa ':!*.md'; then
+  echo "FAIL  the retired example.org placeholder base is back (lines above; ADR-002)"; exit 1
+fi
+echo "Namespace guard: no retired example.org placeholder IRIs (ADR-002)"
 INPUTS=""
 for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl ontology/capabilities_roles.ttl ontology/delivery_processes.ttl ontology/capabilities_wiring.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
   INPUTS="$INPUTS --input $f"

@@ -67,7 +67,7 @@ _HEADER = f"""\
 <{APQC.rstrip('#')}> a owl:Ontology ;
     dct:title "APQC PCF Catalog Layer" ;
     dct:source "APQC Process Classification Framework (Cross-Industry) v7.4" ;
-    owl:versionInfo "0.1.0" ;
+    owl:versionInfo "0.4.0" ;
     rdfs:comment "Generated deterministically from the PCF export. Curatorial taxonomy only; process semantics live in the reality-layer slice modules." .
 
 # Provenance annotation properties (mirror the reference module)
