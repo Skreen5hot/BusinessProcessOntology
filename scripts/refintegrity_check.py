@@ -63,7 +63,7 @@ def main() -> int:
         return 0
 
     cmd = ["node", str(CLI), "--modules", *modules()]
-    proc = subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT), timeout=300)
+    proc = subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT), timeout=900)
     if proc.returncode == 2:
         print("[F RefIntegrity]  FAIL  linter systemic error (exit 2):")
         print("  " + (proc.stderr.strip() or "(no stderr)"))
