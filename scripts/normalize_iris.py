@@ -1,8 +1,8 @@
 """Enforce the D7 IRI scheme on a slice module (deterministic post-step).
 
-Every PRIMARY class (one carrying ex:pcfID) MUST have IRI ex:P<pcfID>. Agents
-occasionally emit readable IRIs (ex:ResolveCustomerComplaint) for primary process
-classes instead; this renames them to ex:P<pcfID> and rewrites every reference
+Every PRIMARY class (one carrying bpo:pcfID) MUST have IRI bpo:P<pcfID>. Agents
+occasionally emit readable IRIs (bpo:ResolveCustomerComplaint) for primary process
+classes instead; this renames them to bpo:P<pcfID> and rewrites every reference
 (genus fillers, partonomy, bridges, realized-in, etc.) by safe token substitution.
 Supporting classes (ICEs/agents/roles/capabilities) carry NO pcfID and are left
 with their readable names, which is correct per the scheme.
@@ -40,7 +40,7 @@ def normalize(path: Path) -> dict:
 
     # Capabilities (R6 standing-function models) are supporting classes: they may
     # carry pcfID for provenance but keep readable names -- do NOT force them to
-    # ex:P<pcfID>. Detect by subclass of a CCO Capability or a "Capability" name.
+    # bpo:P<pcfID>. Detect by subclass of a CCO Capability or a "Capability" name.
     CAP_PARENTS = {
         rdflib.URIRef("https://www.commoncoreontologies.org/ont00000568"),  # Org Capability
         rdflib.URIRef("https://www.commoncoreontologies.org/ont00001379"),  # Agent Capability
@@ -70,7 +70,7 @@ def normalize(path: Path) -> dict:
 
     txt = path.read_text(encoding="utf-8")
     for local, target in sorted(rename.items(), key=lambda kv: -len(kv[0])):
-        txt = re.sub(rf"\bex:{re.escape(local)}\b", f"ex:{target}", txt)
+        txt = re.sub(rf"\bex:{re.escape(local)}\b", f"bpo:{target}", txt)
     path.write_text(txt, encoding="utf-8", newline="\n")
     return rename
 
@@ -80,8 +80,8 @@ if __name__ == "__main__":
         sys.exit("usage: normalize_iris.py <slice.ttl>")
     p = Path(sys.argv[1])
     renamed = normalize(p)
-    print(f"Normalized {len(renamed)} primary IRI(s) to ex:P<pcfID> in {p.name}")
+    print(f"Normalized {len(renamed)} primary IRI(s) to bpo:P<pcfID> in {p.name}")
     for local, target in list(renamed.items())[:10]:
-        print(f"  ex:{local} -> ex:{target}")
+        print(f"  bpo:{local} -> bpo:{target}")
     if len(renamed) > 10:
         print(f"  ... and {len(renamed) - 10} more")

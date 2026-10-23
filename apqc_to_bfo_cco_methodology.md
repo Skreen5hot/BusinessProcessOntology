@@ -50,7 +50,7 @@ These nine decisions are load-bearing. Every later phase depends on them; violat
 
 - **D4 — Realizables inhere only in independent continuants.** Roles, dispositions, and capabilities **MUST** be borne by Agents, Organizations, or other independent continuants. A Role **MUST NOT** be placed on an ICE or any other generically dependent continuant — a specifically dependent continuant cannot inhere in a generically dependent one. This is why the input-as-role pattern valid for *material* inputs does not generalize to informational ones.
 
-- **D5 — Reuse before mint.** A term **MUST** reuse an existing CCO/BFO class or property where one genuinely fits. A local (`ex:`) term **MAY** be minted only where no CCO/BFO term fits, and **MUST** then be anchored under the nearest correct CCO/BFO parent.
+- **D5 — Reuse before mint.** A term **MUST** reuse an existing CCO/BFO class or property where one genuinely fits. A local (`bpo:`) term **MAY** be minted only where no CCO/BFO term fits, and **MUST** then be anchored under the nearest correct CCO/BFO parent.
 
 - **D6 — Verify before assert.** Every opaque CCO IRI (`cco:ont…`) used **MUST** be verified against the pinned CCO release — label, definition, *and* parent — before it is written into a module. Recognizing a label is not sufficient grounds to use the IRI (§6).
 
@@ -60,18 +60,18 @@ These nine decisions are load-bearing. Every later phase depends on them; violat
   - **Policy A:** each APQC Category is modeled as a process aggregate class whose instances have the group-level processes as `has process part`.
   - **Policy B:** APQC Categories are not modeled as process classes; transformation begins at the Process-Group level.
 
-- **D9 — Recurring local genera live in one shared extension module.** Local act genera that recur across slices (e.g. `ex:ActOfAnalysis`, `ex:ActOfIdentification`) **MUST** be defined once in a shared APQC extension module (e.g. `apqc-ext.ttl`) imported by every slice, never re-minted per slice. This prevents duplicate local universals.
+- **D9 — Recurring local genera live in one shared extension module.** Local act genera that recur across slices (e.g. `bpo:ActOfAnalysis`, `bpo:ActOfIdentification`) **MUST** be defined once in a shared APQC extension module (e.g. `apqc-ext.ttl`) imported by every slice, never re-minted per slice. This prevents duplicate local universals.
 
 ---
 
 ## 4. Identity, minting, and provenance
 
 - Mint one **primary** `owl:Class` per PCF entry, IRI anchored to the PCF ID (a human-readable local name **MAY** be added). Where an Element Description contains multiple independently classifiable processes, additional supporting process classes **MAY** be minted; the primary PCF class **MUST** retain the PCF identifiers and source text.
-- A class minted **directly from a PCF entry** **MUST** carry `ex:pcfID`, `ex:hierarchyID` (annotated as positional/non-stable), and `ex:apqcSourceText` (verbatim Element Description).
+- A class minted **directly from a PCF entry** **MUST** carry `bpo:pcfID`, `bpo:hierarchyID` (annotated as positional/non-stable), and `bpo:apqcSourceText` (verbatim Element Description).
 - A **supporting local class** (act genus, ICE, role, capability, agent, subject matter) **MUST NOT** carry PCF row identifiers. It **MUST** carry `rdfs:label`, `skos:definition`, and provenance (`rdfs:comment`) explaining why it was minted and how it is anchored.
 - The module header **MUST** record the pinned CCO version IRI it was built against.
 
-This provenance layer makes the transform deterministic and auditable: the verbatim source text and stable key let any consumer (or audit) re-derive and diff a class without ambiguity. The scoping above matches the SHACL suite, which requires `ex:pcfID` only on process classes.
+This provenance layer makes the transform deterministic and auditable: the verbatim source text and stable key let any consumer (or audit) re-derive and diff a class without ambiguity. The scoping above matches the SHACL suite, which requires `bpo:pcfID` only on process classes.
 
 ---
 
@@ -177,23 +177,23 @@ These CCO Act classes were verified (label + definition + parent chain) against 
 
 | IRI | Label | Verified note |
 |---|---|---|
-| `cco:ont00000402` | Act of Communication | A Planned Act in which some Information Content Entity is transferred from some Agent to Another. (Parent: cco:ont00000228 Planned Act.) The verified communication anchor (NOT the §6 false-friend reject cco:ont00001261 'Act of Identifying'); anchor for ex:ActOfCommunication. |
-| `cco:ont00000151` | Act of Reporting | An Act of Representative Communication performed by giving a detailed account or statement. (Parent: cco:ont00000379 Act of Representative Communication.) CCO's leaf reporting act; reuse directly for pure submission/forwarding of an already-prepared report. The broader ex:ActOfReporting anchors at ont00000379 to also cover scorecards/filings/disclosures. |
+| `cco:ont00000402` | Act of Communication | A Planned Act in which some Information Content Entity is transferred from some Agent to Another. (Parent: cco:ont00000228 Planned Act.) The verified communication anchor (NOT the §6 false-friend reject cco:ont00001261 'Act of Identifying'); anchor for bpo:ActOfCommunication. |
+| `cco:ont00000151` | Act of Reporting | An Act of Representative Communication performed by giving a detailed account or statement. (Parent: cco:ont00000379 Act of Representative Communication.) CCO's leaf reporting act; reuse directly for pure submission/forwarding of an already-prepared report. The broader bpo:ActOfReporting anchors at ont00000379 to also cover scorecards/filings/disclosures. |
 | `cco:ont00000345` | Act of Measuring | A Planned Act that involves determining the extent, dimensions, quantity, or quality of an Entity relative to some standard. (Parent: cco:ont00000228 Planned Act.) Parent of cco:ont00000636 Act of Appraisal; the direct anchor for single quantification-against-a-standard nodes. |
-| `cco:ont00000950` | Act of Maintenance | An Act of Artifact Modification in which a Material Artifact is modified in order to preserve or restore one or more of its designed Qualities or Functions. (Parent: cco:ont00000970 Act of Artifact Modification.) The recurring reject across ex:ActOfDataManagement, ex:ActOfAcquisition, ex:ActOfImplementation, ex:ActOfImprovement, ex:ActOfAdministration, ex:ActOfDeployment, ex:ActOfAccounting (it modifies Material Artifacts, not processes/records/ICEs). |
+| `cco:ont00000950` | Act of Maintenance | An Act of Artifact Modification in which a Material Artifact is modified in order to preserve or restore one or more of its designed Qualities or Functions. (Parent: cco:ont00000970 Act of Artifact Modification.) The recurring reject across bpo:ActOfDataManagement, bpo:ActOfAcquisition, bpo:ActOfImplementation, bpo:ActOfImprovement, bpo:ActOfAdministration, bpo:ActOfDeployment, bpo:ActOfAccounting (it modifies Material Artifacts, not processes/records/ICEs). |
 | `cco:ont00000234` | Act of Training | A Planned Act in which knowledge, skills or values are imparted from one or more Agents to at least one other Agent. (Parent: cco:ont00000228 Planned Act.) Verified for train/educate processes (no local genus minted; reuse directly). |
-| `cco:ont00000970` | Act of Artifact Modification | An Act of Material Artifact Processing in which an existing Material Artifact is acted upon in a manner that changes, adds, or removes one or more of its Qualities, Dispositions, or Functions. (Parent: cco:ont00000908 Act of Material Artifact Processing.) Parent of cco:ont00000950 Act of Maintenance; cited as a reject for ex:ActOfDisposition. |
-| `cco:ont00000379` | Act of Representative Communication | An Act of Communication that commits a speaker to the truth of the expressed proposition (scopeNote includes announcing, disclosing, informing, reporting, stating). (Parent: cco:ont00000402 Act of Communication.) Anchor for ex:ActOfReporting; superclass of CCO's leaf cco:ont00000151 Act of Reporting. |
-| `cco:ont00000065` | Act of Location Change | An Act of Motion in which the location of some Object is changed by some Agent. (Parent: cco:ont00000357 Act of Motion -> cco:ont00000228 Planned Act.) Anchor for ex:ActOfTransportation; parent of cco:ont00000595 Act of Cargo Transportation. |
-| `cco:ont00000371` | Act of Prediction | A Planned Act that involves the generation of a Predictive Information Content entity intended to describe an uncertain possible future event, value, entity, or attribute of an entity. (Parent: cco:ont00000228 Planned Act; output: cco:ont00000626 Predictive ICE.) Anchor for ex:ActOfForecasting. |
-| `cco:ont00000051` | Act of Construction | An Act of Material Artifact Processing wherein Material Artifacts are built on site as prescribed by some contract. (Parent: cco:ont00000908 Act of Material Artifact Processing.) Cited as a reject for ex:ActOfDesign and ex:ActOfDevelopment; the direct anchor where an act builds material artifacts on site. |
-| `cco:ont00000684` | Act of Contract Formation | An Act of Promising having a lawful object entered into voluntarily by two or more agents with legal capacity, each intending to create one or more legal obligations between them. (Parent: cco:ont00000821 Act of Promising -> cco:ont00001162 Act of Commissive Communication -> cco:ont00000402 Act of Communication.) Evaluated and rejected for ex:ActOfNegotiation (it is the consummating promise, narrower than the bargaining process); listed for the contracting verbs that genuinely form a contract. |
-| `cco:ont00000908` | Act of Material Artifact Processing | A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact. (Parent: cco:ont00000228 Planned Act.) Anchor for ex:ActOfProduction; parent of cco:ont00000970, cco:ont00000051, cco:ont00001359. |
-| `cco:ont00000595` | Act of Cargo Transportation | An Act of Location Change wherein some Payload is moved from one location to another. (Parent: cco:ont00000065 Act of Location Change.) Cited as the close-but-too-narrow sibling rejected in favor of ex:ActOfTransportation; reuse directly where a Payload is conveyed. |
-| `cco:ont00000836` | Act of Financial Instrument Use | An Act of Artifact Employment in which some Agent uses some Financial Instrument. (Parent: cco:ont00000566 Act of Artifact Employment.) Anchor for ex:ActOfPayment; parent of cco:ont00001334 Act of Purchasing. |
-| `cco:ont00000433` | Act of Association | A Social Act wherein an Agent unites with some other Agent in a Planned Act, enterprise or business. (Parent: cco:ont00001327 Social Act.) Anchor for ex:ActOfRelationshipManagement. |
-| `cco:ont00001158` | Act of Data Transformation | An Act of Information Processing in which an algorithm is executed to act upon one or more input Information Content Entities into one or more output Information Content Entities. (Parent: cco:ont00000366 Act of Information Processing.) Cited as a reject for ex:ActOfDataManagement (which need not execute an algorithm). |
-| `cco:ont00001327` | Social Act | A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons. (Parent: cco:ont00000228 Planned Act.) Anchor for ex:ActOfAdvocacy. NOTE: this is 'Social Act', NOT 'Act of Social Movement' (that is the distinct IRI cco:ont00000079, a subclass of this one) -- a false-friend caution. |
+| `cco:ont00000970` | Act of Artifact Modification | An Act of Material Artifact Processing in which an existing Material Artifact is acted upon in a manner that changes, adds, or removes one or more of its Qualities, Dispositions, or Functions. (Parent: cco:ont00000908 Act of Material Artifact Processing.) Parent of cco:ont00000950 Act of Maintenance; cited as a reject for bpo:ActOfDisposition. |
+| `cco:ont00000379` | Act of Representative Communication | An Act of Communication that commits a speaker to the truth of the expressed proposition (scopeNote includes announcing, disclosing, informing, reporting, stating). (Parent: cco:ont00000402 Act of Communication.) Anchor for bpo:ActOfReporting; superclass of CCO's leaf cco:ont00000151 Act of Reporting. |
+| `cco:ont00000065` | Act of Location Change | An Act of Motion in which the location of some Object is changed by some Agent. (Parent: cco:ont00000357 Act of Motion -> cco:ont00000228 Planned Act.) Anchor for bpo:ActOfTransportation; parent of cco:ont00000595 Act of Cargo Transportation. |
+| `cco:ont00000371` | Act of Prediction | A Planned Act that involves the generation of a Predictive Information Content entity intended to describe an uncertain possible future event, value, entity, or attribute of an entity. (Parent: cco:ont00000228 Planned Act; output: cco:ont00000626 Predictive ICE.) Anchor for bpo:ActOfForecasting. |
+| `cco:ont00000051` | Act of Construction | An Act of Material Artifact Processing wherein Material Artifacts are built on site as prescribed by some contract. (Parent: cco:ont00000908 Act of Material Artifact Processing.) Cited as a reject for bpo:ActOfDesign and bpo:ActOfDevelopment; the direct anchor where an act builds material artifacts on site. |
+| `cco:ont00000684` | Act of Contract Formation | An Act of Promising having a lawful object entered into voluntarily by two or more agents with legal capacity, each intending to create one or more legal obligations between them. (Parent: cco:ont00000821 Act of Promising -> cco:ont00001162 Act of Commissive Communication -> cco:ont00000402 Act of Communication.) Evaluated and rejected for bpo:ActOfNegotiation (it is the consummating promise, narrower than the bargaining process); listed for the contracting verbs that genuinely form a contract. |
+| `cco:ont00000908` | Act of Material Artifact Processing | A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact. (Parent: cco:ont00000228 Planned Act.) Anchor for bpo:ActOfProduction; parent of cco:ont00000970, cco:ont00000051, cco:ont00001359. |
+| `cco:ont00000595` | Act of Cargo Transportation | An Act of Location Change wherein some Payload is moved from one location to another. (Parent: cco:ont00000065 Act of Location Change.) Cited as the close-but-too-narrow sibling rejected in favor of bpo:ActOfTransportation; reuse directly where a Payload is conveyed. |
+| `cco:ont00000836` | Act of Financial Instrument Use | An Act of Artifact Employment in which some Agent uses some Financial Instrument. (Parent: cco:ont00000566 Act of Artifact Employment.) Anchor for bpo:ActOfPayment; parent of cco:ont00001334 Act of Purchasing. |
+| `cco:ont00000433` | Act of Association | A Social Act wherein an Agent unites with some other Agent in a Planned Act, enterprise or business. (Parent: cco:ont00001327 Social Act.) Anchor for bpo:ActOfRelationshipManagement. |
+| `cco:ont00001158` | Act of Data Transformation | An Act of Information Processing in which an algorithm is executed to act upon one or more input Information Content Entities into one or more output Information Content Entities. (Parent: cco:ont00000366 Act of Information Processing.) Cited as a reject for bpo:ActOfDataManagement (which need not execute an algorithm). |
+| `cco:ont00001327` | Social Act | A Planned Act having an objective that affects, is performed by, or is performed on behalf of, a community or group of Persons. (Parent: cco:ont00000228 Planned Act.) Anchor for bpo:ActOfAdvocacy. NOTE: this is 'Social Act', NOT 'Act of Social Movement' (that is the distinct IRI cco:ont00000079, a subclass of this one) -- a false-friend caution. |
 
 ---
 
@@ -214,10 +214,10 @@ Every class **MUST** carry `rdfs:label`. Every **process** class **MUST** additi
 
 The canonical pattern source is the production section module `ontology/slices/apqc_1_0.ttl` (and the other twelve slices). The original hand-built `apqc_1_1_1.ttl` was audited, merged into `apqc_1_0.ttl`, and is now **frozen** under `ontology/reference/` as a pre-ADR-001 worked example (it keeps readable IRIs for legibility and is not part of the validated corpus). The five reusable patterns are:
 
-- **Process** — `ex:Proc rdfs:subClassOf <act genus>, [has input some <ICE>], [has output some <ICE>], [has participant some <Agent>]` (each restriction subject to the Phase 3 existential-necessity rule).
-- **Descriptive output with aboutness** — `ex:Report rdfs:subClassOf cco:Descriptive-ICE, [is about some <Subject>]`.
+- **Process** — `bpo:Proc rdfs:subClassOf <act genus>, [has input some <ICE>], [has output some <ICE>], [has participant some <Agent>]` (each restriction subject to the Phase 3 existential-necessity rule).
+- **Descriptive output with aboutness** — `bpo:Report rdfs:subClassOf cco:Descriptive-ICE, [is about some <Subject>]`.
 - **Directive output** — prescriptive specifications/decisions `rdfs:subClassOf cco:Directive-ICE`.
-- **Agent + role + capability triad** — `ex:Agent rdfs:subClassOf cco:Agent, [has capability some <AgentCapability>], [bearer of some <Role>]`; the capability is `realized in` the act.
+- **Agent + role + capability triad** — `bpo:Agent rdfs:subClassOf cco:Agent, [has capability some <AgentCapability>], [bearer of some <Role>]`; the capability is `realized in` the act.
 - **Partonomy** — parent `rdfs:subClassOf [has process part some <Child>]`, repeated per child.
 
 ---
@@ -243,7 +243,7 @@ A regression fixture of deliberately non-conformant classes (`apqc_bad_examples.
 
 - **Existential over-commitment.** See the Phase 3 existential-necessity rule; thin classes are re-checked at Gate D.
 - **Precedence discipline.** Assert ordering only where the source licenses it. Parallel facets of one scan get none.
-- **Material-output convention (corpus-local).** In the operations categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0) a process often produces or moves a *material* product. The reality slices use `cco:has output` only for **informational** (ICE) outputs and attach the material product/result via `bfo:has participant` (keeping `has output` aligned with the Descriptive/Directive ICE pattern). This is a **deliberate convention, not a missing output** — CCO's `has output` *does* permit a material continuant filler (Phase 3 allows material I/O fillers), so adopting a material `has output` pattern for production/logistics acts is a legitimate alternative; it is left as an open corpus-wide policy choice. Whichever is chosen, apply it uniformly and state it in the act-genus comment (e.g. `ex:ActOfProduction`).
+- **Material-output convention (corpus-local).** In the operations categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0) a process often produces or moves a *material* product. The reality slices use `cco:has output` only for **informational** (ICE) outputs and attach the material product/result via `bfo:has participant` (keeping `has output` aligned with the Descriptive/Directive ICE pattern). This is a **deliberate convention, not a missing output** — CCO's `has output` *does* permit a material continuant filler (Phase 3 allows material I/O fillers), so adopting a material `has output` pattern for production/logistics acts is a legitimate alternative; it is left as an open corpus-wide policy choice. Whichever is chosen, apply it uniformly and state it in the act-genus comment (e.g. `bpo:ActOfProduction`).
 
 *(The Category-as-aggregate question, formerly here, is now foundational — D8.)*
 
@@ -276,28 +276,28 @@ A regression fixture of deliberately non-conformant classes (`apqc_bad_examples.
 
 **Phase 1 (de-conflate).** Process = analyze competitors; output = a competitor analysis; participant = a competitive-intelligence agent; subject = competitor organizations. The method phrase "evaluating competitors' strategies to determine strengths and weaknesses" is *not* independently tracked by APQC, so by the Phase 1 method-phrase criterion it stays in the definition rather than becoming a process part.
 
-**Phase 2 (classify).** Analysis → information processing. CCO has no generic analysis class (verified), so the genus is the shared-extension class `ex:ActOfAnalysis ⊑ cco:ont00000366` (D9 — defined once in `apqc-ext.ttl`, not re-minted here).
+**Phase 2 (classify).** Analysis → information processing. CCO has no generic analysis class (verified), so the genus is the shared-extension class `bpo:ActOfAnalysis ⊑ cco:ont00000366` (D9 — defined once in `apqc-ext.ttl`, not re-minted here).
 
-**Phase 3 (I/O).** Input `ex:CompetitorData ⊑ Descriptive ICE`; output `ex:CompetitorAnalysis ⊑ Descriptive ICE, [is about some ex:Competitor]`. Producing a competitor analysis is definitional for this process type, so the output is promoted to an existential restriction; the input likewise.
+**Phase 3 (I/O).** Input `bpo:CompetitorData ⊑ Descriptive ICE`; output `bpo:CompetitorAnalysis ⊑ Descriptive ICE, [is about some bpo:Competitor]`. Producing a competitor analysis is definitional for this process type, so the output is promoted to an existential restriction; the input likewise.
 
-**Phase 4 (realizables).** `ex:CompetitiveIntelligenceAnalyst ⊑ cco:Agent, [has capability some ex:CompetitiveAnalysisCapability], [bearer of some ex:…AnalystRole]`; `ex:Competitor ⊑ cco:Organization, [bearer of some ex:CompetitorRole]`.
+**Phase 4 (realizables).** `bpo:CompetitiveIntelligenceAnalyst ⊑ cco:Agent, [has capability some bpo:CompetitiveAnalysisCapability], [bearer of some bpo:…AnalystRole]`; `bpo:Competitor ⊑ cco:Organization, [bearer of some bpo:CompetitorRole]`.
 
-**Phase 5 (partonomy).** Parent `1.1.1` gets `[has process part some ex:AnalyzeCompetitors]`.
+**Phase 5 (partonomy).** Parent `1.1.1` gets `[has process part some bpo:AnalyzeCompetitors]`.
 
 **Phase 7 (definition, CCO house style).** "An Act of Analysis that has as input competitor data and has as output a competitor analysis about one or more competitors."
 
 **Phase 8 (validate).** Passes Gates A–C against the local closure; A–D with the reasoner.
 
-Resulting axiom set (the genus `ex:ActOfAnalysis` resides in `apqc-ext.ttl`):
+Resulting axiom set (the genus `bpo:ActOfAnalysis` resides in `apqc-ext.ttl`):
 
 ```turtle
-ex:AnalyzeCompetitors a owl:Class ;
-    ex:pcfID "19945" ; ex:hierarchyID "1.1.1.1" ;
-    ex:apqcSourceText "Identifying your competitors, ..." ;
+bpo:AnalyzeCompetitors a owl:Class ;
+    bpo:pcfID "19945" ; bpo:hierarchyID "1.1.1.1" ;
+    bpo:apqcSourceText "Identifying your competitors, ..." ;
     rdfs:label "Analyze competitors" ;
     skos:definition "An Act of Analysis that has as input competitor data and has as output a competitor analysis about one or more competitors." ;
-    rdfs:subClassOf ex:ActOfAnalysis ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom ex:CompetitorData ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom ex:CompetitorAnalysis ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom ex:CompetitiveIntelligenceAnalyst ] .
+    rdfs:subClassOf bpo:ActOfAnalysis ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:CompetitorData ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CompetitorAnalysis ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:CompetitiveIntelligenceAnalyst ] .
 ```

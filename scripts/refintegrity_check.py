@@ -1,10 +1,10 @@
 """Gate F -- referential integrity + D7 scheme conformance over the merged corpus.
 
 Runs the vendored RefIntegrity linter (tools/refintegrity/, from Skreen5hot/IRI_Linter,
-implementing FNSR-RefIntegrity-Linter-Spec-R1.1) over every ex:/perf: module and asserts
+implementing FNSR-RefIntegrity-Linter-Spec-R1.1) over every bpo:/perf: module and asserts
 the FR-18 baseline:
 
-    dangling_ref           0   (every ex:/perf: reference resolves to a declared term)
+    dangling_ref           0   (every bpo:/perf: reference resolves to a declared term)
     readable_label         0   (not exercised here -- no --register)
     capability-as-process 39   (the known capabilities-wearing-process-IRIs; a tracked backlog)
     pcf-without-P-iri      0
@@ -31,7 +31,7 @@ BASELINE = {"dangling_ref": 0, "readable_label": 0,
             "capability-as-process": 39, "pcf-without-P-iri": 0}
 
 def modules() -> list[str]:
-    """Every project-minted (ex:/perf:) module; NOT the CCO closure (Gate B owns cco:/obo:)."""
+    """Every project-minted (bpo:/perf:) module; NOT the CCO closure (Gate B owns cco:/obo:)."""
     files = sorted(glob.glob(str(ROOT / "ontology" / "slices" / "apqc_*_0.ttl")))
     files += [str(ROOT / "ontology" / f) for f in
               ("apqc-ext.ttl", "apqc-catalog.ttl", "capabilities_roles.ttl",

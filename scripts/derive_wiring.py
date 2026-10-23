@@ -1,9 +1,9 @@
 """Derive the process<->agent bridge wiring for one section, deterministically.
 
 Reads the harvest manifest (scripts/harvest_caps_roles.py) and emits:
-  - ex:<cap> ex:enablesProcess ex:<proc>      (from the capability's realized-in)
-  - ex:<proc> ex:requiresCapability ex:<cap>  (derived inverse -- decision ii)
-  - ex:<proc> ex:requiresRole ex:<role>       (from role bearer -> process participant)
+  - bpo:<cap> bpo:enablesProcess bpo:<proc>      (from the capability's realized-in)
+  - bpo:<proc> bpo:requiresCapability bpo:<cap>  (derived inverse -- decision ii)
+  - bpo:<proc> bpo:requiresRole bpo:<role>       (from role bearer -> process participant)
   - role-enrichment co-anchors under the CORRECT CCO role subclass, by class:
         Authority Role  cco:ont00000187  (gate/approval/regulatory authority -- the deontic seam)
         Occupation Role cco:ont00000984  (employed positions: analyst, manager, planner, ...)
@@ -82,9 +82,9 @@ def derive(section: str) -> dict:
         return "\n".join(out) if len(out) > 1 else ""
 
     turtle = "\n\n".join(x for x in [
-        block("enablesProcess (capability -> process, from realized-in)", enables, "ex:enablesProcess"),
-        block("requiresCapability (process -> capability, derived inverse)", requires_cap, "ex:requiresCapability"),
-        block("requiresRole (process -> role, from bearer/participant triad)", requires_role, "ex:requiresRole"),
+        block("enablesProcess (capability -> process, from realized-in)", enables, "bpo:enablesProcess"),
+        block("requiresCapability (process -> capability, derived inverse)", requires_cap, "bpo:requiresCapability"),
+        block("requiresRole (process -> role, from bearer/participant triad)", requires_role, "bpo:requiresRole"),
         ("# --- role enrichment co-anchors (correct CCO role subclass) ---\n" + "\n".join(sorted(set(role_anchor_lines)))) if role_anchor_lines else "",
     ] if x)
 

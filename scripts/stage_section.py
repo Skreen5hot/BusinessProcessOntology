@@ -27,15 +27,15 @@ You are one stage of a pipeline producing the reality-layer module
 - `apqc_to_bfo_cco_methodology.md` — full spec (§6 verified CCO term table; Phase-3 necessity rule).
 - `docs/adr/ADR-001-category-and-upper-level-modeling.md` — two-layer model; R5 bounded-occurrent test.
 - `ontology/slices/apqc_1_1_1.ttl` — GOLD reference; mirror its house style, prefixes, patterns.
-- `ontology/apqc-ext.ttl` — shared act genera: ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition (REUSE; never re-mint). New recurring genera are PROPOSE-EXT, not silently duplicated.
+- `ontology/apqc-ext.ttl` — shared act genera: bpo:ActOfAnalysis, bpo:ActOfIdentification, bpo:ActOfFormulation, bpo:ActOfSelection, bpo:ActOfAcquisition (REUSE; never re-mint). New recurring genera are PROPOSE-EXT, not silently duplicated.
 
 ## Verify-before-assert (D6)
 Before using any `cco:ont…` IRI, confirm its label+definition+parent in the closure:
 `grep -A3 'ont00000XXX' vendor/cco/CommonCoreOntologiesMerged.ttl`. A matching label is NOT sufficient.
 
 ## IRI scheme (D7)
-- reality-layer process class: `ex:P<pcfID>`  ·  catalog node (exists already): `ex:PCF_<pcfID>`.
-- supporting classes (ICEs/agents/roles/capabilities/new genera): readable `ex:` CamelCase, NO pcf ids.
+- reality-layer process class: `bpo:P<pcfID>`  ·  catalog node (exists already): `bpo:PCF_<pcfID>`.
+- supporting classes (ICEs/agents/roles/capabilities/new genera): readable `bpo:` CamelCase, NO pcf ids.
 
 ## R5 (the one judgement per node) — apply to EVERY row, record the decision + reason
 - repeatable occurrent with begin/end, can be a proper part → process `owl:Class ⊑ <CCO Act / ext genus>`.
@@ -55,7 +55,7 @@ Informational I/O is still modeled as ICEs.
 ## Hard gate rules (a validator rejects violations)
 D1 partonomy via cco:ont00001777 (never rdfs:subClassOf between processes); D3 informational I/O are ICEs;
 D4 realizables on Agents/Orgs only; Phase-3 necessity: someValuesFrom ONLY when definitional, else rdfs:comment;
-every process carries ex:pcfID/ex:hierarchyID/ex:apqcSourceText + label + genus-differentia skos:definition.
+every process carries bpo:pcfID/bpo:hierarchyID/bpo:apqcSourceText + label + genus-differentia skos:definition.
 The Category {section} itself is catalog-only (R3) — no has-process-part to its groups.
 
 ## Your data

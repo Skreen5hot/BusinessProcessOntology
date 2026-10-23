@@ -1,5 +1,23 @@
 # Release Notes
 
+## v0.4.1 — Prefix label `ex:` → `bpo:` (2026-10-23)
+
+**No IRI changes.** The prefix label for BPO terms is now `bpo:`, still standing for
+`https://fandaws.com/ontology/bpo#`. This completes the phase ADR-002 N1 anticipated. Consumers
+that reference full IRIs, such as the BCO's pinned extract, are unaffected. Tools that match the
+literal text `ex:` in BPO files, the corpus index or the judgment tables need to match `bpo:`.
+
+- The rename covers Turtle, SHACL (`sh:prefix "bpo"`), the pipeline code, the
+  `capabilities/*.json` judgment tables, `corpus_index.tsv` and the living docs. Frozen
+  history keeps `ex:`.
+- The QA queries are renamed `qa/queries/warn/bpo-class-*.rq`.
+- Every module's `owl:versionInfo` is `0.4.1`.
+- Proof: every module graph is identical to v0.4.0 except for three things. `owl:versionInfo`
+  changed. `ex:` CURIEs written inside string literals changed (1,266 comments, definitions,
+  SHACL messages and SHACL SPARQL; every changed literal differs only by that rename). And
+  `sh:prefix "ex"` became `"bpo"`. The generators reproduce their outputs, the index equals
+  v0.4.0's with `ex:` → `bpo:`, and every gate gives the same results.
+
 ## v0.4.0 — Namespace moves to fandaws.com (2026-10-23)
 
 **Breaking for every consumer that references BPO IRIs.** The only change to the ontology is its

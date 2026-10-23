@@ -1,5 +1,5 @@
-# QA (warn): project-minted (ex:) classes that lack a skos:definition.
-# MIT-authored for the Business Process Ontology. Scoped to the ex: namespace so
+# QA (warn): project-minted (bpo:) classes that lack a skos:definition.
+# MIT-authored for the Business Process Ontology. Scoped to the bpo: namespace so
 # it does not flag vendored CCO/BFO classes. Run by ROBOT verify (non-blocking).
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>

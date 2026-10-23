@@ -35,7 +35,7 @@ def extract_genus_blocks() -> dict[str, str]:
     blocks: dict[str, str] = {}
     i, n = 0, len(lines)
     while i < n:
-        m = re.match(r"^(ex:ActOf\w+) a owl:Class\b", lines[i])
+        m = re.match(r"^(bpo:ActOf\w+) a owl:Class\b", lines[i])
         if m:
             start = i
             while i < n and not _is_terminator(lines[i]):
@@ -58,9 +58,9 @@ def inline(slice_path: Path, blocks: dict[str, str]) -> list[str]:
     g = rdflib.Graph()
     g.parse(str(slice_path), format="turtle")
     used = sorted(
-        f"ex:{str(o)[len(EX):]}"
+        f"bpo:{str(o)[len(EX):]}"
         for o in set(g.objects(None, RDFS.subClassOf))
-        if str(o).startswith(EX + "ActOf") and f"ex:{str(o)[len(EX):]}" in blocks
+        if str(o).startswith(EX + "ActOf") and f"bpo:{str(o)[len(EX):]}" in blocks
     )
     if not used:
         return []

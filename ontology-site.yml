@@ -331,7 +331,7 @@ ontologies:
     contributors: false
     import_diagram: false
   overrides:
-    description: 'The process-to-agent dispatch foundation: ex:Capability / ex:Role markers and the requires*/enables/bears
+    description: 'The process-to-agent dispatch foundation: bpo:Capability / bpo:Role markers and the requires*/enables/bears
       properties.'
     contributors: []
   downloads:
@@ -384,5 +384,5 @@ qa:
     default:
       fail: []
       warn:
-      - qa/queries/warn/ex-class-missing-skos-definition.rq
-      - qa/queries/warn/ex-class-missing-rdfs-label.rq
+      - qa/queries/warn/bpo-class-missing-skos-definition.rq
+      - qa/queries/warn/bpo-class-missing-rdfs-label.rq

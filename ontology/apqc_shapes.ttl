@@ -6,7 +6,7 @@
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix cco:   <https://www.commoncoreontologies.org/> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
-@prefix ex:    <https://fandaws.com/ontology/bpo#> .
+@prefix bpo:   <https://fandaws.com/ontology/bpo#> .
 @prefix sh-ex: <https://fandaws.com/ontology/bpo/shapes#> .
 
 ####################################################################
@@ -37,11 +37,11 @@ sh-ex:prefixes a owl:Ontology ;
         [ sh:prefix "owl"  ; sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ] ,
         [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] ,
         [ sh:prefix "skos" ; sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ] ,
-        [ sh:prefix "ex"   ; sh:namespace "https://fandaws.com/ontology/bpo#"^^xsd:anyURI ] .
+        [ sh:prefix "bpo"   ; sh:namespace "https://fandaws.com/ontology/bpo#"^^xsd:anyURI ] .
 
 ####################################################################
 # S1 + S2 : target = every APQC process class
-#   (an ex: owl:Class that carries a has input / has output /
+#   (a bpo: owl:Class that carries a has input / has output /
 #    has process part restriction)
 ####################################################################
 
@@ -69,9 +69,9 @@ sh-ex:ProcessShape a sh:NodeShape ;
         sh:severity sh:Violation ;
         sh:message "Process is missing skos:definition (genus-differentia form required)." ] ;
     sh:property [
-        sh:path ex:pcfID ; sh:minCount 1 ;
+        sh:path bpo:pcfID ; sh:minCount 1 ;
         sh:severity sh:Violation ;
-        sh:message "Process is missing ex:pcfID (stable APQC provenance anchor)." ] ;
+        sh:message "Process is missing bpo:pcfID (stable APQC provenance anchor)." ] ;
     sh:property [
         sh:path skos:example ; sh:minCount 1 ;
         sh:severity sh:Warning ;

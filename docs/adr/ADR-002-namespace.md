@@ -31,6 +31,14 @@ Local names are unchanged, so `ex:P10020` keeps its PCF-ID-derived local name (D
 Turtle body, judgment table, index row or document that uses `ex:` CURIEs needs editing.
 Renaming the label to `bpo:` is wanted, and will be a separate, purely cosmetic phase.
 
+> **Amended in v0.4.1 (2026-10-23):** the phase N1 anticipated is done. The prefix label is now
+> `bpo:` across all live files: Turtle, SHACL, code, judgment tables, the index and the living
+> docs. No IRI changed. The graphs differ from v0.4.0 only in `owl:versionInfo`, in `ex:` text
+> inside literals (prose and SHACL SPARQL), and in `sh:prefix "bpo"`. Frozen
+> text (sent messages, past release notes, the FNSR spec, the superseded v0.2.0 plan, and the
+> body of this ADR) keeps `ex:`. The QA queries were renamed `bpo-class-*.rq`. `corpus_check.sh`
+> also refuses an `ex:` prefix declaration.
+
 **N2 — The old base never comes back.** `scripts/corpus_check.sh` fails if
 `example.org/apqc` appears in any tracked file under `ontology/`, `src/`, `scripts/`, `tools/` or
 `qa/`. Historical text is exempt: sent messages in `communications/` never change, and

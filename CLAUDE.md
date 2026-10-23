@@ -11,23 +11,25 @@ decision), `RELEASE_NOTES.md` (v0.3.0 state), `PHASE0.md` (repo/daemon setup).
 - **Reality layer** — `ontology/slices/apqc_1_0.ttl … apqc_13_0.ttl`, one per top-level PCF
   category. A BFO **process universal** is minted only where the **R5** bounded-occurrent test
   passes; standing functions become **Organization Capabilities** (**R6**), not processes. Each
-  reality-layer class bridges to its catalog node via the `ex:designatesProcessType` annotation
+  reality-layer class bridges to its catalog node via the `bpo:designatesProcessType` annotation
   property (keeps OWL DL; no ICE-to-class punning).
 - **Self-contained slices** — each slice **inlines** the canonical act genera it uses from the
   registry `ontology/apqc-ext.ttl` (the D9 single source of truth, mirrored into slices). No
   `owl:imports`; every slice validates standalone against the pinned CCO/BFO closure.
 
-## Namespace (ADR-002, v0.4.0)
+## Namespace (ADR-002, v0.4.0 / v0.4.1)
 
-BPO's base is **`https://fandaws.com/ontology/bpo`** (`ex:` = `…/bpo#`, `apqc:` = `…/bpo/scheme#`,
-`perf:` = `…/bpo/perf#`). The prefix *label* is still `ex:`; renaming it to `bpo:` is a planned
-later phase. The retired `http://example.org/apqc` base is refused by `corpus_check.sh`. The BCO
+BPO's base is **`https://fandaws.com/ontology/bpo`** (`bpo:` = `…/bpo#`, `apqc:` = `…/bpo/scheme#`,
+`perf:` = `…/bpo/perf#`). The term prefix label is `bpo:` (renamed from `ex:` in v0.4.1, with no
+IRI change). Older docs, sent messages and past release notes still say `ex:`, and they mean the
+same terms. `corpus_check.sh` refuses both the retired `http://example.org/apqc` base and an
+`ex:` prefix declaration. The BCO
 vendors `apqc-ext.ttl` from us: tell it about namespace, CCO-pin or act-genus changes through
 `communications/bco/` (`python scripts/communications.py` checks the record).
 
 ## Navigating the corpus — grep the index, don't read whole slices
 
-`ontology/index/corpus_index.tsv` is a generated, greppable index of every `ex:`/`perf:` term
+`ontology/index/corpus_index.tsv` is a generated, greppable index of every `bpo:`/`perf:` term
 (iri · kind · section · hierarchy · pcf · label · parents · requires*/enables wiring · definition).
 **Prefer `grep -i "<label>" ontology/index/corpus_index.tsv` over `Read`-ing a 3,000-line slice** —
 it returns only matching rows (far fewer tokens). Regenerate after ANY corpus change:
@@ -45,11 +47,11 @@ python scripts/consistency_audit.py # cross-slice anchor / drift audit
 - **Gate A** rdflib parse · **B** every `cco:`/`obo:` IRI resolves in vendored closure ·
   **C** SHACL (`ontology/apqc_shapes.ttl`, shapes S1–S8), zero violations ·
   **D** ELK reasoner (`tools/robot.jar`), no unsatisfiable classes.
-- **Gate F** (`scripts/refintegrity_check.py`, run by `corpus_check.sh`) — `ex:`/`perf:` **referential
+- **Gate F** (`scripts/refintegrity_check.py`, run by `corpus_check.sh`) — `bpo:`/`perf:` **referential
   integrity** (every reference resolves to a declared term) + **D7 scheme** conformance, via the
   vendored RefIntegrity linter (`tools/refintegrity/`, needs `node`; SKIPs if absent). Asserts the
   FR-18 baseline: `dangling_ref 0 · readable_label 0 · capability-as-process 39 · pcf-without-P-iri 0`
-  — the 39 (capabilities wearing `ex:P<id>` IRIs, `⊑568`) are a tracked backlog, so a **deviation**
+  — the 39 (capabilities wearing `bpo:P<id>` IRIs, `⊑568`) are a tracked backlog, so a **deviation**
   fails, not the known 39. Update `BASELINE` in the script deliberately if the corpus changes.
 - **Gate C does NOT merge CCO** — it validates the slice alone. Each slice's
   `# 1b. CCO SUPERCLASS BRIDGES` block locally asserts the chains the shapes need offline
@@ -70,11 +72,11 @@ python scripts/consistency_audit.py # cross-slice anchor / drift audit
 - **SHACL anchor allowlists** — S2 process anchors `{366,636,511,228}`; S3/S4 ICE
   `{958,853,965}` + `BFO_0000040` (material). Anchor outside the allowlist ⇒ co-assert the nearest
   allowlisted parent locally (or rely on the bridge block).
-- **Forecasts** → Predictive ICE `626` (+`853` co-parent); forecasting acts → `ex:ActOfForecasting`
-  (`371`+`228`). **Money** transferred = `ex:PaymentInstrument` (`537`), not the act.
+- **Forecasts** → Predictive ICE `626` (+`853` co-parent); forecasting acts → `bpo:ActOfForecasting`
+  (`371`+`228`). **Money** transferred = `bpo:PaymentInstrument` (`537`), not the act.
 - **Shared classes are harmonized corpus-wide** (changing one risks a disjoint collision):
-  `ex:Budget`/`ex:BusinessStrategy` → `965`; `ex:PerformanceMeasure` → `853`; `ex:Supplier` → `1180`;
-  `ex:Risk` → `BFO_0000017`. Fix a definition/anchor *contradiction* by correcting the text, not by
+  `bpo:Budget`/`bpo:BusinessStrategy` → `965`; `bpo:PerformanceMeasure` → `853`; `bpo:Supplier` → `1180`;
+  `bpo:Risk` → `BFO_0000017`. Fix a definition/anchor *contradiction* by correcting the text, not by
   diverging the anchor.
 - **Commits** — one slice/topic per commit; validate first; direct-to-`main` is fine (single-author
   repo); end messages with `Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>`.
@@ -99,17 +101,17 @@ across all 13 sections. Governing distinction: **Capability** (`cco:ont00001379`
 competence, feasibility filter) ≠ **Role** (`obo:BFO_0000023`) ≠ **Process**. Matching is
 **species-satisfies-genus** (`subClassOf*`); **`568 ⊑ 1379`** so slice Organization Capabilities
 already reach Agent Capability (match on "reaches 1379," slices left at 568). The four gating
-decisions were settled: (i) leave slice caps at 568; (ii) author `ex:enablesProcess`, **derive**
-`ex:requiresCapability`; (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
+decisions were settled: (i) leave slice caps at 568; (ii) author `bpo:enablesProcess`, **derive**
+`bpo:requiresCapability`; (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
 capability layer is a **merge-only shared overlay** (no slice imports it).
 
 **Artifacts (in `ontology/`):**
-- `capabilities_roles.ttl` — foundation: `ex:Capability`/`ex:Role` markers; `ex:enablesProcess`/
-  `ex:bearsPermission` (annotation) + `ex:requiresCapability`/`ex:requiresRole`/`ex:requiresPermission`
+- `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers; `bpo:enablesProcess`/
+  `bpo:bearsPermission` (annotation) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
   (object properties — range enforced by SHACL C5–C7, **not** `rdfs:range`, to avoid forcing
   entailments into the merged corpus). `requiresPermission` seam declared but **unpopulated** (RDM/IEE
   owns the permission catalogue, `cco:ont00000751`).
-- `delivery_processes.ttl` — `AuthorRoadmap`/`AuthorImplementationPlan` (⊑ `ex:ActOfFormulation`) +
+- `delivery_processes.ttl` — `AuthorRoadmap`/`AuthorImplementationPlan` (⊑ `bpo:ActOfFormulation`) +
   `ApproveImplementationPlan` gate act. (The "agile-loop" set PHASE1 §6b cites does not exist in the
   methodology, which ends at §12; left as a scope note, not invented.)
 - `capabilities_roles_shapes.ttl` — C1–C7. `capabilities_wiring.ttl` — **generated** merge-only overlay:
@@ -138,5 +140,5 @@ permission catalogue are future work.
 
 ## Open decisions from v0.3.0 (non-blocking, may resurface here)
 
-`ex:ActOfNegotiation` genus (kept `228`; Social Act `1327` is a defensible corpus-wide alternative) ·
+`bpo:ActOfNegotiation` genus (kept `228`; Social Act `1327` is a defensible corpus-wide alternative) ·
 product/service split (conservative material reading) · material-output convention (methodology §10).

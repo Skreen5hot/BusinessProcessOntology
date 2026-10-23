@@ -37,7 +37,7 @@ CCO_VERSION_IRI = (
     "https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged"
 )
 
-# --- Namespaces (D7 IRI scheme; ex: is a placeholder base, see PHASE0 §9) ----
+# --- Namespaces (D7 IRI scheme; base per ADR-002) ----
 NS = {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -47,10 +47,10 @@ NS = {
     "dct": "http://purl.org/dc/terms/",
     "obo": "http://purl.obolibrary.org/obo/",
     "cco": "https://www.commoncoreontologies.org/",
-    "ex": "https://fandaws.com/ontology/bpo#",
+    "bpo": "https://fandaws.com/ontology/bpo#",
     "apqc": "https://fandaws.com/ontology/bpo/scheme#",  # the skos:ConceptScheme
 }
-EX = NS["ex"]
+EX = NS["bpo"]
 
 
 def class_iri(pcf_id: str) -> str:

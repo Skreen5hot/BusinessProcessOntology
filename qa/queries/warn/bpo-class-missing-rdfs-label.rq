@@ -1,5 +1,5 @@
-# QA (warn): project-minted (ex:) classes that lack an rdfs:label.
-# MIT-authored for the Business Process Ontology. Scoped to the ex: namespace.
+# QA (warn): project-minted (bpo:) classes that lack an rdfs:label.
+# MIT-authored for the Business Process Ontology. Scoped to the bpo: namespace.
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 SELECT ?entity WHERE {

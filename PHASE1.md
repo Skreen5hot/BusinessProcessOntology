@@ -31,7 +31,7 @@ attach.
 
 **A capability** — names a *competence*, not a task or an output (✗ "produce competitor analysis";
 ✓ "competitive analysis capability"); reaches `cco:ont00001379` by `subClassOf*`; carries a
-`skos:definition`; declares scope via `ex:enablesProcess` (the process types it realizes).
+`skos:definition`; declares scope via `bpo:enablesProcess` (the process types it realizes).
 
 **A role** — names a *position*; reaches `obo:BFO_0000023`; and per **reuse-before-mint** anchors
 on the CCO role taxonomy rather than bare `BFO_0000023`:
@@ -55,7 +55,7 @@ The bridge logic. An agent bearing capability `C_a` satisfies a process requirem
 requirement (a competitor-identification capability satisfies a requirement for the broader
 analysis capability, because the species *is-a* the genus). Therefore:
 
-- author `ex:requiresCapability` **at the precise level the process needs**;
+- author `bpo:requiresCapability` **at the precise level the process needs**;
 - agents declare the **specific** capabilities they hold;
 - **specialization rolls up** — the registry matcher closes the gap.
 
@@ -70,10 +70,10 @@ Three artifacts, validated (parses; all CCO/BFO anchors independently re-verifie
 2024-11 closure):
 
 **`capabilities_roles.ttl`** — two marker genera + reused CCO anchors:
-- `ex:Capability ⊑ cco:ont00001379` (Agent Capability); `ex:Role ⊑ obo:BFO_0000023` (Role).
-- two module-local **annotation** properties: `ex:enablesProcess` (capability → process it realizes;
+- `bpo:Capability ⊑ cco:ont00001379` (Agent Capability); `bpo:Role ⊑ obo:BFO_0000023` (Role).
+- two module-local **annotation** properties: `bpo:enablesProcess` (capability → process it realizes;
   the operational **inverse** of `requiresCapability`, BFO-grounded in *has realization*) and
-  `ex:bearsPermission` (role → `cco:ont00000751` Action Permission — the **deontic hook**).
+  `bpo:bearsPermission` (role → `cco:ont00000751` Action Permission — the **deontic hook**).
 - worked examples wiring real cases: `CompetitiveAnalysisCapability` → P19945/P10021;
   `StrategicPlanningCapability` → P10037/P10045; `PlanAuthoringCapability` → AuthorRoadmap /
   AuthorImplementationPlan; roles `MarketAnalystRole`/`StrategistRole`/`PlannerRole` (Occupation),
@@ -96,10 +96,10 @@ PlannerRole).
 
 **(a) The capability hierarchies unify cleanly.** The 111 slice capabilities are
 `⊑ cco:ont00000568` Organization Capability, and **`568 ⊑ 1379`** — so they already reach Agent
-Capability. The new `ex:Capability (⊑ 1379)` is the umbrella; the dispatch "reaches 1379" test is
+Capability. The new `bpo:Capability (⊑ 1379)` is the umbrella; the dispatch "reaches 1379" test is
 satisfied by *both* an individual-agent competence and a slice Organization Capability. No
 conflict — but the build must decide whether slice org-capabilities are **re-homed** under
-`ex:Capability` (so the marker is universal) or left at `568` and matched purely by the
+`bpo:Capability` (so the marker is universal) or left at `568` and matched purely by the
 `subClassOf* 1379` test (so slices stay untouched). Recommended: the latter — leave the
 v0.3.0 slices alone; match on "reaches 1379."
 
@@ -167,8 +167,8 @@ validated, and committed on its own.
 
 **Daemon steps (per section, then corpus-wide):**
 1. **Promote the seed.** Move `capabilities_roles.ttl` + `capabilities_roles_shapes.ttl` into
-   `ontology/`; define the three real object properties `ex:requiresCapability` / `ex:requiresRole`
-   / `ex:requiresPermission` (currently only referenced by the shapes); add a
+   `ontology/`; define the three real object properties `bpo:requiresCapability` / `bpo:requiresRole`
+   / `bpo:requiresPermission` (currently only referenced by the shapes); add a
    `delivery_processes.ttl` home for `AuthorRoadmap`/`AuthorImplementationPlan`/the §8 loop.
 2. **Harvest + dedup.** Pull the 111 `*Capability` and 87 `*Role` classes already declared in the
    slices; reconcile the 10 cross-slice recurrences to one canonical definition each; double-anchor
@@ -198,7 +198,7 @@ resolve; structural + coherence shapes are zero-violation; the matchability repo
 in place for RDM/IEE to populate later.
 
 **Settle first (gating decisions, §6 + §8):** (i) leave slice org-capabilities at `568` and match
-on `subClassOf* 1379` vs re-home under `ex:Capability`; (ii) `enablesProcess`→`requiresCapability`
+on `subClassOf* 1379` vs re-home under `bpo:Capability`; (ii) `enablesProcess`→`requiresCapability`
 derivation direction; (iii) where delivery-process universals live; (iv) capability module as a
 corpus-merge-only shared layer that preserves slice self-containment. These four shape everything
 downstream — decide them before the daemon writes at scale.

@@ -8,16 +8,16 @@ flowchart TB
   end
 
   subgraph CAT["Catalog layer - APQC PCF (conceptual, lossless)"]
-    Concept["ex:PCF_id - skos:Concept + Descriptive ICE (1,921)"]
+    Concept["bpo:PCF_id - skos:Concept + Descriptive ICE (1,921)"]
   end
 
   subgraph REAL["Reality layer - what the work IS (13 slices)"]
-    Proc["ex:P_id - process universal (~1,784)"]
+    Proc["bpo:P_id - process universal (~1,784)"]
   end
 
   subgraph DISP["Capability / Role dispatch bridge"]
-    ECap["ex:*Capability"]
-    ERole["ex:*Role"]
+    ECap["bpo:*Capability"]
+    ERole["bpo:*Role"]
     Fleet["agent (agents.json)"]
   end
 

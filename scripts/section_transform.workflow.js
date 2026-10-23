@@ -27,7 +27,7 @@ FIRST read and treat as binding, in order:
   - ontology/slices/apqc_1_1_1.ttl     (GOLD pattern; copy house style + prefixes exactly)
   - ontology/apqc-ext.ttl              (shared genera — REUSE, never re-mint)
 Verify every cco:ont… IRI in vendor/cco/CommonCoreOntologiesMerged.ttl before use (read the definition, not just the label).
-IRI scheme (STRICT, D7): EVERY primary process class IRI MUST be exactly ex:P<pcfID> (e.g. PCF 10399 -> ex:P10399) -- NEVER a readable name like ex:ResolveComplaint. Each pcfID maps to exactly ONE class (no duplicates). Readable ex: CamelCase names are ONLY for supporting classes (ICEs/agents/roles/capabilities/genera), which carry NO ex:pcfID. Catalog node = ex:PCF_<pcfID>.
+IRI scheme (STRICT, D7): EVERY primary process class IRI MUST be exactly bpo:P<pcfID> (e.g. PCF 10399 -> bpo:P10399) -- NEVER a readable name like bpo:ResolveComplaint. Each pcfID maps to exactly ONE class (no duplicates). Readable bpo: CamelCase names are ONLY for supporting classes (ICEs/agents/roles/capabilities/genera), which carry NO bpo:pcfID. Catalog node = bpo:PCF_<pcfID>.
 GOLDEN PRINCIPLE: act genus must agree with output kind — Appraisal/Analysis/Information-Processing → DESCRIPTIVE ICE; Planning/Formulation/Selection → DIRECTIVE ICE.`
 
 const VOCAB_SCHEMA = {
@@ -71,11 +71,11 @@ const groupResults = await parallel(GROUPS.map(g => () =>
 
 TASK: Model the reality layer for process group ${g.h} "${g.name}". Your rows: read ${g.tsv}.
 Apply the R5 test to EVERY row and record the decision (process | capability | catalog-only) + one-line reason. Standing functions → Organization Capability (R6); pure headings → catalog-only.
-For each process: mint ex:P<pcfID>, engineer the act genus from the verb (GOLDEN PRINCIPLE), attach I/O as ICEs (or material entities in operations) ONLY when definitional (Phase-3; else rdfs:comment), build parent→child partonomy with cco:ont00001777 (never rdfs:subClassOf between processes), write genus-differentia skos:definition + ex:pcfID/ex:hierarchyID/ex:apqcSourceText + rdfs:label + skos:example.
+For each process: mint bpo:P<pcfID>, engineer the act genus from the verb (GOLDEN PRINCIPLE), attach I/O as ICEs (or material entities in operations) ONLY when definitional (Phase-3; else rdfs:comment), build parent→child partonomy with cco:ont00001777 (never rdfs:subClassOf between processes), write genus-differentia skos:definition + bpo:pcfID/bpo:hierarchyID/bpo:apqcSourceText + rdfs:label + skos:example.
 REUSE these shared vocab IRIs (do not redefine):
 ${manifestText}
-Available shared genera in apqc-ext.ttl (REUSE these, do not re-mint): ex:ActOfAnalysis, ex:ActOfIdentification, ex:ActOfFormulation, ex:ActOfSelection, ex:ActOfAcquisition${(vocab?.ext_proposals || []).length ? '; new proposals this section: ' + (vocab.ext_proposals || []).map(e => e.iri).join(', ') : ''}.
-Emit a bridge ex:PCF_<pcfID> → ex:P<pcfID> for every modeled node. Return process Turtle, R5 log, any unavoidable extra supporting classes, and bridges.
+Available shared genera in apqc-ext.ttl (REUSE these, do not re-mint): bpo:ActOfAnalysis, bpo:ActOfIdentification, bpo:ActOfFormulation, bpo:ActOfSelection, bpo:ActOfAcquisition${(vocab?.ext_proposals || []).length ? '; new proposals this section: ' + (vocab.ext_proposals || []).map(e => e.iri).join(', ') : ''}.
+Emit a bridge bpo:PCF_<pcfID> → bpo:P<pcfID> for every modeled node. Return process Turtle, R5 log, any unavoidable extra supporting classes, and bridges.
 IMPORTANT: do NOT write or create any .ttl file on disk — return everything via the structured result only. The assembly stage is the sole writer.`,
     { label: `model:${g.h}`, phase: 'Model', schema: GROUP_SCHEMA },
   )
@@ -86,7 +86,7 @@ log(`Model: ${dec('process')} processes, ${dec('capability')} capabilities, ${de
 
 phase('Assemble')
 const fragments = groupResults.map(r => `# ===== group ${r.group} =====\n${r.process_turtle}\n${r.extra_supporting_turtle || ''}`).join('\n\n')
-const allBridges = groupResults.flatMap(r => r.bridges || []).map(b => `${b.catalog_iri} ex:designatesProcessType ${b.reality_iri} .`).join('\n')
+const allBridges = groupResults.flatMap(r => r.bridges || []).map(b => `${b.catalog_iri} bpo:designatesProcessType ${b.reality_iri} .`).join('\n')
 const extLocal = (vocab?.ext_proposals || []).map(e => e.turtle).join('\n\n')
 const slug = SECTION.split('.')[0] + '_0'
 
@@ -97,7 +97,7 @@ TASK: Assemble ONE valid Turtle module and WRITE it to ${OUT} with the Write too
 Compose in order:
 1) Prefixes (copy from ontology/slices/apqc_1_1_1.ttl) PLUS @prefix apqc: <https://fandaws.com/ontology/bpo/scheme#> .
 2) owl:Ontology header for <https://fandaws.com/ontology/bpo/slice/${SECTION}>: dct:title "APQC reality-layer slice ${SECTION}: ${SECTION_NAME}", owl:versionInfo "0.1.0", rdfs:comment recording CCO pin v2.0 (2024-11-06) + ADR-001. Put owl:imports <https://fandaws.com/ontology/bpo/ext> on a COMMENTED line (the validator merges apqc-ext.ttl separately; a live ext import breaks ROBOT).
-3) Provenance annotation properties: ex:pcfID, ex:hierarchyID, ex:apqcSourceText, ex:designatesProcessType.
+3) Provenance annotation properties: bpo:pcfID, bpo:hierarchyID, bpo:apqcSourceText, bpo:designatesProcessType.
 4) PROPOSED-EXT genera under a '# PROPOSE-EXT: promote to apqc-ext.ttl after review' comment:
 ${extLocal || '# (none)'}
 5) SHARED VOCABULARY:
@@ -118,7 +118,7 @@ phase('Validate')
 const VAL_SCHEMA = { type: 'object', required: ['final_status', 'gate_a', 'gate_b', 'gate_c', 'gate_d', 'attempts'], properties: { final_status: { type: 'string' }, gate_a: { type: 'string' }, gate_b: { type: 'string' }, gate_c: { type: 'string' }, gate_d: { type: 'string' }, attempts: { type: 'integer' }, remaining_issues: { type: 'string' } } }
 const validation = await agent(
   `TASK: Normalize, then validate and self-repair ${OUT} until Gates A-D are clean.
-FIRST run \`python scripts/normalize_iris.py ${OUT}\` to enforce the D7 scheme (ex:P<pcfID> on every primary class). If it reports a DUPLICATE pcfID, two classes carry the same ex:pcfID: find the mis-keyed one in ${OUT} (cross-check the group TSVs), correct its ex:pcfID to the right value, and re-run the normalizer until it succeeds with no duplicates.
+FIRST run \`python scripts/normalize_iris.py ${OUT}\` to enforce the D7 scheme (bpo:P<pcfID> on every primary class). If it reports a DUPLICATE pcfID, two classes carry the same bpo:pcfID: find the mis-keyed one in ${OUT} (cross-check the group TSVs), correct its bpo:pcfID to the right value, and re-run the normalizer until it succeeds with no duplicates.
 THEN loop (max 6): run \`python -m src.apqc_transform.validate ${OUT}\`; read the gate table + ontology/reports/gate-${slug.replace('_0','_0')}.json (file: ontology/reports/gate-apqc_${slug}.json); fix any FAIL by editing ${OUT} (A syntax; B verify the cco:/obo: IRI in vendor/cco/CommonCoreOntologiesMerged.ttl; C read the SHACL message — common: a Directive ICE anchored only under CCO Plan/Objective needs an explicit rdfs:subClassOf cco:ont00000965, and an act under a CCO Act outside the shape allowlist needs an explicit rdfs:subClassOf cco:ont00000228 Planned Act; D find contradictory restrictions). Preserve intent; never delete a process to silence a gate. Stop when no FAIL remains. Delete ontology/reports/_reasoned_*.ttl when done. Return final gate statuses + attempts.`,
   { label: `validate:${SECTION}`, phase: 'Validate', schema: VAL_SCHEMA },
 )

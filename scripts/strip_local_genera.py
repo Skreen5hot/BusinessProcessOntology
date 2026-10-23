@@ -1,8 +1,8 @@
-"""Remove local act-genus (ex:ActOf*) class DEFINITIONS from a slice module.
+"""Remove local act-genus (bpo:ActOf*) class DEFINITIONS from a slice module.
 
 After the genera are consolidated into apqc-ext.ttl (D9), each slice should
 only REFERENCE them (as rdfs:subClassOf fillers), not re-define them. This
-removes every `ex:ActOf<Name> a owl:Class ; ... .` definition block (plus any
+removes every `bpo:ActOf<Name> a owl:Class ; ... .` definition block (plus any
 immediately-preceding PROPOSE-EXT/comment lines), leaving every reference intact.
 The validator merges apqc-ext.ttl, so the subclass chains still resolve.
 
@@ -18,7 +18,7 @@ import re
 import sys
 from pathlib import Path
 
-SUBJECT = re.compile(r"^ex:ActOf\w+ a owl:Class\b")
+SUBJECT = re.compile(r"^bpo:ActOf\w+ a owl:Class\b")
 
 
 def _is_terminator(line: str) -> bool:

@@ -28,7 +28,7 @@ You are given the section's rows (with stable PCF IDs), the current
    (`ont00000366` Info-Processing / `ont00000636` Appraisal / `ont00000511`
    Planning / `ont00000228` Planned Act) or a shared-extension genus.
 6. **Reuse before mint (D5) + verify-before-assert (D6).** Reuse a CCO/BFO term
-   where its *definition* (not just its label) fits. Mint a local `ex:` term only
+   where its *definition* (not just its label) fits. Mint a local `bpo:` term only
    when none fits, anchored under the nearest correct CCO/BFO parent, with an
    `rdfs:comment` recording the rejected candidate and why.
 7. **Recurring genera are shared (D9).** If a local act genus recurs, **reuse**
@@ -45,11 +45,11 @@ You are given the section's rows (with stable PCF IDs), the current
    `rdfs:comment`, not a restriction.
 10. **Realizables on independent continuants only (D4).** Roles/capabilities are
     borne by `cco:Agent`/`cco:Organization`, never by an ICE.
-11. **Provenance (§4).** Every PCF-derived process class carries `ex:pcfID`,
-    `ex:hierarchyID`, `ex:apqcSourceText` (verbatim). Supporting classes (genera,
+11. **Provenance (§4).** Every PCF-derived process class carries `bpo:pcfID`,
+    `bpo:hierarchyID`, `bpo:apqcSourceText` (verbatim). Supporting classes (genera,
     ICEs, roles, agents) carry `rdfs:label` + `skos:definition` + an `rdfs:comment`
     on why minted — but **no** PCF row identifiers.
-12. **IRI scheme (D7).** Primary process class IRI = `ex:P<pcfID>`.
+12. **IRI scheme (D7).** Primary process class IRI = `bpo:P<pcfID>`.
 
 ## Procedure per node (Phases 1–7)
 

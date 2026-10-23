@@ -1,14 +1,14 @@
 """Harvest the scattered per-slice capability/role classes into a manifest.
 
 Deterministic extraction (no judgement): for one section's slice it pulls every
-ex:*Capability and ex:*Role class, its anchors, label, definition, and the
+bpo:*Capability and bpo:*Role class, its anchors, label, definition, and the
 existing realizable wiring already encoded in the slices --
   - capability  -> realized-in target  (obo:BFO_0000054 someValuesFrom <proc>)
-                   => the process the capability ENABLES (basis for ex:enablesProcess
-                      and the derived ex:requiresCapability)
+                   => the process the capability ENABLES (basis for bpo:enablesProcess
+                      and the derived bpo:requiresCapability)
   - role        -> bearers              (agent rdfs:subClassOf [BFO_0000196 some <role>])
                    and, via those bearers, the processes that have them as
-                   participants (BFO_0000057) => basis for the derived ex:requiresRole.
+                   participants (BFO_0000057) => basis for the derived bpo:requiresRole.
 Cross-slice recurrence is computed over ALL slices so the harvest knows which
 classes are the 10 shared ones needing one canonical definition.
 
@@ -32,7 +32,7 @@ BFO_HAS_PART = URIRef("http://purl.obolibrary.org/obo/BFO_0000057")  # has parti
 HAS_CAPABILITY = URIRef("https://www.commoncoreontologies.org/ont00001954")
 
 PFX = {
-    "https://fandaws.com/ontology/bpo#": "ex:",
+    "https://fandaws.com/ontology/bpo#": "bpo:",
     "https://www.commoncoreontologies.org/": "cco:",
     "http://purl.obolibrary.org/obo/": "obo:",
 }

@@ -1,6 +1,6 @@
 """Build a compact, greppable index of the corpus -- navigate the graph cheaply.
 
-Emits ontology/index/corpus_index.tsv: one row per ex:/perf: class or individual
+Emits ontology/index/corpus_index.tsv: one row per bpo:/perf: class or individual
 across the 13 slices + apqc-ext + apqc-catalog + the capability/role layer, with
 its kind, label, anchors, hierarchy, and the Phase-1 wiring. Agents Grep this file
 instead of Read-ing whole slices (matching lines only -> far fewer tokens).
@@ -28,7 +28,7 @@ EX = "https://fandaws.com/ontology/bpo#"
 PERF = "https://fandaws.com/ontology/bpo/perf#"
 OUT = ROOT / "ontology" / "index" / "corpus_index.tsv"
 
-PFX = {EX: "ex:", PERF: "perf:", "https://www.commoncoreontologies.org/": "cco:",
+PFX = {EX: "bpo:", PERF: "perf:", "https://www.commoncoreontologies.org/": "cco:",
        "http://purl.obolibrary.org/obo/": "obo:"}
 def q(u: str) -> str:
     for ns, p in PFX.items():
@@ -94,19 +94,19 @@ def main() -> int:
                 kind = "property"
             elif "owl:NamedIndividual" in types or any(t.startswith("cco:") for t in types):
                 kind = "catalog" if ln.startswith("PCF_") else "individual"
-            elif ln.endswith("Capability") or set(parents) & CAP_ANCHORS or "ex:Capability" in parents:
+            elif ln.endswith("Capability") or set(parents) & CAP_ANCHORS or "bpo:Capability" in parents:
                 kind = "capability"
-            elif ln.endswith("Role") or "ex:Role" in parents:
+            elif ln.endswith("Role") or "bpo:Role" in parents:
                 kind = "role"
             elif ln.startswith("ActOf"):
                 kind = "act-genus"
-            elif pcf or any(p.startswith("ex:ActOf") for p in parents):
+            elif pcf or any(p.startswith("bpo:ActOf") for p in parents):
                 kind = "process"
             elif set(parents) & ICE_ANCHORS:
                 kind = "ice"
             elif set(parents) & AGENT_ANCHORS:
                 kind = "agent"
-            elif iri in ("ex:Capability", "ex:Role"):
+            elif iri in ("bpo:Capability", "bpo:Role"):
                 kind = "marker"
             else:
                 kind = "other"

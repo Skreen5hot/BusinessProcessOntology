@@ -1,6 +1,6 @@
 """Corpus-wide consistency audit (read-only). Deterministic checks:
   1. header/version/imports/stale-prose drift per file
-  2. genus (ex:ActOf*) named-anchor consistency across slices + registry
+  2. genus (bpo:ActOf*) named-anchor consistency across slices + registry
   3. shared-class (>=2 files) named-anchor consistency
   4. standalone-SHACL co-parent presence for out-of-allowlist anchors
 """
@@ -20,7 +20,7 @@ files = slices + [registry]
 
 def short(u):
     s = str(u)
-    if s.startswith(EX): return "ex:" + s[len(EX):]
+    if s.startswith(EX): return "bpo:" + s[len(EX):]
     if s.startswith(CCO): return "cco:" + s[len(CCO):]
     if s.startswith(BFO): return "obo:" + s[len(BFO):]
     return s
@@ -43,7 +43,7 @@ print("="*70); print("1. HEADER / VERSION / IMPORTS / STALE-PROSE DRIFT"); print
 stale_pat = re.compile(r"REUSED from apqc-ext|validator merges|merged in for validation|"
                        r"DEFINED IN apqc-ext|local definitions (have been )?removed|"
                        r"PROPOSE-EXT: promote|NEW ACT-GENUS PROPOSALS|owl:imports|"
-                       r'versionInfo "0\.[0-3]\.', re.I)
+                       r'versionInfo "0\.([0-3]\.|4\.0")', re.I)
 for fp in files:
     txt = pathlib.Path(fp).read_text(encoding="utf-8")
     fn = pathlib.Path(fp).name
@@ -52,13 +52,13 @@ for fp in files:
     for m in stale_pat.finditer(txt):
         ln = txt[:m.start()].count("\n") + 1
         hits.append(f"L{ln}:{m.group(0)[:40]}")
-    flag = "" if (ver and ver.group(1) == "0.4.0" and not hits) else "  <<<"
+    flag = "" if (ver and ver.group(1) == "0.4.1" and not hits) else "  <<<"
     print(f"{fn:20} ver={ver.group(1) if ver else '?':7}{flag}")
     for h in hits: print(f"      {h}")
 
-print(); print("="*70); print("2. GENUS (ex:ActOf*) ANCHOR CONSISTENCY"); print("="*70)
+print(); print("="*70); print("2. GENUS (bpo:ActOf*) ANCHOR CONSISTENCY"); print("="*70)
 for name in sorted(anchors):
-    if not name.startswith("ex:ActOf"): continue
+    if not name.startswith("bpo:ActOf"): continue
     perfile = anchors[name]
     sets = set(perfile.values())
     mark = "  <<< DIVERGENT" if len(sets) > 1 else ""
@@ -73,7 +73,7 @@ for name in sorted(anchors):
 print(); print("="*70); print("3. SHARED-CLASS (>=2 files) ANCHOR CONSISTENCY"); print("="*70)
 divergent = 0
 for name in sorted(anchors):
-    if name.startswith("ex:ActOf"): continue
+    if name.startswith("bpo:ActOf"): continue
     perfile = anchors[name]
     if len(perfile) < 2: continue
     sets = set(perfile.values())
@@ -82,7 +82,7 @@ for name in sorted(anchors):
         print(f"{name:34}  <<< DIVERGENT across {len(perfile)} files")
         for fn, st in sorted(perfile.items()):
             print(f"      {fn:20} {sorted(st)}")
-print(f"\n  shared classes in >=2 files: {sum(1 for n,p in anchors.items() if not n.startswith('ex:ActOf') and len(p)>=2)}; divergent: {divergent}")
+print(f"\n  shared classes in >=2 files: {sum(1 for n,p in anchors.items() if not n.startswith('bpo:ActOf') and len(p)>=2)}; divergent: {divergent}")
 
 print(); print("="*70); print("4. CO-PARENT CHECK (out-of-allowlist anchors needing a co-parent)"); print("="*70)
 S2 = {"cco:ont00000366","cco:ont00000636","cco:ont00000511","cco:ont00000228"}

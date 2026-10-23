@@ -8,10 +8,10 @@ Inputs:
                                         that have NO realized-in restriction)
 
 Output per section:
-  ex:<cap>  ex:enablesProcess     ex:<proc>   (realized-in  +  capability_scope table)
-  ex:<proc> ex:requiresCapability ex:<cap>    (derived inverse)
-  ex:<proc> ex:requiresRole       ex:<role>   (bearer -> participant triad)
-  ex:<role> rdfs:subClassOf <cco anchor>      (role_anchors table; null => left bare)
+  bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (realized-in  +  capability_scope table)
+  bpo:<proc> bpo:requiresCapability bpo:<cap>    (derived inverse)
+  bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> participant triad)
+  bpo:<role> rdfs:subClassOf <cco anchor>      (role_anchors table; null => left bare)
 
 Re-running is idempotent. Unclassified roles (absent from role_anchors.json) are
 left bare and listed in a trailing comment so the judgment pass can see the residue.
@@ -39,7 +39,7 @@ SECTION_NAMES = {
     "12": "Manage External Relationships", "13": "Develop and Manage Business Capabilities",
 }
 HEADER = """\
-@prefix ex:   <https://fandaws.com/ontology/bpo#> .
+@prefix bpo:  <https://fandaws.com/ontology/bpo#> .
 @prefix cco:  <https://www.commoncoreontologies.org/> .
 @prefix obo:  <http://purl.obolibrary.org/obo/> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
@@ -53,10 +53,10 @@ HEADER = """\
 # then re-run the generator.
 #
 # The process<->agent BRIDGE WIRING, harvested per APQC section:
-#   ex:<cap>  ex:enablesProcess     ex:<proc>   (from realized-in + scope table)
-#   ex:<proc> ex:requiresCapability ex:<cap>    (derived inverse -- PHASE1 decision ii)
-#   ex:<proc> ex:requiresRole       ex:<role>   (bearer -> process participant triad)
-#   ex:<role> rdfs:subClassOf <cco role subclass>  (role enrichment)
+#   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from realized-in + scope table)
+#   bpo:<proc> bpo:requiresCapability bpo:<cap>    (derived inverse -- PHASE1 decision ii)
+#   bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> process participant triad)
+#   bpo:<role> rdfs:subClassOf <cco role subclass>  (role enrichment)
 #
 # Merge-only overlay over the self-contained slices; validated against the
 # process graph (coherence C5-C7). Role enrichment taxonomy:
@@ -67,7 +67,7 @@ HEADER = """\
 
 <https://fandaws.com/ontology/bpo/capabilities/wiring> a owl:Ontology ;
     dct:title "APQC Phase 1: capability/role bridge wiring (generated overlay)" ;
-    owl:versionInfo "0.4.0" ;
+    owl:versionInfo "0.4.1" ;
     rdfs:comment "Per-section requiresCapability / requiresRole / enablesProcess wiring + role enrichment co-anchors, generated from the slices plus the role_anchors / capability_scope judgment tables." .
 """
 
@@ -107,13 +107,13 @@ def main() -> int:
              f"enrichment {len(enrich)}  bare {len(bare)}  unclassified {len(unclassified)}"]
         if enables:
             b.append("\n# --- enablesProcess (capability -> process) ---")
-            b += [f"{a} ex:enablesProcess {p} ." for a, p in enables]
+            b += [f"{a} bpo:enablesProcess {p} ." for a, p in enables]
         if req_cap:
             b.append("\n# --- requiresCapability (process -> capability) ---")
-            b += [f"{p} ex:requiresCapability {c} ." for p, c in req_cap]
+            b += [f"{p} bpo:requiresCapability {c} ." for p, c in req_cap]
         if req_role:
             b.append("\n# --- requiresRole (process -> role) ---")
-            b += [f"{p} ex:requiresRole {r} ." for p, r in req_role]
+            b += [f"{p} bpo:requiresRole {r} ." for p, r in req_role]
         if enrich:
             b.append("\n# --- role enrichment co-anchors ---")
             b += [f"{r} rdfs:subClassOf {a} ." for r, a in enrich]

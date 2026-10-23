@@ -31,11 +31,11 @@ This is the load-bearing decision and it shapes every artifact.
 │ CATALOG LAYER  (apqc-catalog.ttl)                            │
 │   • EVERY PCF row, all 1,921 nodes, 5 levels                 │
 │   • each node: cco:Descriptive-ICE + skos:Concept            │
-│   • ex:pcfID, ex:hierarchyID, ex:apqcSourceText, prefLabel   │
+│   • bpo:pcfID, bpo:hierarchyID, bpo:apqcSourceText, prefLabel   │
 │   • dotted hierarchy → skos:broader  (CURATORIAL, not parts) │
 │   • generated deterministically; zero ontological judgement  │
 └───────────────┬─────────────────────────────────────────────┘
-                │  ex:designatesProcessType   (annotation bridge, R4)
+                │  bpo:designatesProcessType   (annotation bridge, R4)
                 ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ REALITY LAYER  (apqc_<section>.ttl, one per section)         │
@@ -58,12 +58,12 @@ This is the load-bearing decision and it shapes every artifact.
 
 | Decision | Value fixed for the corpus |
 |---|---|
-| **D7** IRI minting | Primary class IRI = `ex:P<pcfID>` (stable PCF ID). Human-readable label via `rdfs:label`. Hierarchy ID stored only as positional annotation. |
+| **D7** IRI minting | Primary class IRI = `bpo:P<pcfID>` (stable PCF ID). Human-readable label via `rdfs:label`. Hierarchy ID stored only as positional annotation. |
 | **D8** Category policy | **Superseded by ADR-001** two-layer policy (catalog + selective reality layer). |
-| **D9** Shared extension | `ontology/apqc-ext.ttl`, imported by every slice. Seeds: `ex:ActOfAnalysis`, `ex:ActOfIdentification` (from reference module); grows as recurring genera are discovered. |
+| **D9** Shared extension | `ontology/apqc-ext.ttl`, imported by every slice. Seeds: `bpo:ActOfAnalysis`, `bpo:ActOfIdentification` (from reference module); grows as recurring genera are discovered. |
 | **§6** Upper anchor | CCO Act classes: Information Processing `ont00000366`, Appraisal `ont00000636`, Planning `ont00000511`, Planned Act `ont00000228`. Verify-before-assert per term. |
 | **CCO pin** | CommonCoreOntologies **Merged v2.0 (2024-11-06)**, vendored under `vendor/cco/` for Gate B offline determinism. |
-| **Namespace** | `ex: <https://fandaws.com/ontology/bpo#>` -- moved from the `http://example.org/apqc` placeholder in v0.4.0 (ADR-002). |
+| **Namespace** | `bpo: <https://fandaws.com/ontology/bpo#>` -- moved from the `http://example.org/apqc` placeholder in v0.4.0 (ADR-002). |
 
 ---
 
@@ -140,7 +140,7 @@ Each agent receives: the section's PCF rows (with catalog IRIs), `apqc-ext.ttl`,
 ### 5.3 What Phase 0 builds vs. defers
 
 - **Build now:** orchestrator, state/resume, validation wiring, evidence records, the prompt, and a working end-to-end run on **one** section (default 1.0, the reference's territory).
-- **Defer to Phase 1+:** running all 13 sections to release quality, Gate E competency questions, Gate F review workflow, and the bridge-population (`ex:designatesProcessType`) reconciliation pass between catalog and reality layers.
+- **Defer to Phase 1+:** running all 13 sections to release quality, Gate E competency questions, Gate F review workflow, and the bridge-population (`bpo:designatesProcessType`) reconciliation pass between catalog and reality layers.
 
 ---
 
@@ -167,7 +167,7 @@ Extending `apqc_shapes.ttl` per ADR-001 §Consequences:
 
 - **S9** — a catalog node (`skos:Concept` / Descriptive-ICE in the catalog) **MUST NOT** bear `cco:has process part`.
 - **S10** — a reality-layer process **MUST NOT** use `skos:broader`.
-- **S11** — an `ex:designatesProcessType` target **MUST** be a process universal or a capability class.
+- **S11** — an `bpo:designatesProcessType` target **MUST** be a process universal or a capability class.
 
 Existing S1–S8 are unchanged and still apply to reality-layer modules.
 
@@ -191,6 +191,6 @@ Tasks 1–4 are deterministic and judgement-free (safe to fully automate). Task 
 
 - **CCO closure acquisition** — ✅ **done.** `vendor/cco/CommonCoreOntologiesMerged.ttl` (v2.0, 2024-11-06) is vendored locally (1.9 MB, gitignored). Gate B resolves all module IRIs against it.
 - **Reasoner** — ✅ **done.** Gate D runs **ELK via ROBOT** (`tools/robot.jar` 1.9.10, Java 23). Verified live: reference module + catalog are consistent with no unsatisfiable classes; the bad-examples fixture reports 3 unsatisfiable classes. All four gates A–D are operational.
-- **Bridge population** — `ex:designatesProcessType` linking catalog↔reality is defined in Phase 0 but only populated as reality modules land; full reconciliation is a Phase 1 pass.
-- **Namespace** — `ex:` example base is a placeholder; choose a publishable base IRI before any external release.
+- **Bridge population** — `bpo:designatesProcessType` linking catalog↔reality is defined in Phase 0 but only populated as reality modules land; full reconciliation is a Phase 1 pass.
+- **Namespace** — ~~`ex:` example base is a placeholder~~ resolved: `bpo:` = `https://fandaws.com/ontology/bpo#` (ADR-002, v0.4.0/v0.4.1).
 ```

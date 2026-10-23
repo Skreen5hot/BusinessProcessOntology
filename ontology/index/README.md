@@ -1,6 +1,6 @@
 # Corpus index — navigate the graph by `grep`, not by reading slices
 
-`corpus_index.tsv` is a generated, greppable index of every `ex:`/`perf:` class and
+`corpus_index.tsv` is a generated, greppable index of every `bpo:`/`perf:` class and
 individual across the 13 slices + `apqc-ext` + `apqc-catalog` + the capability/role
 layer. **Prefer grepping this file over `Read`-ing a whole slice** — a `grep` returns
 only the matching rows, so navigation costs a fraction of the tokens.
@@ -9,7 +9,7 @@ Columns (tab-separated):
 
 | col | meaning |
 |---|---|
-| `iri` | prefixed IRI (`ex:P19945`, `ex:CustomerRole`, `ex:PCF_19238`) |
+| `iri` | prefixed IRI (`bpo:P19945`, `bpo:CustomerRole`, `bpo:PCF_19238`) |
 | `kind` | `process · capability · role · ice · agent · act-genus · catalog · individual · property · marker · other` |
 | `section` | slice `1`–`13`, or `ext · catalog · cap · delivery · wiring` |
 | `hierarchy` | APQC hierarchy ID (`1.1.1.1`) |
@@ -24,8 +24,8 @@ Columns (tab-separated):
 ```bash
 grep -i "asset maintenance" ontology/index/corpus_index.tsv      # find by label
 awk -F'\t' '$2=="capability" && $3=="9"' …                       # all capabilities in slice 9
-grep -P "^ex:P19945\t" …                                          # one process: anchor + wiring + def
-awk -F'\t' '$8 ~ /req-cap:ex:CompetitiveAnalysisCapability/' …    # processes requiring a capability
+grep -P "^bpo:P19945\t" …                                          # one process: anchor + wiring + def
+awk -F'\t' '$8 ~ /req-cap:bpo:CompetitiveAnalysisCapability/' …    # processes requiring a capability
 ```
 
 ## Regenerate

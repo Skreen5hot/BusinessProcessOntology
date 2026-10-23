@@ -23,7 +23,7 @@ This replaces "choose Policy A or Policy B." Neither applies uniformly, because 
 **R1 — Catalog layer is mandatory and total.**
 Every PCF row (Category → Process Group → Process → Activity → Task) **MUST** be emitted as a catalog node:
 - typed `cco:ont00000853` (Descriptive ICE) and `skos:Concept`, `skos:inScheme apqc:PCF`;
-- carrying `ex:pcfID`, `ex:hierarchyID`, `ex:apqcSourceText`, `skos:prefLabel`;
+- carrying `bpo:pcfID`, `bpo:hierarchyID`, `bpo:apqcSourceText`, `skos:prefLabel`;
 - the dotted hierarchy expressed as `skos:broader`, declared explicitly as a **curatorial** relation, **NOT** parthood.
 This layer **MUST** be generated deterministically from the PCF export, with 100% row coverage, before any reality-layer modeling.
 
@@ -34,7 +34,7 @@ A node is promoted to a BFO process universal (`owl:Class rdfs:subClassOf` a CCO
 A Category **MUST** be a catalog node. A Category **MUST NOT** be given existential `has process part` restrictions to its children — APQC states that not every listed process exists in every organization, so such restrictions are false. A Category **MAY** also receive a reality-layer universal only if it passes R5 (e.g. a coarse but bounded strategy cycle); otherwise it has no reality-layer class.
 
 **R4 — Bridge.**
-A catalog node links to its reality-layer universal (or capability) via the annotation property `ex:designatesProcessType`. It is an `owl:AnnotationProperty` (keeps the module in OWL DL; avoids ICE-to-class punning). A catalog node with no coherent corresponding universal **MUST** have no bridge — this is the correct, honest outcome.
+A catalog node links to its reality-layer universal (or capability) via the annotation property `bpo:designatesProcessType`. It is an `owl:AnnotationProperty` (keeps the module in OWL DL; avoids ICE-to-class punning). A catalog node with no coherent corresponding universal **MUST** have no bridge — this is the correct, honest outcome.
 
 **R5 — The bounded-occurrent test (the one judgement per node).**
 Model a node in the reality layer **iff** it denotes a *repeatable occurrent with an identifiable beginning and end that can occur as a proper part of a larger process*.
@@ -63,7 +63,7 @@ A standing-function category or group ("Manage IT", "Manage Financial Resources"
 - **Methodology:** rewrite D8 to this two-layer policy at v1.2.0; the §10 category note is fully retired.
 - **Reference module (`apqc_1_1_1.ttl`):** `DevelopVisionAndStrategy` (10002) moves to the catalog layer (it is a category heading). `DefineBusinessConcept` (17040) stays a reality-layer universal (it passes R5) but is reached from its catalog node via the R4 bridge, not as a `has process part` filler of the category. The intra-1.1.1 partonomy is unaffected.
 - **New artifacts:** `apqc-catalog.ttl` (generated, all rows) and `apqc-ext.ttl` (shared act genera, per D9). Slice modules import both.
-- **SHACL additions:** (a) a catalog ICE **MUST NOT** bear `cco:has process part`; (b) a reality-layer process **MUST NOT** use `skos:broader`; (c) an `ex:designatesProcessType` target **MUST** be a process universal or a capability class. These extend `apqc_shapes.ttl` and the bad-examples fixture.
+- **SHACL additions:** (a) a catalog ICE **MUST NOT** bear `cco:has process part`; (b) a reality-layer process **MUST NOT** use `skos:broader`; (c) an `bpo:designatesProcessType` target **MUST** be a process universal or a capability class. These extend `apqc_shapes.ttl` and the bad-examples fixture.
 
 ---
 

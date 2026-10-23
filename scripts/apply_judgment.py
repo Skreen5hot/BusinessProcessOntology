@@ -34,7 +34,7 @@ def corpus_classes() -> set[str]:
         g = rdflib.Graph(); g.parse(sp, format="turtle")
         for s in g.subjects(RDF.type, OWL.Class):
             if isinstance(s, URIRef) and str(s).startswith(EX):
-                classes.add("ex:" + str(s)[len(EX):])
+                classes.add("bpo:" + str(s)[len(EX):])
     return classes
 
 def scope_gaps() -> set[str]:

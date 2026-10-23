@@ -142,7 +142,7 @@ def gate_c_shacl(module: Path, shapes: Path | None = None) -> GateResult:
         import rdflib
 
         # Validate the module STANDALONE. The shapes are authored to target only
-        # ex: module nodes; merging the CCO closure into the data graph would make
+        # bpo: module nodes; merging the CCO closure into the data graph would make
         # the shapes fire on CCO's own restriction axioms (false positives).
         # Subclass-chain checks (S2/S5) are satisfied in-module because each local
         # genus carries its `rdfs:subClassOf cco:<Act>` axiom locally.

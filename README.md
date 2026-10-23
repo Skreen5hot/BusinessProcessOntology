@@ -11,7 +11,7 @@ Framework (PCF)**, transformed into **BFO 2020 / CCO 2.0**–conformant OWL.
 | **Reality** | `ontology/slices/apqc_<section>.ttl` | Genuine BFO process universals, minted only where a node passes the *bounded-occurrent test*. Built per section, carries the modeling judgement, validated by gates. |
 | **Shared ext.** | `ontology/apqc-ext.ttl` | Recurring local act genera (D9), imported by every slice. |
 
-The layers are linked by the `ex:designatesProcessType` bridge and kept strictly
+The layers are linked by the `bpo:designatesProcessType` bridge and kept strictly
 separate. See [`docs/adr/ADR-001-category-and-upper-level-modeling.md`](docs/adr/ADR-001-category-and-upper-level-modeling.md)
 and the full spec in [`apqc_to_bfo_cco_methodology.md`](apqc_to_bfo_cco_methodology.md).
 

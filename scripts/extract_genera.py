@@ -1,4 +1,4 @@
-"""Dump every local act-genus (ex:ActOf*) definition across all slice modules,
+"""Dump every local act-genus (bpo:ActOf*) definition across all slice modules,
 grouped by genus, so the consolidation step can reconcile conflicting anchors
 into one canonical definition per genus in apqc-ext.ttl.
 """
@@ -18,7 +18,7 @@ def main() -> None:
     for p in slices:
         name = Path(p).name
         txt = Path(p).read_text(encoding="utf-8")
-        for m in re.finditer(r"(ex:ActOf\w+) a owl:Class ;(.*?) \.", txt, re.S):
+        for m in re.finditer(r"(bpo:ActOf\w+) a owl:Class ;(.*?) \.", txt, re.S):
             genus, block = m.group(1), m.group(0).strip()
             anchors = re.findall(r"rdfs:subClassOf (cco:ont\d+)", block)
             inv.setdefault(genus, []).append(

@@ -1,244 +1,244 @@
 {
   "_doc": "standing capability IRI (no realized-in restriction) -> [process IRIs it enables]. Filled by the judgment pass (judge per capability). enablesProcess + derived requiresCapability are generated from this.",
-  "ex:StrategicPlanningCapability": [
-    "ex:P10037",
-    "ex:P10045",
-    "ex:P10039",
-    "ex:P10043",
-    "ex:P10020",
-    "ex:P19949"
+  "bpo:StrategicPlanningCapability": [
+    "bpo:P10037",
+    "bpo:P10045",
+    "bpo:P10039",
+    "bpo:P10043",
+    "bpo:P10020",
+    "bpo:P19949"
   ],
-  "ex:CustomerExperienceManagementCapability": [
-    "ex:P19959",
-    "ex:P19960",
-    "ex:P19964",
-    "ex:P19971"
+  "bpo:CustomerExperienceManagementCapability": [
+    "bpo:P19959",
+    "bpo:P19960",
+    "bpo:P19964",
+    "bpo:P19971"
   ],
-  "ex:ResearchAndDevelopmentCapability": [
-    "ex:P10070",
-    "ex:P10071",
-    "ex:P10072"
+  "bpo:ResearchAndDevelopmentCapability": [
+    "bpo:P10070",
+    "bpo:P10071",
+    "bpo:P10072"
   ],
-  "ex:MarketIntelligenceCapability": [
-    "ex:P10101",
-    "ex:P10106",
-    "ex:P10107"
+  "bpo:MarketIntelligenceCapability": [
+    "bpo:P10101",
+    "bpo:P10106",
+    "bpo:P10107"
   ],
-  "ex:PartnerManagementCapability": [
-    "ex:P10130",
-    "ex:P10187"
+  "bpo:PartnerManagementCapability": [
+    "bpo:P10130",
+    "bpo:P10187"
   ],
-  "ex:SupplyChainPlanningCapability": [
-    "ex:P10215"
+  "bpo:SupplyChainPlanningCapability": [
+    "bpo:P10215"
   ],
-  "ex:ProcurementCapability": [
-    "ex:P10216"
+  "bpo:ProcurementCapability": [
+    "bpo:P10216"
   ],
-  "ex:ProductionCapability": [
-    "ex:P10217"
+  "bpo:ProductionCapability": [
+    "bpo:P10217"
   ],
-  "ex:SupplyChainManagementCapability": [
-    "ex:P10215",
-    "ex:P10216",
-    "ex:P10217",
-    "ex:P10338",
-    "ex:P20936",
-    "ex:P10340",
-    "ex:P10341"
+  "bpo:SupplyChainManagementCapability": [
+    "bpo:P10215",
+    "bpo:P10216",
+    "bpo:P10217",
+    "bpo:P10338",
+    "bpo:P20936",
+    "bpo:P10340",
+    "bpo:P10341"
   ],
-  "ex:ServiceDeliveryGovernanceCapability": [
-    "ex:P20027",
-    "ex:P20026"
+  "bpo:ServiceDeliveryGovernanceCapability": [
+    "bpo:P20027",
+    "bpo:P20026"
   ],
-  "ex:ServiceDeliveryCapability": [
-    "ex:P20058",
-    "ex:P20059",
-    "ex:P20069",
-    "ex:P20076",
-    "ex:P20077"
+  "bpo:ServiceDeliveryCapability": [
+    "bpo:P20058",
+    "bpo:P20059",
+    "bpo:P20069",
+    "bpo:P20076",
+    "bpo:P20077"
   ],
-  "ex:ResourceManagementCapability": [
-    "ex:P20056",
-    "ex:P20050"
+  "bpo:ResourceManagementCapability": [
+    "bpo:P20056",
+    "bpo:P20050"
   ],
-  "ex:DemandForecastingCapability": [
-    "ex:P20043",
-    "ex:P20045",
-    "ex:P20041"
+  "bpo:DemandForecastingCapability": [
+    "bpo:P20043",
+    "bpo:P20045",
+    "bpo:P20041"
   ],
-  "ex:CustomerServiceCapability": [
-    "ex:P10394",
-    "ex:P13482",
-    "ex:P10395",
-    "ex:P10396",
-    "ex:P16928",
-    "ex:P10397",
-    "ex:P10398",
-    "ex:P10399",
-    "ex:P10400",
-    "ex:P19072"
+  "bpo:CustomerServiceCapability": [
+    "bpo:P10394",
+    "bpo:P13482",
+    "bpo:P10395",
+    "bpo:P10396",
+    "bpo:P16928",
+    "bpo:P10397",
+    "bpo:P10398",
+    "bpo:P10399",
+    "bpo:P10400",
+    "bpo:P19072"
   ],
-  "ex:CustomerServiceManagementCapability": [
-    "ex:P20595"
+  "bpo:CustomerServiceManagementCapability": [
+    "bpo:P20595"
   ],
-  "ex:WarrantyManagementCapability": [
-    "ex:P12669",
-    "ex:P12672"
+  "bpo:WarrantyManagementCapability": [
+    "bpo:P12669",
+    "bpo:P12672"
   ],
-  "ex:HumanCapitalManagementCapability": [
-    "ex:P20958",
-    "ex:P17045",
-    "ex:P10417",
-    "ex:P17046",
-    "ex:P10410",
-    "ex:P10413"
+  "bpo:HumanCapitalManagementCapability": [
+    "bpo:P20958",
+    "bpo:P17045",
+    "bpo:P10417",
+    "bpo:P17046",
+    "bpo:P10410",
+    "bpo:P10413"
   ],
-  "ex:WorkforcePlanningCapability": [
-    "ex:P20958",
-    "ex:P17045",
-    "ex:P10417",
-    "ex:P17046"
+  "bpo:WorkforcePlanningCapability": [
+    "bpo:P20958",
+    "bpo:P17045",
+    "bpo:P10417",
+    "bpo:P17046"
   ],
-  "ex:TalentAcquisitionCapability": [
-    "ex:P10410"
+  "bpo:TalentAcquisitionCapability": [
+    "bpo:P10410"
   ],
-  "ex:EmployeeDevelopmentCapability": [
-    "ex:P10474",
-    "ex:P11243",
-    "ex:P17050",
-    "ex:P10479",
-    "ex:P21434",
-    "ex:P10481",
-    "ex:P10487",
-    "ex:P10488",
-    "ex:P17051",
-    "ex:P10490",
-    "ex:P16940",
-    "ex:P10491",
-    "ex:P10492",
-    "ex:P10493",
-    "ex:P20125",
-    "ex:P21436"
+  "bpo:EmployeeDevelopmentCapability": [
+    "bpo:P10474",
+    "bpo:P11243",
+    "bpo:P17050",
+    "bpo:P10479",
+    "bpo:P21434",
+    "bpo:P10481",
+    "bpo:P10487",
+    "bpo:P10488",
+    "bpo:P17051",
+    "bpo:P10490",
+    "bpo:P16940",
+    "bpo:P10491",
+    "bpo:P10492",
+    "bpo:P10493",
+    "bpo:P20125",
+    "bpo:P21436"
   ],
-  "ex:EmployeeRelationsCapability": [
-    "ex:P10484",
-    "ex:P10531",
-    "ex:P21437"
+  "bpo:EmployeeRelationsCapability": [
+    "bpo:P10484",
+    "bpo:P10531",
+    "bpo:P21437"
   ],
-  "ex:WorkforceDeploymentCapability": [
-    "ex:P10413"
+  "bpo:WorkforceDeploymentCapability": [
+    "bpo:P10413"
   ],
-  "ex:ITInfrastructureManagementCapability": [
-    "ex:P20888",
-    "ex:P20889",
-    "ex:P20890",
-    "ex:P20891",
-    "ex:P20892",
-    "ex:P20893",
-    "ex:P20915",
-    "ex:P20916",
-    "ex:P20917",
-    "ex:P20918",
-    "ex:P20919",
-    "ex:P20920"
+  "bpo:ITInfrastructureManagementCapability": [
+    "bpo:P20888",
+    "bpo:P20889",
+    "bpo:P20890",
+    "bpo:P20891",
+    "bpo:P20892",
+    "bpo:P20893",
+    "bpo:P20915",
+    "bpo:P20916",
+    "bpo:P20917",
+    "bpo:P20918",
+    "bpo:P20919",
+    "bpo:P20920"
   ],
-  "ex:ITRiskManagementCapability": [
-    "ex:P20706",
-    "ex:P20721"
+  "bpo:ITRiskManagementCapability": [
+    "bpo:P20706",
+    "bpo:P20721"
   ],
-  "ex:ITSupportCapability": [
-    "ex:P20921",
-    "ex:P20923"
+  "bpo:ITSupportCapability": [
+    "bpo:P20921",
+    "bpo:P20923"
   ],
-  "ex:AccountingCapability": [
-    "ex:P10729",
-    "ex:P10730"
+  "bpo:AccountingCapability": [
+    "bpo:P10729",
+    "bpo:P10730"
   ],
-  "ex:TreasuryManagementCapability": [
-    "ex:P10885",
-    "ex:P10893",
-    "ex:P14079",
-    "ex:P12974"
+  "bpo:TreasuryManagementCapability": [
+    "bpo:P10885",
+    "bpo:P10893",
+    "bpo:P14079",
+    "bpo:P12974"
   ],
-  "ex:FinancialManagementCapability": [
-    "ex:P10729",
-    "ex:P10730",
-    "ex:P10732",
-    "ex:P10733"
+  "bpo:FinancialManagementCapability": [
+    "bpo:P10729",
+    "bpo:P10730",
+    "bpo:P10732",
+    "bpo:P10733"
   ],
-  "ex:AssetConstructionCapability": [
-    "ex:P19209",
-    "ex:P20139",
-    "ex:P19229",
-    "ex:P19224"
+  "bpo:AssetConstructionCapability": [
+    "bpo:P19209",
+    "bpo:P20139",
+    "bpo:P19229",
+    "bpo:P19224"
   ],
-  "ex:AssetDispositionCapability": [
-    "ex:P19258",
-    "ex:P21579",
-    "ex:P21581",
-    "ex:P21582"
+  "bpo:AssetDispositionCapability": [
+    "bpo:P19258",
+    "bpo:P21579",
+    "bpo:P21581",
+    "bpo:P21582"
   ],
-  "ex:EnterpriseRiskManagementCapability": [
-    "ex:P16439",
-    "ex:P16445",
-    "ex:P17462"
+  "bpo:EnterpriseRiskManagementCapability": [
+    "bpo:P16439",
+    "bpo:P16445",
+    "bpo:P17462"
   ],
-  "ex:StakeholderRelationshipManagementCapability": [
-    "ex:P11038",
-    "ex:P11039",
-    "ex:P11040",
-    "ex:P11041",
-    "ex:P11012"
+  "bpo:StakeholderRelationshipManagementCapability": [
+    "bpo:P11038",
+    "bpo:P11039",
+    "bpo:P11040",
+    "bpo:P11041",
+    "bpo:P11012"
   ],
-  "ex:InvestorRelationsCapability": [
-    "ex:P11010"
+  "bpo:InvestorRelationsCapability": [
+    "bpo:P11010"
   ],
-  "ex:LegalAndComplianceCapability": [
-    "ex:P11013",
-    "ex:P11045",
-    "ex:P11047",
-    "ex:P11048",
-    "ex:P11049"
+  "bpo:LegalAndComplianceCapability": [
+    "bpo:P11013",
+    "bpo:P11045",
+    "bpo:P11047",
+    "bpo:P11048",
+    "bpo:P11049"
   ],
-  "ex:IntellectualPropertyManagementCapability": [
-    "ex:P11049"
+  "bpo:IntellectualPropertyManagementCapability": [
+    "bpo:P11049"
   ],
-  "ex:AnalystRelationsManagementCapability": [
-    "ex:P11036"
+  "bpo:AnalystRelationsManagementCapability": [
+    "bpo:P11036"
   ],
-  "ex:LenderRelationsManagementCapability": [
-    "ex:P11035"
+  "bpo:LenderRelationsManagementCapability": [
+    "bpo:P11035"
   ],
-  "ex:ChangeManagementCapability": [
-    "ex:P21457",
-    "ex:P11135",
-    "ex:P11136",
-    "ex:P11137"
+  "bpo:ChangeManagementCapability": [
+    "bpo:P21457",
+    "bpo:P11135",
+    "bpo:P11136",
+    "bpo:P11137"
   ],
-  "ex:EnterpriseQualityManagementCapability": [
-    "ex:P17472",
-    "ex:P17482",
-    "ex:P17492",
-    "ex:P17498"
+  "bpo:EnterpriseQualityManagementCapability": [
+    "bpo:P17472",
+    "bpo:P17482",
+    "bpo:P17492",
+    "bpo:P17498"
   ],
-  "ex:PortfolioProgramProjectManagementCapability": [
-    "ex:P16402",
-    "ex:P16403",
-    "ex:P16404",
-    "ex:P16406",
-    "ex:P16407",
-    "ex:P16408",
-    "ex:P16409",
-    "ex:P16411",
-    "ex:P11119",
-    "ex:P16413",
-    "ex:P16414",
-    "ex:P16417",
-    "ex:P16418"
+  "bpo:PortfolioProgramProjectManagementCapability": [
+    "bpo:P16402",
+    "bpo:P16403",
+    "bpo:P16404",
+    "bpo:P16406",
+    "bpo:P16407",
+    "bpo:P16408",
+    "bpo:P16409",
+    "bpo:P16411",
+    "bpo:P11119",
+    "bpo:P16413",
+    "bpo:P16414",
+    "bpo:P16417",
+    "bpo:P16418"
   ],
-  "ex:InternalAuditManagementCapability": [
-    "ex:P10871",
-    "ex:P10889",
-    "ex:P20782"
+  "bpo:InternalAuditManagementCapability": [
+    "bpo:P10871",
+    "bpo:P10889",
+    "bpo:P20782"
   ]
 }

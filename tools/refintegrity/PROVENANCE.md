@@ -1,6 +1,6 @@
 # Vendored tool — RefIntegrity Linter (Gate F)
 
-The `ex:`/`perf:` referential-integrity + D7 scheme linter, vendored so Gate F runs offline and
+The `bpo:`/`perf:` referential-integrity + D7 scheme linter, vendored so Gate F runs offline and
 reproducibly (same discipline as the pinned CCO closure and `tools/robot.jar`).
 
 - **Source:** `https://github.com/Skreen5hot/IRI_Linter`

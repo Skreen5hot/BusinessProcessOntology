@@ -1,7 +1,7 @@
 """Matchability -- the registry routability test family (NOT SHACL).
 
-For every process requirement (ex:requiresCapability / ex:requiresRole /
-ex:requiresPermission) authored in the wiring/slices, does some agent in the
+For every process requirement (bpo:requiresCapability / bpo:requiresRole /
+bpo:requiresPermission) authored in the wiring/slices, does some agent in the
 fleet (capabilities/agents.json) bear a SATISFYING capability and role?
 
 Satisfaction is species-satisfies-genus: an agent bearing C_a satisfies a
@@ -31,9 +31,9 @@ REQ = {
 }
 
 def q(u: str) -> str:
-    return "ex:" + u[len(EX):] if u.startswith(EX) else u
+    return "bpo:" + u[len(EX):] if u.startswith(EX) else u
 def expand(qn: str) -> URIRef:
-    return URIRef(EX + qn[3:]) if qn.startswith("ex:") else URIRef(qn)
+    return URIRef(EX + qn[len("bpo:"):]) if qn.startswith("bpo:") else URIRef(qn)
 
 def load_graph(with_cco: bool = True) -> rdflib.Graph:
     g = rdflib.Graph()
