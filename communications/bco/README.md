@@ -10,14 +10,18 @@ The BCO says what an organization *can* do; this repository says what it *does*.
 takes its act types from this repository (BCO spec v0.4 §1).
 
 **What the BCO takes from this repository:** a pinned partial extract of
-`ontology/apqc-ext.ttl` (6 act genera and their CCO/BFO ancestry) at commit `6613194`,
-digest-checked weekly against the raw GitHub URL (BCO `config/upstream-sources.yaml`,
-id `bpo`). It also reads the MIT grant from `LICENSE` at the same commit.
+`ontology/apqc-ext.ttl` (6 act genera and their CCO/BFO ancestry) at commit `bc64e91`
+(v0.4.1; re-pinned from `6613194` on 2026-10-28, BCO merge `6731f59`), digest-checked
+weekly against the raw GitHub URL (BCO `config/upstream-sources.yaml`, id `bpo`). It
+also reads the MIT grant from `LICENSE` at the same commit. The BCO's own prefix label
+for our terms is still `ex:`, bound to our new namespace. That is deliberate; it plans a
+separate rename to `bpo:`.
 
 **What this means for work here:**
 
-- **Never rewrite published history on `main`.** Dropping `6613194` (or any later pinned
-  commit) breaks the BCO's weekly check. If a rewrite is ever needed, send a `notice` here
+- **Never rewrite published history on `main`.** Dropping `bc64e91` breaks the BCO's weekly
+  check. `6613194` is still cited by digest as the baseline of the BCO's capability
+  inventory, so keep it reachable too. If a rewrite is ever needed, send a `notice` here
   first.
 - **A move off CCO v2.0 (2024-11-06)** puts the BCO's extracts out of step with our
   anchors; send a `notice` before it lands.
