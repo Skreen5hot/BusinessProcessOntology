@@ -79,7 +79,7 @@ python scripts/consistency_audit.py # cross-slice anchor / drift audit
   `bpo:Risk` → `BFO_0000017`. Fix a definition/anchor *contradiction* by correcting the text, not by
   diverging the anchor.
 - **Commits** — one slice/topic per commit; validate first; direct-to-`main` is fine (single-author
-  repo); end messages with `Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>`.
+  repo); end messages with a `Co-Authored-By:` line naming the model actually used (e.g. `Claude Opus 5.5 <noreply@anthropic.com>`).
   One-shot fix scripts are written to `scripts/_fix*.py`, run, then deleted.
 
 ## Verified CCO IRIs (the ones reached for constantly)
