@@ -61,6 +61,7 @@
 ####################################################################
 
 <https://fandaws.com/ontology/bpo> a owl:Ontology ;
+    dct:rights """Contains material derived from the APQC Process Classification Framework® (PCF), Cross-Industry version 7.4 (element IDs, hierarchy IDs, names and descriptions), used under APQC's licence, whose notice follows. That material is not covered by this repository's MIT licence (see NOTICE.md). This module is not endorsed by APQC.\n\n©2024 APQC. ALL RIGHTS RESERVED. This Process Classification Framework® (“PCF”) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain a copy of this notice.""" ;
     dct:title "APQC PCF to BFO/CCO Reference Template: Slice 1.1.1" ;
     dct:source "APQC Process Classification Framework (Cross-Industry)" ;
     owl:versionInfo "0.4.1" ;

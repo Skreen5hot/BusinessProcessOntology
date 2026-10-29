@@ -5,6 +5,10 @@ individual across the 13 slices + `apqc-ext` + `apqc-catalog` + the capability/r
 layer. **Prefer grepping this file over `Read`-ing a whole slice** — a `grep` returns
 only the matching rows, so navigation costs a fraction of the tokens.
 
+**APQC notice.** The index is generated from PCF-bearing modules, so it carries PCF element
+IDs, hierarchy IDs, names and text. That material is used under APQC's licence, not MIT. If
+you copy the index out of this repository, keep [`NOTICE.md`](../../NOTICE.md) with it.
+
 Columns (tab-separated):
 
 | col | meaning |

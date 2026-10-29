@@ -67,6 +67,9 @@ jobs:
       - name: Generate MkDocs pages
         run: python webhost-tool/scripts/generate_ontology_site.py --config ontology-site.yml
 
+      - name: Put APQC's PCF notice in every page footer (NOTICE.md)
+        run: python scripts/site_notice.py mkdocs.yml
+
       - name: Build MkDocs site
         run: mkdocs build --strict
 

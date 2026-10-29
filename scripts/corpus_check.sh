@@ -17,6 +17,7 @@ if git grep -nP "(?i)prefix\s+e[x]:" -- ontology src scripts tools qa ':!*.md'; 
   echo "FAIL  the retired ex: prefix label is back (lines above; ADR-002 N1)"; exit 1
 fi
 echo "Namespace guard: no retired example.org IRIs or ex: prefix (ADR-002)"
+python scripts/notice_check.py   # APQC notice on every PCF-bearing module (NOTICE.md)
 INPUTS=""
 for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl ontology/capabilities_roles.ttl ontology/delivery_processes.ttl ontology/capabilities_wiring.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
   INPUTS="$INPUTS --input $f"

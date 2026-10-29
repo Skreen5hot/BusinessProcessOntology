@@ -30,6 +30,27 @@ STATE_JSON = REPORTS_DIR / "state.json"
 # The PCF source export (xlsx). Glob so a version bump does not break the path.
 PCF_XLSX_GLOB = "*Process Classification Framework*Cross-Industry*.xlsx"
 
+# --- APQC PCF notice (NOTICE.md) ---------------------------------------------
+# Verbatim from the PCF 7.4 workbook's Copyright and attribution sheet. APQC's
+# licence requires it in every copy and derivative work, so every module that
+# carries PCF IDs, names or descriptions states it in dct:rights.
+PCF_NOTICE = (
+    "©2024 APQC. ALL RIGHTS RESERVED. This Process Classification Framework® "
+    "(“PCF”) is the copyrighted intellectual property of APQC. APQC encourages "
+    "the wide distribution, discussion, and use of the PCF for classifying and "
+    "defining organizational processes. Accordingly, APQC hereby grants you a "
+    "perpetual, worldwide, royalty-free license to use, copy, publish, modify, "
+    "and create derivative works of the PCF, provided that all copies of the PCF "
+    "and any derivative works contain a copy of this notice."
+)
+PCF_RIGHTS = (
+    "Contains material derived from the APQC Process Classification Framework® "
+    "(PCF), Cross-Industry version 7.4 (element IDs, hierarchy IDs, names and "
+    "descriptions), used under APQC's licence, whose notice follows. That material "
+    "is not covered by this repository's MIT licence (see NOTICE.md). This module "
+    "is not endorsed by APQC.\n\n" + PCF_NOTICE
+)
+
 # --- Pinned dependency (Gate B / Gate D run against this closure) ------------
 CCO_VERSION = "2.0"
 CCO_RELEASE_DATE = "2024-11-06"

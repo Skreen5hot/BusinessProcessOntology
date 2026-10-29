@@ -41,6 +41,12 @@ def _lit(text: str) -> str:
     return f'"""{_esc(text)}"""'
 
 
+def _lit_line(text: str) -> str:
+    """One-line literal: newlines as \\n escapes, so the parsed text does not
+    depend on the line endings the file is written or checked out with."""
+    return f'"""{_esc(text)}"""'.replace("\n", "\\n")
+
+
 _HEADER = f"""\
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -67,6 +73,7 @@ _HEADER = f"""\
 <{APQC.rstrip('#')}> a owl:Ontology ;
     dct:title "APQC PCF Catalog Layer" ;
     dct:source "APQC Process Classification Framework (Cross-Industry) v7.4" ;
+    dct:rights {_lit_line(config.PCF_RIGHTS)} ;
     owl:versionInfo "0.4.1" ;
     rdfs:comment "Generated deterministically from the PCF export. Curatorial taxonomy only; process semantics live in the reality-layer slice modules." .
 

@@ -3,6 +3,16 @@
 An ontology of business processes derived from the **APQC Process Classification
 Framework (PCF)**, transformed into **BFO 2020 / CCO 2.0**–conformant OWL.
 
+## Licence and the APQC notice
+
+BPO's own work (the modelling, code and docs) is MIT-licensed ([`LICENSE`](LICENSE)). The
+PCF-derived material it contains (element IDs, hierarchy IDs, names and descriptions) is
+**not** covered by the MIT licence. It is used under APQC's licence, and
+**[`NOTICE.md`](NOTICE.md)** reproduces APQC's notice, lists the files concerned, and says
+what to keep if you redistribute them. Every PCF-bearing module states the notice in
+`dct:rights`, and `scripts/notice_check.py` (run by `corpus_check.sh`) enforces it. BPO is
+not endorsed by APQC.
+
 ## Architecture (two layers — ADR-001)
 
 | Layer | Artifact | What it is |

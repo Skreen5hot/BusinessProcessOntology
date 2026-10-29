@@ -11,10 +11,12 @@ metadata:
     of every PCF element, and a **reality layer** of BFO process universals -- plus a **capability/role**
     dispatch bridge that maps each process to the agents that can perform it. Every class is anchored
     to a verified BFO/CCO term and validated (Gates A-F). Each module below has its own page, term table,
-    and Turtle download.'
+    and Turtle download. BPO''s own work is MIT-licensed; the PCF material it contains is used under
+    APQC''s licence, whose notice is in [NOTICE.md](https://github.com/Skreen5hot/BusinessProcessOntology/blob/main/NOTICE.md)
+    and in every page footer. BPO is not endorsed by APQC.'
   license:
-    label: MIT
-    url: ../LICENSE
+    label: MIT (BPO's own work); PCF-derived content under APQC's notice (NOTICE.md)
+    url: https://github.com/Skreen5hot/BusinessProcessOntology/blob/main/NOTICE.md
   contacts:
   - name: Aaron Damiano (maintainer)
   users:

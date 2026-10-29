@@ -1,5 +1,25 @@
 # Release Notes
 
+## APQC notice (2026-10-29, no version bump)
+
+BPO now meets the one condition of APQC's PCF licence: every copy and derivative work carries
+APQC's notice. Before this change the notice was only inside the PCF 7.4 workbook, and
+`LICENSE` presented the whole repository as MIT. **No ontology content changed**, so
+`owl:versionInfo` stays `0.4.1`. `apqc-ext.ttl`, which carries no PCF content, is untouched,
+so the BCO's pinned extract is unaffected.
+
+- **`NOTICE.md`** (new) separates BPO's MIT work from the PCF material, lists the files that
+  carry PCF content, and reproduces APQC's notice verbatim from the workbook.
+- **`dct:rights`** states the notice on the ontology header of every PCF-bearing module:
+  the catalog (through its generator), the 13 slices and the reference module. The text is in
+  one place, `config.PCF_RIGHTS`. Each of those 15 graphs gained exactly that one triple and
+  is otherwise isomorphic to v0.4.1.
+- **Website:** the notice is in the footer of every page, added by `scripts/site_notice.py`
+  in the Pages workflow. The site's licence metadata and introduction say the same.
+- **`scripts/notice_check.py`** (run by `corpus_check.sh`) fails if a module carrying PCF
+  descriptions or hierarchy IDs lacks the notice, or if a module without PCF content claims it.
+- README and `ontology/index/README.md` point to `NOTICE.md`.
+
 ## v0.4.1 — Prefix label `ex:` → `bpo:` (2026-10-23)
 
 **No IRI changes.** The prefix label for BPO terms is now `bpo:`, still standing for
