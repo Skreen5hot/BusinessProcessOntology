@@ -27,7 +27,7 @@ same terms. `corpus_check.sh` refuses both the retired `http://example.org/apqc`
 vendors `apqc-ext.ttl` from us: tell it about namespace, CCO-pin or act-genus changes through
 `communications/bco/` (`python scripts/communications.py` checks the record).
 
-## APQC PCF notice (NOTICE.md)
+## APQC PCF notice (NOTICE.md, ADR-003)
 
 PCF-derived material (element IDs, hierarchy IDs, names, descriptions) is **not** MIT: it is
 used under APQC's licence, whose one condition is that APQC's notice travels with every copy
@@ -36,7 +36,9 @@ and derivative work. Every module that carries PCF content states `config.PCF_RI
 `scripts/notice_check.py` (in `corpus_check.sh`) fails otherwise. The site footer gets the
 notice from `scripts/site_notice.py` in the Pages workflow. Don't put the notice on modules
 without PCF content (e.g. `apqc-ext.ttl`, BPO's own genera, which the BCO vendors). APQC's
-website Terms forbid automated access to apqc.org: don't script fetches from it.
+website Terms forbid automated access to apqc.org: don't script fetches from it. The licensing
+position (the notice governs; the Terms' AI clause doesn't apply; don't ask APQC) is settled in
+`docs/adr/ADR-003-pcf-licensing-posture.md`. Don't reopen it unless a new PCF edition's notice differs.
 
 ## Navigating the corpus — grep the index, don't read whole slices
 

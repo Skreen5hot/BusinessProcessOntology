@@ -19,6 +19,9 @@ so the BCO's pinned extract is unaffected.
 - **`scripts/notice_check.py`** (run by `corpus_check.sh`) fails if a module carrying PCF
   descriptions or hierarchy IDs lacks the notice, or if a module without PCF content claims it.
 - README and `ontology/index/README.md` point to `NOTICE.md`.
+- **ADR-003** (2026-10-30) records the licensing position behind this work: the PCF notice
+  governs, the website Terms' AI clause does not apply, and BPO does not ask APQC for
+  clarification. Downstream consumers such as the BCO take PCF material from BPO.
 
 ## v0.4.1 — Prefix label `ex:` → `bpo:` (2026-10-23)
 
