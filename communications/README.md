@@ -12,7 +12,8 @@ communications/
 ```
 
 Teams today: **BCO** (Business and Agent Capabilities Ontology), which vendors this
-repository's act genera.
+repository's act genera, and **BPOT** (BPO Template Port), which ports this repository onto
+the Ontology Template.
 
 This protocol is the BCO's (`communications/README.md` in that repository, commit
 `ba953ce`), adopted unchanged so the two records can cite each other.

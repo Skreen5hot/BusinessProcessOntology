@@ -38,7 +38,7 @@ THIS_REPO = "Skreen5hot/BusinessProcessOntology"
 #: The teams this repository corresponds with, by code. Adding one is a
 #: deliberate change here and a folder with a README, so a misspelt
 #: folder name is a finding rather than a new correspondent.
-TEAMS = {"BCO"}
+TEAMS = {"BCO", "BPOT"}
 
 TYPES = ("request", "finding", "answer", "notice", "acknowledgment")
 #: Types that leave a thread open until answered.
