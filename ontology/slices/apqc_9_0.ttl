@@ -36,7 +36,7 @@ bpo:ActOfAcquisition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Acquisition" ;
     skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0). Also rejected cco:ont00001334 (Act of Purchasing) and cco:ont00000389 (Act of Buying): both require a Financial Instrument and descend from cco:ont00000836 (Act of Financial Instrument Use), too narrow for non-purchase acquisitions such as obtaining permits/licenses from an authority or securing financing; purchasing is a species of acquisition, not its genus." .
 
 bpo:ActOfAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
@@ -93,8 +93,8 @@ bpo:ActOfReporting a owl:Class ;
     rdfs:subClassOf cco:ont00000379 ,   # Act of Representative Communication
         cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; ont00000379 -> ont00000402 -> ont00000228 in the CCO closure, asserted locally so the standalone SHACL S2 Act-anchor chain resolves)
     rdfs:label "Act of Reporting" ;
-    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity (such as a report, statement, scorecard, or filing) that asserts, as true, a representation of an organization's condition or results." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no broad reporting class spanning compilation and assertion. Anchored under cco:ont00000379 (Act of Representative Communication), with cco:ont00000228 (Planned Act) co-anchored so standalone SHACL resolves the act chain: reporting transfers to recipients a descriptive account (report, statement, scorecard, filing) asserting an organization's condition or results. Pure submission of an already-prepared report may use the verified leaf cco:ont00000151 directly." .
+    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity (such as a report, statement, scorecard, or filing) that asserts, as true, a detailed account of some subject matter, such as an organization's condition or results." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no broad reporting class spanning compilation and assertion. Anchored under cco:ont00000379 (Act of Representative Communication), with cco:ont00000228 (Planned Act) co-anchored so standalone SHACL resolves the act chain {366,636,511,228}. The genus of DISSEMINATE-class reporting acts, whose source makes sharing/reporting to an audience definitional; COMPILE-class acts that merely create, record or summarize a report ICE stay at cco:ont00000366 (Act of Information Processing). Pure submission of an already-prepared report may use the verified leaf cco:ont00000151 (Act of Reporting, subClassOf 379 subClassOf 402: 'performed by giving a detailed account or statement') directly." .
 
 bpo:ActOfSelection a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing

@@ -58,7 +58,7 @@ bpo:ActOfAcquisition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Acquisition" ;
     skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0). Also rejected cco:ont00001334 (Act of Purchasing) and cco:ont00000389 (Act of Buying): both require a Financial Instrument and descend from cco:ont00000836 (Act of Financial Instrument Use), too narrow for non-purchase acquisitions such as obtaining permits/licenses from an authority or securing financing; purchasing is a species of acquisition, not its genus." .
 
 bpo:ActOfAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
@@ -107,8 +107,8 @@ bpo:ActOfReporting a owl:Class ;
     rdfs:subClassOf cco:ont00000379 ,   # Act of Representative Communication
         cco:ont00000228 ;   # Planned Act -- explicit so Gate C (S2) sees the Act anchor without the CCO closure
     rdfs:label "Act of Reporting" ;
-    skos:definition "An Act of Representative Communication in which an Agent gives a detailed account or statement of some subject matter and shares it with a target audience." ;
-    rdfs:comment "Registry genus (D9) for DISSEMINATE-class reporting acts whose source makes sharing/reporting-to-an-audience definitional (vs COMPILE-class acts that merely create/record/summarize a report ICE, which stay at cco:ont00000366 Act of Information Processing). VERIFIED in vendored CCO: cco:ont00000151 'Act of Reporting' subClassOf cco:ont00000379 (Act of Representative Communication) subClassOf cco:ont00000402 (Act of Communication), def 'performed by giving a detailed account or statement'. Co-asserts cco:ont00000228 because 379 is outside the standalone-SHACL S2 process allowlist {366,636,511,228}." .
+    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity (such as a report, statement, scorecard, or filing) that asserts, as true, a detailed account of some subject matter, such as an organization's condition or results." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no broad reporting class spanning compilation and assertion. Anchored under cco:ont00000379 (Act of Representative Communication), with cco:ont00000228 (Planned Act) co-anchored so standalone SHACL resolves the act chain {366,636,511,228}. The genus of DISSEMINATE-class reporting acts, whose source makes sharing/reporting to an audience definitional; COMPILE-class acts that merely create, record or summarize a report ICE stay at cco:ont00000366 (Act of Information Processing). Pure submission of an already-prepared report may use the verified leaf cco:ont00000151 (Act of Reporting, subClassOf 379 subClassOf 402: 'performed by giving a detailed account or statement') directly." .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES

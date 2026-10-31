@@ -65,7 +65,7 @@ bpo:ActOfAcquisition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Acquisition" ;
     skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0). Also rejected cco:ont00001334 (Act of Purchasing) and cco:ont00000389 (Act of Buying): both require a Financial Instrument and descend from cco:ont00000836 (Act of Financial Instrument Use), too narrow for non-purchase acquisitions such as obtaining permits/licenses from an authority or securing financing; purchasing is a species of acquisition, not its genus." .
 
 bpo:ActOfAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
