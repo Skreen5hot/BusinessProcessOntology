@@ -352,7 +352,7 @@ bpo:EmployeeFeedback a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 bpo:SuggestionRegister a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Employee Suggestion Register" ;
     skos:definition "A Descriptive Information Content Entity that records and tracks the suggestions and ideas collected from employees through an organization's suggestion program." ;
-    rdfs:comment "Minted as the output of the suggestion-program-management facet de-conflated out of compound row P10530 (see bpo:P10530_SuggestionProgram)." .
+    rdfs:comment "Minted as the output of the suggestion-program-management facet de-conflated out of compound row P10530 (see bpo:SuggestionProgramManagement)." .
 
 bpo:BenefitClaim a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Benefit Claim" ;
@@ -2349,21 +2349,21 @@ bpo:P10530 a owl:Class ;
     bpo:apqcSourceText "Procuring and handling suggestions from employees, and performing research on employees. Manage and analyze the programs that help the organization to tap into employee ideas for improving the organization's processes and/or products. Use surveys, focus groups, and other data-gathering methods to find out the attitudes, opinions, and feelings of members of an organization." ;
     rdfs:label "Manage/Collect employee suggestions and perform employee research" ;
     skos:definition "An Act of Analysis that performs employee research through surveys and focus groups and produces an engagement survey result describing employee attitudes and opinions." ;
-    rdfs:comment "Compound-row de-conflation (§4): the source fuses (a) managing/collecting employee suggestions and running the suggestion PROGRAMS ('Manage and analyze the programs that help the organization to tap into employee ideas') -- administrative/program-management -- and (b) performing employee research via surveys and focus groups -- analysis. The primary PCF class is reduced to the research facet (bpo:ActOfAnalysis -> bpo:EngagementSurveyResult) and carries the PCF identifiers; the dropped suggestion-program-management facet is modeled in the supporting class bpo:P10530_SuggestionProgram (bpo:ActOfAdministration, input bpo:EmployeeFeedback, output bpo:SuggestionRegister) and linked here via has process part so it is not silently lost. Input bpo:EmployeeFeedback; output bpo:EngagementSurveyResult is Descriptive. Participant bpo:Employee is the research subject. NOTE: the EmployeeFeedback-as-input pattern recurs at P16944 (7.8.2)." ;
+    rdfs:comment "Compound-row de-conflation (§4): the source fuses (a) managing/collecting employee suggestions and running the suggestion PROGRAMS ('Manage and analyze the programs that help the organization to tap into employee ideas') -- administrative/program-management -- and (b) performing employee research via surveys and focus groups -- analysis. The primary PCF class is reduced to the research facet (bpo:ActOfAnalysis -> bpo:EngagementSurveyResult) and carries the PCF identifiers; the dropped suggestion-program-management facet is modeled in the supporting class bpo:SuggestionProgramManagement (bpo:ActOfAdministration, input bpo:EmployeeFeedback, output bpo:SuggestionRegister) and linked here by rdfs:seeAlso so it is not silently lost. It is NOT asserted as a mandatory process part (WP6 B4, BPO architect 2026-10-31): this class is the research act, and not every employee-research act includes running a suggestion program; the compound source row alone does not justify that existential. Input bpo:EmployeeFeedback; output bpo:EngagementSurveyResult is Descriptive. Participant bpo:Employee is the research subject. NOTE: the EmployeeFeedback-as-input pattern recurs at P16944 (7.8.2)." ;
     skos:example "HR runs an annual engagement survey and a set of focus groups and reports the workforce's sentiment to leadership." ;
     rdfs:subClassOf bpo:ActOfAnalysis ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:EmployeeFeedback ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:EngagementSurveyResult ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Employee ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:P10530_SuggestionProgram ] .
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Employee ] ;
+    rdfs:seeAlso bpo:SuggestionProgramManagement .
 
 # Supporting process class for the suggestion-program-management facet
 # de-conflated out of compound row P10530 (§4). Carries NO PCF identifiers
 # (the primary PCF class P10530 retains them).
-bpo:P10530_SuggestionProgram a owl:Class ;
+bpo:SuggestionProgramManagement a owl:Class ;
     rdfs:label "Manage employee suggestion program" ;
     skos:definition "An Act of Administration that collects and handles employee suggestions and runs the programs through which an organization taps into employee ideas, recording them in a suggestion register." ;
-    rdfs:comment "Supporting class minted to carry the administrative suggestion-program-management facet de-conflated from compound row P10530 (§4); it is NOT a PCF-derived class, so per §4 it bears no bpo:pcfID/bpo:hierarchyID/bpo:apqcSourceText and is intentionally left without has-input/has-output someValuesFrom restrictions (so it is not subject to the PCF-provenance ProcessShape, which targets only bpo: classes carrying an I/O or part restriction). Its I/O is recorded here: input bpo:EmployeeFeedback (the suggestions collected); output bpo:SuggestionRegister; participant bpo:Employee. Anchored at bpo:ActOfAdministration (running an established suggestion program); linked from P10530 by has process part." ;
+    rdfs:comment "Supporting class minted to carry the administrative suggestion-program-management facet de-conflated from compound row P10530 (§4); it is NOT a PCF-derived class, so per §4 it bears no bpo:pcfID/bpo:hierarchyID/bpo:apqcSourceText and is intentionally left without has-input/has-output someValuesFrom restrictions (so it is not subject to the PCF-provenance ProcessShape, which targets only bpo: classes carrying an I/O or part restriction). Its I/O is recorded here: input bpo:EmployeeFeedback (the suggestions collected); output bpo:SuggestionRegister; participant bpo:Employee. Anchored at bpo:ActOfAdministration (running an established suggestion program); linked from P10530 by rdfs:seeAlso. Named bpo:P10530_SuggestionProgram until WP6 B4 (2026-10-31): a P<id> IRI says 'a PCF element', which this class is not (docs/migrations.tsv)." ;
     skos:example "HR operates the staff suggestion scheme, logging and triaging submitted ideas." ;
     rdfs:subClassOf bpo:ActOfAdministration .
 
