@@ -343,7 +343,8 @@ bpo:ProductionOrder a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:MaintenanceSchedule a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Maintenance Schedule" ;
-    skos:definition "A Directive Information Content Entity that prescribes the timing of planned and unplanned maintenance of production equipment." .
+    skos:definition "A Directive Information Content Entity that prescribes the timing of the maintenance of an asset or of production equipment." ;
+    skos:scopeNote "As used in section 4.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the timing of planned and unplanned maintenance of production equipment." .
 
 bpo:LotNumberingSystemSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Lot Numbering System Specification" ;
@@ -396,7 +397,8 @@ bpo:DispositionDecision a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:ReturnedProduct ] ;
     rdfs:label "Disposition Decision" ;
-    skos:definition "A Directive Information Content Entity that prescribes whether a returned product is to be salvaged, repaired, refurbished, or returned to inventory." ;
+    skos:definition "A Directive Information Content Entity that prescribes the disposition of an asset, part, or returned product, such as retention, repair, refurbishment, resale, reuse, recycling, return to inventory, or disposal." ;
+    skos:scopeNote "As used in section 4.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes whether a returned product is to be salvaged, repaired, refurbished, or returned to inventory." ;
     rdfs:comment "Directive because it authorizes a course of action on the returned product (Phase 3). Output of an Act of Selection over disposition options." .
 
 ####################################################################
@@ -417,7 +419,7 @@ bpo:BaselineDemandForecast a owl:Class ; rdfs:subClassOf bpo:DemandForecast ;
 
 bpo:ConsensusDemandForecast a owl:Class ; rdfs:subClassOf bpo:DemandForecast ;
     rdfs:label "Consensus Demand Forecast" ;
-    skos:definition "A Demand Forecast that describes an agreed level of anticipated demand reconciled between baseline forecasts and customer-collaboration estimates." .
+    skos:definition "A Demand Forecast that describes a level of anticipated demand agreed upon by reconciling baseline forecasts with customer input." .
 
 bpo:AvailableToPromiseQuantity a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Available-to-Promise Quantity" ;
@@ -506,7 +508,8 @@ bpo:NonconformanceTrendAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RootCauseAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Root Cause Analysis" ;
-    skos:definition "A Descriptive Information Content Entity that describes the identified origin of a problem and the reasoning establishing what happened, why, and how to reduce recurrence." .
+    skos:definition "A Descriptive Information Content Entity that describes the identified underlying causes of a problem, such as a non-conformance, a product fault, or a negative customer experience, and the reasoning that establishes them." ;
+    skos:scopeNote "As used in section 4.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the identified origin of a problem and the reasoning establishing what happened, why, and how to reduce recurrence." .
 
 bpo:ProductionRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Production Record" ;
@@ -678,7 +681,7 @@ bpo:ProductionLot a owl:Class ; rdfs:subClassOf cco:ont00000995 , obo:BFO_000004
 
 bpo:ReturnedProduct a owl:Class ; rdfs:subClassOf cco:ont00000995 , obo:BFO_0000040 ;   # Material Artifact (BFO material entity asserted so S4 resolves standalone)
     rdfs:label "Returned Product" ;
-    skos:definition "A Material Artifact that has been returned by a buyer to the seller or an intermediary, pending inspection, salvage, repair, or restocking." .
+    skos:definition "A Material Artifact that a customer or buyer has sent back to the seller or an intermediary for refund, replacement, repair, salvage, or restocking." .
 
 bpo:ProductSample a owl:Class ; rdfs:subClassOf cco:ont00000995 , obo:BFO_0000040 ;   # Material Artifact (BFO material entity asserted so S4 resolves standalone)
     rdfs:label "Product Sample" ;
@@ -686,7 +689,7 @@ bpo:ProductSample a owl:Class ; rdfs:subClassOf cco:ont00000995 , obo:BFO_000004
 
 bpo:ProductionEquipment a owl:Class ; rdfs:subClassOf cco:ont00000995 , obo:BFO_0000040 ;   # Material Artifact (BFO material entity asserted so S4 resolves standalone)
     rdfs:label "Production Equipment" ;
-    skos:definition "A Material Artifact, such as machinery, used in a production process and subject to planned or unplanned maintenance." .
+    skos:definition "A Material Artifact, such as machinery or tooling, that is used in a production process to manufacture products or deliver services." .
 
 bpo:Warehouse a owl:Class ; rdfs:subClassOf cco:ont00000192 , obo:BFO_0000040 ;   # Facility (BFO material entity asserted so S4 resolves standalone)
     rdfs:label "Warehouse" ;
@@ -712,7 +715,7 @@ bpo:Supplier a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,   # Organization
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:SupplierRole ] ;
     rdfs:label "Supplier" ;
-    skos:definition "An Organization that bears a supplier role in relation to a procuring organization, providing materials or services." ;
+    skos:definition "An Organization that bears a supplier role in relation to an organization to which it provides materials, goods, parts, services, or capabilities." ;
     rdfs:comment "Modeled as Organization per APQC 'vendors/suppliers'. Use cco:Agent for an individual supplier where needed." .
 
 bpo:ContractManufacturer a owl:Class ;
@@ -725,7 +728,8 @@ bpo:Customer a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role in relation to an organization, being a recipient of its products or services." .
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 4.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role in relation to an organization, being a recipient of its products or services." .
 
 bpo:Carrier a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,   # Organization
@@ -743,7 +747,7 @@ bpo:ManagementPersonnel a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:ManagerRole ] ;
     rdfs:label "Management Personnel" ;
-    skos:definition "An Agent that bears a manager role and exercises managerial authority within an organization." ;
+    skos:definition "An Agent that bears a manager role in virtue of exercising managerial authority within an organization." ;
     rdfs:comment "Mirrors the reference slice's bpo:ManagementPersonnel; minted here so all 4.0 groups share one class (e.g. senior management as participant in demand-consensus and technology decisions)." .
 
 bpo:SupplyChainOrganization a owl:Class ;

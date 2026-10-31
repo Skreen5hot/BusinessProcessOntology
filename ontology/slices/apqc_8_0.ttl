@@ -343,7 +343,8 @@ bpo:ITPerformanceData a owl:Class ;
 bpo:RegulatoryRequirementData a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Regulatory Requirement Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes the IT-relevant regulatory, audit, and legal requirements imposed on an organization by external authorities." ;
+    skos:definition "A Descriptive Information Content Entity that describes the regulatory, legal, audit, and compliance requirements that apply to an organization, its products and services, or its information technology." ;
+    skos:scopeNote "As used in section 8.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the IT-relevant regulatory, audit, and legal requirements imposed on an organization by external authorities." ;
     rdfs:comment "Section-8.0 shared input. APQC 8.3.1.1 determine/evaluate regulatory and audit requirements, 8.3.6, 8.3.5.1. Descriptive: it states externally-imposed requirements." .
 
 bpo:ITSecurityThreatData a owl:Class ;
@@ -403,7 +404,8 @@ bpo:ITServiceCatalog a owl:Class ;
 bpo:ServiceLevelAgreement a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Service Level Agreement" ;
-    skos:definition "A Directive Information Content Entity that prescribes the negotiated commitments, service targets, priorities, and responsibilities governing the provision of IT services to a customer." ;
+    skos:definition "A Directive Information Content Entity, agreed between a service provider and a customer, that prescribes the scope, service levels, priorities, and responsibilities governing the provision of a service." ;
+    skos:scopeNote "As used in section 8.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the negotiated commitments, service targets, priorities, and responsibilities governing the provision of IT services to a customer." ;
     rdfs:comment "Section-8.0 shared output. APQC 8.1.5.4 / 8.1.5.6 define/negotiate SLAs, 8.1.7.1 SLA compliance, 8.7.5.1 SLAs. Directive: an SLA prescribes commitments." .
 
 bpo:ITPolicy a owl:Class ;
@@ -481,7 +483,8 @@ bpo:ITTrainingProgram a owl:Class ;
 bpo:RemediationPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Remediation Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes corrective actions, resources, and responsibilities for closing identified IT gaps, compliance issues, or service/solution defects." ;
+    skos:definition "A Directive Information Content Entity that prescribes the corrective actions, resources, and responsibilities for remedying an identified problem, such as an environmental contamination, a compliance issue, or an IT gap or defect." ;
+    skos:scopeNote "As used in section 8.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes corrective actions, resources, and responsibilities for closing identified IT gaps, compliance issues, or service/solution defects." ;
     rdfs:comment "Section-8.0 shared output. APQC 8.1.7.2 triage and plan remediation, 8.3.6.4 remediation requirements, 8.5.5.1.3 service/solution remediation, 8.6.4.9 roll-back plan. Directive." .
 
 ####################################################################
@@ -560,7 +563,8 @@ bpo:ITServiceDemandForecast a owl:Class ;
 bpo:TechnologyAssessment a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Technology Assessment" ;
-    skos:definition "A Descriptive Information Content Entity that describes a judgement of current, emerging, and disruptive technologies relevant to an organization's IT vision and capabilities." ;
+    skos:definition "A Descriptive Information Content Entity that describes a judgement of current, emerging, and disruptive technologies and their relevance to an organization." ;
+    skos:scopeNote "As used in section 8.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes a judgement of current, emerging, and disruptive technologies relevant to an organization's IT vision and capabilities." ;
     rdfs:comment "Section-8.0 shared output. APQC 8.2.1.2 monitor/map technologies, 8.2.7.2 analyze emerging concepts, 8.5.2.1 track capabilities, 8.7.2.6 support tools. Descriptive. (Mirrors the reference-module bpo:TechnologyAssessment of slice 1.1.1; kept identically labeled and defined for cross-section consistency.)" .
 
 bpo:ITResearchFindings a owl:Class ;

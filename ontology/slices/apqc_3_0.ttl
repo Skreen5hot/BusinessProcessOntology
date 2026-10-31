@@ -147,12 +147,13 @@ bpo:designatesProcessType a owl:AnnotationProperty ;
 
 bpo:CustomerData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes customers, their attributes, needs, and behavior." ;
+    skos:definition "A Descriptive Information Content Entity that describes customers, their characteristics, needs, and behavior." ;
     rdfs:comment "Minted because section 3.0 repeatedly consumes customer descriptions as input (3.1, 3.3, 3.5). Descriptive: it represents customers rather than prescribing action." .
 
 bpo:MarketData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Market Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes features, conditions, and dynamics of a market." ;
+    skos:definition "A Descriptive Information Content Entity that describes features, conditions, and dynamics of a market, such as its size, growth, trends, segments, channels, prices, and supply conditions." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes features, conditions, and dynamics of a market." ;
     rdfs:comment "Minted as a recurring input across 3.1-3.4. Reuses the same intent as the 1.1.1 reference MarketData; re-stated here so section 3.0 modules need not import the reference slice." .
 
 bpo:CompetitorData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -172,7 +173,8 @@ bpo:SalesOrderData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:CustomerFeedback a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Feedback" ;
-    skos:definition "A Descriptive Information Content Entity that describes responses, opinions, and reactions expressed by customers about an organization's offerings." ;
+    skos:definition "A Descriptive Information Content Entity that describes customers' responses to, opinions of, or evaluations of an organization's products, services, or experiences." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes responses, opinions, and reactions expressed by customers about an organization's offerings." ;
     rdfs:comment "Input to 3.2.1.3 (validation), 3.3.6 (respond to insight). Descriptive." .
 
 bpo:ChannelData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -182,7 +184,8 @@ bpo:ChannelData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:CostData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Cost Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes the production, distribution, marketing, and overhead costs associated with offerings or activities." ;
+    skos:definition "A Descriptive Information Content Entity that describes the costs incurred in producing, delivering, distributing, marketing, or supporting an organization's offerings or activities." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the production, distribution, marketing, and overhead costs associated with offerings or activities." ;
     rdfs:comment "Input to pricing (3.2.2, 3.3.3) and budgeting (3.3.2, 3.4.3). Descriptive." .
 
 bpo:RequestForProposal a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -371,7 +374,8 @@ bpo:PerformanceMeasure a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:PerformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Report" ;
-    skos:definition "A Descriptive Information Content Entity that describes tracked performance trends and deviations for a process, channel, or program." ;
+    skos:definition "A Descriptive Information Content Entity that describes the monitored performance of a function, process, channel, program, or initiative, including trends, deviations, and gaps against baselines or objectives." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes tracked performance trends and deviations for a process, channel, or program." ;
     rdfs:comment "Output of 3.2.4.2, 3.2.4.3, 3.2.6.4 monitoring acts. Descriptive (Monitoring genus)." .
 
 bpo:ChannelPerformanceAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ,
@@ -439,7 +443,8 @@ bpo:SalesBudget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:CostAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Cost Analysis" ;
-    skos:definition "A Descriptive Information Content Entity that describes the calculated costs of marketing, producing, distributing, or selling offerings." ;
+    skos:definition "A Descriptive Information Content Entity that describes the composition, drivers, and behavior of the costs of an organization's offerings or activities." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the calculated costs of marketing, producing, distributing, or selling offerings." ;
     rdfs:comment "Output of 3.3.2.2, 3.3.3.1 and the cost-calculation activities of 3.4.3 (3.4.3.3-.4). Descriptive (Analysis/Info-Processing genus)." .
 
 bpo:ROIForecast a owl:Class ; rdfs:subClassOf cco:ont00000626 , cco:ont00000853 ;
@@ -581,7 +586,8 @@ bpo:RevenueEstimate a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:ProfitabilityAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Profitability Analysis" ;
-    skos:definition "A Descriptive Information Content Entity that describes the analyzed profitability of a proposal, product, or sales activity." ;
+    skos:definition "A Descriptive Information Content Entity that describes the revenues, costs, and resulting profit attributable to a customer, product, proposal, sales activity, unit, or project." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the analyzed profitability of a proposal, product, or sales activity." ;
     rdfs:comment "Output of 3.4.3.5 (net profit) and 3.5.3.10. Descriptive (Analysis genus)." .
 
 # -- 3.5 Develop and manage sales plans --
@@ -589,7 +595,8 @@ bpo:ProfitabilityAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 bpo:SalesLead a owl:Class ; rdfs:subClassOf cco:ont00000853 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:ProspectiveCustomer ] ;
     rdfs:label "Sales Lead" ;
-    skos:definition "A Descriptive Information Content Entity that describes a qualified prospective customer and their potential as a sales opportunity." ;
+    skos:definition "A Descriptive Information Content Entity that describes a prospective customer, or an existing customer's potential further purchase, as a sales opportunity." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes a qualified prospective customer and their potential as a sales opportunity." ;
     rdfs:comment "Output of 3.5.1, 3.5.1.1, 3.5.1.2. Descriptive (the lead record represents a prospect); is about the ProspectiveCustomer. The prospect itself is an Agent/Organization modeled separately." .
 
 bpo:OpportunityWinPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -726,7 +733,8 @@ bpo:Customer a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent (a customer may be a person or organization)
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role with respect to an organization's offerings." ;
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 3.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role with respect to an organization's offerings." ;
     rdfs:comment "Anchored at cco:Agent because a customer may be an individual person; an organizational customer is also an Agent via the role. Bears CustomerRole." .
 
 bpo:ProspectiveCustomer a owl:Class ;

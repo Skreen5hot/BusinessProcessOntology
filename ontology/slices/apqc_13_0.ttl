@@ -452,7 +452,8 @@ bpo:Stakeholder a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:StakeholderRole ] ;
     rdfs:label "Stakeholder" ;
-    skos:definition "An Agent that bears a stakeholder role with respect to an Organization's initiative." ;
+    skos:definition "An Agent that bears a stakeholder role in virtue of being able to affect, or be affected by, an organization or its initiatives, actions, objectives, or policies." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): An Agent that bears a stakeholder role with respect to an Organization's initiative." ;
     rdfs:comment "Where the stakeholder is itself an Organization (e.g. a partner firm), use cco:ont00001180 as the genus instead." .
 
 bpo:FunctionalEmployee a owl:Class ;
@@ -515,7 +516,8 @@ bpo:ProcessPerformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:PerformanceIndicatorSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Performance Indicator Specification" ;
-    skos:definition "A Directive Information Content Entity that prescribes the indicators and measures used to evaluate the performance of a process, project, program, or organization." ;
+    skos:definition "A Directive Information Content Entity that prescribes the indicators and measures by which the performance of a process, product or service, project, program, or organization is to be evaluated." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the indicators and measures used to evaluate the performance of a process, project, program, or organization." ;
     rdfs:comment "Shared across 13.1.4.3, 13.2.3.1.5, 13.6.3.1, 13.8.3.2 -- one definition of 'measures/indicators' as a prescriptive artifact." .
 
 bpo:ImprovementOpportunityAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -582,7 +584,8 @@ bpo:ProjectReadinessAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:BusinessCase a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Business Case" ;
-    skos:definition "A Descriptive Information Content Entity that describes a current situation, proposed solution, financial analysis, and conclusion in order to justify a course of action to a decision maker." ;
+    skos:definition "A Descriptive Information Content Entity that describes the argument for a proposed course of action, weighing its costs, benefits, and risks, in order to justify it to a decision maker." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes a current situation, proposed solution, financial analysis, and conclusion in order to justify a course of action to a decision maker." ;
     rdfs:comment "Descriptive (an argument/justification representing a situation), not Directive; the go/no-go decision it supports is a separate Directive ICE." .
 
 bpo:ProjectManagementMethodologySelection a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -591,11 +594,13 @@ bpo:ProjectManagementMethodologySelection a owl:Class ; rdfs:subClassOf cco:ont0
 
 bpo:ProjectPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Project Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the resources, roles, IT requirements, training, communication, reward approaches, and launch for executing a business project." .
+    skos:definition "A Directive Information Content Entity that prescribes the scope, tasks, sequence, resources, and roles by which a project is to be carried out." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the resources, roles, IT requirements, training, communication, reward approaches, and launch for executing a business project." .
 
 bpo:TrainingPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Training Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the actions for equipping personnel with the skills and abilities to fulfill their roles." ;
+    skos:definition "A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors by which personnel are to be taught the skills and behaviours their roles require." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the actions for equipping personnel with the skills and abilities to fulfill their roles." ;
     rdfs:comment "Shared across 13.2.3.3.4, 13.4.2.3, 13.5.1.7." .
 
 bpo:CommunicationPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -696,7 +701,8 @@ bpo:NonconformanceImpactAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853
 
 bpo:RootCauseAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Root Cause Analysis" ;
-    skos:definition "A Descriptive Information Content Entity that describes the underlying causes that triggered a non-conformance event or activity." ;
+    skos:definition "A Descriptive Information Content Entity that describes the identified underlying causes of a problem, such as a non-conformance, a product fault, or a negative customer experience, and the reasoning that establishes them." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the underlying causes that triggered a non-conformance event or activity." ;
     rdfs:comment "Shared with 13.3.3.3; also relevant to risk/root-cause work in 13.4." .
 
 bpo:CorrectiveAndPreventiveActionSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -876,7 +882,8 @@ bpo:EnterpriseMeasurementModel a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:PerformanceData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes consolidated metrics and trends collected on the performance of a process, function, or organization." .
+    skos:definition "A Descriptive Information Content Entity that describes the measured performance of a process, function, program, organization, or employee against defined measures." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes consolidated metrics and trends collected on the performance of a process, function, or organization." .
 
 bpo:PerformanceMeasurement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Measurement" ;
@@ -897,7 +904,8 @@ bpo:PerformanceTrendAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:PerformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Report" ;
-    skos:definition "A Descriptive Information Content Entity that describes performance, including performance gaps, trends, and analysis, for the appropriate authority." .
+    skos:definition "A Descriptive Information Content Entity that describes the monitored performance of a function, process, channel, program, or initiative, including trends, deviations, and gaps against baselines or objectives." ;
+    skos:scopeNote "As used in section 13.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes performance, including performance gaps, trends, and analysis, for the appropriate authority." .
 
 bpo:PerformanceImprovementPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Performance Improvement Plan" ;

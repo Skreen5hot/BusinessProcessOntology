@@ -198,14 +198,16 @@ bpo:Customer a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role." ;
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role." ;
     rdfs:comment "Modeled as Agent so it covers both individual persons and organizational buyers; use bpo:CustomerRole on an Organization for B2B customers." .
 
 bpo:Stakeholder a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:StakeholderRole ] ;
     rdfs:label "Stakeholder" ;
-    skos:definition "An Agent that bears a stakeholder role." .
+    skos:definition "An Agent that bears a stakeholder role in virtue of being able to affect, or be affected by, an organization or its initiatives, actions, objectives, or policies." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): An Agent that bears a stakeholder role." .
 
 bpo:BusinessUnit a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,
@@ -247,12 +249,13 @@ bpo:CustomerExperienceManagementCapability a owl:Class ;
 
 bpo:MarketData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Market Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes features of a market." ;
+    skos:definition "A Descriptive Information Content Entity that describes features, conditions, and dynamics of a market, such as its size, growth, trends, segments, channels, prices, and supply conditions." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes features of a market." ;
     rdfs:comment "Carried over from the 1.1.1 reference module (same IRI, same definition) so this self-contained module has every filler declared." .
 
 bpo:CustomerData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes customers, their characteristics, and their needs and wants." .
+    skos:definition "A Descriptive Information Content Entity that describes customers, their characteristics, needs, and behavior." .
 
 bpo:InternalCapabilityData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Internal Capability Data" ;
@@ -260,7 +263,7 @@ bpo:InternalCapabilityData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:FinancialStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Financial Statement" ;
-    skos:definition "A Descriptive Information Content Entity that describes the financial state of an organization, including its balance sheet, income, cash flows, equity, and liquidity." .
+    skos:definition "A Descriptive Information Content Entity that describes an organization's financial position and results, comprising its balance sheet, income statement, cash-flow statement, and statement of changes in equity." .
 
 bpo:PerformanceRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Record" ;
@@ -268,7 +271,8 @@ bpo:PerformanceRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:CustomerFeedback a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Feedback" ;
-    skos:definition "A Descriptive Information Content Entity that describes responses, reactions, sentiments, and insights expressed by customers about products, services, or experiences." .
+    skos:definition "A Descriptive Information Content Entity that describes customers' responses to, opinions of, or evaluations of an organization's products, services, or experiences." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes responses, reactions, sentiments, and insights expressed by customers about products, services, or experiences." .
 
 bpo:BusinessModelInformation a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Business Model Information" ;
@@ -278,7 +282,7 @@ bpo:BusinessModelInformation a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:CompetitorData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Competitor Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes competitors and their products or services." .
+    skos:definition "A Descriptive Information Content Entity that describes competing organizations and their products or services." .
 
 bpo:MacroeconomicData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Macroeconomic Data" ;
@@ -306,7 +310,7 @@ bpo:DemographicData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:ResearchPublication a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Research Publication" ;
-    skos:definition "A Descriptive Information Content Entity published as a report, brief, or article and used as analytic input." .
+    skos:definition "A Descriptive Information Content Entity published as a report, brief, or article and used as analytic or developmental input." .
 
 ####################################################################
 # 2E. DESCRIPTIVE-ICE OUTPUTS  (ont00000853)
@@ -381,7 +385,8 @@ bpo:CustomerExperienceAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RootCauseAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Root Cause Analysis" ;
-    skos:definition "A Descriptive Information Content Entity that describes the underlying causes of a problematic outcome, such as a negative customer experience." .
+    skos:definition "A Descriptive Information Content Entity that describes the identified underlying causes of a problem, such as a non-conformance, a product fault, or a negative customer experience, and the reasoning that establishes them." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the underlying causes of a problematic outcome, such as a negative customer experience." .
 
 bpo:RestructuringOpportunityAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Restructuring Opportunity Analysis" ;
@@ -405,7 +410,8 @@ bpo:StrategicInitiativeEvaluation a owl:Class ; rdfs:subClassOf cco:ont00000853 
 
 bpo:PerformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Report" ;
-    skos:definition "A Descriptive Information Content Entity that describes monitored performance of functions, processes, or initiatives against established baselines or objectives." .
+    skos:definition "A Descriptive Information Content Entity that describes the monitored performance of a function, process, channel, program, or initiative, including trends, deviations, and gaps against baselines or objectives." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes monitored performance of functions, processes, or initiatives against established baselines or objectives." .
 
 bpo:StrategyReviewReport a owl:Class ;
     rdfs:subClassOf bpo:PerformanceReport ,
@@ -442,7 +448,8 @@ bpo:MacroeconomicTrendAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RegulatoryConcernRegister a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Regulatory Concern Register" ;
-    skos:definition "A Descriptive Information Content Entity that describes identified public-policy and regulatory concerns." .
+    skos:definition "A Descriptive Information Content Entity that describes identified public-policy, regulatory, and intellectual-property concerns and needs." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes identified public-policy and regulatory concerns." .
 
 bpo:EcologicalConcernRegister a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Ecological Concern Register" ;
@@ -454,7 +461,8 @@ bpo:SocioculturalShiftAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:TechnologyAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Technology Assessment" ;
-    skos:definition "A Descriptive Information Content Entity that describes a judgement of current, emerging, and disruptive technologies." .
+    skos:definition "A Descriptive Information Content Entity that describes a judgement of current, emerging, and disruptive technologies and their relevance to an organization." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes a judgement of current, emerging, and disruptive technologies." .
 
 bpo:DemographicAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Demographic Analysis" ;
@@ -531,7 +539,8 @@ bpo:BusinessStrategy a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ,   # Directive ICE (asserted: Plan subClassOf Directive ICE in CCO; stated locally so standalone Gate C/S3 resolves)
         cco:ont00000974 ;   # Plan (Directive ICE)
     rdfs:label "Business Strategy" ;
-    skos:definition "A Plan that prescribes the set of intended intentional acts through which an organization expects to achieve its long-term business objectives." ;
+    skos:definition "A Plan that prescribes an organization's overall direction, goals, and competitive positioning, and the intended courses of action through which it expects to achieve its long-term business objectives." ;
+    skos:scopeNote "As used in section 1.0 before WP6 B1 (2026-10-31): A Plan that prescribes the set of intended intentional acts through which an organization expects to achieve its long-term business objectives." ;
     rdfs:comment "Reuses CCO Plan (ont00000974) rather than minting under ont00000965, because the CCO Plan definition ('prescribes some set of intended Intentional Acts through which some Agent expects to achieve some Objective') fits a strategy exactly. Base genus for the strategy outputs of 1.2.3, 1.2.7, and 1.2.8." .
 
 bpo:OrganizationalObjective a owl:Class ;

@@ -274,7 +274,8 @@ bpo:RegulatoryAuthority a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom bpo:RegulatoryAuthorityRole ] ;
     rdfs:label "Regulatory Authority" ;
-    skos:definition "An Organization that bears a regulatory authority role in relation to a focal organization." ;
+    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing, administering, or enforcing laws, statutes, permits, or regulatory requirements binding on other organizations, and overseeing their compliance." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): An Organization that bears a regulatory authority role in relation to a focal organization." ;
     rdfs:comment "APQC 'sovereign or multinational authorities', 'appropriate regulatory body/agencies' (group 2.1.3)." .
 
 bpo:SupplyChainPartner a owl:Class ;
@@ -290,7 +291,8 @@ bpo:Customer a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role in relation to a focal organization's products or services." ;
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role in relation to a focal organization's products or services." ;
     rdfs:comment "Modeled as cco:Agent to cover both individual consumers and customer organizations participating in tests/interviews (2.3.2.2)." .
 
 ####################################################################
@@ -309,13 +311,13 @@ bpo:ProductServicePrototype a owl:Class ;
 bpo:ProductionEquipment a owl:Class ;
     rdfs:subClassOf cco:ont00000995 ;
     rdfs:label "Production Equipment" ;
-    skos:definition "A Material Artifact that is machinery or tooling used to manufacture or deliver a product or service." ;
+    skos:definition "A Material Artifact, such as machinery or tooling, that is used in a production process to manufacture products or deliver services." ;
     rdfs:comment "APQC 'machinery - hardware and software - needed to arrange production lines' (2.3.3.1)." .
 
 bpo:RawMaterial a owl:Class ;
     rdfs:subClassOf obo:BFO_0000040 ;
     rdfs:label "Raw Material" ;
-    skos:definition "A Material Entity that is feedstock or input material consumed in producing a finished product." ;
+    skos:definition "A Portion of Material that is provided as input to an act of production and incorporated into, or consumed during, the manufacture of a finished product." ;
     rdfs:comment "APQC 'feedstock or raw materials needed to prepare the finished products' (2.3.3.1). Bare material entity because raw stock need not be an artifact." .
 
 ####################################################################
@@ -332,16 +334,19 @@ bpo:MarketOpportunityData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:MarketData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Market Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes features of a market, such as size, growth rate, trends, segments, and channels." ;
+    skos:definition "A Descriptive Information Content Entity that describes features, conditions, and dynamics of a market, such as its size, growth, trends, segments, channels, prices, and supply conditions." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes features of a market, such as size, growth rate, trends, segments, and channels." ;
     rdfs:comment "Reused naming from the reference module (apqc_1_1_1.ttl); minted here because it is not in apqc-ext.ttl." .
 
 bpo:CustomerFeedback a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Feedback" ;
-    skos:definition "A Descriptive Information Content Entity that describes responses, opinions, and satisfaction reported by customers about a product or service." .
+    skos:definition "A Descriptive Information Content Entity that describes customers' responses to, opinions of, or evaluations of an organization's products, services, or experiences." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes responses, opinions, and satisfaction reported by customers about a product or service." .
 
 bpo:TechnologyData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Technology Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes deployed, emerging, and disruptive technologies relevant to product/service development." ;
+    skos:definition "A Descriptive Information Content Entity that describes deployed, emerging, and disruptive technologies." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes deployed, emerging, and disruptive technologies relevant to product/service development." ;
     rdfs:comment "Reused naming from the reference module; minted here for section 2.0." .
 
 bpo:ResearchPublication a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -351,7 +356,8 @@ bpo:ResearchPublication a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RegulatoryRequirementData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Regulatory Requirement Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes public-policy, regulatory, and compliance requirements applicable to a product or service." ;
+    skos:definition "A Descriptive Information Content Entity that describes the regulatory, legal, audit, and compliance requirements that apply to an organization, its products and services, or its information technology." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes public-policy, regulatory, and compliance requirements applicable to a product or service." ;
     rdfs:comment "Descriptive: it states which requirements obtain. The organization's own derived requirement specifications are Directive (see section 5)." .
 
 bpo:SupplyChainPerformanceData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -369,7 +375,8 @@ bpo:ProductServiceIdea a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:BusinessStrategy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Business Strategy" ;
-    skos:definition "A Directive Information Content Entity that prescribes an organization's intended overall course of business action." ;
+    skos:definition "A Plan that prescribes an organization's overall direction, goals, and competitive positioning, and the intended courses of action through which it expects to achieve its long-term business objectives." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes an organization's intended overall course of business action." ;
     rdfs:comment "Directive input the section aligns to (APQC cross-reference 'Develop a business strategy [10015]'); used as has-input where concepts are checked for alignment (2.1.1.2)." .
 
 ####################################################################
@@ -427,7 +434,8 @@ bpo:PostLaunchReview a owl:Class ;
 
 bpo:BusinessCase a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Business Case" ;
-    skos:definition "A Descriptive Information Content Entity that describes an argument weighing the costs and benefits of a proposed product or service project." ;
+    skos:definition "A Descriptive Information Content Entity that describes the argument for a proposed course of action, weighing its costs, benefits, and risks, in order to justify it to a decision maker." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes an argument weighing the costs and benefits of a proposed product or service project." ;
     rdfs:comment "Reused naming from the reference module's 'business case' pattern. Descriptive: it argues for/against rather than prescribing. Output of 2.3.1.2, finalized at 2.3.2.3." .
 
 bpo:ProductServiceCharacteristicsSpecification a owl:Class ;
@@ -480,7 +488,8 @@ bpo:LaunchPlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:PerformanceIndicatorSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Performance Indicator Specification" ;
-    skos:definition "A Directive Information Content Entity that prescribes the parameters and indicators used to measure product/service or development performance." ;
+    skos:definition "A Directive Information Content Entity that prescribes the indicators and measures by which the performance of a process, product or service, project, program, or organization is to be evaluated." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the parameters and indicators used to measure product/service or development performance." ;
     rdfs:comment "Output of 2.1.2.4 and 2.3.1.13. Directive: it stipulates how performance is to be measured." .
 
 bpo:GoNoGoDecision a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -521,7 +530,8 @@ bpo:EngineeringChangeOrder a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:RegulatoryConcernRegister a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Regulatory Concern Register" ;
-    skos:definition "A Descriptive Information Content Entity that describes identified patent, copyright, and regulatory concerns and needs." ;
+    skos:definition "A Descriptive Information Content Entity that describes identified public-policy, regulatory, and intellectual-property concerns and needs." ;
+    skos:scopeNote "As used in section 2.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes identified patent, copyright, and regulatory concerns and needs." ;
     rdfs:comment "Reused naming from the reference module. Output of review/determine-needs acts (2.1.3.1-.3)." .
 
 bpo:RegulatoryRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;

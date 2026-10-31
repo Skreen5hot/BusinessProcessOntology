@@ -167,7 +167,8 @@ bpo:RiskAssessment a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:Risk ] ;
     rdfs:label "Risk Assessment" ;
-    skos:definition "A Descriptive Information Content Entity, about one or more risks, that describes a judgement of the likelihood and impact of those risks together with their root causes, used to determine which to mitigate." ;
+    skos:definition "A Descriptive Information Content Entity, about one or more risks, that describes a judgement of the likelihood and impact of those risks, together with their causes, used to decide which to mitigate." ;
+    skos:scopeNote "As used in section 11.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity, about one or more risks, that describes a judgement of the likelihood and impact of those risks together with their root causes, used to determine which to mitigate." ;
     rdfs:comment "Shared output of appraisal acts (11.1.2.2, 11.1.3.2). Descriptive (a judgement), per GOLDEN PRINCIPLE for Act of Appraisal." .
 
 bpo:InsuranceCoverageAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -222,7 +223,8 @@ bpo:ComplianceScorecard a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:ComplianceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compliance Report" ;
-    skos:definition "A Descriptive Information Content Entity that describes an organization's compliance status for submission to internal stakeholders or regulatory agencies." ;
+    skos:definition "A Descriptive Information Content Entity that describes the state of an organization's compliance with applicable regulations or with its own policies and controls." ;
+    skos:scopeNote "As used in section 11.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes an organization's compliance status for submission to internal stakeholders or regulatory agencies." ;
     rdfs:comment "Transferred ICE of 11.2.2.8 (compile and communicate internal and regulatory compliance reports): an already-compiled report submitted to regulators, modeled as the `has input` of P19596 (cco:ont00000151 communication/submission act), not its output. Descriptive: it represents compliance state." .
 
 bpo:RegulatoryEnvironmentAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -280,7 +282,7 @@ bpo:RiskKnowledge a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RegulatoryRequirement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Regulatory Requirement" ;
-    skos:definition "A Directive Information Content Entity, issued by a governing authority, that prescribes a law, guideline, statute, or stipulation with which an organization must comply." ;
+    skos:definition "A Directive Information Content Entity, issued by a governing authority, that prescribes a law, statute, regulatory direction, guideline, or legal principle with which an organization must comply." ;
     rdfs:comment "Directive (not Descriptive): a regulatory requirement prescribes obligatory conduct. Shared input across 11.2 (identify applicable requirements 11.2.2.2) and 11.3 (investigate legal aspects 11.3.4). Anchored to cco:ont00000965 (Directive/Prescriptive ICE)." .
 
 bpo:RiskTolerance a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -309,8 +311,9 @@ bpo:EnterpriseRiskTool a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:comment "Output of 11.1.1.3 (identify and implement enterprise risk management tools). Modeled as a Directive ICE (a methodological specification), distinct from any physical software tool; if a particular org deploys a software artifact, that is a separate Material Artifact not minted here." .
 
 bpo:CompliancePolicy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
-    rdfs:label "Compliance Policy and Procedure" ;
-    skos:definition "A Directive Information Content Entity that prescribes an organization's standardized approach to ethics and compliance and the procedures for complying with applicable guidelines, provisions, and legislation." ;
+    rdfs:label "Compliance Policy" ;
+    skos:definition "A Directive Information Content Entity that prescribes an organization's rules, approach, and procedures for adhering to applicable statutes, regulations, guidelines, and ethical standards." ;
+    skos:scopeNote "As used in section 11.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes an organization's standardized approach to ethics and compliance and the procedures for complying with applicable guidelines, provisions, and legislation." ;
     rdfs:comment "Shared output across 11.2.1.1 (enterprise compliance policies) and 11.2.2.1 (regulatory compliance procedures). Directive: prescribes compliance conduct." .
 
 bpo:ComplianceControl a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -322,7 +325,8 @@ bpo:RemediationPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:ContaminatedMaterial ] ;
     rdfs:label "Remediation Plan" ;
-    skos:definition "A Directive Information Content Entity, about a case of contamination, that prescribes the corrective actions for identifying and treating environmental adulteration so that an affected area becomes operational again." ;
+    skos:definition "A Directive Information Content Entity that prescribes the corrective actions, resources, and responsibilities for remedying an identified problem, such as an environmental contamination, a compliance issue, or an IT gap or defect." ;
+    skos:scopeNote "As used in section 11.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity, about a case of contamination, that prescribes the corrective actions for identifying and treating environmental adulteration so that an affected area becomes operational again." ;
     rdfs:comment "Output of 11.3.1 (create remediation plans), produced by bpo:ActOfFormulation (reused from ext). Directive: a plan prescribes intended corrective acts." .
 
 bpo:RemediationPolicy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -396,7 +400,8 @@ bpo:RegulatoryAuthority a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:RegulatoryAuthorityRole ] ;
     rdfs:label "Regulatory Authority" ;
-    skos:definition "An Organization that bears a regulatory-authority role, issuing laws, statutes, permits, or requirements and overseeing an organization's compliance." ;
+    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing, administering, or enforcing laws, statutes, permits, or regulatory requirements binding on other organizations, and overseeing their compliance." ;
+    skos:scopeNote "As used in section 11.0 before WP6 B1 (2026-10-31): An Organization that bears a regulatory-authority role, issuing laws, statutes, permits, or requirements and overseeing an organization's compliance." ;
     rdfs:comment "Recipient/counterparty in 11.2 (maintain relationships with regulators 11.2.2.9; submit reports 11.2.2.8) and source of requirements investigated in 11.3.4." .
 
 bpo:ExecutiveManagement a owl:Class ;

@@ -157,7 +157,8 @@ bpo:CustomerRequirements a owl:Class ;
 bpo:CustomerFeedback a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Feedback" ;
-    skos:definition "A Descriptive Information Content Entity that describes a customer's evaluation of services rendered, solicited to inform improvement of service delivery." ;
+    skos:definition "A Descriptive Information Content Entity that describes customers' responses to, opinions of, or evaluations of an organization's products, services, or experiences." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes a customer's evaluation of services rendered, solicited to inform improvement of service delivery." ;
     rdfs:comment "Shared section-5.0 input. Recurs across 5.1.1.4, 5.2.3.7, 5.3.3.6." .
 
 bpo:HistoricalDemandData a owl:Class ;
@@ -192,13 +193,14 @@ bpo:DemandForecast a owl:Class ;
     rdfs:subClassOf cco:ont00000626 ,   # Predictive ICE
         cco:ont00000853 ;   # its parent Descriptive ICE, asserted so standalone SHACL S3 resolves
     rdfs:label "Demand Forecast" ;
-    skos:definition "A Predictive Information Content Entity that describes the anticipated (uncertain, future) level of customer demand for an organization's services." ;
+    skos:definition "A Predictive Information Content Entity that estimates the anticipated future demand for an organization's products or services." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Predictive Information Content Entity that describes the anticipated (uncertain, future) level of customer demand for an organization's services." ;
     rdfs:comment "Shared section-5.0 output. Baseline (5.2.1.2) and consensus (5.2.1.4) forecasts are both Demand Forecasts; bpo:ConsensusDemandForecast specialises this. PREDICTIVE (cco:ont00000626, a Descriptive ICE about an uncertain future), matching the Slice-3 forecast pattern -- produced by bpo:ActOfForecasting." .
 
 bpo:ConsensusDemandForecast a owl:Class ;
     rdfs:subClassOf bpo:DemandForecast ;
     rdfs:label "Consensus Demand Forecast" ;
-    skos:definition "A Demand Forecast that describes a level of future demand agreed upon by reconciling baseline forecasts with customer input." ;
+    skos:definition "A Demand Forecast that describes a level of anticipated demand agreed upon by reconciling baseline forecasts with customer input." ;
     rdfs:comment "Shared section-5.0 output (5.2.1.4)." .
 
 bpo:ForecastAccuracyAssessment a owl:Class ;
@@ -322,19 +324,22 @@ bpo:WorkplaceLayoutPlan a owl:Class ;
 bpo:ResourcePlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Resource Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes how the personnel, physical resources, and capabilities required to deliver services are to be provisioned and allocated." ;
+    skos:definition "A Directive Information Content Entity that prescribes how personnel, physical resources, and capabilities are to be provisioned and allocated to a body of work." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes how the personnel, physical resources, and capabilities required to deliver services are to be provisioned and allocated." ;
     rdfs:comment "Shared section-5.0 output (5.2.2.2, 5.3.1.6). Directive: a plan prescribes intended provisioning." .
 
 bpo:TrainingPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Training Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors for teaching service-delivery personnel a skill or behaviour." ;
+    skos:definition "A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors by which personnel are to be taught the skills and behaviours their roles require." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors for teaching service-delivery personnel a skill or behaviour." ;
     rdfs:comment "Shared section-5.0 output (5.2.3.1). Directive: a training plan prescribes how training is to be conducted." .
 
 bpo:ProjectPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Project Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the scope, tasks, and sequence by which a service-delivery engagement is to be carried out." ;
+    skos:definition "A Directive Information Content Entity that prescribes the scope, tasks, sequence, resources, and roles by which a project is to be carried out." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the scope, tasks, and sequence by which a service-delivery engagement is to be carried out." ;
     rdfs:comment "Shared section-5.0 output/input (5.3.1.3). Directive: a project plan prescribes intended work." .
 
 bpo:ServiceDeliveryPlan a owl:Class ;
@@ -407,7 +412,8 @@ bpo:Customer a owl:Class ;
           owl:onProperty obo:BFO_0000196 ;   # bearer of
           owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role in relation to an organization delivering a service." ;
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role in relation to an organization delivering a service." ;
     rdfs:comment "Shared section-5.0 participant. Modeled as cco:Agent (not Organization) so that both individual and organizational customers are admitted; group agents may narrow to cco:ont00001180 where the customer is specifically an organization." .
 
 bpo:ServiceProvider a owl:Class ;
@@ -425,7 +431,7 @@ bpo:Supplier a owl:Class ;
           owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom bpo:SupplierRole ] ;
     rdfs:label "Supplier" ;
-    skos:definition "An Agent that bears a supplier role in virtue of providing resources, skills, or capabilities that supplement an organization's service delivery." ;
+    skos:definition "An Organization that bears a supplier role in relation to an organization to which it provides materials, goods, parts, services, or capabilities." ;
     rdfs:comment "Shared section-5.0 participant (5.2.2.4, 5.2.2.5, 5.3.1.1). Modeled as cco:Agent to admit both organizational and individual suppliers." .
 
 bpo:DeliveryPartner a owl:Class ;

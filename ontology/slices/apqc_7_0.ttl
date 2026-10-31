@@ -154,7 +154,8 @@ bpo:Stakeholder a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom bpo:StakeholderRole ] ;
     rdfs:label "Stakeholder" ;
-    skos:definition "An Agent that bears a stakeholder role in virtue of being able to affect or be affected by an organization's HR actions, objectives, and policies." ;
+    skos:definition "An Agent that bears a stakeholder role in virtue of being able to affect, or be affected by, an organization or its initiatives, actions, objectives, or policies." ;
+    skos:scopeNote "As used in section 7.0 before WP6 B1 (2026-10-31): An Agent that bears a stakeholder role in virtue of being able to affect or be affected by an organization's HR actions, objectives, and policies." ;
     rdfs:comment "Recipient of HR plan communications and source of requirements in groups 7.1, 7.7." .
 
 bpo:RecruitmentVendor a owl:Class ;
@@ -334,7 +335,8 @@ bpo:HRPolicyData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:PerformanceData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Data" ;
-    skos:definition "A Descriptive Information Content Entity that records the performance of employees or of an HR program against defined measures." .
+    skos:definition "A Descriptive Information Content Entity that describes the measured performance of a process, function, program, organization, or employee against defined measures." ;
+    skos:scopeNote "As used in section 7.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that records the performance of employees or of an HR program against defined measures." .
 
 bpo:LegalAndRegulatoryRequirements a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Legal and Regulatory Requirements" ;

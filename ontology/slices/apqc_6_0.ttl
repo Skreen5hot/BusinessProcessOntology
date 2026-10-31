@@ -188,7 +188,8 @@ bpo:Customer a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role in relation to an organization from which it has obtained or seeks goods or services." ;
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 6.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role in relation to an organization from which it has obtained or seeks goods or services." ;
     rdfs:comment "Minted because CCO 2.0 has no Customer class. Genus cco:ont00001017 (Agent) so individuals and organizations alike may be customers; the customer-specific aspect is carried by bpo:CustomerRole on an independent continuant (D4)." .
 
 bpo:CustomerServiceRepresentative a owl:Class ;
@@ -217,7 +218,7 @@ bpo:Supplier a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:SupplierRole ] ;
     rdfs:label "Supplier" ;
-    skos:definition "An Agent that bears a supplier role in relation to an organization to which it furnishes goods, parts, or services and with which it shares warranty obligations." ;
+    skos:definition "An Organization that bears a supplier role in relation to an organization to which it provides materials, goods, parts, services, or capabilities." ;
     rdfs:comment "Minted (no CCO Supplier class). Counterparty in 6.1.6.3 (Agree on warranty responsibilities with suppliers) and 6.3.3 (Manage supplier recovery)." .
 
 bpo:RegulatoryBody a owl:Class ;
@@ -244,7 +245,7 @@ bpo:ManagementPersonnel a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:ManagerRole ] ;
     rdfs:label "Management Personnel" ;
-    skos:definition "An Agent that bears a manager role within an organization." ;
+    skos:definition "An Agent that bears a manager role in virtue of exercising managerial authority within an organization." ;
     rdfs:comment "Reuses the supporting pattern from apqc_1_1_1; engaged in 6.5.1.2 (discuss issues with management)." .
 
 ####################################################################
@@ -334,7 +335,7 @@ bpo:DefectiveProduct a owl:Class ;
 bpo:ReturnedProduct a owl:Class ;
     rdfs:subClassOf cco:ont00000995 ;   # Material Artifact
     rdfs:label "Returned Product" ;
-    skos:definition "A Material Artifact that a customer has sent back to an organization for refund, replacement, or repair." ;
+    skos:definition "A Material Artifact that a customer or buyer has sent back to the seller or an intermediary for refund, replacement, repair, salvage, or restocking." ;
     rdfs:comment "Material input to 6.2.4 (Process returns); may be scrapped or salvaged per the source." .
 
 bpo:DefectivePart a owl:Class ;
@@ -371,7 +372,8 @@ bpo:CustomerComplaint a owl:Class ;
 bpo:CustomerFeedback a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Feedback" ;
-    skos:definition "A Descriptive Information Content Entity that records a customer's review or evaluation of services delivered, products, advertisements, or service experience." ;
+    skos:definition "A Descriptive Information Content Entity that describes customers' responses to, opinions of, or evaluations of an organization's products, services, or experiences." ;
+    skos:scopeNote "As used in section 6.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that records a customer's review or evaluation of services delivered, products, advertisements, or service experience." ;
     rdfs:comment "Input to the satisfaction-measurement processes of 6.5 and to 6.3.4.4 (Ensure quality of service)." .
 
 bpo:WarrantyClaim a owl:Class ;
@@ -449,7 +451,8 @@ bpo:CustomerServicePolicy a owl:Class ;
 bpo:ServiceLevelAgreement a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Service Level Agreement" ;
-    skos:definition "A Directive Information Content Entity that prescribes the negotiated service levels, priorities, and responsibilities agreed for a customer segment." ;
+    skos:definition "A Directive Information Content Entity, agreed between a service provider and a customer, that prescribes the scope, service levels, priorities, and responsibilities governing the provision of a service." ;
+    skos:scopeNote "As used in section 6.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the negotiated service levels, priorities, and responsibilities agreed for a customer segment." ;
     rdfs:comment "Output of 6.1.5 (Establish target service level for each customer segment)." .
 
 bpo:RecallStrategy a owl:Class ;
@@ -603,7 +606,8 @@ bpo:InquiryResponse a owl:Class ;
 bpo:SalesLead a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;   # Descriptive ICE
     rdfs:label "Sales Lead" ;
-    skos:definition "A Descriptive Information Content Entity that describes an upsell or cross-sell opportunity identified during a customer interaction." ;
+    skos:definition "A Descriptive Information Content Entity that describes a prospective customer, or an existing customer's potential further purchase, as a sales opportunity." ;
+    skos:scopeNote "As used in section 6.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes an upsell or cross-sell opportunity identified during a customer interaction." ;
     rdfs:comment "Output of 6.2.2.5 (Identify and capture upsell/cross-sell opportunities); delivered to the sales team in 6.2.2.6." .
 
 bpo:ComplaintResolution a owl:Class ;
@@ -670,7 +674,8 @@ bpo:RootCauseAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,   # Descriptive ICE
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:DefectivePart ] ;
     rdfs:label "Root Cause Analysis" ;
-    skos:definition "A Descriptive Information Content Entity that describes the diagnosed root cause of a warranty issue or product fault." ;
+    skos:definition "A Descriptive Information Content Entity that describes the identified underlying causes of a problem, such as a non-conformance, a product fault, or a negative customer experience, and the reasoning that establishes them." ;
+    skos:scopeNote "As used in section 6.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes the diagnosed root cause of a warranty issue or product fault." ;
     rdfs:comment "Output of 6.3.2.3.4 (Investigate issue / perform root cause analysis)." .
 
 bpo:ResponsiblePartyDetermination a owl:Class ;

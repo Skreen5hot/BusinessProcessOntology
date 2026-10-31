@@ -169,7 +169,8 @@ bpo:designatesProcessType a owl:AnnotationProperty ;
 
 bpo:BusinessStrategy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Business Strategy" ;
-    skos:definition "A Directive Information Content Entity that prescribes an organization's overall direction, goals, and competitive positioning, against which asset requirements are aligned." ;
+    skos:definition "A Plan that prescribes an organization's overall direction, goals, and competitive positioning, and the intended courses of action through which it expects to achieve its long-term business objectives." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes an organization's overall direction, goals, and competitive positioning, against which asset requirements are aligned." ;
     rdfs:comment "Shared has-input across 10.0 (e.g. confirm property requirements align with business strategy). Directive (cco:ont00000965): harmonized to Directive corpus-wide (cf. slice 2.0) so the shared class stays satisfiable across slices; the further prescriptive strategy artifacts produced within 10.0 are typed separately (e.g. bpo:PropertyStrategy, bpo:ConstructionStrategy). (The definition/comment formerly read 'Descriptive', contradicting the harmonized 965 anchor; corrected here.)" .
 
 bpo:ExternalEnvironmentAppraisal a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -178,7 +179,8 @@ bpo:ExternalEnvironmentAppraisal a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:MarketData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Market Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes features of a market, such as property prices, construction costs, and supply conditions." ;
+    skos:definition "A Descriptive Information Content Entity that describes features, conditions, and dynamics of a market, such as its size, growth, trends, segments, channels, prices, and supply conditions." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes features of a market, such as property prices, construction costs, and supply conditions." ;
     rdfs:comment "Shared input for build/buy/lease and property-selection appraisals across 10.1 and 10.2." .
 
 bpo:BudgetAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -187,7 +189,8 @@ bpo:BudgetAnalysis a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:Budget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Budget" ;
-    skos:definition "A Directive Information Content Entity that prescribes the planned allocation of funds for a project or program." ;
+    skos:definition "A Directive Information Content Entity that prescribes the planned allocation of an organization's funds, and the financial results expected from them, for an activity, project, program, or period." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the planned allocation of funds for a project or program." ;
     rdfs:comment "Has-input to budget-feasibility and capital-program work. Directive (cco:ont00000965): a budget prescribes intended fund allocation, constraining subsequent spending; harmonized to Directive corpus-wide (slices 9.0/12.0). The realized commitment of funds is captured by bpo:CapitalInvestmentPlan. (The definition/comment formerly read 'Descriptive', contradicting the harmonized 965 anchor; corrected here.)" .
 
 bpo:CapitalProgramReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -374,7 +377,8 @@ bpo:ConstructionSchedule a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:MaintenanceSchedule a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Maintenance Schedule" ;
-    skos:definition "A Directive Information Content Entity that prescribes a timetable for executing the maintenance of an asset." .
+    skos:definition "A Directive Information Content Entity that prescribes the timing of the maintenance of an asset or of production equipment." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes a timetable for executing the maintenance of an asset." .
 
 bpo:MaintenanceStrategy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Maintenance Strategy" ;
@@ -396,7 +400,8 @@ bpo:WorkTaskList a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 
 bpo:ResourcePlan a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Resource Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the resources to be allocated to a body of work in light of analyzed workload needs." .
+    skos:definition "A Directive Information Content Entity that prescribes how personnel, physical resources, and capabilities are to be provisioned and allocated to a body of work." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the resources to be allocated to a body of work in light of analyzed workload needs." .
 
 bpo:MaintenancePerformanceTarget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Maintenance Performance Target" ;
@@ -410,8 +415,9 @@ bpo:AssetExitStrategy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 bpo:DispositionDecision a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:ProductiveAsset ] ;
-    rdfs:label "Asset Disposition Decision" ;
-    skos:definition "A Directive Information Content Entity, about an asset or part, that prescribes the disposition to be applied to it at end-of-life, such as retention, resale, reuse, recycling, or disposal." ;
+    rdfs:label "Disposition Decision" ;
+    skos:definition "A Directive Information Content Entity that prescribes the disposition of an asset, part, or returned product, such as retention, repair, refurbishment, resale, reuse, recycling, return to inventory, or disposal." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity, about an asset or part, that prescribes the disposition to be applied to it at end-of-life, such as retention, resale, reuse, recycling, or disposal." ;
     rdfs:comment "Directive: a decision that selects and authorizes a future disposition. Shared across 10.4 (take-back centers, dismantling, waste disposition)." .
 
 bpo:RegulatoryRequirementsStatement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
@@ -568,7 +574,8 @@ bpo:RegulatoryAuthority a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:RegulatoryAuthorityRole ] ;
     rdfs:label "Regulatory Authority" ;
-    skos:definition "An Organization that bears a regulatory authority role in relation to construction, maintenance, or hazardous-material activities." .
+    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing, administering, or enforcing laws, statutes, permits, or regulatory requirements binding on other organizations, and overseeing their compliance." ;
+    skos:scopeNote "As used in section 10.0 before WP6 B1 (2026-10-31): An Organization that bears a regulatory authority role in relation to construction, maintenance, or hazardous-material activities." .
 
 ####################################################################
 # 5. PROCESS CLASSES

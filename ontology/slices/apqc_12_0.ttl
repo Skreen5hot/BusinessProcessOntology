@@ -192,7 +192,8 @@ bpo:RegulatoryAuthority a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,            # Organization
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:RegulatoryAuthorityRole ] ;
     rdfs:label "Regulatory Authority" ;
-    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing and enforcing statutes, regulatory directions, or legal principles binding on an organization." ;
+    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing, administering, or enforcing laws, statutes, permits, or regulatory requirements binding on other organizations, and overseeing their compliance." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): An Organization that bears a regulatory-authority role in virtue of issuing and enforcing statutes, regulatory directions, or legal principles binding on an organization." ;
     rdfs:comment "Minted for 12.4.4 (Ensure compliance); e.g. the Securities and Exchange Commission." .
 
 bpo:MediaOutlet a owl:Class ;
@@ -241,7 +242,8 @@ bpo:Auditor a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,            # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:AuditorRole ] ;
     rdfs:label "Auditor" ;
-    skos:definition "An Agent that bears an auditor role in virtue of conducting an examination of an organization's records, controls, or compliance." ;
+    skos:definition "An Agent that bears an auditor role in virtue of examining an organization's records, controls, or compliance." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): An Agent that bears an auditor role in virtue of conducting an examination of an organization's records, controls, or compliance." ;
     rdfs:comment "Minted for 12.2.2.2 (Respond to audit inquiries) and 12.3.2 (Report audit findings). Agent because an auditor may be an individual or an audit firm." .
 
 ####################################################################
@@ -391,7 +393,7 @@ bpo:AuditInquiry a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:FinancialData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Financial Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes an organization's financial position and performance." ;
+    skos:definition "A Descriptive Information Content Entity that describes an organization's financial transactions, balances, position, or performance." ;
     rdfs:comment "Input for 12.3.1 (Report financial results)." .
 
 bpo:LegalProblemStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -406,7 +408,8 @@ bpo:LegalWorkProduct a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:Invoice a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Invoice" ;
-    skos:definition "A Descriptive Information Content Entity that describes fees claimed by a service provider for services rendered." ;
+    skos:definition "A Descriptive Information Content Entity that describes a commercial transaction between a seller and a buyer, itemizing the goods or services provided, their quantities, prices, dates, and taxes, and the amount claimed." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes fees claimed by a service provider for services rendered." ;
     rdfs:comment "Input for 12.4.5.5 (Process payment for legal services)." .
 
 bpo:PaymentRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -416,7 +419,7 @@ bpo:PaymentRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RegulatoryRequirement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Regulatory Requirement" ;
-    skos:definition "A Directive Information Content Entity that prescribes a statute, regulatory direction, or legal principle with which an organization must comply." ;
+    skos:definition "A Directive Information Content Entity, issued by a governing authority, that prescribes a law, statute, regulatory direction, guideline, or legal principle with which an organization must comply." ;
     rdfs:comment "Directive (not Descriptive): it prescribes obligations. Input for 12.4.4 (Ensure compliance), 12.4.3 (preventive law programs)." .
 
 ####################################################################
@@ -497,7 +500,8 @@ bpo:CorporateGovernancePolicy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   
 
 bpo:CompliancePolicy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Compliance Policy" ;
-    skos:definition "A Directive Information Content Entity that prescribes the framework, rules, and procedures by which an organization maintains adherence to applicable statutes and regulations." ;
+    skos:definition "A Directive Information Content Entity that prescribes an organization's rules, approach, and procedures for adhering to applicable statutes, regulations, guidelines, and ethical standards." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the framework, rules, and procedures by which an organization maintains adherence to applicable statutes and regulations." ;
     rdfs:comment "Output of 12.4.4 / 12.4.4.1 (compliance framework and programs)." .
 
 bpo:ComplianceProgram a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
@@ -537,7 +541,8 @@ bpo:DisputeResolution a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Direct
 
 bpo:Budget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Budget" ;
-    skos:definition "A Directive Information Content Entity that prescribes, using figures, an organization's expected future financial results for an activity." ;
+    skos:definition "A Directive Information Content Entity that prescribes the planned allocation of an organization's funds, and the financial results expected from them, for an activity, project, program, or period." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes, using figures, an organization's expected future financial results for an activity." ;
     rdfs:comment "Input for 12.4.5.3 (Receive strategy/budget). Directive: a financial plan that constrains spending." .
 
 bpo:ExecutiveAppointment a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
