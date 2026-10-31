@@ -71,12 +71,29 @@ export function resolve(collected, register) {
   }
 
   // FR-12: scheme_violation — uses collected.classInfo if present
+  // BPO local modification (WP6 Phase B, 2026-10-31): "is a capability" follows
+  // rdfs:subClassOf through the loaded classes, not only a directly asserted
+  // Organization Capability parent. Read asserted-only, removing a redundant
+  // co-parent made 9 capabilities-with-process-IRIs vanish from the count while
+  // they were still capabilities. CCO declares no subclass of 568, so the
+  // closure over the project's own classes is enough.
+  const capMemo = new Map();
+  const reachesOrgCapability = (iri, seen = new Set()) => {
+    if (isOrgCapability(iri)) return true;
+    if (capMemo.has(iri)) return capMemo.get(iri);
+    if (seen.has(iri)) return false;
+    seen.add(iri);
+    const info = collected.classInfo ? collected.classInfo.get(iri) : undefined;
+    const result = !!info && info.subClassOf.some((p) => reachesOrgCapability(p, seen));
+    capMemo.set(iri, result);
+    return result;
+  };
   if (collected.classInfo) {
     for (const [iri, info] of collected.classInfo) {
       // FR-12: skip non-owl:Class subjects (NamedIndividual/Concept catalog nodes are exempt)
       if (!declared.has(iri) || !iri.startsWith(EX_NS) || info.pcfID == null || !info.isClass) continue;
       const localName = iri.slice(EX_NS.length);
-      const isCapability = info.subClassOf.some(isOrgCapability);
+      const isCapability = reachesOrgCapability(iri);
       if (/^P\d+$/.test(localName) && isCapability) {
         issues.push({ type: 'scheme_violation', iri, module: info.module, line: info.line, rule: 'capability-as-process' });
       } else if (!isCapability && localName !== `P${info.pcfID}`) {
