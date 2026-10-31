@@ -130,7 +130,7 @@ bpo:BenchmarkingCapability	capability	13			Benchmarking Capability	cco:ont000005
 bpo:BusinessModelGovernanceCapability	capability	1			Business Model Governance Capability	cco:ont00000568	enables:bpo:P20955	An Organization Capability that inheres in an Organization in virtue of its capacity to maintain and govern its business models through intentional acts of revi
 bpo:BusinessProcessManagementCapability	capability	13			Business Process Management Capability	cco:ont00000568	enables:bpo:P16379,bpo:P16384,bpo:P16387,bpo:P16392,bpo:P21453	An Organization Capability that inheres in an Organization in virtue of its capacity to govern, define, administer, and improve its business processes, realized
 bpo:BusinessResiliencyCapability	capability	11	11.4	11216	Business Resiliency Capability	cco:ont00000568	enables:bpo:P11221,bpo:P11222,bpo:P11223,bpo:P11224,bpo:P16471	An Organization Capability that is realized in acts of developing resilience strategy, planning, testing, and maintaining continuous business operations, and sh
-bpo:Capability	capability	cap			FNSR Capability	cco:ont00001379		A competence borne by an agent in virtue of which it can successfully perform some kind of process. Realized in process executions; a feasibility filter for dis
+bpo:Capability	capability	cap			FNSR Capability	cco:ont00001379		An Agent Capability in virtue of which its bearer can successfully perform some kind of process. Realized in process executions; a feasibility filter for dispat
 bpo:ChangeManagementCapability	capability	13			Change Management Capability	cco:ont00000568	enables:bpo:P11135,bpo:P11136,bpo:P11137,bpo:P21457	An Organization Capability that inheres in an Organization in virtue of its capacity to plan, design, implement, and sustain organizational change.
 bpo:ChannelManagementCapability	capability	3	3.2.4	20006	Channel Management Capability	cco:ont00000568	enables:bpo:P16500,bpo:P16501,bpo:P16573,bpo:P16574,bpo:P16575	An Organization Capability that is realized in Acts of defining, analyzing, and managing marketing and distribution channels.
 bpo:CodeImplementationCapability	capability	cap			Code implementation capability	bpo:Capability	enables:bpo:ImplementPhase	An Agent Capability that enables its bearer to implement a planned module as a working code change set.
@@ -233,7 +233,7 @@ bpo:P20137	capability	9	9.7.5.5	20137	Execute hedging transactions	cco:ont000005
 bpo:P20866	capability	8	8.7	20866	Create and manage support services/solutions	cco:ont00000568		An Organization Capability that an organization realizes in the acts by which it establishes and manages services for supporting users of IT services and soluti
 bpo:P20914	capability	8	8.7.7	20914	Manage infrastructure resource administration	cco:ont00000568		An Organization Capability that an organization realizes in the acts by which it administers IT infrastructure resources, inventory, assets, and capacity.
 bpo:PartnerManagementCapability	capability	3			Partner and Alliance Management Capability	cco:ont00000568	enables:bpo:P10130,bpo:P10187	An Organization Capability that is realized in Acts of developing and managing sales partner and alliance relationships.
-bpo:PlanAuthoringCapability	capability	cap			Plan authoring capability	bpo:Capability	enables:bpo:AuthorImplementationPlan,bpo:AuthorRoadmap	Competence to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance criteria.
+bpo:PlanAuthoringCapability	capability	cap			Plan authoring capability	bpo:Capability	enables:bpo:AuthorImplementationPlan,bpo:AuthorRoadmap	An Agent Capability that enables its bearer to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance crite
 bpo:PortfolioManagementCapability	capability	13			Portfolio Management Capability	cco:ont00000568	enables:bpo:P16402,bpo:P16403,bpo:P16404	An Organization Capability that inheres in an Organization in virtue of its capacity to establish strategy for, govern, and monitor its business portfolio of in
 bpo:PortfolioProgramProjectManagementCapability	capability	13			Portfolio, Program, and Project Management Capability	cco:ont00000568	enables:bpo:P11119,bpo:P16402,bpo:P16403,bpo:P16404,bpo:P16406,bpo:P16407,bpo:P16408,bpo:P16409,bpo:P16411,bpo:P16413,bpo:P16414,bpo:P16417,bpo:P16418	An Organization Capability that inheres in an Organization in virtue of its capacity to manage its portfolio of investments and brands, its programs of related 
 bpo:PricingCapability	capability	3			Pricing Capability	cco:ont00000568	enables:bpo:P10163,bpo:P10164,bpo:P10165,bpo:P10166,bpo:P11495,bpo:P11496,bpo:P11497,bpo:P17684,bpo:P18948,bpo:P20009	An Organization Capability that is realized in Acts of formulating, executing, and refining pricing.
@@ -3104,7 +3104,7 @@ bpo:WorkforceStrategyModel	ice	7			Workforce Strategy Model	cco:ont00000965		A D
 bpo:WorkforceUtilizationReport	ice	6			Workforce Utilization Report	cco:ont00000853		A Descriptive Information Content Entity that describes the utilization, performance, and quality of the deployed customer service work force.
 bpo:WorkplaceLayoutPlan	ice	5			Workplace Layout Plan	cco:ont00000965		A Directive Information Content Entity that prescribes the physical layout and infrastructure of a workplace to support service delivery.
 bpo:ApproveImplementationPlan	other	delivery			Approve implementation plan	cco:ont00000228		A Planned Act in which an authority-bearing agent authorizes passage of an implementation plan beyond its review gate.
-bpo:ApproveImplementationPlanPermission	other	cap			Approve Implementation Plan Permission	cco:ont00000751		Permission to authorize passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam.
+bpo:ApproveImplementationPlanPermission	other	cap			Approve Implementation Plan Permission	cco:ont00000751		An Action Permission that authorizes passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam.
 bpo:AssetPart	other	10			Asset Part	obo:BFO_0000040		A Material Entity that results from dismantling an end-of-life asset and that may follow a disposition such as resale, reuse, recycling, or disposal.
 bpo:BaselineDemandForecast	other	4			Baseline Demand Forecast	bpo:DemandForecast		A Demand Forecast that describes the bedrock anticipated level of market demand, estimated from historical data and market analysis.
 bpo:BusinessProcess	other	13			Business Process	obo:BFO_0000015		A Process consisting of a structured set of related activities and tasks carried out by the participants of one or more Organizations to achieve a business goal
@@ -4949,6 +4949,7 @@ bpo:bearsPermission	property	cap			bears permission
 bpo:designatesProcessType	property	10			designates process type			
 bpo:enablesProcess	property	cap			enables process			
 bpo:hierarchyID	property	10			APQC Hierarchy ID			
+bpo:inGrouping	property	cap			in grouping			An annotation property that relates a class to a BPO grouping class whose vocabulary it belongs to, without asserting that it is a subclass of the grouping.
 bpo:pcfID	property	10			APQC PCF ID			
 bpo:permissionApplicableToRole	property	cap			permission applicable to role			An annotation property that relates a Role class to an Action Permission class (cco:ont00000751) as a type-level association: permissions of that type apply to 
 bpo:requiresCapability	property	cap			requires capability			
@@ -4957,8 +4958,8 @@ bpo:requiresRole	property	cap			requires role
 bpo:routable	property	delivery			routable			
 bpo:AccountantRole	role	9			Accountant Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with recording, classifying, and reporting an Organization's financial transactions.
 bpo:AdvisorRole	role	12			Advisor Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of providing advice or counsel to support a focal organization's relationships or decisions.
-bpo:ApproverRole	role	cap			Approver role	bpo:Role;cco:ont00000187		The authority role occupied by the party who may approve passage through a review/approval gate.
-bpo:ArchitectRole	role	cap			Architect role	bpo:Role;cco:ont00000984		The occupation role of an agent authoring and reviewing a build's structural decisions.
+bpo:ApproverRole	role	cap			Approver role	cco:ont00000187		An Authority Role that is borne by an Agent in virtue of being empowered to approve passage through a review or approval gate.
+bpo:ArchitectRole	role	cap			Architect role	cco:ont00000984		An Occupation Role that is borne by an Agent in virtue of authoring and reviewing a build's structural decisions.
 bpo:AssetManagerRole	role	10			Asset Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with overseeing the construction, maintenance, and end-of-life of an organization's productive assets
 bpo:AuditorRole	role	12			Auditor Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of independently examining and attesting to an organization's records, controls, or compliance.
 bpo:BPMGovernanceLeaderRole	role	13			BPM Governance Leader Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being designated to set standards and priorities for business-process-management efforts within an Organization.
@@ -4981,11 +4982,11 @@ bpo:DataAnalystRole	role	13			Data Analyst Role	obo:BFO_0000023		A Role that is 
 bpo:DebtorRole	role	9			Debtor Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of owing an outstanding amount to an Organization under a credit or payment obligation.
 bpo:DeliveryPartnerRole	role	5			Delivery Partner Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of collaborating with an organization to supplement its service-delivery skills and capabilities.
 bpo:DesignStaffRole	role	2			Design Staff Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with creating product/service design specifications and prototypes within an Organization.
-bpo:DeveloperRole	role	cap			Developer role	bpo:Role;cco:ont00000984		The occupation role of an agent implementing planned modules as code change sets.
+bpo:DeveloperRole	role	cap			Developer role	cco:ont00000984		An Occupation Role that is borne by an Agent in virtue of implementing planned modules as code change sets.
 bpo:EHSManagerRole	role	13			EHS Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being responsible for developing, monitoring, and managing an Organization's environmental, health, and safety pro
 bpo:EmployeeRole	role	7			Employee Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being engaged or employed by an organization to perform assigned activities in exchange for compensation.
 bpo:EnterpriseArchitectRole	role	8			Enterprise Architect Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being responsible for defining, governing, and maintaining an organization's enterprise IT architecture.
-bpo:EvaluatorRole	role	cap			Evaluator role	bpo:Role;cco:ont00000984		The occupation role of an agent evaluating artifacts against their acceptance criteria.
+bpo:EvaluatorRole	role	cap			Evaluator role	cco:ont00000984		An Occupation Role that is borne by an Agent in virtue of evaluating artifacts against their acceptance criteria.
 bpo:ExecutiveManagementRole	role	11			Executive Management Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of exercising executive authority and accountability for an organization, including oversight of enterprise risk and 
 bpo:ExecutiveRole	role	12			Executive Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of holding senior managerial authority within an Organization.
 bpo:FacilityManagerRole	role	10			Facility Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with planning, providing, and operating an organization's facilities and workspaces.
@@ -5009,12 +5010,12 @@ bpo:LobbyistRole	role	12			Lobbyist Role	obo:BFO_0000023		A Role that is borne b
 bpo:LogisticsServiceProviderRole	role	4			Logistics Service Provider Role	obo:BFO_0000023		A Role that is borne by an Organization in virtue of performing outsourced logistics, storage, or shipping activities for another organization.
 bpo:MaintenanceTechnicianRole	role	10			Maintenance Technician Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with performing preventative, routine, corrective, and unplanned maintenance on assets.
 bpo:ManagerRole	role	4			Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of exercising managerial authority within an organization.
-bpo:MarketAnalystRole	role	cap			Market analyst role	bpo:Role;cco:ont00000984		The occupation role of an agent acting as a market/competitive analyst within a strategy effort.
+bpo:MarketAnalystRole	role	cap			Market analyst role	cco:ont00000984		An Occupation Role that is borne by an Agent in virtue of acting as a market or competitive analyst within a strategy effort.
 bpo:MarketingProfessionalRole	role	3			Marketing Professional Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with marketing an organization's offerings.
 bpo:MediaOutletRole	role	12			Media Outlet Role	obo:BFO_0000023		A Role that is borne by an Organization in virtue of producing and distributing news or content to the public.
 bpo:OutsideCounselRole	role	12			Outside Counsel Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being an external expert engaged to provide legal or ethical assistance to a focal organization.
 bpo:PartnerRole	role	1			Partner Role	obo:BFO_0000023		A Role that is borne by an Organization in virtue of entering a partnership or alliance with a focal organization to deliver products or services.
-bpo:PlannerRole	role	cap			Planner role	bpo:Role;cco:ont00000984		The occupation role of an agent producing planning documents in a delivery loop.
+bpo:PlannerRole	role	cap			Planner role	cco:ont00000984		An Occupation Role that is borne by an Agent in virtue of producing planning documents in a delivery loop.
 bpo:PortfolioManagerRole	role	13			Portfolio Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being responsible for governing and monitoring an Organization's business portfolio of investments, holdings, prod
 bpo:ProcessOwnerRole	role	13			Process Owner Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being assigned accountability for identifying, analyzing, and improving a given business process within an Organiz
 bpo:ProductManagerRole	role	6			Product Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with managing and improving an organization's products or services.
@@ -5029,7 +5030,7 @@ bpo:RegulatorRole	role	9			Regulator Role	obo:BFO_0000023		A Role that is borne 
 bpo:RegulatoryAuthorityRole	role	10			Regulatory Authority Role	obo:BFO_0000023		A Role that is borne by an Organization in virtue of issuing, administering, or enforcing laws, statutes, permits, codes, or regulatory requirements binding on 
 bpo:ResearchAndDevelopmentRole	role	2			Research and Development Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with discovering, developing, or assessing new technologies and product/service concepts on behalf of
 bpo:RiskManagerRole	role	11			Risk Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with identifying, assessing, mitigating, monitoring, and reporting risk on behalf of an organization 
-bpo:Role	role	cap			FNSR Role	obo:BFO_0000023		A position an agent occupies while performing work. Frames the work and may bear permissions; not a competence and not an action.
+bpo:Role	role	cap			FNSR Role	obo:BFO_0000023		A Role that an Agent occupies while performing work. It frames the work and may have permissions applicable to it; it is neither a competence nor an action.
 bpo:SalesAgentRole	role	6			Sales Agent Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with pursuing sales leads and selling an organization's offerings.
 bpo:SalesPartnerRole	role	3			Sales Partner/Alliance Role	obo:BFO_0000023		A Role that is borne by an Organization or Agent in virtue of partnering with a focal organization to market, sell, or distribute its offerings.
 bpo:SalesProfessionalRole	role	3			Sales Professional Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with selling an organization's offerings.
@@ -5038,7 +5039,7 @@ bpo:SeniorManagerRole	role	1			Senior Manager Role	obo:BFO_0000023		A Role that 
 bpo:ServiceDeliveryPersonnelRole	role	5			Service Delivery Personnel Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being assigned to perform the work of delivering a service to a customer.
 bpo:ShareholderRole	role	12			Shareholder Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of holding an equity interest in a focal organization.
 bpo:StakeholderRole	role	13			Stakeholder Role	obo:BFO_0000023		A Role that is borne by an Agent or Organization in virtue of having an interest in, or being affected by, the operations, strategy, processes, programs, or pol
-bpo:StrategistRole	role	cap			Strategist role	bpo:Role;cco:ont00000984		The occupation role of an agent acting as a strategy author/owner.
+bpo:StrategistRole	role	cap			Strategist role	cco:ont00000984		An Occupation Role that is borne by an Agent in virtue of authoring and owning a strategy.
 bpo:StrategyPersonnelRole	role	1			Strategy Personnel Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with formulating, evaluating, or coordinating an Organization's strategy.
 bpo:SubjectMatterExpertRole	role	11			Subject Matter Expert Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of possessing specialized expertise solicited to advise on and validate remediation plans.
 bpo:SubsidiaryRole	role	9			Subsidiary Role	obo:BFO_0000023		A Role that is borne by an Organization in virtue of being a separate legal entity controlled by a parent Organization.

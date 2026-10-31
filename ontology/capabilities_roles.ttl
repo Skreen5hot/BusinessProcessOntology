@@ -43,14 +43,19 @@
 bpo:Capability a owl:Class ;
     rdfs:subClassOf cco:ont00001379 ;          # Agent Capability
     rdfs:label "FNSR Capability" ;
-    skos:definition "A competence borne by an agent in virtue of which it can successfully perform some kind of process. Realized in process executions; a feasibility filter for dispatch." .
+    skos:definition "An Agent Capability in virtue of which its bearer can successfully perform some kind of process. Realized in process executions; a feasibility filter for dispatch." .
 
 bpo:Role a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;          # Role
     rdfs:label "FNSR Role" ;
-    skos:definition "A position an agent occupies while performing work. Frames the work and may bear permissions; not a competence and not an action." .
+    skos:definition "A Role that an Agent occupies while performing work. It frames the work and may have permissions applicable to it; it is neither a competence nor an action." .
 
 # ---- module-local properties (could migrate to apqc-ext.ttl) ----
+
+bpo:inGrouping a owl:AnnotationProperty ;
+    rdfs:label "in grouping" ;
+    skos:definition "An annotation property that relates a class to a BPO grouping class whose vocabulary it belongs to, without asserting that it is a subclass of the grouping." ;
+    rdfs:comment "Replaces the delivery roles' subclass axioms to the bpo:Role marker (WP6 B13 K07, BPO architect 2026-10-31): a marker used as a genus wrote a selection vocabulary as a primitive class. SHACL C2 targets members through this property as well as through subclassing." .
 
 bpo:enablesProcess a owl:AnnotationProperty ;
     rdfs:label "enables process" ;
@@ -107,7 +112,7 @@ bpo:requiresPermission a owl:AnnotationProperty ;
 bpo:PlanAuthoringCapability a owl:Class ;
     rdfs:subClassOf bpo:Capability ;
     rdfs:label "Plan authoring capability" ;
-    skos:definition "Competence to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance criteria." ;
+    skos:definition "An Agent Capability that enables its bearer to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance criteria." ;
     bpo:enablesProcess bpo:AuthorRoadmap , bpo:AuthorImplementationPlan .
 
 # ---- Process-Contract participant capabilities (FNSR factory; see delivery_processes.ttl) ----
@@ -135,39 +140,46 @@ bpo:EvaluationCapability a owl:Class ;
 # =====================================================================
 
 bpo:MarketAnalystRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Market analyst role" ;
-    skos:definition "The occupation role of an agent acting as a market/competitive analyst within a strategy effort." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of acting as a market or competitive analyst within a strategy effort." .
 
 bpo:StrategistRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;
+    rdfs:subClassOf cco:ont00000984 ;
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Strategist role" ;
-    skos:definition "The occupation role of an agent acting as a strategy author/owner." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of authoring and owning a strategy." .
 
 bpo:PlannerRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;
+    rdfs:subClassOf cco:ont00000984 ;
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Planner role" ;
-    skos:definition "The occupation role of an agent producing planning documents in a delivery loop." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of producing planning documents in a delivery loop." .
 
 bpo:DeveloperRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Developer role" ;
-    skos:definition "The occupation role of an agent implementing planned modules as code change sets." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of implementing planned modules as code change sets." .
 
 bpo:ArchitectRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Architect role" ;
-    skos:definition "The occupation role of an agent authoring and reviewing a build's structural decisions." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of authoring and reviewing a build's structural decisions." .
 
 bpo:EvaluatorRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Evaluator role" ;
-    skos:definition "The occupation role of an agent evaluating artifacts against their acceptance criteria." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of evaluating artifacts against their acceptance criteria." .
 
 bpo:ApproverRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000187 ;   # Authority Role
+    rdfs:subClassOf cco:ont00000187 ;   # Authority Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Approver role" ;
-    skos:definition "The authority role occupied by the party who may approve passage through a review/approval gate." ;
+    skos:definition "An Authority Role that is borne by an Agent in virtue of being empowered to approve passage through a review or approval gate." ;
     bpo:permissionApplicableToRole bpo:ApproveImplementationPlanPermission .
 
 # ---- deontic stub (normally authored by the RDM/IEE layer; shown for the seam) ----
@@ -175,4 +187,4 @@ bpo:ApproverRole a owl:Class ;
 bpo:ApproveImplementationPlanPermission a owl:Class ;
     rdfs:subClassOf cco:ont00000751 ;          # Action Permission
     rdfs:label "Approve Implementation Plan Permission" ;
-    skos:definition "Permission to authorize passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam." .
+    skos:definition "An Action Permission that authorizes passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam." .

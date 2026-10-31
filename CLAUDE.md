@@ -119,7 +119,9 @@ decisions were settled: (i) leave slice caps at 568; (ii) author `bpo:enablesPro
 capability layer is a **merge-only shared overlay** (no slice imports it).
 
 **Artifacts (in `ontology/`):**
-- `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers; `bpo:enablesProcess`/
+- `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers (the 7 delivery roles
+  are members of `bpo:Role` by the annotation `bpo:inGrouping`, not subclasses, since WP6 B13 K07;
+  SHACL C2 targets both); `bpo:enablesProcess`/
   `bpo:permissionApplicableToRole` (annotation; was `bearsPermission`, deprecated in WP6 B7 —
   see `docs/migrations.tsv`) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
   (annotation properties since WP6 B6, 2026-10-31: asserted class-to-class, which as object

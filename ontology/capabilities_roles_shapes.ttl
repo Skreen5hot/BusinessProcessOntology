@@ -28,11 +28,14 @@ bpo:CapabilityWellFormedShape a sh:NodeShape ;
           NOT EXISTS { $this <http://www.w3.org/2000/01/rdf-schema#label> ?l } ||
           NOT EXISTS { $this <http://www.w3.org/2004/02/skos/core#definition> ?d } ) }""" ] .
 
-# C2: every bpo:Role subclass reaches bfo:Role, with label + definition.
+# C2: every bpo:Role subclass or member (bpo:inGrouping, WP6 B13 K07) reaches
+#     bfo:Role, with label + definition.
 bpo:RoleWellFormedShape a sh:NodeShape ;
     sh:target [ a sh:SPARQLTarget ;
         sh:select """SELECT ?this WHERE {
-          ?this <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://fandaws.com/ontology/bpo#Role> }""" ] ;
+          { ?this <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://fandaws.com/ontology/bpo#Role> }
+          UNION
+          { ?this <https://fandaws.com/ontology/bpo#inGrouping> <https://fandaws.com/ontology/bpo#Role> } }""" ] ;
     sh:sparql
       [ a sh:SPARQLConstraint ;
         sh:message "Role must reach bfo:Role (BFO_0000023) via subClassOf+." ;
