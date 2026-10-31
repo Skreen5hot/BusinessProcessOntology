@@ -174,5 +174,5 @@ bpo:ApproverRole a owl:Class ;
 
 bpo:ApproveImplementationPlanPermission a owl:Class ;
     rdfs:subClassOf cco:ont00000751 ;          # Action Permission
-    rdfs:label "Approve implementation plan (permission)" ;
+    rdfs:label "Approve Implementation Plan Permission" ;
     skos:definition "Permission to authorize passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam." .

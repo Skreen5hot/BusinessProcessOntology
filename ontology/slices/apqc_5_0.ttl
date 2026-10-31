@@ -88,7 +88,8 @@ bpo:ActOfFormulation a owl:Class ;
 
 bpo:ActOfIdentification a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Identification (discernment sense)" ;
+    rdfs:label "Act of Identification" ;
+    skos:scopeNote "Identification in the sense of discerning and enumerating entities of a given kind (risks, needs, opportunities), not of establishing which particular individual something is. The sense was written into the label as '(discernment sense)' until WP6 B10, 2026-10-31." ;
     skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
     rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
 
@@ -391,7 +392,8 @@ bpo:TrainingMaterial a owl:Class ;
 
 bpo:ServiceDeliverySolution a owl:Class ;
     rdfs:subClassOf obo:BFO_0000040 ;   # material entity
-    rdfs:label "Service Delivery Solution (deployed artifact)" ;
+    rdfs:label "Service Delivery Solution" ;
+    skos:scopeNote "The deployed artifact itself, not its design or specification. Written into the label as '(deployed artifact)' until WP6 B10, 2026-10-31." ;
     skos:definition "A Material Entity (a built or purchased artifact) that is deployed to a customer to fulfil a service-delivery need." ;
     rdfs:comment "Shared section-5.0 output (5.3.2.6, 5.3.2.7). Modeled as a material entity per the operations material-I/O allowance; where a particular solution is purely informational, group agents may instead use bpo:SolutionSpecification. bpo:SolutionSpecification (Directive ICE) prescribes it; this class is the delivered artifact." .
 

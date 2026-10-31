@@ -74,7 +74,8 @@ bpo:ActOfFormulation a owl:Class ;
 
 bpo:ActOfIdentification a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Identification (discernment sense)" ;
+    rdfs:label "Act of Identification" ;
+    skos:scopeNote "Identification in the sense of discerning and enumerating entities of a given kind (risks, needs, opportunities), not of establishing which particular individual something is. The sense was written into the label as '(discernment sense)' until WP6 B10, 2026-10-31." ;
     skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
     rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
 

@@ -72,7 +72,8 @@ bpo:ActOfFormulation a owl:Class ;
 
 bpo:ActOfIdentification a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Identification (discernment sense)" ;
+    rdfs:label "Act of Identification" ;
+    skos:scopeNote "Identification in the sense of discerning and enumerating entities of a given kind (risks, needs, opportunities), not of establishing which particular individual something is. The sense was written into the label as '(discernment sense)' until WP6 B10, 2026-10-31." ;
     skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
     rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
 
@@ -953,7 +954,7 @@ bpo:P10728 a owl:Class ;
     bpo:pcfID "10728" ;
     bpo:hierarchyID "9.1" ;
     bpo:apqcSourceText "Determining different stages of the planning process and accounting. Classify, determine, analyze, interpret, and communicate information to make up-to-date business decisions for better management and control functions." ;
-    rdfs:label "Perform planning and management accounting (capability)" ;
+    rdfs:label "Planning and Management Accounting Capability" ;
     skos:definition "An Organization Capability that inheres in a finance function in virtue of its capacity to plan, budget, account for, and evaluate financial performance, realized in acts of management accounting." ;
     rdfs:comment "R5 = capability (R6). The APQC process group denotes a standing finance function with no identifiable single beginning and end, so it is an Organization Capability (cco:ont00000568), not a process. Its four child Processes are the acts in which it is realized." ;
     skos:example "A corporation's standing management-accounting function exercised continuously across fiscal periods." ;
@@ -1278,7 +1279,7 @@ bpo:P10788 a owl:Class ;
     bpo:pcfID "10788" ;
     bpo:hierarchyID "9.1.4.7" ;
     bpo:apqcSourceText "Conducting activities to improve cost distribution regularly. Follow or adopt different ways of reducing costs." ;
-    rdfs:label "Manage continuous cost improvement (capability)" ;
+    rdfs:label "Continuous Cost Improvement Capability" ;
     skos:definition "An Organization Capability that inheres in an organization in virtue of its capacity to regularly improve cost distribution, realized in recurring acts of cost reduction." ;
     rdfs:comment "R5 = capability (R6). 'Continuous/regularly' denotes a standing function with no identifiable single beginning and end, so it is an Organization Capability (cco:ont00000568), not a bounded process. It is realized in cost-improvement acts and is realized-in-attached to its parent 10741 (the capability is realized in the process, per BFO_0000054 domain=realizable/range=process)." ;
     skos:example "A standing kaizen-style cost-improvement program run every quarter." ;
