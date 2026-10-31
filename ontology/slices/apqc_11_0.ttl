@@ -1017,7 +1017,7 @@ bpo:RegulatoryComplianceManagementCapability a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19595 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19596 ] ;
     rdfs:label "Regulatory Compliance Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an organization in virtue of its capacity to obey the laws, guidelines, strategies, and stipulations applicable to its business, realized in acts of developing procedures, identifying requirements, monitoring the regulatory environment, assessing and testing its compliance position, implementing controls, and reporting on compliance." ;
+    skos:definition "A Compliance Management Capability that inheres in an organization in virtue of its capacity to obey the laws, guidelines, strategies, and stipulations applicable to its business, realized in acts of developing procedures, identifying requirements, monitoring the regulatory environment, assessing and testing its compliance position, implementing controls, and reporting on compliance." ;
     rdfs:comment "Reality-layer correlate of APQC 11.2.2 (PCF 16463), a standing 'Manage' function with no natural end; modeled as a capability (R5/R6). Its APQC children that are bounded occurrents (16464, 16465, 16466, 16467, 16468, 16469, 19595, 19596) are the acts in which it is realized -- not process parts, since a capability is not a process. bpo:RegulatoryComplianceManagementCapability is a specialization of bpo:ComplianceManagementCapability." ;
     rdfs:subClassOf bpo:ComplianceManagementCapability .
 

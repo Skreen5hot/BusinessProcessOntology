@@ -357,13 +357,13 @@ bpo:IntellectualPropertyManagementCapability a owl:Class ;
 bpo:LenderRelationsManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:StakeholderRelationshipManagementCapability ;   # => cco:ont00000568 Organization Capability
     rdfs:label "Lender Relations Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
+    skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
     rdfs:comment "Minted for 12.1.1 (P11035), re-judged under R5 as a standing function -> Organization Capability, reconciled with the parallel 'manage relations' rows 12.2.1-3 which are likewise capabilities (Gate-F cross-row consistency). Realized in the bounded lender-relationship-cultivation episodes via obo:BFO_0000054." .
 
 bpo:AnalystRelationsManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:StakeholderRelationshipManagementCapability ;   # => cco:ont00000568 Organization Capability
     rdfs:label "Analyst Relations Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
+    skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
     rdfs:comment "Minted for 12.1.2 (P11036), re-judged under R5 as a standing function -> Organization Capability ('creating and maintaining LONG-TERM relations' signals the no-natural-end / standing-capacity branch), reconciled with 12.2.1-3 (Gate-F cross-row consistency). Realized in the bounded analyst-relationship-cultivation episodes via obo:BFO_0000054." .
 
 ####################################################################
@@ -917,7 +917,7 @@ bpo:P11012 a owl:Class ;
     bpo:hierarchyID "12.3" ;
     bpo:apqcSourceText "Maintaining relations with representatives of the stockholders. Establish corporate management-related policies and to make decisions on major company issues. Implement practices designed to engender communication, trust, and cooperation." ;
     rdfs:label "Manage relations with board of directors" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to sustain communicative and reporting relations with its board of directors and the stockholders the board represents." ;
+    skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to sustain communicative and reporting relations with its board of directors and the stockholders the board represents." ;
     rdfs:comment "R5 = capability, not a process: 'manage/maintain relations' denotes a standing function with no natural beginning or end, so it is modeled as an Organization Capability (cco:ont00000568) realized in its underlying acts (R6), not as a bounded occurrent. Subsumed under the shared StakeholderRelationshipManagementCapability. The realized-in restrictions link it to the bounded acts that exercise it." ;
     skos:example "A corporate secretariat's ongoing capacity to deliver financial and audit reporting to the board and shareholders." ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
@@ -965,7 +965,7 @@ bpo:P11013 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11013. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing legal practices to abide by the law, as well as ethical practices." ;
     rdfs:label "Manage legal and ethical issues" ;
-    skos:definition "An Organization Capability that an Organization realizes in the acts by which it manages its legal and ethical practices so as to abide by the law." ;
+    skos:definition "A Legal and Compliance Capability that an Organization realizes in the acts by which it manages its legal and ethical practices so as to abide by the law." ;
     rdfs:comment "R5/R6: 'Manage legal and ethical issues' is a standing function with no natural end, so it is an Organization Capability (cco:ont00000568), not a process. Realized in the modeled child acts. Narrower, pcf-bearing refinement of the shared bpo:LegalAndComplianceCapability. NOTE: 12.4.4 (P11047 Ensure compliance) is itself re-judged as a sub-capability under R5 (Gate-F), and a capability is realized only in processes, so this umbrella capability is realized in P11047's bounded acts bpo:P11053 / bpo:P11054 rather than in the P11047 sub-capability." ;
     rdfs:subClassOf cco:ont00000568 , bpo:LegalAndComplianceCapability ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11044 ] ,
@@ -994,7 +994,7 @@ bpo:P11045 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11045. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the system of rules, practices, and processes through which a company is directed and controlled. Balance stakeholder interests including shareholders, management, customers, suppliers, financiers, government, and the community. Outline a strategy for achieving organizational goals, from action plans and internal controls to performance measurement and corporate disclosure." ;
     rdfs:label "Manage corporate governance policies" ;
-    skos:definition "An Organization Capability that an Organization realizes in administering the system of rules, practices, and processes through which it is directed and controlled while balancing stakeholder interests." ;
+    skos:definition "A Legal and Compliance Capability that an Organization realizes in administering the system of rules, practices, and processes through which it is directed and controlled while balancing stakeholder interests." ;
     rdfs:comment "R5/R6: administering the standing governance 'system' has no natural end, so it is an Organization Capability (cco:ont00000568). The corporate governance policy it maintains is the shared bpo:CorporateGovernancePolicy (a Directive ICE) produced by the underlying formulation acts." ;
     rdfs:subClassOf cco:ont00000568 , bpo:LegalAndComplianceCapability .
 
@@ -1016,7 +1016,7 @@ bpo:P11047 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11047. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring the organization's compliance position. Validate compliance with different statutes, regulatory directions, and legal principles (using Establish compliance framework and policies [17468]). Coordinate with compliance and risk management personnel." ;
     rdfs:label "Ensure compliance" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to ensure and oversee its compliance position by designing compliance programs and validating adherence to statutes, regulatory directions, and legal principles." ;
+    skos:definition "A Legal and Compliance Capability that inheres in an Organization in virtue of its capacity to ensure and oversee its compliance position by designing compliance programs and validating adherence to statutes, regulatory directions, and legal principles." ;
     rdfs:comment "RE-ANCHORED (Gate-F, R5 / genus-vs-parts tension): previously a single bounded Act of Appraisal. (a) 'Ensuring the organization's compliance position' / 'coordinate with personnel' reads as a standing oversight function with no natural end -- like its modeled-as-Capability siblings P11045/P11048/P11049. (b) It was given cco:has process part to a FORMULATION act (P11053 design a compliance program) and an EXECUTION act (P11054), neither of which is an occurrent part of judging compliance -- an appraisal does not have 'design a program' as a part. Re-modeled as an Organization Capability (cco:ont00000568) specializing bpo:LegalAndComplianceCapability, realized (obo:BFO_0000054) in its bounded child acts P11053 and P11054, which are thereby re-parented as realizations of the capability rather than process parts of an appraisal. The bounded validation judgement against bpo:RegulatoryRequirement, performed with bpo:CompliancePersonnel, is itself one of the acts that realize this capability." ;
     skos:example "A standing compliance office that designs anti-trust programs and continually validates the firm's standing against SEC and consumer-protection statutes." ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
@@ -1055,7 +1055,7 @@ bpo:P11048 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11048. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing professionals, sought externally for assistance over legal and ethical concerns. Administer and oversee assistance from subject matter experts and professionals for sourcing expert opinion and counseling over legal and ethical matters." ;
     rdfs:label "Manage outside counsel" ;
-    skos:definition "An Organization Capability that an Organization realizes in the acts by which it engages, oversees, pays, and monitors externally sourced professionals for legal and ethical assistance." ;
+    skos:definition "A Legal and Compliance Capability that an Organization realizes in the acts by which it engages, oversees, pays, and monitors externally sourced professionals for legal and ethical assistance." ;
     rdfs:comment "R5/R6: a standing 'administer and oversee' function with no natural end, so an Organization Capability (cco:ont00000568). Realized in its six bounded child acts (12.4.5.1-12.4.5.6)." ;
     rdfs:subClassOf cco:ont00000568 , bpo:LegalAndComplianceCapability ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11056 ] ,
@@ -1159,7 +1159,7 @@ bpo:P11049 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11049. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Safeguarding the intellectual property of the organization. This process requires the organization to protect a wide variety of intellectual property created by it. It involves creating and managing non-disclosure agreements (NDAs), following up on current developments in the areas where the organization holds patents, tracking the use of the organization's copyrighted material, creating and upholding licensing terms, and administering policies for safeguarding intellectual property." ;
     rdfs:label "Protect intellectual property" ;
-    skos:definition "An Organization Capability that an Organization realizes in the acts by which it safeguards, registers, licenses, and polices its intellectual property." ;
+    skos:definition "An Intellectual Property Management Capability that an Organization realizes in the acts by which it safeguards, registers, licenses, and polices its intellectual property." ;
     rdfs:comment "R5/R6: an ongoing 'safeguarding/administering policies' function with no natural end, so an Organization Capability (cco:ont00000568). Realized in its four bounded child acts (12.4.6.1-12.4.6.4). Narrower, pcf-bearing refinement of the shared bpo:IntellectualPropertyManagementCapability." ;
     rdfs:subClassOf cco:ont00000568 , bpo:IntellectualPropertyManagementCapability ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11062 ] ,

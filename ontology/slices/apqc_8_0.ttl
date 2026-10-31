@@ -3394,7 +3394,7 @@ bpo:P20799 a owl:Class ;
     skos:definition "An Act of Design that creates the architecture for IT services and solutions and produces an enterprise architecture specification." ;
     rdfs:comment "Gate-F fix: re-anchored from bpo:ActOfFormulation to bpo:ActOfDesign (the registry-sanctioned, more specific genus -- the bpo:ActOfDesign recurrence registry explicitly lists '8.5.3 (service/solution architecture)' as an ActOfDesign site, and ActOfDesign is defined precisely for authoring a design/architecture specification). bpo:ActOfDesign remains a subclass of cco:ont00000511 (Act of Planning), so Gates A-D are unaffected; the output bpo:EnterpriseArchitectureSpecification stays Directive, preserving the GOLDEN PRINCIPLE. This makes P20799 consistent with its leaf sibling P20805 (also re-anchored to bpo:ActOfDesign) and with 8.5.4.1.2 P20811 'Create service/solution design'. Modeled as the bounded architecture-design occurrent that hosts its child parts; the standing 'manage/promote/exception' coordinating facets are realized in the same parts." ;
     skos:example "An architecture program produces and governs the service/solution architecture." ;
-    rdfs:subClassOf bpo:ActOfFormulation ,
+    rdfs:subClassOf bpo:ActOfDesign ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:EnterpriseArchitectureSpecification ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:P20800 ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:P20801 ] ,

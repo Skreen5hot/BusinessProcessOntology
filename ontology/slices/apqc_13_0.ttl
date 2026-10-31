@@ -3416,7 +3416,7 @@ bpo:P20960 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20960. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating theories that explain empirical data. Use the hypotheses to guide feature selection in the process of data collection." ;
     rdfs:label "Develop and manage hypotheses" ;
-    skos:definition "An Act of Information Processing that composes and frames the hypotheses explaining empirical data, producing a hypothesis used to guide feature selection during data collection." ;
+    skos:definition "An Act of Analysis that composes and frames the hypotheses explaining empirical data, producing a hypothesis used to guide feature selection during data collection." ;
     rdfs:comment "R5 de-conflation: the bounded 'develop hypotheses' act is modeled here; the 'manage' aspect is the standing analytics function carried by bpo:AnalyticsCapability (this act is one of its realized-in fillers), not a separate conflated occurrent. Anchored to bpo:ActOfAnalysis (under cco:ont00000366 Act of Information Processing): a hypothesis-forming act composes a descriptive account of empirical data, not a directive plan. Per the GOLDEN PRINCIPLE the Info-Processing genus agrees with the Descriptive output bpo:Hypothesis (a candidate account of how reality is). REJECTED bpo:ActOfFormulation (cco:ont00000511 Act of Planning): a Planning/Directive genus would contradict the descriptive output." ;
     skos:example "A data scientist frames a testable hypothesis about which features drive customer churn." ;
     rdfs:subClassOf bpo:ActOfAnalysis ,
