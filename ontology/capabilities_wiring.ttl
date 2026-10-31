@@ -114,11 +114,11 @@ bpo:P16826 bpo:requiresCapability bpo:IntellectualPropertyManagementCapability .
 bpo:P19995 bpo:requiresCapability bpo:DesignCapability .
 
 # --- requiresRole (process -> role) ---
-bpo:P10066 bpo:requiresRole bpo:SeniorManagementRole .
+bpo:P10066 bpo:requiresRole bpo:SeniorManagerRole .
 bpo:P10070 bpo:requiresRole bpo:ResearchAndDevelopmentRole .
 bpo:P10071 bpo:requiresRole bpo:ResearchAndDevelopmentRole .
-bpo:P10072 bpo:requiresRole bpo:SeniorManagementRole .
-bpo:P10073 bpo:requiresRole bpo:SeniorManagementRole .
+bpo:P10072 bpo:requiresRole bpo:SeniorManagerRole .
+bpo:P10073 bpo:requiresRole bpo:SeniorManagerRole .
 bpo:P10085 bpo:requiresRole bpo:DesignStaffRole .
 bpo:P10087 bpo:requiresRole bpo:RegulatoryAuthorityRole .
 bpo:P10088 bpo:requiresRole bpo:DesignStaffRole .
@@ -131,7 +131,7 @@ bpo:P12771 bpo:requiresRole bpo:RegulatoryAuthorityRole .
 bpo:DesignStaffRole rdfs:subClassOf cco:ont00000984 .
 bpo:RegulatoryAuthorityRole rdfs:subClassOf cco:ont00000187 .
 bpo:ResearchAndDevelopmentRole rdfs:subClassOf cco:ont00000984 .
-bpo:SeniorManagementRole rdfs:subClassOf cco:ont00000984 .
+bpo:SeniorManagerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 3 -- Market and Sell Products and Services =====

@@ -145,10 +145,17 @@ bpo:designatesProcessType a owl:AnnotationProperty ;
 # --- 2a. Roles ---
 
 bpo:SeniorManagementRole a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000023 ;   # role
     rdfs:label "Senior Management Role" ;
-    skos:definition "A Role that is borne by an Agent in virtue of holding senior executive authority over strategy, investment, or product decisions within an Organization." ;
-    rdfs:comment "Recurs where APQC says 'Enlist senior management executives' (2.1.1.2, 2.1.1.4, 2.2.1.x)." .
+    owl:deprecated true ;
+    dct:isReplacedBy bpo:SeniorManagerRole ;
+    rdfs:comment "DEPRECATED 2026-10-31 (WP6 B1): the same role as bpo:SeniorManagerRole -- both borne by an individual Agent in virtue of senior executive authority over an Organization's strategy and direction; this one listed investment and product decisions as well. Consolidated into bpo:SeniorManagerRole (docs/migrations.tsv)." .
+
+# Inlined from apqc_1_0.ttl (WP6 B1 consolidation): the role SeniorManagement bears.
+bpo:SeniorManagerRole a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 ;
+    rdfs:label "Senior Manager Role" ;
+    skos:definition "A Role that is borne by an Agent in virtue of exercising senior managerial or executive authority over the strategy and direction of an Organization." ;
+    rdfs:comment "Narrower than the 1.1.1 reference module's bpo:ManagerRole; used where APQC text specifies senior executives / senior strategy personnel. MERGE DECISION: this Senior pair (bpo:SeniorManagerRole / bpo:SeniorManagement) deliberately supersedes the reference's generic bpo:ManagerRole / bpo:ManagementPersonnel for the 1.1.1.8 (P10024) participant, which APQC scopes to 'mid- to senior-level management'. The generic role/agent pair is intentionally not carried over: no process in this merged module requires a non-senior management universal, so re-adding it would leave orphaned classes. Re-mint bpo:ManagerRole (and bpo:ManagementPersonnel bearing it) as the rdfs:subClassOf parent of this pair only if a future merged process needs the generic universal." .
 
 bpo:ResearchAndDevelopmentRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;
@@ -244,9 +251,9 @@ bpo:ResearchAndDevelopmentCapability a owl:Class ;
 bpo:SeniorManagement a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ;
-          owl:someValuesFrom bpo:SeniorManagementRole ] ;
+          owl:someValuesFrom bpo:SeniorManagerRole ] ;
     rdfs:label "Senior Management" ;
-    skos:definition "An Agent that bears a senior management role." ;
+    skos:definition "An Agent that bears a senior manager role." ;
     rdfs:comment "APQC 'senior management executives'. cco:Agent (not bare material entity) excludes non-agentive participants." .
 
 bpo:ResearchAndDevelopmentPersonnel a owl:Class ;

@@ -74,7 +74,6 @@
   "bpo:SalesAgentRole": "cco:ont00000984",
   "bpo:SalesPartnerRole": null,
   "bpo:SalesProfessionalRole": "cco:ont00000984",
-  "bpo:SeniorManagementRole": "cco:ont00000984",
   "bpo:ServiceDeliveryPersonnelRole": "cco:ont00000984",
   "bpo:ShareholderRole": null,
   "bpo:SubjectMatterExpertRole": null,
