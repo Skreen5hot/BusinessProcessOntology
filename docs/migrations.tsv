@@ -1,0 +1,4 @@
+# IRI migrations: every BPO identifier retired or replaced, with its successor.
+# A row is written in the commit that makes the change.
+date	old_iri	new_iri	kind	decision	reason
+2026-10-31	bpo:bearsPermission	bpo:permissionApplicableToRole	annotation property renamed; old IRI kept, owl:deprecated + dct:isReplacedBy	BPO architect, WP6 Phase B decisions 2026-10-31 (B7)	'bears' asserts BFO's bearer relation; an Action Permission is a GDC no role can bear

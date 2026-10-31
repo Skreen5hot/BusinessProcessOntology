@@ -4950,6 +4950,7 @@ bpo:designatesProcessType	property	10			designates process type
 bpo:enablesProcess	property	cap			enables process			
 bpo:hierarchyID	property	10			APQC Hierarchy ID			
 bpo:pcfID	property	10			APQC PCF ID			
+bpo:permissionApplicableToRole	property	cap			permission applicable to role			An annotation property that relates a Role class to an Action Permission class (cco:ont00000751) as a type-level association: permissions of that type apply to 
 bpo:requiresCapability	property	cap			requires capability			
 bpo:requiresPermission	property	cap			requires permission			
 bpo:requiresRole	property	cap			requires role			

@@ -120,7 +120,8 @@ capability layer is a **merge-only shared overlay** (no slice imports it).
 
 **Artifacts (in `ontology/`):**
 - `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers; `bpo:enablesProcess`/
-  `bpo:bearsPermission` (annotation) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
+  `bpo:permissionApplicableToRole` (annotation; was `bearsPermission`, deprecated in WP6 B7 —
+  see `docs/migrations.tsv`) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
   (annotation properties since WP6 B6, 2026-10-31: asserted class-to-class, which as object
   properties was only punning; targets still checked by SHACL C5–C7, which test the triples, not
   the property type). `requiresPermission` seam declared but **unpopulated** (RDM/IEE

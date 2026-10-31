@@ -56,9 +56,16 @@ bpo:enablesProcess a owl:AnnotationProperty ;
     rdfs:label "enables process" ;
     rdfs:comment "Capability -> process class whose execution it enables. Operational inverse of bpo:requiresCapability; BFO grounding is 'has realization' (a capability is realized in such processes). Used for authoring scope and wiring-coherence checks." .
 
+bpo:permissionApplicableToRole a owl:AnnotationProperty ;
+    rdfs:label "permission applicable to role" ;
+    skos:definition "An annotation property that relates a Role class to an Action Permission class (cco:ont00000751) as a type-level association: permissions of that type apply to agents in roles of that type. It is not the BFO bearer relation, and it does not by itself establish that any agent holds an effective permission." ;
+    rdfs:comment "Role -> Action Permission class. The deontic hook (RDM/IEE authors the permission). Replaces bpo:bearsPermission (WP6 B7, BPO architect 2026-10-31): an Action Permission is a Process Regulation, a Prescriptive ICE (cco:ont00000751 -> 1324 -> 965), a generically dependent continuant that no role can bear." .
+
 bpo:bearsPermission a owl:AnnotationProperty ;
     rdfs:label "bears permission" ;
-    rdfs:comment "Role -> Action Permission class the role carries. The deontic hook (RDM/IEE authors the permission)." .
+    owl:deprecated true ;
+    dct:isReplacedBy bpo:permissionApplicableToRole ;
+    rdfs:comment "DEPRECATED 2026-10-31 (WP6 B7). Use bpo:permissionApplicableToRole. The label asserted a BFO bearer relation that cannot hold between a role and an Action Permission." .
 
 # ---- the three process-side wiring properties ----
 # Annotation properties (WP6 B6, option (a), BPO architect 2026-10-31). They
@@ -161,7 +168,7 @@ bpo:ApproverRole a owl:Class ;
     rdfs:subClassOf bpo:Role , cco:ont00000187 ;   # Authority Role
     rdfs:label "Approver role" ;
     skos:definition "The authority role occupied by the party who may approve passage through a review/approval gate." ;
-    bpo:bearsPermission bpo:ApproveImplementationPlanPermission .
+    bpo:permissionApplicableToRole bpo:ApproveImplementationPlanPermission .
 
 # ---- deontic stub (normally authored by the RDM/IEE layer; shown for the seam) ----
 

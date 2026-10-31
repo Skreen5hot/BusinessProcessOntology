@@ -54,11 +54,12 @@ bpo:CapRoleDisjointShape a sh:NodeShape ;
           $this <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <https://www.commoncoreontologies.org/ont00001379> .
           $this <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/BFO_0000023> }""" ] .
 
-# C4: bearsPermission must target an Action Permission.
+# C4: permissionApplicableToRole must target an Action Permission
+#     (was bearsPermission until WP6 B7, 2026-10-31).
 bpo:BearsPermissionTargetShape a sh:NodeShape ;
-    sh:targetObjectsOf bpo:bearsPermission ;
+    sh:targetObjectsOf bpo:permissionApplicableToRole ;
     sh:sparql [ a sh:SPARQLConstraint ;
-        sh:message "bpo:bearsPermission must target a class reaching cco:Action Permission (ont00000751)." ;
+        sh:message "bpo:permissionApplicableToRole must target a class reaching cco:Action Permission (ont00000751)." ;
         sh:select """SELECT $this WHERE { FILTER NOT EXISTS {
           $this <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <https://www.commoncoreontologies.org/ont00000751> } }""" ] .
 
