@@ -702,6 +702,7 @@ bpo:JobFamilyManagementCapability a owl:Class ;
 
 bpo:P20958 a owl:Class ;
     bpo:pcfID "20958" ; bpo:hierarchyID "7.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20958. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a long-term plan to associate human resource requirements with the strategic goals of the company to ensure that there is enough qualified staffing to achieve those goals, to maintain competitive advantage and to reduce employee turnover." ;
     rdfs:label "Develop human resources strategy" ;
     skos:definition "An Act of Formulation that has as input strategic goals and produces a human resources strategy associating human-resource requirements with the organization's strategic goals." ;
@@ -721,6 +722,7 @@ bpo:P20958 a owl:Class ;
 
 bpo:P10418 a owl:Class ;
     bpo:pcfID "10418" ; bpo:hierarchyID "7.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10418. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Strategically defining the current and future needs for developing an efficient HR strategy." ;
     rdfs:label "Identify strategic HR needs" ;
     skos:definition "An Act of Analysis that has as input strategic goals and workforce data and produces a strategic HR needs assessment of the organization's current and future human-resource needs." ;
@@ -733,6 +735,7 @@ bpo:P10418 a owl:Class ;
 
 bpo:P10419 a owl:Class ;
     bpo:pcfID "10419" ; bpo:hierarchyID "7.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10419. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the charge and duty of the HR function by defining its responsibility areas, as well as ensuring its accountability. Establish the HR function by laying out the roles and responsibilities for this function and the rules and regulations guiding HR. Define the goals and objectives of the HR, as well as a mission and vision for this function. Create a mechanism involving a set of policies, code of conduct, and institutional procedure to ensure HR accountability." ;
     rdfs:label "Define HR and business function roles and accountability" ;
     skos:definition "An Act of Formulation that produces an HR program specification laying out the roles, responsibilities, goals, mission, and accountability mechanisms of the human resources function." ;
@@ -744,6 +747,7 @@ bpo:P10419 a owl:Class ;
 
 bpo:P21430 a owl:Class ;
     bpo:pcfID "21430" ; bpo:hierarchyID "7.1.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21430. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing the roles that are required to execute the HR function.  This process also examines the organizational structure required to support the organization." ;
     rdfs:label "Determine HR function roles and structure" ;
     skos:definition "An Act of Formulation that produces an HR program specification establishing the roles and supporting organizational structure required to execute the human resources function." ;
@@ -754,6 +758,7 @@ bpo:P21430 a owl:Class ;
 
 bpo:P21431 a owl:Class ;
     bpo:pcfID "21431" ; bpo:hierarchyID "7.1.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21431. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining how an organization's human resources department offers services to and interacts with employees." ;
     rdfs:label "Determine HR delivery model" ;
     skos:definition "An Act of Formulation that produces an HR delivery model prescribing how the human resources department delivers services to and interacts with employees." ;
@@ -764,6 +769,7 @@ bpo:P21431 a owl:Class ;
 
 bpo:P10420 a owl:Class ;
     bpo:pcfID "10420" ; bpo:hierarchyID "7.1.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10420. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ascertaining the costs and expenses of the HR function. Identify and report HR investments using, for example, a cost approach or a present value of future earnings approach." ;
     rdfs:label "Determine HR costs" ;
     skos:definition "An Act of Analysis that has as input HR policy data and produces an HR cost analysis ascertaining and reporting the costs and investments of the human resources function." ;
@@ -774,6 +780,7 @@ bpo:P10420 a owl:Class ;
 
 bpo:P10421 a owl:Class ;
     bpo:pcfID "10421" ; bpo:hierarchyID "7.1.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10421. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the performance of HR function. Lay out the course of HR procedures that would formulate a plan of action needed to fulfill strategic HR needs. Deploy measures such as hiring policies, leave management, internal code of conducts, and compensation structure." ;
     rdfs:label "Establish HR measures" ;
     skos:definition "An Act of Formulation that produces an HR measure specification laying out the HR procedures and measures needed to fulfill strategic HR needs." ;
@@ -784,6 +791,7 @@ bpo:P10421 a owl:Class ;
 
 bpo:P10422 a owl:Class ;
     bpo:pcfID "10422" ; bpo:hierarchyID "7.1.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10422. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conveying the strategies of HR function to employees and management. Effectively explain the vision, plans, and anticipated benefits of the HR strategy employees, as well as the public. Develop statements and messages that are easy to read, informative, and relevant to the audience." ;
     rdfs:label "Communicate HR strategies" ;
     skos:definition "An Act of Communication that disseminates a held human resources strategy to employees and management in accordance with an employee communication plan, conveying the strategy's vision, plans, and benefits." ;
@@ -798,6 +806,7 @@ bpo:P10422 a owl:Class ;
 
 bpo:P10432 a owl:Class ;
     bpo:pcfID "10432" ; bpo:hierarchyID "7.1.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10432. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a strategy for the use of systems/technologies/tools in operating the HR function. Create a strategy concerning the use and utility of HR support tools and technologies. Decide what specific tools to use and in what quantity. Determine the levels of technology required for the HR management." ;
     rdfs:label "Develop strategy for HR systems/technologies/tools" ;
     skos:definition "An Act of Formulation that produces an HR technology strategy prescribing the systems, technologies, and tools to be used in operating the human resources function." ;
@@ -813,6 +822,7 @@ bpo:P10432 a owl:Class ;
 
 bpo:P17045 a owl:Class ;
     bpo:pcfID "17045" ; bpo:hierarchyID "7.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17045. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and executing strategies and policies for smooth administration of work force. Determine and gather skill requirements. Plan the requirements for employee resourcing per unit. Create compensation, succession, HR program, and employee diversity plans. Develop and administer policies for HR. Develop benefits for employees. Create models for work force strategies." ;
     rdfs:label "Develop and implement workforce strategy and policies" ;
     skos:definition "An Act of Formulation that has as input skill requirement data and produces a workforce strategy together with the compensation, succession, diversity, benefit, and policy artifacts that govern the workforce." ;
@@ -839,6 +849,7 @@ bpo:P17045 a owl:Class ;
 
 bpo:P10423 a owl:Class ;
     bpo:pcfID "10423" ; bpo:hierarchyID "7.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10423. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the current and future skill requirements of the organization with regard to the overall corporate strategy of the organization and market conditions. Identify and establish the minimum skills needed for the requisite HR needs." ;
     rdfs:label "Perform workforce planning" ;
     skos:definition "An Act of Formulation that has as input skill requirement data and strategic goals and produces a workforce plan establishing the skills and staffing the organization requires." ;
@@ -850,6 +861,7 @@ bpo:P10423 a owl:Class ;
 
 bpo:P10424 a owl:Class ;
     bpo:pcfID "10424" ; bpo:hierarchyID "7.1.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10424. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the requirements for employees and the need for employee resourcing for each every unit/function. Lay out a plan detailing employee resourcing requirements of individual functions and the organization as a whole." ;
     rdfs:label "Perform operational workforce planning" ;
     skos:definition "An Act of Formulation that has as input workforce data and produces a staffing plan detailing employee-resourcing requirements for each unit and for the organization as a whole." ;
@@ -861,6 +873,7 @@ bpo:P10424 a owl:Class ;
 
 bpo:P10425 a owl:Class ;
     bpo:pcfID "10425" ; bpo:hierarchyID "7.1.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10425. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing a plan that specifies the combination of wages, salaries, and benefits the employees receive in exchange for work. Define the total amount of compensation, in addition to the manner in which the compensation is paid and the purposes for which employees can receive bonuses, salary increases, and incentives." ;
     rdfs:label "Develop compensation strategy" ;
     skos:definition "An Act of Formulation that has as input market compensation data and produces a compensation strategy specifying the combination of wages, salaries, and benefits employees receive in exchange for work." ;
@@ -873,6 +886,7 @@ bpo:P10425 a owl:Class ;
 
 bpo:P10210 a owl:Class ;
     bpo:pcfID "10210" ; bpo:hierarchyID "7.1.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10210. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a scheme of awards and recognition for sales employees to promote a results-based culture. Create specific incentives to reach desired outcomes, such as landing key clients, growing the customer base, providing exceptional servicing, and increasing profit margins." ;
     rdfs:label "Establish incentive strategy" ;
     skos:definition "An Act of Formulation that produces an incentive plan specifying a scheme of awards and recognition designed to drive desired employee outcomes." ;
@@ -883,6 +897,7 @@ bpo:P10210 a owl:Class ;
 
 bpo:P10426 a owl:Class ;
     bpo:pcfID "10426" ; bpo:hierarchyID "7.1.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10426. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing the plan for continuation of key positions within the organization. Identify internal people with the potential to fill key business leadership positions. Provide critical development experiences to employees who can move into important roles. Engage leaders to support the development of high-potential leaders." ;
     rdfs:label "Develop succession plan" ;
     skos:definition "An Act of Formulation that has as input employee data and produces a succession plan for the continuation of key positions within the organization." ;
@@ -894,6 +909,7 @@ bpo:P10426 a owl:Class ;
 
 bpo:P16938 a owl:Class ;
     bpo:pcfID "16938" ; bpo:hierarchyID "7.1.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16938. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a program that incorporates incentives and compensation put forth by the organization to recognize high performing workers and excellence in leadership." ;
     rdfs:label "Develop high performers/leadership programs" ;
     skos:definition "An Act of Formulation that produces an HR program specification for recognizing high-performing workers and excellence in leadership through incentives and compensation." ;
@@ -904,6 +920,7 @@ bpo:P16938 a owl:Class ;
 
 bpo:P10427 a owl:Class ;
     bpo:pcfID "10427" ; bpo:hierarchyID "7.1.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10427. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing the plan for ensuring a diverse work force. Develop and hire employees with varying characteristics including, but not limited to, religious and political beliefs, gender, ethnicity, education, socioeconomic background, sexual orientation, and geographic location." ;
     rdfs:label "Develop diversity, equity, and inclusion plan" ;
     skos:definition "An Act of Formulation that produces a diversity, equity, and inclusion plan for ensuring a diverse workforce." ;
@@ -914,6 +931,7 @@ bpo:P10427 a owl:Class ;
 
 bpo:P21433 a owl:Class ;
     bpo:pcfID "21433" ; bpo:hierarchyID "7.1.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21433. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Execution of diversity, equity, and inclusion plans within an organization.  Often called a DEI plan." ;
     rdfs:label "Implement diversity, equity, and inclusion plan" ;
     skos:definition "A Planned Act that has as input a diversity, equity, and inclusion plan and carries out that plan within the organization." ;
@@ -924,6 +942,7 @@ bpo:P21433 a owl:Class ;
 
 bpo:P11622 a owl:Class ;
     bpo:pcfID "11622" ; bpo:hierarchyID "7.1.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11622. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying skills, knowledge, and attributes that need enhancement in order to perform a job. Develop the appropriate training programs. These programs can be computer-based, classroom, or on-the-job training, etc." ;
     rdfs:label "Design talent development program" ;
     skos:definition "An Act of Formulation that has as input a skills gap analysis and produces a training program specification for enhancing the skills, knowledge, and attributes needed to perform jobs." ;
@@ -935,6 +954,7 @@ bpo:P11622 a owl:Class ;
 
 bpo:P11623 a owl:Class ;
     bpo:pcfID "11623" ; bpo:hierarchyID "7.1.2.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11623. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a program to entice prospective resources to engage with the organization for a position of employment." ;
     rdfs:label "Design talent acquisition program" ;
     skos:definition "An Act of Formulation that produces an HR program specification for attracting prospective candidates to engage with the organization for employment." ;
@@ -945,6 +965,7 @@ bpo:P11623 a owl:Class ;
 
 bpo:P10428 a owl:Class ;
     bpo:pcfID "10428" ; bpo:hierarchyID "7.1.2.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10428. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating HR programs and services such as employee engagements programs to promote positive employee behavior. Create a variety of programs and services to support employees' professional and personal needs at work and at home." ;
     rdfs:label "Develop other HR programs" ;
     skos:definition "An Act of Formulation that produces an HR program specification for additional HR programs and services supporting employees' professional and personal needs." ;
@@ -955,6 +976,7 @@ bpo:P10428 a owl:Class ;
 
 bpo:P10429 a owl:Class ;
     bpo:pcfID "10429" ; bpo:hierarchyID "7.1.2.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10429. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating rules and regulations that govern the HR function. Develop a policy plan that serves as a guideline for setting rules and regulations that help in achieving the HR goals and objectives." ;
     rdfs:label "Develop HR policies" ;
     skos:definition "An Act of Formulation that produces an HR policy comprising the rules and regulations that govern the human resources function." ;
@@ -965,6 +987,7 @@ bpo:P10429 a owl:Class ;
 
 bpo:P10430 a owl:Class ;
     bpo:pcfID "10430" ; bpo:hierarchyID "7.1.2.12" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10430. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring rules and regulations are followed and are flexible enough to accommodate indispensable deviations." ;
     rdfs:label "Administer HR policies" ;
     skos:definition "An Act of Administration that has as input an HR policy and enforces its rules and regulations while accommodating necessary deviations." ;
@@ -975,6 +998,7 @@ bpo:P10430 a owl:Class ;
 
 bpo:P10431 a owl:Class ;
     bpo:pcfID "10431" ; bpo:hierarchyID "7.1.2.13" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10431. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Planning benefits in kind (also called fringe benefits, perquisites, or perks). Include various types of non-wage compensations provided to employees in addition to normal wages or salaries." ;
     rdfs:label "Plan employee benefits" ;
     skos:definition "An Act of Formulation that produces a benefits and rewards plan specifying the non-wage benefits provided to employees in addition to wages or salaries." ;
@@ -985,6 +1009,7 @@ bpo:P10431 a owl:Class ;
 
 bpo:P10433 a owl:Class ;
     bpo:pcfID "10433" ; bpo:hierarchyID "7.1.2.14" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10433. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing models for effectively strategizing the work force of the organization. Develop a model that specifies the organization's overall approach for maximizing the performance of its work force by defining the goals, objectives, and expectations of the work force. Manage all aspects of performance required for the work force to function, including recruitment, selection, retention, and professional development." ;
     rdfs:label "Develop workforce strategy models" ;
     skos:definition "An Act of Formulation that produces a workforce strategy model specifying the organization's overall approach for maximizing workforce performance." ;
@@ -995,6 +1020,7 @@ bpo:P10433 a owl:Class ;
 
 bpo:P20122 a owl:Class ;
     bpo:pcfID "20122" ; bpo:hierarchyID "7.1.2.15" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20122. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing models for effectively strategizing the work force of the organization. Carry out all aspects of performance required for the work force to function, including recruitment, selection, retention, and professional development." ;
     rdfs:label "Implement workforce strategy models" ;
     skos:definition "A Planned Act that has as input a workforce strategy model and carries out that model across recruitment, selection, retention, and development." ;
@@ -1009,6 +1035,7 @@ bpo:P20122 a owl:Class ;
 
 bpo:P10417 a owl:Class ;
     bpo:pcfID "10417" ; bpo:hierarchyID "7.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10417. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Supervising the HR strategy, plans, and policies in order to refurbish them whenever needed. Determine the performance of HR plans and policies by measuring the objective achievement rate and its contribution to the overall business strategy. Ensure that information about these plans and strategies is effectively communicated to various stakeholders. Incorporate any suggestions by these stakeholders when revising HR plans and policies." ;
     rdfs:label "Monitor and update strategy, plans, and policies" ;
     skos:definition "An Act of Administration that has as input performance data and an HR policy and oversees and revises the organization's HR strategy, plans, and policies." ;
@@ -1023,6 +1050,7 @@ bpo:P10417 a owl:Class ;
 
 bpo:P10434 a owl:Class ;
     bpo:pcfID "10434" ; bpo:hierarchyID "7.1.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10434. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the accomplishment of HR goals and objectives. Evaluate the effectiveness of the HR function by estimating the present rate of achievement of the established objectives. Use metrics to determine if the objectives are being realized. Leverage measures such as turnover, training, return on human capital, costs of labor, and expenses per employee." ;
     rdfs:label "Measure realization of objectives" ;
     skos:definition "An Act of Appraisal that has as input performance data and produces an objective realization report estimating the achievement rate of established HR objectives." ;
@@ -1034,6 +1062,7 @@ bpo:P10434 a owl:Class ;
 
 bpo:P10435 a owl:Class ;
     bpo:pcfID "10435" ; bpo:hierarchyID "7.1.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10435. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the role of HR function in implementing the organizational strategy. Measure the correlation between the HR performance and the overall business strategy. Calculate the amount of contribution of the HR function to the overall business growth." ;
     rdfs:label "Measure contribution to business strategy" ;
     skos:definition "An Act of Appraisal that has as input performance data and produces an HR report assessing the human resources function's contribution to the overall business strategy." ;
@@ -1045,6 +1074,7 @@ bpo:P10435 a owl:Class ;
 
 bpo:P10436 a owl:Class ;
     bpo:pcfID "10436" ; bpo:hierarchyID "7.1.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10436. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conveying the plans for HR function to stakeholders. Ensure that the HR plans and strategy are effectively communicated to the people who can affect or be affected by the organization's actions, objectives, and policies such as the creditors, shareholders, employees, and suppliers. Provide regular updates to these stakeholders to ensure effective communication." ;
     rdfs:label "Communicate plans and provide updates to stakeholders" ;
     skos:definition "An Act of Communication that disseminates a held human resources strategy and regular updates to stakeholders in accordance with an employee communication plan." ;
@@ -1058,6 +1088,7 @@ bpo:P10436 a owl:Class ;
 
 bpo:P10438 a owl:Class ;
     bpo:pcfID "10438" ; bpo:hierarchyID "7.1.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10438. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reassessing the strategies, plans, and policies of the HR function, with the objective of revising them. Revisit the schematic plans for the HR function. Taking stock of any suggestions or feedback from the stakeholders, revamp the blueprint of HR strategies and plans." ;
     rdfs:label "Review and revise HR plans" ;
     skos:definition "An Act of Formulation that has as input HR policy data and employee feedback and produces a revised HR policy reflecting reassessed HR strategies and plans." ;
@@ -1074,6 +1105,7 @@ bpo:P10438 a owl:Class ;
 
 bpo:P17046 a owl:Class ;
     bpo:pcfID "17046" ; bpo:hierarchyID "7.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17046. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing the tools for managing the competency levels of HR. Design a model for integrating HR planning with business planning. Assess current HR capacity based on the competencies against the capacity needed to achieve the vision, mission, and business goals of the organization. Consider factors such as employee development, career path, compensation policies, and performance management." ;
     rdfs:label "Develop competency management models" ;
     skos:definition "An Act of Formulation that has as input workforce data and produces a competency management model integrating HR planning with business planning to manage HR competency levels." ;
@@ -1119,6 +1151,7 @@ bpo:RecruitmentChannelManagementCapability a owl:Class ;
 
 bpo:P10410 a owl:Class ;
     bpo:pcfID "10410" ; bpo:hierarchyID "7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10410. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining and handling employee requirements. Recruit or source the candidates as per the requirements. Screen and select the most appropriate candidates. Take care of the newly hired and re-hired employees. Maintain records of information for all applicants." ;
     rdfs:label "Recruit, source, and select employees" ;
     skos:definition "An Act of Administration that handles employee requisitions, sources and screens candidates, hires the selected candidates, and maintains applicant records, so as to staff an organization's open positions." ;
@@ -1133,6 +1166,7 @@ bpo:P10410 a owl:Class ;
 
 bpo:P10439 a owl:Class ;
     bpo:pcfID "10439" ; bpo:hierarchyID "7.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10439. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling the requirements for new employees. Create and open job requisitions by clearly defining the job descriptions. Post these requirements internally and externally, and modify them as appropriate. Manage the dates of the whole requisition process." ;
     rdfs:label "Manage employee requisitions" ;
     skos:definition "An Act of Administration that creates, opens, posts, modifies, and schedules job requisitions in order to handle an organization's requirements for new employees." ;
@@ -1149,6 +1183,7 @@ bpo:P10439 a owl:Class ;
 
 bpo:P10445 a owl:Class ;
     bpo:pcfID "10445" ; bpo:hierarchyID "7.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10445. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a correspondence between the plan for hiring new employees and the desired employee requirements. Staff an adequate amount of people with the appropriate skills to effectively accomplish its legislative, regulatory, service, and production requirements." ;
     rdfs:label "Align staffing plan to work force plan and business unit strategies/resource needs" ;
     skos:definition "An Act of Formulation that takes a workforce plan as input and produces a staffing plan brought into correspondence with the organization's workforce requirements." ;
@@ -1160,6 +1195,7 @@ bpo:P10445 a owl:Class ;
 
 bpo:P10447 a owl:Class ;
     bpo:pcfID "10447" ; bpo:hierarchyID "7.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10447. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating descriptions for job requisitions. Define the normal components of a job description, such as the overall position description with general areas of responsibility listed, essential functions of the job described with a couple of examples of each, required knowledge, skills, abilities, required education and experience, a description of the physical demands, and a description of the work environment." ;
     rdfs:label "Develop and maintain job descriptions" ;
     skos:definition "An Act of Information Processing that composes and maintains a job description detailing a position's responsibilities, required competencies, and work environment." ;
@@ -1170,6 +1206,7 @@ bpo:P10447 a owl:Class ;
 
 bpo:P10446 a owl:Class ;
     bpo:pcfID "10446" ; bpo:hierarchyID "7.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10446. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing specific job requisitions, and ensuring their accessibility. Create and open a job requisition to fill the vacant positions within the organization. Clearly describe the job title, department, fill date, and the requisite skills and qualifications for the job." ;
     rdfs:label "Open job requisitions" ;
     skos:definition "An Act of Formulation that creates and opens a job requisition prescribing the title, department, fill date, and required qualifications for a vacant position." ;
@@ -1180,6 +1217,7 @@ bpo:P10446 a owl:Class ;
 
 bpo:P10448 a owl:Class ;
     bpo:pcfID "10448" ; bpo:hierarchyID "7.2.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10448. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Posting and advertising job descriptions. Display open job descriptions internally and externally. Use public portals, online portals, and websites to upload these requisitions in order for applications to be received." ;
     rdfs:label "Post job requisitions" ;
     skos:definition "An Act of Communication that disseminates open job requisitions internally and externally through portals and websites so that applications can be received." ;
@@ -1191,6 +1229,7 @@ bpo:P10448 a owl:Class ;
 
 bpo:P10450 a owl:Class ;
     bpo:pcfID "10450" ; bpo:hierarchyID "7.2.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10450. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making the necessary alterations to job requisitions. Revamp or revise the job requisitions in case a position is filled or is not vacant anymore, as well as in case of any new openings. (It involves Manage the internal/external job posting websites [10449] to make the necessary changes.)" ;
     rdfs:label "Modify job requisitions" ;
     skos:definition "An Act of Administration that revises existing job requisitions to reflect filled positions, closed vacancies, or new openings." ;
@@ -1201,6 +1240,7 @@ bpo:P10450 a owl:Class ;
 
 bpo:P10451 a owl:Class ;
     bpo:pcfID "10451" ; bpo:hierarchyID "7.2.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10451. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Informing and communicating with the hiring manager. Notify the manager responsible for the hiring process in cases of any new position openings or changes." ;
     rdfs:label "Notify hiring manager" ;
     skos:definition "An Act of Communication that informs the hiring manager of new position openings or changes to a requisition." ;
@@ -1212,6 +1252,7 @@ bpo:P10451 a owl:Class ;
 
 bpo:P10452 a owl:Class ;
     bpo:pcfID "10452" ; bpo:hierarchyID "7.2.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10452. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining and managing the dates for the employee requisition process." ;
     rdfs:label "Manage requisition dates" ;
     skos:definition "An Act of Administration that determines and manages the schedule of dates governing an employee requisition process." ;
@@ -1225,6 +1266,7 @@ bpo:P10452 a owl:Class ;
 
 bpo:P10440 a owl:Class ;
     bpo:pcfID "10440" ; bpo:hierarchyID "7.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10440. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recruiting new candidates for deployment across various functional areas inside the organization. Select methods for sourcing new employees. Manage relationships with third-party agencies. Stage recruitment fairs and drives. Manage employee referral programs." ;
     rdfs:label "Recruit/Source candidates" ;
     skos:definition "An Act of Administration that determines recruitment methods and conducts recruiting activities to source candidates for an organization's open positions." ;
@@ -1236,6 +1278,7 @@ bpo:P10440 a owl:Class ;
 
 bpo:P10453 a owl:Class ;
     bpo:pcfID "10453" ; bpo:hierarchyID "7.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10453. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the methods and channels for recruitments in order to maximize the amount of candidate availability. Use channels such as headhunting, job postings, job portals, networking websites, and media advertising. Choose from the various methods of recruitment such as internal/external third-party sourcing." ;
     rdfs:label "Determine recruitment methods and channels" ;
     skos:definition "An Act of Selection that chooses recruitment methods and channels from available options and produces a recruitment-method specification." ;
@@ -1246,6 +1289,7 @@ bpo:P10453 a owl:Class ;
 
 bpo:P10454 a owl:Class ;
     bpo:pcfID "10454" ; bpo:hierarchyID "7.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10454. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Organizing and executing recruiting activities and events. Activities and events include on-campus hiring, refresher courses, information sessions, career fairs, etc. to increase the coverage of the sourcing in order to ensure that the most deserving and appropriate candidates are hired." ;
     rdfs:label "Perform recruiting activities/events" ;
     skos:definition "An Act of Administration that organizes and executes recruiting activities and events, such as campus hiring and career fairs, to broaden candidate sourcing." ;
@@ -1259,6 +1303,7 @@ bpo:P10454 a owl:Class ;
 
 bpo:P20123 a owl:Class ;
     bpo:pcfID "20123" ; bpo:hierarchyID "7.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20123. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating and selecting potential employees through interviews, tests, etc." ;
     rdfs:label "Screen and select candidates" ;
     skos:definition "An Act of Administration that screens candidates through selection tools, interviews, and tests, and selects the most appropriate among them." ;
@@ -1272,6 +1317,7 @@ bpo:P20123 a owl:Class ;
 
 bpo:P10456 a owl:Class ;
     bpo:pcfID "10456" ; bpo:hierarchyID "7.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10456. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and implementing tools for the selection of candidates. Recognize candidate selection tools such as screening, telephone interviews, hiring manager interviews, drug testing, and skills assessment. Effectively deploy these tools to check if the candidates fit in the workplace or not, as well as to ensure workplace safety." ;
     rdfs:label "Identify and deploy candidate selection tools" ;
     skos:definition "An Act of Administration that identifies and puts into use the tools by which candidates are screened and selected." ;
@@ -1281,6 +1327,7 @@ bpo:P10456 a owl:Class ;
 
 bpo:P10457 a owl:Class ;
     bpo:pcfID "10457" ; bpo:hierarchyID "7.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10457. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the candidates by their performance in the interviews. Conduct HR interview, technical interview, hiring manager interview, etc. Understand the mindset of the candidate, and comprehend his/her personal and professional lives." ;
     rdfs:label "Interview candidates" ;
     skos:definition "An Act of Appraisal that assesses a candidate's performance in interviews and produces a candidate assessment." ;
@@ -1292,6 +1339,7 @@ bpo:P10457 a owl:Class ;
 
 bpo:P10458 a owl:Class ;
     bpo:pcfID "10458" ; bpo:hierarchyID "7.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10458. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the candidates through tests. Prepare tools such as aptitude, technical, and grammar tests. Test the skills of the candidate through a written, oral, or computerized test." ;
     rdfs:label "Test candidates" ;
     skos:definition "An Act of Appraisal that examines a candidate's skills through tests and produces a candidate assessment." ;
@@ -1303,6 +1351,7 @@ bpo:P10458 a owl:Class ;
 
 bpo:P10459 a owl:Class ;
     bpo:pcfID "10459" ; bpo:hierarchyID "7.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10459. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Approving the deserving candidates, and rejecting the others. Examining the performance of candidates. Ensure candidates would fit well with the organization. (Assess performance from Interview candidates [10457] and Test candidates [10458].)" ;
     rdfs:label "Select and reject candidates" ;
     skos:definition "An Act of Selection that chooses which candidates to approve and which to reject, taking candidate assessments as input and producing a candidate selection decision." ;
@@ -1318,6 +1367,7 @@ bpo:P10459 a owl:Class ;
 
 bpo:P10443 a owl:Class ;
     bpo:pcfID "10443" ; bpo:hierarchyID "7.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10443. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and making job offers to the selected candidates. Fairly negotiate the job offers. Agree on terms with the candidate to complete the hiring process." ;
     rdfs:label "Manage new hire/re-hire" ;
     skos:definition "An Act of Administration that draws up and extends a job offer, negotiates it with the selected candidate, and completes the hire." ;
@@ -1330,6 +1380,7 @@ bpo:P10443 a owl:Class ;
 
 bpo:P10463 a owl:Class ;
     bpo:pcfID "10463" ; bpo:hierarchyID "7.2.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10463. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Compiling job-related information for the selected candidates in order to make up a job. Include information about the job description, reporting relationship, salary, bonus potential, benefits, and vacation allotment." ;
     rdfs:label "Draw up and make offer" ;
     skos:definition "An Act of Formulation that compiles job, compensation, and benefits terms into a job offer extended to a selected candidate." ;
@@ -1340,6 +1391,7 @@ bpo:P10463 a owl:Class ;
 
 bpo:P10464 a owl:Class ;
     bpo:pcfID "10464" ; bpo:hierarchyID "7.2.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10464. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Negotiating an offer with selected candidates. Discuss the job offer with the candidate to ensure a mutual understanding." ;
     rdfs:label "Negotiate offer" ;
     skos:definition "An Act of Negotiation that has as input a job offer and involves a selected candidate in order to reach mutual agreement on the offer's terms." ;
@@ -1351,6 +1403,7 @@ bpo:P10464 a owl:Class ;
 
 bpo:P10465 a owl:Class ;
     bpo:pcfID "10465" ; bpo:hierarchyID "7.2.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10465. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Wrapping up the process for hiring candidates. Agree to all hiring terms and conditions. Have the candidate accept and sign the job offer." ;
     rdfs:label "Hire candidate" ;
     skos:definition "An Act of Acquisition in which a candidate accepts and signs the job offer and the organization thereby obtains a new employee it did not previously hold." ;
@@ -1367,6 +1420,7 @@ bpo:P10465 a owl:Class ;
 
 bpo:P10444 a owl:Class ;
     bpo:pcfID "10444" ; bpo:hierarchyID "7.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10444. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and maintaining a system for managing the information of applicants. Create records for all candidates who apply. Maintain and track information through the use applicant-tracking systems." ;
     rdfs:label "Manage applicant information" ;
     skos:definition "An Act of Administration that obtains, creates, tracks, and archives applicant records across the recruitment cycle." ;
@@ -1380,6 +1434,7 @@ bpo:P10444 a owl:Class ;
 
 bpo:P10460 a owl:Class ;
     bpo:pcfID "10460" ; bpo:hierarchyID "7.2.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10460. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting a background investigation on the candidates with the objective of looking up and compiling criminal, commercial, and financial records." ;
     rdfs:label "Obtain candidate background information" ;
     skos:definition "An Act of Information Processing that conducts a background investigation on a candidate and compiles candidate background information." ;
@@ -1391,6 +1446,7 @@ bpo:P10460 a owl:Class ;
 
 bpo:P10466 a owl:Class ;
     bpo:pcfID "10466" ; bpo:hierarchyID "7.2.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10466. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and documenting the records of all applicants. Manage all individual applicants, including hires and non-hires. Maintain records to avoid any duplication and promote efficiency." ;
     rdfs:label "Create applicant record" ;
     skos:definition "An Act of Information Processing that creates and documents an applicant record for each candidate who applies." ;
@@ -1423,6 +1479,7 @@ bpo:ApplicantDataManagementCapability a owl:Class ;
 
 bpo:P20124 a owl:Class ;
     bpo:pcfID "20124" ; bpo:hierarchyID "7.2.5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20124. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the requirements for the position to be filled. Determine the experience and skills necessary to perform the tasks outlined." ;
     rdfs:label "Complete position classification and level of experience" ;
     skos:definition "An Act of Identification that discerns the experience and skills required for a position and produces a position classification." ;
@@ -1433,6 +1490,7 @@ bpo:P20124 a owl:Class ;
 
 bpo:P10468 a owl:Class ;
     bpo:pcfID "10468" ; bpo:hierarchyID "7.2.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10468. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Retaining and storing the records of the candidates who were rejected and not hired to ensure future availability in case the need arises. Create a centralized repository of profiles. Label these records in order to readily identify them. Add remarks for any future consideration." ;
     rdfs:label "Archive and retain records of non-hires" ;
     skos:definition "An Act of Information Processing that retains and stores the records of non-hired candidates in a centralized, labeled repository for future reference." ;
@@ -1506,6 +1564,7 @@ bpo:EmployeeTrainingCapability a owl:Class ;
 
 bpo:P10474 a owl:Class ;
     bpo:pcfID "10474" ; bpo:hierarchyID "7.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10474. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and maintaining a mechanism through which new employees acquire the necessary knowledge, skills, and behaviors to become effective organizational members and insiders. Conduct formal meetings, lectures, videos, printed materials, and/or computer-based orientations to introduce newcomers to their new jobs and the organization." ;
     rdfs:label "Create/maintain employee onboarding program" ;
     skos:definition "An Act of Formulation that composes and maintains an onboarding program specification through which new employees acquire the knowledge, skills, and behaviors to become effective organizational members." ;
@@ -1518,6 +1577,7 @@ bpo:P10474 a owl:Class ;
 
 bpo:P10477 a owl:Class ;
     bpo:pcfID "10477" ; bpo:hierarchyID "7.3.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10477. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing a program to systematically introduce newly hired employees to the organizational culture of the company." ;
     rdfs:label "Develop employee induction program" ;
     skos:definition "An Act of Formulation that designs an onboarding program specification systematically introducing newly hired employees to the organizational culture." ;
@@ -1528,6 +1588,7 @@ bpo:P10477 a owl:Class ;
 
 bpo:P10478 a owl:Class ;
     bpo:pcfID "10478" ; bpo:hierarchyID "7.3.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10478. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the orientation and training of new employees about the organizational culture of the company." ;
     rdfs:label "Maintain/Update employee induction program" ;
     skos:definition "An Act of Administration that keeps current and revises an existing onboarding program specification for orienting new employees to the organizational culture." ;
@@ -1537,6 +1598,7 @@ bpo:P10478 a owl:Class ;
 
 bpo:P11243 a owl:Class ;
     bpo:pcfID "11243" ; bpo:hierarchyID "7.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11243. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the performance and effectiveness of employee on-boarding program. Examine the performance of on-boarding program through feedback and reviews from the new employees. Create web and written forms. Obtain information through face-to-face discussions." ;
     rdfs:label "Evaluate the effectiveness of the employee onboarding program" ;
     skos:definition "An Act of Appraisal that has as input employee feedback and has as output an onboarding program evaluation judging the performance and effectiveness of the onboarding program." ;
@@ -1548,6 +1610,7 @@ bpo:P11243 a owl:Class ;
 
 bpo:P17050 a owl:Class ;
     bpo:pcfID "17050" ; bpo:hierarchyID "7.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17050. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Bringing the employee on-boarding program into effect. Implement Create/Maintain employee on-boarding program [10474]. Conduct training sessions and employee engagement programs." ;
     rdfs:label "Execute onboarding program" ;
     skos:definition "An Act of Administration that brings an onboarding program specification into effect by conducting the training sessions and employee-engagement activities it prescribes." ;
@@ -1558,6 +1621,7 @@ bpo:P17050 a owl:Class ;
 
 bpo:P10479 a owl:Class ;
     bpo:pcfID "10479" ; bpo:hierarchyID "7.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10479. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the objectives for employee performance. Establish key performance objectives and measures such as customer-focus objectives, financially focused objectives, and employee growth objectives." ;
     rdfs:label "Define employee performance objectives" ;
     skos:definition "An Act of Formulation that composes and articulates performance objectives and measures for an employee." ;
@@ -1568,6 +1632,7 @@ bpo:P10479 a owl:Class ;
 
 bpo:P21434 a owl:Class ;
     bpo:pcfID "21434" ; bpo:hierarchyID "7.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21434. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Execution of employee reviews/performance on a frequent basis." ;
     rdfs:label "Review employee performance" ;
     skos:definition "An Act of Appraisal that has as input performance data and performance objectives and has as output a performance appraisal of an employee." ;
@@ -1580,6 +1645,7 @@ bpo:P21434 a owl:Class ;
 
 bpo:P10481 a owl:Class ;
     bpo:pcfID "10481" ; bpo:hierarchyID "7.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10481. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing and revamping performance programs, including the instruments used to measure employee performance standards. Review and upgrade these performance programs to avoid any deprivations and ensure effectiveness." ;
     rdfs:label "Evaluate and review performance program" ;
     skos:definition "An Act of Appraisal that judges the effectiveness of an employee-performance-management program and its measurement instruments and has as output a performance program evaluation." ;
@@ -1590,6 +1656,7 @@ bpo:P10481 a owl:Class ;
 
 bpo:P10487 a owl:Class ;
     bpo:pcfID "10487" ; bpo:hierarchyID "7.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10487. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the guidelines for development of employees. Design development policies and procedures to identify areas of growth for employees, either in their current position or in preparation for future roles. Include topics related to knowledge and skill development." ;
     rdfs:label "Define employee development guidelines" ;
     skos:definition "An Act of Formulation that composes employee development guidelines prescribing policies and procedures for identifying employee growth areas." ;
@@ -1600,6 +1667,7 @@ bpo:P10487 a owl:Class ;
 
 bpo:P10488 a owl:Class ;
     bpo:pcfID "10488" ; bpo:hierarchyID "7.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10488. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing a future career path for the employees that encourages them to explore and gather information." ;
     rdfs:label "Develop employee career plans and career paths" ;
     skos:definition "An Act of Formulation that designs a career plan laying out a future career path for an employee." ;
@@ -1610,6 +1678,7 @@ bpo:P10488 a owl:Class ;
 
 bpo:P17051 a owl:Class ;
     bpo:pcfID "17051" ; bpo:hierarchyID "7.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17051. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the development of employee skills. Conduct training, coaching and mentoring, job-rotation and cross training, lateral moves, etc." ;
     rdfs:label "Manage employee skill and competency development" ;
     skos:definition "An Act of Administration that carries out the development of an employee's skills and competencies through training, coaching, mentoring, and job rotation." ;
@@ -1620,6 +1689,7 @@ bpo:P17051 a owl:Class ;
 
 bpo:P10490 a owl:Class ;
     bpo:pcfID "10490" ; bpo:hierarchyID "7.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10490. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aligning the needs of the employees to development needs." ;
     rdfs:label "Align employee with organization development needs" ;
     skos:definition "An Act of Analysis that reconciles individual employee development needs with organizational development needs and has as output a workforce development needs alignment." ;
@@ -1630,6 +1700,7 @@ bpo:P10490 a owl:Class ;
 
 bpo:P16940 a owl:Class ;
     bpo:pcfID "16940" ; bpo:hierarchyID "7.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16940. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the skills, knowledge, abilities, and attributes needed to carry out a specific job." ;
     rdfs:label "Define employee competencies and skills" ;
     skos:definition "An Act of Formulation that composes a competency management model specifying the skills, knowledge, abilities, and attributes needed to carry out a specific job." ;
@@ -1640,6 +1711,7 @@ bpo:P16940 a owl:Class ;
 
 bpo:P10491 a owl:Class ;
     bpo:pcfID "10491" ; bpo:hierarchyID "7.3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10491. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aligning the learning programs with the core capabilities and competencies of the organization. Contextualize the training programs so that employees can expand their knowledge base and add new skills in line with the core competencies of the organization." ;
     rdfs:label "Align learning programs with competencies and skills" ;
     skos:definition "An Act of Formulation that composes a learning program alignment specification aligning the organization's learning programs to its core capabilities and competencies." ;
@@ -1650,6 +1722,7 @@ bpo:P10491 a owl:Class ;
 
 bpo:P10492 a owl:Class ;
     bpo:pcfID "10492" ; bpo:hierarchyID "7.3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10492. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the training necessitated by business processes, using an examination of skill sets that are needed by the organization and those already possessed. Examine the various skills required by individual employees. Design training in light of the availability of resources to provide specific segments of training." ;
     rdfs:label "Establish training needs by analysis of required and available skills" ;
     skos:definition "An Act of Analysis that has as input skill requirement data and has as output a skills gap analysis comparing skills required by the organization with those already possessed in order to establish training needs." ;
@@ -1661,6 +1734,7 @@ bpo:P10492 a owl:Class ;
 
 bpo:P10493 a owl:Class ;
     bpo:pcfID "10493" ; bpo:hierarchyID "7.3.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10493. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating, implementing, and managing the programs for training employees. Create and design sessions on the basis of the needs and the availability of the skills. Conduct the sessions on the ground. Manage all aspects related to the training programs. Consider including literacy training, interpersonal skills training, technical training, problem-solving training, diversity or sensitivity training, etc." ;
     rdfs:label "Develop, conduct, and manage employee and/or management training programs" ;
     skos:definition "An Act of Training in which an organization imparts knowledge, skills, or values to its employees and managers by developing, conducting, and managing training programs." ;
@@ -1673,6 +1747,7 @@ bpo:P10493 a owl:Class ;
 
 bpo:P20125 a owl:Class ;
     bpo:pcfID "20125" ; bpo:hierarchyID "7.3.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20125. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing identified training programs for employees. Engage with industries to provide certifications, administer certification test, and maintain active certification." ;
     rdfs:label "Manage examinations and certifications" ;
     skos:definition "An Act of Administration that runs an organization's certification program by liaising with certification authorities, administering tests, appraising qualifications, and issuing and maintaining certificates." ;
@@ -1686,6 +1761,7 @@ bpo:P20125 a owl:Class ;
 
 bpo:P20126 a owl:Class ;
     bpo:pcfID "20126" ; bpo:hierarchyID "7.3.4.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20126. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Coordinating with third party certification authorities to provide training and certifications for necessary skills." ;
     rdfs:label "Liaise with external certification authorities" ;
     skos:definition "An Act of Administration that coordinates with third-party certification authorities to provide training and certifications for required skills." ;
@@ -1696,6 +1772,7 @@ bpo:P20126 a owl:Class ;
 
 bpo:P20127 a owl:Class ;
     bpo:pcfID "20127" ; bpo:hierarchyID "7.3.4.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20127. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing tests to the workforce that will satisfy completion of certifications." ;
     rdfs:label "Administer certification tests" ;
     skos:definition "An Act of Administration that provides certification tests to the workforce and has as output a certification test result." ;
@@ -1706,6 +1783,7 @@ bpo:P20127 a owl:Class ;
 
 bpo:P20128 a owl:Class ;
     bpo:pcfID "20128" ; bpo:hierarchyID "7.3.4.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20128. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ascertaining the experience level needed to qualify for a specific job or certification within the organization. Some certificates require practical experience as well as training programs." ;
     rdfs:label "Appraise experience qualifications" ;
     skos:definition "An Act of Identification that discerns the experience level needed to qualify for a specific job or certification and has as output an experience qualification assessment." ;
@@ -1716,6 +1794,7 @@ bpo:P20128 a owl:Class ;
 
 bpo:P20129 a owl:Class ;
     bpo:pcfID "20129" ; bpo:hierarchyID "7.3.4.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20129. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering certificates to all candidates that have successfully met experience qualifications, and passed all tests necessary to obtain the certificate." ;
     rdfs:label "Administer certificate issue and maintenance" ;
     skos:definition "An Act of Administration that issues and maintains certificates for candidates who have met the experience qualifications and passed the required tests, and has as output a certification record." ;
@@ -1726,6 +1805,7 @@ bpo:P20129 a owl:Class ;
 
 bpo:P21436 a owl:Class ;
     bpo:pcfID "21436" ; bpo:hierarchyID "7.3.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21436. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Oversight of the organization's learning programs. This process also includes the effectiveness of these programs." ;
     rdfs:label "Monitor and evaluate learning programs" ;
     skos:definition "An Act of Appraisal that oversees and judges the coverage and effectiveness of an organization's learning programs and has as output a learning program evaluation." ;
@@ -1761,6 +1841,7 @@ bpo:LaborManagementPartnershipCapability a owl:Class ;
 
 bpo:P10484 a owl:Class ;
     bpo:pcfID "10484" ; bpo:hierarchyID "7.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10484. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing any negotiations between an employer and a group of employees that determine the conditions of employment. Engage employees to reach agreements in regulating working conditions." ;
     rdfs:label "Manage collective bargaining process" ;
     skos:definition "An Act of Negotiation in which an employer and a group of employees confer and bargain over the conditions of employment and jointly produce a collective bargaining agreement that regulates working conditions." ;
@@ -1773,6 +1854,7 @@ bpo:P10484 a owl:Class ;
 
 bpo:P10531 a owl:Class ;
     bpo:pcfID "10531" ; bpo:hierarchyID "7.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10531. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Taking care or resolving any complaint raised by an employee by procedures provided for in a collective agreement, an employment contract, or by other mechanisms established by an employer." ;
     rdfs:label "Manage employee grievances" ;
     skos:definition "An Act of Administration in which an Agent processes and resolves a complaint raised by an employee according to procedures established by a collective agreement, employment contract, or other employer mechanism, producing a grievance resolution." ;
@@ -1785,6 +1867,7 @@ bpo:P10531 a owl:Class ;
 
 bpo:P21437 a owl:Class ;
     bpo:pcfID "21437" ; bpo:hierarchyID "7.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21437. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Awareness of the employee legislature that is in place for the organization. The regulatory environment could include areas, regions, or countries." ;
     rdfs:label "Monitor legal and regulatory environment" ;
     skos:definition "An Act of Analysis that examines the employment-related legal and regulatory requirements in force across the jurisdictions relevant to an organization and produces an assessment describing the current regulatory environment." ;
@@ -1812,6 +1895,7 @@ bpo:CompensationAndBenefitsCapability rdfs:subClassOf
 
 bpo:P21438 a owl:Class ;
     bpo:pcfID "21438" ; bpo:hierarchyID "7.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21438. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a salary/compensation structure and plan; developing a benefits and reward plan; develop commission plan; performing competitive analyses of benefits and rewards; identifying compensation requirements based on compensation, benefits, and HR policies; administering compensation, commission, and rewards to employees; and rewarding and motivating employees." ;
     rdfs:label "Develop and manage reward, recognition, and motivation programs" ;
     skos:definition "An Act of Administration that develops and manages an organization's reward, recognition, and motivation programs, comprising the formulation of compensation and benefits plans and the administration of compensation and rewards to employees." ;
@@ -1830,6 +1914,7 @@ bpo:P21438 a owl:Class ;
 
 bpo:P10498 a owl:Class ;
     bpo:pcfID "10498" ; bpo:hierarchyID "7.5.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10498. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating the framework for the provision of salary/compensation to employees. Break down the salary structure into different components such as fixed pay, variable pay, bonus, and allowances such medical allowance, and rent allowance, etc. Develop, adjust, and maintain a pay structure." ;
     rdfs:label "Develop salary/compensation structure and plan" ;
     skos:definition "An Act of Formulation that composes a compensation structure prescribing the components of employee pay such as fixed pay, variable pay, bonus, and allowances." ;
@@ -1840,6 +1925,7 @@ bpo:P10498 a owl:Class ;
 
 bpo:P10499 a owl:Class ;
     bpo:pcfID "10499" ; bpo:hierarchyID "7.5.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10499. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a plan for provision of rewards, commission, and benefits to employees. Plan health benefits, retirement benefits, non-monetary benefits, etc." ;
     rdfs:label "Develop benefits and rewards plan" ;
     skos:definition "An Act of Formulation that composes a benefits and rewards plan prescribing the rewards, commission, and benefits to be provided to employees." ;
@@ -1850,6 +1936,7 @@ bpo:P10499 a owl:Class ;
 
 bpo:P10500 a owl:Class ;
     bpo:pcfID "10500" ; bpo:hierarchyID "7.5.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10500. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing and evaluating the organization's benefits and rewards plan. Compare/Benchmark the benefits and employees plan with other organizations to adhere to industry standard practices." ;
     rdfs:label "Perform competitive analysis of benefits and rewards" ;
     skos:definition "An Act of Analysis that has as input market compensation data and has as output a compensation benchmark juxtaposing the organization's benefits and rewards against industry practice." ;
@@ -1861,6 +1948,7 @@ bpo:P10500 a owl:Class ;
 
 bpo:P10501 a owl:Class ;
     bpo:pcfID "10501" ; bpo:hierarchyID "7.5.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10501. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the employee requirements for compensation on the basis of the financial, benefits, and HR policies of the organization. Recognize individual compensation requirements regarding the financial policies of the organization. Consider the benefits plan and overall HR policies while selecting compensation requirements." ;
     rdfs:label "Identify compensation requirements based on financial, benefits, and HR policies" ;
     skos:definition "An Act of Identification that has as input HR policy data and has as output a compensation requirement discerned from the organization's financial, benefits, and HR policies." ;
@@ -1872,6 +1960,7 @@ bpo:P10501 a owl:Class ;
 
 bpo:P10502 a owl:Class ;
     bpo:pcfID "10502" ; bpo:hierarchyID "7.5.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10502. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the provision of compensations and rewards to the employees while maintaining consistency with the compensation and benefits plan. Follow the compensation and benefits plan rigorously in order to avoid any discrepancies." ;
     rdfs:label "Administer compensation and rewards to employees" ;
     skos:definition "An Act of Administration that provisions compensation and rewards to employees in accordance with the compensation and benefits plan and produces a pay statement." ;
@@ -1883,6 +1972,7 @@ bpo:P10502 a owl:Class ;
 
 bpo:P10503 a owl:Class ;
     bpo:pcfID "10503" ; bpo:hierarchyID "7.5.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10503. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Rewarding and stimulating the performance efforts of employees. Create methods for motivating employees. Spur extrinsic and intrinsic motivation." ;
     rdfs:label "Reward and motivate employees" ;
     skos:definition "An Act of Administration that rewards employees and applies extrinsic and intrinsic methods to stimulate their performance efforts." ;
@@ -1893,6 +1983,7 @@ bpo:P10503 a owl:Class ;
 
 bpo:P10510 a owl:Class ;
     bpo:pcfID "10510" ; bpo:hierarchyID "7.5.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10510. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reassessing the indicators for retention and motivation of employees. Monitor the indicators that signal the levels of motivation and retention. Regularly update and upgrade indicators to avoid depreciation and ensure high efficiency." ;
     rdfs:label "Review retention and motivation indicators" ;
     skos:definition "An Act of Appraisal that has as input employee metrics signalling retention and motivation and judges their adequacy and currency." ;
@@ -1903,6 +1994,7 @@ bpo:P10510 a owl:Class ;
 
 bpo:P10511 a owl:Class ;
     bpo:pcfID "10511" ; bpo:hierarchyID "7.5.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10511. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing existing compensation plans and making changes necessary to continue to retain employees." ;
     rdfs:label "Review compensation plan" ;
     skos:definition "An Act of Appraisal that has as input the existing compensation structure and judges what changes are necessary to retain employees." ;
@@ -1917,6 +2009,7 @@ bpo:P10511 a owl:Class ;
 
 bpo:P10495 a owl:Class ;
     bpo:pcfID "10495" ; bpo:hierarchyID "7.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10495. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing and ensuring benefits enrollment by the employees. Process any benefit claims made by the employees. Balance the estimated amount and entitled amount of benefits." ;
     rdfs:label "Manage and administer benefits" ;
     skos:definition "An Act of Administration that manages employee benefits enrollment, processes benefit claims, and reconciles delivered benefits, comprising its constituent benefit-administration activities." ;
@@ -1931,6 +2024,7 @@ bpo:P10495 a owl:Class ;
 
 bpo:P10504 a owl:Class ;
     bpo:pcfID "10504" ; bpo:hierarchyID "7.5.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10504. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing the programs that specify employee benefits, other than salary provided, such as those concerning medical care, death, and disability." ;
     rdfs:label "Deliver employee benefits program" ;
     skos:definition "An Act of Administration that implements the employee benefits program specifying non-salary benefits such as medical care, death, and disability coverage." ;
@@ -1942,6 +2036,7 @@ bpo:P10504 a owl:Class ;
 
 bpo:P10505 a owl:Class ;
     bpo:pcfID "10505" ; bpo:hierarchyID "7.5.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10505. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling the employee enrollment for obtaining benefits. Manage employee enrollment and eligibility. Encourage employees to enroll for benefits." ;
     rdfs:label "Administer benefit enrollment" ;
     skos:definition "An Act of Administration that handles employee enrollment and eligibility for benefits and produces an employee record of enrollment." ;
@@ -1953,6 +2048,7 @@ bpo:P10505 a owl:Class ;
 
 bpo:P10506 a owl:Class ;
     bpo:pcfID "10506" ; bpo:hierarchyID "7.5.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10506. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing any formal requests or demands made by the employees claiming that they have earned some benefits. Send the request further up the managerial hierarchy to ensure approval." ;
     rdfs:label "Process claims" ;
     skos:definition "An Act of Administration that has as input an employee benefit claim and processes it, routing it for managerial approval." ;
@@ -1963,6 +2059,7 @@ bpo:P10506 a owl:Class ;
 
 bpo:P10507 a owl:Class ;
     bpo:pcfID "10507" ; bpo:hierarchyID "7.5.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10507. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out reconciliation of benefits delivered to employees. Compare the estimated benefit requirement made by the employee and the actual amount of benefits the employee is entitled to receive." ;
     rdfs:label "Perform benefit reconciliation" ;
     skos:definition "An Act of Analysis that compares the estimated and entitled benefit amounts for employees and has as output a benefit reconciliation statement." ;
@@ -1977,6 +2074,7 @@ bpo:P10507 a owl:Class ;
 
 bpo:P21439 a owl:Class ;
     bpo:pcfID "21439" ; bpo:hierarchyID "7.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21439. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing activities centered around delivering programs to support work/life balance for employees; developing family support systems; reviewing retention and motivation indicators; and reviewing compensation plans." ;
     rdfs:label "Manage employee assistance and retention" ;
     skos:definition "An Act of Administration that manages employee assistance and retention by delivering work/life-balance programs and developing family support systems." ;
@@ -1989,6 +2087,7 @@ bpo:P21439 a owl:Class ;
 
 bpo:P10508 a owl:Class ;
     bpo:pcfID "10508" ; bpo:hierarchyID "7.5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10508. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing programs that prompt proper balance between work (i.e., career and ambition) and lifestyle (i.e., health, pleasure, leisure, family, and spiritual development/meditation). Account for dependent care, flexible working arrangements, leaves of absence, on-the-job training, etc." ;
     rdfs:label "Deliver programs to support work/life balance for employees" ;
     skos:definition "An Act of Administration that designs and delivers programs promoting balance between employees' work and lifestyle, covering arrangements such as dependent care, flexible working, and leaves of absence." ;
@@ -2000,6 +2099,7 @@ bpo:P10508 a owl:Class ;
 
 bpo:P21440 a owl:Class ;
     bpo:pcfID "21440" ; bpo:hierarchyID "7.5.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21440. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creation and execution of a plan that might allow for work from home days, or alternate hours." ;
     rdfs:label "Manage flexible working" ;
     skos:definition "An Act of Administration that creates and executes a flexible-working plan permitting arrangements such as work-from-home days or alternate hours." ;
@@ -2010,6 +2110,7 @@ bpo:P21440 a owl:Class ;
 
 bpo:P10509 a owl:Class ;
     bpo:pcfID "10509" ; bpo:hierarchyID "7.5.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10509. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a support structure that aligns with local and federal laws that allow for support for families. This could include things like maternity leave, care for a family member, or in some cases, extended sick leave." ;
     rdfs:label "Develop family support systems" ;
     skos:definition "An Act of Formulation that composes a family support structure, aligned with local and federal law, prescribing provisions such as maternity leave, family-member care, and extended sick leave." ;
@@ -2025,6 +2126,7 @@ bpo:P10509 a owl:Class ;
 
 bpo:P10497 a owl:Class ;
     bpo:pcfID "10497" ; bpo:hierarchyID "7.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10497. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the sum of all financial records of salaries for an employee, including wages, bonuses, and deductions. Use a payroll management system to deal with the financial aspects of employees' salaries, allowances, deductions, gross pay, net pay, etc. Generate pay slips for a specific period." ;
     rdfs:label "Administer payroll" ;
     skos:definition "An Act of Administration that has as input employee data and manages the financial records of employee salaries, including wages, bonuses, and deductions, producing pay statements for a given period." ;
@@ -2040,6 +2142,7 @@ bpo:P10497 a owl:Class ;
 
 bpo:P10413 a owl:Class ;
     bpo:pcfID "10413" ; bpo:hierarchyID "7.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10413. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the reassignment and retirement of employees. Manage the process of employee promotion and demotion. Administer separation, retirement, and leaves of absence. Outplace employees. Deploy personnel. Relocate employees in order to manage assignments." ;
     rdfs:label "Redeploy and retire employees" ;
     skos:definition "An Act of Administration that carries out the organization's procedures for reassigning, redeploying, and separating employees, comprising the administration of promotions and demotions, separations, retirements, leaves of absence, outplacement, scheduling, and relocations." ;
@@ -2057,6 +2160,7 @@ bpo:P10413 a owl:Class ;
 
 bpo:P10512 a owl:Class ;
     bpo:pcfID "10512" ; bpo:hierarchyID "7.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10512. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the process of promoting and demoting employees. Design a system for advancing or demoting an employee's rank or position. Leverage techniques such as horizontal promotion, vertical promotion, dry promotion, and involuntary/voluntary demotion." ;
     rdfs:label "Manage promotion and demotion process" ;
     skos:definition "An Act of Administration that has as input employee data and produces an updated employee record registering an advancement or reduction in an employee's rank or position." ;
@@ -2069,6 +2173,7 @@ bpo:P10512 a owl:Class ;
 
 bpo:P10513 a owl:Class ;
     bpo:pcfID "10513" ; bpo:hierarchyID "7.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10513. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the process of employee separation, including resignations, discharges, and layoffs. Inform the employee of the termination. Complete paperwork for continuation of benefits." ;
     rdfs:label "Manage separation" ;
     skos:definition "An Act of Administration that has as input employee data and produces an updated employee record terminating the employment relationship by resignation, discharge, or layoff." ;
@@ -2081,6 +2186,7 @@ bpo:P10513 a owl:Class ;
 
 bpo:P10514 a owl:Class ;
     bpo:pcfID "10514" ; bpo:hierarchyID "7.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10514. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing and administering instances where a person stops employment completely." ;
     rdfs:label "Manage retirement" ;
     skos:definition "An Act of Administration that has as input employee data and produces an updated employee record recording the complete and permanent cessation of a person's employment by retirement." ;
@@ -2093,6 +2199,7 @@ bpo:P10514 a owl:Class ;
 
 bpo:P10515 a owl:Class ;
     bpo:pcfID "10515" ; bpo:hierarchyID "7.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10515. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the period of time that an employee must be away from their primary job, while maintaining the status of employee (i.e., paid and unpaid leave of absence but not vacations, holidays, hiatuses, sabbaticals, and work-from-home programs)." ;
     rdfs:label "Manage leave of absence" ;
     skos:definition "An Act of Administration that has as input employee data and produces an updated employee record governing a period during which an employee is away from their primary job while retaining employee status." ;
@@ -2105,6 +2212,7 @@ bpo:P10515 a owl:Class ;
 
 bpo:P10516 a owl:Class ;
     bpo:pcfID "10516" ; bpo:hierarchyID "7.6.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10516. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Helping former employees transition to new jobs or to re-orient themselves in the job market. Deliver help through one-on-one sessions or in a group format. Provide guidance in career evaluation, resume writing, interview preparation, developing networks, and job searching." ;
     rdfs:label "Develop and implement employee outplacement" ;
     skos:definition "An Act of Information Processing that delivers transition guidance to a departing or former employee -- through one-on-one or group sessions on career evaluation, resume writing, interview preparation, networking, and job searching -- to help them transition to a new job or re-orient in the job market." ;
@@ -2117,6 +2225,7 @@ bpo:P10516 a owl:Class ;
 
 bpo:P20132 a owl:Class ;
     bpo:pcfID "20132" ; bpo:hierarchyID "7.6.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20132. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Organizing the workforce so that all positions are covered for all shifts with the necessary skilled resources in place. Have a system in place to backfill positions while an employee is on leave." ;
     rdfs:label "Manage workforce scheduling" ;
     skos:definition "An Act of Administration that has as input workforce data and produces a staffing plan that covers all positions across all shifts with appropriately skilled resources." ;
@@ -2130,6 +2239,7 @@ bpo:P20132 a owl:Class ;
 
 bpo:P20133 a owl:Class ;
     bpo:pcfID "20133" ; bpo:hierarchyID "7.6.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20133. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining resources necessary to fill a position utilizing specific skills and capabilities." ;
     rdfs:label "Receive required resources/skills and capabilities" ;
     skos:definition "An Act of Administration that has as input skill requirement data and allocates the skilled resources necessary to fill a position within the organization's workforce schedule." ;
@@ -2140,6 +2250,7 @@ bpo:P20133 a owl:Class ;
 
 bpo:P10517 a owl:Class ;
     bpo:pcfID "10517" ; bpo:hierarchyID "7.6.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10517. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Allocating employees. Deploy personnel to ensure that the labor of the organization is continuously in an optimal relation to the jobs and organizational structure." ;
     rdfs:label "Manage resource deployment" ;
     skos:definition "An Act of Administration that has as input workforce data and produces a staffing plan that allocates and deploys personnel so that the organization's labor stays in optimal relation to its jobs and structure." ;
@@ -2152,6 +2263,7 @@ bpo:P10517 a owl:Class ;
 
 bpo:P17055 a owl:Class ;
     bpo:pcfID "17055" ; bpo:hierarchyID "7.6.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17055. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the relocation of employees in order to carry out assignments. Manage internal business processes to transfer employees, their families, and/or entire departments of a business to a new location." ;
     rdfs:label "Relocate employees and manage assignments" ;
     skos:definition "An Act of Administration that has as input employee data and produces a relocation plan for transferring an employee, their family, or a department to a new location in order to carry out an assignment." ;
@@ -2165,6 +2277,7 @@ bpo:P17055 a owl:Class ;
 
 bpo:P10520 a owl:Class ;
     bpo:pcfID "10520" ; bpo:hierarchyID "7.6.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10520. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing foreign resources. Manage employees who are sent to live abroad for a defined time period, as well as non-native employees." ;
     rdfs:label "Manage expatriates" ;
     skos:definition "An Act of Administration that has as input employee data and produces a relocation plan governing the assignment of an employee sent to live abroad for a defined period, as well as non-native employees." ;
@@ -2181,6 +2294,7 @@ bpo:P10520 a owl:Class ;
 
 bpo:P10522 a owl:Class ;
     bpo:pcfID "10522" ; bpo:hierarchyID "7.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10522. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing information and reports regarding employees to management." ;
     rdfs:label "Manage reporting processes" ;
     skos:definition "An Act of Administration that compiles employee information and produces an HR report supplied to management." ;
@@ -2193,6 +2307,7 @@ bpo:P10522 a owl:Class ;
 
 bpo:P10523 a owl:Class ;
     bpo:pcfID "10523" ; bpo:hierarchyID "7.7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10523. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling instances where an employee believes that he/she has been inappropriately treated or he/she desires clarification. Encourage employees to inquire when needed. Record and clarify the issues for which the enquiry has been made." ;
     rdfs:label "Manage employee inquiry process" ;
     skos:definition "An Act of Administration that records and clarifies the issue raised in an employee inquiry and produces a grievance resolution." ;
@@ -2205,6 +2320,7 @@ bpo:P10523 a owl:Class ;
 
 bpo:P10524 a owl:Class ;
     bpo:pcfID "10524" ; bpo:hierarchyID "7.7.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10524. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Capturing and updating employee information and data and information on the employees." ;
     rdfs:label "Manage and maintain employee data" ;
     skos:definition "An Act of Administration that captures and updates employee information and produces an employee record." ;
@@ -2216,6 +2332,7 @@ bpo:P10524 a owl:Class ;
 
 bpo:P10526 a owl:Class ;
     bpo:pcfID "10526" ; bpo:hierarchyID "7.7.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10526. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and maintaining performance metrics for employees. Create and manage a strategic system of data and statistics to accurately gauge each employee's information. Consider productivity metrics, efficiency metrics, training metrics, etc." ;
     rdfs:label "Develop and manage employee measures" ;
     skos:definition "An Act of Measuring that derives and maintains performance metrics gauging each employee's productivity, efficiency, and training relative to a standard, and produces an employee metric." ;
@@ -2228,6 +2345,7 @@ bpo:P10526 a owl:Class ;
 
 bpo:P21441 a owl:Class ;
     bpo:pcfID "21441" ; bpo:hierarchyID "7.7.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21441. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understand, develop, and gather workforce data in support of stakeholder requirements." ;
     rdfs:label "Develop workforce analytics" ;
     skos:definition "An Act of Acquisition that scopes, sources, and gathers workforce data in support of stakeholder requirements and produces a body of workforce data for analytics." ;
@@ -2244,6 +2362,7 @@ bpo:P21441 a owl:Class ;
 
 bpo:P21442 a owl:Class ;
     bpo:pcfID "21442" ; bpo:hierarchyID "7.7.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21442. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collect and manage requirements from various enterprise stakeholders about workforce analytics." ;
     rdfs:label "Determine stakeholder requirements" ;
     skos:definition "An Act of Identification that collects and discerns workforce-analytics requirements from enterprise stakeholders and produces a stakeholder-requirements record." ;
@@ -2255,6 +2374,7 @@ bpo:P21442 a owl:Class ;
 
 bpo:P21443 a owl:Class ;
     bpo:pcfID "21443" ; bpo:hierarchyID "7.7.7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21443. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Summarize stakeholder requirements into discrete research questions in support of workforce analytics." ;
     rdfs:label "Identify research questions" ;
     skos:definition "An Act of Identification that summarizes stakeholder requirements into discrete research questions and produces a research question." ;
@@ -2266,6 +2386,7 @@ bpo:P21443 a owl:Class ;
 
 bpo:P21444 a owl:Class ;
     bpo:pcfID "21444" ; bpo:hierarchyID "7.7.7.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21444. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Consider stakeholder requirements, research questions, and organizations standards around research to select appropriate research methodology in support of workforce analytics." ;
     rdfs:label "Select workforce analysis methodology" ;
     skos:definition "An Act of Selection that chooses an appropriate research methodology from candidate approaches in light of stakeholder requirements and research questions and produces a workforce analysis methodology." ;
@@ -2278,6 +2399,7 @@ bpo:P21444 a owl:Class ;
 
 bpo:P21445 a owl:Class ;
     bpo:pcfID "21445" ; bpo:hierarchyID "7.7.7.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21445. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identify appropriate data sources for workforce analytics data while considering organizational standards for data sources." ;
     rdfs:label "Identify workforce data sources" ;
     skos:definition "An Act of Identification that discerns the appropriate data sources for workforce-analytics data in light of organizational data-source standards." ;
@@ -2287,6 +2409,7 @@ bpo:P21445 a owl:Class ;
 
 bpo:P21446 a owl:Class ;
     bpo:pcfID "21446" ; bpo:hierarchyID "7.7.7.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21446. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collect and procure, as needed, workforce data from internal and external data sources in support of workforce analytics." ;
     rdfs:label "Gather workforce data" ;
     skos:definition "An Act of Acquisition that collects and procures workforce data from internal and external sources and produces a body of workforce data." ;
@@ -2297,6 +2420,7 @@ bpo:P21446 a owl:Class ;
 
 bpo:P21447 a owl:Class ;
     bpo:pcfID "21447" ; bpo:hierarchyID "7.7.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21447. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Transform, develop, and communicate workforce data into analytics in support of organizational requirements." ;
     rdfs:label "Implement workforce analytics" ;
     skos:definition "An Act of Analysis that transforms workforce data, develops insights, and communicates them, producing a workforce analysis in support of organizational requirements." ;
@@ -2311,6 +2435,7 @@ bpo:P21447 a owl:Class ;
 
 bpo:P21448 a owl:Class ;
     bpo:pcfID "21448" ; bpo:hierarchyID "7.7.8.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21448. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Logically and statistically validate collected or purchased data in support of analytics needs" ;
     rdfs:label "Transform workforce analysis data" ;
     skos:definition "An Act of Data Transformation that logically and statistically validates collected or purchased workforce data and produces validated workforce data." ;
@@ -2323,6 +2448,7 @@ bpo:P21448 a owl:Class ;
 
 bpo:P21449 a owl:Class ;
     bpo:pcfID "21449" ; bpo:hierarchyID "7.7.8.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21449. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Synthesize insights from workforce analytics data" ;
     rdfs:label "Develop insights into workforce analytics outcomes" ;
     skos:definition "An Act of Analysis that synthesizes insights from validated workforce-analytics data and produces a workforce analysis." ;
@@ -2334,6 +2460,7 @@ bpo:P21449 a owl:Class ;
 
 bpo:P21450 a owl:Class ;
     bpo:pcfID "21450" ; bpo:hierarchyID "7.7.8.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21450. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Summarize, package, and distribute results of workforce analysis." ;
     rdfs:label "Communicate workforce analysis outcomes" ;
     skos:definition "An Act of Communication that summarizes and packages a workforce analysis and distributes it to its recipients as an HR report." ;
@@ -2347,6 +2474,7 @@ bpo:P21450 a owl:Class ;
 
 bpo:P10530 a owl:Class ;
     bpo:pcfID "10530" ; bpo:hierarchyID "7.7.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10530. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Procuring and handling suggestions from employees, and performing research on employees. Manage and analyze the programs that help the organization to tap into employee ideas for improving the organization's processes and/or products. Use surveys, focus groups, and other data-gathering methods to find out the attitudes, opinions, and feelings of members of an organization." ;
     rdfs:label "Manage/Collect employee suggestions and perform employee research" ;
     skos:definition "An Act of Analysis that performs employee research through surveys and focus groups and produces an engagement survey result describing employee attitudes and opinions." ;
@@ -2399,6 +2527,7 @@ bpo:WorkforceAnalyticsCapability rdfs:subClassOf
 
 bpo:P10529 a owl:Class ;
     bpo:pcfID "10529" ; bpo:hierarchyID "7.8.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10529. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for managing communication among employees. Inform employees of direction. Counter resistance with change management approaches. Seek specific areas of input to the decision-making process. Seek varying degrees of involvement and co-creation." ;
     rdfs:label "Develop employee communication plan" ;
     skos:definition "An Act of Formulation that composes a plan governing communication and engagement among employees and between employees and management, and has as output an employee communication plan." ;
@@ -2409,6 +2538,7 @@ bpo:P10529 a owl:Class ;
 
 bpo:P16944 a owl:Class ;
     bpo:pcfID "16944" ; bpo:hierarchyID "7.8.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16944. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Questioning employees to ascertain overall workplace satisfaction." ;
     rdfs:label "Conduct employee engagement surveys" ;
     skos:definition "An Act of Analysis that questions employees and processes their responses to ascertain overall workplace satisfaction, and has as output an engagement survey result." ;
@@ -2420,6 +2550,7 @@ bpo:P16944 a owl:Class ;
 
 bpo:P10532 a owl:Class ;
     bpo:pcfID "10532" ; bpo:hierarchyID "7.8.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10532. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing the communication plan for employees. Initiate dialogues and engagement by monitoring the exchange of ideas and opinions, the development of personal relationships, etc." ;
     rdfs:label "Deliver employee communications" ;
     skos:definition "An Act of Communication that transfers information to employees in execution of an employee communication plan, initiating dialogue and engagement." ;

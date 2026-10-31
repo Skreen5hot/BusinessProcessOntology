@@ -952,6 +952,7 @@ bpo:RestitutionManagementCapability a owl:Class ;
 
 bpo:P10728 a owl:Class ;
     bpo:pcfID "10728" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10728. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1" ;
     bpo:apqcSourceText "Determining different stages of the planning process and accounting. Classify, determine, analyze, interpret, and communicate information to make up-to-date business decisions for better management and control functions." ;
     rdfs:label "Planning and Management Accounting Capability" ;
@@ -966,6 +967,7 @@ bpo:P10728 a owl:Class ;
 
 bpo:P10738 a owl:Class ;
     bpo:pcfID "10738" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10738. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.1" ;
     bpo:apqcSourceText "Allocating funds to meet future and current financial goals. Led by the chief financial officer, have the finance function plan, budget, and forecast in order to determine and describe long and short-term financial goals." ;
     rdfs:label "Perform planning/budgeting/forecasting" ;
@@ -982,6 +984,7 @@ bpo:P10738 a owl:Class ;
 
 bpo:P10771 a owl:Class ;
     bpo:pcfID "10771" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10771. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.1.1" ;
     bpo:apqcSourceText "Formulating financial budgetary guidelines and strategies. Develop a framework for rules and regulations regarding budgets. Create a step-by-step process to achieve financial goals." ;
     rdfs:label "Develop and maintain budget policies and procedures" ;
@@ -994,6 +997,7 @@ bpo:P10771 a owl:Class ;
 
 bpo:P10772 a owl:Class ;
     bpo:pcfID "10772" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10772. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.1.2" ;
     bpo:apqcSourceText "Creating reports on a quarterly or annual basis for fund allocation. Create a financial statement that estimates revenues and expenses over a specific period of time. (Leverage budget methods such as cost-based and zero-based budgeting techniques, in light of the periodic targets outlined during Develop and maintain budget policies and procedures [10771].)" ;
     rdfs:label "Prepare periodic budgets and plans" ;
@@ -1005,6 +1009,7 @@ bpo:P10772 a owl:Class ;
 
 bpo:P20135 a owl:Class ;
     bpo:pcfID "20135" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20135. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.1.3" ;
     bpo:apqcSourceText "Putting budgeting plans into practical use keeping within designated forecasting parameters." ;
     rdfs:label "Operationalize and implement plans to achieve budget" ;
@@ -1016,6 +1021,7 @@ bpo:P20135 a owl:Class ;
 
 bpo:P10773 a owl:Class ;
     bpo:pcfID "10773" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10773. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.1.4" ;
     bpo:apqcSourceText "Creating estimates of the projected income and expenses required over a predetermined time frame. Develop the projections of profit and loss statements, balance sheets, and the cash flow forecast." ;
     rdfs:label "Prepare periodic financial forecasts" ;
@@ -1028,6 +1034,7 @@ bpo:P10773 a owl:Class ;
 
 bpo:P20136 a owl:Class ;
     bpo:pcfID "20136" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20136. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.1.5" ;
     bpo:apqcSourceText "Conducting a quantitative analysis between what was forecasted and budgeted and actual financial behavior." ;
     rdfs:label "Perform variance analysis against forecasts and budgets" ;
@@ -1042,6 +1049,7 @@ bpo:P20136 a owl:Class ;
 
 bpo:P10739 a owl:Class ;
     bpo:pcfID "10739" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10739. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2" ;
     bpo:apqcSourceText "Defining costs to be incurred and methods for optimum utilization. Determine the costs of products, processes, projects, etc. to compile in the financial statements, as well as to assist management in making decisions regarding planning and control. Control costs by managing and reducing business expenses." ;
     rdfs:label "Perform cost accounting and control" ;
@@ -1058,6 +1066,7 @@ bpo:P10739 a owl:Class ;
 
 bpo:P10774 a owl:Class ;
     bpo:pcfID "10774" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10774. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2.1" ;
     bpo:apqcSourceText "Conducting accounting for assets, and finding reasons for changes (depreciation, obsolescence, deterioration, change in customer taste, increased demand, decreased market supply, etc.)." ;
     rdfs:label "Perform inventory accounting" ;
@@ -1070,6 +1079,7 @@ bpo:P10774 a owl:Class ;
 
 bpo:P14057 a owl:Class ;
     bpo:pcfID "14057" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14057. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2.2" ;
     bpo:apqcSourceText "Determining the revenue, profits, and losses incurred by each unit within the organization that produces profit." ;
     rdfs:label "Perform profit center accounting" ;
@@ -1082,6 +1092,7 @@ bpo:P14057 a owl:Class ;
 
 bpo:P10775 a owl:Class ;
     bpo:pcfID "10775" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10775. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2.3" ;
     bpo:apqcSourceText "Studying expenses directly associated with product. Analyze the cost of sales, which is the cost of manufacturing products." ;
     rdfs:label "Perform cost of sales analysis" ;
@@ -1094,6 +1105,7 @@ bpo:P10775 a owl:Class ;
 
 bpo:P10776 a owl:Class ;
     bpo:pcfID "10776" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10776. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2.4" ;
     bpo:apqcSourceText "Studying and finding out the relevant cost center for a product by studying every resource used in its making." ;
     rdfs:label "Perform product costing" ;
@@ -1106,6 +1118,7 @@ bpo:P10776 a owl:Class ;
 
 bpo:P10777 a owl:Class ;
     bpo:pcfID "10777" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10777. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2.5" ;
     bpo:apqcSourceText "Discovering the changes between forecasted and actual costing. Analyze actual and planned behavior by reviewing the amount of a variance on a trend line in order to maintain control over a business." ;
     rdfs:label "Perform variance analysis" ;
@@ -1118,6 +1131,7 @@ bpo:P10777 a owl:Class ;
 
 bpo:P11175 a owl:Class ;
     bpo:pcfID "11175" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11175. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.2.6" ;
     bpo:apqcSourceText "Making a report about revenues generated by the organization or business unit concerned. This process requires the organization to create a report which shows how business is generating profits. Profits are the part which is left after paying all expenses directly related to the generation of the revenue, such as producing a product, and other expenses related to conducting business activities." ;
     rdfs:label "Report on profitability" ;
@@ -1130,6 +1144,7 @@ bpo:P11175 a owl:Class ;
 
 bpo:P10740 a owl:Class ;
     bpo:pcfID "10740" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10740. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.3" ;
     bpo:apqcSourceText "Deciding which expenses can be avoided to reduce some costs and increase revenues. Plan and control the organization's budget to forecast future expenditures." ;
     rdfs:label "Perform cost management" ;
@@ -1144,6 +1159,7 @@ bpo:P10740 a owl:Class ;
 
 bpo:P10778 a owl:Class ;
     bpo:pcfID "10778" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10778. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.3.1" ;
     bpo:apqcSourceText "Defining cost drivers for a particular activity." ;
     rdfs:label "Determine key cost drivers" ;
@@ -1156,6 +1172,7 @@ bpo:P10778 a owl:Class ;
 
 bpo:P10779 a owl:Class ;
     bpo:pcfID "10779" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10779. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.3.2" ;
     bpo:apqcSourceText "Calculating cost drivers." ;
     rdfs:label "Measure cost drivers" ;
@@ -1169,6 +1186,7 @@ bpo:P10779 a owl:Class ;
 
 bpo:P10780 a owl:Class ;
     bpo:pcfID "10780" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10780. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.3.3" ;
     bpo:apqcSourceText "Determine the activities that hinder the progress of finance activities. This requires the organization to determine those business activities carried out by the financial function of the organization and which are indispensable. This undertaking helps the organization triangulate those activities which are essential and where costs cannot be slashed." ;
     rdfs:label "Determine critical activities" ;
@@ -1180,6 +1198,7 @@ bpo:P10780 a owl:Class ;
 
 bpo:P10781 a owl:Class ;
     bpo:pcfID "10781" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10781. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.3.4" ;
     bpo:apqcSourceText "Distributing or allocating asset resources in different processes for optimal utilization." ;
     rdfs:label "Manage asset resource deployment and utilization" ;
@@ -1191,6 +1210,7 @@ bpo:P10781 a owl:Class ;
 
 bpo:P10741 a owl:Class ;
     bpo:pcfID "10741" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10741. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4" ;
     bpo:apqcSourceText "Checking and achieving predetermined financial targets and timelines. Assess and manage the profitability, feasibility, and consistency of a business or project. Study the revenues generated." ;
     rdfs:label "Evaluate and manage financial performance" ;
@@ -1207,6 +1227,7 @@ bpo:P10741 a owl:Class ;
 
 bpo:P10782 a owl:Class ;
     bpo:pcfID "10782" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10782. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.1" ;
     bpo:apqcSourceText "Studying product demand and targeted customer preferences. Study customers' demands or preferences after deducting the cost of delivering the final product." ;
     rdfs:label "Assess customer and product profitability" ;
@@ -1220,6 +1241,7 @@ bpo:P10782 a owl:Class ;
 
 bpo:P10783 a owl:Class ;
     bpo:pcfID "10783" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10783. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.2" ;
     bpo:apqcSourceText "Checking demand about a specific product by a customer segment. Conduct a detailed study--or research a customer behavior or preference for a product--in order to determine its production and profitability in a specific market." ;
     rdfs:label "Evaluate new products" ;
@@ -1231,6 +1253,7 @@ bpo:P10783 a owl:Class ;
 
 bpo:P10784 a owl:Class ;
     bpo:pcfID "10784" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10784. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.3" ;
     bpo:apqcSourceText "Determining the cost of delivering an end product at different stages of production. Study the total life cycle of a product/process to determine how much revenue and production cost will be incurred at every stage in order to make strategic decisions." ;
     rdfs:label "Perform life cycle costing" ;
@@ -1243,6 +1266,7 @@ bpo:P10784 a owl:Class ;
 
 bpo:P10785 a owl:Class ;
     bpo:pcfID "10785" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10785. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.4" ;
     bpo:apqcSourceText "Creating the best fit between a product and the end user. Maximize the customer base by providing different products in the market." ;
     rdfs:label "Optimize customer and product mix" ;
@@ -1255,6 +1279,7 @@ bpo:P10785 a owl:Class ;
 
 bpo:P10786 a owl:Class ;
     bpo:pcfID "10786" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10786. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.5" ;
     bpo:apqcSourceText "Observing the behavior of a new set of customers for different products. Prepare strategies to improve sales and profits." ;
     rdfs:label "Track performance of new-customer and product strategies" ;
@@ -1266,6 +1291,7 @@ bpo:P10786 a owl:Class ;
 
 bpo:P10787 a owl:Class ;
     bpo:pcfID "10787" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10787. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.6" ;
     bpo:apqcSourceText "Evaluating performance based on different sets of activities created by management to measure performance." ;
     rdfs:label "Prepare activity-based performance measures" ;
@@ -1277,6 +1303,7 @@ bpo:P10787 a owl:Class ;
 
 bpo:P10788 a owl:Class ;
     bpo:pcfID "10788" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10788. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.7" ;
     bpo:apqcSourceText "Conducting activities to improve cost distribution regularly. Follow or adopt different ways of reducing costs." ;
     rdfs:label "Continuous Cost Improvement Capability" ;
@@ -1291,6 +1318,7 @@ bpo:P10788 a owl:Class ;
 
 bpo:P10729 a owl:Class ;
     bpo:pcfID "10729" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10729. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2" ;
     bpo:apqcSourceText "Comparing revenue targets to reality. Review all transactions and entries passed in final accounts in a year in order to examine profits." ;
     rdfs:label "Perform revenue accounting" ;
@@ -1307,6 +1335,7 @@ bpo:P10729 a owl:Class ;
 
 bpo:P10742 a owl:Class ;
     bpo:pcfID "10742" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10742. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1" ;
     bpo:apqcSourceText "Evaluating and processing requests for advances. Evaluate credit requests by customers requiring loans to buy products/services." ;
     rdfs:label "Process customer credit" ;
@@ -1325,6 +1354,7 @@ bpo:P10742 a owl:Class ;
 
 bpo:P10789 a owl:Class ;
     bpo:pcfID "10789" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10789. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.1" ;
     bpo:apqcSourceText "Creating guidelines for providing advances. Set up credit standards, credit terms, and collection policies." ;
     rdfs:label "Establish credit policies" ;
@@ -1336,6 +1366,7 @@ bpo:P10789 a owl:Class ;
 
 bpo:P10790 a owl:Class ;
     bpo:pcfID "10790" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10790. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.2" ;
     bpo:apqcSourceText "Checking and accepting new requests based on eligibility criteria. Analyze the status of applicants and requirements to be met for a new account." ;
     rdfs:label "Analyze/Approve new account applications" ;
@@ -1349,6 +1380,7 @@ bpo:P10790 a owl:Class ;
 
 bpo:P14187 a owl:Class ;
     bpo:pcfID "14187" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14187. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.3" ;
     bpo:apqcSourceText "Reviewing past credit scores to determine the if a line of credit will be extended to potential customers. This could also include extending additional credit to existing accounts." ;
     rdfs:label "Analyze credit scoring history" ;
@@ -1361,6 +1393,7 @@ bpo:P14187 a owl:Class ;
 
 bpo:P14188 a owl:Class ;
     bpo:pcfID "14188" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14188. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.4" ;
     bpo:apqcSourceText "Planning credit score requirements based on established credit policies." ;
     rdfs:label "Forecast credit scoring requirement" ;
@@ -1373,6 +1406,7 @@ bpo:P14188 a owl:Class ;
 
 bpo:P10791 a owl:Class ;
     bpo:pcfID "10791" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10791. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.5" ;
     bpo:apqcSourceText "Evaluating existing account holders and their past performance. Regularly review existing accounts to get the required information about the status at present." ;
     rdfs:label "Review existing accounts" ;
@@ -1385,6 +1419,7 @@ bpo:P10791 a owl:Class ;
 
 bpo:P10792 a owl:Class ;
     bpo:pcfID "10792" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10792. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.6" ;
     bpo:apqcSourceText "Preparing account payable reports about payments to be made according to accounting rules and principles, and providing the reports to management." ;
     rdfs:label "Produce credit/collection reports" ;
@@ -1396,6 +1431,7 @@ bpo:P10792 a owl:Class ;
 
 bpo:P10793 a owl:Class ;
     bpo:pcfID "10793" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10793. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.1.7" ;
     bpo:apqcSourceText "Closing or restarting accounts according to changes made in credit policies." ;
     rdfs:label "Reinstate or suspend accounts based on credit policies" ;
@@ -1408,6 +1444,7 @@ bpo:P10793 a owl:Class ;
 
 bpo:P10743 a owl:Class ;
     bpo:pcfID "10743" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10743. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.2" ;
     bpo:apqcSourceText "Preparing detailed reports of customer purchases. Prepare a commercial document between the seller and customer with details about transaction. Detail the quantity purchased, price of products/services, date, parties involved, unique invoice number, and tax information." ;
     rdfs:label "Invoice customer" ;
@@ -1424,6 +1461,7 @@ bpo:P10743 a owl:Class ;
 
 bpo:P10794 a owl:Class ;
     bpo:pcfID "10794" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10794. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.2.1" ;
     bpo:apqcSourceText "Creating and updating a record of customers and the products being purchased by them in a database. This process element requires the organization to maintain a database of customers and their purchases. Such a master-file can be used to ensure customer touch point, enhance customer satisfaction, explore cross selling opportunities, and identify future trends. This database will include several particulars about the personal details of the organization's customers and a tracking of the products being sold." ;
     rdfs:label "Maintain customer/product master files" ;
@@ -1435,6 +1473,7 @@ bpo:P10794 a owl:Class ;
 
 bpo:P10795 a owl:Class ;
     bpo:pcfID "10795" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10795. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.2.2" ;
     bpo:apqcSourceText "Preparing detailed reports about products purchased by customers. Record and generate a detail account of transactions made by customers fat a particular time and location. Include all details about products such as price, quantity, and name." ;
     rdfs:label "Generate customer billing data" ;
@@ -1446,6 +1485,7 @@ bpo:P10795 a owl:Class ;
 
 bpo:P10796 a owl:Class ;
     bpo:pcfID "10796" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10796. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.2.3" ;
     bpo:apqcSourceText "Providing information to customers about purchases made by them. Communicate the details of purchases. Provide customers with a copy of details for their reference." ;
     rdfs:label "Transmit billing data to customers" ;
@@ -1458,6 +1498,7 @@ bpo:P10796 a owl:Class ;
 
 bpo:P10797 a owl:Class ;
     bpo:pcfID "10797" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10797. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.2.4" ;
     bpo:apqcSourceText "Registering transactions and their scheduled payments." ;
     rdfs:label "Post receivable entries" ;
@@ -1469,6 +1510,7 @@ bpo:P10797 a owl:Class ;
 
 bpo:P10798 a owl:Class ;
     bpo:pcfID "10798" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10798. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.2.5" ;
     bpo:apqcSourceText "Checking and solving billing queries raised by customers." ;
     rdfs:label "Resolve customer billing inquiries" ;
@@ -1481,6 +1523,7 @@ bpo:P10798 a owl:Class ;
 
 bpo:P10744 a owl:Class ;
     bpo:pcfID "10744" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10744. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.3" ;
     bpo:apqcSourceText "Processing payments due from customers. This includes all processing of funds received, whether by check or electronically. This does not include the generation of invoices." ;
     rdfs:label "Process accounts receivable (AR)" ;
@@ -1497,6 +1540,7 @@ bpo:P10744 a owl:Class ;
 
 bpo:P10799 a owl:Class ;
     bpo:pcfID "10799" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10799. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.3.1" ;
     bpo:apqcSourceText "Creating rules and regulations to be followed in case of credit sales to customers. Create rules and procedures to follow at the time of sale (e.g., the allowable number of installments)." ;
     rdfs:label "Establish AR policies" ;
@@ -1508,6 +1552,7 @@ bpo:P10799 a owl:Class ;
 
 bpo:P10800 a owl:Class ;
     bpo:pcfID "10800" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10800. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.3.2" ;
     bpo:apqcSourceText "Collecting cash from customers. Deposit it into bank account. Make entries into the books of accounts." ;
     rdfs:label "Receive/Deposit customer payments" ;
@@ -1520,6 +1565,7 @@ bpo:P10800 a owl:Class ;
 
 bpo:P10801 a owl:Class ;
     bpo:pcfID "10801" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10801. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.3.3" ;
     bpo:apqcSourceText "Checking and moving funds between countries for business activities, typically through authorized remittance agents." ;
     rdfs:label "Apply cash remittances" ;
@@ -1533,6 +1579,7 @@ bpo:P10801 a owl:Class ;
 
 bpo:P10802 a owl:Class ;
     bpo:pcfID "10802" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10802. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.3.4" ;
     bpo:apqcSourceText "Preparing reports that detail balances due or what to collect from customers at a certain point in time." ;
     rdfs:label "Prepare AR reports" ;
@@ -1544,6 +1591,7 @@ bpo:P10802 a owl:Class ;
 
 bpo:P10803 a owl:Class ;
     bpo:pcfID "10803" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10803. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.3.5" ;
     bpo:apqcSourceText "Preparing the general ledger for account receivables from journals. Place all journal entries related to accounts receivables in the general ledger accounts of a business." ;
     rdfs:label "Post AR activity to the general ledger" ;
@@ -1556,6 +1604,7 @@ bpo:P10803 a owl:Class ;
 
 bpo:P10745 a owl:Class ;
     bpo:pcfID "10745" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10745. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4" ;
     bpo:apqcSourceText "Posting entries to respective accounts, and preparing accounts for receivables. Manage the cash collected by the business from its debtors. Record it in the books of accounts to provide clear information about the availability of the cash." ;
     rdfs:label "Manage and process collections" ;
@@ -1573,6 +1622,7 @@ bpo:P10745 a owl:Class ;
 
 bpo:P10804 a owl:Class ;
     bpo:pcfID "10804" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10804. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4.1" ;
     bpo:apqcSourceText "Creating a process to follow in case of a failed payment by account holders. Create rules and regulations for the account holder who has failed to make at least the minimum monthly payment by the due date." ;
     rdfs:label "Establish policies for delinquent accounts" ;
@@ -1584,6 +1634,7 @@ bpo:P10804 a owl:Class ;
 
 bpo:P10805 a owl:Class ;
     bpo:pcfID "10805" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10805. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4.2" ;
     bpo:apqcSourceText "Examining balance statements of accountholders who failed to make required payments. Study or review the account details of customers' past payments when preparing negotiations policies." ;
     rdfs:label "Analyze delinquent account balances" ;
@@ -1596,6 +1647,7 @@ bpo:P10805 a owl:Class ;
 
 bpo:P10806 a owl:Class ;
     bpo:pcfID "10806" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10806. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4.3" ;
     bpo:apqcSourceText "Determine ways for customers in default to repay debts (e.g., allowing more time or discounts)." ;
     rdfs:label "Correspond/Negotiate with delinquent accounts" ;
@@ -1608,6 +1660,7 @@ bpo:P10806 a owl:Class ;
 
 bpo:P10807 a owl:Class ;
     bpo:pcfID "10807" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10807. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4.4" ;
     bpo:apqcSourceText "Determining rules for handling accounts. Discuss and plan with internal parties (department heads, managers, and senior management) about rules to follow in coming months." ;
     rdfs:label "Discuss account resolution with internal parties" ;
@@ -1619,6 +1672,7 @@ bpo:P10807 a owl:Class ;
 
 bpo:P10808 a owl:Class ;
     bpo:pcfID "10808" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10808. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4.5" ;
     bpo:apqcSourceText "Maintaining reserves for write-offs and adjustments. Adjust or write off certain expenses and losses." ;
     rdfs:label "Process adjustments/write off balances" ;
@@ -1630,6 +1684,7 @@ bpo:P10808 a owl:Class ;
 
 bpo:P14007 a owl:Class ;
     bpo:pcfID "14007" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14007. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.4.6" ;
     bpo:apqcSourceText "Renegotiating the terms of a loan agreement in order to recoup money from a default account." ;
     rdfs:label "Perform recovery workout" ;
@@ -1642,6 +1697,7 @@ bpo:P14007 a owl:Class ;
 
 bpo:P10746 a owl:Class ;
     bpo:pcfID "10746" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10746. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5" ;
     bpo:apqcSourceText "Creating and providing funds for necessary adjustments and deductions, including all expenses that were required for the business at certain point in time." ;
     rdfs:label "Manage and process adjustments/deductions" ;
@@ -1659,6 +1715,7 @@ bpo:P10746 a owl:Class ;
 
 bpo:P10809 a owl:Class ;
     bpo:pcfID "10809" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10809. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5.1" ;
     bpo:apqcSourceText "Creating guidelines to follow in case of adjustments to business processes." ;
     rdfs:label "Establish policies/procedures for adjustments" ;
@@ -1670,6 +1727,7 @@ bpo:P10809 a owl:Class ;
 
 bpo:P10810 a owl:Class ;
     bpo:pcfID "10810" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10810. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5.2" ;
     bpo:apqcSourceText "Checking changes made in accounts during the year. Examine the alterations made in final accounts to rectify errors/omissions." ;
     rdfs:label "Analyze adjustments" ;
@@ -1682,6 +1740,7 @@ bpo:P10810 a owl:Class ;
 
 bpo:P10811 a owl:Class ;
     bpo:pcfID "10811" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10811. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5.3" ;
     bpo:apqcSourceText "Providing suitable offers to customers. Present different offers (e.g., discounts) available for customers or buyers." ;
     rdfs:label "Correspond/Negotiate with customer" ;
@@ -1694,6 +1753,7 @@ bpo:P10811 a owl:Class ;
 
 bpo:P10812 a owl:Class ;
     bpo:pcfID "10812" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10812. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5.4" ;
     bpo:apqcSourceText "Discussing and planning with internal parties (department heads, managers, and senior management) about rules to follow in coming months." ;
     rdfs:label "Discuss resolution with internal parties" ;
@@ -1705,6 +1765,7 @@ bpo:P10812 a owl:Class ;
 
 bpo:P10813 a owl:Class ;
     bpo:pcfID "10813" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10813. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5.5" ;
     bpo:apqcSourceText "Creating a mechanism for consumer protection in case of a higher price charged. When a supplier sells a product at a higher price to the distributor than the price they have set with the end user, submit a chargeback to the supplier to recover the money lost in the transaction." ;
     rdfs:label "Prepare chargeback invoices" ;
@@ -1717,6 +1778,7 @@ bpo:P10813 a owl:Class ;
 
 bpo:P10814 a owl:Class ;
     bpo:pcfID "10814" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10814. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.2.5.6" ;
     bpo:apqcSourceText "Recording business transactions as they occur in order to provide a balanced accounts for financial reporting." ;
     rdfs:label "Process related entries" ;
@@ -1732,6 +1794,7 @@ bpo:P10814 a owl:Class ;
 
 bpo:P10730 a owl:Class ;
     bpo:pcfID "10730" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10730. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.3" ;
     bpo:apqcSourceText "Making statements about business activities and functions. Prepare financial statements (balance sheet, income statement, statement of cash flows, and statement of stockholders' equity) according to accounting concepts and principles." ;
     rdfs:label "Perform general accounting and reporting" ;
@@ -1746,6 +1809,7 @@ bpo:P10730 a owl:Class ;
 
 bpo:P10815 a owl:Class ;
     bpo:pcfID "10815" ; bpo:hierarchyID "9.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10815. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Agreeing upon terms and conditions. Negotiate an agreement between two or more parties, the customer and service providers. Specify scope, quality, and responsibilities." ;
     rdfs:label "Negotiate service-level agreements" ;
     skos:definition "An Act of Formulation that negotiates terms among parties and produces a service-level agreement specifying scope, quality, and responsibilities." ;
@@ -1756,6 +1820,7 @@ bpo:P10815 a owl:Class ;
 
 bpo:P10816 a owl:Class ;
     bpo:pcfID "10816" ; bpo:hierarchyID "9.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10816. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing policies and procedures to prepare financial statements, including methods, measurement systems, and procedures for providing disclosures." ;
     rdfs:label "Establish accounting policies" ;
     skos:definition "An Act of Formulation that composes the accounting policies and procedures governing how financial statements and disclosures are prepared." ;
@@ -1766,6 +1831,7 @@ bpo:P10816 a owl:Class ;
 
 bpo:P20604 a owl:Class ;
     bpo:pcfID "20604" ; bpo:hierarchyID "9.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20604. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a written copy of agreed-upon procedures for preparing financial statements, and making them available to the public." ;
     rdfs:label "Publish accounting policies" ;
     skos:definition "An Act of Communication that conveys an already-formulated accounting policy to the public." ;
@@ -1776,6 +1842,7 @@ bpo:P20604 a owl:Class ;
 
 bpo:P10817 a owl:Class ;
     bpo:pcfID "10817" ; bpo:hierarchyID "9.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10817. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing parameters for accounting. Apply set conditions for any approval process." ;
     rdfs:label "Set and enforce approval limits" ;
     skos:definition "An Act of Formulation that sets the monetary thresholds and conditions governing financial-approval processes and prescribes their enforcement." ;
@@ -1786,6 +1853,7 @@ bpo:P10817 a owl:Class ;
 
 bpo:P10818 a owl:Class ;
     bpo:pcfID "10818" ; bpo:hierarchyID "9.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10818. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing processes and procedures to exercise financial control and accountability. Record, verify, and report transactions that affect revenues, expenditures, assets, and liabilities." ;
     rdfs:label "Establish common financial systems" ;
     skos:definition "An Act of Formulation that composes the processes and procedures for exercising financial control and accountability over transactions affecting revenues, expenditures, assets, and liabilities." ;
@@ -1796,6 +1864,7 @@ bpo:P10818 a owl:Class ;
 
 bpo:P10748 a owl:Class ;
     bpo:pcfID "10748" ; bpo:hierarchyID "9.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10748. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Applying basic principles, concepts, and accounting practices in recording and preparing final accounts, and using accounting information in management." ;
     rdfs:label "Perform general accounting" ;
     skos:definition "An Act of Accounting that applies accounting principles and practices to record transactions and prepare an organization's general ledger and final accounts." ;
@@ -1815,6 +1884,7 @@ bpo:P10748 a owl:Class ;
 
 bpo:P10819 a owl:Class ;
     bpo:pcfID "10819" ; bpo:hierarchyID "9.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10819. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing trial balance account from general ledgers. List all accounts used in the general ledger. Alter accounts according to business requirements." ;
     rdfs:label "Maintain chart of accounts" ;
     skos:definition "An Act of Accounting that lists and updates the set of accounts used in the general ledger to produce a current chart of accounts." ;
@@ -1824,6 +1894,7 @@ bpo:P10819 a owl:Class ;
 
 bpo:P10820 a owl:Class ;
     bpo:pcfID "10820" ; bpo:hierarchyID "9.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10820. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making ledger and trial balance accounts from journal entries. This process requires the organization to record every transaction into accounts done by business. It is a base documents for preparing final accounts of company." ;
     rdfs:label "Process journal entries" ;
     skos:definition "An Act of Accounting that records transactions as journal entries and posts them to produce the general ledger." ;
@@ -1834,6 +1905,7 @@ bpo:P10820 a owl:Class ;
 
 bpo:P10821 a owl:Class ;
     bpo:pcfID "10821" ; bpo:hierarchyID "9.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10821. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Allocating funds across functions. Apportion funds in line with the budgets created. Formalize allocations in centralized internal records." ;
     rdfs:label "Process allocations" ;
     skos:definition "An Act of Accounting that apportions funds across functions in line with the budget and records the allocations in centralized internal records." ;
@@ -1845,6 +1917,7 @@ bpo:P10821 a owl:Class ;
 
 bpo:P10822 a owl:Class ;
     bpo:pcfID "10822" ; bpo:hierarchyID "9.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10822. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Updating journal entries to adjust the balance of income and expenses at the end of an accounting period." ;
     rdfs:label "Process period end adjustments" ;
     skos:definition "An Act of Accounting that updates journal entries to adjust income and expense balances at the close of an accounting period, updating the general ledger." ;
@@ -1854,6 +1927,7 @@ bpo:P10822 a owl:Class ;
 
 bpo:P10823 a owl:Class ;
     bpo:pcfID "10823" ; bpo:hierarchyID "9.3.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10823. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Checking accounts separately for a parent and subsidiary company. Manage relationship between a parent company and subsidiaries. Document intercompany transactions in separate financial statements." ;
     rdfs:label "Post and reconcile intercompany transactions" ;
     skos:definition "An Act of Accounting that posts and reconciles transactions between a parent company and its subsidiaries and documents them in the general ledger." ;
@@ -1865,6 +1939,7 @@ bpo:P10823 a owl:Class ;
 
 bpo:P10824 a owl:Class ;
     bpo:pcfID "10824" ; bpo:hierarchyID "9.3.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10824. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing general ledger accounts for a parent and subsidiaries companies. Validate the integrity of account balances on the company's general ledger of accounts. Review and compare general ledger accounts balances with source documents to ensure that balances match." ;
     rdfs:label "Reconcile general ledger accounts" ;
     skos:definition "An Act of Accounting that compares general-ledger account balances against source documents to validate their integrity and produce a reconciled general ledger." ;
@@ -1875,6 +1950,7 @@ bpo:P10824 a owl:Class ;
 
 bpo:P10825 a owl:Class ;
     bpo:pcfID "10825" ; bpo:hierarchyID "9.3.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10825. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aggregating different processes in the business. Eliminate discontinued processes." ;
     rdfs:label "Perform consolidations and process eliminations" ;
     skos:definition "An Act of Accounting that aggregates accounts across business processes and eliminates discontinued items to produce a consolidated general ledger." ;
@@ -1884,6 +1960,7 @@ bpo:P10825 a owl:Class ;
 
 bpo:P10826 a owl:Class ;
     bpo:pcfID "10826" ; bpo:hierarchyID "9.3.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10826. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Balancing debit and credit balances of trial balance to preparing final accounts. Calculate the total debits and credits in company's accounts. Correspond the sum of all debits with the sum of all credits. Adjust entries as appropriate." ;
     rdfs:label "Prepare trial balance" ;
     skos:definition "An Act of Accounting that totals debit and credit balances to produce a balanced trial balance as the basis for final accounts." ;
@@ -1895,6 +1972,7 @@ bpo:P10826 a owl:Class ;
 
 bpo:P10827 a owl:Class ;
     bpo:pcfID "10827" ; bpo:hierarchyID "9.3.2.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10827. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Accounting for changes due to country-level policy changes. Record adjustments made by management in the accounts." ;
     rdfs:label "Prepare and post management adjustments" ;
     skos:definition "An Act of Accounting that records management- and policy-driven adjustments in the accounts, updating the general ledger." ;
@@ -1904,6 +1982,7 @@ bpo:P10827 a owl:Class ;
 
 bpo:P10749 a owl:Class ;
     bpo:pcfID "10749" ; bpo:hierarchyID "9.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10749. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Accounting for long-term and fixed assets. Record purchased, fixed assets that are not easily convertible into cash. Account for costs, useful life, resale value, depreciation, and amortization." ;
     rdfs:label "Perform fixed-asset accounting" ;
     skos:definition "An Act of Accounting that records and maintains the cost, useful life, depreciation, and disposition of an organization's fixed assets to produce a fixed-asset register." ;
@@ -1923,6 +2002,7 @@ bpo:P10749 a owl:Class ;
 
 bpo:P10828 a owl:Class ;
     bpo:pcfID "10828" ; bpo:hierarchyID "9.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10828. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating rules for fixed assets market valuation. Make rules and regulations for fixed assets regarding depreciation, provisions, resale, usage, etc." ;
     rdfs:label "Establish fixed-asset policies and procedures" ;
     skos:definition "An Act of Formulation that composes the rules and procedures governing fixed-asset valuation, depreciation, provisions, resale, and usage." ;
@@ -1933,6 +2013,7 @@ bpo:P10828 a owl:Class ;
 
 bpo:P10829 a owl:Class ;
     bpo:pcfID "10829" ; bpo:hierarchyID "9.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10829. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping reports up-to-date regarding fixed assets. Create a fixed assets database detailing price, life cycle, depreciation rate, resale value, installation information, usage information, etc." ;
     rdfs:label "Maintain fixed-asset master data files" ;
     skos:definition "An Act of Accounting that creates and keeps current the fixed-asset master data detailing price, life cycle, depreciation, and usage." ;
@@ -1942,6 +2023,7 @@ bpo:P10829 a owl:Class ;
 
 bpo:P10830 a owl:Class ;
     bpo:pcfID "10830" ; bpo:hierarchyID "9.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10830. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping a summary of sales and purchases of assets. Record any expenses made for new assets purchased and sales of any old assets during the fiscal year." ;
     rdfs:label "Process and record fixed-asset additions and retires" ;
     skos:definition "An Act of Accounting that records additions and retirements of fixed assets during the fiscal year in the fixed-asset register." ;
@@ -1952,6 +2034,7 @@ bpo:P10830 a owl:Class ;
 
 bpo:P10831 a owl:Class ;
     bpo:pcfID "10831" ; bpo:hierarchyID "9.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10831. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping a summary of expenses for installing and modifying assets. Record any expenses made for new assets purchased, any expenses incurred on improvements, the valuation of assets to reach current market price, and any transfer assets from one location to another during the fiscal year." ;
     rdfs:label "Process and record fixed-asset adjustments, enhancements, revaluations, and transfers" ;
     skos:definition "An Act of Accounting that records fixed-asset adjustments, enhancements, revaluations, and inter-location transfers in the fixed-asset register." ;
@@ -1961,6 +2044,7 @@ bpo:P10831 a owl:Class ;
 
 bpo:P10832 a owl:Class ;
     bpo:pcfID "10832" ; bpo:hierarchyID "9.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10832. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining a record of expenses necessitated for repairs and the preservation of assets. Administer and oversee the maintenance and repair of any fixed assets. Record all related transactions." ;
     rdfs:label "Process and record fixed-asset maintenance and repair expenses" ;
     skos:definition "An Act of Accounting that records the maintenance and repair expenses incurred to preserve fixed assets in the fixed-asset register." ;
@@ -1971,6 +2055,7 @@ bpo:P10832 a owl:Class ;
 
 bpo:P10833 a owl:Class ;
     bpo:pcfID "10833" ; bpo:hierarchyID "9.3.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10833. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out accounting for depreciation over fixed assets. Compute the sums necessitated. Maintain a record of the cost value of fixed assets over their useful life in the book of accounts." ;
     rdfs:label "Calculate and record depreciation expense" ;
     skos:definition "An Act of Accounting that computes periodic depreciation on fixed assets and records the resulting expense and carrying value in the fixed-asset register." ;
@@ -1980,6 +2065,7 @@ bpo:P10833 a owl:Class ;
 
 bpo:P10834 a owl:Class ;
     bpo:pcfID "10834" ; bpo:hierarchyID "9.3.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10834. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Balancing the ledger account balance for fixed assets. Correct errors in the books of fixed assets. Provide correct information in relevant accounts." ;
     rdfs:label "Reconcile fixed-asset ledger" ;
     skos:definition "An Act of Accounting that balances and corrects the fixed-asset ledger so that its account balances are accurate." ;
@@ -1990,6 +2076,7 @@ bpo:P10834 a owl:Class ;
 
 bpo:P10835 a owl:Class ;
     bpo:pcfID "10835" ; bpo:hierarchyID "9.3.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10835. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Checking and updating the record of all raw materials and fixed assets. Track all fixes asset. Maintain a record of all inventory items." ;
     rdfs:label "Track fixed-assets including physical inventory" ;
     skos:definition "An Act of Monitoring that checks fixed assets against physical inventory over time and updates the fixed-asset register to reflect their current state." ;
@@ -2000,6 +2087,7 @@ bpo:P10835 a owl:Class ;
 
 bpo:P10836 a owl:Class ;
     bpo:pcfID "10836" ; bpo:hierarchyID "9.3.3.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10836. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Showing market value and related expenses on fixed assets data for taxation. Provide complete information recorded in the books of fixed assets about purchase price, depreciation, installation charges, resale market value etc. for tax and regulatory purposes." ;
     rdfs:label "Provide fixed-asset data to support tax, statutory, and regulatory reporting" ;
     skos:definition "An Act of Reporting that compiles fixed-asset data from the register and conveys it to support tax, statutory, and regulatory reporting." ;
@@ -2011,6 +2099,7 @@ bpo:P10836 a owl:Class ;
 
 bpo:P10750 a owl:Class ;
     bpo:pcfID "10750" ; bpo:hierarchyID "9.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10750. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reporting on the organization's financial status to stakeholders. Include balance sheets, income statements, cash flow statements, and statements of shareholders' equity." ;
     rdfs:label "Perform financial reporting" ;
     skos:definition "An Act of Reporting that compiles an organization's financial statements and conveys its financial status to stakeholders." ;
@@ -2029,6 +2118,7 @@ bpo:P10750 a owl:Class ;
 
 bpo:P10837 a owl:Class ;
     bpo:pcfID "10837" ; bpo:hierarchyID "9.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10837. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making reports of subsidiaries units to show profits generated from them. Prepare financial statements (balance sheets, income statements, cash flow statements and statements of shareholders' equity) for a single unit of a business." ;
     rdfs:label "Prepare business unit financial statements" ;
     skos:definition "An Act of Reporting that prepares the financial statements of a single business unit from its general-ledger balances." ;
@@ -2039,6 +2129,7 @@ bpo:P10837 a owl:Class ;
 
 bpo:P10838 a owl:Class ;
     bpo:pcfID "10838" ; bpo:hierarchyID "9.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10838. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making final accounts for all units of company together. Prepare combined financial statements of a parent company and its subsidiaries (i.e., separate legal entities controlled by a parent company) showing assets, liabilities, equity, income, expenses, and cash flows." ;
     rdfs:label "Prepare consolidated financial statements" ;
     skos:definition "An Act of Reporting that combines the accounts of a parent company and its subsidiaries to produce consolidated financial statements." ;
@@ -2049,6 +2140,7 @@ bpo:P10838 a owl:Class ;
 
 bpo:P10839 a owl:Class ;
     bpo:pcfID "10839" ; bpo:hierarchyID "9.3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10839. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making reports for units/subsidiaries to help management in decision making. Prepare financial statements (balance sheets, income statements, cash flow statements, and statements of shareholders' equity) for a single unit of a business. Break down profits and losses by function/unit, clients, products, and region." ;
     rdfs:label "Perform business unit reporting/review management reports" ;
     skos:definition "An Act of Reporting that prepares and reviews business-unit management reports breaking down results by function, client, product, and region." ;
@@ -2059,6 +2151,7 @@ bpo:P10839 a owl:Class ;
 
 bpo:P10840 a owl:Class ;
     bpo:pcfID "10840" ; bpo:hierarchyID "9.3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10840. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making reports for all units to help higher management in decision making. Prepare combined financial statements of a parent company and its all subsidiaries (separate legal entities controlled by a parent company) showing assets, liabilities, equity, income, expenses and cash flows, and also going through periodic reports which shows the actual and estimated costs and their variances." ;
     rdfs:label "Perform consolidated reporting/review of cost management reports" ;
     skos:definition "An Act of Reporting that prepares consolidated management reports combining all units' results and reviewing actual-versus-estimated cost variances." ;
@@ -2070,6 +2163,7 @@ bpo:P10840 a owl:Class ;
 
 bpo:P10841 a owl:Class ;
     bpo:pcfID "10841" ; bpo:hierarchyID "9.3.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10841. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing a draft of financial statements for the board to review before they are sent to the auditor." ;
     rdfs:label "Prepare statements for board review" ;
     skos:definition "An Act of Reporting that prepares a draft of the financial statements for board review prior to audit." ;
@@ -2079,6 +2173,7 @@ bpo:P10841 a owl:Class ;
 
 bpo:P10842 a owl:Class ;
     bpo:pcfID "10842" ; bpo:hierarchyID "9.3.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10842. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making and presenting financial reports to stakeholders. Create annual and quarterly financial statements for reporting purposes. Prepare shareholder reports with details of the profit-and-loss account, balance sheet, and past year's business activities." ;
     rdfs:label "Produce quarterly/annual filings and shareholder reports" ;
     skos:definition "An Act of Reporting that produces quarterly and annual financial filings and shareholder reports and presents them to stakeholders." ;
@@ -2089,6 +2184,7 @@ bpo:P10842 a owl:Class ;
 
 bpo:P10843 a owl:Class ;
     bpo:pcfID "10843" ; bpo:hierarchyID "9.3.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10843. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reporting raw or summary data for final accounts following rules and regulations." ;
     rdfs:label "Produce regulatory reports" ;
     skos:definition "An Act of Reporting that compiles final-account data in accordance with rules and regulations to produce a regulatory filing." ;
@@ -2099,6 +2195,7 @@ bpo:P10843 a owl:Class ;
 
 bpo:P14074 a owl:Class ;
     bpo:pcfID "14074" ; bpo:hierarchyID "9.3.4.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14074. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out activities associated with legal and management consolidation. Legal consolidation can include currency conversion, balance carry forward, and consolidation of journal entries. Management consolidation can include reporting on financials on a reporting cycle basis to gauge the performance of the organization." ;
     rdfs:label "Perform legal and management consolidation" ;
     skos:definition "An Act of Accounting that performs legal and management consolidation - currency conversion, balance carry-forward, and journal-entry consolidation - to produce consolidated financial statements." ;
@@ -2114,6 +2211,7 @@ bpo:P14074 a owl:Class ;
 
 bpo:P10751 a owl:Class ;
     bpo:pcfID "10751" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10751. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.1" ;
     bpo:apqcSourceText "Preparing a project finance report to solicit approvals in capital projects. Prepare budgets for projects that require heavy investments. Report on project finances to solicit approvals from management." ;
     rdfs:label "Perform capital planning and project approval" ;
@@ -2129,6 +2227,7 @@ bpo:P10751 a owl:Class ;
 
 bpo:P10844 a owl:Class ;
     bpo:pcfID "10844" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10844. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.1.1" ;
     bpo:apqcSourceText "Creating procedures and policies to follow for investing in capital projects. Create rules and regulations regarding large investment plans, which require in-depth forecasting for expenditure and revenue." ;
     rdfs:label "Develop capital investment policies and procedures" ;
@@ -2141,6 +2240,7 @@ bpo:P10844 a owl:Class ;
 
 bpo:P10845 a owl:Class ;
     bpo:pcfID "10845" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10845. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.1.2" ;
     bpo:apqcSourceText "Creating budgets, and soliciting approvals for capital projects. Prepare budgets for projects that require heavy investments. Secure approvals from management." ;
     rdfs:label "Develop and approve capital expenditure plans and budgets" ;
@@ -2152,6 +2252,7 @@ bpo:P10845 a owl:Class ;
 
 bpo:P10846 a owl:Class ;
     bpo:pcfID "10846" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10846. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.1.3" ;
     bpo:apqcSourceText "Evaluating and supporting capital investments in projects and fixed assets. Confirm details of capital projects. Secure approvals from managements for large investments." ;
     rdfs:label "Review and approve capital projects and fixed-asset acquisitions" ;
@@ -2163,6 +2264,7 @@ bpo:P10846 a owl:Class ;
 
 bpo:P10847 a owl:Class ;
     bpo:pcfID "10847" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10847. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.1.4" ;
     bpo:apqcSourceText "Reviewing all project business cases in order to substantiate projected financial gains. Validate any project's business case. Juxtapose the benefits derived from moving a project forward against the associated costs." ;
     rdfs:label "Conduct financial justification for project approval" ;
@@ -2174,6 +2276,7 @@ bpo:P10847 a owl:Class ;
 
 bpo:P10752 a owl:Class ;
     bpo:pcfID "10752" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10752. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.2" ;
     bpo:apqcSourceText "Accounting for large-scale and large-cost investments. Manage and account for ongoing activities related to capital projects, including setting up new projects, recording project transactions, monitoring and tracking spending, closing and capitalizing projects, and measuring the financial returns on completed projects." ;
     rdfs:label "Perform capital project accounting" ;
@@ -2189,6 +2292,7 @@ bpo:P10752 a owl:Class ;
 
 bpo:P10848 a owl:Class ;
     bpo:pcfID "10848" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10848. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.2.1" ;
     bpo:apqcSourceText "Giving reference codes for every project." ;
     rdfs:label "Create project account codes" ;
@@ -2200,6 +2304,7 @@ bpo:P10848 a owl:Class ;
 
 bpo:P10849 a owl:Class ;
     bpo:pcfID "10849" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10849. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.2.2" ;
     bpo:apqcSourceText "Noting every transaction during a project in a common financial database. Document all transactions associated with any project. Maintain a centralized repository of all such financial data." ;
     rdfs:label "Record project-related transactions" ;
@@ -2211,6 +2316,7 @@ bpo:P10849 a owl:Class ;
 
 bpo:P10850 a owl:Class ;
     bpo:pcfID "10850" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10850. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.2.3" ;
     bpo:apqcSourceText "Evaluating project progress and funds invested. Observe and track significant funds invested on any long-term project. Compare to budget." ;
     rdfs:label "Monitor and track capital projects and budget spending" ;
@@ -2223,6 +2329,7 @@ bpo:P10850 a owl:Class ;
 
 bpo:P10851 a owl:Class ;
     bpo:pcfID "10851" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10851. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.2.4" ;
     bpo:apqcSourceText "Checking for returns generated from projects for decision making. Evaluate capital projects that require heavy investments. Decide whether to proceed based on the revenues generated." ;
     rdfs:label "Close/capitalize projects" ;
@@ -2235,6 +2342,7 @@ bpo:P10851 a owl:Class ;
 
 bpo:P10852 a owl:Class ;
     bpo:pcfID "10852" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10852. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.4.2.5" ;
     bpo:apqcSourceText "Comparing a finished project's profitability with forecasted returns. Scrutinize revenues generated by completed projects that required heavy investments. Determine profitability." ;
     rdfs:label "Measure financial returns on completed capital projects" ;
@@ -2256,6 +2364,7 @@ bpo:TaxManagementCapability rdfs:subClassOf
 
 bpo:P10732 a owl:Class ;
     bpo:pcfID "10732" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10732. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5" ;
     bpo:apqcSourceText "Handling reporting time, managing pay, and processing taxes from salaries. Pay employees. Withhold taxes. Confirm the correct funds are paid to the correct government agency." ;
     rdfs:label "Process payroll" ;
@@ -2270,6 +2379,7 @@ bpo:P10732 a owl:Class ;
 
 bpo:P10753 a owl:Class ;
     bpo:pcfID "10753" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10753. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.1" ;
     bpo:apqcSourceText "Recording the reporting time of employees on-site. Track working days, salary calculations, holidays taken, number of hours spend in the office, billing hours, etc." ;
     rdfs:label "Report time" ;
@@ -2286,6 +2396,7 @@ bpo:P10753 a owl:Class ;
 
 bpo:P10853 a owl:Class ;
     bpo:pcfID "10853" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10853. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.1.1" ;
     bpo:apqcSourceText "Developing policies and procedures for the HR function to calculate compensation." ;
     rdfs:label "Establish policies and procedures" ;
@@ -2297,6 +2408,7 @@ bpo:P10853 a owl:Class ;
 
 bpo:P10854 a owl:Class ;
     bpo:pcfID "10854" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10854. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.1.2" ;
     bpo:apqcSourceText "Tracking billing hours of each employee on daily basis." ;
     rdfs:label "Collect and record employee time worked" ;
@@ -2307,6 +2419,7 @@ bpo:P10854 a owl:Class ;
 
 bpo:P10855 a owl:Class ;
     bpo:pcfID "10855" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10855. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.1.3" ;
     bpo:apqcSourceText "Tracking leaves allowed and taken by employees." ;
     rdfs:label "Analyze and report paid and unpaid leave" ;
@@ -2318,6 +2431,7 @@ bpo:P10855 a owl:Class ;
 
 bpo:P10856 a owl:Class ;
     bpo:pcfID "10856" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10856. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.1.4" ;
     bpo:apqcSourceText "Observing the number of hours worked by an employees on daily basis. Track the number of hours worked by an employee, as well as the number of hours worked beyond normal working hour's according to company standards." ;
     rdfs:label "Monitor regular, overtime, and other hours" ;
@@ -2329,6 +2443,7 @@ bpo:P10856 a owl:Class ;
 
 bpo:P10857 a owl:Class ;
     bpo:pcfID "10857" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10857. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.1.5" ;
     bpo:apqcSourceText "Monitoring the number of productive hours for employees." ;
     rdfs:label "Analyze and report employee utilization" ;
@@ -2340,6 +2455,7 @@ bpo:P10857 a owl:Class ;
 
 bpo:P10754 a owl:Class ;
     bpo:pcfID "10754" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10754. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2" ;
     bpo:apqcSourceText "Managing the total payments made in employees payroll, including bonuses and compensation." ;
     rdfs:label "Manage pay" ;
@@ -2359,6 +2475,7 @@ bpo:P10754 a owl:Class ;
 
 bpo:P10858 a owl:Class ;
     bpo:pcfID "10858" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10858. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.1" ;
     bpo:apqcSourceText "Tracking the number of hours worked for the payroll system. Register the number of hours worked by an employee into the payroll system for the purpose of calculating salaries or wages." ;
     rdfs:label "Enter employee time worked into payroll system" ;
@@ -2370,6 +2487,7 @@ bpo:P10858 a owl:Class ;
 
 bpo:P10859 a owl:Class ;
     bpo:pcfID "10859" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10859. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.2" ;
     bpo:apqcSourceText "Tracking and oversee salary breakups of employees. This process requires the organization to manage and update information pertaining to the structure of every employee's salary. This would involve the updating any changes to the salary structures of the employees, in a central repository which can be accessed by pertinent departments." ;
     rdfs:label "Maintain and administer employee earnings information" ;
@@ -2381,6 +2499,7 @@ bpo:P10859 a owl:Class ;
 
 bpo:P10860 a owl:Class ;
     bpo:pcfID "10860" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10860. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.3" ;
     bpo:apqcSourceText "Processing salary deductions for tax purposes. Keep and manage the details of every employee's salary deductions based on their expenses and investments during the year." ;
     rdfs:label "Maintain and administer applicable deductions" ;
@@ -2392,6 +2511,7 @@ bpo:P10860 a owl:Class ;
 
 bpo:P10861 a owl:Class ;
     bpo:pcfID "10861" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10861. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.4" ;
     bpo:apqcSourceText "Tracking changes in the salary structure of employees for tax deductions." ;
     rdfs:label "Monitor changes in tax status of employees" ;
@@ -2403,6 +2523,7 @@ bpo:P10861 a owl:Class ;
 
 bpo:P10862 a owl:Class ;
     bpo:pcfID "10862" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10862. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.5" ;
     bpo:apqcSourceText "Processing and distributing salaries to all employees. Execute the payroll management function through the dispensation of employee salaries. Leverage a centralized database of all payroll expenses." ;
     rdfs:label "Process and distribute payments" ;
@@ -2415,6 +2536,7 @@ bpo:P10862 a owl:Class ;
 
 bpo:P10863 a owl:Class ;
     bpo:pcfID "10863" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10863. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.6" ;
     bpo:apqcSourceText "Handling incorrect/omitted salary payments." ;
     rdfs:label "Process and distribute manual checks" ;
@@ -2426,6 +2548,7 @@ bpo:P10863 a owl:Class ;
 
 bpo:P10864 a owl:Class ;
     bpo:pcfID "10864" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10864. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.7" ;
     bpo:apqcSourceText "Adjusting salary deductions for tax purposes at the end of the year." ;
     rdfs:label "Process period-end adjustments" ;
@@ -2438,6 +2561,7 @@ bpo:P10864 a owl:Class ;
 
 bpo:P10865 a owl:Class ;
     bpo:pcfID "10865" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10865. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.2.8" ;
     bpo:apqcSourceText "Addressing salary-related queries raised by employees." ;
     rdfs:label "Respond to employee payroll inquiries" ;
@@ -2449,6 +2573,7 @@ bpo:P10865 a owl:Class ;
 
 bpo:P10755 a owl:Class ;
     bpo:pcfID "10755" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10755. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.3" ;
     bpo:apqcSourceText "Deducting and paying taxes from employees' salaries." ;
     rdfs:label "Manage and process payroll taxes" ;
@@ -2464,6 +2589,7 @@ bpo:P10755 a owl:Class ;
 
 bpo:P14075 a owl:Class ;
     bpo:pcfID "14075" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14075. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.3.1" ;
     bpo:apqcSourceText "Devising a method to minimize payroll tax liability by means of allowances, deductions, exclusions or exemptions." ;
     rdfs:label "Develop tax plan" ;
@@ -2475,6 +2601,7 @@ bpo:P14075 a owl:Class ;
 
 bpo:P10866 a owl:Class ;
     bpo:pcfID "10866" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10866. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.3.3" ;
     bpo:apqcSourceText "Paying tax according to appropriate deductions made from salaries. Calculate and pay the tax liabilities according to the salaries and tax regulations of employees with the help of certified chartered accountants." ;
     rdfs:label "Calculate and pay applicable payroll taxes" ;
@@ -2487,6 +2614,7 @@ bpo:P10866 a owl:Class ;
 
 bpo:P10867 a owl:Class ;
     bpo:pcfID "10867" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10867. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.3.4" ;
     bpo:apqcSourceText "Providing tax deductions statements created by certified chartered accountants to every employee for their reference or refunds." ;
     rdfs:label "Produce and distribute employee annual tax statements" ;
@@ -2499,6 +2627,7 @@ bpo:P10867 a owl:Class ;
 
 bpo:P10868 a owl:Class ;
     bpo:pcfID "10868" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10868. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.5.3.5" ;
     bpo:apqcSourceText "Filling taxes, and highlighting different sources of income and expenditures made." ;
     rdfs:label "File regulatory payroll tax forms" ;
@@ -2514,6 +2643,7 @@ bpo:P10868 a owl:Class ;
 
 bpo:P10733 a owl:Class ;
     bpo:pcfID "10733" ; bpo:hierarchyID "9.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10733. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling bills and reimbursements to be made. Make payments for goods or services taken or used on behalf of the organization." ;
     rdfs:label "Process accounts payable and expense reimbursements" ;
     skos:definition "An Act of Financial Transaction that handles bills and reimbursements owed by an organization and disburses payment for goods or services taken or used on its behalf." ;
@@ -2526,6 +2656,7 @@ bpo:P10733 a owl:Class ;
 
 bpo:P10756 a owl:Class ;
     bpo:pcfID "10756" ; bpo:hierarchyID "9.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10756. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing payments of operating expenses and other supplier charges. This includes the development of policies and procedures around processing of accounts payable and all operations. This process is often supported by key technology enablers." ;
     rdfs:label "Process accounts payable (AP)" ;
     skos:definition "An Act of Financial Transaction that processes payment of operating expenses and other supplier charges through an organization's accounts-payable operations." ;
@@ -2547,6 +2678,7 @@ bpo:P10756 a owl:Class ;
 
 bpo:P10869 a owl:Class ;
     bpo:pcfID "10869" ; bpo:hierarchyID "9.6.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10869. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Matching records of bills to be paid with accounts. Check accounts payable entries with vendor's account for every payment made." ;
     rdfs:label "Verify AP pay file with purchase order vendor master file" ;
     skos:definition "An Act of Appraisal that checks accounts-payable pay-file entries against the vendor master file and produces a payment match result." ;
@@ -2558,6 +2690,7 @@ bpo:P10869 a owl:Class ;
 
 bpo:P10870 a owl:Class ;
     bpo:pcfID "10870" ; bpo:hierarchyID "9.6.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10870. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking all online transactions." ;
     rdfs:label "Maintain/Manage electronic commerce" ;
     skos:definition "An Act of Monitoring that tracks an organization's online accounts-payable transactions and produces a record of their status." ;
@@ -2568,6 +2701,7 @@ bpo:P10870 a owl:Class ;
 
 bpo:P10871 a owl:Class ;
     bpo:pcfID "10871" ; bpo:hierarchyID "9.6.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10871. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Monitoring and evaluating bills registered in accounts books. Check all invoices. Maintain records." ;
     rdfs:label "Audit invoices and key data in AP system" ;
     skos:definition "An Act of Appraisal that evaluates invoices and key data registered in the accounts-payable system and produces an invoice audit judgement." ;
@@ -2579,6 +2713,7 @@ bpo:P10871 a owl:Class ;
 
 bpo:P10872 a owl:Class ;
     bpo:pcfID "10872" ; bpo:hierarchyID "9.6.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10872. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing payments for products/services." ;
     rdfs:label "Approve payments" ;
     skos:definition "A Planned Act that authorizes a settled payment for products or services and produces a payment approval decision." ;
@@ -2589,6 +2724,7 @@ bpo:P10872 a owl:Class ;
 
 bpo:P10873 a owl:Class ;
     bpo:pcfID "10873" ; bpo:hierarchyID "9.6.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10873. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling transactions for accruals and reversals. Record transactions in the books of accounts on an accrual basis (irrespective of the actual cash flow) and reversals basis (cancel out the adjusting entries) for balancing accounts." ;
     rdfs:label "Process financial accruals and reversals" ;
     skos:definition "An Act of Accounting that records accrual and reversal entries in the books of accounts and produces the corresponding transaction records." ;
@@ -2599,6 +2735,7 @@ bpo:P10873 a owl:Class ;
 
 bpo:P10874 a owl:Class ;
     bpo:pcfID "10874" ; bpo:hierarchyID "9.6.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10874. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Filing the amount of taxes that a company owes as of the balance sheet date. Prepare tax returns, including the income tax filing for an individual or business entity from earnings." ;
     rdfs:label "Process payables taxes" ;
     skos:definition "An Act of Reporting that prepares and files the payables taxes owed by an organization and produces a tax return." ;
@@ -2609,6 +2746,7 @@ bpo:P10874 a owl:Class ;
 
 bpo:P10875 a owl:Class ;
     bpo:pcfID "10875" ; bpo:hierarchyID "9.6.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10875. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Resolving any atypical or inconsistent situation concerning payments to be made by the organization. Address any exceptional case of accounts payable on an ad hoc basis, by seeking counsel or carrying out any necessary research." ;
     rdfs:label "Research/Resolve payable exceptions" ;
     skos:definition "An Act of Information Processing that investigates an atypical or inconsistent accounts-payable situation and produces a payable exception resolution record." ;
@@ -2619,6 +2757,7 @@ bpo:P10875 a owl:Class ;
 
 bpo:P10876 a owl:Class ;
     bpo:pcfID "10876" ; bpo:hierarchyID "9.6.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10876. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making payments for products/services on due dates (payment cycle) decided by parties involved." ;
     rdfs:label "Process payments" ;
     skos:definition "An Act of Financial Transaction that disburses monetary payment for products or services on the due dates of an agreed payment cycle." ;
@@ -2630,6 +2769,7 @@ bpo:P10876 a owl:Class ;
 
 bpo:P10877 a owl:Class ;
     bpo:pcfID "10877" ; bpo:hierarchyID "9.6.1.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10877. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Clarifying or address queries relating to the particulars of AP such as date, discounts, amount, and installments. Coordinate with concerned parties about the fulfillment of bills payable." ;
     rdfs:label "Respond to AP inquiries" ;
     skos:definition "An Act of Communication that clarifies queries about accounts-payable particulars and transfers the clarifying information to the inquiring party." ;
@@ -2641,6 +2781,7 @@ bpo:P10877 a owl:Class ;
 
 bpo:P10878 a owl:Class ;
     bpo:pcfID "10878" ; bpo:hierarchyID "9.6.1.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10878. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping bills of every transaction for future reference." ;
     rdfs:label "Retain records" ;
     skos:definition "An Act of Information Processing that preserves the bills and transaction records of every accounts-payable transaction for future reference." ;
@@ -2651,6 +2792,7 @@ bpo:P10878 a owl:Class ;
 
 bpo:P10879 a owl:Class ;
     bpo:pcfID "10879" ; bpo:hierarchyID "9.6.1.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10879. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Rectifying for alterations occurred in accounts while recording." ;
     rdfs:label "Adjust accounting records" ;
     skos:definition "An Act of Accounting that rectifies alterations that occurred while recording in the accounts and produces corrected transaction records." ;
@@ -2661,6 +2803,7 @@ bpo:P10879 a owl:Class ;
 
 bpo:P10757 a owl:Class ;
     bpo:pcfID "10757" ; bpo:hierarchyID "9.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10757. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing reimbursements to employees for the expenses incurred during the course of business. Approve and process advancements and reimbursements for employee expenses on the organization's behalf. Capture and report relevant tax data and manage personal accounts." ;
     rdfs:label "Process expense reimbursements" ;
     skos:definition "An Act of Financial Transaction that processes reimbursements and advances to employees for expenses incurred during the course of business on the organization's behalf." ;
@@ -2676,6 +2819,7 @@ bpo:P10757 a owl:Class ;
 
 bpo:P10880 a owl:Class ;
     bpo:pcfID "10880" ; bpo:hierarchyID "9.6.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10880. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Explaining policies and procedures related to reimbursements requests by employees. Set policies regarding reimbursement process and amount limits etc. Inform employees." ;
     rdfs:label "Establish and communicate expense reimbursement policies and approval limits" ;
     skos:definition "An Act of Formulation that sets the policies and approval limits governing employee expense reimbursements and produces a financial policy." ;
@@ -2686,6 +2830,7 @@ bpo:P10880 a owl:Class ;
 
 bpo:P10881 a owl:Class ;
     bpo:pcfID "10881" ; bpo:hierarchyID "9.6.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10881. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collecting and reporting all pertinent information regarding the taxes paid by the organization's employees." ;
     rdfs:label "Capture and report relevant tax data" ;
     skos:definition "An Act of Reporting that collects and reports the tax information pertinent to taxes paid by an organization's employees and produces tax data." ;
@@ -2696,6 +2841,7 @@ bpo:P10881 a owl:Class ;
 
 bpo:P10882 a owl:Class ;
     bpo:pcfID "10882" ; bpo:hierarchyID "9.6.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10882. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Permitting expense reimbursement requests from employees." ;
     rdfs:label "Approve reimbursements and advances" ;
     skos:definition "A Planned Act that authorizes an employee's expense-reimbursement or advance request and produces a payment approval decision." ;
@@ -2707,6 +2853,7 @@ bpo:P10882 a owl:Class ;
 
 bpo:P10883 a owl:Class ;
     bpo:pcfID "10883" ; bpo:hierarchyID "9.6.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10883. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Paying for expense reimbursement requests from employees. (Follow Approve reimbursements and advances [10882] according to policies and conditions.)" ;
     rdfs:label "Process reimbursements and advances" ;
     skos:definition "An Act of Financial Transaction that disburses monetary payment to employees in settlement of approved expense-reimbursement and advance requests." ;
@@ -2719,6 +2866,7 @@ bpo:P10883 a owl:Class ;
 
 bpo:P10884 a owl:Class ;
     bpo:pcfID "10884" ; bpo:hierarchyID "9.6.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10884. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining accounts of individuals who are connected with business." ;
     rdfs:label "Manage personnel accounts" ;
     skos:definition "An Act of Accounting that maintains the financial accounts of individuals connected with the business and produces updated account statements." ;
@@ -2729,6 +2877,7 @@ bpo:P10884 a owl:Class ;
 
 bpo:P20929 a owl:Class ;
     bpo:pcfID "20929" ; bpo:hierarchyID "9.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20929. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling and authoring credit cards to business entities or for corporate purchases." ;
     rdfs:label "Manage corporate credit cards" ;
     skos:definition "An Act of Card Administration that handles and authorizes the issuance of corporate credit cards to business entities and for corporate purchases, and that has as process parts the card-lifecycle activities of policy-setting, request handling, ordering, account maintenance, limit changes, and deactivation." ;
@@ -2745,6 +2894,7 @@ bpo:P20929 a owl:Class ;
 
 bpo:P20930 a owl:Class ;
     bpo:pcfID "20930" ; bpo:hierarchyID "9.6.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20930. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing procedures for using company credit cards. Set or approve credit limits." ;
     rdfs:label "Establish corporate credit card policies and approval limits" ;
     skos:definition "An Act of Formulation that develops the procedures and credit limits governing corporate credit-card use and produces a financial policy." ;
@@ -2755,6 +2905,7 @@ bpo:P20930 a owl:Class ;
 
 bpo:P20931 a owl:Class ;
     bpo:pcfID "20931" ; bpo:hierarchyID "9.6.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20931. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling applications credit card applications for business expenses." ;
     rdfs:label "Process corporate credit card requests" ;
     skos:definition "An Act of Card Administration that handles applications for corporate credit cards for business expenses within the card-issuance lifecycle." ;
@@ -2765,6 +2916,7 @@ bpo:P20931 a owl:Class ;
 
 bpo:P20932 a owl:Class ;
     bpo:pcfID "20932" ; bpo:hierarchyID "9.6.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20932. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining credit cards for business-related expenses." ;
     rdfs:label "Order corporate credit cards" ;
     skos:definition "An Act of Acquisition that obtains corporate credit cards, not previously held, for business-related expenses." ;
@@ -2775,6 +2927,7 @@ bpo:P20932 a owl:Class ;
 
 bpo:P20933 a owl:Class ;
     bpo:pcfID "20933" ; bpo:hierarchyID "9.6.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20933. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling credit card accounts of business customers." ;
     rdfs:label "Manage corporate credit card accounts" ;
     skos:definition "An Act of Accounting that maintains the corporate credit-card accounts of business customers and produces updated account statements." ;
@@ -2785,6 +2938,7 @@ bpo:P20933 a owl:Class ;
 
 bpo:P20934 a owl:Class ;
     bpo:pcfID "20934" ; bpo:hierarchyID "9.6.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20934. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Authorizing changes to the available credit advances." ;
     rdfs:label "Approve/Change credit limits" ;
     skos:definition "A Planned Act that authorizes a change to the available credit advances on a corporate credit card and produces an approval decision." ;
@@ -2795,6 +2949,7 @@ bpo:P20934 a owl:Class ;
 
 bpo:P20935 a owl:Class ;
     bpo:pcfID "20935" ; bpo:hierarchyID "9.6.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20935. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Blocking an existing credit card to disable all future transactions." ;
     rdfs:label "Cancel/Deactivate credit card" ;
     skos:definition "An Act of Card Administration that blocks an existing corporate credit card so as to disable all of its future transactions." ;
@@ -2813,6 +2968,7 @@ bpo:P10882 rdfs:subClassOf
 
 bpo:P10734 a owl:Class ;
     bpo:pcfID "10734" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10734. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7" ;
     bpo:apqcSourceText "Managing business's investments in trading in bonds, currencies, financial derivatives, etc. Manage the financial assets and holdings of the organization. Optimize the organization's liquidity. Invest excess cash. Reduce financial risks." ;
     rdfs:label "Manage treasury operations" ;
@@ -2827,6 +2983,7 @@ bpo:P10734 a owl:Class ;
 
 bpo:P10758 a owl:Class ;
     bpo:pcfID "10758" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10758. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.1" ;
     bpo:apqcSourceText "Managing rules and regulations for investments in trading in bonds, currencies, financial derivatives, etc. Establish policies and procedures for investments made. Optimize liquidity in treasury operations." ;
     rdfs:label "Manage treasury policies and procedures" ;
@@ -2845,6 +3002,7 @@ bpo:P10758 a owl:Class ;
 
 bpo:P10885 a owl:Class ;
     bpo:pcfID "10885" ; bpo:hierarchyID "9.7.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10885. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Selecting opportunities and the authoritative body for investments in trading in bonds, currencies, financial derivatives, etc." ;
     rdfs:label "Establish scope and governance of treasury operations" ;
     skos:definition "An Act of Formulation that has as output a treasury governance charter prescribing the scope of treasury operations and its authoritative governing body." ;
@@ -2855,6 +3013,7 @@ bpo:P10885 a owl:Class ;
 
 bpo:P10886 a owl:Class ;
     bpo:pcfID "10886" ; bpo:hierarchyID "9.7.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10886. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and providing investment regulations for the organization. Establish policies and procedures for investments to optimize liquidity in treasury operations. Create a written copy of it." ;
     rdfs:label "Establish and publish treasury policies" ;
     skos:definition "An Act of Formulation that has as output a financial policy that prescribes the organization's investment regulations." ;
@@ -2865,6 +3024,7 @@ bpo:P10886 a owl:Class ;
 
 bpo:P10887 a owl:Class ;
     bpo:pcfID "10887" ; bpo:hierarchyID "9.7.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10887. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making processes for investing. Create steps for investments in bonds, currencies, and financial derivatives in order to optimize company's liquidity, invest excess cash, and reduce its financial risks." ;
     rdfs:label "Develop treasury procedures" ;
     skos:definition "An Act of Formulation that has as output a financial procedure prescribing the steps for executing investments." ;
@@ -2875,6 +3035,7 @@ bpo:P10887 a owl:Class ;
 
 bpo:P10888 a owl:Class ;
     bpo:pcfID "10888" ; bpo:hierarchyID "9.7.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10888. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Checking treasury processes in order to optimize company's liquidity, invest excess cash, and reduce its financial risks." ;
     rdfs:label "Monitor treasury procedures" ;
     skos:definition "An Act of Monitoring that has as input a financial procedure and has as output a control-effectiveness assessment of treasury processes." ;
@@ -2886,6 +3047,7 @@ bpo:P10888 a owl:Class ;
 
 bpo:P10889 a owl:Class ;
     bpo:pcfID "10889" ; bpo:hierarchyID "9.7.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10889. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Auditing the treasury function." ;
     rdfs:label "Audit treasury procedures" ;
     skos:definition "An Act of Appraisal that examines the treasury function and has as output a control-effectiveness assessment." ;
@@ -2896,6 +3058,7 @@ bpo:P10889 a owl:Class ;
 
 bpo:P10890 a owl:Class ;
     bpo:pcfID "10890" ; bpo:hierarchyID "9.7.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10890. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reassessing all treasury procedures based on audit findings." ;
     rdfs:label "Revise treasury procedures" ;
     skos:definition "An Act of Formulation that has as input a control-effectiveness assessment and has as output a revised financial procedure." ;
@@ -2907,6 +3070,7 @@ bpo:P10890 a owl:Class ;
 
 bpo:P10891 a owl:Class ;
     bpo:pcfID "10891" ; bpo:hierarchyID "9.7.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10891. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and managing the internal control systems for investments in bonds, currencies, and financial derivatives to verify procedures." ;
     rdfs:label "Develop and confirm internal controls for treasury" ;
     skos:definition "An Act of Formulation that has as output an internal-control policy governing treasury investment activity." ;
@@ -2917,6 +3081,7 @@ bpo:P10891 a owl:Class ;
 
 bpo:P10892 a owl:Class ;
     bpo:pcfID "10892" ; bpo:hierarchyID "9.7.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10892. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Describing the need of system security requirements for controlling access, reliability of information, accountability, and availability of information in the organization." ;
     rdfs:label "Define system security requirements" ;
     skos:definition "An Act of Formulation that has as output a system security requirement prescribing controls over access, reliability, accountability, and availability of treasury information." ;
@@ -2927,6 +3092,7 @@ bpo:P10892 a owl:Class ;
 
 bpo:P10759 a owl:Class ;
     bpo:pcfID "10759" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10759. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.2" ;
     bpo:apqcSourceText "Taking care of all cash-related activities in the business. Manage and reconcile cash positions. Manage cash equivalents. Process and oversee electronic fund transfers. Develop cash flow forecasts. Manage cash flows. Produce cash management accounting transactions and reports. Manage and oversee banking relationships. Analyze, negotiate, resolve, and confirm bank fees." ;
     rdfs:label "Manage cash" ;
@@ -2942,6 +3108,7 @@ bpo:P10759 a owl:Class ;
 
 bpo:P10893 a owl:Class ;
     bpo:pcfID "10893" ; bpo:hierarchyID "9.7.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10893. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Correcting cash differences in the books of accounts. Make optimum utilization of funds available in the business. Check for differences to rectify." ;
     rdfs:label "Manage and reconcile cash positions" ;
     skos:definition "An Act of Accounting that has as input a general ledger and has as output a reconciled cash position." ;
@@ -2953,6 +3120,7 @@ bpo:P10893 a owl:Class ;
 
 bpo:P10894 a owl:Class ;
     bpo:pcfID "10894" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10894. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.2.2" ;
     bpo:apqcSourceText "Taking care of all cash-related activities in the business. Utilize short-term assets that can be easily convertible into cash, such as marketable securities, commercial paper and short-term government bonds, and treasury bills." ;
     rdfs:label "Manage cash equivalents" ;
@@ -2963,6 +3131,7 @@ bpo:P10894 a owl:Class ;
 
 bpo:P10895 a owl:Class ;
     bpo:pcfID "10895" ; bpo:hierarchyID "9.7.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10895. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Supervising all online transactions." ;
     rdfs:label "Process and oversee electronic fund transfers (EFTs)" ;
     skos:definition "An Act of Financial Transaction in which monetary payments are transferred electronically between accounts." ;
@@ -2973,6 +3142,7 @@ bpo:P10895 a owl:Class ;
 
 bpo:P10896 a owl:Class ;
     bpo:pcfID "10896" ; bpo:hierarchyID "9.7.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10896. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing forecasts for the cash generated or used by the organization." ;
     rdfs:label "Develop cash flow forecasts" ;
     skos:definition "An Act of Prediction that examines financial data and generates a financial forecast of cash to be generated or used by the organization." ;
@@ -2984,6 +3154,7 @@ bpo:P10896 a owl:Class ;
 
 bpo:P10897 a owl:Class ;
     bpo:pcfID "10897" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10897. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.2.5" ;
     bpo:apqcSourceText "Delaying the outflow of funds as long as possible, but encourage the inflow of as fast as possible." ;
     rdfs:label "Manage cash flows" ;
@@ -2994,6 +3165,7 @@ bpo:P10897 a owl:Class ;
 
 bpo:P10898 a owl:Class ;
     bpo:pcfID "10898" ; bpo:hierarchyID "9.7.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10898. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Presenting reports on all cash-related activities. Collect and manage short-term investing activities. Prepare reports of all transactions done." ;
     rdfs:label "Produce cash management accounting transactions and reports" ;
     skos:definition "An Act of Reporting that has as input transaction records and has as output a financial report on cash-management activity." ;
@@ -3005,6 +3177,7 @@ bpo:P10898 a owl:Class ;
 
 bpo:P10899 a owl:Class ;
     bpo:pcfID "10899" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10899. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.2.7" ;
     bpo:apqcSourceText "Maintaining and directing the course of relationships with banking partners." ;
     rdfs:label "Manage and oversee banking relationships" ;
@@ -3015,6 +3188,7 @@ bpo:P10899 a owl:Class ;
 
 bpo:P10900 a owl:Class ;
     bpo:pcfID "10900" ; bpo:hierarchyID "9.7.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10900. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Studying and finalizing bank fees for services provided by banks. Negotiate and finalize nominal fees that bank charges for various services, such as requesting a deposit slip or counter check or certifying papers." ;
     rdfs:label "Analyze, negotiate, resolve, and confirm bank fees" ;
     skos:definition "An Act of Analysis that has as input financial data and has as output a bank fee analysis determining the fees charged by a banking partner." ;
@@ -3026,6 +3200,7 @@ bpo:P10900 a owl:Class ;
 
 bpo:P10760 a owl:Class ;
     bpo:pcfID "10760" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10760. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.3" ;
     bpo:apqcSourceText "Managing financial services provided by an in-house bank structure in the corporation that is operating like a commercial bank." ;
     rdfs:label "Manage in-house bank accounts" ;
@@ -3042,6 +3217,7 @@ bpo:P10760 a owl:Class ;
 
 bpo:P10901 a owl:Class ;
     bpo:pcfID "10901" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10901. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.3.1" ;
     bpo:apqcSourceText "Maintaining subsidiaries' company accounts opened with bank inside the corporation. Manage different financial services provided by in-house bank structure for parent companies' subsidiaries or branches." ;
     rdfs:label "Manage in-house bank accounts for subsidiaries" ;
@@ -3052,6 +3228,7 @@ bpo:P10901 a owl:Class ;
 
 bpo:P10902 a owl:Class ;
     bpo:pcfID "10902" ; bpo:hierarchyID "9.7.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10902. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arranging loans for subsidiaries from in-house banks." ;
     rdfs:label "Manage and facilitate inter-company borrowing transactions" ;
     skos:definition "An Act of Loaning in which the in-house bank (Creditor) extends a loan to a subsidiary (Debtor) to receive repayments of greater financial value." ;
@@ -3064,6 +3241,7 @@ bpo:P10902 a owl:Class ;
 
 bpo:P10903 a owl:Class ;
     bpo:pcfID "10903" ; bpo:hierarchyID "9.7.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10903. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling payments made for subsidiaries by parent company." ;
     rdfs:label "Manage centralized outgoing payments on behalf of subsidiaries" ;
     skos:definition "An Act of Financial Transaction in which the parent disburses monetary payments outward on behalf of its subsidiaries." ;
@@ -3075,6 +3253,7 @@ bpo:P10903 a owl:Class ;
 
 bpo:P10904 a owl:Class ;
     bpo:pcfID "10904" ; bpo:hierarchyID "9.7.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10904. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling payments received by parent company for subsidiaries." ;
     rdfs:label "Manage central incoming payments on behalf of subsidiaries" ;
     skos:definition "An Act of Financial Transaction in which the parent collects monetary payments inward on behalf of its subsidiaries." ;
@@ -3086,6 +3265,7 @@ bpo:P10904 a owl:Class ;
 
 bpo:P10905 a owl:Class ;
     bpo:pcfID "10905" ; bpo:hierarchyID "9.7.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10905. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Taking care of all business outflows and recording as whole. Manage making all payments for the organization and its units or subsidiaries. Track in books of accounts of parent company." ;
     rdfs:label "Manage internal payments and netting transactions" ;
     skos:definition "An Act of Financial Transaction in which internal payments across organizational units are settled on a netted basis and recorded." ;
@@ -3097,6 +3277,7 @@ bpo:P10905 a owl:Class ;
 
 bpo:P10906 a owl:Class ;
     bpo:pcfID "10906" ; bpo:hierarchyID "9.7.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10906. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Computing all expenses paid to and receivables collected over the organization's banking activity. Calculate all charges and receivables, towards interest, fees, and any other payments over its own bank accounts. Record transactions in the books of accounts." ;
     rdfs:label "Calculate interest and fees for in-house bank accounts" ;
     skos:definition "An Act of Accounting that has as input a general ledger and has as output transaction records of computed interest and fees on in-house bank accounts." ;
@@ -3108,6 +3289,7 @@ bpo:P10906 a owl:Class ;
 
 bpo:P10907 a owl:Class ;
     bpo:pcfID "10907" ; bpo:hierarchyID "9.7.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10907. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Facilitating account statements for all in-house banking activity." ;
     rdfs:label "Provide account statements for in-house bank accounts" ;
     skos:definition "An Act of Communication that delivers an already-prepared account statement for in-house banking activity to the account holder." ;
@@ -3119,6 +3301,7 @@ bpo:P10907 a owl:Class ;
 
 bpo:P10761 a owl:Class ;
     bpo:pcfID "10761" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10761. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.4" ;
     bpo:apqcSourceText "Taking care of the organization's financial position. Manage its loans or debts from different sources and investments. Leverage the most profitable options to balance the financial position in the market." ;
     rdfs:label "Manage debt and investment" ;
@@ -3134,6 +3317,7 @@ bpo:P10761 a owl:Class ;
 
 bpo:P14079 a owl:Class ;
     bpo:pcfID "14079" ; bpo:hierarchyID "9.7.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14079. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing and instituting principles that the organization ill use in making investments." ;
     rdfs:label "Establish investment policy" ;
     skos:definition "An Act of Formulation that has as output an investment policy prescribing the principles the organization will follow in making investments." ;
@@ -3144,6 +3328,7 @@ bpo:P14079 a owl:Class ;
 
 bpo:P10908 a owl:Class ;
     bpo:pcfID "10908" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10908. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.4.2" ;
     bpo:apqcSourceText "Maintaining smooth relations with financial investment banks that help availing loans and services." ;
     rdfs:label "Manage financial intermediary relationships" ;
@@ -3154,6 +3339,7 @@ bpo:P10908 a owl:Class ;
 
 bpo:P10909 a owl:Class ;
     bpo:pcfID "10909" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10909. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.4.3" ;
     bpo:apqcSourceText "Managing and maintaining enough liquidity in form of cash and cash equivalents in the business to meet urgent and timely requirements" ;
     rdfs:label "Manage liquidity" ;
@@ -3164,6 +3350,7 @@ bpo:P10909 a owl:Class ;
 
 bpo:P10910 a owl:Class ;
     bpo:pcfID "10910" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10910. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.4.4" ;
     bpo:apqcSourceText "Managing the exposure incurred by the issuer for providing credit to the borrower." ;
     rdfs:label "Manage issuer exposure" ;
@@ -3174,6 +3361,7 @@ bpo:P10910 a owl:Class ;
 
 bpo:P10911 a owl:Class ;
     bpo:pcfID "10911" ; bpo:hierarchyID "9.7.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10911. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking loans taken and money invested in different options. Arrange and supervise loans from banks and individuals and investments in different available and profitable options." ;
     rdfs:label "Process and oversee debt and investment transactions" ;
     skos:definition "An Act of Financial Transaction in which loans are taken or investments are placed and the resulting positions are recorded." ;
@@ -3184,6 +3372,7 @@ bpo:P10911 a owl:Class ;
 
 bpo:P10912 a owl:Class ;
     bpo:pcfID "10912" ; bpo:hierarchyID "9.7.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10912. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arranging and supervising foreign exchange rate changes to avoid loss on foreign-currency transactions." ;
     rdfs:label "Process and oversee foreign currency transactions" ;
     skos:definition "An Act of Financial Transaction in which foreign-currency positions are exchanged and the resulting transactions are recorded." ;
@@ -3194,6 +3383,7 @@ bpo:P10912 a owl:Class ;
 
 bpo:P10913 a owl:Class ;
     bpo:pcfID "10913" ; bpo:hierarchyID "9.7.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10913. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating transactions report of loans and investments. Prepare and maintain records of loans and investment transactions." ;
     rdfs:label "Produce debt and investment accounting transaction reports" ;
     skos:definition "An Act of Reporting that has as input transaction records and has as output a financial report on debt and investment activity." ;
@@ -3205,6 +3395,7 @@ bpo:P10913 a owl:Class ;
 
 bpo:P14210 a owl:Class ;
     bpo:pcfID "14210" ; bpo:hierarchyID "9.7.4.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14210. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Supervising the interest paid or received by the organization. Arrange and supervise interest rate swap transactions to manage exposure to fluctuations in interest rates. Or attain a marginally lower rate of interest than could be gained through a swap." ;
     rdfs:label "Process and oversee interest rate transactions" ;
     skos:definition "An Act of Financial Transaction in which interest-rate swap or related transactions are arranged and recorded to manage interest-rate exposure." ;
@@ -3215,6 +3406,7 @@ bpo:P14210 a owl:Class ;
 
 bpo:P11208 a owl:Class ;
     bpo:pcfID "11208" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11208. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.5" ;
     bpo:apqcSourceText "Performing transactions that limit investment risk with the help of derivatives, such as options and futures contracts. Manage interest rates, foreign exchange, and exposure risks. Develop and execute hedging transactions. Evaluate and refine hedging positions. Produce hedge accounting transactions and reports. Monitor credit." ;
     rdfs:label "Monitor and execute risk and hedging transactions" ;
@@ -3227,6 +3419,7 @@ bpo:P11208 a owl:Class ;
 
 bpo:P12974 a owl:Class ;
     bpo:pcfID "12974" ; bpo:hierarchyID "9.7.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12974. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Taking an investment position to offset exposure to certain risks. This may include purchasing opposite of the organization's position in the marketplace, using derivatives transactions, or futures contracts." ;
     rdfs:label "Develop risk management/hedging strategy" ;
     skos:definition "An Act of Formulation that has as output a hedging strategy prescribing positions taken to offset exposure to financial risks." ;
@@ -3237,6 +3430,7 @@ bpo:P12974 a owl:Class ;
 
 bpo:P11209 a owl:Class ;
     bpo:pcfID "11209" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11209. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.5.2" ;
     bpo:apqcSourceText "Handling risks arising from changes in the interest rate." ;
     rdfs:label "Manage interest rate risk" ;
@@ -3251,6 +3445,7 @@ bpo:P11209 a owl:Class ;
 
 bpo:P19575 a owl:Class ;
     bpo:pcfID "19575" ; bpo:hierarchyID "9.7.5.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19575. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collecting and storing data that pertains to interest rate markets." ;
     rdfs:label "Manage interest rate market data" ;
     skos:definition "An Act of Monitoring that collects and stores interest-rate market data and has as output a market rate data record." ;
@@ -3261,6 +3456,7 @@ bpo:P19575 a owl:Class ;
 
 bpo:P19576 a owl:Class ;
     bpo:pcfID "19576" ; bpo:hierarchyID "9.7.5.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19576. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying potential interest rate risks for all markets." ;
     rdfs:label "Determine interest rate exposure for all markets" ;
     skos:definition "An Act of Analysis that has as input market rate data and has as output a financial risk assessment of interest-rate exposure across markets." ;
@@ -3272,6 +3468,7 @@ bpo:P19576 a owl:Class ;
 
 bpo:P19577 a owl:Class ;
     bpo:pcfID "19577" ; bpo:hierarchyID "9.7.5.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19577. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deciding the requirements on interest rate investments that are made by trading in futures or options market, on the basis of the accepted risk policy." ;
     rdfs:label "Determine interest rate hedge requirements in accordance with risk policy" ;
     skos:definition "An Act of Selection that has as input a financial risk assessment and a financial policy and has as output a hedge requirement specification for interest-rate exposure." ;
@@ -3284,6 +3481,7 @@ bpo:P19577 a owl:Class ;
 
 bpo:P19578 a owl:Class ;
     bpo:pcfID "19578" ; bpo:hierarchyID "9.7.5.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19578. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Performing trading on interest rates." ;
     rdfs:label "Execute interest rate trades" ;
     skos:definition "An Act of Financial Transaction in which interest-rate instruments are traded to implement a hedge." ;
@@ -3294,6 +3492,7 @@ bpo:P19578 a owl:Class ;
 
 bpo:P11210 a owl:Class ;
     bpo:pcfID "11210" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11210. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.5.3" ;
     bpo:apqcSourceText "Taking care of foreign-exchange risks." ;
     rdfs:label "Manage foreign exchange risk" ;
@@ -3309,6 +3508,7 @@ bpo:P11210 a owl:Class ;
 
 bpo:P19579 a owl:Class ;
     bpo:pcfID "19579" ; bpo:hierarchyID "9.7.5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19579. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling and processing information about changes in foreign exchange rates." ;
     rdfs:label "Manage foreign exchange market data" ;
     skos:definition "An Act of Monitoring that handles and processes foreign-exchange rate data and has as output a market rate data record." ;
@@ -3319,6 +3519,7 @@ bpo:P19579 a owl:Class ;
 
 bpo:P19580 a owl:Class ;
     bpo:pcfID "19580" ; bpo:hierarchyID "9.7.5.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19580. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing potential foreign exchange risks for all currencies." ;
     rdfs:label "Determine foreign exchange exposure for all currencies" ;
     skos:definition "An Act of Analysis that has as input market rate data and has as output a financial risk assessment of foreign-exchange exposure across currencies." ;
@@ -3330,6 +3531,7 @@ bpo:P19580 a owl:Class ;
 
 bpo:P19581 a owl:Class ;
     bpo:pcfID "19581" ; bpo:hierarchyID "9.7.5.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19581. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deciding the requirements on investments in foreign exchange made by trading in futures or options market, on the basis of current risk policy." ;
     rdfs:label "Determine foreign exchange hedge requirements in accordance with risk policy" ;
     skos:definition "An Act of Selection that has as input a financial risk assessment and a financial policy and has as output a hedge requirement specification for foreign-exchange exposure." ;
@@ -3342,6 +3544,7 @@ bpo:P19581 a owl:Class ;
 
 bpo:P19582 a owl:Class ;
     bpo:pcfID "19582" ; bpo:hierarchyID "9.7.5.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19582. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Executing all aspects for foreign exchange trade within foreign exchange market. This includes buying, selling, and exchanging currencies at the current or expressed price point." ;
     rdfs:label "Execute foreign exchange trades" ;
     skos:definition "An Act of Financial Transaction in which currencies are bought, sold, or exchanged in the foreign-exchange market." ;
@@ -3352,6 +3555,7 @@ bpo:P19582 a owl:Class ;
 
 bpo:P19583 a owl:Class ;
     bpo:pcfID "19583" ; bpo:hierarchyID "9.7.5.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19583. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Overseeing the foreign exchange balance sheet with an eye towards potential risk. Risks include changes in conversion rates between the time the transaction occurred and when it is completed, or when transactions are made in a denomination other than that of the organization's base currency." ;
     rdfs:label "Manage foreign exchange balance sheet risk" ;
     skos:definition "An Act of Monitoring that oversees the foreign-exchange balance sheet and has as output a financial risk assessment of translation and settlement risk." ;
@@ -3362,6 +3566,7 @@ bpo:P19583 a owl:Class ;
 
 bpo:P11211 a owl:Class ;
     bpo:pcfID "11211" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11211. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.5.4" ;
     bpo:apqcSourceText "Taking care of exposure risks. Maintain financial investments in particular investments or a portfolios that could be risky for the organization." ;
     rdfs:label "Manage exposure risk" ;
@@ -3376,6 +3581,7 @@ bpo:P11211 a owl:Class ;
 
 bpo:P19584 a owl:Class ;
     bpo:pcfID "19584" ; bpo:hierarchyID "9.7.5.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19584. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing ongoing risks that the customers face, and the exceptions to exceeded limits." ;
     rdfs:label "Determine current customer exposures and limit exceptions" ;
     skos:definition "An Act of Analysis that has as input risk exposure data and has as output a financial risk assessment describing current customer exposures and exceptions to exposure limits." ;
@@ -3387,6 +3593,7 @@ bpo:P19584 a owl:Class ;
 
 bpo:P19585 a owl:Class ;
     bpo:pcfID "19585" ; bpo:hierarchyID "9.7.5.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19585. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Settling cases that involve violations of customer exposure limit." ;
     rdfs:label "Resolve customer exposure limit violations" ;
     skos:definition "An Act of Selection that has as input a financial risk assessment and has as output an exposure limit resolution prescribing the settlement of a limit violation." ;
@@ -3398,6 +3605,7 @@ bpo:P19585 a owl:Class ;
 
 bpo:P19586 a owl:Class ;
     bpo:pcfID "19586" ; bpo:hierarchyID "9.7.5.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19586. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling customer securities to recover loans that are not paid back." ;
     rdfs:label "Manage customer collateral" ;
     skos:definition "An Act of Financial Transaction in which customer securities held as collateral are realized to recover unpaid loans, with the customer bearing a debtor role." ;
@@ -3409,6 +3617,7 @@ bpo:P19586 a owl:Class ;
 
 bpo:P19587 a owl:Class ;
     bpo:pcfID "19587" ; bpo:hierarchyID "9.7.5.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19587. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting reviews to assess customer credit on a yearly basis. Introduce changes or make recommendations, if needed." ;
     rdfs:label "Perform annual customer credit reviews" ;
     skos:definition "An Act of Appraisal that has as input a credit scoring history and has as output a credit assessment about a customer." ;
@@ -3421,6 +3630,7 @@ bpo:P19587 a owl:Class ;
 
 bpo:P20137 a owl:Class ;
     bpo:pcfID "20137" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20137. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.5.5" ;
     bpo:apqcSourceText "Implementing hedging strategy in attempt to alleviate risk. This will include all options, depravities, and futures contracts agreed upon in Develop risk management/hedging strategy [12974]." ;
     rdfs:label "Execute hedging transactions" ;
@@ -3436,6 +3646,7 @@ bpo:P20137 a owl:Class ;
 
 bpo:P19588 a owl:Class ;
     bpo:pcfID "19588" ; bpo:hierarchyID "9.7.5.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19588. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating investments made in some market to offset the risks of investing in a contrary or opposing market." ;
     rdfs:label "Measure physical positions" ;
     skos:definition "An Act of Appraisal that has as output a financial risk assessment of the physical positions held to offset opposing-market risk." ;
@@ -3446,6 +3657,7 @@ bpo:P19588 a owl:Class ;
 
 bpo:P19589 a owl:Class ;
     bpo:pcfID "19589" ; bpo:hierarchyID "9.7.5.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19589. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining which hedge options to execute." ;
     rdfs:label "Establish hedges" ;
     skos:definition "An Act of Selection that determines which hedge options to execute and produces a hedge selection decision prescribing the chosen option(s)." ;
@@ -3456,6 +3668,7 @@ bpo:P19589 a owl:Class ;
 
 bpo:P19590 a owl:Class ;
     bpo:pcfID "19590" ; bpo:hierarchyID "9.7.5.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19590. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Closing out a position or cashing in derivatives early." ;
     rdfs:label "Unwind hedges" ;
     skos:definition "An Act of Financial Transaction in which an open hedging position is closed out or derivatives are settled early." ;
@@ -3466,6 +3679,7 @@ bpo:P19590 a owl:Class ;
 
 bpo:P11213 a owl:Class ;
     bpo:pcfID "11213" ; bpo:hierarchyID "9.7.5.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11213. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining options in the market for hedging investments. Select an option." ;
     rdfs:label "Evaluate and refine hedging positions" ;
     skos:definition "An Act of Selection that examines available hedging options and has as output a hedge selection decision prescribing the chosen option." ;
@@ -3476,6 +3690,7 @@ bpo:P11213 a owl:Class ;
 
 bpo:P11215 a owl:Class ;
     bpo:pcfID "11215" ; bpo:hierarchyID "9.7.5.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11215. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Revising credit reports periodically for accurateness and changes that could be suggestive of duplicitous activity." ;
     rdfs:label "Monitor credit" ;
     skos:definition "An Act of Monitoring that has as input a credit scoring history and has as output a credit assessment flagging inaccuracies or signs of fraudulent activity." ;
@@ -3487,6 +3702,7 @@ bpo:P11215 a owl:Class ;
 
 bpo:P11214 a owl:Class ;
     bpo:pcfID "11214" ; bpo:hierarchyID "9.7.5.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11214. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing and documenting accounts and records of all hedging investment transactions to reduce risks due to change in markets." ;
     rdfs:label "Produce hedge accounting transactions and reports" ;
     skos:definition "An Act of Reporting that has as input transaction records and has as output a financial report documenting hedging investment activity." ;
@@ -3498,6 +3714,7 @@ bpo:P11214 a owl:Class ;
 
 bpo:P16958 a owl:Class ;
     bpo:pcfID "16958" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16958. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.7.6" ;
     bpo:apqcSourceText "Handling cases that involve financial fraud. Resolve disputes." ;
     rdfs:label "Manage financial fraud/dispute cases" ;
@@ -3517,6 +3734,7 @@ bpo:InternalControlCapability rdfs:subClassOf
 
 bpo:P10762 a owl:Class ;
     bpo:pcfID "10762" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10762. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.1" ;
     bpo:apqcSourceText "Forming rules and regulations to ensure the achievement of effectiveness, proficiency of operations, and reliability of financial reporting." ;
     rdfs:label "Establish internal controls, policies, and procedures" ;
@@ -3534,6 +3752,7 @@ bpo:P10762 a owl:Class ;
 
 bpo:P10914 a owl:Class ;
     bpo:pcfID "10914" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10914. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.1.1" ;
     bpo:apqcSourceText "Establishing board of directors and auditing committee in order to assign roles and responsibilities for internal controls." ;
     rdfs:label "Establish board of directors and audit committee" ;
@@ -3545,6 +3764,7 @@ bpo:P10914 a owl:Class ;
 
 bpo:P10915 a owl:Class ;
     bpo:pcfID "10915" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10915. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.1.2" ;
     bpo:apqcSourceText "Outlining and communicating a code of ethics act responsibly." ;
     rdfs:label "Define and communicate code of ethics" ;
@@ -3556,6 +3776,7 @@ bpo:P10915 a owl:Class ;
 
 bpo:P10916 a owl:Class ;
     bpo:pcfID "10916" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10916. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.1.3" ;
     bpo:apqcSourceText "Defining roles, responsibilities, and accountabilities for effectiveness and proficiency of operations and reliability of financial reporting." ;
     rdfs:label "Assign roles and responsibility for internal controls" ;
@@ -3567,6 +3788,7 @@ bpo:P10916 a owl:Class ;
 
 bpo:P11250 a owl:Class ;
     bpo:pcfID "11250" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11250. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.1.4" ;
     bpo:apqcSourceText "Outlining the objectives and risks associated with a process. Delineate process goals. Determine the risks attached to it. Determine what the process is meant to accomplish, potential issues, a timeline of potential risks, the scope and potential impact of risks, etc." ;
     rdfs:label "Define business process objectives and risks" ;
@@ -3579,6 +3801,7 @@ bpo:P11250 a owl:Class ;
 
 bpo:P11251 a owl:Class ;
     bpo:pcfID "11251" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11251. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.1.5" ;
     bpo:apqcSourceText "Outlining the risk tolerance levels of individual units, as well as the organization as a whole. Determine the specific maximum risk to take in quantitative terms for each relevant risk subcategory, including strategic, operational, financial, and compliance risks." ;
     rdfs:label "Define entity/unit risk tolerances" ;
@@ -3590,6 +3813,7 @@ bpo:P11251 a owl:Class ;
 
 bpo:P21574 a owl:Class ;
     bpo:pcfID "21574" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21574. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.2" ;
     bpo:apqcSourceText "Performing planning, management, operations, and monitoring of internal control mechanism policies and procedures in order to manage internal controls." ;
     rdfs:label "Operate controls and monitor compliance with internal controls policies and procedures" ;
@@ -3603,6 +3827,7 @@ bpo:P21574 a owl:Class ;
 
 bpo:P10918 a owl:Class ;
     bpo:pcfID "10918" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10918. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.2.1" ;
     bpo:apqcSourceText "Overseeing the activities for internal controls. Observe the effectiveness of policies, procedures, techniques, and mechanisms actions taken to minimize risk." ;
     rdfs:label "Monitor control effectiveness" ;
@@ -3615,6 +3840,7 @@ bpo:P10918 a owl:Class ;
 
 bpo:P10919 a owl:Class ;
     bpo:pcfID "10919" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10919. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.2.2" ;
     bpo:apqcSourceText "Taking corrective measures for policies, procedures, techniques, and mechanisms actions taken to minimize risk. (Conduct in accordance with Monitor control effectiveness [10918] in order to determine and rectify the control deficiencies.)" ;
     rdfs:label "Remediate control deficiencies" ;
@@ -3627,6 +3853,7 @@ bpo:P10919 a owl:Class ;
 
 bpo:P10764 a owl:Class ;
     bpo:pcfID "10764" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10764. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.3" ;
     bpo:apqcSourceText "Reporting on internal controls compliance to the appropriate authority, including IT regulations and pertinent data." ;
     rdfs:label "Report on internal controls compliance" ;
@@ -3642,6 +3869,7 @@ bpo:P10764 a owl:Class ;
 
 bpo:P10923 a owl:Class ;
     bpo:pcfID "10923" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10923. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.3.1" ;
     bpo:apqcSourceText "Reporting to external auditors. This process requires the organization to report to external auditors about the regulations for any critical data that the organization is holding." ;
     rdfs:label "Report to external auditors" ;
@@ -3654,6 +3882,7 @@ bpo:P10923 a owl:Class ;
 
 bpo:P10924 a owl:Class ;
     bpo:pcfID "10924" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10924. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.3.2" ;
     bpo:apqcSourceText "Reporting to regulators, shareholders, debt holders, securities exchanges, etc. about IT regulations and pertinent data." ;
     rdfs:label "Report to regulators, share-/debt-holders, securities exchanges, etc." ;
@@ -3667,6 +3896,7 @@ bpo:P10924 a owl:Class ;
 
 bpo:P10925 a owl:Class ;
     bpo:pcfID "10925" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10925. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.3.3" ;
     bpo:apqcSourceText "Reporting to suppliers, customers, and partners that are doing business with the company about IT regulations and pertinent data." ;
     rdfs:label "Report to third parties" ;
@@ -3680,6 +3910,7 @@ bpo:P10925 a owl:Class ;
 
 bpo:P10926 a owl:Class ;
     bpo:pcfID "10926" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10926. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.8.3.4" ;
     bpo:apqcSourceText "Reporting to internal management (all employees, directors, and management) about IT regulations and pertinent data." ;
     rdfs:label "Report to internal management" ;
@@ -3696,6 +3927,7 @@ bpo:P10926 a owl:Class ;
 
 bpo:P10765 a owl:Class ;
     bpo:pcfID "10765" ; bpo:hierarchyID "9.9.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10765. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting targets for periodic tax liabilities. Assess the tax impact of various activities such as the acquisition or disposal of fixed assets or a deliberate change in number of employee." ;
     rdfs:label "Develop tax strategy and plan" ;
     skos:definition "An Act of Formulation that sets targets for the organization's periodic tax liabilities and produces a tax strategy prescribing how those liabilities are to be planned and met." ;
@@ -3709,6 +3941,7 @@ bpo:P10765 a owl:Class ;
 
 bpo:P10927 a owl:Class ;
     bpo:pcfID "10927" ; bpo:hierarchyID "9.9.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10927. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a tax strategy for foreign, national, state, local administration. Set up tax strategies for foreign trade in imports and exports and at national, state, and local level." ;
     rdfs:label "Develop foreign, national, state, and local tax strategy" ;
     skos:definition "An Act of Formulation that composes a tax strategy governing the organization's tax position across foreign, national, state, and local jurisdictions." ;
@@ -3719,6 +3952,7 @@ bpo:P10927 a owl:Class ;
 
 bpo:P10928 a owl:Class ;
     bpo:pcfID "10928" ; bpo:hierarchyID "9.9.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10928. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Combining and enhancing a rational analysis of a financial condition or plan from a tax perspective in order to align financial goals through efficient tax planning." ;
     rdfs:label "Consolidate and optimize total tax plan" ;
     skos:definition "An Act of Formulation that combines and optimizes the organization's component tax plans into a single total tax plan aligning financial goals through efficient tax planning." ;
@@ -3729,6 +3963,7 @@ bpo:P10928 a owl:Class ;
 
 bpo:P10929 a owl:Class ;
     bpo:pcfID "10929" ; bpo:hierarchyID "9.9.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10929. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining a master file about the rational analysis of a financial condition or plan from a tax perspective in order to align financial goals through efficient tax planning." ;
     rdfs:label "Maintain tax master data" ;
     skos:definition "An Act of Accounting that maintains and updates the tax master data file recording the reference data underpinning the organization's tax planning." ;
@@ -3739,6 +3974,7 @@ bpo:P10929 a owl:Class ;
 
 bpo:P10766 a owl:Class ;
     bpo:pcfID "10766" ; bpo:hierarchyID "9.9.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10766. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing the taxes of the organization in line with the regional taxation structure, including corporate, property, excise, and service taxes." ;
     rdfs:label "Process taxes" ;
     skos:definition "A Planned Act that carries out the organization's tax obligations in line with the regional taxation structure -- encompassing corporate, property, excise, and service taxes -- and that has as process parts the planning, filing, accounting, monitoring, and payment of those taxes." ;
@@ -3755,6 +3991,7 @@ bpo:P10766 a owl:Class ;
 
 bpo:P10930 a owl:Class ;
     bpo:pcfID "10930" ; bpo:hierarchyID "9.9.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10930. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing strategies for taxes to be paid or collected by the business." ;
     rdfs:label "Perform tax planning/strategy" ;
     skos:definition "An Act of Formulation that creates strategies for the taxes to be paid or collected by the organization and prescribes their implementation." ;
@@ -3765,6 +4002,7 @@ bpo:P10930 a owl:Class ;
 
 bpo:P10931 a owl:Class ;
     bpo:pcfID "10931" ; bpo:hierarchyID "9.9.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10931. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing and submitting tax reports for every employee to the tax department in order to show the tax paid and deducted from their salaries in the year." ;
     rdfs:label "Prepare tax returns" ;
     skos:definition "An Act of Reporting that prepares and submits a tax return reporting the tax paid by and deducted on behalf of the organization and its employees to the relevant tax authority." ;
@@ -3775,6 +4013,7 @@ bpo:P10931 a owl:Class ;
 
 bpo:P10932 a owl:Class ;
     bpo:pcfID "10932" ; bpo:hierarchyID "9.9.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10932. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing reports about paid or accrued foreign taxes to an overseas country." ;
     rdfs:label "Prepare foreign taxes" ;
     skos:definition "An Act of Reporting that prepares a tax return reporting the foreign taxes paid or accrued by the organization to an overseas taxing jurisdiction." ;
@@ -3785,6 +4024,7 @@ bpo:P10932 a owl:Class ;
 
 bpo:P10933 a owl:Class ;
     bpo:pcfID "10933" ; bpo:hierarchyID "9.9.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10933. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating the income that has been realized when the tax on that income has not." ;
     rdfs:label "Calculate deferred taxes" ;
     skos:definition "An Act of Accounting that computes the organization's deferred tax positions arising where income is recognized in a period different from the period in which the related tax is incurred, producing tax data on those positions." ;
@@ -3795,6 +4035,7 @@ bpo:P10933 a owl:Class ;
 
 bpo:P10934 a owl:Class ;
     bpo:pcfID "10934" ; bpo:hierarchyID "9.9.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10934. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the organization's financial accounts for the purpose of taxation. Prepare and maintain the tax paid by the organization to the country they have business in." ;
     rdfs:label "Account for taxes" ;
     skos:definition "An Act of Accounting that maintains the organization's financial accounts for tax purposes and records the tax paid in each country in which it operates, producing tax data." ;
@@ -3805,6 +4046,7 @@ bpo:P10934 a owl:Class ;
 
 bpo:P10935 a owl:Class ;
     bpo:pcfID "10935" ; bpo:hierarchyID "9.9.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10935. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Checking and correcting the tax policies according to the rules and regulations set by the organization." ;
     rdfs:label "Monitor tax compliance" ;
     skos:definition "An Act of Monitoring that checks the organization's tax policies and practices against applicable rules and regulations and produces a compliance report identifying and prompting correction of deviations." ;
@@ -3815,6 +4057,7 @@ bpo:P10935 a owl:Class ;
 
 bpo:P10936 a owl:Class ;
     bpo:pcfID "10936" ; bpo:hierarchyID "9.9.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10936. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Addressing any tax queries by any regulatory or government authorities. Review historical records related to taxation within the organization in order to respond to queries." ;
     rdfs:label "Address tax inquiries" ;
     skos:definition "An Act of Reporting that reviews the organization's historical taxation records and produces a tax inquiry response answering a query raised by a regulatory or government authority." ;
@@ -3830,6 +4073,7 @@ bpo:P10936 a owl:Class ;
 
 bpo:P10767 a owl:Class ;
     bpo:pcfID "10767" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10767. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.10.1" ;
     bpo:apqcSourceText "Forecasting and monitoring changes in foreign currency value or interest rates around the world that play an important role in the organization." ;
     rdfs:label "Monitor international rates" ;
@@ -3842,6 +4086,7 @@ bpo:P10767 a owl:Class ;
 
 bpo:P10768 a owl:Class ;
     bpo:pcfID "10768" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10768. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.10.2" ;
     bpo:apqcSourceText "Managing any transfer of funds in the course of conducting cross-border trades or investments, including conversion across currencies. Find the most suitable alternative for making payments, while saving taxes and avoiding any unwarranted regulation, with the objective of protecting capital." ;
     rdfs:label "Manage transactions" ;
@@ -3854,6 +4099,7 @@ bpo:P10768 a owl:Class ;
 
 bpo:P10769 a owl:Class ;
     bpo:pcfID "10769" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10769. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.10.3" ;
     bpo:apqcSourceText "Assessing exposure to potential financial losses as a result of changes in the value of currencies. Forecast the impact of movements in foreign currency values. Enter into financial transactions designed to offset or limit potential exposure to loss." ;
     rdfs:label "Monitor currency exposure/hedge currency" ;
@@ -3867,6 +4113,7 @@ bpo:P10769 a owl:Class ;
 
 bpo:P10770 a owl:Class ;
     bpo:pcfID "10770" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10770. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.10.4" ;
     bpo:apqcSourceText "Documenting and reporting accounting entries to formally report financial gains or losses experienced as a result of foreign exchange activity." ;
     rdfs:label "Report results" ;
@@ -3884,6 +4131,7 @@ bpo:P10770 a owl:Class ;
 
 bpo:P17059 a owl:Class ;
     bpo:pcfID "17059" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17059. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.11" ;
     bpo:apqcSourceText "Making and collecting payments for transactions in products/services, and transporting them to interested markets." ;
     rdfs:label "Perform global trade services" ;
@@ -3902,6 +4150,7 @@ bpo:P17059 a owl:Class ;
 
 bpo:P14090 a owl:Class ;
     bpo:pcfID "14090" ; bpo:hierarchyID "9.11.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14090. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the approved list of parties for engaging in international trade in order to ensure the safety of the organization's business transactions. Examine agents that have been granted legal rights to engage in global trade and their credentials." ;
     rdfs:label "Screen sanctioned party list" ;
     skos:definition "An Act of Appraisal that has as input a sanctioned party list and has as output a sanctioned-party screening result judging whether the parties to a prospective transaction are cleared to engage in international trade." ;
@@ -3913,6 +4162,7 @@ bpo:P14090 a owl:Class ;
 
 bpo:P14092 a owl:Class ;
     bpo:pcfID "14092" ; bpo:hierarchyID "9.11.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14092. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Systematically categorizing products/services for their suitability to international trade. Create classes and categories for demarcating the types of products suitable for international trade. Study requisite national and international standards and the adherence of the organization's portfolio of offerings to these." ;
     rdfs:label "Classify products" ;
     skos:definition "An Act of Analysis that examines an organization's products and services against national and international trade standards and has as output a product trade classification." ;
@@ -3923,6 +4173,7 @@ bpo:P14092 a owl:Class ;
 
 bpo:P19593 a owl:Class ;
     bpo:pcfID "19593" ; bpo:hierarchyID "9.11.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19593. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying current exchange rates between two currencies and converting the foreign currency to that of the local monetary unit. I.E., yen to US dollar." ;
     rdfs:label "Perform currency conversion" ;
     skos:definition "An Act of Analysis that examines market rate data to convert a monetary amount from a foreign currency to the local monetary unit, producing a currency conversion record." ;
@@ -3934,6 +4185,7 @@ bpo:P19593 a owl:Class ;
 
 bpo:P14093 a owl:Class ;
     bpo:pcfID "14093" ; bpo:hierarchyID "9.11.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14093. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Computing the excise duty to be paid during international trade." ;
     rdfs:label "Calculate duty" ;
     skos:definition "An Act of Accounting that computes the excise duty payable on an international-trade transaction and has as output a duty calculation." ;
@@ -3944,6 +4196,7 @@ bpo:P14093 a owl:Class ;
 
 bpo:P14094 a owl:Class ;
     bpo:pcfID "14094" ; bpo:hierarchyID "9.11.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14094. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Communicating with the customs department to ensure fluid compliance. Share pertinent information mandated by law with the government agency that controls and collects the duties levied for the international exchange of products/services." ;
     rdfs:label "Communicate with customs" ;
     skos:definition "An Act of Communication in which an organization transfers customs information to the government customs authority in order to ensure compliance with international-trade law." ;
@@ -3956,6 +4209,7 @@ bpo:P14094 a owl:Class ;
 
 bpo:P14095 a owl:Class ;
     bpo:pcfID "14095" ; bpo:hierarchyID "9.11.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14095. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting and recording the trade processes while making transactions, noting the description, quality, number, transportation medium, indemnity, and inspection." ;
     rdfs:label "Document trade" ;
     skos:definition "An Act of Reporting that records the particulars of a trade transaction -- including description, quality, quantity, transport medium, indemnity, and inspection -- and has as output trade documentation." ;
@@ -3966,6 +4220,7 @@ bpo:P14095 a owl:Class ;
 
 bpo:P14096 a owl:Class ;
     bpo:pcfID "14096" ; bpo:hierarchyID "9.11.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14096. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing global trade under preference, which allows the organization to import/export products at a lower or nil rate of customs duty and/or levy charge." ;
     rdfs:label "Process trade preferences" ;
     skos:definition "An Act of Reporting that prepares the documentation establishing a shipment's eligibility for trade under preference and has as output trade preference documentation." ;
@@ -3976,6 +4231,7 @@ bpo:P14096 a owl:Class ;
 
 bpo:P14098 a owl:Class ;
     bpo:pcfID "14098" ; bpo:hierarchyID "9.11.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14098. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a document assuring that a seller will receive payment when certain delivery conditions are met. (If the buyer is unable to make payment on the purchase, a bank covers the outstanding amount.)" ;
     rdfs:label "Prepare letter of credit" ;
     skos:definition "An Act of Formulation that composes a letter of credit prescribing the conditions under which a bank guarantees payment to a seller upon fulfilment of specified delivery conditions." ;

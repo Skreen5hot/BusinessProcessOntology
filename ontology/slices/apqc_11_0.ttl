@@ -475,6 +475,7 @@ bpo:BusinessResiliencyCapability a owl:Class ; rdfs:subClassOf cco:ont00000568 ;
 # --- PROCESS-GROUP NODE 11.1 (PCF 17060) -- Organization Capability (R5/R6)
 bpo:P17060 a owl:Class ;
     bpo:pcfID "17060" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17060. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1" ;
     bpo:apqcSourceText "Creating requisite frameworks and coordinating all risk management activities for the entire organization and each function. Manage the enterprise risk by outlining the risk policies and procedures. Monitor and communicate all risk management activities. Encourage correspondence among the business units. Manage the risk of all business units and functions." ;
     rdfs:label "Manage enterprise risk" ;
@@ -489,6 +490,7 @@ bpo:P17060 a owl:Class ;
 # --- 11.1.1 (PCF 16439) -- Establish the enterprise risk framework and policies
 bpo:P16439 a owl:Class ;
     bpo:pcfID "16439" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16439. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.1" ;
     bpo:apqcSourceText "Creating an agenda for the rules and regulations of enterprise risk that deal with hazardous, financial, operational, and strategic risks." ;
     rdfs:label "Establish the enterprise risk framework and policies" ;
@@ -506,6 +508,7 @@ bpo:P16439 a owl:Class ;
 # --- 11.1.1.1 (PCF 16440) : Formulation -> Directive output (risk tolerance)
 bpo:P16440 a owl:Class ;
     bpo:pcfID "16440" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16440. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.1.1" ;
     bpo:apqcSourceText "Recognizing the organization's tolerance for risk, given risk-return trade-offs for one or more anticipated and predictable consequences." ;
     rdfs:label "Determine risk tolerance for organization" ;
@@ -518,6 +521,7 @@ bpo:P16440 a owl:Class ;
 # --- 11.1.1.2 (PCF 16441) : Formulation -> Directive output (policies)
 bpo:P16441 a owl:Class ;
     bpo:pcfID "16441" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16441. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.1.2" ;
     bpo:apqcSourceText "Establishing and maintaining the policies and procedures for managing risk. Create rules and regulations for enterprise risk dealing with hazardous, financial, operational, and strategic risks." ;
     rdfs:label "Develop and maintain enterprise risk policies and procedures" ;
@@ -530,6 +534,7 @@ bpo:P16441 a owl:Class ;
 # --- 11.1.1.3 (PCF 16442) : Selection -> Directive output (tool specification)
 bpo:P16442 a owl:Class ;
     bpo:pcfID "16442" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16442. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.1.3" ;
     bpo:apqcSourceText "Recognizing and implementing tools for managing risk. Identify and apply enterprise risk management tools. Leverage methods and processes to manage risks and opportunities associated with business objectives." ;
     rdfs:label "Identify and implement enterprise risk management tools" ;
@@ -542,6 +547,7 @@ bpo:P16442 a owl:Class ;
 # --- 11.1.1.4 (PCF 16443) : Reporting (Representative Communication) -> Descriptive output
 bpo:P16443 a owl:Class ;
     bpo:pcfID "16443" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16443. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.1.4" ;
     bpo:apqcSourceText "Communicating the knowledge about risk within the organization. Identify operational risks. Share risk information within the organization." ;
     rdfs:label "Coordinate the sharing of risk knowledge across the organization" ;
@@ -555,6 +561,7 @@ bpo:P16443 a owl:Class ;
 # --- 11.1.1.5 (PCF 16444) : Reporting -> Descriptive output (enterprise risk report)
 bpo:P16444 a owl:Class ;
     bpo:pcfID "16444" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16444. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.1.5" ;
     bpo:apqcSourceText "Preparing and presenting reports about enterprise risk to the management of the organization. Create reports for management on hazard risks (e.g., property damage and liability torts), financial risks (e.g., currency and liquidity risks), and operational risks (e.g., product failure, customer satisfaction, social trends, and competition)." ;
     rdfs:label "Prepare and report enterprise risk to executive management and board" ;
@@ -568,6 +575,7 @@ bpo:P16444 a owl:Class ;
 # --- 11.1.2 (PCF 16445) -- Oversee and coordinate enterprise risk management activities
 bpo:P16445 a owl:Class ;
     bpo:pcfID "16445" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16445. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2" ;
     bpo:apqcSourceText "Coordinating to plan, organize, lead, and control the activities of an organization in order to minimize the special effects of risk on capital and earnings." ;
     rdfs:label "Oversee and coordinate enterprise risk management activities" ;
@@ -588,6 +596,7 @@ bpo:P16445 a owl:Class ;
 # --- 11.1.2.1 (PCF 16446) : Identification -> Descriptive output (risk register)
 bpo:P16446 a owl:Class ;
     bpo:pcfID "16446" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16446. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.1" ;
     bpo:apqcSourceText "Determining risks that could thwart objectives. Document and communicate the concern." ;
     rdfs:label "Identify enterprise level risks" ;
@@ -600,6 +609,7 @@ bpo:P16446 a owl:Class ;
 # --- 11.1.2.2 (PCF 16447) : Appraisal -> Descriptive output (risk assessment)
 bpo:P16447 a owl:Class ;
     bpo:pcfID "16447" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16447. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.2" ;
     bpo:apqcSourceText "Identifying options/actions to enhance opportunities and reduce threats. Recognize the root reasons of the identified risks." ;
     rdfs:label "Assess risks to determine which to mitigate" ;
@@ -612,6 +622,7 @@ bpo:P16447 a owl:Class ;
 # --- 11.1.2.3 (PCF 16448) : Formulation -> Directive output (mitigation strategy)
 bpo:P16448 a owl:Class ;
     bpo:pcfID "16448" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16448. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.3" ;
     bpo:apqcSourceText "Developing activities to improve opportunities and lessen threats. Specify the organization's objectives. Evolve strategies and policies to attain these objectives. Assign resources to project objectives." ;
     rdfs:label "Develop risk mitigation and management strategy and integrate with existing performance management processes" ;
@@ -625,6 +636,7 @@ bpo:P16448 a owl:Class ;
 # --- 11.1.2.4 (PCF 16449) : Verification -> Descriptive output (verification judgement)
 bpo:P16449 a owl:Class ;
     bpo:pcfID "16449" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16449. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.4" ;
     bpo:apqcSourceText "Checking that the blueprint created for managing risk in individual business units and divisions is correctly effectuated. Validate the implementation of all activities geared to mitigate risks." ;
     rdfs:label "Verify business unit and functional risk mitigation plans are implemented" ;
@@ -637,6 +649,7 @@ bpo:P16449 a owl:Class ;
 # --- 11.1.2.5 (PCF 16450) : Monitoring -> Descriptive output (monitoring report)
 bpo:P16450 a owl:Class ;
     bpo:pcfID "16450" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16450. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.5" ;
     bpo:apqcSourceText "Ensuring risk monitoring and mitigation activities. Monitor actions to enhance opportunities and reduce threats to project objectives." ;
     rdfs:label "Ensure risks and risk mitigation actions are monitored" ;
@@ -649,6 +662,7 @@ bpo:P16450 a owl:Class ;
 # --- 11.1.2.6 (PCF 16451) : Reporting -> Descriptive output (enterprise risk report)
 bpo:P16451 a owl:Class ;
     bpo:pcfID "16451" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16451. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.6" ;
     bpo:apqcSourceText "Creating a report of activities to address hazard risks, liability torts, financial risks, operational risks, social trends, competition, etc." ;
     rdfs:label "Report on enterprise risk activities" ;
@@ -662,6 +676,7 @@ bpo:P16451 a owl:Class ;
 # --- 11.1.2.7 (PCF 16452) : Coordination -> Planned Act
 bpo:P16452 a owl:Class ;
     bpo:pcfID "16452" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16452. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.7" ;
     bpo:apqcSourceText "Coordinating risk management activities to improve opportunities and lessen threats. Specify the organization's objectives. Assign resources to project objectives." ;
     rdfs:label "Coordinate business unit and functional risk management activities" ;
@@ -674,6 +689,7 @@ bpo:P16452 a owl:Class ;
 # --- 11.1.2.8 (PCF 16453) : Verification -> Descriptive output
 bpo:P16453 a owl:Class ;
     bpo:pcfID "16453" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16453. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.8" ;
     bpo:apqcSourceText "Checking each business unit's/function's options and activities to improve opportunities and lessen threats." ;
     rdfs:label "Ensure that each business unit/function follows the enterprise risk management process" ;
@@ -686,6 +702,7 @@ bpo:P16453 a owl:Class ;
 # --- 11.1.2.9 (PCF 16454) : Verification -> Descriptive output
 bpo:P16454 a owl:Class ;
     bpo:pcfID "16454" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16454. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.2.9" ;
     bpo:apqcSourceText "Checking the reporting process of each business unit's/function's options and activities to improve opportunities and lessen threats." ;
     rdfs:label "Ensure that each business unit/function follows the enterprise risk reporting process" ;
@@ -698,6 +715,7 @@ bpo:P16454 a owl:Class ;
 # --- 11.1.3 (PCF 17462) -- Manage business unit and function risk
 bpo:P17462 a owl:Class ;
     bpo:pcfID "17462" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17462. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3" ;
     bpo:apqcSourceText "Analyzing the threats a business unit/function faces to prioritize the controls it implements.." ;
     rdfs:label "Manage business unit and function risk" ;
@@ -716,6 +734,7 @@ bpo:P17462 a owl:Class ;
 # --- 11.1.3.1 (PCF 16456) : Identification -> Descriptive output (risk register)
 bpo:P16456 a owl:Class ;
     bpo:pcfID "16456" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16456. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.1" ;
     bpo:apqcSourceText "Developing a timely and continuous process to identify activities that might hinder a project's goals." ;
     rdfs:label "Identify risks" ;
@@ -728,6 +747,7 @@ bpo:P16456 a owl:Class ;
 # --- 11.1.3.2 (PCF 16457) : Appraisal -> Descriptive output (risk assessment)
 bpo:P16457 a owl:Class ;
     bpo:pcfID "16457" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16457. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.2" ;
     bpo:apqcSourceText "Determining the possibility that a specified undesirable event will occur using established tools, implements, and frameworks. Use risk assessments to determine, for example, whether to undertake a particular venture, what rate of return a particular investment requires, and how to mitigate an activity's potential losses." ;
     rdfs:label "Assess risks using enterprise risk framework policies and procedures" ;
@@ -741,6 +761,7 @@ bpo:P16457 a owl:Class ;
 # --- 11.1.3.3 (PCF 16458) : Formulation -> Directive output (mitigation plan)
 bpo:P16458 a owl:Class ;
     bpo:pcfID "16458" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16458. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.3" ;
     bpo:apqcSourceText "Developing possibilities and arrangements to improve opportunities and reduce deviations to project objectives." ;
     rdfs:label "Develop mitigation plans for risks" ;
@@ -755,6 +776,7 @@ bpo:P16458 a owl:Class ;
 # --- 11.1.3.3.1 (PCF 18129) : Appraisal -> Descriptive output (insurance coverage assessment)
 bpo:P18129 a owl:Class ;
     bpo:pcfID "18129" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18129. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.3.1" ;
     bpo:apqcSourceText "Evaluating the changing needs for insurance coverage. Research available insurance providers and offerings." ;
     rdfs:label "Assess adequacy of insurance coverage" ;
@@ -767,6 +789,7 @@ bpo:P18129 a owl:Class ;
 # --- 11.1.3.4 (PCF 16459) : Implementation -> Planned Act (input: mitigation plan)
 bpo:P16459 a owl:Class ;
     bpo:pcfID "16459" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16459. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.4" ;
     bpo:apqcSourceText "Executing mitigation plans to improve opportunities and reduce deviations to project objectives." ;
     rdfs:label "Implement mitigation plans for risks" ;
@@ -779,6 +802,7 @@ bpo:P16459 a owl:Class ;
 # --- 11.1.3.5 (PCF 16460) : Monitoring -> Descriptive output (monitoring report)
 bpo:P16460 a owl:Class ;
     bpo:pcfID "16460" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16460. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.5" ;
     bpo:apqcSourceText "Identifying, examining, and recognizing/justifying any improbability in investment decision making." ;
     rdfs:label "Monitor risks" ;
@@ -791,6 +815,7 @@ bpo:P16460 a owl:Class ;
 # --- 11.1.3.6 (PCF 16461) : Analysis -> Descriptive output + updated plan
 bpo:P16461 a owl:Class ;
     bpo:pcfID "16461" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16461. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.6" ;
     bpo:apqcSourceText "Examining the impact of risk activities in order to update the existing scheme of risk management. Analyze and substantiate the potential for adverse consequences to occur. Consider the risks associated with the activity and the methods available to manage those risks." ;
     rdfs:label "Analyze risk activities and update plans" ;
@@ -804,6 +829,7 @@ bpo:P16461 a owl:Class ;
 # --- 11.1.3.7 (PCF 16462) : Reporting -> Descriptive output
 bpo:P16462 a owl:Class ;
     bpo:pcfID "16462" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16462. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.1.3.7" ;
     bpo:apqcSourceText "Creating reports on risk activities, and communicating them to management. Prepare reports on the potential for adverse safety consequences." ;
     rdfs:label "Report on risk activities" ;
@@ -821,6 +847,7 @@ bpo:P16462 a owl:Class ;
 # --- 11.2.1 (PCF 17468) : Formulation -> Directive ICE ; parent of 17469, 17470
 bpo:P17468 a owl:Class ;
     bpo:pcfID "17468" ; bpo:hierarchyID "11.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17468. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a set of procedures detailing an organization's progress in complying with established guidelines, provisions, and legislation." ;
     rdfs:label "Establish compliance framework and policies" ;
     skos:definition "An Act of Formulation that composes and articulates an organization's compliance policies and procedures, producing a compliance policy and procedure specification." ;
@@ -834,6 +861,7 @@ bpo:P17468 a owl:Class ;
 # --- 11.2.1.1 (PCF 17469) : Formulation -> Directive ICE
 bpo:P17469 a owl:Class ;
     bpo:pcfID "17469" ; bpo:hierarchyID "11.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17469. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a standardized approach to ethics and compliance. Have a programmatic approach for compliance that focuses on the definite risks the organization faces." ;
     rdfs:label "Develop enterprise compliance policies and procedures" ;
     skos:definition "An Act of Formulation that composes a standardized, risk-focused approach to ethics and compliance, producing a compliance policy and procedure specification." ;
@@ -845,6 +873,7 @@ bpo:P17469 a owl:Class ;
 # --- 11.2.1.2 (PCF 17470) : execution -> Planned Act (no definitional informational output)
 bpo:P17470 a owl:Class ;
     bpo:pcfID "17470" ; bpo:hierarchyID "11.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17470. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing standardized for ethics and compliance. Have a programmatic approach, built from the top down, to enterprise compliance that focuses on the definite risks the organization faces." ;
     rdfs:label "Implement enterprise compliance activities" ;
     skos:definition "A Planned Act that carries out the organization's prescribed compliance program by executing the activities specified in its compliance policies and procedures." ;
@@ -855,6 +884,7 @@ bpo:P17470 a owl:Class ;
 # --- 11.2.2.1 (PCF 16464) : Formulation -> Directive ICE
 bpo:P16464 a owl:Class ;
     bpo:pcfID "16464" ; bpo:hierarchyID "11.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16464. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing procedures and methodologies to comply with relevant laws and regulations of an organization's obedience to laws, guidelines, strategies and stipulations related to business." ;
     rdfs:label "Develop regulatory compliance procedures" ;
     skos:definition "An Act of Formulation that composes procedures and methodologies for complying with relevant laws and regulations, producing a compliance policy and procedure specification." ;
@@ -866,6 +896,7 @@ bpo:P16464 a owl:Class ;
 # --- 11.2.2.2 (PCF 16465) : Identification (discernment) -> Directive ICE determination
 bpo:P16465 a owl:Class ;
     bpo:pcfID "16465" ; bpo:hierarchyID "11.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16465. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the regulatory requirements that are most appropriate for the organization. Identify goals in order to follow the appropriate rules and regulations, guidelines, and strategies." ;
     rdfs:label "Identify applicable regulatory requirements" ;
     skos:definition "An Act of Identification that discerns which regulatory requirements apply to the organization and produces an applicable requirements determination registering them." ;
@@ -878,6 +909,7 @@ bpo:P16465 a owl:Class ;
 # --- 11.2.2.3 (PCF 16466) : Monitoring -> Descriptive ICE
 bpo:P16466 a owl:Class ;
     bpo:pcfID "16466" ; bpo:hierarchyID "11.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16466. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing and overseeing the regulatory environment in order to spot any changing or emerging regulations. This process element calls upon the organization to monitor the regulatory environment for any new statutes, policies, and enactments issued by the respective government authorities or those which have been updated." ;
     rdfs:label "Monitor the regulatory environment for changing or emerging regulations" ;
     skos:definition "An Act of Monitoring that repeatedly observes and analyzes the regulatory environment to detect new or changed statutes, policies, and enactments, producing a regulatory environment analysis." ;
@@ -889,6 +921,7 @@ bpo:P16466 a owl:Class ;
 # --- 11.2.2.4 (PCF 16467) : Appraisal -> Descriptive ICE
 bpo:P16467 a owl:Class ;
     bpo:pcfID "16467" ; bpo:hierarchyID "11.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16467. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating current regulatory policies and regulations. Assess their performance. Make necessary changes." ;
     rdfs:label "Assess current compliance position and identify weaknesses or shortfalls therein" ;
     skos:definition "An Act of Appraisal that evaluates the organization's current compliance position against applicable regulations and judges its weaknesses and shortfalls, producing a compliance assessment." ;
@@ -900,6 +933,7 @@ bpo:P16467 a owl:Class ;
 # --- 11.2.2.5 (PCF 16468) : execution -> Planned Act
 bpo:P16468 a owl:Class ;
     bpo:pcfID "16468" ; bpo:hierarchyID "11.2.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16468. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the current policies and policies. Implement missing and necessary changes environmental changes, political changes, technological changes, etc." ;
     rdfs:label "Implement missing or stronger regulatory compliance controls and policies" ;
     skos:definition "A Planned Act that puts into effect missing or strengthened regulatory compliance controls and policies as required to close identified compliance gaps." ;
@@ -910,6 +944,7 @@ bpo:P16468 a owl:Class ;
 # --- 11.2.2.6 (PCF 16469) : Verification/testing -> Descriptive ICE
 bpo:P16469 a owl:Class ;
     bpo:pcfID "16469" ; bpo:hierarchyID "11.2.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16469. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Monitoring, appraising, and evaluating the compliance position of the organization in order to fine-tune for effective remediation. Track efforts for handling regulatory and compliance requirements necessitated by law. Test the robustness of internal frameworks, procedures, and approaches for dealing with these requirements, in order to clearly identify any necessary changes." ;
     rdfs:label "Monitor and test regulatory compliance position and existing controls" ;
     skos:definition "An Act of Verification that tests the robustness of the organization's compliance controls, frameworks, and procedures against regulatory requirements, producing a compliance monitoring report of their performance and any necessary changes." ;
@@ -921,6 +956,7 @@ bpo:P16469 a owl:Class ;
 # --- 11.2.2.7 (PCF 19595) : Reporting -> Descriptive ICE (scorecard)
 bpo:P19595 a owl:Class ;
     bpo:pcfID "19595" ; bpo:hierarchyID "11.2.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19595. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a graphical representation of metrics in order to communicate the general health of the organization in relation to risk and compliancy." ;
     rdfs:label "Compile and communicate compliance scorecard(s)" ;
     skos:definition "An Act of Reporting that compiles compliance metrics into a graphical representation and conveys it to stakeholders, producing a compliance scorecard." ;
@@ -932,6 +968,7 @@ bpo:P19595 a owl:Class ;
 # --- 11.2.2.8 (PCF 19596) : Reporting -> Descriptive ICE (report)
 bpo:P19596 a owl:Class ;
     bpo:pcfID "19596" ; bpo:hierarchyID "11.2.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19596. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Submitting compliance reports to regulatory agencies. These reports can be made to environmental, securities, or human resources agencies as stipulated by the local governing body." ;
     rdfs:label "Compile and communicate internal and regulatory compliance reports" ;
     skos:definition "An Act of Reporting that submits an already-compiled compliance report to internal stakeholders and regulatory agencies, giving them a detailed account of the organization's compliance status." ;
@@ -1004,6 +1041,7 @@ bpo:RegulatorRelationshipManagementCapability a owl:Class ;
 # --- 11.3 (PCF 11185) as ORGANIZATION CAPABILITY (R5/R6)
 bpo:RemediationManagementCapability
     bpo:pcfID "11185" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11185. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.3" ;
     bpo:apqcSourceText "Administering the efforts and activities for remediation. This process element requires the organization to create plans for corrective action in collaboration with government agencies and pertinent professional services agencies which specialize in remediation efforts relevant to the organization's operations. Additionally, the organization needs to consult experts to validate the plan, determine resources allocation, resolve any legal concerns, and formulate a company-wide policy for remediation." ;
     rdfs:subClassOf
@@ -1020,6 +1058,7 @@ bpo:RemediationManagementCapability
 # --- 11.3.1 (PCF 11201) : Create plans -> Formulation; Directive output
 bpo:P11201 a owl:Class ;
     bpo:pcfID "11201" ; bpo:hierarchyID "11.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11201. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating plans for remediation efforts. Make a plan to address a case of environmental adulteration. Identify and treat the adulteration so that the area will become operational again." ;
     rdfs:label "Create remediation plans" ;
     skos:definition "An Act of Formulation that composes a remediation plan prescribing the corrective actions needed to treat adulteration or damage and restore an affected area to operation." ;
@@ -1031,6 +1070,7 @@ bpo:P11201 a owl:Class ;
 # --- 11.3.2 (PCF 11202) : Confer with experts -> Acquisition of advice; SME participant
 bpo:P11202 a owl:Class ;
     bpo:pcfID "11202" ; bpo:hierarchyID "11.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11202. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Discussing and soliciting advice from experts for in order to incorporate their suggestion (regarding Create remediation plans [11201])." ;
     rdfs:label "Contact and confer with experts" ;
     skos:definition "An Act of Representative Communication in which subject matter experts, conferred with by the organization, convey their expert advice -- committing to its truth -- so that their suggestions can be incorporated into remediation planning." ;
@@ -1045,6 +1085,7 @@ bpo:P11202 a owl:Class ;
 # --- 11.3.3 (PCF 11203) : Identify/dedicate resources -> Appraisal; Descriptive output
 bpo:P11203 a owl:Class ;
     bpo:pcfID "11203" ; bpo:hierarchyID "11.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11203. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and dedicating the resources for managing remediation efforts. Discern the resources needed for remediation efforts. Dispense with resources in a sound and well-reasoned manner." ;
     rdfs:label "Identify/dedicate resources" ;
     skos:definition "An Act of Identification that discerns the resources needed for managing remediation efforts and produces a resource requirements assessment to guide their dedication." ;
@@ -1056,6 +1097,7 @@ bpo:P11203 a owl:Class ;
 # --- 11.3.4 (PCF 11204) : Investigate legal aspects -> Investigation; Descriptive output
 bpo:P11204 a owl:Class ;
     bpo:pcfID "11204" ; bpo:hierarchyID "11.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11204. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining regulatory and legislative frameworks. Obligate the organization to remediate any damages through compensations, fines, and any other remedial efforts necessitated to correct the situations. Analyze local environmental laws, binding international covenants, etc. in order to examine legal accuracy about the rules and procedures." ;
     rdfs:label "Investigate legal aspects" ;
     skos:definition "An Act of Investigation that examines the regulatory and legislative frameworks bearing on remediation and produces a legal analysis of the organization's obligations and the accuracy of applicable rules and procedures." ;
@@ -1068,6 +1110,7 @@ bpo:P11204 a owl:Class ;
 # --- 11.3.5 (PCF 11205) : Investigate damage cause -> Investigation; Descriptive output
 bpo:P11205 a owl:Class ;
     bpo:pcfID "11205" ; bpo:hierarchyID "11.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11205. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Studying the causes of damage, which could be environmental, physical, social, etc. at country level in order to institute better policies and regulations." ;
     rdfs:label "Investigate damage cause" ;
     skos:definition "An Act of Investigation that studies the environmental, physical, or social causes of damage and produces a damage cause analysis that can inform better policies and regulations." ;
@@ -1079,6 +1122,7 @@ bpo:P11205 a owl:Class ;
 # --- 11.3.6 (PCF 11206) : Amend or create policy -> Formulation; Directive output
 bpo:P11206 a owl:Class ;
     bpo:pcfID "11206" ; bpo:hierarchyID "11.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11206. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Crafting a new framework of policies and procedures for deploying remediation efforts, or change existing policies and procedures. Adapt the policy structure to the context of the apposite national and international regulatory frameworks." ;
     rdfs:label "Amend or create policy" ;
     skos:definition "An Act of Formulation that crafts a new framework of remediation policies and procedures, or revises an existing one, to align with applicable national and international regulatory frameworks." ;
@@ -1094,6 +1138,7 @@ bpo:P11206 a owl:Class ;
 # --- 11.4 (PCF 11216) AS AN ORGANIZATION CAPABILITY (R5 -> R6)
 bpo:BusinessResiliencyCapability
     bpo:pcfID "11216" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11216. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.4" ;
     bpo:apqcSourceText "Including the processes required to rapidly adapt and respond to any internal or external opportunity, demand, disruption, or threat. Develop a more dynamic, strategic, and integrated approach to managing compliance obligations." ;
     rdfs:comment "Models APQC process group 11.4 ('Manage business resiliency') under R5/R6: it is a standing function with no natural end, so it is an Organization Capability (cco:ont00000568) realized in its constituent acts, NOT a process. Per R3/R5 it carries no has-process-part to its children. rdfs:label/skos:definition are supplied in the shared-vocabulary block above." ;
@@ -1108,6 +1153,7 @@ bpo:BusinessResiliencyCapability
 # --- 11.4.1 (PCF 11221) : Formulation -> Directive ICE output
 bpo:P11221 a owl:Class ;
     bpo:pcfID "11221" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11221. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.4.1" ;
     bpo:apqcSourceText "Creating a strategy for rapidly adapting to disturbances. Maintain continuous business processes and protecting employees, assets, and overall brand equity." ;
     rdfs:label "Develop the business resilience strategy" ;
@@ -1120,6 +1166,7 @@ bpo:P11221 a owl:Class ;
 # --- 11.4.2 (PCF 11222) : Formulation -> Directive ICE output (continuity plan)
 bpo:P11222 a owl:Class ;
     bpo:pcfID "11222" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11222. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.4.2" ;
     bpo:apqcSourceText "Developing plans to ensure continuous business operations." ;
     rdfs:label "Perform continuous business operations planning" ;
@@ -1132,6 +1179,7 @@ bpo:P11222 a owl:Class ;
 # --- 11.4.3 (PCF 11223) : Verification -> Descriptive ICE output
 bpo:P11223 a owl:Class ;
     bpo:pcfID "11223" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11223. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.4.3" ;
     bpo:apqcSourceText "Assessing ongoing activities within the organization that are not intended to stop except for in an emergency." ;
     rdfs:label "Test continuous business operations" ;
@@ -1144,6 +1192,7 @@ bpo:P11223 a owl:Class ;
 # --- 11.4.4 (PCF 11224) : Appraisal -> Descriptive ICE output (evaluation)
 bpo:P11224 a owl:Class ;
     bpo:pcfID "11224" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11224. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.4.4" ;
     bpo:apqcSourceText "Evaluating business operations. Determine which activities generate revenues, perform best, and provide good returns." ;
     rdfs:label "Maintain continuous business operations" ;
@@ -1156,6 +1205,7 @@ bpo:P11224 a owl:Class ;
 # --- 11.4.5 (PCF 16471) : Communication -> transfers a Descriptive ICE (risk knowledge)
 bpo:P16471 a owl:Class ;
     bpo:pcfID "16471" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16471. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "11.4.5" ;
     bpo:apqcSourceText "Sharing information about risks and resilience strategies of business operations across the organization so that prospective risks can be avoided." ;
     rdfs:label "Share knowledge of specific risks across other parts of the organization" ;

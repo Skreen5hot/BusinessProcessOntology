@@ -713,6 +713,7 @@ bpo:CustomerTestReport a owl:Class ;
 
 bpo:P10063 a owl:Class ;
     bpo:pcfID "10063" ; bpo:hierarchyID "2.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10063. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the capabilities and performance of existing products/services, in light of market opportunities. Examine performance of the existing line of products/services, including measures of profitability, penetration, and value delivered. Identify gaps between existing solutions' portfolio or their performance levels, on the one hand, and the current market demand, available technologies, and/or customer expectations, on the other. Consider opportunities in the present market environment and any relation with the performance. Consider input from professional services providers." ;
     rdfs:label "Evaluate performance of existing products/services against market opportunities" ;
     skos:definition "An Act of Appraisal that has as input product/service performance data and market opportunity data and has as output a product/service performance evaluation that identifies gaps against market expectations." ;
@@ -725,6 +726,7 @@ bpo:P10063 a owl:Class ;
 
 bpo:P10066 a owl:Class ;
     bpo:pcfID "10066" ; bpo:hierarchyID "2.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10066. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Checking the alignment of product/service portfolio, and its individual offerings, with the organization's overall strategy and planning for the development of new or revised solutions. Conduct reality checks on new product/service concepts prior to committing significant investment to ensure that the revamped solutions' portfolio is in line with the overall business strategy, aligns organizational processes for their development, and creates a plan for assimilating these changes in the organization's offerings. Enlist senior management executives." ;
     rdfs:label "Confirm alignment of product/service concepts with business strategy" ;
     skos:definition "An Act of Appraisal that has as input product/service concepts and a business strategy and has as output a strategic alignment assessment of the concepts, with senior management as participant." ;
@@ -738,6 +740,7 @@ bpo:P10066 a owl:Class ;
 
 bpo:P10074 a owl:Class ;
     bpo:pcfID "10074" ; bpo:hierarchyID "2.1.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10074. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Selecting from among the potential new/revised solutions and capitalizing on market opportunities so that they meet the cost and quality prerequisites. Create an index of product/service concepts, and arrange them in order of preference. Base prioritization on adherence to Plan and develop cost and quality targets [10073], and choose options that would comprise the revised solution portfolio." ;
     rdfs:label "Prioritize and select new product/service concepts" ;
     skos:definition "An Act of Selection that has as input product/service concepts and has as output a product/service priority list prescribing the chosen concepts for the revised portfolio." ;
@@ -749,6 +752,7 @@ bpo:P10074 a owl:Class ;
 
 bpo:P10073 a owl:Class ;
     bpo:pcfID "10073" ; bpo:hierarchyID "2.1.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10073. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting prerequisites for the cost of development and quality standards for the new solutions' portfolio and/or its individual offerings. Set targets for the budget and quality standards for the revamped portfolio of solution offerings. Prepare a plan for the outlay required for revising and adding new product/services. Identify intended levels of quality for these, bearing in mind the existing standards of solutions offered by the organization and its competitors. Enlist senior management executives, particularly those responsible for finance and budgeting, product/service design, manufacturing/processing, delivery, and quality control." ;
     rdfs:label "Plan and develop cost and quality targets" ;
     skos:definition "An Act of Formulation that has as output a cost target and a quality target prescribing the budget and quality prerequisites for the revised portfolio, with senior management as participant." ;
@@ -761,6 +765,7 @@ bpo:P10073 a owl:Class ;
 
 bpo:P10075 a owl:Class ;
     bpo:pcfID "10075" ; bpo:hierarchyID "2.1.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10075. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the individual and collective timeframe for realizing new/revised solutions. Create a schedule that clearly demarcates the timeframes designated for the development of every new solution and/or revising each of the existing ones. Create a timetable by setting deadlines for each step in overhauling the product/service portfolio." ;
     rdfs:label "Specify development timing targets" ;
     skos:definition "An Act of Formulation that has as output a development schedule prescribing the timeframes and deadlines for developing and revising the portfolio's solutions." ;
@@ -771,6 +776,7 @@ bpo:P10075 a owl:Class ;
 
 bpo:P10076 a owl:Class ;
     bpo:pcfID "10076" ; bpo:hierarchyID "2.1.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10076. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a programmatic procedure for changing products/services while paying heed to all stakeholders involved and the prerequisites identified. Create a plan for changing the existing portfolio of solution offerings. Develop a systematic program for the design, processing, and delivery of the new product/service concepts. Construct project-flow diagrams. Identify the stakeholders involved and personnel responsible for each stage, as well as the necessary decisions. Earmark the budgetary outlay, and conduct any strategic planning required." ;
     rdfs:label "Plan for product/service offering modifications" ;
     skos:definition "An Act of Formulation that has as output a product/service modification plan prescribing a programmatic procedure for changing the portfolio of offerings." ;
@@ -783,6 +789,7 @@ bpo:P10076 a owl:Class ;
 
 bpo:P16824 a owl:Class ;
     bpo:pcfID "16824" ; bpo:hierarchyID "2.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16824. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a program and managing a perspective for new product/service introduction and launch." ;
     rdfs:label "Develop plan for new product/service development and introduction/launch" ;
     skos:definition "An Act of Formulation that has as output a product/service launch plan prescribing the program for introducing and launching a new product or service." ;
@@ -793,6 +800,7 @@ bpo:P16824 a owl:Class ;
 
 bpo:P10077 a owl:Class ;
     bpo:pcfID "10077" ; bpo:hierarchyID "2.1.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10077. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Launching revamped product/service portfolio in to the market. Introduction in to the marketplace is done by deploying effective channels for marketing, sales, delivery, and after-sales servicing. Introduce new/revised solution offerings in a concerted effort. Coordinate a cross-functional effort." ;
     rdfs:label "Introduce new products/services" ;
     skos:definition "A Planned Act in which an Organization deploys a new or revised product/service offering into the market through marketing, sales, delivery, and after-sales channels." ;
@@ -802,6 +810,7 @@ bpo:P10077 a owl:Class ;
 
 bpo:P10078 a owl:Class ;
     bpo:pcfID "10078" ; bpo:hierarchyID "2.1.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10078. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Removing nonconforming products and services. Withdraw those products/services that do not conform to market realities and are not positioned to take advantage of prevailing opportunities. Coordinate with processing/delivery teams within the organization and key stakeholders in the supply chain. Create mechanisms for continued after-sales servicing, as well as deploy effective public relations efforts in order to preserve the image and goodwill of the organization through the process." ;
     rdfs:label "Retire outdated products/services" ;
     skos:definition "A Planned Act in which an Organization withdraws a nonconforming product/service offering from the market while sustaining after-sales servicing and goodwill." ;
@@ -811,6 +820,7 @@ bpo:P10078 a owl:Class ;
 
 bpo:P10079 a owl:Class ;
     bpo:pcfID "10079" ; bpo:hierarchyID "2.1.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10079. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Attuning the performance measures of products/services to better reflect the revamped portfolio of solution offerings. Revise the parameters used to measure performance, apropos the organization's product/service offerings. (Modify these standards in consideration of the changes made to the portfolio by Introduce new products/services [10077] and Retire outdated products/services [10078].)" ;
     rdfs:label "Identify and refine performance indicators" ;
     skos:definition "An Act of Formulation that has as output a performance indicator specification prescribing the revised parameters for measuring product/service performance." ;
@@ -821,6 +831,7 @@ bpo:P10079 a owl:Class ;
 
 bpo:P11423 a owl:Class ;
     bpo:pcfID "11423" ; bpo:hierarchyID "2.1.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11423. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Learning from either a test or a full production run within the consumer market. Companies use this as an opportunity to both test and react to new products, ideas, or innovations based on the initial reaction of consumers on an individual level. Within this process, analytics are used to determine the relative success of a new product offering. Within this process, companies will launch key analytics to test a products acceptance. They will also review market performance and compare to similar products and against the business case or the financial plan. Companies can also measure the effectiveness of their supply chain network, and can apply what is learned from the post launch review to other new products, processes, and procedures to ensure and enhance the product quality." ;
     rdfs:label "Conduct post launch review" ;
     skos:definition "An Act of Appraisal that has as output a post-launch review judging the market success of a newly launched product/service, and that has as process parts the constituent analytics, market, supply-chain, quality, financial, and process reviews." ;
@@ -838,6 +849,7 @@ bpo:P11423 a owl:Class ;
 
 bpo:P19646 a owl:Class ;
     bpo:pcfID "19646" ; bpo:hierarchyID "2.1.2.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19646. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Measuring the performance of marketing once the product/services are launched. This broadly covers measuring user engagement and product's/service's performance in the market." ;
     rdfs:label "Carry out post launch analytics to test the acceptability in the market" ;
     skos:definition "An Act of Analysis that has as input product/service performance data and has as output a market acceptance analysis of user engagement and post-launch market performance." ;
@@ -849,6 +861,7 @@ bpo:P19646 a owl:Class ;
 
 bpo:P11424 a owl:Class ;
     bpo:pcfID "11424" ; bpo:hierarchyID "2.1.2.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11424. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting customer and market analysis to review progress and identify opportunities for increasing market position. Track and review product/service response through sales reports, website statistics, direct response from customers, and survey reports." ;
     rdfs:label "Review market performance" ;
     skos:definition "An Act of Analysis that has as input sales reports and customer feedback and has as output a market study about the product/service's market position." ;
@@ -861,6 +874,7 @@ bpo:P11424 a owl:Class ;
 
 bpo:P11425 a owl:Class ;
     bpo:pcfID "11425" ; bpo:hierarchyID "2.1.2.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11425. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the performance of supply chain to all departments and logistics from input to shop floor. Seeking performance reviews at each intersection and communication channels. Review effectiveness of supply chain and distribution to check if it is meeting the demands of the various groups and organizations that are concerned with its activities (groups might include customers, partners, suppliers, and vendors)." ;
     rdfs:label "Review effectiveness of supply chain and distribution network" ;
     skos:definition "An Act of Appraisal that has as input supply chain performance data and has as output a supply chain effectiveness review judging whether the network meets stakeholder demands." ;
@@ -872,6 +886,7 @@ bpo:P11425 a owl:Class ;
 
 bpo:P19647 a owl:Class ;
     bpo:pcfID "19647" ; bpo:hierarchyID "2.1.2.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19647. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collecting and examining raw data with the purpose of drawing conclusions about that information and correlate gaps and efficiencies to the existing supply chain channels. Apply the information to make better business decisions to the related supply chain methodologies to meet efficiency." ;
     rdfs:label "Apply data and analytics to review supply chain methodologies" ;
     skos:definition "An Act of Analysis that has as input supply chain performance data and has as output a supply chain methodology analysis correlating gaps and efficiencies across supply-chain channels." ;
@@ -883,6 +898,7 @@ bpo:P19647 a owl:Class ;
 
 bpo:P11426 a owl:Class ;
     bpo:pcfID "11426" ; bpo:hierarchyID "2.1.2.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11426. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the quality and performance of the product/service delivered to customers. Analyze data from the customer feedback, audits, measures of customer satisfaction (such as product quality complaints and recalls), and organizational policies on delivery." ;
     rdfs:label "Review quality and performance of the product/service" ;
     skos:definition "An Act of Appraisal that has as input customer feedback and has as output a quality performance review judging the delivered product/service's quality and performance." ;
@@ -894,6 +910,7 @@ bpo:P11426 a owl:Class ;
 
 bpo:P11427 a owl:Class ;
     bpo:pcfID "11427" ; bpo:hierarchyID "2.1.2.5.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11427. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating organization's financial reports and financial reporting processes. Review and document the ROI catered by the product/service delivery to the customer in the market." ;
     rdfs:label "Conduct financial review" ;
     skos:definition "An Act of Appraisal that has as output a financial review documenting the return on investment of the product/service delivered to market." ;
@@ -904,6 +921,7 @@ bpo:P11427 a owl:Class ;
 
 bpo:P11428 a owl:Class ;
     bpo:pcfID "11428" ; bpo:hierarchyID "2.1.2.5.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11428. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing the steps involved in the development of new product, its effect on existing product, resources, and functions related to the development of the new product until its sale in the competitive market place." ;
     rdfs:label "Conduct new product development process assessment" ;
     skos:definition "An Act of Analysis that has as output a new-product-development process assessment of the development steps and their effect on existing products, resources, and functions." ;
@@ -916,6 +934,7 @@ bpo:P11428 a owl:Class ;
 
 bpo:P19941 a owl:Class ;
     bpo:pcfID "19941" ; bpo:hierarchyID "2.1.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19941. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting necessary performance reviews on enforcement of processes and steps to ensure protection. Determine policies and reviews for Manage patents, copyrights, and regulatory requirements [19985]." ;
     rdfs:label "Conduct mandatory and elective reviews" ;
     skos:definition "An Act of Appraisal that has as output a regulatory review judging the enforcement of intellectual-property protection processes." ;
@@ -926,6 +945,7 @@ bpo:P19941 a owl:Class ;
 
 bpo:P16826 a owl:Class ;
     bpo:pcfID "16826" ; bpo:hierarchyID "2.1.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16826. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing activities in regards to patentability and infringement. The usage of Open Source in commercial product development will be reviewed in regard to licensing, community development, etc." ;
     rdfs:label "Review infringement of patents and copyrights" ;
     skos:definition "An Act of Appraisal that has as output an infringement assessment judging patentability and possible infringement, including open-source licensing usage." ;
@@ -936,6 +956,7 @@ bpo:P16826 a owl:Class ;
 
 bpo:P16827 a owl:Class ;
     bpo:pcfID "16827" ; bpo:hierarchyID "2.1.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16827. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the business need for patents and copyrights. The patents and copyrights are managed by Manage copyrights and patents [11062]." ;
     rdfs:label "Determine patent and copyright needs" ;
     skos:definition "An Act of Analysis that has as output an intellectual-property needs assessment of the business need for patents and copyrights." ;
@@ -946,6 +967,7 @@ bpo:P16827 a owl:Class ;
 
 bpo:P19697 a owl:Class ;
     bpo:pcfID "19697" ; bpo:hierarchyID "2.1.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19697. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining sourcing and procurement requirements for new product technical documentation management. Make sourcing-based decisions that identify the capabilities that will be required in order to launch the new product. This documentation will be used to support the product following entry into service. It is compiled and managed in Manage product and process related data [12082], but the capability to manage and maintain this documentation must be defined and established." ;
     rdfs:label "Define product technical documentation management requirements" ;
     skos:definition "An Act of Formulation that has as output a product/service requirement specification prescribing the sourcing and capability requirements for managing new-product technical documentation." ;
@@ -956,6 +978,7 @@ bpo:P19697 a owl:Class ;
 
 bpo:P12771 a owl:Class ;
     bpo:pcfID "12771" ; bpo:hierarchyID "2.1.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12771. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aligning regulatory activities related to managing industry requirements. Train employees on regulatory requirements. Records for the appropriate regulatory agencies must be maintained and the new product process must be approved by the appropriate regulatory body before it is published to the organization. The submission lifecycle - i.e. creation, review, and approval of the submission and its components must be managed in a collaborative fashion." ;
     rdfs:label "Manage regulatory requirements" ;
     skos:definition "An Act of Data Management that has as input regulatory requirement data and has as output a regulatory record maintaining the organization's regulatory submissions, and that has as process parts employee training, record maintenance, and submission-lifecycle management." ;
@@ -971,6 +994,7 @@ bpo:P12771 a owl:Class ;
 
 bpo:P12772 a owl:Class ;
     bpo:pcfID "12772" ; bpo:hierarchyID "2.1.3.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12772. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting training and impart learning to existing and new employees. Training will relate to the most recent/enforced regulations of the business to meet Manage regulatory requirements [12771]." ;
     rdfs:label "Train employees on appropriate regulatory requirements" ;
     skos:definition "An Act of Training in which knowledge of the most recent enforced regulations is imparted to existing and new employees." ;
@@ -981,6 +1005,7 @@ bpo:P12772 a owl:Class ;
 
 bpo:P12773 a owl:Class ;
     bpo:pcfID "12773" ; bpo:hierarchyID "2.1.3.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12773. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying steps and procedures to manage and regularly update the records for regulatory agencies. Updates will be made to safety procedures, identity and access management, software tools and applications, internal accessibility policies, internal quality parameters, etc." ;
     rdfs:label "Maintain records for regulatory agencies" ;
     skos:definition "An Act of Data Management that has as output an updated regulatory record kept current for the appropriate regulatory agencies." ;
@@ -991,6 +1016,7 @@ bpo:P12773 a owl:Class ;
 
 bpo:P12776 a owl:Class ;
     bpo:pcfID "12776" ; bpo:hierarchyID "2.1.3.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12776. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determine and follow the timely input and update of regulatory information by assessing reforms, regulatory policies, and guidelines." ;
     rdfs:label "Manage regulatory submission life cycle" ;
     skos:definition "An Act of Data Management that has as input regulatory requirement data and has as output a regulatory record reflecting the timely input and update of regulatory submission information." ;
@@ -1004,6 +1030,7 @@ bpo:P12776 a owl:Class ;
 
 bpo:P11741 a owl:Class ;
     bpo:pcfID "11741" ; bpo:hierarchyID "2.1.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11741. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Controlling the details of materials' storage and utilization, supplier details linked to materials, in a defined sequential manner and ensuring regular updates with permissible accessibility." ;
     rdfs:label "Manage materials master lists" ;
     skos:definition "An Act of Data Management that has as output a materials master list controlling materials storage, utilization, and linked supplier details with permissible accessibility." ;
@@ -1014,6 +1041,7 @@ bpo:P11741 a owl:Class ;
 
 bpo:P11742 a owl:Class ;
     bpo:pcfID "11742" ; bpo:hierarchyID "2.1.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11742. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the purchase details/bills through regular and error free updates to applications. Create manual entries wherever necessary and ensure timely review of the laid processes and systems." ;
     rdfs:label "Manage bills of material" ;
     skos:definition "An Act of Data Management that has as output a bill of materials kept current through regular, error-free updates to the supporting applications." ;
@@ -1024,6 +1052,7 @@ bpo:P11742 a owl:Class ;
 
 bpo:P11743 a owl:Class ;
     bpo:pcfID "11743" ; bpo:hierarchyID "2.1.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11743. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Controlling and executing the flow of operations from raw form to finished product in a defined format using industry applications/routing sheets for the specific product/service layout." ;
     rdfs:label "Manage routings" ;
     skos:definition "An Act of Data Management that has as output a routing specifying the flow of operations from raw form to finished product for a specific product/service layout." ;
@@ -1034,6 +1063,7 @@ bpo:P11743 a owl:Class ;
 
 bpo:P11744 a owl:Class ;
     bpo:pcfID "11744" ; bpo:hierarchyID "2.1.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11744. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Direct, supervise, and control the product/service details necessary to execute the process. Adhere to details and descriptions for product/service through identified or guided parameters towards final outcome in the market with due critical analysis formed on organizational objectives." ;
     rdfs:label "Manage specifications" ;
     skos:definition "An Act of Data Management that has as output a product/service characteristics specification controlling the product/service details necessary to execute the process." ;
@@ -1044,6 +1074,7 @@ bpo:P11744 a owl:Class ;
 
 bpo:P11745 a owl:Class ;
     bpo:pcfID "11745" ; bpo:hierarchyID "2.1.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11745. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the specifications of the product/service and ensure accessibility for product alteration/new product development." ;
     rdfs:label "Manage drawings" ;
     skos:definition "An Act of Data Management that has as output a design specification (drawing) administered and made accessible for product alteration and new product development." ;
@@ -1054,6 +1085,7 @@ bpo:P11745 a owl:Class ;
 
 bpo:P11746 a owl:Class ;
     bpo:pcfID "11746" ; bpo:hierarchyID "2.1.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11746. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Controlling the details of the product and the input materials. Manage classification throughout the production process, and for future accessibility to new product development or product enrichment." ;
     rdfs:label "Manage product/material classification" ;
     skos:definition "An Act of Data Management that has as output a product/material classification controlling product and input-material details throughout the production process." ;
@@ -1064,6 +1096,7 @@ bpo:P11746 a owl:Class ;
 
 bpo:P11747 a owl:Class ;
     bpo:pcfID "11747" ; bpo:hierarchyID "2.1.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11747. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining procedures required to assess the sustainability of defined criterion for product/service delivery to customers. Retain results for further review as a procedural practice." ;
     rdfs:label "Develop and maintain quality/inspection documents" ;
     skos:definition "An Act of Data Management that has as output a quality/inspection document prescribing the procedures for assessing product/service delivery criteria, retained for further review." ;
@@ -1074,6 +1107,7 @@ bpo:P11747 a owl:Class ;
 
 bpo:P11748 a owl:Class ;
     bpo:pcfID "11748" ; bpo:hierarchyID "2.1.4.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11748. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Directing and handling data with respect to the procedures followed across different functions and mission critical applications." ;
     rdfs:label "Maintain process specification data" ;
     skos:definition "An Act of Data Management that has as output process specification data directing and handling the procedural data used across functions and mission-critical applications." ;
@@ -1084,6 +1118,7 @@ bpo:P11748 a owl:Class ;
 
 bpo:P11749 a owl:Class ;
     bpo:pcfID "11749" ; bpo:hierarchyID "2.1.4.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11749. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and handling data accessed by the permitted touch points. Ensure that no data is accessible to any unnecessary recipient. Data flow should be controlled through secured access and free from unauthorized access." ;
     rdfs:label "Manage traceability data" ;
     skos:definition "An Act of Data Management that has as output traceability data controlled through secured access so that it is reachable only by permitted touch points." ;
@@ -1094,6 +1129,7 @@ bpo:P11749 a owl:Class ;
 
 bpo:P11750 a owl:Class ;
     bpo:pcfID "11750" ; bpo:hierarchyID "2.1.4.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11750. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the requests pertaining to data accessibility. Review the requester details based on internal data security policies and permit data access only if internal policies and data access parameters are met." ;
     rdfs:label "Review and approve data access requests" ;
     skos:definition "An Act of Appraisal that has as input a data access request and has as output a data access decision permitting or denying access according to internal data-security policy." ;
@@ -1110,6 +1146,7 @@ bpo:P11750 a owl:Class ;
 
 bpo:P19698 a owl:Class ;
     bpo:pcfID "19698" ; bpo:hierarchyID "2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19698. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and describing new product or service thoughts based on organizational objectives/targets." ;
     rdfs:label "Generate and define new product/service ideas" ;
     skos:definition "An Act of Formulation that conceives and articulates new product or service ideas in light of organizational objectives and produces one or more product/service concepts." ;
@@ -1123,6 +1160,7 @@ bpo:P19698 a owl:Class ;
 
 bpo:P10065 a owl:Class ;
     bpo:pcfID "10065" ; bpo:hierarchyID "2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10065. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Coordinating R&D activity to identify new technologies to integrate into the revamped portfolio of products/services. Conduct early-stage R&D activity to close gaps between existing solution offerings and changing market expectations. Triangulate appropriate technologies that can support the development of a revised product/service portfolio." ;
     rdfs:label "Perform discovery research" ;
     skos:definition "An Act of Analysis that conducts early-stage research and development on emerging technologies and produces a technical assessment of technologies able to support a revised product/service portfolio." ;
@@ -1137,6 +1175,7 @@ bpo:P10065 a owl:Class ;
 
 bpo:P10070 a owl:Class ;
     bpo:pcfID "10070" ; bpo:hierarchyID "2.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10070. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining new technologies to revise the portfolio of solution offerings. Identify recently developed technological advances that can be leveraged in the development or advancement of the organization's product/service portfolio. Enlist senior management in conjunction with personnel responsible for the design, processing, and delivery of products/services. Have the organization's research division(s) carry out the process." ;
     rdfs:label "Identify new technologies" ;
     skos:definition "An Act of Identification that discerns recently developed technological advances leverageable for the product/service portfolio and produces a technical assessment registering them." ;
@@ -1149,6 +1188,7 @@ bpo:P10070 a owl:Class ;
 
 bpo:P10071 a owl:Class ;
     bpo:pcfID "10071" ; bpo:hierarchyID "2.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10071. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing new technologies from scratch to integrate into a revised portfolio of solutions. Develop new technological processes, models, and/or implements in-house, with the objective of improving existing solutions or creating new ones. Consider market realities, as well as the portfolio of products/services. Assess the results in conjunction with senior executives and personnel responsible for the design, processing, and delivery of these solutions. Engage the R&D function, and consider external sources such as offshore providers, specialized research agencies, and crowdsourcing communities." ;
     rdfs:label "Develop new technologies" ;
     skos:definition "An Act of Development that builds new technological processes, models, or implements in-house in order to improve existing solutions or create new ones." ;
@@ -1159,6 +1199,7 @@ bpo:P10071 a owl:Class ;
 
 bpo:P10072 a owl:Class ;
     bpo:pcfID "10072" ; bpo:hierarchyID "2.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10072. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Appraising the feasibility of integrating new technologies, whether developed as a custom solution or adopted from an external source, into revised portfolio of solution offerings. Examine recently developed technological advances for suitability to incorporate them into the concept of revised and/or new solution offerings. Enlist senior management, in consultation with in-house personnel responsible for the design, processing, and delivery of these solutions, as well as key supply-chain stakeholders." ;
     rdfs:label "Assess feasibility of integrating new leading technologies into product/service concepts" ;
     skos:definition "An Act of Appraisal that judges the suitability of integrating new technologies into revised or new product/service concepts and produces a feasibility assessment." ;
@@ -1171,6 +1212,7 @@ bpo:P10072 a owl:Class ;
 
 bpo:P19669 a owl:Class ;
     bpo:pcfID "19669" ; bpo:hierarchyID "2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19669. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Producing and defining ideologies for new product/service offerings." ;
     rdfs:label "Generate new product/service concepts" ;
     skos:definition "An Act of Formulation that produces and defines concepts for new product or service offerings." ;
@@ -1186,6 +1228,7 @@ bpo:P19669 a owl:Class ;
 
 bpo:P19986 a owl:Class ;
     bpo:pcfID "19986" ; bpo:hierarchyID "2.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19986. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collecting necessary items, documents, regulatory requirements, etc., based on Generate and define new product/service ideas [19698]" ;
     rdfs:label "Gather new product/service ideas and requirements" ;
     skos:definition "An Act of Acquisition that obtains and assembles the product/service ideas, documents, and regulatory requirements not previously held, for use in concept generation." ;
@@ -1196,6 +1239,7 @@ bpo:P19986 a owl:Class ;
 
 bpo:P19987 a owl:Class ;
     bpo:pcfID "19987" ; bpo:hierarchyID "2.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19987. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing and reviewing the concepts and requirements of Generate and define new product/service ideas [19698]" ;
     rdfs:label "Analyze new product/service ideas and requirements" ;
     skos:definition "An Act of Analysis that examines collected product/service ideas and requirements and produces an understanding of their suitability." ;
@@ -1206,6 +1250,7 @@ bpo:P19987 a owl:Class ;
 
 bpo:P19988 a owl:Class ;
     bpo:pcfID "19988" ; bpo:hierarchyID "2.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19988. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing and reviewing the required inputs and necessary elements such as automation, technology, hardware installation, regulatory requirements, certifications, etc., for new products/services through defined process and analysis." ;
     rdfs:label "Evaluate new product/service inputs and requirements" ;
     skos:definition "An Act of Appraisal that judges the required inputs and necessary elements for a new product or service and produces a feasibility assessment." ;
@@ -1217,6 +1262,7 @@ bpo:P19988 a owl:Class ;
 
 bpo:P19989 a owl:Class ;
     bpo:pcfID "19989" ; bpo:hierarchyID "2.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19989. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising ideas and elements necessary for thoughts on new product/service development." ;
     rdfs:label "Formulate new product/service concepts" ;
     skos:definition "An Act of Formulation that devises the ideas and elements of a new product or service and produces a product/service concept." ;
@@ -1227,6 +1273,7 @@ bpo:P19989 a owl:Class ;
 
 bpo:P10068 a owl:Class ;
     bpo:pcfID "10068" ; bpo:hierarchyID "2.2.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10068. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining potential enhancements to current products/services in order to take advantage of a shift in market expectations. Identify how the existing line of products/services may be revised--through enhancements to individual solutions or across-the-board renovations--in order to capitalize on present opportunities in the market." ;
     rdfs:label "Identify potential improvements to existing products and services" ;
     skos:definition "An Act of Formulation that defines potential enhancements to current products or services and produces a product/service modification plan to capitalize on shifts in market expectations." ;
@@ -1238,6 +1285,7 @@ bpo:P10068 a owl:Class ;
 
 bpo:P19990 a owl:Class ;
     bpo:pcfID "19990" ; bpo:hierarchyID "2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19990. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Encompassing the identification and capture of new product/service requirements or potential improvements to current products/services. Collaborating with members of the supply chain to ensure the feasibility of what is being defined in the requirements. For example, a product with manufacturing requirements that supply chain cannot currently fulfill requires a corporate decision to either upgrade manufacturing capabilities or abandon the new product. Enterprise-level effects and needs must be considered. Depending on the nature of the final product or service, these requirements are often defined as a set of abilities, such as availability or reliability, that influence product development decisions." ;
     rdfs:label "Define product/service development requirements" ;
     skos:definition "An Act of Formulation that identifies and captures the requirements governing development of a new product or service and produces a product/service requirement specification." ;
@@ -1251,6 +1299,7 @@ bpo:P19990 a owl:Class ;
 
 bpo:P11331 a owl:Class ;
     bpo:pcfID "11331" ; bpo:hierarchyID "2.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11331. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining requirements related to the creation of the product/service. Explain potential achievements that could be made." ;
     rdfs:label "Define product/service requirements" ;
     skos:definition "An Act of Formulation that determines the requirements related to creating a product or service and produces a product/service requirement specification." ;
@@ -1269,6 +1318,7 @@ bpo:P11331 a owl:Class ;
 
 bpo:P19991 a owl:Class ;
     bpo:pcfID "19991" ; bpo:hierarchyID "2.2.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19991. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the operations of functions related to the product/service in the marketing environment." ;
     rdfs:label "Define basic functional requirements" ;
     skos:definition "An Act of Formulation that determines the functional operations required of a product or service and produces a product/service requirement specification." ;
@@ -1278,6 +1328,7 @@ bpo:P19991 a owl:Class ;
 
 bpo:P16808 a owl:Class ;
     bpo:pcfID "16808" ; bpo:hierarchyID "2.2.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16808. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the ability of products and services to work together, exchange and use information in a multi-vendor, multi-network, and multi-service environment." ;
     rdfs:label "Derive interoperability requirements for products and services" ;
     skos:definition "An Act of Formulation that determines the interoperability a product or service must exhibit across multi-vendor and multi-network environments and produces a product/service requirement specification." ;
@@ -1287,6 +1338,7 @@ bpo:P16808 a owl:Class ;
 
 bpo:P16809 a owl:Class ;
     bpo:pcfID "16809" ; bpo:hierarchyID "2.2.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16809. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing safety requirements in line with environmental safety, occupational health and safety, and community health and safety guidelines." ;
     rdfs:label "Derive safety requirements for products and services" ;
     skos:definition "An Act of Formulation that develops the safety requirements a product or service must meet in line with health-and-safety guidelines and produces a product/service requirement specification." ;
@@ -1296,6 +1348,7 @@ bpo:P16809 a owl:Class ;
 
 bpo:P16810 a owl:Class ;
     bpo:pcfID "16810" ; bpo:hierarchyID "2.2.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16810. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing security requirements through authentication and encryption of CE device data stream.  Utilize security measures such as cryptographic protocols and hardware security (smart cards)." ;
     rdfs:label "Derive security requirements for products and services" ;
     skos:definition "An Act of Formulation that determines the authentication, encryption, and hardware-security requirements a product or service must meet and produces a product/service requirement specification." ;
@@ -1305,6 +1358,7 @@ bpo:P16810 a owl:Class ;
 
 bpo:P16811 a owl:Class ;
     bpo:pcfID "16811" ; bpo:hierarchyID "2.2.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16811. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Meeting regulatory requirements set forth by such directives as RoHS, WEEE, ELV, and REACH. " ;
     rdfs:label "Derive regulatory compliance requirements" ;
     skos:definition "An Act of Formulation that determines the regulatory compliance requirements a product or service must satisfy under directives such as RoHS, WEEE, ELV, and REACH and produces a product/service requirement specification." ;
@@ -1316,6 +1370,7 @@ bpo:P16811 a owl:Class ;
 
 bpo:P16812 a owl:Class ;
     bpo:pcfID "16812" ; bpo:hierarchyID "2.2.3.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16812. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Complying with consumer electronic industry standards developed by the Consumer Technology Association (CTA)." ;
     rdfs:label "Derive requirements from industry standards" ;
     skos:definition "An Act of Formulation that determines the requirements a product or service must meet to comply with industry standards and produces a product/service requirement specification." ;
@@ -1325,6 +1380,7 @@ bpo:P16812 a owl:Class ;
 
 bpo:P19992 a owl:Class ;
     bpo:pcfID "19992" ; bpo:hierarchyID "2.2.3.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19992. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and creating steps and tools to develop the user experience. " ;
     rdfs:label "Develop user experience requirements" ;
     skos:definition "An Act of Formulation that determines the steps and tools needed to shape the user experience of a product or service and produces a product/service requirement specification." ;
@@ -1334,6 +1390,7 @@ bpo:P19992 a owl:Class ;
 
 bpo:P16814 a owl:Class ;
     bpo:pcfID "16814" ; bpo:hierarchyID "2.2.3.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16814. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Productizing the service by defining the scope of the service/cost.  Target market for the service and make the service more tangible." ;
     rdfs:label "Derive 'services-as-a-product' offering" ;
     skos:definition "An Act of Formulation that productizes a service by defining its scope and cost and produces a product/service concept for the resulting offering." ;
@@ -1344,6 +1401,7 @@ bpo:P16814 a owl:Class ;
 
 bpo:P16815 a owl:Class ;
     bpo:pcfID "16815" ; bpo:hierarchyID "2.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16815. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining SLAs (Service Level Agreement) and service level KPIs (Key Performance Indicator). " ;
     rdfs:label "Define post launch support model" ;
     skos:definition "An Act of Formulation that defines the service-level agreements and service-level KPIs for post-launch support and produces a post-launch support model specification." ;
@@ -1353,6 +1411,7 @@ bpo:P16815 a owl:Class ;
 
 bpo:P17389 a owl:Class ;
     bpo:pcfID "17389" ; bpo:hierarchyID "2.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17389. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing areas of growth and further development of product/service mix, customization, market based changes, etc., to further demonstrate value to the customer in the competition." ;
     rdfs:label "Identify product/service bundling opportunities" ;
     skos:definition "An Act of Identification that discerns areas of growth in the product/service mix and produces a representation of the bundling opportunities available to demonstrate value to customers." ;
@@ -1368,6 +1427,7 @@ bpo:P17389 a owl:Class ;
 
 bpo:P10062 a owl:Class ;
     bpo:pcfID "10062" ; bpo:hierarchyID "2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10062. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing new products/services from scratch, including all activities associated with the design, prototyping, evaluation, and market testing of these planned offerings." ;
     rdfs:label "Develop products and services" ;
     skos:definition "An Act of Development that creates new products or services from concept through design, prototyping, market testing, and preparation for production." ;
@@ -1381,6 +1441,7 @@ bpo:P10062 a owl:Class ;
 
 bpo:P19993 a owl:Class ;
     bpo:pcfID "19993" ; bpo:hierarchyID "2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19993. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Sketching and standardizing product and service based on the market. Analyze the data market competitiveness and innovation attained for the product and service development." ;
     rdfs:label "Design and prototype products and services" ;
     skos:definition "An Act of Development that designs and prototypes products and services in light of market data, producing a design specification (informational output) and building a product/service prototype (a material participant)." ;
@@ -1407,6 +1468,7 @@ bpo:P19993 a owl:Class ;
 
 bpo:P10083 a owl:Class ;
     bpo:pcfID "10083" ; bpo:hierarchyID "2.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10083. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Allocating resources to the design, development, and evaluation of product/service concepts. Allocate funds, personnel, and time for developing the new and/or revised products/services. Begin to design the potential new product/service concepts that have been prioritized and selected for further development." ;
     rdfs:label "Assign resources to product/service project" ;
     skos:definition "An Act of Planning that allocates funds, personnel, and time to a product or service development project and produces a resource allocation plan." ;
@@ -1418,6 +1480,7 @@ bpo:P10083 a owl:Class ;
 
 bpo:P19994 a owl:Class ;
     bpo:pcfID "19994" ; bpo:hierarchyID "2.3.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19994. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining essential elements for collaborators involved in blueprint/development of product/service." ;
     rdfs:label "Identify requirements for product/service design/development partners" ;
     skos:definition "An Act of Formulation that determines the essential requirements for design and development collaborators and produces a partner requirement specification." ;
@@ -1428,6 +1491,7 @@ bpo:P19994 a owl:Class ;
 
 bpo:P10084 a owl:Class ;
     bpo:pcfID "10084" ; bpo:hierarchyID "2.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10084. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing a business-level business case and a technical feasibility assessment in order to move the product/service projects forward. Weigh the costs and benefits of designing, developing, and evaluating the shortlisted product/service concepts. Prepare a business case to justify the product/service projects. Conduct a technical appraisal to ensure that the organization has the technical know-how and resources to further develop these concepts." ;
     rdfs:label "Prepare high-level business case and technical assessment" ;
     skos:definition "An Act of Appraisal that weighs the costs and benefits and technical feasibility of shortlisted concepts and produces a business case and a technical assessment." ;
@@ -1439,6 +1503,7 @@ bpo:P10084 a owl:Class ;
 
 bpo:P10085 a owl:Class ;
     bpo:pcfID "10085" ; bpo:hierarchyID "2.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10085. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating design specifications. Create specifications for the design of new or revised product/service concepts as a measure to meet during development. Have the senior functional-level solutioning or design staff create a framework of compliance standards for these products/services." ;
     rdfs:label "Develop product/service design specifications" ;
     skos:definition "An Act of Design that creates design specifications for new or revised product or service concepts as a standard to meet during development." ;
@@ -1450,6 +1515,7 @@ bpo:P10085 a owl:Class ;
 
 bpo:P16813 a owl:Class ;
     bpo:pcfID "16813" ; bpo:hierarchyID "2.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16813. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the usability and user experience of products and the business impact it creates." ;
     rdfs:label "Develop user experience design specifications" ;
     skos:definition "An Act of Design that determines the usability and user experience of a product or service and produces a user experience design specification." ;
@@ -1460,6 +1526,7 @@ bpo:P16813 a owl:Class ;
 
 bpo:P16817 a owl:Class ;
     bpo:pcfID "16817" ; bpo:hierarchyID "2.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16817. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing warranty plan and pricing specifications for recommendation." ;
     rdfs:label "Provide warranty-related recommendations" ;
     skos:definition "An Act of Planning that devises warranty plan and pricing specifications and produces a warranty recommendation." ;
@@ -1470,6 +1537,7 @@ bpo:P16817 a owl:Class ;
 
 bpo:P10086 a owl:Class ;
     bpo:pcfID "10086" ; bpo:hierarchyID "2.3.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10086. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting requirements to meet in the design of new or revised products/services. Specify technical, quality, and costing requirements, as well as ergonomic, safety, and servicing requirements for such products/services. Ensure the information presented can be understood by the personnel executing the design and includes examples, anecdotal references, and illustrations." ;
     rdfs:label "Document design specifications" ;
     skos:definition "An Act of Data Management that records and structures the technical, quality, cost, ergonomic, safety, and servicing requirements to be met in the design of a product or service, producing a documented requirement specification." ;
@@ -1480,6 +1548,7 @@ bpo:P10086 a owl:Class ;
 
 bpo:P10087 a owl:Class ;
     bpo:pcfID "10087" ; bpo:hierarchyID "2.3.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10087. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting any mandatory and elective appraisals of the product/service design specifications in order to ensure compliance with external standards. Carry out external reviews of specifications created for the development of new product/service designs. Conduct mandatory appraisals such as legal and regulatory, as well as any optional assessments that, for instance, pitch the specifications against industrial benchmarks." ;
     rdfs:label "Conduct mandatory and elective external reviews" ;
     skos:definition "An Act of Appraisal that reviews a product or service design specification against external legal, regulatory, and industrial standards and produces an external review report." ;
@@ -1492,6 +1561,7 @@ bpo:P10087 a owl:Class ;
 
 bpo:P19995 a owl:Class ;
     bpo:pcfID "19995" ; bpo:hierarchyID "2.3.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19995. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a sketch of the customer focused product/service in Develop and Manage Products and Services [10003]." ;
     rdfs:label "Design products/services" ;
     skos:definition "An Act of Design that creates a customer-focused sketch and design of a product or service and produces a design specification." ;
@@ -1508,6 +1578,7 @@ bpo:P19995 a owl:Class ;
 
 bpo:P16819 a owl:Class ;
     bpo:pcfID "16819" ; bpo:hierarchyID "2.3.1.8.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16819. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out the steps necessary to appropriately manufacture correct parts.  This includes designing application, product hardware, mold, casting, mechanical, and electrical aspects of the product." ;
     rdfs:label "Design for manufacturing" ;
     skos:definition "An Act of Design that devises the application, hardware, mold, casting, mechanical, and electrical aspects of a product so that correct parts can be manufactured, producing a design specification." ;
@@ -1517,6 +1588,7 @@ bpo:P16819 a owl:Class ;
 
 bpo:P16820 a owl:Class ;
     bpo:pcfID "16820" ; bpo:hierarchyID "2.3.1.8.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16820. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating product application service view to allow for product servicing and refurbishing." ;
     rdfs:label "Design for product servicing" ;
     skos:definition "An Act of Design that creates a product service view enabling servicing and refurbishing, producing a serviceability design specification." ;
@@ -1526,6 +1598,7 @@ bpo:P16820 a owl:Class ;
 
 bpo:P16821 a owl:Class ;
     bpo:pcfID "16821" ; bpo:hierarchyID "2.3.1.8.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16821. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Replacing core components and republishing." ;
     rdfs:label "Design for re-manufacturing" ;
     skos:definition "An Act of Design that devises how core components are replaced and republished for re-manufacturing, producing a re-manufacturing design specification." ;
@@ -1535,6 +1608,7 @@ bpo:P16821 a owl:Class ;
 
 bpo:P16822 a owl:Class ;
     bpo:pcfID "16822" ; bpo:hierarchyID "2.3.1.8.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16822. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing the design and approach for troubleshooting the product." ;
     rdfs:label "Review product troubleshooting methodology" ;
     skos:definition "An Act of Appraisal that reviews the design and approach for troubleshooting a product and produces a troubleshooting methodology review." ;
@@ -1545,6 +1619,7 @@ bpo:P16822 a owl:Class ;
 
 bpo:P16818 a owl:Class ;
     bpo:pcfID "16818" ; bpo:hierarchyID "2.3.1.8.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16818. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing the BOM-Bill of material, manufacturing BOM and Service BOMA bill of materials list for all the raw materials and components/parts used in the producing end product." ;
     rdfs:label "Design and manage product data, design, and bill of materials" ;
     skos:definition "An Act of Data Management that designs and maintains product data, design records, and the engineering, manufacturing, and service bills of materials for a product." ;
@@ -1555,6 +1630,7 @@ bpo:P16818 a owl:Class ;
 
 bpo:P16823 a owl:Class ;
     bpo:pcfID "16823" ; bpo:hierarchyID "2.3.1.8.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16823. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing hardware and software upgrade techniques." ;
     rdfs:label "Design for product upgrades" ;
     skos:definition "An Act of Design that devises hardware and software upgrade techniques for a product, producing an upgrade design specification." ;
@@ -1564,6 +1640,7 @@ bpo:P16823 a owl:Class ;
 
 bpo:P10088 a owl:Class ;
     bpo:pcfID "10088" ; bpo:hierarchyID "2.3.1.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10088. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Building prototypes for shortlisted product/service concepts. Develop prototypes for those product/service concepts that have been identified for further development. Provide proof-of-concepts, and test any processes involved. Build prototypes in line with the design specifications already outlined. Enlist the solutioning and/or design staff." ;
     rdfs:label "Build prototypes/proof of concepts" ;
     skos:definition "An Act of Development that builds a product or service prototype in line with the design specification, taking the design specification as input and yielding a built prototype as its material participant." ;
@@ -1576,6 +1653,7 @@ bpo:P10088 a owl:Class ;
 
 bpo:P10098 a owl:Class ;
     bpo:pcfID "10098" ; bpo:hierarchyID "2.3.1.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10098. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating the new manufacturing/delivery processes for the new products/services, and testing them to ensure proper functioning. Create the production/delivery process for the prototypes that have been built for the new products/services. Conduct trial-runs to test these processes and their integration with the organization's other processes." ;
     rdfs:label "Develop and test prototype production and/or service delivery process" ;
     skos:definition "An Act of Development that creates the production or service-delivery process for prototyped offerings and tests it through trial runs, producing a production/delivery process design and a prototype test result." ;
@@ -1588,6 +1666,7 @@ bpo:P10098 a owl:Class ;
 
 bpo:P10089 a owl:Class ;
     bpo:pcfID "10089" ; bpo:hierarchyID "2.3.1.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10089. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Eliminating any problems relating to utility of the product/service over the course of its expected lifetime. Tweak the prototype in order to comply with the required quality and reliability standards. Further refine the prototype, so it may be subjected to testing." ;
     rdfs:label "Eliminate quality and reliability problems" ;
     skos:definition "An Act of Development that refines a product or service prototype to comply with required quality and reliability standards, taking quality and reliability targets as input and acting on the prototype as its material participant." ;
@@ -1599,6 +1678,7 @@ bpo:P10089 a owl:Class ;
 
 bpo:P10090 a owl:Class ;
     bpo:pcfID "10090" ; bpo:hierarchyID "2.3.1.12" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10090. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out an in-house appraisal of the prototypes in order to validate design and feasibility. Test the product/service prototypes to confirm their compliance with design and usability standards. Corroborate the viability of the design, and validate the feasibility of their production. Identify any areas for improvement." ;
     rdfs:label "Conduct in-house product/service testing and evaluate feasibility" ;
     skos:definition "An Act of Verification that tests product or service prototypes against design and usability standards and produces a feasibility assessment." ;
@@ -1610,6 +1690,7 @@ bpo:P10090 a owl:Class ;
 
 bpo:P10091 a owl:Class ;
     bpo:pcfID "10091" ; bpo:hierarchyID "2.3.1.13" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10091. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying performance parameters. Determine the parameters to measure performance of the design and development of the product/service concepts into prototypes." ;
     rdfs:label "Identify design/development performance indicators" ;
     skos:definition "An Act of Planning that determines the parameters for measuring design and development performance and produces a performance indicator specification." ;
@@ -1620,6 +1701,7 @@ bpo:P10091 a owl:Class ;
 
 bpo:P10092 a owl:Class ;
     bpo:pcfID "10092" ; bpo:hierarchyID "2.3.1.14" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10092. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Interacting with suppliers and manufactures to determine design decisions. Collaborate with vendors, suppliers, contractors, and subcontractors to verify feasibility of co-producing the prototype's design. Ensure that efforts can be coordinated with other stakeholders in the organization's supply chain ecosystem at the time of manufacturing, producing, or packaging the finished product/service." ;
     rdfs:label "Collaborate on design with suppliers and external partners" ;
     skos:definition "An Act of Verification that, with suppliers and external partners, checks the feasibility of co-producing the prototype's design and produces a feasibility assessment." ;
@@ -1634,6 +1716,7 @@ bpo:P10092 a owl:Class ;
 
 bpo:P19996 a owl:Class ;
     bpo:pcfID "19996" ; bpo:hierarchyID "2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19996. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Expanding on the marketplace analysis that took place earlier in the product development lifecycle by testing the market against offerings. The results from this in-depth analysis will help the organization finalize product/service characteristics and technical requirements and also identify any needed changes in the manufacturing and delivery processes that support market delivery. To prepare a detailed market study that accounts for any changes in the global environment, the organization may want to conduct a series of interviews, workshops, and focus groups with potential and existing customers." ;
     rdfs:label "Test market for new or revised products and services" ;
     skos:definition "An Act of Analysis that tests the market against new or revised offerings and produces a market study used to finalize product/service characteristics and technical requirements." ;
@@ -1648,6 +1731,7 @@ bpo:P19996 a owl:Class ;
 
 bpo:P10093 a owl:Class ;
     bpo:pcfID "10093" ; bpo:hierarchyID "2.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10093. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Composing a detailed study of the market ecosystem in light of new products/services. Conduct a detailed analysis of the targeted market(s) in order to Introduce new products/services [10077]. Examine the competition, market size and growth rate, market trends, customer segments and their characteristics, market influencers, distribution channels, and profitability. Enlist in-house marketing and/or solutioning teams, or outsource to specialized professional services agencies." ;
     rdfs:label "Prepare detailed market study" ;
     skos:definition "An Act of Analysis that examines the targeted market and produces a detailed market study about the market." ;
@@ -1659,6 +1743,7 @@ bpo:P10093 a owl:Class ;
 
 bpo:P10094 a owl:Class ;
     bpo:pcfID "10094" ; bpo:hierarchyID "2.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10094. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting both qualitative and quantitative studies to determine the fit between the newly developed products/services and the customers. Conduct external tests of the new product/service, and then refine them to maximize the customer uptake. Gather feedback from prospective customers and targeted populations by conducting surveys, focus groups, interviews, and detailed studies. Enlist professional services such as public relations or market research organizations." ;
     rdfs:label "Conduct customer tests and interviews" ;
     skos:definition "An Act of Analysis that conducts qualitative and quantitative customer tests and interviews of a new product or service and produces a customer test report capturing customer feedback." ;
@@ -1670,6 +1755,7 @@ bpo:P10094 a owl:Class ;
 
 bpo:P10095 a owl:Class ;
     bpo:pcfID "10095" ; bpo:hierarchyID "2.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10095. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Finalizing the characteristics of new products/services by appropriately weighing feedback from prospective customers against a cost-benefit analysis in order to produce a profitable business proposition. Refine the attributes of the newly developed products/services, in light of the feedback and insights collected during Conduct customer tests and interviews [10094]. Revisit the high-level business case to justify the resources assigned to the product/service project against the anticipated benefits." ;
     rdfs:label "Finalize product/service characteristics and business cases" ;
     skos:definition "An Act of Formulation that finalizes the characteristics of a new product or service by weighing customer feedback against a cost-benefit analysis, producing a product/service characteristics specification." ;
@@ -1681,6 +1767,7 @@ bpo:P10095 a owl:Class ;
 
 bpo:P10096 a owl:Class ;
     bpo:pcfID "10096" ; bpo:hierarchyID "2.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10096. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reassessing the technical requirements in light of the final product/service attributes. Revisit the technical assessment to revalidate the organization's capacity for progressing with new product/service projects, in light of the revised product/service characteristics." ;
     rdfs:label "Finalize technical requirements" ;
     skos:definition "An Act of Appraisal that reassesses technical requirements in light of the finalized product or service characteristics and produces a revised technical assessment." ;
@@ -1694,6 +1781,7 @@ bpo:P10096 a owl:Class ;
 
 bpo:P19997 a owl:Class ;
     bpo:pcfID "19997" ; bpo:hierarchyID "2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19997. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising business plans and procedures for manufacturing/operations/production and delivery of services offered by the organization. Further in general terms the total amount of output that the manufacturing department is responsible to produce for each period." ;
     rdfs:label "Prepare for production/service delivery" ;
     skos:definition "An Act of Development that devises and installs the plans, procedures, equipment, and processes needed to produce and deliver an organization's new products and services." ;
@@ -1708,6 +1796,7 @@ bpo:P19997 a owl:Class ;
 
 bpo:P10099 a owl:Class ;
     bpo:pcfID "10099" ; bpo:hierarchyID "2.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10099. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing and/or sourcing the essential machinery needed for creating purpose-built processes, as well as the raw materials, to produce the new products/services. Either design the equipment and materials needed internally, or source from external vendors. Obtain the feedstock or raw materials needed to prepare the finished products, as well as the machinery - hardware and software - needed to arrange production lines, factory operations, assemblies, and manufacturing processes. Revisit the technologies that underpin the new or revised products/services in order to source the right equipment and materials." ;
     rdfs:label "Design and obtain necessary capabilities/materials and equipment" ;
     skos:definition "A Planned Act of Acquisition that designs or sources, and obtains, the production equipment and raw materials needed to produce a new product or service." ;
@@ -1720,6 +1809,7 @@ bpo:P10099 a owl:Class ;
 
 bpo:P10097 a owl:Class ;
     bpo:pcfID "10097" ; bpo:hierarchyID "2.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10097. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying any changes that need to be effectuated in the organization's internal processes for manufacturing, and delivering the newly developed products/services. Determine if any changes need to be made to the production and distribution processes, in light of the new products/services. Begin production process planning. Prepare for factory layout planning. Generate shop-floor instructions and changes to the supply chain." ;
     rdfs:label "Identify requirements for changes to manufacturing/delivery processes" ;
     skos:definition "An Act of Formulation that determines the changes required in manufacturing and delivery processes for a new product or service and produces a product/service modification plan." ;
@@ -1730,6 +1820,7 @@ bpo:P10097 a owl:Class ;
 
 bpo:P11418 a owl:Class ;
     bpo:pcfID "11418" ; bpo:hierarchyID "2.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11418. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Requesting changes in the production and/or delivery operations for processing the new or revised products/services. Rectify any problems identified in the manufacturing or delivery processes (through Monitor production runs [11417]). Seek changes in components, repair machinery, optimize production lines, and tweak factory assemblies through a formal notice to the concerned division, known as an engineering change order." ;
     rdfs:label "Request engineering/process change" ;
     skos:definition "An Act of Formulation that requests changes to production or delivery operations by issuing a formal engineering change order." ;
@@ -1740,6 +1831,7 @@ bpo:P11418 a owl:Class ;
 
 bpo:P10100 a owl:Class ;
     bpo:pcfID "10100" ; bpo:hierarchyID "2.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10100. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Finalizing production process or methodology. Install and initiate the production process to manufacture the new products, using the equipment and machinery already assembled. In the case of new services, implement delivery processes and methodologies. Validate processes for the accuracy of their operation and proper functioning." ;
     rdfs:label "Install and validate production/service delivery process" ;
     skos:definition "An Act of Development that installs and initiates the production or service-delivery process using assembled equipment and validates its proper functioning." ;
@@ -1751,6 +1843,7 @@ bpo:P10100 a owl:Class ;
 
 bpo:P11417 a owl:Class ;
     bpo:pcfID "11417" ; bpo:hierarchyID "2.3.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11417. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Regularly monitoring production runs of the production and/or delivery operations." ;
     rdfs:label "Monitor initial production runs" ;
     skos:definition "An Act of Information Processing that regularly monitors and logs initial production runs of the production or delivery operations and produces product/service performance data." ;
@@ -1762,6 +1855,7 @@ bpo:P11417 a owl:Class ;
 
 bpo:P19998 a owl:Class ;
     bpo:pcfID "19998" ; bpo:hierarchyID "2.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19998. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Verifying the measures/processes/techniques through systems and tools involved in the introduction of products and services." ;
     rdfs:label "Validate launch procedures" ;
     skos:definition "An Act of Verification that checks the measures, processes, and techniques involved in introducing a product or service and produces a feasibility assessment of the launch procedures." ;

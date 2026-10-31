@@ -791,6 +791,7 @@ bpo:RecallCommunication a owl:Class ;
 
 bpo:P10378 a owl:Class ;
     bpo:pcfID "10378" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10378. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "6.1" ;
     bpo:apqcSourceText "Defining a plan that removes customer obstacles by gathering operational insight and competitive insight, as well as improving soft skills and forward resolution for employees. Develop customer segmentation. Define rules and regulations for customer service. Establish service levels for customers." ;
     rdfs:label "Develop customer service strategy" ;
@@ -809,6 +810,7 @@ bpo:P10378 a owl:Class ;
 
 bpo:P20086 a owl:Class ;
     bpo:pcfID "20086" ; bpo:hierarchyID "6.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20086. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining a set of behaviors, skills, and policies needed to provide customer service effectively across the enterprise." ;
     rdfs:label "Define customer service requirements across the enterprise" ;
     skos:definition "An Act of Formulation that composes a customer service requirement specification enumerating the behaviors, skills, and policies needed to provide customer service across the enterprise." ;
@@ -819,6 +821,7 @@ bpo:P20086 a owl:Class ;
 
 bpo:P20087 a owl:Class ;
     bpo:pcfID "20087" ; bpo:hierarchyID "6.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20087. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Communicating to the customer service resources what is expected when engaging the customer. Relate service level expectations to the workforce. Ensure positive customer experience." ;
     rdfs:label "Define customer service experience" ;
     skos:definition "An Act of Formulation that articulates a customer service experience specification relating service-level expectations to the workforce for engaging customers." ;
@@ -829,6 +832,7 @@ bpo:P20087 a owl:Class ;
 
 bpo:P20088 a owl:Class ;
     bpo:pcfID "20088" ; bpo:hierarchyID "6.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20088. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing and refining procedures for customer service and technical support." ;
     rdfs:label "Define and manage customer service channel strategy" ;
     skos:definition "An Act of Formulation that establishes and refines a customer service channel strategy governing the procedures for customer service and technical support." ;
@@ -839,6 +843,7 @@ bpo:P20088 a owl:Class ;
 
 bpo:P10382 a owl:Class ;
     bpo:pcfID "10382" ; bpo:hierarchyID "6.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10382. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the framework of policies and methods for developing customer service strategy. Establish the rules and regulations that serve as a guideline for the customer service strategy. Take into account customer needs and behavior." ;
     rdfs:label "Define customer service policies and procedures" ;
     skos:definition "An Act of Formulation that composes a customer service policy establishing the rules and regulations that guide the customer service strategy." ;
@@ -849,6 +854,7 @@ bpo:P10382 a owl:Class ;
 
 bpo:P10383 a owl:Class ;
     bpo:pcfID "10383" ; bpo:hierarchyID "6.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10383. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining and implementing levels for customer services. Benchmark certain customer service practices, and base customer level services on those benchmarks. Create a service level agreement, which is a negotiated agreement designed to create a common understanding about services, priorities, and responsibilities." ;
     rdfs:label "Establish target service level for each customer segment" ;
     skos:definition "An Act of Formulation that determines target customer service levels per segment and produces a service level agreement defining services, priorities, and responsibilities." ;
@@ -859,6 +865,7 @@ bpo:P10383 a owl:Class ;
 
 bpo:P20089 a owl:Class ;
     bpo:pcfID "20089" ; bpo:hierarchyID "6.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20089. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the exact terms and conditions under which specific warranties apply to certain goods or services." ;
     rdfs:label "Define warranty claims" ;
     skos:definition "An Act of Formulation that determines the exact terms and conditions under which specific warranties apply to certain goods or services, producing a warranty claim definition." ;
@@ -874,6 +881,7 @@ bpo:P20089 a owl:Class ;
 
 bpo:P16893 a owl:Class ;
     bpo:pcfID "16893" ; bpo:hierarchyID "6.1.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16893. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing warranty policies to assure customers that the company will guarantee its warranties that it issues." ;
     rdfs:label "Determine and document warranty policies" ;
     skos:definition "An Act of Formulation that establishes and documents a warranty policy assuring customers that the company will guarantee the warranties it issues." ;
@@ -884,6 +892,7 @@ bpo:P16893 a owl:Class ;
 
 bpo:P16890 a owl:Class ;
     bpo:pcfID "16890" ; bpo:hierarchyID "6.1.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16890. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing and maintaining claims processing and routing rules. Establish and maintain claims processing and routing rules for product warranties, coverage lists, repair, fault, trouble codes, repair time setup, and warranty policy registration. This also includes rolling out the codes and rules, and the improvements/updates to these rules and codes via systematic updates." ;
     rdfs:label "Create and manage warranty rules/claim codes for products" ;
     skos:definition "An Act of Formulation that establishes warranty claims-processing and routing rules and the associated warranty claim codes for products." ;
@@ -894,6 +903,7 @@ bpo:P16890 a owl:Class ;
 
 bpo:P20090 a owl:Class ;
     bpo:pcfID "20090" ; bpo:hierarchyID "6.1.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20090. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Negotiating with manufacturers and dealers the obligations of each party in upholding warranties." ;
     rdfs:label "Agree on warranty responsibilities with suppliers" ;
     skos:definition "An Act of Contract Formation in which an organization and its suppliers or dealers negotiate and commit to the warranty obligations of each party, producing a supplier warranty responsibility agreement." ;
@@ -906,6 +916,7 @@ bpo:P20090 a owl:Class ;
 
 bpo:P20091 a owl:Class ;
     bpo:pcfID "20091" ; bpo:hierarchyID "6.1.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20091. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Informing customers about warranties that apply to promoted products or services." ;
     rdfs:label "Define warranty related offerings for customers" ;
     skos:definition "An Act of Communication in which a warranty offering is conveyed to customers, informing them about the warranties that apply to promoted products or services." ;
@@ -918,6 +929,7 @@ bpo:P20091 a owl:Class ;
 
 bpo:P12673 a owl:Class ;
     bpo:pcfID "12673" ; bpo:hierarchyID "6.1.6.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12673. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Communicating rules and updates via training manuals for new products and training resources." ;
     rdfs:label "Communicate warranty policies and offerings" ;
     skos:definition "An Act of Communication in which warranty policies, rules, and updates are transferred to recipients via training manuals and training resources." ;
@@ -929,6 +941,7 @@ bpo:P12673 a owl:Class ;
 
 bpo:P20092 a owl:Class ;
     bpo:pcfID "20092" ; bpo:hierarchyID "6.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20092. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing procedures to handle recalls of defective products." ;
     rdfs:label "Develop recall strategy" ;
     skos:definition "An Act of Formulation that establishes the procedures for handling recalls of defective products, producing a recall strategy." ;
@@ -979,6 +992,7 @@ bpo:CustomerComplaintManagementCapability a owl:Class ;
 
 bpo:P10390 a owl:Class ;
     bpo:pcfID "10390" ; bpo:hierarchyID "6.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10390. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Projecting the total work force required to service customer service inquiries in order to effectively predict the volume of vendor contracts required. Estimate the number of the customer service contracts in an agreed-upon time frame in order to strategically maintain the work force necessitated for customer inquires. Analyze historical data around customer service contracts, the universe of customer inquiries, frequency of inquiries, servicing capability (per head) of the employees, etc." ;
     rdfs:label "Forecast volume of customer service contacts" ;
     skos:definition "An Act of Forecasting that has as input historical contact data and has as output a contact-volume forecast estimating the future number of customer service contacts over a given time frame." ;
@@ -990,6 +1004,7 @@ bpo:P10390 a owl:Class ;
 
 bpo:P10391 a owl:Class ;
     bpo:pcfID "10391" ; bpo:hierarchyID "6.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10391. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deploying the work force to manage customer service contracts. Create a systematic summary of the operations and service required, as well as the specific amount of work force that is to be deployed to the customer service operations. Ensure work force is directly proportional to the estimated forecast of customer service contracts." ;
     rdfs:label "Schedule customer service work force" ;
     skos:definition "An Act of Scheduling that has as input a contact-volume forecast and has as output a workforce schedule prescribing the customer service staff to be deployed over time." ;
@@ -1001,6 +1016,7 @@ bpo:P10391 a owl:Class ;
 
 bpo:P10392 a owl:Class ;
     bpo:pcfID "10392" ; bpo:hierarchyID "6.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10392. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking the utilization of work force deployed for managing customer service operations. Monitor the utility of the work force deployed for managing customer service operations in order to evaluate its efficiency and cost effectiveness. Calculate the overall labor effectiveness, which measures the utility, performance, and quality of the work force." ;
     rdfs:label "Track work force utilization" ;
     skos:definition "An Act of Monitoring that tracks the utilization of the deployed customer service work force and has as output a workforce-utilization report describing its efficiency and effectiveness." ;
@@ -1011,6 +1027,7 @@ bpo:P10392 a owl:Class ;
 
 bpo:P10393 a owl:Class ;
     bpo:pcfID "10393" ; bpo:hierarchyID "6.2.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10393. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking and determining the quality of interactions between the customer and customer representatives. Use electronic devices to record and effectively assess customer representatives' interactions." ;
     rdfs:label "Monitor and evaluate quality of customer interactions with customer service representatives" ;
     skos:definition "An Act of Monitoring that tracks the interactions between customers and customer service representatives and has as output an interaction-quality assessment describing their quality." ;
@@ -1022,6 +1039,7 @@ bpo:P10393 a owl:Class ;
 
 bpo:P10394 a owl:Class ;
     bpo:pcfID "10394" ; bpo:hierarchyID "6.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10394. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Receiving requests for information from customers over multiple channels. Receive various requests and inquiries from customers regarding products/services. Accept these inquiries through channels such as email, telephone, online forms, text messages, social media, and in person. Supply dedicated equipment, systems, and personnel." ;
     rdfs:label "Receive customer problems, requests, and inquiries" ;
     skos:definition "An Act of Communication in which a customer service representative receives a customer inquiry transferred by a customer over some channel." ;
@@ -1034,6 +1052,7 @@ bpo:P10394 a owl:Class ;
 
 bpo:P13482 a owl:Class ;
     bpo:pcfID "13482" ; bpo:hierarchyID "6.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 13482. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing various requests and inquiries from customers regarding products/services. Provide answers and offerings to satisfy the customer's needs." ;
     rdfs:label "Analyze problems, requests, and inquiries" ;
     skos:definition "An Act of Analysis that has as input a customer inquiry and has as output an inquiry analysis describing the customer's need and candidate answers." ;
@@ -1045,6 +1064,7 @@ bpo:P13482 a owl:Class ;
 
 bpo:P10395 a owl:Class ;
     bpo:pcfID "10395" ; bpo:hierarchyID "6.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10395. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Routing customer inquiries in order to service them with the most apposite response. Direct customer inquires to the best suited personnel or system. Have a system or procedure capable of efficiently channeling these requests." ;
     rdfs:label "Resolve customer problems, requests, and inquiries" ;
     skos:definition "An Act of Communication in which a received customer inquiry is directed to the personnel or system best suited to service it with the most apposite response." ;
@@ -1057,6 +1077,7 @@ bpo:P10395 a owl:Class ;
 
 bpo:P10396 a owl:Class ;
     bpo:pcfID "10396" ; bpo:hierarchyID "6.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10396. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Responding to customer requests by email, conversation, interactive voice response, mail, etc. with the most appropriate reply. Instill a robust process to locate the right information for a solution to a customer's problem." ;
     rdfs:label "Respond to customer problems, requests, and inquiries" ;
     skos:definition "An Act of Representative Communication in which a customer service representative transfers an inquiry response to the customer who raised the inquiry." ;
@@ -1069,6 +1090,7 @@ bpo:P10396 a owl:Class ;
 
 bpo:P16928 a owl:Class ;
     bpo:pcfID "16928" ; bpo:hierarchyID "6.2.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16928. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Utilizing customer inquiries as opportunities to either provide a comparable service to the one in question, offer additional complimentary service, or suggest a service that is better than what was initially offered." ;
     rdfs:label "Identify and capture upsell/cross-sell opportunities" ;
     skos:definition "An Act of Identification that has as input a customer inquiry and has as output a sales lead representing an upsell or cross-sell opportunity discerned from the inquiry." ;
@@ -1080,6 +1102,7 @@ bpo:P16928 a owl:Class ;
 
 bpo:P16937 a owl:Class ;
     bpo:pcfID "16937" ; bpo:hierarchyID "6.2.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16937. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing possible sales leads to the sales team in an effort to garner more business opportunities." ;
     rdfs:label "Deliver opportunity to sales team" ;
     skos:definition "An Act of Communication in which a customer service representative transfers a sales lead to the sales team." ;
@@ -1092,6 +1115,7 @@ bpo:P16937 a owl:Class ;
 
 bpo:P10397 a owl:Class ;
     bpo:pcfID "10397" ; bpo:hierarchyID "6.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10397. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Receiving any complaints or grievances from customers for the organization's products/services. Receive objections, complaints, and criticism from customers regarding products/services through email, telephone, online forms, text messages, social media, in person, etc. Dedicate equipment, systems, and personnel." ;
     rdfs:label "Receive customer complaints" ;
     skos:definition "An Act of Communication in which a customer service representative receives a customer complaint transferred by a customer over some channel." ;
@@ -1104,6 +1128,7 @@ bpo:P10397 a owl:Class ;
 
 bpo:P10398 a owl:Class ;
     bpo:pcfID "10398" ; bpo:hierarchyID "6.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10398. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Routing any complaints or grievances received from customers in order to address them in the most appropriate manner. Direct complaints to the best suited personnel or system. Implement a system or procedure capable of efficiently channeling the various objections, complaints, and criticism from customers over the offerings provided by the organization." ;
     rdfs:label "Route customer complaints" ;
     skos:definition "An Act of Communication in which a received customer complaint is directed to the personnel or system best suited to address it." ;
@@ -1115,6 +1140,7 @@ bpo:P10398 a owl:Class ;
 
 bpo:P10399 a owl:Class ;
     bpo:pcfID "10399" ; bpo:hierarchyID "6.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10399. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Resolving any customer complaints that are deemed to be sound and reasonable. Redress any objections, grievances, and complaints received from customers regarding the offerings provided by the organization. Identify the legitimate complaints, where the situation needs to be appropriately corrected. Deploy personnel who can rectify the issue within a stipulated time frame." ;
     rdfs:label "Resolve customer complaints" ;
     skos:definition "An Act of Resolution that has as input a legitimate customer complaint and has as output a complaint resolution recording the corrective action taken to redress it." ;
@@ -1127,6 +1153,7 @@ bpo:P10399 a owl:Class ;
 
 bpo:P10400 a owl:Class ;
     bpo:pcfID "10400" ; bpo:hierarchyID "6.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10400. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Responding to customer complaints including all activities necessitated to service any objections, complaints, or grievances with the most appropriate reply. Source the right information to formulate a response that eases the discomfort being experienced by the customer. (Closely coordinate with Resolve customer complaints [10399].)" ;
     rdfs:label "Respond to customer complaints" ;
     skos:definition "An Act of Representative Communication in which a customer service representative transfers a complaint response to the customer who raised the complaint." ;
@@ -1140,6 +1167,7 @@ bpo:P10400 a owl:Class ;
 
 bpo:P19072 a owl:Class ;
     bpo:pcfID "19072" ; bpo:hierarchyID "6.2.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19072. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing complaint logs to provide input for continuous service improvement and customer profiling." ;
     rdfs:label "Analyze customer complaints and response/redressal" ;
     skos:definition "An Act of Analysis that has as input customer complaints and has as output a complaint analysis describing patterns that inform service improvement and customer profiling." ;
@@ -1151,6 +1179,7 @@ bpo:P19072 a owl:Class ;
 
 bpo:P20094 a owl:Class ;
     bpo:pcfID "20094" ; bpo:hierarchyID "6.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20094. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Acquiring returns and identify if the returns are scraped or salvaged." ;
     rdfs:label "Process returns" ;
     skos:definition "An Act of Acquisition in which an Agent takes back a returned product from a customer and determines whether it is to be scrapped or salvaged." ;
@@ -1163,6 +1192,7 @@ bpo:P20094 a owl:Class ;
 
 bpo:P10364 a owl:Class ;
     bpo:pcfID "10364" ; bpo:hierarchyID "6.2.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10364. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Approving and carrying forward the requests by the customers to return the product. This is part of the process of returning a product in order to receive a refund, replacement, or repair during the product's warranty period." ;
     rdfs:label "Authorize return" ;
     skos:definition "An Act of Formulation that has as input a customer return request and has as output a return authorization prescribing that the requested product return may proceed." ;
@@ -1174,6 +1204,7 @@ bpo:P10364 a owl:Class ;
 
 bpo:P20095 a owl:Class ;
     bpo:pcfID "20095" ; bpo:hierarchyID "6.2.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20095. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Notating the reason for the return of the product." ;
     rdfs:label "Process return and record reason" ;
     skos:definition "An Act of Acquisition in which an Agent takes in the returned product and produces a return-reason record documenting why the product was returned." ;
@@ -1185,6 +1216,7 @@ bpo:P20095 a owl:Class ;
 
 bpo:P12840 a owl:Class ;
     bpo:pcfID "12840" ; bpo:hierarchyID "6.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12840. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Notifying all stakeholders, legal, and industry regulatory bodies of the incidents and risks related to a return or recall, if needed." ;
     rdfs:label "Report incidents and risks to regulatory bodies" ;
     skos:definition "An Act of Representative Communication in which an Agent transfers a regulatory incident report concerning return- or recall-related incidents and risks to regulatory bodies and other stakeholders." ;
@@ -1208,6 +1240,7 @@ bpo:P12840 a owl:Class ;
 
 bpo:P20605 a owl:Class ;
     bpo:pcfID "20605" ; bpo:hierarchyID "6.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20605. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Filing product registrations." ;
     rdfs:label "Register products" ;
     skos:definition "An Act of Information Processing that records a customer's product ownership and produces a product registration." ;
@@ -1218,6 +1251,7 @@ bpo:P20605 a owl:Class ;
 
 bpo:P12669 a owl:Class ;
     bpo:pcfID "12669" ; bpo:hierarchyID "6.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12669. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying, investigating, and processes warranty claims. This process includes: receipt and validation of a warranty claim; definition and diagnosis /root cause analysis of an issue and recommendation for corrective action; the determination of responsibility for settlement of the claim; the transaction being approved or denied; and the originator being notified and payment authorized. In the case of a recurring event, further investigation (definition and diagnosis or root cause analysis) is performed, and a recommendation for corrective action is made and implemented in production/design. It ends when the claim is closed." ;
     rdfs:label "Process warranty claims" ;
     skos:definition "An Act of Resolution that carries a warranty claim from receipt through validation, investigation, settlement decision, and closure." ;
@@ -1239,6 +1273,7 @@ bpo:P12669 a owl:Class ;
 
 bpo:P20096 a owl:Class ;
     bpo:pcfID "20096" ; bpo:hierarchyID "6.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20096. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Receiving incoming warranty claims. Route claim to correct department. Document claim." ;
     rdfs:label "Receive warranty claim" ;
     skos:definition "An Act of Communication that takes in an incoming warranty claim, routes it to the responsible department, and documents it." ;
@@ -1250,6 +1285,7 @@ bpo:P20096 a owl:Class ;
 
 bpo:P12671 a owl:Class ;
     bpo:pcfID "12671" ; bpo:hierarchyID "6.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12671. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring that the claim falls within the parameters of the warranty in question. After validation is made, the claim must be investigated." ;
     rdfs:label "Validate warranty claim" ;
     skos:definition "An Act of Appraisal that has as input a warranty claim and a warranty policy and has as output a warranty claim validation judging whether the claim falls within the warranty parameters." ;
@@ -1262,6 +1298,7 @@ bpo:P12671 a owl:Class ;
 
 bpo:P20097 a owl:Class ;
     bpo:pcfID "20097" ; bpo:hierarchyID "6.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20097. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Executing investigational and analysis of warranty claims. This involves notification and definition of a warranty issue, includes the scheduling of a field service agent to perform further investigation; the request and receipt of defective parts; and diagnosis/root cause analysis. This concludes with the receipt of the result and recommendation for corrective action." ;
     rdfs:label "Investigate warranty issues" ;
     skos:definition "An Act of Analysis that examines a warranty issue and produces a root cause analysis and a recommendation for corrective action." ;
@@ -1278,6 +1315,7 @@ bpo:P20097 a owl:Class ;
 
 bpo:P20098 a owl:Class ;
     bpo:pcfID "20098" ; bpo:hierarchyID "6.3.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20098. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the issue of the claim. The warranty team will look into the issue and understand whether it is covered by the claim code or if more detail is required. Field service will be scheduled to further qualify the definition of the issue and to collect more evidence." ;
     rdfs:label "Define issue" ;
     skos:definition "An Act of Analysis that has as input a warranty claim and a warranty claim code and has as output a warranty issue definition." ;
@@ -1290,6 +1328,7 @@ bpo:P20098 a owl:Class ;
 
 bpo:P12677 a owl:Class ;
     bpo:pcfID "12677" ; bpo:hierarchyID "6.3.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12677. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Scheduling additional investigative field service. This is performed for high priority claims or claims that require additional investigation. Field service engineers will gather additional information, perform further investigation, and qualify the definition of the issue." ;
     rdfs:label "Schedule field service" ;
     skos:definition "An Act of Scheduling that fixes the timing and assignment of investigative field service and produces a workforce schedule." ;
@@ -1301,6 +1340,7 @@ bpo:P12677 a owl:Class ;
 
 bpo:P12678 a owl:Class ;
     bpo:pcfID "12678" ; bpo:hierarchyID "6.3.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12678. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Requesting receipt of a defective part for further investigation." ;
     rdfs:label "Request and receive defective part" ;
     skos:definition "An Act of Acquisition that obtains a defective part for further investigation." ;
@@ -1311,6 +1351,7 @@ bpo:P12678 a owl:Class ;
 
 bpo:P20099 a owl:Class ;
     bpo:pcfID "20099" ; bpo:hierarchyID "6.3.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20099. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Investigating claims by an appropriate functional representative. Once the issue has been clearly defined and diagnosed and a recommendation for corrective action is determined, it will be provided to the warranty management team." ;
     rdfs:label "Investigate issue/perform root cause analysis" ;
     skos:definition "An Act of Analysis that has as input a warranty issue definition and has as output a root cause analysis and a recommendation for corrective action." ;
@@ -1323,6 +1364,7 @@ bpo:P20099 a owl:Class ;
 
 bpo:P20100 a owl:Class ;
     bpo:pcfID "20100" ; bpo:hierarchyID "6.3.2.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20100. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Receiving investigative results to assess claim approval or denial. The warranty team will assess the results of the investigation and the recommendations for corrective action." ;
     rdfs:label "Receive investigation result/recommendation for corrective action" ;
     skos:definition "An Act of Appraisal that has as input a root cause analysis and a recommendation for corrective action and produces a claim assessment judging the claim toward approval or denial." ;
@@ -1335,6 +1377,7 @@ bpo:P20100 a owl:Class ;
 
 bpo:P20101 a owl:Class ;
     bpo:pcfID "20101" ; bpo:hierarchyID "6.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20101. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying responsible party for a claim. There is no negotiation with the supplier at this point. There can be multiple warranties applicable to the same part: a new part warranty, a new product warranty (for the product the part is installed on), and a supplier warranty from the company that last repaired the part. The information required for this decision would be the output of Receive component/part and analyze fault [19728]." ;
     rdfs:label "Determine responsible party" ;
     skos:definition "An Act of Identification that has as input a root cause analysis and has as output a responsible party determination identifying who is responsible for settling the claim." ;
@@ -1346,6 +1389,7 @@ bpo:P20101 a owl:Class ;
 
 bpo:P20102 a owl:Class ;
     bpo:pcfID "20102" ; bpo:hierarchyID "6.3.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20102. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Authorizing claims prior to submittal." ;
     rdfs:label "Manage pre-authorizations" ;
     skos:definition "A Planned Act that grants preliminary authorization of a warranty claim prior to its formal submittal, producing a claim pre-authorization." ;
@@ -1356,6 +1400,7 @@ bpo:P20102 a owl:Class ;
 
 bpo:P12668 a owl:Class ;
     bpo:pcfID "12668" ; bpo:hierarchyID "6.3.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12668. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Following Defining issue [20098], an approval or rejection with be made against the warranty claim. If it is deemed that the claim falls within the warranty parameters, the claim will be approved. If the claim is deemed to fall outside warranty parameters, the claim with be rejected." ;
     rdfs:label "Approve or reject warranty claim" ;
     skos:definition "An Act of Selection that has as input a warranty claim validation and chooses between approval and rejection, producing a claim disposition." ;
@@ -1367,6 +1412,7 @@ bpo:P12668 a owl:Class ;
 
 bpo:P20103 a owl:Class ;
     bpo:pcfID "20103" ; bpo:hierarchyID "6.3.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20103. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Contacting the originator of whether the warranty claim has been approved or rejected." ;
     rdfs:label "Notify originator of approve/reject decision" ;
     skos:definition "An Act of Communication that transfers the claim disposition to the claim originator." ;
@@ -1379,6 +1425,7 @@ bpo:P20103 a owl:Class ;
 
 bpo:P20104 a owl:Class ;
     bpo:pcfID "20104" ; bpo:hierarchyID "6.3.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20104. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Allowing for a payment to be made to the claimant." ;
     rdfs:label "Authorize payment" ;
     skos:definition "A Planned Act that permits a payment to be made to the claimant, producing a payment authorization." ;
@@ -1389,6 +1436,7 @@ bpo:P20104 a owl:Class ;
 
 bpo:P20105 a owl:Class ;
     bpo:pcfID "20105" ; bpo:hierarchyID "6.3.2.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20105. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Archiving and closing the warranty claim after a final decision has been made to either approve or reject." ;
     rdfs:label "Close claim" ;
     skos:definition "An Act of Information Processing that archives a warranty claim after a final decision and produces a claim closure record." ;
@@ -1400,6 +1448,7 @@ bpo:P20105 a owl:Class ;
 
 bpo:P12667 a owl:Class ;
     bpo:pcfID "12667" ; bpo:hierarchyID "6.3.2.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12667. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assuring that the warranty transaction has been completed." ;
     rdfs:label "Reconcile warranty transaction disposition" ;
     skos:definition "An Act of Appraisal that verifies a warranty transaction has been completed and produces a warranty transaction reconciliation." ;
@@ -1410,6 +1459,7 @@ bpo:P12667 a owl:Class ;
 
 bpo:P20106 a owl:Class ;
     bpo:pcfID "20106" ; bpo:hierarchyID "6.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20106. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the recovery of costs from suppliers for individual claims." ;
     rdfs:label "Manage supplier recovery" ;
     skos:definition "An Act of Resolution that recovers the costs of an individual claim from the responsible supplier, comprising raising and negotiating a supplier recovery claim." ;
@@ -1422,6 +1472,7 @@ bpo:P20106 a owl:Class ;
 
 bpo:P20107 a owl:Class ;
     bpo:pcfID "20107" ; bpo:hierarchyID "6.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20107. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Raising a supplier recovery claim. This is based off the decision made in Receive investigation result/recommendation for corrective action [20100]." ;
     rdfs:label "Create supplier recovery claims" ;
     skos:definition "An Act of Information Processing that has as input a responsible party determination and has as output a supplier recovery claim." ;
@@ -1433,6 +1484,7 @@ bpo:P20107 a owl:Class ;
 
 bpo:P20108 a owl:Class ;
     bpo:pcfID "20108" ; bpo:hierarchyID "6.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20108. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arranging the returns of recalled products to suppliers." ;
     rdfs:label "Negotiate recoveries with suppliers" ;
     skos:definition "A Planned Act that negotiates cost recoveries with suppliers and arranges the return of recalled products, producing a return authorization." ;
@@ -1445,6 +1497,7 @@ bpo:P20108 a owl:Class ;
 
 bpo:P10218 a owl:Class ;
     bpo:pcfID "10218" ; bpo:hierarchyID "6.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10218. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Validating specific service requirements for individual customers. Determine and schedule resource to fulfill these requirements. Provide service to specific individual customers. Ensure the quality of service delivery." ;
     rdfs:label "Service products" ;
     skos:definition "An Act of Service Provision that validates a customer's service requirements, schedules resources, renders the service, and assures its quality." ;
@@ -1458,6 +1511,7 @@ bpo:P10218 a owl:Class ;
 
 bpo:P10320 a owl:Class ;
     bpo:pcfID "10320" ; bpo:hierarchyID "6.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10320. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Acquiring or soliciting information about specific service requirements for individual customers through the customer service function. Obtain information about customer specific requests, process these requests, and create customer profiles to generate a service order." ;
     rdfs:label "Confirm specific service requirements for individual customer" ;
     skos:definition "An Act of Appraisal that validates and confirms an individual customer's stated service requirements and produces an individual service requirement record." ;
@@ -1473,6 +1527,7 @@ bpo:P10320 a owl:Class ;
 
 bpo:P10324 a owl:Class ;
     bpo:pcfID "10324" ; bpo:hierarchyID "6.3.4.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10324. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Soliciting or acquiring information using various sources such as databases, customer interactions, and customer request forms. Hand them further up the hierarchy to deal with them. Categorize the user's request, determining if the request is supportable and prioritizing the request." ;
     rdfs:label "Process customer request" ;
     skos:definition "An Act of Analysis that has as input a service request and has as output an inquiry analysis that categorizes and prioritizes the request." ;
@@ -1484,6 +1539,7 @@ bpo:P10324 a owl:Class ;
 
 bpo:P10325 a owl:Class ;
     bpo:pcfID "10325" ; bpo:hierarchyID "6.3.4.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10325. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting the individual customer service requirements solicited, along with personal information of the customers, in order to generate customized profiles that hasten the delivery process." ;
     rdfs:label "Create customer profile" ;
     skos:definition "An Act of Information Processing that documents an individual customer's requirements and personal information and produces a customer profile." ;
@@ -1494,6 +1550,7 @@ bpo:P10325 a owl:Class ;
 
 bpo:P10326 a owl:Class ;
     bpo:pcfID "10326" ; bpo:hierarchyID "6.3.4.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10326. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing a short-term agreement between the service provider and customer. One-time services are ordered by the service recipient and resource-related billing is performed upon completion. Use the service order to document service and customer service work." ;
     rdfs:label "Generate service order" ;
     skos:definition "An Act of Formulation that designs a short-term service agreement and produces a service order." ;
@@ -1505,6 +1562,7 @@ bpo:P10326 a owl:Class ;
 
 bpo:P10321 a owl:Class ;
     bpo:pcfID "10321" ; bpo:hierarchyID "6.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10321. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining and scheduling the resources required to fulfill customer service requirements. Create a detailed schedule about the service orders and development of these service orders." ;
     rdfs:label "Identify and schedule resources to meet service requirements" ;
     skos:definition "An Act of Scheduling that determines and allocates the resources required to fulfill service requirements and produces a resourcing plan and a service order fulfillment schedule." ;
@@ -1519,6 +1577,7 @@ bpo:P10321 a owl:Class ;
 
 bpo:P10327 a owl:Class ;
     bpo:pcfID "10327" ; bpo:hierarchyID "6.3.4.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10327. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a plan for sourcing and deploying the resources required to fulfill customer service needs. Document a detailed summary of all types of resources (equipment, finance, personnel, time, etc.) required to complete customer service requests and procure these resources. Identify and assess various sources in order to effectively create a resourcing plan." ;
     rdfs:label "Create resourcing plan and schedule" ;
     skos:definition "An Act of Scheduling that develops a plan for sourcing and deploying service resources and produces a resourcing plan." ;
@@ -1529,6 +1588,7 @@ bpo:P10327 a owl:Class ;
 
 bpo:P10328 a owl:Class ;
     bpo:pcfID "10328" ; bpo:hierarchyID "6.3.4.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10328. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing a detailed summary of customer service order requirements, along with information concerning the timing and duration for these services. Categorize the customer needs. Monitor the services delivered." ;
     rdfs:label "Create service order fulfillment schedule" ;
     skos:definition "An Act of Scheduling that designs the timing and duration of customer service orders and produces a service order fulfillment schedule." ;
@@ -1539,6 +1599,7 @@ bpo:P10328 a owl:Class ;
 
 bpo:P10322 a owl:Class ;
     bpo:pcfID "10322" ; bpo:hierarchyID "6.3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10322. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Dispatching resources for managing and fulfilling daily service requirements. Manage the progress of order fulfillment. Complete order blocks." ;
     rdfs:label "Provide service to specific customers" ;
     skos:definition "An Act of Service Provision that dispatches resources and carries out the daily service orders to fulfill customers' service requirements." ;
@@ -1552,6 +1613,7 @@ bpo:P10322 a owl:Class ;
 
 bpo:P10330 a owl:Class ;
     bpo:pcfID "10330" ; bpo:hierarchyID "6.3.4.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10330. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Laying out a daily plan of specific service orders that need to be fulfilled. Document and systematically order these activities to ensure high effectiveness and efficiency." ;
     rdfs:label "Organize daily service order fulfillment schedule" ;
     skos:definition "An Act of Scheduling that lays out the daily plan of specific service orders to be fulfilled and produces a service order fulfillment schedule." ;
@@ -1562,6 +1624,7 @@ bpo:P10330 a owl:Class ;
 
 bpo:P10331 a owl:Class ;
     bpo:pcfID "10331" ; bpo:hierarchyID "6.3.4.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10331. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Dispatching and delivering the resources needed for the specific service requirements from the source/warehouse. Manage the dispatch, transportation, and delivery of the services." ;
     rdfs:label "Dispatch and deliver service resources" ;
     skos:definition "An Act of Service Provision that dispatches, transports, and delivers from the source or warehouse the resources needed to fulfil specific service requirements." ;
@@ -1572,6 +1635,7 @@ bpo:P10331 a owl:Class ;
 
 bpo:P10332 a owl:Class ;
     bpo:pcfID "10332" ; bpo:hierarchyID "6.3.4.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10332. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling and managing orders fulfilled, along with the orders are not or partially fulfilled to track the order fulfillment progress. Use electronic devices such as trackers and GPS in order track and ensure delivery of the orders." ;
     rdfs:label "Manage service order fulfillment" ;
     skos:definition "An Act of Monitoring that tracks the fulfillment progress of service orders and produces a service order fulfillment status." ;
@@ -1583,6 +1647,7 @@ bpo:P10332 a owl:Class ;
 
 bpo:P10323 a owl:Class ;
     bpo:pcfID "10323" ; bpo:hierarchyID "6.3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10323. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Guaranteeing the quality of service provided to customers. Identify the successful and unsuccessful orders along with the service failures. Collect customer feedback. Process the feedback to ensure the quality of service in the future." ;
     rdfs:label "Ensure quality of service" ;
     skos:definition "An Act of Appraisal that evaluates the quality of service delivered to customers and produces a service quality assessment." ;
@@ -1597,6 +1662,7 @@ bpo:P10323 a owl:Class ;
 
 bpo:P10334 a owl:Class ;
     bpo:pcfID "10334" ; bpo:hierarchyID "6.3.4.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10334. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the service orders that have been successfully delivered. Identify the service orders completed and delivered to the customer. Leverage communication systems to ensure coordination with the customers in order to avoid mishaps." ;
     rdfs:label "Identify completed service orders for feedback" ;
     skos:definition "An Act of Identification that discerns the service orders successfully completed and delivered and produces a completed service order register." ;
@@ -1608,6 +1674,7 @@ bpo:P10334 a owl:Class ;
 
 bpo:P10335 a owl:Class ;
     bpo:pcfID "10335" ; bpo:hierarchyID "6.3.4.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10335. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining orders which have not been completed or delivered. Identify the service orders that are partially or entirely incomplete, as well as the orders that have not been delivered to the customer. Use techniques such as project trackers to recognize the progress of the service orders." ;
     rdfs:label "Identify incomplete service orders and service failures" ;
     skos:definition "An Act of Identification that discerns the partially or entirely incomplete service orders and service failures and produces an incomplete service order register." ;
@@ -1619,6 +1686,7 @@ bpo:P10335 a owl:Class ;
 
 bpo:P10336 a owl:Class ;
     bpo:pcfID "10336" ; bpo:hierarchyID "6.3.4.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10336. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining and procuring customer reviews or feedback on the services delivered. Design a customer feedback form, or communicate with the customer through the phone or online." ;
     rdfs:label "Solicit customer feedback on services delivered" ;
     skos:definition "An Act of Communication that obtains customer feedback on the services delivered." ;
@@ -1631,6 +1699,7 @@ bpo:P10336 a owl:Class ;
 
 bpo:P10337 a owl:Class ;
     bpo:pcfID "10337" ; bpo:hierarchyID "6.3.4.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10337. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing and incorporating customer reviews/feedback into the service plan to ensure high quality of service." ;
     rdfs:label "Process customer feedback on services delivered" ;
     skos:definition "An Act of Appraisal that has as input customer feedback and has as output an improvement opportunity analysis for the service plan." ;
@@ -1649,6 +1718,7 @@ bpo:P10337 a owl:Class ;
 
 bpo:P20110 a owl:Class ;
     bpo:pcfID "20110" ; bpo:hierarchyID "6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20110. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Removing defective products from the distribution chain. Participate in audits from watchdog agencies." ;
     rdfs:label "Manage product recalls and regulatory audits" ;
     skos:definition "A Planned Act in which an Organization removes defective products from the distribution chain and participates in audits by regulatory authorities, comprising the initiation, hazard assessment, communication, regulatory reporting, effectiveness monitoring, and termination of a product recall." ;
@@ -1664,6 +1734,7 @@ bpo:P20110 a owl:Class ;
 
 bpo:P20111 a owl:Class ;
     bpo:pcfID "20111" ; bpo:hierarchyID "6.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20111. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Commencing the removal process of defective products." ;
     rdfs:label "Initiate recall" ;
     skos:definition "A Planned Act that commences the removal of a defective product from the distribution chain by applying the standing recall strategy, producing a recall initiation record." ;
@@ -1676,6 +1747,7 @@ bpo:P20111 a owl:Class ;
 
 bpo:P20112 a owl:Class ;
     bpo:pcfID "20112" ; bpo:hierarchyID "6.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20112. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Performing risk analysis. Identify all dangers, evaluate how probable they are, and what kinds of negative results or or adverse side effect they carry." ;
     rdfs:label "Assess the likelihood and consequences of occurrence of any hazards" ;
     skos:definition "An Act of Appraisal that evaluates the dangers associated with a defective product, judging their probability and consequences, and produces a hazard risk assessment." ;
@@ -1686,6 +1758,7 @@ bpo:P20112 a owl:Class ;
 
 bpo:P20113 a owl:Class ;
     bpo:pcfID "20113" ; bpo:hierarchyID "6.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20113. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling communications that are related to product recalls." ;
     rdfs:label "Manage recall related communications" ;
     skos:definition "An Act of Communication in which an Agent handles and transfers information related to a product recall and produces a recall communication." ;
@@ -1697,6 +1770,7 @@ bpo:P20113 a owl:Class ;
 
 bpo:P20114 a owl:Class ;
     bpo:pcfID "20114" ; bpo:hierarchyID "6.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20114. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and delivering reports to regulatory agencies to provide details about handling product recalls." ;
     rdfs:label "Submit regulatory reports" ;
     skos:definition "An Act of Communication in which an Agent creates and delivers a regulatory incident report to a regulatory body to detail the handling of a product recall." ;
@@ -1709,6 +1783,7 @@ bpo:P20114 a owl:Class ;
 
 bpo:P20115 a owl:Class ;
     bpo:pcfID "20115" ; bpo:hierarchyID "6.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20115. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing the effectiveness of product recalls." ;
     rdfs:label "Monitor and audit recall effectiveness" ;
     skos:definition "An Act of Monitoring that examines the performance of an ongoing product recall and produces a recall effectiveness assessment." ;
@@ -1719,6 +1794,7 @@ bpo:P20115 a owl:Class ;
 
 bpo:P20116 a owl:Class ;
     bpo:pcfID "20116" ; bpo:hierarchyID "6.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20116. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ending product recalls, communicating to the public and filing reports." ;
     rdfs:label "Manage recall termination" ;
     skos:definition "An Act of Resolution that brings a product recall to a definite close by communicating its conclusion to the public and filing the closing regulatory reports." ;
@@ -1736,6 +1812,7 @@ bpo:P20116 a owl:Class ;
 
 bpo:P20595 a owl:Class ;
     bpo:pcfID "20595" ; bpo:hierarchyID "6.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20595. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating and assessing the operational activities of the customer service function. Evaluation is achieved through the customer requests/inquiries handling process, the customer complaint handling process, and product and services quality. Examine activities to ensure high levels of customer service." ;
     rdfs:label "Evaluate customer service operations and customer satisfaction" ;
     skos:definition "An Act of Appraisal that assesses the operational activities of an organization's customer service function and produces a customer satisfaction assessment of customer service operations." ;
@@ -1751,6 +1828,7 @@ bpo:P20595 a owl:Class ;
 
 bpo:P10401 a owl:Class ;
     bpo:pcfID "10401" ; bpo:hierarchyID "6.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10401. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating satisfaction levels of customers by effectively evaluating the process of handling requests/inquiries of customers. Effectively calculate the performance of customer-requests/inquiries handling and resolution. Obtain information regarding requests/inquiries handling and resolution through customer feedback. Use it to explore new ideas and opportunities for enhanced customer requests/inquiries handling and resolution process." ;
     rdfs:label "Measure customer satisfaction with customer problems, requests, and inquiries handling" ;
     skos:definition "An Act of Appraisal that evaluates how customer requests and inquiries are handled and resolved and produces a customer satisfaction assessment." ;
@@ -1764,6 +1842,7 @@ bpo:P10401 a owl:Class ;
 
 bpo:P11687 a owl:Class ;
     bpo:pcfID "11687" ; bpo:hierarchyID "6.5.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11687. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating an avenue for which the customer can provide feedback on their experience with how their inquiry, problem, or request was handled." ;
     rdfs:label "Solicit customer feedback on customer service experience" ;
     skos:definition "An Act of Communication that engages the customer to elicit and collect customer feedback about their customer service experience." ;
@@ -1776,6 +1855,7 @@ bpo:P11687 a owl:Class ;
 
 bpo:P11688 a owl:Class ;
     bpo:pcfID "11688" ; bpo:hierarchyID "6.5.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11688. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing customer service feedback to identify areas in which improvements can be made. Engage with management to discuss issues." ;
     rdfs:label "Analyze customer service data and identify improvement opportunities" ;
     skos:definition "An Act of Analysis that has as input customer feedback and has as output an improvement opportunity analysis of the customer service function." ;
@@ -1787,6 +1867,7 @@ bpo:P11688 a owl:Class ;
 
 bpo:P18126 a owl:Class ;
     bpo:pcfID "18126" ; bpo:hierarchyID "6.5.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18126. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handing over data to management to analyze common issues in regards to customer service." ;
     rdfs:label "Provide customer feedback to product management on customer service experience" ;
     skos:definition "An Act of Communication in which customer feedback on the customer service experience is transferred to the product management team for downstream analysis." ;
@@ -1799,6 +1880,7 @@ bpo:P18126 a owl:Class ;
 
 bpo:P10402 a owl:Class ;
     bpo:pcfID "10402" ; bpo:hierarchyID "6.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10402. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Measuring the satisfaction level of customers as pertains to how their complaints are handled and resolved. This process element requires the organization to estimate the customers level of fulfillment with the process reconciling their complaints and towards the objective of ensuring customer retention. The feedback received can be used to develop concepts for new opportunities to boost the level of customer satisfaction." ;
     rdfs:label "Measure customer satisfaction with customer-complaint handling and resolution" ;
     skos:definition "An Act of Appraisal that evaluates how customer complaints are handled and resolved and produces a customer satisfaction assessment." ;
@@ -1812,6 +1894,7 @@ bpo:P10402 a owl:Class ;
 
 bpo:P11236 a owl:Class ;
     bpo:pcfID "11236" ; bpo:hierarchyID "6.5.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11236. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Requesting customer feedback on the process of handling and resolving customer complaints. Obtain information about the effectiveness and performance of the customer complaint handling process from the customers through various means (e.g., online and by phone)." ;
     rdfs:label "Solicit customer feedback on complaint handling and resolution" ;
     skos:definition "An Act of Communication that engages the customer to elicit and collect customer feedback on how complaints are handled and resolved." ;
@@ -1824,6 +1907,7 @@ bpo:P11236 a owl:Class ;
 
 bpo:P11237 a owl:Class ;
     bpo:pcfID "11237" ; bpo:hierarchyID "6.5.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11237. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the information obtained through handling and resolving complaints for development/improvement opportunities. Categorize the customer complaints data on the basis of speed, accuracy, courtesy, price, product choice, availability, hours, location, etc. Determine complaint patterns in order to diagnose areas needing enhancement." ;
     rdfs:label "Analyze customer complaint data and identify improvement opportunities" ;
     skos:definition "An Act of Analysis that has as input customer complaints and has as output an improvement opportunity analysis of the complaint handling process." ;
@@ -1835,6 +1919,7 @@ bpo:P11237 a owl:Class ;
 
 bpo:P11689 a owl:Class ;
     bpo:pcfID "11689" ; bpo:hierarchyID "6.5.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11689. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining complaint patterns in order to identify common issues. Document common problems for correction." ;
     rdfs:label "Identify common customer complaints" ;
     skos:definition "An Act of Identification that has as input customer complaints and has as output a complaint analysis registering the recurrent complaint patterns and common problems discerned." ;
@@ -1846,6 +1931,7 @@ bpo:P11689 a owl:Class ;
 
 bpo:P10403 a owl:Class ;
     bpo:pcfID "10403" ; bpo:hierarchyID "6.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10403. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating satisfaction levels of customers with products/services. Obtain customer feedback on products/services, as well as the effectiveness of the advertising campaigns. Examine this information to reach meaningful conclusions, which could then be used to enhance the customer service operations." ;
     rdfs:label "Measure customer satisfaction with products and services" ;
     skos:definition "An Act of Appraisal that evaluates customers' satisfaction with an organization's products and services and produces a customer satisfaction assessment." ;
@@ -1861,6 +1947,7 @@ bpo:P10403 a owl:Class ;
 
 bpo:P11238 a owl:Class ;
     bpo:pcfID "11238" ; bpo:hierarchyID "6.5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11238. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining customer feedback/review on the quality and utility derived from the products/services after the sale is complete. Use techniques such as surveys, feedback boxes, and user activity and usability tests." ;
     rdfs:label "Gather and solicit post-sale customer feedback on products and services" ;
     skos:definition "An Act of Communication that engages the customer after sale to elicit and collect customer feedback on the quality and utility of products and services." ;
@@ -1873,6 +1960,7 @@ bpo:P11238 a owl:Class ;
 
 bpo:P11239 a owl:Class ;
     bpo:pcfID "11239" ; bpo:hierarchyID "6.5.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11239. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the influence of advertisements on purchasing behavior. Use techniques such as surveys and product recognition tests, questionnaires or feedback flyers, and toll-free numbers in order to encourage customer interaction after the sale." ;
     rdfs:label "Solicit post-sale customer feedback on ad effectiveness" ;
     skos:definition "An Act of Appraisal that assesses the influence of advertisements on customers' purchasing behavior and produces an ad effectiveness assessment." ;
@@ -1885,6 +1973,7 @@ bpo:P11239 a owl:Class ;
 
 bpo:P20117 a owl:Class ;
     bpo:pcfID "20117" ; bpo:hierarchyID "6.5.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20117. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Engaging with the customer to understand their cross-channel experience. Find out what channels were effective and what areas need improvement." ;
     rdfs:label "Solicit customer feedback on cross-channel experience" ;
     skos:definition "An Act of Communication that engages the customer to elicit and collect customer feedback on their cross-channel service experience." ;
@@ -1897,6 +1986,7 @@ bpo:P20117 a owl:Class ;
 
 bpo:P11240 a owl:Class ;
     bpo:pcfID "11240" ; bpo:hierarchyID "6.5.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11240. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the information collected on customer satisfaction levels with products/services in order to determine areas for improvement. Examine the data and information extracted from the customer feedback and reviews to measure the satisfaction levels of the customers. Identify opportunities that could enhance the customer satisfaction levels and the overall customer service strategy." ;
     rdfs:label "Analyze product and service satisfaction data and identify improvement opportunities" ;
     skos:definition "An Act of Analysis that has as input customer feedback and has as output an improvement opportunity analysis for products, services, and the customer service strategy." ;
@@ -1908,6 +1998,7 @@ bpo:P11240 a owl:Class ;
 
 bpo:P11241 a owl:Class ;
     bpo:pcfID "11241" ; bpo:hierarchyID "6.5.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11241. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing feedback from customers on products/services to the product management team. Analyze information collected through Gather and solicit post-sale customer feedback on products/services [11238]. Share with the product management team for consideration while improving existing offerings or developing new products/services." ;
     rdfs:label "Provide feedback and insights to appropriate teams (product design/development, marketing, manufacturing)" ;
     skos:definition "An Act of Communication in which the insights derived from analyzing post-sale customer feedback are transferred to the product management team for consideration in improving or developing offerings." ;
@@ -1921,6 +2012,7 @@ bpo:P11241 a owl:Class ;
 
 bpo:P12672 a owl:Class ;
     bpo:pcfID "12672" ; bpo:hierarchyID "6.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12672. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the cost and effectiveness of warranties." ;
     rdfs:label "Evaluate and manage warranty performance" ;
     skos:definition "An Act of Appraisal that assesses the cost and effectiveness of an organization's warranties and produces a warranty performance report." ;
@@ -1936,6 +2028,7 @@ bpo:P12672 a owl:Class ;
 
 bpo:P20118 a owl:Class ;
     bpo:pcfID "20118" ; bpo:hierarchyID "6.5.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20118. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating how satisfied customers are with how product warranties are managed and resolved." ;
     rdfs:label "Measure customer satisfaction with warranty handling and resolution" ;
     skos:definition "An Act of Appraisal that evaluates how satisfied customers are with how product warranties are handled and resolved and produces a customer satisfaction assessment." ;
@@ -1946,6 +2039,7 @@ bpo:P20118 a owl:Class ;
 
 bpo:P12676 a owl:Class ;
     bpo:pcfID "12676" ; bpo:hierarchyID "6.5.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12676. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Comparing warranties by using applicable metrics to see how they are handled and resolved. Develop and submit reports that summarize significant conclusions." ;
     rdfs:label "Monitor and report on warranty management metrics" ;
     skos:definition "An Act of Monitoring that tracks warranty management metrics over time and produces a warranty performance report summarizing significant conclusions." ;
@@ -1956,6 +2050,7 @@ bpo:P12676 a owl:Class ;
 
 bpo:P20119 a owl:Class ;
     bpo:pcfID "20119" ; bpo:hierarchyID "6.5.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20119. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining how warranties and warranty management can be made better and more efficient." ;
     rdfs:label "Identify improvement opportunities" ;
     skos:definition "An Act of Analysis that examines warranty management performance and produces an improvement opportunity analysis of how warranties and warranty management can be made better and more efficient." ;
@@ -1966,6 +2061,7 @@ bpo:P20119 a owl:Class ;
 
 bpo:P12674 a owl:Class ;
     bpo:pcfID "12674" ; bpo:hierarchyID "6.5.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12674. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Finding ways to phase out unused or seldom used warranties." ;
     rdfs:label "Identify opportunities to eliminate warranty waste" ;
     skos:definition "An Act of Analysis that examines warranty usage and produces an improvement opportunity analysis identifying unused or seldom-used warranties that can be phased out." ;
@@ -1976,6 +2072,7 @@ bpo:P12674 a owl:Class ;
 
 bpo:P20120 a owl:Class ;
     bpo:pcfID "20120" ; bpo:hierarchyID "6.5.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20120. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing and assessing claims that contain deliberately incorrect information or that have been submitted with the goal to deceive the system." ;
     rdfs:label "Investigate fraudulent claims" ;
     skos:definition "An Act of Appraisal that has as input warranty claims and has as output a fraudulent claim assessment judging whether a claim contains deliberately incorrect or deceptive information." ;
@@ -1987,6 +2084,7 @@ bpo:P20120 a owl:Class ;
 
 bpo:P20121 a owl:Class ;
     bpo:pcfID "20121" ; bpo:hierarchyID "6.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20121. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing customer service feedback to identify areas in which improvements can be made. Engage with management to discuss issues." ;
     rdfs:label "Evaluate recall performance" ;
     skos:definition "An Act of Appraisal that evaluates the performance of an organization's product recalls and produces a recall effectiveness assessment." ;

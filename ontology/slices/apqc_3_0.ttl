@@ -793,6 +793,7 @@ bpo:ManageCustomerRelationships a owl:Class ;
 
 bpo:P10101 a owl:Class ;
     bpo:pcfID "10101" ; bpo:hierarchyID "3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10101. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making sense of the market and customers to identify the right opportunities to be capitalized, given the organization's competencies. Discern trends and shift in the market and customers. Identify the right market opportunities that fit closely with the organization's capabilities and strategy by gathering intelligence on various attributes of different market/customer segments." ;
     rdfs:label "Understand markets, customers, and capabilities" ;
     skos:definition "An Act of Analysis that examines market and customer segments and the organization's capabilities and produces an understanding of where the right market opportunities lie." ;
@@ -804,6 +805,7 @@ bpo:P10101 a owl:Class ;
 
 bpo:P10106 a owl:Class ;
     bpo:pcfID "10106" ; bpo:hierarchyID "3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10106. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gathering intelligence on the market and customers. Closely examine the inherent attributes and collective behavior of the various market and customer segments. Track trends in the market. Determine what drives the customers to make purchasing decisions in order to identify opportunities in the market." ;
     rdfs:label "Perform customer and market intelligence analysis" ;
     skos:definition "An Act of Analysis that has as input market data and customer data and has as output a market intelligence report covering market and customer segments, their behavior, and market trends." ;
@@ -821,6 +823,7 @@ bpo:P10106 a owl:Class ;
 
 bpo:P10108 a owl:Class ;
     bpo:pcfID "10108" ; bpo:hierarchyID "3.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10108. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out research studies to understand the behavior of customers and the realities of the market. Undertake research to understand the market conditions as well as the characteristics, drives, and desires of prospective customers. Gather highly contextualized intelligence through primary and secondary research methods, with the objective of gaining insights over how to best seize a market opportunity. Consider assistance from professional research services." ;
     rdfs:label "Conduct customer and market research" ;
     skos:definition "An Act of Analysis that has as input market data and customer data and has as output customer research findings about customer behavior and market conditions." ;
@@ -834,6 +837,7 @@ bpo:P10108 a owl:Class ;
 
 bpo:P10114 a owl:Class ;
     bpo:pcfID "10114" ; bpo:hierarchyID "3.1.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10114. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the factors that drive the targeted market segment. Model customer purchasing patterns, and forecast their future purchasing behavior." ;
     rdfs:label "Understand consumer needs and historical behaviors" ;
     skos:definition "An Act of Analysis that has as input customer data and has as output a customer behavior model that represents historical purchasing patterns and the factors driving a targeted segment." ;
@@ -845,6 +849,7 @@ bpo:P10114 a owl:Class ;
 
 bpo:P21424 a owl:Class ;
     bpo:pcfID "21424" ; bpo:hierarchyID "3.1.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21424. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using customer segmentation tools to examine past customer behavior to predict future purchasing patterns." ;
     rdfs:label "Predict customer purchasing behavior" ;
     skos:definition "An Act of Forecasting that has as input customer data and has as output a customer purchasing forecast that describes expected future purchasing patterns of a customer segment." ;
@@ -856,6 +861,7 @@ bpo:P21424 a owl:Class ;
 
 bpo:P10109 a owl:Class ;
     bpo:pcfID "10109" ; bpo:hierarchyID "3.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10109. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying a section of the customer population to target for marketing products/services. Create segments within the customer population for targeted marketing campaigns, which increase the efficacy of marketing outlay. Determine the right customer segments, craft effective marketing messages, and efficiently communicate them. Determine the optimal pricing mix. Consider assistance from professional services for market segmentation studies, with coordination and oversight from the marketing/sales functions." ;
     rdfs:label "Identify market segments" ;
     skos:definition "An Act of Analysis that has as input customer data and market data and has as output a market segmentation that partitions the customer population into targetable segments." ;
@@ -869,6 +875,7 @@ bpo:P10109 a owl:Class ;
 
 bpo:P10115 a owl:Class ;
     bpo:pcfID "10115" ; bpo:hierarchyID "3.1.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10115. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the increase or decrease of the company's sales volume in the targeted markets. Conduct an analysis to determine the factors and underlying causes that affect the changes in the demand for products or services offered. Consider changes in offerings or in the business strategy to regain or increase the market share." ;
     rdfs:label "Determine market share gain/loss" ;
     skos:definition "An Act of Analysis that has as input market data and has as output a market share analysis that represents the change in the organization's sales volume in targeted markets and its underlying causes." ;
@@ -879,6 +886,7 @@ bpo:P10115 a owl:Class ;
 
 bpo:P10110 a owl:Class ;
     bpo:pcfID "10110" ; bpo:hierarchyID "3.1.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10110. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining large-scale shifts and trends, with relevance to the organization's products/services. Vet the industrial and larger market landscape to identify broad-based movements that could have a direct or tangential impact on the uptake of the organization's products/services. Examine, among other things, the market capitalization of similar products, the profitability of organizations offering competing products/services, the stock price of key vendors/suppliers in the organizational value-chain, the rate and scale of innovation activity in the organization's product/service category, the price and availability of raw materials, and the shelf-life of similar products/services. Conduct primary and secondary research, and consider enlisting professional services." ;
     rdfs:label "Analyze market and industry trends" ;
     skos:definition "An Act of Analysis that has as input industry trend data and market data and has as output an industry and market trend analysis of large-scale shifts relevant to the organization's offerings." ;
@@ -890,6 +898,7 @@ bpo:P10110 a owl:Class ;
 
 bpo:P10111 a owl:Class ;
     bpo:pcfID "10111" ; bpo:hierarchyID "3.1.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10111. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the strengths and weaknesses of competing organizations. Assess competing organizations for offerings, product strategy, marketing and delivery channels, etc. Analyze the usability experience, durability, USP, and other key attributes of competing and substitute products. Gather competitive intelligence, and consider enlisting professional services." ;
     rdfs:label "Analyze competing organizations, competitive/substitute products/services" ;
     skos:definition "An Act of Analysis that has as input competitor data and has as output a competitive analysis about competing organizations and their products and substitutes." ;
@@ -900,6 +909,7 @@ bpo:P10111 a owl:Class ;
 
 bpo:P10112 a owl:Class ;
     bpo:pcfID "10112" ; bpo:hierarchyID "3.1.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10112. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the brands owned and products offered in the market. Determine the relative position of the existing products/brands in the marketplace." ;
     rdfs:label "Evaluate existing products/services" ;
     skos:definition "An Act of Appraisal that has as input market data and has as output a product portfolio assessment of the relative market position of the organization's existing products and brands." ;
@@ -911,6 +921,7 @@ bpo:P10112 a owl:Class ;
 
 bpo:P10113 a owl:Class ;
     bpo:pcfID "10113" ; bpo:hierarchyID "3.1.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10113. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understanding the culture and environment in which you're operating. Analyze how internal decision-making, thought processes, financial circumstances, and more affect the ability to bring new products to market. Survey or analyze the market into which the products would be introduced." ;
     rdfs:label "Assess internal and external business environment" ;
     skos:definition "An Act of Appraisal that has as input market data and has as output a business environment assessment of the internal and external conditions affecting the organization's ability to bring products to market." ;
@@ -922,6 +933,7 @@ bpo:P10113 a owl:Class ;
 
 bpo:P10107 a owl:Class ;
     bpo:pcfID "10107" ; bpo:hierarchyID "3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10107. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Appraising market opportunities by quantifying and subjecting them to prioritization, as well as validation tests. Closely examine the market opportunities that have been identified by Perform customer and market intelligence analysis [10106]. Triangulate those opportunities to capitalize by finding a fit between identified opportunities and the composite of organizational capabilities and business strategy." ;
     rdfs:label "Evaluate and prioritize market opportunities" ;
     skos:definition "An Act of Appraisal that has as input market opportunity statements and has as output an opportunity validation result, by quantifying, prioritizing, and validating identified market opportunities against organizational capabilities and strategy." ;
@@ -937,6 +949,7 @@ bpo:P10107 a owl:Class ;
 
 bpo:P10116 a owl:Class ;
     bpo:pcfID "10116" ; bpo:hierarchyID "3.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10116. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Attaching quantifiable indicators to opportunities that have been identified in the market. Compute estimated figures of the approximate value that can be captured with the provision of existing products/services (i.e., the extent of financial benefits that can be reaped in the market)." ;
     rdfs:label "Quantify market opportunities" ;
     skos:definition "An Act of Analysis that has as input market opportunity statements and has as output an opportunity quantification that estimates the value capturable from each identified opportunity." ;
@@ -948,6 +961,7 @@ bpo:P10116 a owl:Class ;
 
 bpo:P10117 a owl:Class ;
     bpo:pcfID "10117" ; bpo:hierarchyID "3.1.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10117. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the targeted segment of customers. Deduce those particular customer segments that are to be targeted from among the market segments." ;
     rdfs:label "Determine target segments" ;
     skos:definition "An Act of Selection that has as input a market segmentation and has as output a target segment definition that prescribes which customer segments are to be targeted." ;
@@ -960,6 +974,7 @@ bpo:P10117 a owl:Class ;
 
 bpo:P18941 a owl:Class ;
     bpo:pcfID "18941" ; bpo:hierarchyID "3.1.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18941. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining which groups of potential customers do not yet, or already do have access to the product or a service that the company produces or markets. Use those findings to create specialized product offerings and differentiated marketing campaigns." ;
     rdfs:label "Identify under-served and saturated market segments" ;
     skos:definition "An Act of Identification that has as input a market segmentation and has as output an under-served and saturated segment finding that registers which segments lack or already have access to the organization's offerings." ;
@@ -971,6 +986,7 @@ bpo:P18941 a owl:Class ;
 
 bpo:P10118 a owl:Class ;
     bpo:pcfID "10118" ; bpo:hierarchyID "3.1.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10118. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating an index of market opportunities, and arrange them in order of preference. Prioritize based on the opportunities' adherence to the overall business strategy. Correlate with the competencies and capacities that the organization, as a whole, processes." ;
     rdfs:label "Prioritize opportunities consistent with capabilities and overall business strategy" ;
     skos:definition "An Act of Selection that has as input market opportunity statements and has as output an opportunity prioritization that prescribes the rank order of opportunities by fit to strategy and capabilities." ;
@@ -982,6 +998,7 @@ bpo:P10118 a owl:Class ;
 
 bpo:P10119 a owl:Class ;
     bpo:pcfID "10119" ; bpo:hierarchyID "3.1.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10119. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Confirming the practicability and reasonableness of the market opportunities that have been identified. Give substance to the real-time feasibility of the market opportunities." ;
     rdfs:label "Validate opportunities" ;
     skos:definition "An Act of Appraisal that has as input market opportunity statements and has as output an opportunity validation result confirming the practicability and feasibility of the identified opportunities." ;
@@ -995,6 +1012,7 @@ bpo:P10119 a owl:Class ;
 
 bpo:P10120 a owl:Class ;
     bpo:pcfID "10120" ; bpo:hierarchyID "3.1.2.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10120. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Validating identified market opportunities by testing company's offerings on limited-size samples of the consumer population that are hypothesized to be representative of the target market at large and to have similar purchasing behavior. The feedback gained through consumer testing can be used to modify or reject product offerings before their full scale launch, saving the company valuable resources, should the initial offering not be successful." ;
     rdfs:label "Test with customers/consumers" ;
     skos:definition "An Act of Appraisal that tests an organization's offerings on representative consumer samples and has as output customer feedback and an opportunity validation result." ;
@@ -1006,6 +1024,7 @@ bpo:P10120 a owl:Class ;
 
 bpo:P10121 a owl:Class ;
     bpo:pcfID "10121" ; bpo:hierarchyID "3.1.2.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10121. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Verifying that the company has sufficient infrastructure and resources to deliver their offerings in a timely and cost-effective manner, and that it is able to scale up from the small-scale market samples, used for consumer testing, to the entire identified market segment." ;
     rdfs:label "Confirm internal capabilities" ;
     skos:definition "An Act of Appraisal that has as output a capability confirmation that verifies the organization has sufficient infrastructure and resources to deliver and scale its offerings to the identified market segment." ;
@@ -1021,6 +1040,7 @@ bpo:P10121 a owl:Class ;
 
 bpo:P10102 a owl:Class ;
     bpo:pcfID "10102" ; bpo:hierarchyID "3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10102. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Charting a strategic course for marketing products/services. This will include defining the value proposition, creating a mechanism for pricing, and determining the right mix of marketing channels. Create a specific positioning and branding for the organization's offerings. Enlist marketing head to lead, with inputs from the business development and sales functions." ;
     rdfs:label "Develop marketing strategy" ;
     skos:definition "An Act of Formulation that composes an organization's marketing strategy, comprising the definition of the customer value proposition, the pricing strategy, the channel strategy, the marketing communication strategy, and the customer loyalty program." ;
@@ -1037,6 +1057,7 @@ bpo:P10102 a owl:Class ;
 
 bpo:P11168 a owl:Class ;
     bpo:pcfID "11168" ; bpo:hierarchyID "3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11168. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Refining the attributes of organizational offerings to define their value proposition for the customer. Clearly define the suite of offerings in terms of the value delivered, from the perspective of what the customer desires. Validate the benefits delivered to the customers against target market segments, using techniques such as minimum viable product. Position brands for the respective products/services, in line with their unique value proposition and aligned with customers needs." ;
     rdfs:label "Define offering and customer value proposition" ;
     skos:definition "An Act of Formulation that articulates the value an organization's offerings deliver from the customer's perspective and produces a customer value proposition." ;
@@ -1051,6 +1072,7 @@ bpo:P11168 a owl:Class ;
 
 bpo:P11169 a owl:Class ;
     bpo:pcfID "11169" ; bpo:hierarchyID "3.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11169. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining problem(s) that the organization's products/services solve for the customers, thereby determining how they are positioned in the market. Refine the product/service concepts from the perspective of customers. Succinctly outline the problem the organization's offerings solves for the customers, making a case for why the customer should buy a product or use a service. Define the offering's unique value." ;
     rdfs:label "Define offering and positioning" ;
     skos:definition "An Act of Formulation that defines the problem an organization's offerings solve for customers and produces a statement of the offering's unique value and market positioning." ;
@@ -1060,6 +1082,7 @@ bpo:P11169 a owl:Class ;
 
 bpo:P11170 a owl:Class ;
     bpo:pcfID "11170" ; bpo:hierarchyID "3.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11170. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Boosting the attractiveness of products/services to the targeted customers, and creating a unique brand projection around these features. Identify and enhance those product/service features that reinforce the attractiveness of these offerings, for these segment of customers. Underscore the perceived value delivered to the customers by clearly specifying the relevance and desirability of these products/services. Once it has been clarified how the organization's offerings meet the customer's expectations or deliver specific benefits, position the brands around these benefits." ;
     rdfs:label "Develop value proposition including brand positioning for target segments" ;
     skos:definition "An Act of Formulation that enhances the attractiveness of offerings to targeted customers and produces a value proposition together with brand positioning for those segments." ;
@@ -1070,6 +1093,7 @@ bpo:P11170 a owl:Class ;
 
 bpo:P11171 a owl:Class ;
     bpo:pcfID "11171" ; bpo:hierarchyID "3.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11171. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Validating the desirability of the perceived value delivered by the organization's offerings, to the targeted customer segment. Substantiate the value of the benefits accrued to the customers through the organization's offerings. Justify the value proposition in light of the targeted segments by gathering feedback (using teaser demonstrations, surveys, interviews, primary research studies, and customer case studies). Corroborate the benefits of the organization's offerings." ;
     rdfs:label "Validate value proposition with target segments" ;
     skos:definition "An Act of Appraisal that substantiates an offering's value proposition against a target segment by gathering customer feedback and produces a value-proposition validation result." ;
@@ -1081,6 +1105,7 @@ bpo:P11171 a owl:Class ;
 
 bpo:P11172 a owl:Class ;
     bpo:pcfID "11172" ; bpo:hierarchyID "3.2.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11172. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating branding collaterals and campaigns that carve a significant and differentiated presence for the organization's offerings. Create new collaterals, which include names, designs, and symbols, for their products/services. Ensure collaterals reflect the unique value proposition of the respective offerings through a consistent theme. Create advertising and promotion campaigns." ;
     rdfs:label "Develop new branding" ;
     skos:definition "An Act of Formulation that creates branding collaterals and campaigns establishing a differentiated presence for an organization's offerings." ;
@@ -1091,6 +1116,7 @@ bpo:P11172 a owl:Class ;
 
 bpo:P10123 a owl:Class ;
     bpo:pcfID "10123" ; bpo:hierarchyID "3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10123. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a pricing strategy and mechanism that aligns with the benefits of the products/services, as perceived by customers. Chart a strategic course and a methodology that can guide the pricing of products/services. Draw heavily from the customer value proposition, and balance the expectations of different divisions inside the organization, while delivering the maximum ROI." ;
     rdfs:label "Define pricing strategy" ;
     skos:definition "An Act of Formulation that charts a strategic course and methodology for pricing an organization's offerings and produces a pricing strategy." ;
@@ -1105,6 +1131,7 @@ bpo:P10123 a owl:Class ;
 
 bpo:P13169 a owl:Class ;
     bpo:pcfID "13169" ; bpo:hierarchyID "3.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 13169. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing marketing objectives, consumer demand, product attributes, competitors' pricing, and economic trends to determine optimum prices for the set of products and services that the company offers or intends to offer by delivering maximum ROI." ;
     rdfs:label "Conduct pricing analysis" ;
     skos:definition "An Act of Analysis that examines marketing objectives, consumer demand, competitor pricing, and economic trends and produces a pricing analysis recommending optimum prices." ;
@@ -1117,6 +1144,7 @@ bpo:P13169 a owl:Class ;
 
 bpo:P10124 a owl:Class ;
     bpo:pcfID "10124" ; bpo:hierarchyID "3.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10124. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a framework that allows for a uniform methodology while determining the price of individual offerings. Devise a blueprint for establishing the pricing of specific products/services. Create guidelines that factor in the cost of production/servicing, price sensitivity, product lifecycle, and the price of competing/substitute products." ;
     rdfs:label "Establish guidelines for applying pricing and discounting of products/services" ;
     skos:definition "An Act of Formulation that devises a uniform framework for pricing and discounting individual offerings and produces pricing guidelines." ;
@@ -1127,6 +1155,7 @@ bpo:P10124 a owl:Class ;
 
 bpo:P19999 a owl:Class ;
     bpo:pcfID "19999" ; bpo:hierarchyID "3.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19999. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining optimum prices for individual products or services on the basis of the cost of producing, distributing and marketing the offerings, pricing analysis and general pricing strategy." ;
     rdfs:label "Establish pricing targets" ;
     skos:definition "An Act of Formulation that determines optimum target prices for individual offerings and produces pricing targets." ;
@@ -1138,6 +1167,7 @@ bpo:P19999 a owl:Class ;
 
 bpo:P10125 a owl:Class ;
     bpo:pcfID "10125" ; bpo:hierarchyID "3.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10125. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Confirming the strategy and specifications developed for pricing the organization's products/services. Approve pricing guidelines by vetting the soundness of the methodology and the guidelines' alignment with the value proposition." ;
     rdfs:label "Approve pricing strategies/policies and targets" ;
     skos:definition "A Planned Act that confirms the already-developed pricing strategy, guidelines, and targets and produces a pricing approval." ;
@@ -1149,6 +1179,7 @@ bpo:P10125 a owl:Class ;
 
 bpo:P20000 a owl:Class ;
     bpo:pcfID "20000" ; bpo:hierarchyID "3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20000. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing all the activities needed to identify the appropriate channels to market to different customer segments as defined in Determine target segments [10117]. This involves finding channel partners, ensuring that the channels align with organizational strategy for each segment, and the final channel selection process." ;
     rdfs:label "Define and manage channel strategy" ;
     skos:definition "An Act of Formulation that identifies and selects the appropriate marketing channels for each customer segment and produces a channel strategy." ;
@@ -1167,6 +1198,7 @@ bpo:P20000 a owl:Class ;
 
 bpo:P20001 a owl:Class ;
     bpo:pcfID "20001" ; bpo:hierarchyID "3.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20001. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deciding which distributors, wholesalers and retailers the company will use to promote its offerings and to distribute its products and services to the target market. Narrowing down which intermediaries the company will use will affect retail prices of individual products, and should therefore be included in the pricing analysis." ;
     rdfs:label "Determine channels to be supported" ;
     skos:definition "An Act of Selection that chooses, from the available distributors, wholesalers, and retailers, the intermediaries the company will use and produces a channel selection." ;
@@ -1177,6 +1209,7 @@ bpo:P20001 a owl:Class ;
 
 bpo:P20002 a owl:Class ;
     bpo:pcfID "20002" ; bpo:hierarchyID "3.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20002. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the role that each chosen marketing channels plays in the larger distribution network with respect to the organizational marketing strategy. Determine intermediary costs for shipping, handling, transporting, warehousing, insurance and marketing that incur and accumulate in the distribution channel." ;
     rdfs:label "Establish channel objectives" ;
     skos:definition "An Act of Formulation that specifies the role each chosen channel plays in the distribution network and produces channel requirements covering those roles and intermediary costs." ;
@@ -1187,6 +1220,7 @@ bpo:P20002 a owl:Class ;
 
 bpo:P10127 a owl:Class ;
     bpo:pcfID "10127" ; bpo:hierarchyID "3.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10127. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyze the various channels for their relevance to the targeted segments. Identify the channel that can effectively market to the targeted customers in regard to the drives, desires, and characteristics of these populations, their uptake, extent of engagement, frequency of use, and effectiveness in communicating." ;
     rdfs:label "Determine channel role and fit with target segments" ;
     skos:definition "An Act of Analysis that examines marketing channels for their relevance to targeted segments and produces a channel evaluation of their fit." ;
@@ -1198,6 +1232,7 @@ bpo:P10127 a owl:Class ;
 
 bpo:P10128 a owl:Class ;
     bpo:pcfID "10128" ; bpo:hierarchyID "3.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10128. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Choose the most pertinent marketing channel for the targeted segments (based on Determine channel fit with target segments [10127])." ;
     rdfs:label "Select channels for target segments" ;
     skos:definition "An Act of Selection that chooses the most pertinent marketing channel for each target segment and produces a channel selection." ;
@@ -1209,6 +1244,7 @@ bpo:P10128 a owl:Class ;
 
 bpo:P20003 a owl:Class ;
     bpo:pcfID "20003" ; bpo:hierarchyID "3.2.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20003. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the maximum output rate required from a distribution channel to optimally market and deliver the products and services the company offers or would like to offer. Ideally, a channel should be able to adapt to a certain degree of variability in the demand for the offerings, and able scale up if needed." ;
     rdfs:label "Identify required channel capabilities" ;
     skos:definition "An Act of Formulation that determines the throughput and adaptability a distribution channel must provide and produces channel requirements." ;
@@ -1219,6 +1255,7 @@ bpo:P20003 a owl:Class ;
 
 bpo:P10126 a owl:Class ;
     bpo:pcfID "10126" ; bpo:hierarchyID "3.2.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10126. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the attributes of all marketing channels, and evaluating the key partners in those channels. Closely examine the various characteristics of all available marketing channels such as the cost of using them, durability of impact, applicability to the organization's products/services, turn-around time, involvement of middlemen, and conversion rate. Analyze key partners in the marketing channels including those who have been associated with the organization; evaluate their capabilities, the scale and scope of their operations, quality of support provided, etc." ;
     rdfs:label "Evaluate channel attributes and potential partners" ;
     skos:definition "An Act of Appraisal that assesses the attributes of marketing channels and the capabilities of their key partners and produces a channel evaluation and a partner evaluation." ;
@@ -1231,6 +1268,7 @@ bpo:P10126 a owl:Class ;
 
 bpo:P20004 a owl:Class ;
     bpo:pcfID "20004" ; bpo:hierarchyID "3.2.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20004. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Coordinating marketing and distribution efforts across different channels that integrate well with each other, are in conformance with company values, visual identity and branding, and offer uniform customer service experience that drives customer loyalty and repeat business." ;
     rdfs:label "Orchestrate seamless customer experience across supported channels" ;
     skos:definition "An Act of Formulation that coordinates marketing and distribution across channels into an integrated, uniform customer experience and produces an omni-channel strategy." ;
@@ -1244,6 +1282,7 @@ bpo:P20004 a owl:Class ;
 
 bpo:P16590 a owl:Class ;
     bpo:pcfID "16590" ; bpo:hierarchyID "3.2.3.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16590. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising a strategy to market company's products or services seamlessly through all or most channels that are in widespread use among the target market. This may mean cross-channel access to customer preferences and purchasing history to accept returned merchandise, provide refunds, resolve payment issues or to provide technical support." ;
     rdfs:label "Define omni-channel strategy" ;
     skos:definition "An Act of Formulation that devises a strategy to market seamlessly across the channels in widespread use among the target market and produces an omni-channel strategy." ;
@@ -1253,6 +1292,7 @@ bpo:P16590 a owl:Class ;
 
 bpo:P16591 a owl:Class ;
     bpo:pcfID "16591" ; bpo:hierarchyID "3.2.3.7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16591. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying necessary preconditions that a channel should fulfill in order to be included as one of the adopted channels, such as required throughput capacities, service capabilities, competitive pricing, and alignment with organizational marketing strategies." ;
     rdfs:label "Define omni-channel requirements" ;
     skos:definition "An Act of Formulation that specifies the preconditions a channel must fulfill to be adopted and produces channel requirements." ;
@@ -1262,6 +1302,7 @@ bpo:P16591 a owl:Class ;
 
 bpo:P16592 a owl:Class ;
     bpo:pcfID "16592" ; bpo:hierarchyID "3.2.3.7.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16592. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the detailed policies and procedures that each of the channels needs to follow in order to conform to the organizational marketing strategy and to provide seamless customer service experience." ;
     rdfs:label "Develop omni-channel policies and procedures" ;
     skos:definition "An Act of Formulation that determines the detailed policies and procedures each channel must follow and produces a set of policies and procedures." ;
@@ -1271,6 +1312,7 @@ bpo:P16592 a owl:Class ;
 
 bpo:P20005 a owl:Class ;
     bpo:pcfID "20005" ; bpo:hierarchyID "3.2.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20005. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the actions that need to be taken for successful multichannel marketing, the ordering, timing and dependencies of the steps, and the governance mechanism for reviewing and changing the protocol, if needed." ;
     rdfs:label "Develop and manage execution roadmap" ;
     skos:definition "An Act of Formulation that determines the actions, ordering, timing, and governance for multichannel marketing and produces an execution roadmap." ;
@@ -1282,6 +1324,7 @@ bpo:P20005 a owl:Class ;
 # 3.2.4 (PCF 20006) Analyze and manage channel performance -- CAPABILITY (R5/R6).
 bpo:ChannelManagementCapability
     bpo:pcfID "20006" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20006. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "3.2.4" ;
     bpo:apqcSourceText "Monitoring marketing and distribution efforts of all channels individually and as a network. Re-distribute or add resources to channels that perform better than expected. Purge or consolidate under-performing channels, and find more promising replacements." ;
     skos:altLabel "Analyze and manage channel performance" ;
@@ -1295,6 +1338,7 @@ bpo:ChannelManagementCapability
 
 bpo:P16573 a owl:Class ;
     bpo:pcfID "16573" ; bpo:hierarchyID "3.2.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16573. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining measurable parameters to be used for comparing the performance of different marketing channels. Decide on benchmarks and values for optimum or desired performance." ;
     rdfs:label "Establish channel-specific measures and targets" ;
     skos:definition "An Act of Formulation that determines the measurable parameters, benchmarks, and target values for comparing channel performance and produces a performance measure specification." ;
@@ -1305,6 +1349,7 @@ bpo:P16573 a owl:Class ;
 
 bpo:P16574 a owl:Class ;
     bpo:pcfID "16574" ; bpo:hierarchyID "3.2.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16574. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking trends and changes in performance inside individual marketing channels and in channels collectively. Summarize and document results. Alert relevant parties about significant or unexpected deviations from expected behaviors." ;
     rdfs:label "Monitor and report performance" ;
     skos:definition "An Act of Monitoring that tracks trends and changes in channel performance over time and produces a performance report summarizing results and deviations." ;
@@ -1315,6 +1360,7 @@ bpo:P16574 a owl:Class ;
 
 bpo:P16575 a owl:Class ;
     bpo:pcfID "16575" ; bpo:hierarchyID "3.2.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16575. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing the factors and circumstances that influence desired outcomes. Communicate core findings to relevant parties." ;
     rdfs:label "Monitor and report events influencing factors" ;
     skos:definition "An Act of Monitoring that tracks the factors and circumstances influencing desired channel outcomes and produces a performance report communicating the core findings." ;
@@ -1325,6 +1371,7 @@ bpo:P16575 a owl:Class ;
 
 bpo:P16500 a owl:Class ;
     bpo:pcfID "16500" ; bpo:hierarchyID "3.2.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16500. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting an analysis to review channel performance with respect to chosen metrics, benchmarks and performance targets [16573]. Compare to past performance and forecasts for the channel." ;
     rdfs:label "Analyze channel performance" ;
     skos:definition "An Act of Analysis that reviews channel performance against chosen metrics, benchmarks, and targets and produces a channel performance analysis." ;
@@ -1337,6 +1384,7 @@ bpo:P16500 a owl:Class ;
 
 bpo:P16501 a owl:Class ;
     bpo:pcfID "16501" ; bpo:hierarchyID "3.2.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16501. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising a course of action to be taken to improve under-performing channels and to promote or expand channels that surpass expectations." ;
     rdfs:label "Develop plan for channel improvements" ;
     skos:definition "An Act of Formulation that devises a course of action to improve under-performing channels and expand over-performing ones and produces an improvement plan." ;
@@ -1348,6 +1396,7 @@ bpo:P16501 a owl:Class ;
 
 bpo:P16848 a owl:Class ;
     bpo:pcfID "16848" ; bpo:hierarchyID "3.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16848. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing marketing communications that deliver promotional messages, in a coordinated way, through multiple marketing channels, such as print, radio, television, direct mail, online or mobile advertising, email, social media or personal selling." ;
     rdfs:label "Develop marketing communication strategy" ;
     skos:definition "An Act of Formulation that establishes coordinated marketing communications across multiple channels and produces a marketing communication strategy." ;
@@ -1366,6 +1415,7 @@ bpo:P16848 a owl:Class ;
 
 bpo:P16849 a owl:Class ;
     bpo:pcfID "16849" ; bpo:hierarchyID "3.2.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16849. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Timing and scheduling the delivery of marketing messages to maximize their impact on customer purchasing behavior. Integrate individual messages to larger marketing campaigns and to seasonal purchasing patterns." ;
     rdfs:label "Develop customer communication calendar" ;
     skos:definition "An Act of Formulation that times and schedules the delivery of marketing messages and produces a communication calendar." ;
@@ -1375,6 +1425,7 @@ bpo:P16849 a owl:Class ;
 
 bpo:P16850 a owl:Class ;
     bpo:pcfID "16850" ; bpo:hierarchyID "3.2.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16850. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deciding how to promote and maintain a favorable public image of the company in the eyes of its employees, customers, investors, suppliers, politicians or the general public. This may involve various means but is frequently conducted through publicity, education, corporate social responsibility, charitable causes or civic engagements." ;
     rdfs:label "Define public relations (PR) strategy" ;
     skos:definition "An Act of Formulation that decides how to promote and maintain a favorable public image of the company and produces a marketing communication strategy for public relations." ;
@@ -1384,6 +1435,7 @@ bpo:P16850 a owl:Class ;
 
 bpo:P16851 a owl:Class ;
     bpo:pcfID "16851" ; bpo:hierarchyID "3.2.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16851. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising a master plan how to select potential customers or qualified clients for customized offers, and contact them on one-to-one basis through chat, phone, email or regular mail. The strategy would need to take into account that personalizing offers and contacting customers individually is an effective but resource-intensive marketing technique, and that ill-targeted offers risk at angering and alienating the contactees." ;
     rdfs:label "Define direct marketing strategy" ;
     skos:definition "An Act of Formulation that devises a master plan for selecting and contacting potential customers with customized one-to-one offers and produces a marketing communication strategy for direct marketing." ;
@@ -1393,6 +1445,7 @@ bpo:P16851 a owl:Class ;
 
 bpo:P16852 a owl:Class ;
     bpo:pcfID "16852" ; bpo:hierarchyID "3.2.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16852. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a program to promote the objectives, values, products and services of the company to its employees by treating them as potential customers, in order to extend company client base, increase employee engagement or to foster brand advocacy." ;
     rdfs:label "Define internal marketing communication strategy" ;
     skos:definition "An Act of Formulation that develops a program promoting the company's objectives, values, and offerings to its own employees and produces a marketing communication strategy for internal marketing." ;
@@ -1402,6 +1455,7 @@ bpo:P16852 a owl:Class ;
 
 bpo:P16853 a owl:Class ;
     bpo:pcfID "16853" ; bpo:hierarchyID "3.2.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16853. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Finding emerging media based on digital or other technologies that would enable the company to increase the speed and volume of marketing communications, to make communications more interactive and to customize promotional messages more easily to the target audience, thus rendering them more effective." ;
     rdfs:label "Identify new media for marketing communication" ;
     skos:definition "An Act of Identification that discerns emerging digital and technological media for marketing communication and produces a new media assessment registering them." ;
@@ -1412,6 +1466,7 @@ bpo:P16853 a owl:Class ;
 
 bpo:P16854 a owl:Class ;
     bpo:pcfID "16854" ; bpo:hierarchyID "3.2.5.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16854. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a marketing strategy that is maximally effective in a new or emerging media channel by capitalizing on its novel attributes and capabilities." ;
     rdfs:label "Define new media communication strategy" ;
     skos:definition "An Act of Formulation that develops a marketing approach tailored to a new or emerging media channel and produces a marketing communication strategy for that channel." ;
@@ -1422,6 +1477,7 @@ bpo:P16854 a owl:Class ;
 
 bpo:P16855 a owl:Class ;
     bpo:pcfID "16855" ; bpo:hierarchyID "3.2.5.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16855. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing a framework for coordinated marketing to increase the profitability and increase brand awareness at the point of sale. This may include promotional posters on product shelves or island displays, advertisements in shopping carts, stickers on the floor that lead consumers to the promoted product, multi-buy promotions, coupons on sales receipts, etc." ;
     rdfs:label "Define point of sale (POS) communication strategy" ;
     skos:definition "An Act of Formulation that establishes a framework for coordinated marketing at the point of sale and produces a marketing communication strategy for point-of-sale promotion." ;
@@ -1431,6 +1487,7 @@ bpo:P16855 a owl:Class ;
 
 bpo:P18627 a owl:Class ;
     bpo:pcfID "18627" ; bpo:hierarchyID "3.2.5.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18627. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing standardized procedures for effective communication that maximizes ROI, promotes brand awareness and respects customers. In its simplest form, it includes a message (what is to be said), a target (to whom the message is reaching) and a medium or a channel (where the message is to be said)." ;
     rdfs:label "Define communication guidelines and mechanisms" ;
     skos:definition "An Act of Formulation that establishes standardized procedures for effective marketing communication and produces a set of communication policies and procedures." ;
@@ -1441,6 +1498,7 @@ bpo:P18627 a owl:Class ;
 
 bpo:P18924 a owl:Class ;
     bpo:pcfID "18924" ; bpo:hierarchyID "3.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18924. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and managing a customer loyalty program. The loyalty program is a key part of marketing, with an elaborate strategy and process for acquiring, retaining, and engaging with members. Members are engaged and acquainted to the loyalty program, thus growing relationship and adding value through the program." ;
     rdfs:label "Design and manage customer loyalty program" ;
     skos:definition "An Act of Formulation that creates a customer loyalty program for acquiring, retaining, and engaging members and produces a customer loyalty program specification." ;
@@ -1456,6 +1514,7 @@ bpo:P18924 a owl:Class ;
 
 bpo:P20007 a owl:Class ;
     bpo:pcfID "20007" ; bpo:hierarchyID "3.2.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20007. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising procedures and mechanisms to retain existing customers, promote repeat business and increase the likelihood that previous customers to continue to buy products or services from the company. This may be achieved by rewarding customers for repeat business by means of gifts, discounts, redeemable points, or prioritized access to new products, events or services." ;
     rdfs:label "Define customer loyalty program" ;
     skos:definition "An Act of Formulation that devises the procedures and reward mechanisms to retain customers and promote repeat business and produces a customer loyalty program specification." ;
@@ -1466,6 +1525,7 @@ bpo:P20007 a owl:Class ;
 
 bpo:P18925 a owl:Class ;
     bpo:pcfID "18925" ; bpo:hierarchyID "3.2.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18925. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Convincing customers to register their personal information with the company and be assigned a unique identifier that they use when making purchases. The identifier makes it easier for the company to track customer purchases. Customers are rewarded by various incentives that encourage repeat business [20007]." ;
     rdfs:label "Acquire members to customer loyalty program" ;
     skos:definition "An Act of Acquisition in which the organization obtains a customer's registration and assigns a unique loyalty identifier, producing customer master data for the enrolled member." ;
@@ -1477,6 +1537,7 @@ bpo:P18925 a owl:Class ;
 
 bpo:P18926 a owl:Class ;
     bpo:pcfID "18926" ; bpo:hierarchyID "3.2.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18926. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Building deeper relationships between a customer and a brand in order to promote customer loyalty and derive repeat business. Besides making frequent purchases, highly engaged customers refer family, friends and colleagues to make purchases as well, consume and re-broadcast promotional materials, provide feedback to the purchases they make and do not support competing brands." ;
     rdfs:label "Build engagement and relationship with members" ;
     skos:definition "A Planned Act in which an organization engages loyalty-program members through interactions that deepen the customer-brand relationship and promote repeat business." ;
@@ -1487,6 +1548,7 @@ bpo:P18926 a owl:Class ;
 
 bpo:P16633 a owl:Class ;
     bpo:pcfID "16633" ; bpo:hierarchyID "3.2.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16633. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Surveying and tracking the benefits of customer loyalty programs both for the company and for customers. Compare with comparable loyalty programs instituted in competitor companies. Propose changes as needed to keep up with market trends." ;
     rdfs:label "Monitor customer loyalty program benefits to the enterprise and the customer" ;
     skos:definition "An Act of Monitoring that surveys and tracks the benefits of a customer loyalty program for the enterprise and its customers and produces a performance report." ;
@@ -1497,6 +1559,7 @@ bpo:P16633 a owl:Class ;
 
 bpo:P18927 a owl:Class ;
     bpo:pcfID "18927" ; bpo:hierarchyID "3.2.6.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18927. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Enhancing the customer loyalty program so that it will yield maximum value both for the company and for the patrons enrolled in the program, increasing customer retention and continued engagement." ;
     rdfs:label "Optimize loyalty program value to both the enterprise and the customer" ;
     skos:definition "An Act of Formulation that enhances a customer loyalty program to maximize its value to the enterprise and its members and produces an improvement plan." ;
@@ -1546,6 +1609,7 @@ bpo:MarketingManagementCapability rdfs:subClassOf
 
 bpo:P10148 a owl:Class ;
     bpo:pcfID "10148" ; bpo:hierarchyID "3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10148. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining what to achieve by marketing. Create qualitative and quantitative targets. Establish metrics to track performance (for individual Market segments [10109] and Channels for target segments [10129]). Enlist the head of marketing to determine marketing priorities and the related measures. (The decision in establishing these goals, objectives, and metrics is founded in Develop marketing strategy [10102] and takes cues from current priorities and organizational strategy.)" ;
     rdfs:label "Establish goals, objectives, and measures for products/services by channel/segment" ;
     skos:definition "An Act of Formulation that composes qualitative and quantitative marketing goals and the performance measures used to track their attainment by channel and segment." ;
@@ -1557,6 +1621,7 @@ bpo:P10148 a owl:Class ;
 
 bpo:P10149 a owl:Class ;
     bpo:pcfID "10149" ; bpo:hierarchyID "3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10149. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a budget for the organization's marketing efforts, in line with the business-wide strategic outlook. Create a plan to distribute resources for achieving the marketing strategy in light of the overall business strategy. Make cost assumptions; calculate the estimated total revenue from the marketing activities against the costs/expenses of these activities. Forecast the return on investment. Attribute costs to the appropriate marketing activities such as promotional campaigns, advertising, marketing communications, PR campaigns, personnel, and office space. Enlist the financial and marketing functions." ;
     rdfs:label "Establish marketing budgets" ;
     skos:definition "An Act of Formulation that composes a marketing budget allocating resources across marketing activities in line with the overall business strategy." ;
@@ -1571,6 +1636,7 @@ bpo:P10149 a owl:Class ;
 
 bpo:P10155 a owl:Class ;
     bpo:pcfID "10155" ; bpo:hierarchyID "3.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10155. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring corroboration of the marketing strategy and the organizational strategy. Ensure the organization's marketing strategy/plan aligns with the overall business strategy. Fine-tune the marketing plan according to the organizational strategy." ;
     rdfs:label "Confirm marketing alignment to business strategy" ;
     skos:definition "An Act of Appraisal that judges whether the marketing plan corroborates the overall business strategy and produces a marketing alignment assessment." ;
@@ -1581,6 +1647,7 @@ bpo:P10155 a owl:Class ;
 
 bpo:P10156 a owl:Class ;
     bpo:pcfID "10156" ; bpo:hierarchyID "3.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10156. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating the total cost of marketing the organization's portfolio of products/services. Calculate the total outlay needed for promoting, selling, and delivering the organization's products/services to customers. Account for all costs to acquire customers and sustain a relationship with them. Include the expenses needed for promotional actives, warehousing, transactional costs, and distribution of the organization's offering." ;
     rdfs:label "Determine costs of marketing" ;
     skos:definition "An Act of Analysis that has as input cost data and produces a cost analysis of the total outlay required to market the organization's portfolio." ;
@@ -1592,6 +1659,7 @@ bpo:P10156 a owl:Class ;
 
 bpo:P10157 a owl:Class ;
     bpo:pcfID "10157" ; bpo:hierarchyID "3.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10157. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Estimating the outlay required for promoting, selling, and distributing the products/services of the organization. Add up the expenses of all activities necessitated in marketing, such as promotional campaigns, advertising, marketing communications, PR campaigns, employing skilled personnel, and office space." ;
     rdfs:label "Create marketing budget" ;
     skos:definition "An Act of Formulation that composes a marketing budget by estimating and aggregating the outlay required for all marketing activities." ;
@@ -1602,6 +1670,7 @@ bpo:P10157 a owl:Class ;
 
 bpo:P17683 a owl:Class ;
     bpo:pcfID "17683" ; bpo:hierarchyID "3.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17683. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Estimating how much profit the company would generate for its expenses on marketing . Forecasted return on investment, used as a metric to gauge the efficiency of marketing, is beneficial in revising marketing budgets and adjusting costs to improve the overall yield." ;
     rdfs:label "Determine projected ROI for marketing investment" ;
     skos:definition "An Act of Forecasting that estimates the uncertain future return on marketing investment and produces a return-on-investment forecast." ;
@@ -1612,6 +1681,7 @@ bpo:P17683 a owl:Class ;
 
 bpo:P20009 a owl:Class ;
     bpo:pcfID "20009" ; bpo:hierarchyID "3.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20009. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the production and distribution costs for each product or service, and each channel or method as factors in determining overall pricing." ;
     rdfs:label "Understand resource requirements for each product/service and delivery channel/method" ;
     skos:definition "An Act of Analysis that has as input cost data and produces a cost analysis of the production and distribution resource requirements per offering and channel." ;
@@ -1623,6 +1693,7 @@ bpo:P20009 a owl:Class ;
 
 bpo:P18948 a owl:Class ;
     bpo:pcfID "18948" ; bpo:hierarchyID "3.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18948. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Introducing financial inducements, such as discounts, to distributors, resellers or vendors as a motivation to prioritize selling company's products or services over those of its competitors." ;
     rdfs:label "Determine corporate incentives" ;
     skos:definition "An Act of Formulation that composes an incentive scheme of financial inducements offered to distributors, resellers, or vendors." ;
@@ -1633,6 +1704,7 @@ bpo:P18948 a owl:Class ;
 
 bpo:P10163 a owl:Class ;
     bpo:pcfID "10163" ; bpo:hierarchyID "3.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10163. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing a dynamic pricing mechanism for the organization's offerings that is supported by the number of units in production. Outline a system for determining the optimum price point for each product/service. Based this model on an estimation of the volume of anticipated sales for each offering and variable costs." ;
     rdfs:label "Determine pricing based on volume/unit forecast" ;
     skos:definition "An Act of Formulation that composes a pricing strategy determining optimum price points from a forecast of sales volume and variable costs." ;
@@ -1643,6 +1715,7 @@ bpo:P10163 a owl:Class ;
 
 bpo:P10164 a owl:Class ;
     bpo:pcfID "10164" ; bpo:hierarchyID "3.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10164. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing the pricing mechanism to determine prices for all individual offerings in the organizational portfolio. Calculate the prices of all offerings based on the established methodology and/or formulaic structure." ;
     rdfs:label "Execute pricing plan" ;
     skos:definition "A Planned Act that applies an established pricing methodology to all offerings and produces a price list." ;
@@ -1653,6 +1726,7 @@ bpo:P10164 a owl:Class ;
 
 bpo:P10165 a owl:Class ;
     bpo:pcfID "10165" ; bpo:hierarchyID "3.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10165. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the efficiency of pricing with the objective of identifying any divergence from the equilibrium prices and avoiding any deadweight loss. Gauge the performance of the pricing plan by tracking growth in the revenue and/or customer uptake, secured as a result of new prices. Measure the performance of pricing by periodically checking the profits generated from the sale of each of the organization's offerings against the backdrop of any events that may have influenced the uptake of a certain good/service by the customer base." ;
     rdfs:label "Evaluate pricing performance" ;
     skos:definition "An Act of Appraisal that gauges the efficiency of the pricing plan and produces a pricing performance evaluation." ;
@@ -1663,6 +1737,7 @@ bpo:P10165 a owl:Class ;
 
 bpo:P10166 a owl:Class ;
     bpo:pcfID "10166" ; bpo:hierarchyID "3.3.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10166. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Refining the pricing mechanism to create equitable prices for all products/services with the objective of maximizing the profits and/or customer uptake of these offerings. Reconcile the pricing mechanism in order to achieve equilibrium pricing. Adjust the prices for all of the organization's offerings, using the insights gleaned from examining how much profit or customer uptake is generated by the present pricing strategy." ;
     rdfs:label "Refine pricing as needed" ;
     skos:definition "An Act of Formulation that adjusts the pricing mechanism toward equilibrium and produces a revised pricing strategy." ;
@@ -1673,6 +1748,7 @@ bpo:P10166 a owl:Class ;
 
 bpo:P11495 a owl:Class ;
     bpo:pcfID "11495" ; bpo:hierarchyID "3.3.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11495. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing schemes that offer lower pricing for a limited time as a promotional and sales incentive when launching a new product or a service." ;
     rdfs:label "Implement promotional pricing programs" ;
     skos:definition "A Planned Act that runs time-limited promotional pricing schemes and produces a price list of the discounted prices." ;
@@ -1683,6 +1759,7 @@ bpo:P11495 a owl:Class ;
 
 bpo:P11496 a owl:Class ;
     bpo:pcfID "11496" ; bpo:hierarchyID "3.3.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11496. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the optimum consumer pricing for each product or service at the point of sale, based on production and distribution costs and estimated sales volume." ;
     rdfs:label "Implement other retail pricing programs" ;
     skos:definition "An Act of Formulation that composes a retail pricing plan setting optimum consumer point-of-sale prices from costs and estimated sales volume." ;
@@ -1693,6 +1770,7 @@ bpo:P11496 a owl:Class ;
 
 bpo:P11497 a owl:Class ;
     bpo:pcfID "11497" ; bpo:hierarchyID "3.3.3.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11497. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assigning new prices or pricing adjustments to products or services to replace the original base prices. Update the prices in product catalogs and databases, and disseminate the information through all involved distribution and marketing channels." ;
     rdfs:label "Communicate and implement price changes" ;
     skos:definition "A Planned Act that assigns new prices, updates catalogs and databases, and disseminates the updated price list through distribution and marketing channels." ;
@@ -1703,6 +1781,7 @@ bpo:P11497 a owl:Class ;
 
 bpo:P17684 a owl:Class ;
     bpo:pcfID "17684" ; bpo:hierarchyID "3.3.3.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17684. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining internal price approvals and governmental approvals that are required for licensed products and for products that can be reimbursed by the government." ;
     rdfs:label "Achieve regulatory approval for pricing" ;
     skos:definition "An Act of Acquisition that obtains the internal and governmental pricing approvals required for licensed or reimbursable products." ;
@@ -1713,6 +1792,7 @@ bpo:P17684 a owl:Class ;
 
 bpo:P10167 a owl:Class ;
     bpo:pcfID "10167" ; bpo:hierarchyID "3.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10167. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining a conceptual framework for all promotional activity in order to create an overarching aspiration and ensure consistency. Create a plan for running promotional programs and designing the associated activities in order to increase visibility or sales. Determine how the organization quantifies what it wishes to achieve from these activities, what sort of messages the organization comfortable publicizing, what channels the organization wishes to employ, etc." ;
     rdfs:label "Define promotional concepts and objectives" ;
     skos:definition "An Act of Formulation that composes a promotional plan setting the conceptual framework and objectives for all promotional activity." ;
@@ -1723,6 +1803,7 @@ bpo:P10167 a owl:Class ;
 
 bpo:P10159 a owl:Class ;
     bpo:pcfID "10159" ; bpo:hierarchyID "3.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10159. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing the central messages for a segment of its customers. Craft concise statements that position the value proposition of individual products/services around the pressing concerns in the market, thereby showing how the organization's offerings are the right fit for the customers." ;
     rdfs:label "Develop marketing messages" ;
     skos:definition "An Act of Formulation that composes the central marketing messages positioning an offering's value proposition for a customer segment." ;
@@ -1733,6 +1814,7 @@ bpo:P10159 a owl:Class ;
 
 bpo:P10160 a owl:Class ;
     bpo:pcfID "10160" ; bpo:hierarchyID "3.3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10160. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the appropriate audience to direct marketing efforts at. Identify the particular group of customers to target. Discover the appropriate customer groups at a micro-level. Use techniques such as segmentation analysis, whereby the entire population is sliced according to certain demographic or behavioral attributes." ;
     rdfs:label "Define target audience" ;
     skos:definition "An Act of Selection that chooses the target customer segment from candidate segments and produces a target segment definition." ;
@@ -1743,6 +1825,7 @@ bpo:P10160 a owl:Class ;
 
 bpo:P10168 a owl:Class ;
     bpo:pcfID "10168" ; bpo:hierarchyID "3.3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10168. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a scheme for executing the promotional programs and campaigns, and testing these on sample audiences. Create a program plan, and carry out trials for promotional activities. Develop a scheme for how, when, where, and by whom the promotional schemes and campaigns will be deployed. Design incentives that convince or tempt the consumer to take up the organization's offerings. Conduct focus groups and pilot programs that reach out to a smaller number of people from among the target audiences to validate effectiveness." ;
     rdfs:label "Plan and test promotional activities" ;
     skos:definition "An Act of Formulation that develops and trials a promotional program plan specifying how, when, where, and by whom campaigns will be deployed." ;
@@ -1753,6 +1836,7 @@ bpo:P10168 a owl:Class ;
 
 bpo:P10169 a owl:Class ;
     bpo:pcfID "10169" ; bpo:hierarchyID "3.3.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10169. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Executing promotional programs in the market for reaching out to the desired customer segments. Implement the promotional schemes and campaigns. Create collaterals for the dissemination of information about the product, product line, brand, or company to the target audiences in an effective manner. Leverage relationships with distributors, vendors, and retailers. Consider enlisting professional services such as design, PR, and advertising firms." ;
     rdfs:label "Execute promotional activities" ;
     skos:definition "A Planned Act that executes promotional campaigns in the market and produces branding collateral disseminated to target audiences." ;
@@ -1763,6 +1847,7 @@ bpo:P10169 a owl:Class ;
 
 bpo:P10170 a owl:Class ;
     bpo:pcfID "10170" ; bpo:hierarchyID "3.3.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10170. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the success of promotional programs through metrics that track the impact of these activities. Examine the performance of promotional activities. Measure the success of these programs through metrics representative of customer uptake, market penetration, sustenance of impact created, revenue growth through offerings marketed, etc. Measure through primary data collection. Analyze through various statistical techniques to generate insights." ;
     rdfs:label "Evaluate promotional performance metrics" ;
     skos:definition "An Act of Appraisal that measures the success of promotional programs against metrics and produces a promotional performance evaluation." ;
@@ -1773,6 +1858,7 @@ bpo:P10170 a owl:Class ;
 
 bpo:P10171 a owl:Class ;
     bpo:pcfID "10171" ; bpo:hierarchyID "3.3.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10171. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Fine-tuning promotional activities by employing the insights gleaned from the quantitative, as well as any qualitative, performance evaluations. Change certain attributes of the schemes, campaigns, and programs deployed in order to increase the impact generated, in terms of measures already agreed upon such as customer uptake, market penetration, sustenance of impact created, and revenue growth through offerings marketed." ;
     rdfs:label "Refine promotional performance metrics" ;
     skos:definition "An Act of Formulation that adjusts promotional activities from evaluation insights and produces an improvement plan." ;
@@ -1783,6 +1869,7 @@ bpo:P10171 a owl:Class ;
 
 bpo:P10172 a owl:Class ;
     bpo:pcfID "10172" ; bpo:hierarchyID "3.3.4.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10172. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Incorporating the understanding developed by studying promotional activities as well as refining them. Include the best practices and value-enhancing attributes identified in Refine promotional activities [10171] into similarly planned schemes, programs, and campaigns. Adjust promotional activities to further increase the effectiveness of the overall promotional efforts." ;
     rdfs:label "Incorporate learning into future/planned consumer promotions" ;
     skos:definition "An Act of Formulation that incorporates lessons and best practices from prior promotions into an improvement plan for future campaigns." ;
@@ -1793,6 +1880,7 @@ bpo:P10172 a owl:Class ;
 
 bpo:P10153 a owl:Class ;
     bpo:pcfID "10153" ; bpo:hierarchyID "3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10153. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collating all customer-centered metrics. The objective is to create a big-picture view of the customers' mindset and their behavior pertaining to the organization's offerings." ;
     rdfs:label "Track customer management measures" ;
     skos:definition "An Act of Monitoring that collates customer-centered metrics over time to produce a customer metric analysis giving a big-picture view of customer behavior." ;
@@ -1808,6 +1896,7 @@ bpo:P10153 a owl:Class ;
 
 bpo:P10173 a owl:Class ;
     bpo:pcfID "10173" ; bpo:hierarchyID "3.3.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10173. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Estimating customer loyalty and the average contribution made by them to revenues, over their lifespan. Use metrics to quantify the commitment of customers to the offerings of the organization, such as measures of tendency to switch brands/providers, number/proportion of return customers, and the number of customers using multiple substitutable offerings." ;
     rdfs:label "Determine customer lifetime value" ;
     skos:definition "An Act of Forecasting that estimates the uncertain future revenue contribution of customers over their lifespan and produces a customer lifetime value estimate." ;
@@ -1818,6 +1907,7 @@ bpo:P10173 a owl:Class ;
 
 bpo:P10174 a owl:Class ;
     bpo:pcfID "10174" ; bpo:hierarchyID "3.3.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10174. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing the revenue stream generated by the sale of the organization's products/services in order to identify trends therein. Examine data relating to the inflow of revenue from individual/groups of customers in order to identify patterns in the generation and sustenance of receivables. Conduct statistical analysis over the stream of revenue collected and the point of origin associated with each unit of sale through metrics such as the accounting rate of return, the GAAP revenue over a given period, and customer lifetime revenue." ;
     rdfs:label "Analyze customer revenue trend" ;
     skos:definition "An Act of Analysis that examines customer revenue data to identify trends and produces a customer metric analysis." ;
@@ -1828,6 +1918,7 @@ bpo:P10174 a owl:Class ;
 
 bpo:P10175 a owl:Class ;
     bpo:pcfID "10175" ; bpo:hierarchyID "3.3.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10175. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating measures that capture the proportion of customers the organization is able to retain to those it is losing. Compute metrics such as the tendency to switch brands/providers and the proportion of return customers to comprehend the trends within the customer attrition and retention rates." ;
     rdfs:label "Analyze customer attrition and retention rates" ;
     skos:definition "An Act of Analysis that computes customer attrition and retention measures and produces a customer metric analysis." ;
@@ -1838,6 +1929,7 @@ bpo:P10175 a owl:Class ;
 
 bpo:P10176 a owl:Class ;
     bpo:pcfID "10176" ; bpo:hierarchyID "3.3.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10176. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Studying all measures of the customer's behavior and conduct toward the organization's offerings in order to glean insight and identify patterns into their decision making. Closely examine all categories of data sets over a customer base. Analyze data points related to customer loyalty, retention, value, conversion, level of satisfaction, attrition, etc. Flesh out measures for an all-encompassing analysis that provides a macro-level picture of the customer's behavior and mindset related to the organization's products/services." ;
     rdfs:label "Analyze customer metrics" ;
     skos:definition "An Act of Analysis that has as input customer data and produces a customer metric analysis and customer insight giving a macro-level picture of customer behavior." ;
@@ -1850,6 +1942,7 @@ bpo:P10176 a owl:Class ;
 
 bpo:P10177 a owl:Class ;
     bpo:pcfID "10177" ; bpo:hierarchyID "3.3.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10177. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing and reappraising the strategies, objectives, and plans for all customer-centered processes. Revisit all customer-focused processes and activities--which relate to their acquisition, conversion, and retention--with the objective of revising them in light of customer analysis. Revise accordingly." ;
     rdfs:label "Revise customer strategies, objectives, and plans based on metrics" ;
     skos:definition "An Act of Formulation that revises customer strategies, objectives, and plans in light of customer analysis and produces a revised customer management measure." ;
@@ -1860,6 +1953,7 @@ bpo:P10177 a owl:Class ;
 
 bpo:P16613 a owl:Class ;
     bpo:pcfID "16613" ; bpo:hierarchyID "3.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16613. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing and responding to customer feedback. Create tickets to initiate bug fixes or to propose feature updates. Monitor and track progress." ;
     rdfs:label "Analyze and respond to customer insight" ;
     skos:definition "An Act of Analysis that has as input customer feedback and produces customer insight used to drive responses." ;
@@ -1876,6 +1970,7 @@ bpo:P16613 a owl:Class ;
 
 bpo:P16627 a owl:Class ;
     bpo:pcfID "16627" ; bpo:hierarchyID "3.3.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16627. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Following postings on social media to promote offerings, raise brand awareness, interact with customers, increase customer engagement and brand loyalty, respond to queries, gauge sentiment regarding company's products or services, and to derive customer insight." ;
     rdfs:label "Monitor and respond to social media activity" ;
     skos:definition "An Act of Monitoring that has as input customer feedback from social media, tracks sentiment, and produces customer insight." ;
@@ -1887,6 +1982,7 @@ bpo:P16627 a owl:Class ;
 
 bpo:P16614 a owl:Class ;
     bpo:pcfID "16614" ; bpo:hierarchyID "3.3.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16614. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining user activity on company, vendor or reseller websites to improve traffic on and to the website, improve user experience on the website to simplify purchasing process and encourage repeat purchases, and to increase the site's visibility in search engine results. Various metrics can be used to measure user activity, such as number of users who are new, returning or unique, time spent on page, session duration, bounce rate, click through rate, conversion rate, and others." ;
     rdfs:label "Analyze customer website activity" ;
     skos:definition "An Act of Analysis that has as input customer data on website activity and produces a customer metric analysis." ;
@@ -1898,6 +1994,7 @@ bpo:P16614 a owl:Class ;
 
 bpo:P16615 a owl:Class ;
     bpo:pcfID "16615" ; bpo:hierarchyID "3.3.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16615. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting analyses to uncover customer purchasing habits. Detect patterns and categorize users based on similar characteristics and behaviors, demographic information, geographic location, search history, etc." ;
     rdfs:label "Analyze customer purchase patterns" ;
     skos:definition "An Act of Analysis that has as input customer data and produces a customer behavior model describing purchasing patterns." ;
@@ -1909,6 +2006,7 @@ bpo:P16615 a owl:Class ;
 
 bpo:P16616 a owl:Class ;
     bpo:pcfID "16616" ; bpo:hierarchyID "3.3.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16616. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating formulas for personalized offers, purchasing recommendations and targeted advertisements for customers on the basis of previously detected purchase patterns [16615]." ;
     rdfs:label "Develop business rules to provide personalized offers" ;
     skos:definition "An Act of Formulation that composes business rules prescribing personalized offers and recommendations from detected purchase patterns." ;
@@ -1919,6 +2017,7 @@ bpo:P16616 a owl:Class ;
 
 bpo:P16617 a owl:Class ;
     bpo:pcfID "16617" ; bpo:hierarchyID "3.3.6.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16617. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing how well the targeted offers perform to see whether they result in an increased conversion rate. Reanalyze the purchase patterns or modify those business rules that are produce effective recommendations." ;
     rdfs:label "Monitor effectiveness of personalized offers and adjust offers accordingly" ;
     skos:definition "An Act of Monitoring that tracks the conversion effectiveness of personalized offers and produces a promotional performance evaluation driving rule adjustments." ;
@@ -1929,6 +2028,7 @@ bpo:P16617 a owl:Class ;
 
 bpo:P10178 a owl:Class ;
     bpo:pcfID "10178" ; bpo:hierarchyID "3.3.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10178. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a strategic road map for how to package products/services into desirable solutions while increasing profitability. Create a scheme for how the organization will bundle and wrap its products/services into a presentable and sellable offering. Consider what aspects or components of an offering the organization can extract the maximum revenue from, and reduce the less profitable constituents while maintaining a high perceptible value for the customers. Balance maximizing profit with benefits to the customer." ;
     rdfs:label "Plan packaging strategy" ;
     skos:definition "An Act of Formulation that composes a packaging strategy road map for bundling and wrapping offerings into sellable solutions." ;
@@ -1939,6 +2039,7 @@ bpo:P10178 a owl:Class ;
 
 bpo:P10179 a owl:Class ;
     bpo:pcfID "10179" ; bpo:hierarchyID "3.3.7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10179. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Piloting the packaged products/services in the market with a test audience. Create trial runs using techniques such as focus groups of the final product, wrapped and bundled." ;
     rdfs:label "Test packaging options" ;
     skos:definition "A Planned Act that pilots packaged offerings with a test audience to validate packaging options." ;
@@ -1948,6 +2049,7 @@ bpo:P10179 a owl:Class ;
 
 bpo:P10180 a owl:Class ;
     bpo:pcfID "10180" ; bpo:hierarchyID "3.3.7.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10180. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing the final packaging. Put into action the packaging strategy in light of the insights accumulated from testing various options." ;
     rdfs:label "Execute packaging strategy" ;
     skos:definition "A Planned Act that implements the final packaging in line with the packaging strategy and testing insights." ;
@@ -1957,6 +2059,7 @@ bpo:P10180 a owl:Class ;
 
 bpo:P10181 a owl:Class ;
     bpo:pcfID "10181" ; bpo:hierarchyID "3.3.7.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10181. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Fine-tuning the packaging that has been developed and tested using insights gleaned from feedback." ;
     rdfs:label "Refine packaging" ;
     skos:definition "An Act of Formulation that fine-tunes packaging from feedback and produces a revised packaging strategy." ;
@@ -1967,6 +2070,7 @@ bpo:P10181 a owl:Class ;
 
 bpo:P21425 a owl:Class ;
     bpo:pcfID "21425" ; bpo:hierarchyID "3.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21425. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creation of a plan detailing how a company plans to execute a successful product release and promotion, and ultimately its sale to customers." ;
     rdfs:label "Develop go-to-market strategy" ;
     skos:definition "An Act of Formulation that composes a go-to-market strategy detailing how an offering will be released, promoted, and sold to customers." ;
@@ -1977,6 +2081,7 @@ bpo:P21425 a owl:Class ;
 
 bpo:P16630 a owl:Class ;
     bpo:pcfID "16630" ; bpo:hierarchyID "3.3.9.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16630. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Producing or overseeing the creation or acquisition of photos, images and graphics for a product description, advertisement or a website. Like the copy [18131], product images are chosen and edited to enhance the product description and to convince consumers to purchase the product." ;
     rdfs:label "Manage product images" ;
     skos:definition "An Act of Communication that produces the photos, images, and graphics of product marketing content about an offering." ;
@@ -1987,6 +2092,7 @@ bpo:P16630 a owl:Class ;
 
 bpo:P18130 a owl:Class ;
     bpo:pcfID "18130" ; bpo:hierarchyID "3.3.9.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18130. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Authoring or overseeing the creation of the textual portion of a product description, advertisement, or web page, including the headline, body, product attributes, and brand or advertiser information. A copy is designed to provide information about the product and to catch and hold the interest of prospective buyers long enough to persuade them to make a purchase. The copy of a website is called its content." ;
     rdfs:label "Manage product copy" ;
     skos:definition "An Act of Communication that authors the textual product marketing content about an offering, including headline, body, and attributes." ;
@@ -2002,6 +2108,7 @@ bpo:P18130 a owl:Class ;
 
 bpo:P10103 a owl:Class ;
     bpo:pcfID "10103" ; bpo:hierarchyID "3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10103. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing concrete plans for guiding and providing support to the sales function. Chart a road map for the sales function, including an analysis of historical sales data to create forecasts for anticipated sales, forming sales targets, forging partnerships with other economic agents to boost sales, devising a budget for this function, and determining metrics to measure customer management activities as well as progress in achieving sales targets." ;
     rdfs:label "Develop sales strategy" ;
     skos:definition "An Act of Formulation that charts a road map for the sales function and produces a sales strategy, comprising the development of a sales forecast, the cultivation of partner and alliance relationships, the establishment of sales budgets, and the establishment of sales goals and customer-management measures." ;
@@ -2016,6 +2123,7 @@ bpo:P10103 a owl:Class ;
 
 bpo:P10129 a owl:Class ;
     bpo:pcfID "10129" ; bpo:hierarchyID "3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10129. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a sales forecast for the organization's portfolio of offerings, bearing in mind the effect of promotional events, and fine-tuning these in the context of the new forecast. Estimate the future demand for the organization's products/services by analyzing historical information and any promotional activity." ;
     rdfs:label "Develop sales forecast" ;
     skos:definition "An Act of Forecasting that estimates the future demand for an organization's portfolio of offerings from historical and promotional information and produces a sales forecast." ;
@@ -2031,6 +2139,7 @@ bpo:P10129 a owl:Class ;
 
 bpo:P10134 a owl:Class ;
     bpo:pcfID "10134" ; bpo:hierarchyID "3.4.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10134. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gathering all information about sales orders into an index. Create a directory of all sales orders, whether open or those which have been fulfilled. Track what product/service was ordered, the quantity ordered, who ordered it, the delivery date, the shipping method, the unit price and line total, payment terms, and any discount applied." ;
     rdfs:label "Gather current and historic order information" ;
     skos:definition "An Act of Information Processing that gathers and stores information about current and historical sales orders into an index and produces a sales-order data record." ;
@@ -2041,6 +2150,7 @@ bpo:P10134 a owl:Class ;
 
 bpo:P10135 a owl:Class ;
     bpo:pcfID "10135" ; bpo:hierarchyID "3.4.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10135. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing sales order data to identify patterns in order to capitalize on emerging trends in the industry or the economy. Closely examine the directory of sales orders. Discern any patterns from this index, which is representative of the demand for the organization's offerings. Identify trends among the various segments of the organization's customer base to create forecasts. Glean patterns from this analysis, including the triangulation of segments that are showing the most growth in demand or those that represent the highest decline revenue, industry-wide trends such as decline/boost in overall demand, and any unusual trends that lie outside of the organization's expectations." ;
     rdfs:label "Analyze sales trends and patterns" ;
     skos:definition "An Act of Analysis that examines sales-order data to discern demand patterns and produces a sales-trend analysis." ;
@@ -2052,6 +2162,7 @@ bpo:P10135 a owl:Class ;
 
 bpo:P10136 a owl:Class ;
     bpo:pcfID "10136" ; bpo:hierarchyID "3.4.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10136. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating the future demand for the organization's products/services. Use the trends and patterns identified in the sales data to estimate future demand. Use forecast to prepare for future customer demand and to recalibrate the strategic course of functions and business units." ;
     rdfs:label "Generate sales forecast" ;
     skos:definition "An Act of Forecasting that extrapolates from identified sales trends to estimate future demand and produces a sales forecast." ;
@@ -2063,6 +2174,7 @@ bpo:P10136 a owl:Class ;
 
 bpo:P10137 a owl:Class ;
     bpo:pcfID "10137" ; bpo:hierarchyID "3.4.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10137. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing promotional activities' effect on the sales orders. Analyze all promotional events and campaigns that the organization has already employed or is planning to deploy." ;
     rdfs:label "Analyze historical and planned promotions and events" ;
     skos:definition "An Act of Analysis that reviews the effect of historical and planned promotional events on sales orders and produces a sales-trend analysis of promotional impact." ;
@@ -2074,6 +2186,7 @@ bpo:P10137 a owl:Class ;
 
 bpo:P10130 a owl:Class ;
     bpo:pcfID "10130" ; bpo:hierarchyID "3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10130. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Cultivating an alliance of partners by identifying, analyzing, negotiating, and managing partnerships with other economic agents." ;
     rdfs:label "Develop sales partner/alliance relationships" ;
     skos:definition "An Act of Formulation that cultivates an organization's set of sales partner and alliance relationships and produces a partner and alliance strategy." ;
@@ -2096,6 +2209,7 @@ bpo:P10130 a owl:Class ;
 
 bpo:P10138 a owl:Class ;
     bpo:pcfID "10138" ; bpo:hierarchyID "3.4.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10138. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying collaboration opportunities for selling, marketing, and distributing the organization's products/services. Determine any scope for partnering with other economic agents, with synergies for the marketing, sales, and/or distribution of the organization's products/services. Identify alliance opportunities that target customer segments who would be interested." ;
     rdfs:label "Identify alliance opportunities" ;
     skos:definition "An Act of Identification that discerns collaboration opportunities for selling, marketing, and distributing an organization's offerings and produces a market-opportunity statement for partnering." ;
@@ -2106,6 +2220,7 @@ bpo:P10138 a owl:Class ;
 
 bpo:P10139 a owl:Class ;
     bpo:pcfID "10139" ; bpo:hierarchyID "3.4.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10139. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating the frameworks needed to select alliance partners, and maintaining relationships with them. Create a framework for structured programs that can receive and support multiple alliances. Clearly outline the responsibilities and benefits of the alliance partners. Create frameworks for selecting the right alliance partners, and maintain a relationship with them. Create or repurpose teams of relationship managers and outline a methodology for selecting alliance partners." ;
     rdfs:label "Design alliance programs and methods for selecting and managing relationships" ;
     skos:definition "An Act of Formulation that composes the programs, selection methods, and relationship-management frameworks for alliance partnerships and produces a partner and alliance strategy." ;
@@ -2116,6 +2231,7 @@ bpo:P10139 a owl:Class ;
 
 bpo:P10140 a owl:Class ;
     bpo:pcfID "10140" ; bpo:hierarchyID "3.4.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10140. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Choosing alliance partners using the selected programs and methodology. Select the most feasible and profitable alliance partners, based on Design alliance programs and methods for selecting and managing relationships [10139] and through a careful scrutiny of the potential alliance." ;
     rdfs:label "Select alliances" ;
     skos:definition "An Act of Selection that chooses the most feasible and profitable alliance partners from a candidate set using the designed selection methodology and produces an alliance selection." ;
@@ -2127,6 +2243,7 @@ bpo:P10140 a owl:Class ;
 
 bpo:P11465 a owl:Class ;
     bpo:pcfID "11465" ; bpo:hierarchyID "3.4.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11465. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing category management strategies for customers through the use of consumer insights and understanding of customer specifics. Develop consumer and channel insights. Establish long term strategies, objectives and targets across the brand." ;
     rdfs:label "Develop customer trade strategy and customer objectives/targets" ;
     skos:definition "An Act of Formulation that composes a customer trade and category-management strategy with long-term objectives and targets and produces a customer trade strategy." ;
@@ -2138,6 +2255,7 @@ bpo:P11465 a owl:Class ;
 
 bpo:P11521 a owl:Class ;
     bpo:pcfID "11521" ; bpo:hierarchyID "3.4.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11521. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing business-to-business marketing campaigns and financial incentives for wholesalers, dealers, distributors and other intermediaries that the company uses to distribute its products or services." ;
     rdfs:label "Define trade programs and funding options" ;
     skos:definition "An Act of Formulation that defines business-to-business trade programs and financial incentives for distribution intermediaries and produces an incentive scheme." ;
@@ -2148,6 +2266,7 @@ bpo:P11521 a owl:Class ;
 
 bpo:P11466 a owl:Class ;
     bpo:pcfID "11466" ; bpo:hierarchyID "3.4.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11466. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arranging meetings with trade partners to coordinate logistics, manage critical resources, resolve bottlenecks, and schedule urgent or time-sensitive matters." ;
     rdfs:label "Conduct planning activities for major trade customers" ;
     skos:definition "An Act of Planning that arranges coordination of logistics, resources, and scheduling with major trade customers and produces an execution roadmap." ;
@@ -2158,6 +2277,7 @@ bpo:P11466 a owl:Class ;
 
 bpo:P10141 a owl:Class ;
     bpo:pcfID "10141" ; bpo:hierarchyID "3.4.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10141. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing strategies for effectively managing, identifying, and countering any possible issues from the alliance partnerships formed. Create a strategic road map for managing the partnerships forged through Design alliance programs and methods for selecting and managing relationships [10139]. Determine where the alliance partnerships are headed, possible problems or pushback from the partners, how these issues might be countered, how these alliance partnerships would evolve in the future, any other business cases where these partnerships might be deployed, etc." ;
     rdfs:label "Develop partner and alliance management strategies" ;
     skos:definition "An Act of Formulation that designs strategies for managing, anticipating issues in, and evolving alliance partnerships and produces a partner and alliance strategy." ;
@@ -2168,6 +2288,7 @@ bpo:P10141 a owl:Class ;
 
 bpo:P10142 a owl:Class ;
     bpo:pcfID "10142" ; bpo:hierarchyID "3.4.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10142. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting targets for organizational achievement. This includes what the organization aims to achieve from and how it wishes to manage both the individual partners and the alliance as a whole. Set immediate through long-term goals including revenue targets, market penetration, footfall numbers, and geographical coverage." ;
     rdfs:label "Establish partner and alliance management goals" ;
     skos:definition "An Act of Formulation that sets immediate through long-term goals and targets for managing individual partners and the alliance as a whole and produces a sales goal and target." ;
@@ -2178,6 +2299,7 @@ bpo:P10142 a owl:Class ;
 
 bpo:P18629 a owl:Class ;
     bpo:pcfID "18629" ; bpo:hierarchyID "3.4.2.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18629. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting up strategic alliances with key trade partners and ratifying partnership agreements." ;
     rdfs:label "Establish partner and alliance agreements" ;
     skos:definition "A Planned Act that sets up strategic alliances with key trade partners by ratifying partnership agreements and produces an alliance agreement." ;
@@ -2188,6 +2310,7 @@ bpo:P18629 a owl:Class ;
 
 bpo:P11522 a owl:Class ;
     bpo:pcfID "11522" ; bpo:hierarchyID "3.4.2.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11522. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Combining scheduled promotional, category management and trade marketing events into unified timetables. Update the calendars. Register new events." ;
     rdfs:label "Develop promotional and category management calendars (trade marketing calendars)" ;
     skos:definition "An Act of Formulation that combines scheduled promotional, category-management, and trade-marketing events into a unified timetable and produces a trade marketing calendar." ;
@@ -2198,6 +2321,7 @@ bpo:P11522 a owl:Class ;
 
 bpo:P11523 a owl:Class ;
     bpo:pcfID "11523" ; bpo:hierarchyID "3.4.2.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11523. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing long term customer sales plans to assess current sales and to determine future sales objectives, strategies for achieving the goals, and available resources." ;
     rdfs:label "Create strategic and tactical sales plans by customer" ;
     skos:definition "An Act of Formulation that establishes long-term strategic and tactical sales plans for individual customers and produces a sales plan." ;
@@ -2208,6 +2332,7 @@ bpo:P11523 a owl:Class ;
 
 bpo:P11468 a owl:Class ;
     bpo:pcfID "11468" ; bpo:hierarchyID "3.4.2.12" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11468. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Sending invitations and distributing information about upcoming events to customer teams and other involved entities." ;
     rdfs:label "Communicate planning information to customer teams" ;
     skos:definition "An Act of Communication that transfers planning information about upcoming events from the organization to customer teams and other involved parties." ;
@@ -2218,6 +2343,7 @@ bpo:P11468 a owl:Class ;
 
 bpo:P10131 a owl:Class ;
     bpo:pcfID "10131" ; bpo:hierarchyID "3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10131. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting up a financial plan for the sales function. Calculate the estimated sales revenue and costs, which helps in calculating the overall net profit. Create a sound plan for resource outlay by comparing the forecast with historical data." ;
     rdfs:label "Establish overall sales budgets" ;
     skos:definition "An Act of Formulation that sets up the financial plan for the sales function from estimated revenue, costs, and net profit and produces a sales budget." ;
@@ -2234,6 +2360,7 @@ bpo:P10131 a owl:Class ;
 
 bpo:P17682 a owl:Class ;
     bpo:pcfID "17682" ; bpo:hierarchyID "3.4.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17682. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the percentage of total sales volume in the market for a particular product." ;
     rdfs:label "Calculate product market share" ;
     skos:definition "An Act of Analysis that calculates the percentage of total market sales volume held by a particular product and produces a market-share analysis." ;
@@ -2245,6 +2372,7 @@ bpo:P17682 a owl:Class ;
 
 bpo:P10143 a owl:Class ;
     bpo:pcfID "10143" ; bpo:hierarchyID "3.4.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10143. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Estimating revenue from the sale of products/services. Approximate the anticipated sale of products/services and multiply it by the selling price of the respective offering. (This represents the total amount of money that the organization receives from the sale of its portfolio of offerings.)" ;
     rdfs:label "Calculate product revenue" ;
     skos:definition "An Act of Analysis that estimates the revenue from the sale of products and services by multiplying anticipated sales by selling price and produces a revenue estimate." ;
@@ -2256,6 +2384,7 @@ bpo:P10143 a owl:Class ;
 
 bpo:P10144 a owl:Class ;
     bpo:pcfID "10144" ; bpo:hierarchyID "3.4.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10144. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating the variable costs of production. Approximate those costs that depend on the volume of products/services produced by the organization." ;
     rdfs:label "Determine variable costs" ;
     skos:definition "An Act of Analysis that calculates the variable production costs that depend on output volume and produces a cost analysis." ;
@@ -2267,6 +2396,7 @@ bpo:P10144 a owl:Class ;
 
 bpo:P10145 a owl:Class ;
     bpo:pcfID "10145" ; bpo:hierarchyID "3.4.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10145. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating the overhead costs associated with selling the organization's products/services. Determine fixed costs that are not directly related to the volume of products/services processed or the sale of these offerings (e.g., expense over machinery and equipment)." ;
     rdfs:label "Determine overhead and fixed costs" ;
     skos:definition "An Act of Analysis that calculates the overhead and fixed costs not directly related to output volume and produces a cost analysis." ;
@@ -2278,6 +2408,7 @@ bpo:P10145 a owl:Class ;
 
 bpo:P10146 a owl:Class ;
     bpo:pcfID "10146" ; bpo:hierarchyID "3.4.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10146. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating the net income. Calculate the organization's profitability by accounting for Determine overhead and fixed costs [10145] and Determine variable costs [10144]." ;
     rdfs:label "Calculate net profit" ;
     skos:definition "An Act of Analysis that calculates net income by netting estimated revenue against variable, overhead, and fixed costs and produces a profitability analysis." ;
@@ -2289,6 +2420,7 @@ bpo:P10146 a owl:Class ;
 
 bpo:P10147 a owl:Class ;
     bpo:pcfID "10147" ; bpo:hierarchyID "3.4.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10147. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan in measurable terms for the financial outlay that best captures resource allocation for the sales forecast. Consider the outlay of capital, HR, raw materials, and provisions needed to reach sales targets." ;
     rdfs:label "Create budget" ;
     skos:definition "An Act of Formulation that creates a measurable financial-outlay plan allocating resources to meet the sales forecast and produces a sales budget." ;
@@ -2299,6 +2431,7 @@ bpo:P10147 a owl:Class ;
 
 bpo:P10132 a owl:Class ;
     bpo:pcfID "10132" ; bpo:hierarchyID "3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10132. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing specific quantitative and qualitative measures of realizing sales targets. Create sales targets by analyzing historical sales data and comparing the forecasts to results, in light of customer and market intelligence. Examine the performance of sales personnel in light of market opportunities. Based on this review, establish sales targets along with metrics to quantify these goals, corresponding with the overall business strategy." ;
     rdfs:label "Establish sales goals and measures" ;
     skos:definition "An Act of Formulation that establishes sales targets and the quantitative and qualitative metrics used to track their realization and produces a sales goal and a performance-measure specification." ;
@@ -2310,6 +2443,7 @@ bpo:P10132 a owl:Class ;
 
 bpo:P10133 a owl:Class ;
     bpo:pcfID "10133" ; bpo:hierarchyID "3.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10133. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the appropriate measures that can represent key attributes of the customer management function. Select measures to track customer activity, feedback, satisfaction, organizational responsiveness to customer needs, and general data on how the organization is managing customer accounts, leads, and contacts. Build on customer and market intelligence to identify metrics gauging aspects related to customer management. Select measures based on the nature of the business, the type and size of customer base, strategic goals, and the model used to structure sales and customer relationships." ;
     rdfs:label "Establish customer management measures" ;
     skos:definition "An Act of Formulation that selects the measures representing key attributes of the customer-management function and produces a customer-management measure specification." ;
@@ -2329,6 +2463,7 @@ bpo:P10133 a owl:Class ;
 
 bpo:P10105 a owl:Class ;
     bpo:pcfID "10105" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10105. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "3.5" ;
     bpo:apqcSourceText "Selling products/services. Set appropriate customer expectations. Work with customers using the same schedule that product/service development, production, and customer service functions follow. Manage sales personnel and sales partnerships/alliances." ;
     rdfs:label "Develop and manage sales plans" ;
@@ -2351,6 +2486,7 @@ bpo:P10105 a owl:Class ;
 
 bpo:P10182 a owl:Class ;
     bpo:pcfID "10182" ; bpo:hierarchyID "3.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10182. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Generating leads of prospective customers to grow the organization's business. Identify viable customers based on customer and market research. Discover leads through IT applications, cold calling, reference/network development, or other sales and business development techniques. Employ a scoring model qualify the prospective customers into leads, and prioritize them." ;
     rdfs:label "Manage leads/opportunities" ;
     skos:definition "An Act of Selling that generates and qualifies leads of prospective customers and has as output sales leads." ;
@@ -2369,6 +2505,7 @@ bpo:P10182 a owl:Class ;
 
 bpo:P10188 a owl:Class ;
     bpo:pcfID "10188" ; bpo:hierarchyID "3.5.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10188. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying people who can be converted into customers. Leverage personal and professional networks, business research over databases and directories, and secondary research." ;
     rdfs:label "Identify potential customers" ;
     skos:definition "An Act of Identification that has as input customer data and market data and has as output a sales lead about a prospective customer." ;
@@ -2380,6 +2517,7 @@ bpo:P10188 a owl:Class ;
 
 bpo:P10189 a owl:Class ;
     bpo:pcfID "10189" ; bpo:hierarchyID "3.5.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10189. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Qualifying the prospective customers into credible leads by gauging their behavior against the organization's offering. Triangulate leads to increase the efficiency of sales and marketing efforts. Build a detailed profile of the prospects. Determine what products/services they already use, if they have decision-making authority, their views on the products/services they already use, how prone they are to switch, if the organization's solution better in some attributes than those prospects currently use, etc." ;
     rdfs:label "Identify/receive leads/opportunities" ;
     skos:definition "An Act of Analysis that has as input customer data and has as output a sales lead profiling a credible prospect against the organization's offering." ;
@@ -2391,6 +2529,7 @@ bpo:P10189 a owl:Class ;
 
 bpo:P18115 a owl:Class ;
     bpo:pcfID "18115" ; bpo:hierarchyID "3.5.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18115. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing the set of potential customers and sales opportunities. Approve the leads that meet company requirements on new businesses." ;
     rdfs:label "Validate and qualify leads/opportunities" ;
     skos:definition "An Act of Appraisal that has as input sales leads and has as output an opportunity validation result indicating which leads meet company requirements." ;
@@ -2402,6 +2541,7 @@ bpo:P18115 a owl:Class ;
 
 bpo:P11773 a owl:Class ;
     bpo:pcfID "11773" ; bpo:hierarchyID "3.5.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11773. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aligning sales leads with business objectives." ;
     rdfs:label "Match opportunities to business strategy" ;
     skos:definition "An Act of Appraisal that has as input sales leads and judges their alignment with an organization's business objectives." ;
@@ -2412,6 +2552,7 @@ bpo:P11773 a owl:Class ;
 
 bpo:P18116 a owl:Class ;
     bpo:pcfID "18116" ; bpo:hierarchyID "3.5.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18116. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating plans about how to close leads and win sales opportunities." ;
     rdfs:label "Develop opportunity win plans" ;
     skos:definition "An Act of Formulation that has as input sales leads and has as output an opportunity win plan prescribing how to close them." ;
@@ -2423,6 +2564,7 @@ bpo:P18116 a owl:Class ;
 
 bpo:P20011 a owl:Class ;
     bpo:pcfID "20011" ; bpo:hierarchyID "3.5.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20011. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Overseeing and planning the acquisition of new customers." ;
     rdfs:label "Manage opportunity pipeline" ;
     skos:definition "An Act of Monitoring that has as input sales leads and observes the state of the new-customer-acquisition pipeline against expected progress." ;
@@ -2433,6 +2575,7 @@ bpo:P20011 a owl:Class ;
 
 bpo:P10209 a owl:Class ;
     bpo:pcfID "10209" ; bpo:hierarchyID "3.5.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10209. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Planning the distribution of personnel across various sales functions. Match the capabilities of individual employees with the skill sets needed for specific roles. Seek assistance from HR." ;
     rdfs:label "Determine sales resource allocation" ;
     skos:definition "An Act of Planning that determines and prescribes the distribution of sales personnel across an organization's sales functions." ;
@@ -2446,6 +2589,7 @@ bpo:P10209 a owl:Class ;
 
 bpo:P10184 a owl:Class ;
     bpo:pcfID "10184" ; bpo:hierarchyID "3.5.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10184. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the entire sales process, from using leads to open sales to closing sales and creating records. Govern all sales activities. Make sales calls based on leads and preparatory work (drafting terms of the sale, creating proposals, suggesting prices, etc.). Close the sale, along with any administrative activities related to data entry and the processing of the sale." ;
     rdfs:label "Manage customer sales calls" ;
     skos:definition "An Act of Selling that has as input sales leads and carries the sales process from opening through closing and recording, and has as output a sales agreement." ;
@@ -2462,6 +2606,7 @@ bpo:P10184 a owl:Class ;
 
 bpo:P10190 a owl:Class ;
     bpo:pcfID "10190" ; bpo:hierarchyID "3.5.1.8.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10190. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Communicating with customers and prospects with the intent of creating sales opportunities. Reach out to existing and prospective customers through alternate media and networking channels, apart from cold calling/emailing." ;
     rdfs:label "Perform sales calls" ;
     skos:definition "An Act of Selling in which sales personnel communicate with customers and prospects with the intent of creating sales opportunities." ;
@@ -2471,6 +2616,7 @@ bpo:P10190 a owl:Class ;
 
 bpo:P10191 a owl:Class ;
     bpo:pcfID "10191" ; bpo:hierarchyID "3.5.1.8.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10191. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Capitalizing on sales calls by pitching on bids and closing deals. Outline the nature and scope of the work, draft agreement terms, prepare proposals and agreements, and propose timelines and prices." ;
     rdfs:label "Perform pre-sales activities" ;
     skos:definition "An Act of Formulation that prepares the terms, scope, and pricing of a deal and has as output a sales proposal." ;
@@ -2481,6 +2627,7 @@ bpo:P10191 a owl:Class ;
 
 bpo:P20012 a owl:Class ;
     bpo:pcfID "20012" ; bpo:hierarchyID "3.5.1.8.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20012. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arranging and leading meetings, seminars, workshops and training events with customers to educate them about current offerings, best practices and technological advances to provide more value to customers and to increase their attrition and loyalty." ;
     rdfs:label "Manage customer meetings/workshops" ;
     skos:definition "An Act of Communication in which sales personnel arrange and lead meetings, seminars, or workshops to educate customers about an organization's offerings." ;
@@ -2491,6 +2638,7 @@ bpo:P20012 a owl:Class ;
 
 bpo:P10192 a owl:Class ;
     bpo:pcfID "10192" ; bpo:hierarchyID "3.5.1.8.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10192. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Formalizing a sale by reaching an agreement on terms of the deal. Negotiate on the price, and reach a consensus on the terms and conditions." ;
     rdfs:label "Close the sale" ;
     skos:definition "An Act of Selling that formalizes a sale by negotiating and reaching a sales agreement on the terms of the deal." ;
@@ -2500,6 +2648,7 @@ bpo:P10192 a owl:Class ;
 
 bpo:P10193 a owl:Class ;
     bpo:pcfID "10193" ; bpo:hierarchyID "3.5.1.8.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10193. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Completing all the paper-work associated with the sale of its products/services. Exchange any pertinent legal/financial information required for completing the sale, signing of a contract/work-order, and issuing copies of bills/invoices." ;
     rdfs:label "Record outcome of sales process" ;
     skos:definition "An Act of Information Processing that records the completed sale by capturing its legal and financial documentation and has as output a sales order." ;
@@ -2514,6 +2663,7 @@ bpo:P10193 a owl:Class ;
 
 bpo:P10183 a owl:Class ;
     bpo:pcfID "10183" ; bpo:hierarchyID "3.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10183. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the customer's expectations, with the intent of responsibly increasing the sale of the organization's products/services. Create a systematic method for governing sales, using sales forecasts and customer management measures. Develop a blueprint to manage relationships with customers and the data it holds on them, as well as the sale of its products/services to these customers. Devise a recipe for handling the organization's key customers in order to manage their expectations with tact and responsibility while maximizing revenue." ;
     rdfs:label "Manage customers and accounts" ;
     skos:definition "An Act of Selling that governs an organization's selling to its customers and the management of their accounts, encompassing key-account selection, account planning, and master-data management." ;
@@ -2527,6 +2677,7 @@ bpo:P10183 a owl:Class ;
 
 bpo:P20013 a owl:Class ;
     bpo:pcfID "20013" ; bpo:hierarchyID "3.5.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20013. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Choosing principal clients that are vital for the company." ;
     rdfs:label "Select key customers/accounts" ;
     skos:definition "An Act of Selection that has as input customer data and chooses, from among an organization's customers, the principal accounts to prioritize." ;
@@ -2537,6 +2688,7 @@ bpo:P20013 a owl:Class ;
 
 bpo:P11173 a owl:Class ;
     bpo:pcfID "11173" ; bpo:hierarchyID "3.5.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11173. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for managing the accounts of key customers in order to better maintain relationships with them. Chart a scheme for managing sales. Create a plan for administering accounts of the significant and most important customers of the organization. Coordinate the accounts of principal clients." ;
     rdfs:label "Develop sales/key account plan" ;
     skos:definition "An Act of Formulation that has as input customer data and has as output a sales plan for managing the accounts of key customers." ;
@@ -2548,6 +2700,7 @@ bpo:P11173 a owl:Class ;
 
 bpo:P20014 a owl:Class ;
     bpo:pcfID "20014" ; bpo:hierarchyID "3.5.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20014. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling the accounts of important clients." ;
     rdfs:label "Manage sales/key account plan" ;
     skos:definition "An Act of Monitoring that executes and tracks a key-account plan against its expected outcomes." ;
@@ -2558,6 +2711,7 @@ bpo:P20014 a owl:Class ;
 
 bpo:P14208 a owl:Class ;
     bpo:pcfID "14208" ; bpo:hierarchyID "3.5.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14208. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the corpus of data relating all customers acquired over time. Manage the storage, maintenance, access, revision, and usage of all data on customers. Ensure its security, and determine legitimate use cases that are beneficial to the organization." ;
     rdfs:label "Manage customer master data" ;
     skos:definition "An Act of Information Processing that maintains an organization's corpus of customer data and has as output customer master data." ;
@@ -2570,6 +2724,7 @@ bpo:P14208 a owl:Class ;
 
 bpo:P16598 a owl:Class ;
     bpo:pcfID "16598" ; bpo:hierarchyID "3.5.2.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16598. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gathering the data about customers. Combine the information available locally with the data obtained from external sources." ;
     rdfs:label "Collect and merge internal and third-party customer information" ;
     skos:definition "An Act of Information Processing that has as input customer data and has as output customer master data combining internal and third-party sources." ;
@@ -2580,6 +2735,7 @@ bpo:P16598 a owl:Class ;
 
 bpo:P16599 a owl:Class ;
     bpo:pcfID "16599" ; bpo:hierarchyID "3.5.2.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16599. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Eliminating redundant information in customer data." ;
     rdfs:label "De-duplicate customer data" ;
     skos:definition "An Act of Information Processing that has as input customer data and has as output customer master data with redundant records eliminated." ;
@@ -2600,6 +2756,7 @@ bpo:P16599 a owl:Class ;
 
 bpo:P11779 a owl:Class ;
     bpo:pcfID "11779" ; bpo:hierarchyID "3.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11779. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understanding and refining the customer requirements as provided in a RFP (Request for Proposal) or RFI (Request for Information).  When compiling the response, they must take into consideration whether the requirements are a match with the strategic or tactical plans of the organization and whether they are able to submit a bid/proposal that is competitive based on an understanding of the offerings of other competing organizations. The next step will be to define the pricing and scheduling of the proposed solution and determine whether the proposal will be profitable for the company if accepted. The bid is then submitted and a notification of whether or not it was successful is received." ;
     rdfs:label "Develop and manage sales proposals, bids, and quotes" ;
     skos:definition "An Act of Selling that has as input a request for proposal and produces and submits a sales proposal in response, encompassing requirement refinement, competitive and profitability analysis, pricing, and bid submission." ;
@@ -2626,6 +2783,7 @@ bpo:P11779 a owl:Class ;
 
 bpo:P11781 a owl:Class ;
     bpo:pcfID "11781" ; bpo:hierarchyID "3.5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11781. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Accepting procurement proposals." ;
     rdfs:label "Receive Request For Proposal (RFP)/Request For Quote (RFQ)" ;
     skos:definition "An Act of Communication in which an organization receives a request for proposal transferred from a prospective customer." ;
@@ -2636,6 +2794,7 @@ bpo:P11781 a owl:Class ;
 
 bpo:P11780 a owl:Class ;
     bpo:pcfID "11780" ; bpo:hierarchyID "3.5.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11780. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Clarifying the details about procurement requests, such as the scope, timeline, data sources, type and characteristics and evaluation criteria for the goods or services to be delivered, and any additional terms, conditions or special requirements." ;
     rdfs:label "Refine customer requirements" ;
     skos:definition "An Act of Information Processing that has as input a request for proposal and clarifies and elaborates the customer's stated requirements." ;
@@ -2646,6 +2805,7 @@ bpo:P11780 a owl:Class ;
 
 bpo:P11782 a owl:Class ;
     bpo:pcfID "11782" ; bpo:hierarchyID "3.5.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11782. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating individual price and delivery solicitations for their strengths and weaknesses. Analyze how closely the submitted bids respond to the requirements outlined in the RFPs." ;
     rdfs:label "Review RFP/RFQ request" ;
     skos:definition "An Act of Appraisal that has as input a request for proposal and judges the strengths and weaknesses of price and delivery solicitations against its requirements." ;
@@ -2656,6 +2816,7 @@ bpo:P11782 a owl:Class ;
 
 bpo:P11783 a owl:Class ;
     bpo:pcfID "11783" ; bpo:hierarchyID "3.5.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11783. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Comparing the proposals submitted by different bidders in terms of cost, efficiency and value." ;
     rdfs:label "Perform competitive analysis" ;
     skos:definition "An Act of Analysis that has as input market data and has as output a competitive analysis comparing competing bids on cost, efficiency, and value." ;
@@ -2667,6 +2828,7 @@ bpo:P11783 a owl:Class ;
 
 bpo:P11784 a owl:Class ;
     bpo:pcfID "11784" ; bpo:hierarchyID "3.5.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11784. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the business strategy, forecasted performance, financing and cash flow of the proposals." ;
     rdfs:label "Validate with strategy/business plans" ;
     skos:definition "An Act of Appraisal that judges a proposal's fit with an organization's business strategy, forecasted performance, financing, and cash flow." ;
@@ -2676,6 +2838,7 @@ bpo:P11784 a owl:Class ;
 
 bpo:P11785 a owl:Class ;
     bpo:pcfID "11785" ; bpo:hierarchyID "3.5.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11785. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deepening knowledge about the customer's field of operation and business needs." ;
     rdfs:label "Understand customer business and requirements" ;
     skos:definition "An Act of Analysis that has as input customer data and has as output a customer insight describing the customer's field of operation and business needs." ;
@@ -2687,6 +2850,7 @@ bpo:P11785 a owl:Class ;
 
 bpo:P20015 a owl:Class ;
     bpo:pcfID "20015" ; bpo:hierarchyID "3.5.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20015. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan with detailed steps about how produce and deliver the goods or services." ;
     rdfs:label "Develop solution and delivery approach" ;
     skos:definition "An Act of Formulation that has as output an execution roadmap prescribing the detailed steps to produce and deliver a proposed solution." ;
@@ -2697,6 +2861,7 @@ bpo:P20015 a owl:Class ;
 
 bpo:P11787 a owl:Class ;
     bpo:pcfID "11787" ; bpo:hierarchyID "3.5.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11787. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the needs for internal resources and vacancies." ;
     rdfs:label "Identify staffing requirements" ;
     skos:definition "An Act of Identification that discerns and registers the internal resource and staffing needs for delivering a proposed solution." ;
@@ -2706,6 +2871,7 @@ bpo:P11787 a owl:Class ;
 
 bpo:P11788 a owl:Class ;
     bpo:pcfID "11788" ; bpo:hierarchyID "3.5.3.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11788. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing predicted delivery costs, fees and timelines." ;
     rdfs:label "Develop pricing and scheduling estimates" ;
     skos:definition "An Act of Appraisal that has as input cost data and has as output a pricing analysis estimating delivery costs, fees, and timelines." ;
@@ -2717,6 +2883,7 @@ bpo:P11788 a owl:Class ;
 
 bpo:P11789 a owl:Class ;
     bpo:pcfID "11789" ; bpo:hierarchyID "3.5.3.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11789. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing profitability data. Analyze systematically all relevant metrics and parameters. Report findings and make recommendations for changes to operational strategies." ;
     rdfs:label "Conduct profitability analysis" ;
     skos:definition "An Act of Analysis that has as input cost data and has as output a profitability analysis of a proposed engagement." ;
@@ -2728,6 +2895,7 @@ bpo:P11789 a owl:Class ;
 
 bpo:P20016 a owl:Class ;
     bpo:pcfID "20016" ; bpo:hierarchyID "3.5.3.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20016. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Overseeing the internal review process." ;
     rdfs:label "Manage internal reviews" ;
     skos:definition "An Act of Monitoring that observes and tracks the internal review of a proposal against its expected completion." ;
@@ -2737,6 +2905,7 @@ bpo:P20016 a owl:Class ;
 
 bpo:P20017 a owl:Class ;
     bpo:pcfID "20017" ; bpo:hierarchyID "3.5.3.12" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20017. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining required company-internal authorizations." ;
     rdfs:label "Manage internal approvals" ;
     skos:definition "An Act of Acquisition in which an organization obtains the internal authorizations required to submit a proposal." ;
@@ -2746,6 +2915,7 @@ bpo:P20017 a owl:Class ;
 
 bpo:P11790 a owl:Class ;
     bpo:pcfID "11790" ; bpo:hierarchyID "3.5.3.13" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11790. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Delivering the proposal to the potential client." ;
     rdfs:label "Submit/present bid/proposal/quote to customer" ;
     skos:definition "An Act of Communication in which an organization transfers a sales proposal to a prospective customer." ;
@@ -2756,6 +2926,7 @@ bpo:P11790 a owl:Class ;
 
 bpo:P20018 a owl:Class ;
     bpo:pcfID "20018" ; bpo:hierarchyID "3.5.3.14" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20018. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Amending bids, proposals or quotes with more accurate time, cost or delivery estimates." ;
     rdfs:label "Revise bid/proposal/quote" ;
     skos:definition "An Act of Formulation that has as input a sales proposal and has as output a revised sales proposal with more accurate time, cost, or delivery estimates." ;
@@ -2767,6 +2938,7 @@ bpo:P20018 a owl:Class ;
 
 bpo:P11793 a owl:Class ;
     bpo:pcfID "11793" ; bpo:hierarchyID "3.5.3.15" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11793. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling proposals depending on whether they were accepted or rejected." ;
     rdfs:label "Manage notification outcome" ;
     skos:definition "An Act of Information Processing that receives the acceptance or rejection notification for a submitted proposal and registers and routes the proposal for the corresponding handling." ;
@@ -2781,6 +2953,7 @@ bpo:P11793 a owl:Class ;
 
 bpo:P10185 a owl:Class ;
     bpo:pcfID "10185" ; bpo:hierarchyID "3.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10185. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Taking, receiving, processing, and acknowledging new customer orders or amendments to outstanding customer orders. Monitoring status from order receipt to customer delivery/customer invoicing." ;
     rdfs:label "Manage sales orders" ;
     skos:definition "An Act of Selling that has as input sales order data and processes customer orders from receipt through fulfillment and invoicing, and has as output sales orders." ;
@@ -2798,6 +2971,7 @@ bpo:P10185 a owl:Class ;
 
 bpo:P10194 a owl:Class ;
     bpo:pcfID "10194" ; bpo:hierarchyID "3.5.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10194. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Receiving and confirming orders from customers. Verify that no extra expenses have to be disbursed on part of the organization for labor or inventory when processing the order." ;
     rdfs:label "Accept and validate sales orders" ;
     skos:definition "An Act of Information Processing that has as input sales order data and has as output a confirmed sales order." ;
@@ -2809,6 +2983,7 @@ bpo:P10194 a owl:Class ;
 
 bpo:P10195 a owl:Class ;
     bpo:pcfID "10195" ; bpo:hierarchyID "3.5.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10195. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collecting and maintaining all account information. Collect information about the purchase, servicing, return, and/or commitment of any products/services on part of the organization to its customers. Bring together information from various organizational divisions, and update periodically." ;
     rdfs:label "Collect and maintain account information" ;
     skos:definition "An Act of Information Processing that collects and maintains customer account information and has as output customer master data." ;
@@ -2827,6 +3002,7 @@ bpo:P10195 a owl:Class ;
 
 bpo:P10201 a owl:Class ;
     bpo:pcfID "10201" ; bpo:hierarchyID "3.5.4.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10201. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing essential information of customer accounts." ;
     rdfs:label "Administer key account details" ;
     skos:definition "An Act of Information Processing that maintains the essential information of customer accounts and has as output customer master data." ;
@@ -2836,6 +3012,7 @@ bpo:P10201 a owl:Class ;
 
 bpo:P10202 a owl:Class ;
     bpo:pcfID "10202" ; bpo:hierarchyID "3.5.4.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10202. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Obtaining detailed information about customers." ;
     rdfs:label "Retrieve full customer details" ;
     skos:definition "An Act of Information Processing that has as input customer master data and retrieves the detailed information held about a customer." ;
@@ -2845,6 +3022,7 @@ bpo:P10202 a owl:Class ;
 
 bpo:P10203 a owl:Class ;
     bpo:pcfID "10203" ; bpo:hierarchyID "3.5.4.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10203. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Altering information about involved parties." ;
     rdfs:label "Modify involved party details" ;
     skos:definition "An Act of Information Processing that revises the recorded information about parties involved in a customer account." ;
@@ -2854,6 +3032,7 @@ bpo:P10203 a owl:Class ;
 
 bpo:P10204 a owl:Class ;
     bpo:pcfID "10204" ; bpo:hierarchyID "3.5.4.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10204. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting address information." ;
     rdfs:label "Record address details" ;
     skos:definition "An Act of Information Processing that records the address information of a customer or involved party." ;
@@ -2863,6 +3042,7 @@ bpo:P10204 a owl:Class ;
 
 bpo:P10205 a owl:Class ;
     bpo:pcfID "10205" ; bpo:hierarchyID "3.5.4.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10205. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting contact information." ;
     rdfs:label "Record contact details" ;
     skos:definition "An Act of Information Processing that records the contact information of a customer or involved party." ;
@@ -2872,6 +3052,7 @@ bpo:P10205 a owl:Class ;
 
 bpo:P10206 a owl:Class ;
     bpo:pcfID "10206" ; bpo:hierarchyID "3.5.4.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10206. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing information about important business rules regarding communicating with customers." ;
     rdfs:label "Record key customer communication profile details" ;
     skos:definition "An Act of Information Processing that records the communication-profile information and preferences governing contact with a customer." ;
@@ -2881,6 +3062,7 @@ bpo:P10206 a owl:Class ;
 
 bpo:P10207 a owl:Class ;
     bpo:pcfID "10207" ; bpo:hierarchyID "3.5.4.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10207. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Revising information about involved parties." ;
     rdfs:label "Review involved party information" ;
     skos:definition "An Act of Information Processing that has as input customer master data and reviews the recorded information about involved parties." ;
@@ -2890,6 +3072,7 @@ bpo:P10207 a owl:Class ;
 
 bpo:P10208 a owl:Class ;
     bpo:pcfID "10208" ; bpo:hierarchyID "3.5.4.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10208. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Dismissing information about involved parties." ;
     rdfs:label "Terminate involved party information" ;
     skos:definition "An Act of Information Processing that deactivates or removes the recorded information about an involved party from a customer account." ;
@@ -2899,6 +3082,7 @@ bpo:P10208 a owl:Class ;
 
 bpo:P10196 a owl:Class ;
     bpo:pcfID "10196" ; bpo:hierarchyID "3.5.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10196. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ascertaining the volume or scale of products/services to provide to customers to fulfill sales orders. Check the finished products stored in warehouses, the production capacity, and (in the case of services) the processing speed, as well as work force availability." ;
     rdfs:label "Determine availability" ;
     skos:definition "An Act of Appraisal that has as input sales order data and judges the availability of products, services, capacity, and workforce to fulfill an order." ;
@@ -2909,6 +3093,7 @@ bpo:P10196 a owl:Class ;
 
 bpo:P10197 a owl:Class ;
     bpo:pcfID "10197" ; bpo:hierarchyID "3.5.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10197. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising a blueprint for order fulfillment. Create a schematic flow encompassing all activities to deliver orders to the customers. Outline a procedure for satisfying these orders by answering questions about what needs to happen in sequence to realize an order." ;
     rdfs:label "Determine fulfillment process" ;
     skos:definition "An Act of Formulation that has as output an order fulfillment plan prescribing the sequence of activities to deliver a customer's order." ;
@@ -2919,6 +3104,7 @@ bpo:P10197 a owl:Class ;
 
 bpo:P10199 a owl:Class ;
     bpo:pcfID "10199" ; bpo:hierarchyID "3.5.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10199. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing any unfulfilled orders, and updating the status of any orders that have been accepted and are being attended to. Deliver on any purchase orders that remain unserviced due to temporary unavailability of the product/service. Manage any updates to the sales orders. Revise their status in the order system." ;
     rdfs:label "Process back orders and updates" ;
     skos:definition "An Act of Information Processing that has as input sales order data and updates the status of back-ordered and in-progress sales orders." ;
@@ -2930,6 +3116,7 @@ bpo:P10199 a owl:Class ;
 
 bpo:P10200 a owl:Class ;
     bpo:pcfID "10200" ; bpo:hierarchyID "3.5.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10200. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Attending to any queries received from the customers, even after a sales order has been serviced. Deploy ad hoc personnel for managing these enquiries." ;
     rdfs:label "Handle sales order inquiries including post-order fulfillment transactions" ;
     skos:definition "An Act of Communication in which personnel respond to customer inquiries about a sales order, including after fulfillment." ;
@@ -2944,6 +3131,7 @@ bpo:P10200 a owl:Class ;
 
 bpo:P10187 a owl:Class ;
     bpo:pcfID "10187" ; bpo:hierarchyID "3.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10187. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the organization's partners and alliances, with the objective of maximizing revenue. Train partners regarding the organization's portfolio of products/services. Craft sales forecasts. Examine their performance. Manage all data held by the organization on these partners." ;
     rdfs:label "Manage sales partners and alliances" ;
     skos:definition "An Act of Selling that develops and governs an organization's sales partners and alliances, encompassing partner training, performance evaluation, and partner master-data management." ;
@@ -2957,6 +3145,7 @@ bpo:P10187 a owl:Class ;
 
 bpo:P10211 a owl:Class ;
     bpo:pcfID "10211" ; bpo:hierarchyID "3.5.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10211. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Imparting guidance and instruction to sales partners/alliances concerning products/services. Distribute literature about the organization's products/services. Conduct workshops. Disseminate useful media content to engage and enlighten partners. Create communities through group engagements." ;
     rdfs:label "Provide sales and product/service training to sales partners/alliances" ;
     skos:definition "An Act of Communication that transfers sales training material about an organization's products and services to its sales partners and alliances." ;
@@ -2971,6 +3160,7 @@ bpo:P10211 a owl:Class ;
 
 bpo:P20019 a owl:Class ;
     bpo:pcfID "20019" ; bpo:hierarchyID "3.5.5.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20019. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Provide training and certification to develop strategies for marketing-driven sales." ;
     rdfs:label "Provide certification enablement training" ;
     skos:definition "An Act of Communication that delivers certification-enablement training to sales partners and has as output sales training material." ;
@@ -2981,6 +3171,7 @@ bpo:P20019 a owl:Class ;
 
 bpo:P20020 a owl:Class ;
     bpo:pcfID "20020" ; bpo:hierarchyID "3.5.5.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20020. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing, processing and issuing certifications and accrediting skills and competencies." ;
     rdfs:label "Manage certifications and skills" ;
     skos:definition "An Act of Information Processing that reviews, processes, and issues partner certifications and accredits skills and competencies." ;
@@ -2990,6 +3181,7 @@ bpo:P20020 a owl:Class ;
 
 bpo:P20021 a owl:Class ;
     bpo:pcfID "20021" ; bpo:hierarchyID "3.5.5.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20021. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Backing sales partners and strategic alliances." ;
     rdfs:label "Provide support to partners/alliances" ;
     skos:definition "An Act of Communication in which an organization provides support to its sales partners and strategic alliances." ;
@@ -3000,6 +3192,7 @@ bpo:P20021 a owl:Class ;
 
 bpo:P18641 a owl:Class ;
     bpo:pcfID "18641" ; bpo:hierarchyID "3.5.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18641. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Distributing marketing materials and sales brochures to entities that the company partners with." ;
     rdfs:label "Provide marketing materials to sales partners/alliances" ;
     skos:definition "An Act of Communication that distributes marketing materials and sales brochures to an organization's sales partners and alliances." ;
@@ -3010,6 +3203,7 @@ bpo:P18641 a owl:Class ;
 
 bpo:P10214 a owl:Class ;
     bpo:pcfID "10214" ; bpo:hierarchyID "3.5.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10214. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the performance of its partners/alliances in selling its products/services. Use metrics such as growth in revenue generated, conversion rate, and total outreach to customers for assessing the performance results." ;
     rdfs:label "Evaluate partner/alliance results" ;
     skos:definition "An Act of Appraisal that judges the selling performance of an organization's sales partners and has as output a partner/alliance evaluation." ;
@@ -3020,6 +3214,7 @@ bpo:P10214 a owl:Class ;
 
 bpo:P14209 a owl:Class ;
     bpo:pcfID "14209" ; bpo:hierarchyID "3.5.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14209. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the repository of data relating to the organization's partners/alliances over time. Store, maintain, access, revise, and use all data on partners/alliances. Manage data. Ensure its security. Determine legitimate use cases that are beneficial to the organization." ;
     rdfs:label "Manage sales partner/alliance master data" ;
     skos:definition "An Act of Information Processing that maintains an organization's repository of sales partner and alliance data and has as output partner/alliance master data." ;
@@ -3034,6 +3229,7 @@ bpo:P14209 a owl:Class ;
 
 bpo:P21427 a owl:Class ;
     bpo:pcfID "21427" ; bpo:hierarchyID "3.5.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21427. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Execution of sales at physical / brick and mortar locations." ;
     rdfs:label "Perform sales at physical outlets" ;
     skos:definition "An Act of Selling that executes sales of an organization's products or services at physical, brick-and-mortar locations." ;
@@ -3043,6 +3239,7 @@ bpo:P21427 a owl:Class ;
 
 bpo:P21428 a owl:Class ;
     bpo:pcfID "21428" ; bpo:hierarchyID "3.5.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21428. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Execution of sales within field/remote locations.  This could be any location that is not part of a headquarters location." ;
     rdfs:label "Perform field sales" ;
     skos:definition "An Act of Selling that executes sales of an organization's products or services at field or remote locations away from a headquarters." ;
@@ -3052,6 +3249,7 @@ bpo:P21428 a owl:Class ;
 
 bpo:P21429 a owl:Class ;
     bpo:pcfID "21429" ; bpo:hierarchyID "3.5.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21429. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Execution of sales in an online environment." ;
     rdfs:label "Perform digital sales" ;
     skos:definition "An Act of Selling that executes sales of an organization's products or services in an online environment." ;

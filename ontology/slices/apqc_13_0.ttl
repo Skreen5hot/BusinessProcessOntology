@@ -1048,6 +1048,7 @@ bpo:SustainabilityStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 # --- 13.1.1 (PCF 16379) : establish governance -> Formulation
 bpo:P16379 a owl:Class ;
     bpo:pcfID "16379" ; bpo:hierarchyID "13.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16379. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining and managing the organization's approach to governing business process management. Establish and manage tools to support the governance process. Assign ownership for all business processes. Perform activities to administer the governing process." ;
     rdfs:label "Establish and maintain process management governance" ;
     skos:definition "An Act of Formulation that composes and maintains an organization's approach to governing business process management and produces a process governance framework." ;
@@ -1063,6 +1064,7 @@ bpo:P16379 a owl:Class ;
 # --- 13.1.1.1 (PCF 16380) : define governance approach -> Formulation
 bpo:P16380 a owl:Class ;
     bpo:pcfID "16380" ; bpo:hierarchyID "13.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16380. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining and managing the methodology for administering business process management (BPM). Define the method for setting standards and priorities for BPM efforts. Identify BPM governance leaders. Define BPM project participants' roles." ;
     rdfs:label "Define and manage governance approach" ;
     skos:definition "An Act of Formulation that articulates the methodology for administering business process management and produces a process governance framework specifying standards, priorities, and participant roles." ;
@@ -1075,6 +1077,7 @@ bpo:P16380 a owl:Class ;
 # --- 13.1.1.2 (PCF 16381) : tools and templates -> Formulation
 bpo:P16381 a owl:Class ;
     bpo:pcfID "16381" ; bpo:hierarchyID "13.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16381. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Instituting, organizing, and maintaining the upkeep of the techniques used for business process management (BPM). Create and maintain templates of BPM tools that can be readily implemented, including process engine, business analytics, content management, and collaboration tools." ;
     rdfs:label "Establish and maintain process tools and templates" ;
     skos:definition "An Act of Formulation that institutes and maintains the techniques of business process management and produces reusable BPM tool templates." ;
@@ -1086,6 +1089,7 @@ bpo:P16381 a owl:Class ;
 # --- 13.1.1.3 (PCF 16382) : assign ownership -> Planned Act (confers a role)
 bpo:P16382 a owl:Class ;
     bpo:pcfID "16382" ; bpo:hierarchyID "13.1.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16382. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assigning resources (employees) ownership of tasks. These include the responsibility of identifying, analyzing, and improving business processes in order to meet the goals and objectives such as increasing profits and performance, reducing costs, and accelerating schedules." ;
     rdfs:label "Assign and support process ownership" ;
     skos:definition "A Planned Act that allocates responsibility for business processes to employees, conferring the process owner role and producing a role-definition specification." ;
@@ -1098,6 +1102,7 @@ bpo:P16382 a owl:Class ;
 # --- 13.1.1.4 (PCF 16383) : perform governance activities -> Implementation
 bpo:P16383 a owl:Class ;
     bpo:pcfID "16383" ; bpo:hierarchyID "13.1.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16383. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing and executing activities for governing business processes. Execute activities that encourage participation, accountability, transparency, responsiveness, equity and inclusiveness, etc. within the business processes." ;
     rdfs:label "Perform process governance activities" ;
     skos:definition "An Act of Implementation that carries out the activities prescribed by an organization's process governance framework." ;
@@ -1109,6 +1114,7 @@ bpo:P16383 a owl:Class ;
 # --- 13.1.2 (PCF 16384) : define process frameworks -> Formulation
 bpo:P16384 a owl:Class ;
     bpo:pcfID "16384" ; bpo:hierarchyID "13.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16384. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining and organizing the structural composition of business processes. Design, establish, and administer the framework. Identify any cross-functional processes that are mandatory for achieving business excellence." ;
     rdfs:label "Define and manage process frameworks" ;
     skos:definition "An Act of Formulation that designs and organizes the structural composition of an organization's business processes and produces a process framework." ;
@@ -1122,6 +1128,7 @@ bpo:P16384 a owl:Class ;
 # --- 13.1.2.1 (PCF 16385) : establish framework -> Formulation
 bpo:P16385 a owl:Class ;
     bpo:pcfID "16385" ; bpo:hierarchyID "13.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16385. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining and managing the framework that outlines the required business processes of the organization, key elements, and how they should interact. Institute strategy infrastructure and product, operations, and enterprise management." ;
     rdfs:label "Establish and maintain process framework" ;
     skos:definition "An Act of Formulation that composes and maintains the framework outlining an organization's required business processes, their key elements, and their interactions, and produces a process framework." ;
@@ -1133,6 +1140,7 @@ bpo:P16385 a owl:Class ;
 # --- 13.1.2.2 (PCF 16386) : identify cross-functional processes -> Identification
 bpo:P16386 a owl:Class ;
     bpo:pcfID "16386" ; bpo:hierarchyID "13.1.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16386. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the different functional areas working on the same project or goal." ;
     rdfs:label "Identify cross-functional processes" ;
     skos:definition "An Act of Identification that discerns the business processes spanning multiple functional areas and produces a cross-functional process register." ;
@@ -1144,6 +1152,7 @@ bpo:P16386 a owl:Class ;
 # --- 13.1.3 (PCF 16387) : define processes -> Formulation
 bpo:P16387 a owl:Class ;
     bpo:pcfID "16387" ; bpo:hierarchyID "13.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16387. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining and establishing the business processes of the organization. Scope, analyze, map, and publish processes for the employees who may require it." ;
     rdfs:label "Define processes" ;
     skos:definition "An Act of Formulation that outlines and establishes an organization's business processes by scoping, analyzing, mapping, and publishing them." ;
@@ -1159,6 +1168,7 @@ bpo:P16387 a owl:Class ;
 # --- 13.1.3.1 (PCF 16388) : scope processes -> Formulation
 bpo:P16388 a owl:Class ;
     bpo:pcfID "16388" ; bpo:hierarchyID "13.1.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16388. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the extent and limits of business processes. Define the range and diversity of all the set of activities and tasks that, once completed, will accomplish an organizational goal." ;
     rdfs:label "Scope processes" ;
     skos:definition "An Act of Formulation that defines the extent and limits of a business process and produces a process scope statement." ;
@@ -1170,6 +1180,7 @@ bpo:P16388 a owl:Class ;
 # --- 13.1.3.2 (PCF 16389) : analyze processes -> Analysis
 bpo:P16389 a owl:Class ;
     bpo:pcfID "16389" ; bpo:hierarchyID "13.1.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16389. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing and examining the set of activities and tasks that, once completed, will accomplish an organizational goal. Create a business process model that captures how a business process works and how individuals from different groups work together to achieve a business goal." ;
     rdfs:label "Analyze processes" ;
     skos:definition "An Act of Analysis that examines the activities and tasks of a business process and produces a process analysis and a process model representing how the process works." ;
@@ -1183,6 +1194,7 @@ bpo:P16389 a owl:Class ;
 # --- 13.1.3.2.1 (PCF 20140) : identify best practices -> Identification
 bpo:P20140 a owl:Class ;
     bpo:pcfID "20140" ; bpo:hierarchyID "13.1.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20140. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Realizing those practices and procedures that are the most effective to the success of the business and making that information available." ;
     rdfs:label "Identify published best practices" ;
     skos:definition "An Act of Identification that discerns the practices and procedures most effective for business success and produces a best-practices register." ;
@@ -1194,6 +1206,7 @@ bpo:P20140 a owl:Class ;
 # --- 13.1.3.3 (PCF 21452) : process control points -> Formulation
 bpo:P21452 a owl:Class ;
     bpo:pcfID "21452" ; bpo:hierarchyID "13.1.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21452. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishment of a \"checkpoint\" in a process that prevent the process from continuing unless all requirements are satisfied." ;
     rdfs:label "Identify and denote process control points" ;
     skos:definition "An Act of Formulation that establishes checkpoints within a process and produces a process control point specification gating continuation on satisfied requirements." ;
@@ -1205,6 +1218,7 @@ bpo:P21452 a owl:Class ;
 # --- 13.1.3.4 (PCF 16390) : model and document -> Analysis (descriptive model)
 bpo:P16390 a owl:Class ;
     bpo:pcfID "16390" ; bpo:hierarchyID "13.1.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16390. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining what a business entity does, who is responsible, to what standard a business process should be completed, and how the success of a business process can be determined. Identify processes, gather information gathering, interview participants, map processes, and perform analysis." ;
     rdfs:label "Model and document processes" ;
     skos:definition "An Act of Analysis that gathers information about a business process and produces a process model documenting what is done, who is responsible, and to what standard." ;
@@ -1216,6 +1230,7 @@ bpo:P16390 a owl:Class ;
 # --- 13.1.3.5 (PCF 16391) : publish processes -> Communication
 bpo:P16391 a owl:Class ;
     bpo:pcfID "16391" ; bpo:hierarchyID "13.1.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16391. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Disclosing the information available on business processes. Ensure the availability of the information regarding the business processes to all process team members, business stakeholders, and process owners. Use BPM software, as well as business process diagrams and documents that help depict the required information." ;
     rdfs:label "Publish processes" ;
     skos:definition "An Act of Communication that transfers documented business-process information to process team members, stakeholders, and owners." ;
@@ -1229,6 +1244,7 @@ bpo:P16391 a owl:Class ;
 # --- 13.1.4 (PCF 16392) : manage process performance -> Planned Act (parent)
 bpo:P16392 a owl:Class ;
     bpo:pcfID "16392" ; bpo:hierarchyID "13.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16392. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating and handling the performance of business processes. Provide training to process owners. Support the execution of business processes. Measure and report the performance of the business processes." ;
     rdfs:label "Manage process performance" ;
     skos:definition "A Planned Act that administers the ongoing performance of business processes by training owners, supporting execution, and measuring and reporting performance." ;
@@ -1242,6 +1258,7 @@ bpo:P16392 a owl:Class ;
 # --- 13.1.4.1 (PCF 16393) : provide training -> Act of Training (CCO)
 bpo:P16393 a owl:Class ;
     bpo:pcfID "16393" ; bpo:hierarchyID "13.1.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16393. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing training for the employees and process owners that administer the business processes. Design internal training programs or source third party agencies to provide the skills and training necessary." ;
     rdfs:label "Provide process training" ;
     skos:definition "An Act of Training in which process-management knowledge and skills are imparted to the employees and process owners who administer business processes." ;
@@ -1254,6 +1271,7 @@ bpo:P16393 a owl:Class ;
 # --- 13.1.4.2 (PCF 16394) : support execution -> Implementation
 bpo:P16394 a owl:Class ;
     bpo:pcfID "16394" ; bpo:hierarchyID "13.1.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16394. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assisting and executing the business processes. Use business process execution language (BEPL), which is a standard, executable language for specifying actions within the business processes with the use of web services." ;
     rdfs:label "Support process execution" ;
     skos:definition "An Act of Implementation that assists and carries out the running of an organization's business processes." ;
@@ -1264,6 +1282,7 @@ bpo:P16394 a owl:Class ;
 # --- 13.1.4.3 (PCF 16395) : measure and report -> Monitoring
 bpo:P16395 a owl:Class ;
     bpo:pcfID "16395" ; bpo:hierarchyID "13.1.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16395. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining and using performance indicators to consider the financial perspective, customer perspective, internal process perspective, and learning perspective of the organization." ;
     rdfs:label "Measure and report process performance" ;
     skos:definition "An Act of Monitoring that uses defined performance indicators to measure business-process performance and produces a process performance report." ;
@@ -1277,6 +1296,7 @@ bpo:P16395 a owl:Class ;
 # --- 13.1.4.3.1 (PCF 20141) : identify additional metrics -> Formulation
 bpo:P20141 a owl:Class ;
     bpo:pcfID "20141" ; bpo:hierarchyID "13.1.4.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20141. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the need for additional performance indicators that would be necessary to successfully achieve the business goal." ;
     rdfs:label "Identify additional metrics as required" ;
     skos:definition "An Act of Identification that determines whether additional performance indicators are needed to achieve a business goal and produces a metric gap assessment registering that need." ;
@@ -1288,6 +1308,7 @@ bpo:P20141 a owl:Class ;
 # --- 13.1.5 (PCF 21453) : improve processes -> Improvement (parent)
 bpo:P21453 a owl:Class ;
     bpo:pcfID "21453" ; bpo:hierarchyID "13.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21453. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying, selecting, and managing improvements. Based on the type and scope of the improvement, determination of the appropriate improvement methodology (e.g., Lean, Six Sigma, etc.) should guide the effort. This includes continuous improvement, process redesign, process reengineering, and application of the organizations approaches for Manage projects." ;
     rdfs:label "Improve processes" ;
     skos:definition "An Act of Improvement that identifies, selects, and manages modifications to an organization's business processes so as to raise their efficiency and effectiveness." ;
@@ -1302,6 +1323,7 @@ bpo:P21453 a owl:Class ;
 # --- 13.1.5.1 (PCF 16397) : identify/select opportunities -> Identification (descriptive)
 bpo:P16397 a owl:Class ;
     bpo:pcfID "16397" ; bpo:hierarchyID "13.1.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16397. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Helping a process owner to identify, analyze, and improve existing business processes within an organization to meet new goals and objectives." ;
     rdfs:label "Identify and select improvement opportunities" ;
     skos:definition "An Act of Identification that discerns and appraises candidate improvements to existing business processes and produces an improvement opportunity assessment." ;
@@ -1314,6 +1336,7 @@ bpo:P16397 a owl:Class ;
 # --- 13.1.5.2 (PCF 11138) : select methodology -> Selection (directive)
 bpo:P11138 a owl:Class ;
     bpo:pcfID "11138" ; bpo:hierarchyID "13.1.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11138. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing and choosing methodologies to identify, analyze, and improve existing processes within an organization to meet new goals and objective. Assess the various methodologies available such as process mapping, statistical process control, and simulation. Choose the most appropriate and effective methodology." ;
     rdfs:label "Select process improvement methodology" ;
     skos:definition "An Act of Selection that chooses the most appropriate process-improvement methodology from available candidates and produces a process improvement methodology selection." ;
@@ -1325,6 +1348,7 @@ bpo:P11138 a owl:Class ;
 # --- 13.1.5.3 (PCF 16398) : manage improvement projects -> Implementation
 bpo:P16398 a owl:Class ;
     bpo:pcfID "16398" ; bpo:hierarchyID "13.1.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16398. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing and implementing a systematic approach to help the organization optimize its underlying processes in order to achieve more efficient results. Systematically gather information to clarify issues or problems. Intervene for improvements. Restructure training programs as appropriate to increase effectiveness." ;
     rdfs:label "Manage improvement projects" ;
     skos:definition "An Act of Implementation that develops and puts into effect a systematic approach for optimizing an organization's underlying processes." ;
@@ -1335,6 +1359,7 @@ bpo:P16398 a owl:Class ;
 # --- 13.1.5.4 (PCF 16399) : continuous improvement -> Improvement
 bpo:P16399 a owl:Class ;
     bpo:pcfID "16399" ; bpo:hierarchyID "13.1.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16399. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Persistently implementing activities for improving business processes." ;
     rdfs:label "Perform continuous improvement activities" ;
     skos:definition "An Act of Improvement that persistently enacts incremental modifications to business processes to raise their performance." ;
@@ -1349,6 +1374,7 @@ bpo:P16399 a owl:Class ;
 # its constituent acts. Same intent as bpo:EnterpriseQualityManagementCapability.
 bpo:P17471 a owl:Class ;
     bpo:pcfID "17471" ; bpo:hierarchyID "13.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17471. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing organizational attributes that are closely associated with the quality of output. Determine the quality requirements. Evaluate the correspondence between the quality performance and requirements. Manage non-conformance activities. Ensure implementation and maintenance of the enterprise quality management system." ;
     rdfs:label "Manage enterprise quality" ;
     skos:definition "An Organization Capability that inheres in an Organization to the extent of its capacity to establish quality requirements, evaluate quality performance against those requirements, handle nonconformances, and operate an enterprise quality management system." ;
@@ -1363,6 +1389,7 @@ bpo:P17471 a owl:Class ;
 # --- 13.3.1 (PCF 17472) : establish quality requirements -> Formulation
 bpo:P17472 a owl:Class ;
     bpo:pcfID "17472" ; bpo:hierarchyID "13.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17472. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining essential activities, processes, and attributes for securing enterprise quality. Outline critical characteristics for quality. Outline activities encouraging the preservation of quality. Create quality controls. Confirm capabilities in accordance with quality requirements. Finalize the plan for quality maintenance." ;
     rdfs:label "Establish quality requirements" ;
     skos:definition "An Act of Formulation that determines the critical characteristics, preventive activities, and controls securing enterprise quality and produces a quality plan." ;
@@ -1379,6 +1406,7 @@ bpo:P17472 a owl:Class ;
 # --- 13.3.1.1 (PCF 17473) : Formulation -> Directive CtQ spec
 bpo:P17473 a owl:Class ;
     bpo:pcfID "17473" ; bpo:hierarchyID "13.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17473. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining characteristics crucial for managing enterprise quality. Translate broad customer needs into specific, actionable, measurable performance requirements. Define the key measurable characteristics of key products and processes." ;
     rdfs:label "Define critical-to-quality characteristics" ;
     skos:definition "An Act of Formulation that translates customer needs into a critical-to-quality characteristic specification of measurable product and process requirements." ;
@@ -1390,6 +1418,7 @@ bpo:P17473 a owl:Class ;
 # --- 13.3.1.2 (PCF 17474) : Formulation -> Directive preventive-activity spec
 bpo:P17474 a owl:Class ;
     bpo:pcfID "17474" ; bpo:hierarchyID "13.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17474. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying gaps in customer requirements and determining whether the gap will be mitigated through preventive Quality activities or deemed as acceptable risk. The goal of any preventive quality activities is to create provisions to prevent, control, or reduce the risk of not meeting the CtQCs. In addition, any standard methodology that will be used to design or conduct preventive Quality activities are defined and documented." ;
     rdfs:label "Define preventive quality activities" ;
     skos:definition "An Act of Formulation that specifies the preventive quality activities and methodology for reducing the risk of not meeting critical-to-quality characteristics." ;
@@ -1401,6 +1430,7 @@ bpo:P17474 a owl:Class ;
 # --- 13.3.1.3 (PCF 17475) : Formulation -> Directive quality-control spec
 bpo:P17475 a owl:Class ;
     bpo:pcfID "17475" ; bpo:hierarchyID "13.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17475. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing controls for managing the quality of enterprise. Define the process steps for quality controls and the sampling plan. Identify the tools and methods to measure quality. Define the competencies required." ;
     rdfs:label "Develop quality controls" ;
     skos:definition "An Act of Formulation that develops a quality control specification comprising the control steps, sampling plan, measurement methods, and required competencies." ;
@@ -1416,6 +1446,7 @@ bpo:P17475 a owl:Class ;
 # --- 13.3.1.3.1 (PCF 17476) : Formulation -> Directive control-point spec
 bpo:P17476 a owl:Class ;
     bpo:pcfID "17476" ; bpo:hierarchyID "13.3.1.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17476. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing the steps for developing quality controls. Conduct Alpha testing. Have the product team conduct rework. Send the product/service for Beta testing, and carry on rework as needed." ;
     rdfs:label "Define process steps for controls (or integration points)" ;
     skos:definition "An Act of Formulation that establishes the process steps and integration points of a quality control as a process control point specification." ;
@@ -1427,6 +1458,7 @@ bpo:P17476 a owl:Class ;
 # --- 13.3.1.3.2 (PCF 17477) : Formulation -> Directive sampling plan
 bpo:P17477 a owl:Class ;
     bpo:pcfID "17477" ; bpo:hierarchyID "13.3.1.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17477. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing a detailed summary including measures, on which material, in what manner, and by whom. Identify the parameters to be measured, the range of possible values, and the required resolution. Provide a sampling scheme that details how and when samples will be taken. Select sample sizes. Assign roles and responsibilities." ;
     rdfs:label "Define sampling plan" ;
     skos:definition "An Act of Formulation that produces a sampling plan specifying the parameters, sample sizes, scheme, and responsibilities for taking quality samples." ;
@@ -1438,6 +1470,7 @@ bpo:P17477 a owl:Class ;
 # --- 13.3.1.3.3 (PCF 17478) : Selection -> Directive measurement-method selection
 bpo:P17478 a owl:Class ;
     bpo:pcfID "17478" ; bpo:hierarchyID "13.3.1.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17478. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using tools to measure quality. Use tools such as quality improvement oversight system tool, performance measurement tools, consumer information models/guides, and validation tools to effectively determine the quality levels." ;
     rdfs:label "Identify measurement methods" ;
     skos:definition "An Act of Selection that chooses the tools and methods for measuring quality and produces a measurement method selection." ;
@@ -1449,6 +1482,7 @@ bpo:P17478 a owl:Class ;
 # --- 13.3.1.3.4 (PCF 17479) : Formulation -> Directive competency spec
 bpo:P17479 a owl:Class ;
     bpo:pcfID "17479" ; bpo:hierarchyID "13.3.1.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17479. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the competencies required for developing quality controls. Define the required competencies including compliance management, audit management, and document control and document management." ;
     rdfs:label "Define required competencies" ;
     skos:definition "An Act of Formulation that specifies the competencies required to perform quality-control activities as a competency requirement specification." ;
@@ -1460,6 +1494,7 @@ bpo:P17479 a owl:Class ;
 # --- 13.3.1.4 (PCF 17480) : Appraisal -> Descriptive capability demonstration
 bpo:P17480 a owl:Class ;
     bpo:pcfID "17480" ; bpo:hierarchyID "13.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17480. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Demonstrating the ability and capability to confirm and fulfill the quality requirements in front of customers, managers, employees, board members, associations, regulatory bodies, and creditors. Leverage tools and techniques such as process behavior or control charts, statistical process control, measurement system analysis, gage calibration management, and process capability analysis." ;
     rdfs:label "Prove capability to assess compliance with requirements" ;
     skos:definition "An Act of Appraisal that evaluates and demonstrates an organization's ability to fulfil its quality requirements and produces a compliance capability demonstration." ;
@@ -1471,6 +1506,7 @@ bpo:P17480 a owl:Class ;
 # --- 13.3.1.5 (PCF 17481) : Formulation -> Directive quality plan
 bpo:P17481 a owl:Class ;
     bpo:pcfID "17481" ; bpo:hierarchyID "13.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17481. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing how the critical-to-quality characteristics will be achieved, controlled, ensured, and managed throughout the lifecycle of a product/service. Address quality requirements and critical-to-quality characteristics. Conduct a preventive quality assessment. Describe how to verify the product/service, verification criteria, and response to nonconformance. Keep records to demonstrate conformity." ;
     rdfs:label "Finalize quality plan" ;
     skos:definition "An Act of Formulation that consolidates the quality requirements, controls, and verification approach into a finalized quality plan governing a product or service lifecycle." ;
@@ -1482,6 +1518,7 @@ bpo:P17481 a owl:Class ;
 # --- 13.3.2 (PCF 17482) : evaluate performance to requirements -> Appraisal
 bpo:P17482 a owl:Class ;
     bpo:pcfID "17482" ; bpo:hierarchyID "13.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17482. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing if the performance of the quality plan has achieved the estimated and desired requirements. Conduct tests against the quality plan. Assess the results of these tests." ;
     rdfs:label "Evaluate performance to requirements" ;
     skos:definition "An Act of Appraisal that analyzes whether quality performance has met the requirements set in the quality plan and produces a quality test summary." ;
@@ -1496,6 +1533,7 @@ bpo:P17482 a owl:Class ;
 # --- 13.3.2.1 (PCF 17483) : Info-processing -> Descriptive test data
 bpo:P17483 a owl:Class ;
     bpo:pcfID "17483" ; bpo:hierarchyID "13.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17483. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the quality of organizational processes. Conduct tests. Collect information and data. Record the results of these tests. Determine the dispositions of the test results." ;
     rdfs:label "Test against quality plan" ;
     skos:definition "An Act of Information Processing that conducts quality tests against the quality plan, records the resulting test data, and determines their disposition." ;
@@ -1511,6 +1549,7 @@ bpo:P17483 a owl:Class ;
 # --- 13.3.2.1.1 (PCF 17484) : Measuring -> Descriptive test data
 bpo:P17484 a owl:Class ;
     bpo:pcfID "17484" ; bpo:hierarchyID "13.3.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17484. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating quality performance through periodic or episodic testing against the established standards for quality characteristics. For periodic testing, design a schedule with sufficient time to make any required adjustments to the process or system to maintain the desired level of quality. For episodic testing, conduct a test whenever a known non-conformance or fault occurs, which results in outputs or outcomes known to be unsatisfactory to performance requirements." ;
     rdfs:label "Conduct test and collect data" ;
     skos:definition "An Act of Measuring that tests quality characteristics against established standards and collects the resulting quality test data record." ;
@@ -1523,6 +1562,7 @@ bpo:P17484 a owl:Class ;
 # --- 13.3.2.1.2 (PCF 17485) : Info-processing -> Descriptive record
 bpo:P17485 a owl:Class ;
     bpo:pcfID "17485" ; bpo:hierarchyID "13.3.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17485. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining and recording the results of Test against the quality plan [17483] electronically and in standard formats. Assign ownership to a designated function or role." ;
     rdfs:label "Record result(s)" ;
     skos:definition "An Act of Information Processing that records and stores quality test results in standard formats as a quality test data record." ;
@@ -1534,6 +1574,7 @@ bpo:P17485 a owl:Class ;
 # --- 13.3.2.1.3 (PCF 17486) : Selection -> Directive disposition
 bpo:P17486 a owl:Class ;
     bpo:pcfID "17486" ; bpo:hierarchyID "13.3.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17486. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deciding whether to take any additional actions based on the results of quality tests. Initiate a quarantine disposition and relocated inventory, scrap workflow item and scrap transaction, rework operation, net-able and nonnet-able items, and the activity list." ;
     rdfs:label "Determine disposition of result(s)" ;
     skos:definition "An Act of Selection that decides the disposition action for quality test results and produces a quality test result disposition." ;
@@ -1546,6 +1587,7 @@ bpo:P17486 a owl:Class ;
 # --- 13.3.2.2 (PCF 17487) : Appraisal -> Descriptive summary
 bpo:P17487 a owl:Class ;
     bpo:pcfID "17487" ; bpo:hierarchyID "13.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17487. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the significance of the sample. Summarize the results of the test. Recommend improvement actions. Decide what steps to take next." ;
     rdfs:label "Assess results of tests" ;
     skos:definition "An Act of Appraisal that judges the significance of quality test results, summarizes them, and recommends improvement actions." ;
@@ -1562,6 +1604,7 @@ bpo:P17487 a owl:Class ;
 # --- 13.3.2.2.1 (PCF 17488) : Appraisal -> Descriptive sample-significance assessment
 bpo:P17488 a owl:Class ;
     bpo:pcfID "17488" ; bpo:hierarchyID "13.3.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17488. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the significance of the sample chosen for the test in order to determine whether or not the sample is representative of the larger output or outcome. Determine if the sample meets or does not meet the requirements. Identify the conditions for acceptance, rejection, remediation, and prevention." ;
     rdfs:label "Assess sample significance" ;
     skos:definition "An Act of Appraisal that judges whether a test sample is representative of the larger output and produces a sample significance assessment." ;
@@ -1574,6 +1617,7 @@ bpo:P17488 a owl:Class ;
 # --- 13.3.2.2.2 (PCF 17489) : Info-processing -> Descriptive summary
 bpo:P17489 a owl:Class ;
     bpo:pcfID "17489" ; bpo:hierarchyID "13.3.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17489. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the major facts and figures of the quality test results in order to provide insights and information. Use charts, tables, statistical test results, and written findings and conclusions in a summary of results." ;
     rdfs:label "Summarize result(s)" ;
     skos:definition "An Act of Information Processing that condenses quality test results into a quality test summary of findings and conclusions." ;
@@ -1586,6 +1630,7 @@ bpo:P17489 a owl:Class ;
 # --- 13.3.2.2.3 (PCF 17490) : Formulation -> Directive improvement recommendation
 bpo:P17490 a owl:Class ;
     bpo:pcfID "17490" ; bpo:hierarchyID "13.3.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17490. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recommending measures for improvement. Assess the summarized results to identify areas which can be improved. Suggest actions to management for improving the quality plan basis on the results of the tests." ;
     rdfs:label "Recommend actions" ;
     skos:definition "An Act of Formulation that composes recommended improvement measures for the quality plan as a quality improvement recommendation." ;
@@ -1598,6 +1643,7 @@ bpo:P17490 a owl:Class ;
 # --- 13.3.2.2.4 (PCF 17491) : Selection -> Directive decision
 bpo:P17491 a owl:Class ;
     bpo:pcfID "17491" ; bpo:hierarchyID "13.3.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17491. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Selecting the subsequent actions that the organization can adopt for improving the enterprise quality. Select measures and recommended actions for managing the enterprise quality." ;
     rdfs:label "Decide next steps" ;
     skos:definition "An Act of Selection that chooses, from the recommended quality-improvement actions, those the organization will adopt and produces a quality improvement action decision prescribing them." ;
@@ -1610,6 +1656,7 @@ bpo:P17491 a owl:Class ;
 # --- 13.3.3 (PCF 17492) : manage non-conformance -> Planned Act (bounded)
 bpo:P17492 a owl:Class ;
     bpo:pcfID "17492" ; bpo:hierarchyID "13.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17492. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling any nonconformance activities or events. Assess the potential impact of the nonconformity. Decide the immediate actions to take. Identify the root causes. Take corrective or preventive action. Ensure future conformance." ;
     rdfs:label "Manage non-conformance" ;
     skos:definition "A Planned Act that handles a nonconformance event from impact assessment through corrective or preventive action to closure of the nonconformance record." ;
@@ -1626,6 +1673,7 @@ bpo:P17492 a owl:Class ;
 # --- 13.3.3.1 (PCF 17493) : Appraisal -> Descriptive impact assessment
 bpo:P17493 a owl:Class ;
     bpo:pcfID "17493" ; bpo:hierarchyID "13.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17493. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing any nonconformance events. Determine the need for corrective and/or preventative action(s). Leverage root-cause analysis, risk exposure, and other evaluations to properly review and approve/reject subsequent actions." ;
     rdfs:label "Assess potential impact" ;
     skos:definition "An Act of Appraisal that evaluates a nonconformance event and produces a nonconformance impact assessment determining the need for corrective or preventive action." ;
@@ -1638,6 +1686,7 @@ bpo:P17493 a owl:Class ;
 # --- 13.3.3.2 (PCF 17494) : Selection -> Directive immediate action
 bpo:P17494 a owl:Class ;
     bpo:pcfID "17494" ; bpo:hierarchyID "13.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17494. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Initiating immediate corrective, preventative, or no action based upon the impact and likelihood of reoccurrence. Consider cost/benefit, risk exposure, timing, the assignment of responsibility, and other pertinent factors." ;
     rdfs:label "Determine immediate action(s)" ;
     skos:definition "An Act of Selection that chooses the immediate corrective, preventive, or no-action response to a nonconformance and produces a corrective and preventive action specification." ;
@@ -1650,6 +1699,7 @@ bpo:P17494 a owl:Class ;
 # --- 13.3.3.3 (PCF 17495) : Analysis -> Descriptive RCA
 bpo:P17495 a owl:Class ;
     bpo:pcfID "17495" ; bpo:hierarchyID "13.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17495. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the reasons that have triggered the nonconformance events or activities. Perform a root-cause analysis through documentary evidence and interviews. Involve the appropriate individuals. Leverage cause analysis and risk assessment." ;
     rdfs:label "Identify root cause(s)" ;
     skos:definition "An Act of Analysis that examines a nonconformance event and produces a root cause analysis of the reasons that triggered it." ;
@@ -1662,6 +1712,7 @@ bpo:P17495 a owl:Class ;
 # --- 13.3.3.4 (PCF 17496) : Implementation -> CAPA enacted
 bpo:P17496 a owl:Class ;
     bpo:pcfID "17496" ; bpo:hierarchyID "13.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17496. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Pursuing corrective and preventative activities to eliminate the cause of a detected nonconformity. Define the nonconformity. Communicate and assign responsibility. Identify the appropriate corrective and preventive action. Implement and monitor for reoccurrence." ;
     rdfs:label "Take corrective or preventative action" ;
     skos:definition "An Act of Implementation that carries a corrective and preventive action specification into effect to eliminate the cause of a detected nonconformity and produces a corrective action completion record." ;
@@ -1674,6 +1725,7 @@ bpo:P17496 a owl:Class ;
 # --- 13.3.3.5 (PCF 17497) : Info-processing -> Descriptive nonconformance record
 bpo:P17497 a owl:Class ;
     bpo:pcfID "17497" ; bpo:hierarchyID "13.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17497. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Closing nonconformance. Perform all the final processes related to the nonconformance, including documenting root causes. Document corrective and preventive actions." ;
     rdfs:label "Close non-conformance" ;
     skos:definition "An Act of Information Processing that documents the root causes and corrective and preventive actions and closes the nonconformance record." ;
@@ -1687,6 +1739,7 @@ bpo:P17497 a owl:Class ;
 # --- 13.3.4 (PCF 17498) : implement and maintain the EQMS -> Implementation
 bpo:P17498 a owl:Class ;
     bpo:pcfID "17498" ; bpo:hierarchyID "13.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17498. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing and administering the software that manages content and business processes for quality and compliance across the value chain. Define the quality strategy. Plan and deploy the EQMS scope, targets, and goals. Identify core process controls and metric. Develop EQMS governance. Assess the performance of EQMS. Encourage improvements in EQMS." ;
     rdfs:label "Implement and maintain the enterprise quality management system (EQMS)" ;
     skos:definition "An Act of Implementation that establishes and deploys the enterprise quality management system by defining its strategy, scope, controls, and policies and assessing and improving its performance." ;
@@ -1704,6 +1757,7 @@ bpo:P17498 a owl:Class ;
 # --- 13.3.4.1 (PCF 17499) : Formulation -> Directive quality strategy
 bpo:P17499 a owl:Class ;
     bpo:pcfID "17499" ; bpo:hierarchyID "13.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17499. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the strategy for managing enterprise quality. Define and formalize quality techniques and standards. Assign responsibilities for achieving the required quality levels. Standardize the quality maintenance procedure, tools and techniques, recording and reporting, the timing of quality maintenance activities, and the roles and responsibilities for the quality management team." ;
     rdfs:label "Define the quality strategy" ;
     skos:definition "An Act of Formulation that formalizes the techniques, standards, and responsibilities for managing enterprise quality as a quality strategy." ;
@@ -1715,6 +1769,7 @@ bpo:P17499 a owl:Class ;
 # --- 13.3.4.2 (PCF 17500) : Implementation -> scope/goal spec deployed
 bpo:P17500 a owl:Class ;
     bpo:pcfID "17500" ; bpo:hierarchyID "13.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17500. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing and effectively deploying the scope, targets, and goals of EQMS. Define the role of EQMS through nonconformance/corrective and preventive action, compliance/audit management, risk management, failure mode and effects analysis, and statistical process control. Implement EQMS into operational activities. Define the goals and objectives that are to be achieved by the EQMS." ;
     rdfs:label "Plan and deploy the EQMS scope, targets, and goals" ;
     skos:definition "An Act of Implementation that establishes and deploys the EQMS scope, targets, and goals into operational activities, governed by an EQMS scope and goal specification." ;
@@ -1726,6 +1781,7 @@ bpo:P17500 a owl:Class ;
 # --- 13.3.4.3 (PCF 17501) : Formulation -> Directive control point + indicator spec
 bpo:P17501 a owl:Class ;
     bpo:pcfID "17501" ; bpo:hierarchyID "13.3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17501. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing and implementing the processes, controls, and metrics for maintenance of EQMS. Define the role of EQMS in failure mode and effects analysis, complaint handling, and advanced product quality planning. Establish the role of EQMS in evaluating metrics such as cost of quality, overall equipment effectiveness, on-time and complete shipments, percentage of products in compliance, and new product introductions." ;
     rdfs:label "Identify core EQMS processes, controls, and metrics" ;
     skos:definition "An Act of Formulation that specifies the core EQMS processes, controls, and metrics as a process control point specification." ;
@@ -1738,6 +1794,7 @@ bpo:P17501 a owl:Class ;
 # --- 13.3.4.4 (PCF 17502) : Formulation -> Directive EQMS governance docs
 bpo:P17502 a owl:Class ;
     bpo:pcfID "17502" ; bpo:hierarchyID "13.3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17502. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting the process limits. Gather required information. Align with other documents and processes. Define the document structure." ;
     rdfs:label "Develop and document EQMS policies, procedures, standards, and measures" ;
     skos:definition "An Act of Formulation that composes and documents the EQMS policies, procedures, standards, and measures as a process governance framework." ;
@@ -1749,6 +1806,7 @@ bpo:P17502 a owl:Class ;
 # --- 13.3.4.5 (PCF 17503) : Appraisal -> Descriptive EQMS performance assessment
 bpo:P17503 a owl:Class ;
     bpo:pcfID "17503" ; bpo:hierarchyID "13.3.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17503. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Benchmarking current performance in quality metrics that span across the value chain. Identify gaps in performance as compared to industry peers. Identify and implement complementary EQMS capabilities. Enable a continuous improvement environment." ;
     rdfs:label "Assess the EQMS performance" ;
     skos:definition "An Act of Appraisal that benchmarks EQMS quality metrics against industry peers and produces an EQMS performance assessment identifying performance gaps." ;
@@ -1760,6 +1818,7 @@ bpo:P17503 a owl:Class ;
 # --- 13.3.4.6 (PCF 17504) : Improvement -> aggregating improvement process
 bpo:P17504 a owl:Class ;
     bpo:pcfID "17504" ; bpo:hierarchyID "13.3.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17504. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Rewarding excellence in quality. Create and maintain quality partnerships. Maintain talent capabilities and competencies. Incorporate EQMS messaging into communication channels. Transfer proven EQMS methods. Consider factors such as EQMS reviews and gap assessments and the alignment and compatibility of business processes and quality. Adopt Lean principles." ;
     rdfs:label "Create environment and capability for EQMS improvement(s)" ;
     skos:definition "An Act of Improvement that enacts the rewards, partnerships, talent, communications, and method-transfer changes that build an environment and capability for ongoing EQMS improvement." ;
@@ -1776,6 +1835,7 @@ bpo:P17504 a owl:Class ;
 # --- 13.3.4.6.1 (PCF 17505) : Implementation -> reward granting
 bpo:P17505 a owl:Class ;
     bpo:pcfID "17505" ; bpo:hierarchyID "13.3.4.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17505. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Provisioning rewards for achieving quality excellence. Provide monetary and nonmonetary rewards such as compensation, vacations, gift cards, and reimbursements to employees in in recognition of their services, efforts, and achievements in quality excellence." ;
     rdfs:label "Reward quality excellence" ;
     skos:definition "An Act of Implementation that grants monetary and nonmonetary rewards to personnel in recognition of quality excellence, governed by a recognition and reward plan." ;
@@ -1787,6 +1847,7 @@ bpo:P17505 a owl:Class ;
 # --- 13.3.4.6.2 (PCF 17506) : Implementation -> partnership formation
 bpo:P17506 a owl:Class ;
     bpo:pcfID "17506" ; bpo:hierarchyID "13.3.4.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17506. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing and maintaining partnerships with third-party sources to achieve quality excellence. Source and evaluate third-party sources both public and private to ensure that the most effective and efficient partnerships are formed." ;
     rdfs:label "Create and maintain quality partnerships" ;
     skos:definition "An Act of Implementation that forms and maintains partnerships with third-party sources to advance quality excellence and produces a quality partnership agreement." ;
@@ -1798,6 +1859,7 @@ bpo:P17506 a owl:Class ;
 # --- 13.3.4.6.3 (PCF 17507) : Implementation -> talent training
 bpo:P17507 a owl:Class ;
     bpo:pcfID "17507" ; bpo:hierarchyID "13.3.4.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17507. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining a common denominator for the competency level within the organization's talent circle. Conduct training sessions, skill development activities, and quality excellence activities to ensure that the resources of the organization are competent enough and have the capabilities to achieve the required level of quality." ;
     rdfs:label "Maintain talent capabilities and competencies" ;
     skos:definition "An Act of Training that conducts training sessions and skill-development activities to maintain personnel competencies at the level required for quality, governed by a training plan." ;
@@ -1810,6 +1872,7 @@ bpo:P17507 a owl:Class ;
 # --- 13.3.4.6.4 (PCF 17508) : Implementation -> EQMS communications
 bpo:P17508 a owl:Class ;
     bpo:pcfID "17508" ; bpo:hierarchyID "13.3.4.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17508. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assimilating all the communication related to the EQMS into the organization's already established communication channels." ;
     rdfs:label "Incorporate EQMS messaging into communication channels" ;
     skos:definition "An Act of Communication that disseminates EQMS-related messaging through the organization's established communication channels, governed by a communication plan." ;
@@ -1821,6 +1884,7 @@ bpo:P17508 a owl:Class ;
 # --- 13.3.4.6.5 (PCF 17509) : Implementation -> authorized access established
 bpo:P17509 a owl:Class ;
     bpo:pcfID "17509" ; bpo:hierarchyID "13.3.4.6.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17509. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring EQMS access to the person in charge of the quality management process. Establish who has the authority to manage the EQMS. Ensure access of EQMS to only the person(s) in authority." ;
     rdfs:label "Assure independent EQMS management access to appropriate authority in the organization" ;
     skos:definition "An Act of Implementation that establishes and secures EQMS management access for the authorized quality role, governed by a role definition specification." ;
@@ -1833,6 +1897,7 @@ bpo:P17509 a owl:Class ;
 # --- 13.3.4.6.6 (PCF 17510) : Info-processing -> Descriptive best-practices register
 bpo:P17510 a owl:Class ;
     bpo:pcfID "17510" ; bpo:hierarchyID "13.3.4.6.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17510. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recording and transferring the best practices and proven methods associated with enterprise quality management systems (EQMS) that can be leveraged in improving the organization's framework. Record proven methodologies and approaches with the objective of communicating them for upgrading, refining, and enhancing the organization's systems." ;
     rdfs:label "Transfer proven EQMS methods" ;
     skos:definition "An Act of Information Processing that records and disseminates proven EQMS methods and best practices as a best practices register." ;
@@ -1847,6 +1912,7 @@ bpo:P17510 a owl:Class ;
 
 bpo:P11074 a owl:Class ;
     bpo:pcfID "11074" ; bpo:hierarchyID "13.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11074. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Planning, designing, and implementing the change. Ensure improvement in the change process." ;
     rdfs:label "Manage change" ;
     skos:definition "A Planned Act in which an Agent plans, designs, implements, and sustains a deliberate organizational change, comprising the planning, design, implementation, and improvement-sustainment of that change." ;
@@ -1861,6 +1927,7 @@ bpo:P11074 a owl:Class ;
 # --- 13.4.1 (PCF 21457) : plan for change -> Formulation
 bpo:P21457 a owl:Class ;
     bpo:pcfID "21457" ; bpo:hierarchyID "13.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21457. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating impact and planning change activities. Spanning the lifecycle of change from initial concept, to designing, implementing, and sustaining the change, change planning identifies the activities to enage and enable the stakeholders and all impacted by the change. Change plans should address the interplay between people, process, technology, and knowledge to guide the transition, or tranformation, from current state to the future state." ;
     rdfs:label "Plan for change" ;
     skos:definition "An Act of Formulation that evaluates the impact of an intended change and composes a change management plan identifying the activities needed to engage stakeholders and guide the transition from current to future state." ;
@@ -1887,6 +1954,7 @@ bpo:P21457 a owl:Class ;
 # --- 13.4.1.1 (PCF 11140) : Identification -> descriptive
 bpo:P11140 a owl:Class ;
     bpo:pcfID "11140" ; bpo:hierarchyID "13.4.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11140. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and communicating with shareholders affected by the change. Consider internal and external stakeholders that will be affected by the change. Determine the amount of influence the change will have on them. Ensure the involvement of these stakeholders in the change process by effectively communicating with them." ;
     rdfs:label "Determine stakeholders" ;
     skos:definition "An Act of Identification that discerns the internal and external stakeholders affected by a change and produces a stakeholder assessment registering them and their influence." ;
@@ -1899,6 +1967,7 @@ bpo:P11140 a owl:Class ;
 # --- 13.4.1.2 (PCF 11139) : Appraisal -> descriptive
 bpo:P11139 a owl:Class ;
     bpo:pcfID "11139" ; bpo:hierarchyID "13.4.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11139. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the level of preparedness of the conditions, attitudes, and resources at all levels in the organization needed for change to happen successfully. Define scope of the proposed change. Select the tools for a change readiness assessment." ;
     rdfs:label "Assess readiness for change" ;
     skos:definition "An Act of Appraisal that evaluates the preparedness of an organization's conditions, attitudes, and resources for a change and produces a change readiness assessment." ;
@@ -1910,6 +1979,7 @@ bpo:P11139 a owl:Class ;
 # --- 13.4.1.3 (PCF 11141) : Identification (agents; no definitional ICE)
 bpo:P11141 a owl:Class ;
     bpo:pcfID "11141" ; bpo:hierarchyID "13.4.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11141. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying people exhibit an extraordinary interest in the adoption, implementation, and success of the change. Engage champions in each division or team. Define the roles and responsibilities for the change champions. Determine criteria for selecting change champions. Provide training sessions to champions. Reward and recognize champions." ;
     rdfs:label "Identify change champion(s)" ;
     skos:definition "An Act of Identification that discerns the individuals who exhibit exceptional commitment to the success of a change and are to act as its champions." ;
@@ -1921,6 +1991,7 @@ bpo:P11141 a owl:Class ;
 # --- 13.4.1.4 (PCF 11142) : Planned Act (team assembly)
 bpo:P11142 a owl:Class ;
     bpo:pcfID "11142" ; bpo:hierarchyID "13.4.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11142. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing a design team for implementing change throughout the organization." ;
     rdfs:label "Form design team" ;
     skos:definition "A Planned Act in which an Agent assembles a team tasked with designing and implementing a change throughout the organization." ;
@@ -1931,6 +2002,7 @@ bpo:P11142 a owl:Class ;
 # --- 13.4.1.5 (PCF 11143) : Formulation -> directive
 bpo:P11143 a owl:Class ;
     bpo:pcfID "11143" ; bpo:hierarchyID "13.4.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11143. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the extent of the area or subject matter that the change process deals with or to which it is relevant. Establish a set of tools, processes, skills, and principles for managing the people side of change to achieve the required outcomes of the change process." ;
     rdfs:label "Define scope" ;
     skos:definition "An Act of Formulation that delimits and prescribes the extent of the area and subject matter that a change process addresses, producing a process scope statement." ;
@@ -1942,6 +2014,7 @@ bpo:P11143 a owl:Class ;
 # --- 13.4.1.6 (PCF 11144) : Analysis -> descriptive
 bpo:P11144 a owl:Class ;
     bpo:pcfID "11144" ; bpo:hierarchyID "13.4.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11144. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using graphical and statistical tools such as pareto diagrams, process flow diagrams, cause-and-effect diagrams, check sheets, histograms, run charts, and scatter diagrams." ;
     rdfs:label "Understand current state" ;
     skos:definition "An Act of Analysis that examines the organization's as-is processes and conditions using graphical and statistical tools and produces a current state assessment." ;
@@ -1953,6 +2026,7 @@ bpo:P11144 a owl:Class ;
 # --- 13.4.1.7 (PCF 11145) : Formulation -> directive
 bpo:P11145 a owl:Class ;
     bpo:pcfID "11145" ; bpo:hierarchyID "13.4.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11145. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the state or position that the organization wants to be in after the implementation of the change. Gather necessary information about the processes, structures, and cultures. Define resource requirements." ;
     rdfs:label "Define future state" ;
     skos:definition "An Act of Formulation that prescribes the target state the organization intends to reach after a change, producing a future state specification." ;
@@ -1964,6 +2038,7 @@ bpo:P11145 a owl:Class ;
 # --- 13.4.1.8 (PCF 11146) : Analysis -> descriptive
 bpo:P11146 a owl:Class ;
     bpo:pcfID "11146" ; bpo:hierarchyID "13.4.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11146. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Looking beyond the immediate consequences of the threat to a critical asset and placing it in the context of what is important to the organization. Identify the impact of threats to critical assets. Create risk evaluation criteria. Evaluate the impact of threats to critical assets. Incorporate probability into the risk analysis." ;
     rdfs:label "Conduct organizational risk analysis" ;
     skos:definition "An Act of Analysis that examines threats to the organization's critical assets in light of their probability and consequence and produces an organizational risk analysis." ;
@@ -1975,6 +2050,7 @@ bpo:P11146 a owl:Class ;
 # --- 13.4.1.9 (PCF 11147) : Appraisal -> descriptive
 bpo:P11147 a owl:Class ;
     bpo:pcfID "11147" ; bpo:hierarchyID "13.4.1.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11147. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the culture within the organization. Adopt a quantitative, multidimensional measurement approach of an organization's culture and the aspirations for it. Diagnose cultural activities, enhance leadership sections. Integrate cultures." ;
     rdfs:label "Assess cultural context" ;
     skos:definition "An Act of Appraisal that evaluates the organization's culture along multiple dimensions and produces a cultural context assessment." ;
@@ -1986,6 +2062,7 @@ bpo:P11147 a owl:Class ;
 # --- 13.4.1.10 (PCF 20143) : Identification -> descriptive
 bpo:P20143 a owl:Class ;
     bpo:pcfID "20143" ; bpo:hierarchyID "13.4.1.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20143. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the impact of threats to critical assets. Determine what groups are impacted by this impact." ;
     rdfs:label "Identify impacted groups" ;
     skos:definition "An Act of Identification that discerns which organizational groups are impacted by a change and registers them in a change impact assessment." ;
@@ -1997,6 +2074,7 @@ bpo:P20143 a owl:Class ;
 # --- 13.4.1.11 (PCF 20144) : Appraisal -> descriptive
 bpo:P20144 a owl:Class ;
     bpo:pcfID "20144" ; bpo:hierarchyID "13.4.1.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20144. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the impact of threats to critical assets. Determine what assets will be impacted by the change." ;
     rdfs:label "Determine degree/extent of impact" ;
     skos:definition "An Act of Appraisal that evaluates the degree and extent to which the change impacts the organization's assets and records its judgement in a change impact assessment." ;
@@ -2008,6 +2086,7 @@ bpo:P20144 a owl:Class ;
 # --- 13.4.1.12 (PCF 11148) : Formulation -> directive (role assignment)
 bpo:P11148 a owl:Class ;
     bpo:pcfID "11148" ; bpo:hierarchyID "13.4.1.12" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11148. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and assigning the people accountable for effective change management. Hold managers accountable for ensuring change happens systematically and rigorously. Ensure that certain behaviors are rewarded or reprimanded accordingly." ;
     rdfs:label "Establish accountability for change management" ;
     skos:definition "A Planned Act that identifies and assigns accountability for managing a change to specific persons, holding them responsible for ensuring the change happens systematically." ;
@@ -2019,6 +2098,7 @@ bpo:P11148 a owl:Class ;
 # --- 13.4.1.13 (PCF 11149) : Identification -> descriptive
 bpo:P11149 a owl:Class ;
     bpo:pcfID "11149" ; bpo:hierarchyID "13.4.1.13" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11149. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the circumstances or obstacles that keep the organization from progressing. Identify who and what are the resources resisting change. Identify integration failures, threats by competitive forces, and complexity failures." ;
     rdfs:label "Identify barriers to change" ;
     skos:definition "An Act of Identification that discerns the obstacles and sources of resistance impeding a change and registers them in a change barrier analysis." ;
@@ -2030,6 +2110,7 @@ bpo:P11149 a owl:Class ;
 # --- 13.4.1.14 (PCF 11150) : Identification (entities; no definitional ICE)
 bpo:P11150 a owl:Class ;
     bpo:pcfID "11150" ; bpo:hierarchyID "13.4.1.14" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11150. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the person(s) or thing(s)responsible for making the change possible. Consider factors such as interdependence of efforts, reward to the integrators, sharing of power and responsibility, and employee understanding of why change is essential." ;
     rdfs:label "Determine change enablers" ;
     skos:definition "An Act of Identification that discerns the persons and factors that make a change possible." ;
@@ -2040,6 +2121,7 @@ bpo:P11150 a owl:Class ;
 # --- 13.4.1.15 (PCF 11151) : Formulation -> directive
 bpo:P11151 a owl:Class ;
     bpo:pcfID "11151" ; bpo:hierarchyID "13.4.1.15" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11151. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the resource requirements, and developing measures for change. Identify the financial, material, human, and informational resources needed to successfully implement the change. Develop programs, campaigns, etc. for establishing the change within the organization." ;
     rdfs:label "Identify resources and develop measures" ;
     skos:definition "An Act of Formulation that, having identified the resources a change requires, develops the measures and programs prescribed to establish the change, producing a change adoption measure specification." ;
@@ -2051,6 +2133,7 @@ bpo:P11151 a owl:Class ;
 # --- 13.4.2 (PCF 11135) : design the change -> Formulation
 bpo:P11135 a owl:Class ;
     bpo:pcfID "11135" ; bpo:hierarchyID "13.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11135. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing plans for change management, training, communication, and rewards/incentives. Establish metrics for measuring the change adoption. Clarify new roles for employees. Identify budgets." ;
     rdfs:label "Design the change" ;
     skos:definition "An Act of Formulation that develops the change management, training, communication, and rewards plans, the adoption metrics, and the new-role definitions that together design how a change will be enacted." ;
@@ -2070,6 +2153,7 @@ bpo:P11135 a owl:Class ;
 # --- 13.4.2.1 (PCF 11152) : Analysis -> descriptive (no definitional ICE)
 bpo:P11152 a owl:Class ;
     bpo:pcfID "11152" ; bpo:hierarchyID "13.4.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11152. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Correlating the change initiative with the other initiatives. Create an alignment between the goals and objectives of the change process and that of the other initiatives." ;
     rdfs:label "Assess connection to other initiatives" ;
     skos:definition "An Act of Analysis that examines how a change initiative correlates with the organization's other initiatives and characterizes their alignment." ;
@@ -2080,6 +2164,7 @@ bpo:P11152 a owl:Class ;
 # --- 13.4.2.2 (PCF 11153) : Formulation -> directive
 bpo:P11153 a owl:Class ;
     bpo:pcfID "11153" ; bpo:hierarchyID "13.4.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11153. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a detailed structure summary for the purposes of managing the change. Demonstrate the reasons for the change. Define the type and scope of change. Form a change management team. Create a communication plan." ;
     rdfs:label "Develop change management plans" ;
     skos:definition "An Act of Formulation that composes a detailed change management plan structuring how a change will be managed." ;
@@ -2091,6 +2176,7 @@ bpo:P11153 a owl:Class ;
 # --- 13.4.2.3 (PCF 11154) : Formulation -> directive
 bpo:P11154 a owl:Class ;
     bpo:pcfID "11154" ; bpo:hierarchyID "13.4.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11154. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a detailed summary of all the actions relevant to teaching a person a particular skill or type of behavior. Determine who will deliver the training. Determine when and where the apprentice or trainee needs to go to receive the structured component of the training." ;
     rdfs:label "Develop training plan" ;
     skos:definition "An Act of Formulation that composes a training plan prescribing the actions, delivery, timing, and location for teaching the skills a change requires." ;
@@ -2102,6 +2188,7 @@ bpo:P11154 a owl:Class ;
 # --- 13.4.2.4 (PCF 11155) : Formulation -> directive
 bpo:P11155 a owl:Class ;
     bpo:pcfID "11155" ; bpo:hierarchyID "13.4.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11155. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a plan for imparting or exchanging information relevant the to change. Define goals, objectives, and audience. Gather tools for all communications." ;
     rdfs:label "Develop communication plan" ;
     skos:definition "An Act of Formulation that composes a communication plan prescribing the goals, audiences, and channels for imparting information about a change." ;
@@ -2113,6 +2200,7 @@ bpo:P11155 a owl:Class ;
 # --- 13.4.2.5 (PCF 20145) : Planned Act (champion deployment)
 bpo:P20145 a owl:Class ;
     bpo:pcfID "20145" ; bpo:hierarchyID "13.4.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20145. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Utilizing champions that have been trained to carry out needed changes. Engage champions to communicate roles and responsibilities for the change." ;
     rdfs:label "Assign change champion(s)" ;
     skos:definition "A Planned Act in which trained change champions are deployed and engaged to carry out and communicate the change in their respective areas." ;
@@ -2124,6 +2212,7 @@ bpo:P20145 a owl:Class ;
 # --- 13.4.2.6 (PCF 11156) : Formulation -> directive
 bpo:P11156 a owl:Class ;
     bpo:pcfID "11156" ; bpo:hierarchyID "13.4.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11156. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and designing the plan for rewarding the employees exhibiting the desired behavior. Specify rewards in recognition of service, effort, or achievement regarding the change, including bonuses, compensation, stock options, profit sharing, vacations, and flexible time." ;
     rdfs:label "Develop rewards/incentives plan" ;
     skos:definition "An Act of Formulation that composes a rewards and incentives plan prescribing how employees who exhibit the desired change behaviors are to be rewarded." ;
@@ -2135,6 +2224,7 @@ bpo:P11156 a owl:Class ;
 # --- 13.4.2.7 (PCF 11157) : Formulation -> directive
 bpo:P11157 a owl:Class ;
     bpo:pcfID "11157" ; bpo:hierarchyID "13.4.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11157. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing a system or standard of measurement for measuring the adoption of the change. Consider activities such as the number of people who have adopted the change, how quickly have they adopted, number of unique adopters, and adopters by teams/divisions." ;
     rdfs:label "Establish change adoption measures" ;
     skos:definition "An Act of Formulation that establishes the standards of measurement for tracking change adoption, producing a change adoption measure specification." ;
@@ -2146,6 +2236,7 @@ bpo:P11157 a owl:Class ;
 # --- 13.4.2.8 (PCF 11158) : Formulation -> directive
 bpo:P11158 a owl:Class ;
     bpo:pcfID "11158" ; bpo:hierarchyID "13.4.2.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11158. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing and explaining the new roles to employees. Assign roles and responsibilities to resources." ;
     rdfs:label "Establish/Clarify new roles" ;
     skos:definition "An Act of Formulation that defines and assigns the new roles and responsibilities a change introduces, producing a role definition specification." ;
@@ -2157,6 +2248,7 @@ bpo:P11158 a owl:Class ;
 # --- 13.4.2.9 (PCF 11159) : Formulation -> directive (budget; no shared ICE)
 bpo:P11159 a owl:Class ;
     bpo:pcfID "11159" ; bpo:hierarchyID "13.4.2.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11159. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan of financial outlay for the newly defined roles. Determine the amount of capital the organization is willing to invest in effectuating these new roles, how would the roles be financed, and what would comprise the ROI from these flows. Coordinate personnel responsible for change management and the finance division." ;
     rdfs:label "Identify budget/roles" ;
     skos:definition "An Act of Formulation that composes a plan of financial outlay funding the newly defined roles required by a change." ;
@@ -2167,6 +2259,7 @@ bpo:P11159 a owl:Class ;
 # --- 13.4.3 (PCF 11136) : implement change -> Implementation
 bpo:P11136 a owl:Class ;
     bpo:pcfID "11136" ; bpo:hierarchyID "13.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11136. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Effectuating the change within the desired impact areas of the organization. Ensure adequate commitment from all corners of the organization for the desired change. Create support structures. Refashion all processes deemed necessary. Observe the progress." ;
     rdfs:label "Implement change" ;
     skos:definition "An Act of Implementation that effectuates a designed change within the targeted areas of the organization by building commitment, reengineering processes, supporting transitions, and observing progress." ;
@@ -2182,6 +2275,7 @@ bpo:P11136 a owl:Class ;
 # --- 13.4.3.1 (PCF 11160) : Planned Act (mobilization)
 bpo:P11160 a owl:Class ;
     bpo:pcfID "11160" ; bpo:hierarchyID "13.4.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11160. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Kindling an organization wide commitment for effectuating the change. Effectively communicate the advantages of the desired change. Personalize the pitch for change." ;
     rdfs:label "Create commitment for improvement/change" ;
     skos:definition "A Planned Act in which an Agent mobilizes organization-wide commitment to a change by communicating and personalizing its advantages." ;
@@ -2192,6 +2286,7 @@ bpo:P11160 a owl:Class ;
 # --- 13.4.3.2 (PCF 11161) : Implementation (process reengineering)
 bpo:P11161 a owl:Class ;
     bpo:pcfID "11161" ; bpo:hierarchyID "13.4.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11161. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Restructuring, redesigning, repurposing, and/or retrofitting existing business processes, activities, and frameworks in order to effectuate the desired change. Review pertinent processes from the ground up by starting with the desired result. (Build on Select a process improvement methodology [11138] to create business processes that perfectly fit with the road map for change.)" ;
     rdfs:label "Reengineer business processes and systems" ;
     skos:definition "An Act of Implementation that restructures and redesigns existing business processes and systems in order to effectuate the desired change." ;
@@ -2202,6 +2297,7 @@ bpo:P11161 a owl:Class ;
 # --- 13.4.3.3 (PCF 11162) : Implementation (transition support)
 bpo:P11162 a owl:Class ;
     bpo:pcfID "11162" ; bpo:hierarchyID "13.4.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11162. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Supporting the transition of personnel to new roles and the dismissal of any existing employees, necessitated for the desired change. Create an on-boarding process for seamlessly transitioning personnel to new roles. Offer orientation and training. Address any concerns. Create a structured procedure for the discharge of incumbents from their positions." ;
     rdfs:label "Support transition to new roles or exit strategies for incumbents" ;
     skos:definition "An Act of Implementation that supports personnel through their transition to new roles and, where necessary, through structured exit from current positions during a change." ;
@@ -2212,6 +2308,7 @@ bpo:P11162 a owl:Class ;
 # --- 13.4.3.4 (PCF 11163) : Monitoring
 bpo:P11163 a owl:Class ;
     bpo:pcfID "11163" ; bpo:hierarchyID "13.4.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11163. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Monitoring activities in the change process in order to assess the performance of individual agents and the process as a whole. Oversee the implementation of activities needed for effectuating the change. Track the pace, impact, enthusiasm, reaction, and feedback over the change process." ;
     rdfs:label "Monitor change" ;
     skos:definition "An Act of Monitoring that observes and tracks the activities, pace, and reception of a change in progress in order to register the performance of the agents and of the change process as a whole." ;
@@ -2222,6 +2319,7 @@ bpo:P11163 a owl:Class ;
 # --- 13.4.3.5 (PCF 20146) : Information Processing -> descriptive
 bpo:P20146 a owl:Class ;
     bpo:pcfID "20146" ; bpo:hierarchyID "13.4.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20146. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reporting on the outcome of the change. Document changes and the impact those changes had on critical assets. Share findings with those within the target audience: those impacted by the change, change champions, stakeholders, etc." ;
     rdfs:label "Report on change" ;
     skos:definition "An Act of Reporting that documents the outcome and impact of a change and shares the resulting change report with its affected target audience." ;
@@ -2233,6 +2331,7 @@ bpo:P20146 a owl:Class ;
 # --- 13.4.4 (PCF 11137) : sustain improvement -> Improvement
 bpo:P11137 a owl:Class ;
     bpo:pcfID "11137" ; bpo:hierarchyID "13.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11137. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Sustaining the impact of the change process in order to enact continual process improvement. Monitor the performance of re-engineered business processes. Identify best practices and potential issues. Effectuate remedial steps." ;
     rdfs:label "Sustain improvement" ;
     skos:definition "An Act of Improvement that sustains the impact of a change by monitoring re-engineered process performance, capturing lessons, and effecting remedial steps for continual improvement." ;
@@ -2246,6 +2345,7 @@ bpo:P11137 a owl:Class ;
 # --- 13.4.4.1 (PCF 11164) : Monitoring -> descriptive
 bpo:P11164 a owl:Class ;
     bpo:pcfID "11164" ; bpo:hierarchyID "13.4.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11164. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Monitoring the performance of improved business processes. Track the key performance indicators of the upgraded processes in order to gauge its contribution to the desired change. Expedite through the use of business process management software." ;
     rdfs:label "Monitor improved process performance" ;
     skos:definition "An Act of Monitoring that tracks the key performance indicators of improved business processes and produces a process performance report gauging their contribution to the change." ;
@@ -2257,6 +2357,7 @@ bpo:P11164 a owl:Class ;
 # --- 13.4.4.2 (PCF 11165) : Analysis -> descriptive
 bpo:P11165 a owl:Class ;
     bpo:pcfID "11165" ; bpo:hierarchyID "13.4.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11165. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting and standardizing insights gleaned and the knowledge acquired from studying the change process already implemented. Create case studies/best practices guides from the process of implementing change. Include experienced personnel." ;
     rdfs:label "Capture and reuse lessons learned from change process" ;
     skos:definition "An Act of Analysis that examines an implemented change process and documents the insights and knowledge gained as a lessons-learned record." ;
@@ -2268,6 +2369,7 @@ bpo:P11165 a owl:Class ;
 # --- 13.4.4.3 (PCF 11166) : Improvement
 bpo:P11166 a owl:Class ;
     bpo:pcfID "11166" ; bpo:hierarchyID "13.4.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11166. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implement corrective action to adjust the re-engineered processes for maximizing the desired impact. Adjust business processes and systems to implement the desired change." ;
     rdfs:label "Take corrective action as necessary" ;
     skos:definition "An Act of Improvement that adjusts the re-engineered business processes and systems through corrective action so as to maximize the intended impact of the change." ;
@@ -2282,6 +2384,7 @@ bpo:P11166 a owl:Class ;
 # --- 13.5.1 (PCF 11095) : develop KM strategy -> Formulation
 bpo:P11095 a owl:Class ;
     bpo:pcfID "11095" ; bpo:hierarchyID "13.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11095. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for managing the organization's knowledge base. Determine what kind of specialized knowledge the organization possesses, which elements of this collective knowledge can prove beneficial, how to capture and maintain this knowledge, how to grant access to this library of information, and how the organization should proceed." ;
     rdfs:label "Develop KM strategy" ;
     skos:definition "An Act of Formulation that composes and articulates a KM strategy prescribing how an organization will capture, maintain, access, and exploit its collective knowledge." ;
@@ -2302,6 +2405,7 @@ bpo:P11095 a owl:Class ;
 # --- 13.5.1.1 (PCF 11100) : Formulation -> Directive governance model
 bpo:P11100 a owl:Class ;
     bpo:pcfID "11100" ; bpo:hierarchyID "13.5.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11100. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a structure for the governance of the organization's collective knowledge. Gather, maintain, and make accessible the collective knowledge base. Develop a standard procedure for the conservation and perpetuation of the organization's knowledge. Create policies for the usage and maintenance of this knowledge. Establish specialized roles." ;
     rdfs:label "Develop governance model with roles and accountability" ;
     skos:definition "An Act of Formulation that composes a KM governance model prescribing the structure, standard procedures, policies, and specialized roles for governing an organization's collective knowledge." ;
@@ -2313,6 +2417,7 @@ bpo:P11100 a owl:Class ;
 # --- 13.5.1.2 (PCF 11102) : Formulation -> Directive role definitions
 bpo:P11102 a owl:Class ;
     bpo:pcfID "11102" ; bpo:hierarchyID "13.5.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11102. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Clearly determining the roles and responsibilities of all personnel involved in the management of the organization's corpus of knowledge. Flesh out the roles and responsibilities of the KM core group, as well as the operational staff involved in the upkeep of the knowledge management program." ;
     rdfs:label "Define roles and accountability of core group versus operating units" ;
     skos:definition "An Act of Formulation that composes a role-definition specification prescribing the responsibilities of the KM core group versus the operating-unit staff who maintain the knowledge-management program." ;
@@ -2324,6 +2429,7 @@ bpo:P11102 a owl:Class ;
 # --- 13.5.1.3 (PCF 11103) : Selection -> Directive funding model
 bpo:P11103 a owl:Class ;
     bpo:pcfID "11103" ; bpo:hierarchyID "13.5.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11103. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyze the organization's current approach to funding. Learn from the funding approaches of peer organizations. Evaluate the revenue potential and costs of those short-list funding models. Select funding models to implement." ;
     rdfs:label "Develop funding models" ;
     skos:definition "An Act of Selection that, having evaluated candidate funding approaches against revenue potential and cost, chooses and prescribes the KM funding model(s) to implement." ;
@@ -2335,6 +2441,7 @@ bpo:P11103 a owl:Class ;
 # --- 13.5.1.4 (PCF 11104) : Identification -> Descriptive linkage analysis
 bpo:P11104 a owl:Class ;
     bpo:pcfID "11104" ; bpo:hierarchyID "13.5.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11104. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying any links that exist between the strategy for knowledge management and any other functional areas. Determine any correlations that exist between the strategic road map for the knowledge management and any other functional areas. Study each function's/unit's attributes." ;
     rdfs:label "Identify links to key initiatives" ;
     skos:definition "An Act of Identification that discerns the correlations between the KM strategy and other functional areas and produces a KM initiative linkage analysis registering them." ;
@@ -2346,6 +2453,7 @@ bpo:P11104 a owl:Class ;
 # --- 13.5.1.5 (PCF 11105) : Formulation -> Directive methodology
 bpo:P11105 a owl:Class ;
     bpo:pcfID "11105" ; bpo:hierarchyID "13.5.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11105. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating core knowledge management procedures and methodologies. Initiate developing a strategy, planning, execution, and improvement." ;
     rdfs:label "Develop core KM methodologies" ;
     skos:definition "An Act of Formulation that composes a KM methodology specification prescribing the core procedures for strategizing, planning, executing, and improving knowledge management." ;
@@ -2357,6 +2465,7 @@ bpo:P11105 a owl:Class ;
 # --- 13.5.1.6 (PCF 11106) : Appraisal -> Descriptive IT needs assessment
 bpo:P11106 a owl:Class ;
     bpo:pcfID "11106" ; bpo:hierarchyID "13.5.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11106. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the IT needs for developing the knowledge management strategy, and collaborating with the IT function to implement the strategy. Assess requirements for technologies such as computer hardware, software, electronics, semiconductors, internet, and telecommunications equipment in order to effectively build and implement the strategy for knowledge management." ;
     rdfs:label "Assess IT needs and engage IT function" ;
     skos:definition "An Act of Appraisal that evaluates the information-technology requirements for building and implementing the KM strategy and produces an IT needs assessment." ;
@@ -2368,6 +2477,7 @@ bpo:P11106 a owl:Class ;
 # --- 13.5.1.7 (PCF 11107) : Formulation -> Directive training + communication plans
 bpo:P11107 a owl:Class ;
     bpo:pcfID "11107" ; bpo:hierarchyID "13.5.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11107. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating plans for KM training plans and conveying the knowledge management strategy within the organization. Create training programs, sessions, and activities in order to familiarize employees and management with the concept of knowledge management." ;
     rdfs:label "Develop training and communication plans" ;
     skos:definition "An Act of Formulation that composes a training plan and a communication plan prescribing how the KM strategy will be taught and conveyed across the organization." ;
@@ -2380,6 +2490,7 @@ bpo:P11107 a owl:Class ;
 # --- 13.5.1.8 (PCF 11108) : Formulation -> Directive change management plan
 bpo:P11108 a owl:Class ;
     bpo:pcfID "11108" ; bpo:hierarchyID "13.5.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11108. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating approaches for effectively administering the changes in knowledge management. Design an approach that transforms individuals, teams, and the organization to a desired future state represented by the change." ;
     rdfs:label "Develop change management approaches" ;
     skos:definition "An Act of Formulation that composes a change management plan prescribing how individuals, teams, and the organization will be transitioned to the desired KM future state." ;
@@ -2391,6 +2502,7 @@ bpo:P11108 a owl:Class ;
 # --- 13.5.1.9 (PCF 11109) : Formulation -> Directive performance-indicator spec
 bpo:P11109 a owl:Class ;
     bpo:pcfID "11109" ; bpo:hierarchyID "13.5.1.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11109. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing measures and indicators for evaluating the performance of the knowledge management function. Define key performance indicators such as the amount of knowledge assets created and number of knowledge projects undertaken." ;
     rdfs:label "Develop strategic measures and indicators" ;
     skos:definition "An Act of Formulation that establishes and prescribes a performance-indicator specification of the key indicators used to evaluate the performance of the KM function." ;
@@ -2402,6 +2514,7 @@ bpo:P11109 a owl:Class ;
 # --- 13.5.2 (PCF 11096) : assess KM capabilities -> Appraisal
 bpo:P11096 a owl:Class ;
     bpo:pcfID "11096" ; bpo:hierarchyID "13.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11096. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the maturity of the existing initiatives in knowledge management, and evaluating existing KM approaches. Identify the gaps and needs in order to enhance the existing KM approaches. Develop and implement new KM approaches." ;
     rdfs:label "Assess KM capabilities" ;
     skos:definition "An Act of Appraisal that evaluates the maturity and effectiveness of an organization's existing knowledge-management capabilities and produces a KM capability maturity assessment." ;
@@ -2416,6 +2529,7 @@ bpo:P11096 a owl:Class ;
 # --- 13.5.2.1 (PCF 11110) : Appraisal -> Descriptive maturity assessment
 bpo:P11110 a owl:Class ;
     bpo:pcfID "11110" ; bpo:hierarchyID "13.5.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11110. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating if initiatives are effective or should be discarded. Design a framework for assessing maturity, typically from Level 1 (undefined), Level 2 (repeatable), Level 3 (defined), and Level 4 (managed) through Level 5 (optimized)." ;
     rdfs:label "Assess maturity of existing KM initiatives" ;
     skos:definition "An Act of Appraisal that judges the maturity of existing KM initiatives against a defined maturity scale and produces a KM capability maturity assessment." ;
@@ -2427,6 +2541,7 @@ bpo:P11110 a owl:Class ;
 # --- 13.5.2.2 (PCF 11111) : Appraisal -> Descriptive approach evaluation
 bpo:P11111 a owl:Class ;
     bpo:pcfID "11111" ; bpo:hierarchyID "13.5.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11111. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating existing procedures, policies, and guidelines for knowledge management. Study and examine the organization's approach against industry best practices by benchmarking, competitive analysis, etc." ;
     rdfs:label "Evaluate existing KM approaches" ;
     skos:definition "An Act of Appraisal that evaluates the organization's existing KM procedures, policies, and guidelines against industry best practice and produces a KM approach evaluation." ;
@@ -2438,6 +2553,7 @@ bpo:P11111 a owl:Class ;
 # --- 13.5.2.3 (PCF 11112) : Identification -> Descriptive gap-and-needs analysis
 bpo:P11112 a owl:Class ;
     bpo:pcfID "11112" ; bpo:hierarchyID "13.5.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11112. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the KM approach evaluations in order to identify any gaps or needs. Compare the performance of the KM approach against the desired or expected performance, as well as against the standard knowledge management industry approach." ;
     rdfs:label "Identify gaps and needs" ;
     skos:definition "An Act of Identification that, from the KM approach evaluations, discerns the gaps between actual and desired KM performance and produces a gap-and-needs analysis registering them." ;
@@ -2450,6 +2566,7 @@ bpo:P11112 a owl:Class ;
 # --- 13.5.3 (PCF 20965) : design and implement KM capabilities -> Planned Act
 bpo:P20965 a owl:Class ;
     bpo:pcfID "20965" ; bpo:hierarchyID "13.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20965. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating knowledge bases and other repositories to preserve and develop company expertise, and to train new employees." ;
     rdfs:label "Design and implement KM capabilities" ;
     skos:definition "A Planned Act that designs and then puts into operation the knowledge bases, approaches, and supporting technology that preserve and develop an organization's expertise." ;
@@ -2465,6 +2582,7 @@ bpo:P20965 a owl:Class ;
 # --- 13.5.3.1 (PCF 11114) : Formulation -> Directive methodology spec
 bpo:P11114 a owl:Class ;
     bpo:pcfID "11114" ; bpo:hierarchyID "13.5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11114. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing new policies, procedures, and guidelines to support knowledge management." ;
     rdfs:label "Develop new KM approaches" ;
     skos:definition "An Act of Formulation that composes new KM policies, procedures, and guidelines, prescribed as a KM methodology specification, to support knowledge management." ;
@@ -2476,6 +2594,7 @@ bpo:P11114 a owl:Class ;
 # --- 13.5.3.2 (PCF 20966) : Formulation -> Directive resource model
 bpo:P20966 a owl:Class ;
     bpo:pcfID "20966" ; bpo:hierarchyID "13.5.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20966. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a model to describe resources and approaches to organization's knowledge management. Establish standards and guidelines to be followed." ;
     rdfs:label "Design resource model for KM approaches" ;
     skos:definition "An Act of Formulation that composes a KM resource model prescribing the resources, standards, and guidelines that the organization's KM approaches will follow." ;
@@ -2487,6 +2606,7 @@ bpo:P20966 a owl:Class ;
 # --- 13.5.3.3 (PCF 11115) : Implementation (PROPOSE-EXT genus)
 bpo:P11115 a owl:Class ;
     bpo:pcfID "11115" ; bpo:hierarchyID "13.5.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11115. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing new policies, procedures, and guidelines to support knowledge management." ;
     rdfs:label "Implement new KM approaches" ;
     skos:definition "An Act of Implementation that puts into effect the new KM policies, procedures, and guidelines prescribed by the KM methodology specification." ;
@@ -2498,6 +2618,7 @@ bpo:P11115 a owl:Class ;
 # --- 13.5.3.4 (PCF 20967) : Improvement (PROPOSE-EXT genus)
 bpo:P20967 a owl:Class ;
     bpo:pcfID "20967" ; bpo:hierarchyID "13.5.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20967. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using existing technologies to improve organization's knowledge management processes. Research available third-party offerings. Develop proprietary solutions. Employ knowledge engineers, data scientists and other relevant personnel." ;
     rdfs:label "Leverage and enhance IT for KM approaches" ;
     skos:definition "An Act of Improvement that uses and enhances existing information technology in order to raise the performance of an organization's knowledge-management processes." ;
@@ -2508,6 +2629,7 @@ bpo:P20967 a owl:Class ;
 # --- 13.5.3.5 (PCF 20968) : Formulation -> Directive performance-indicator spec
 bpo:P20968 a owl:Class ;
     bpo:pcfID "20968" ; bpo:hierarchyID "13.5.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20968. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating metrics that can be used to systematically describe KM approaches and capabilities. Choose applicable scales, benchmarks and units of measure. Determine required precision and error rates." ;
     rdfs:label "Develop measures" ;
     skos:definition "An Act of Formulation that establishes and prescribes a performance-indicator specification of the metrics, scales, benchmarks, and units used to describe KM approaches and capabilities." ;
@@ -2519,6 +2641,7 @@ bpo:P20968 a owl:Class ;
 # --- 13.5.4 (PCF 20969) : evolve and sustain KM capabilities -> Planned Act
 bpo:P20969 a owl:Class ;
     bpo:pcfID "20969" ; bpo:hierarchyID "13.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20969. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing resources for improved knowledge management and knowledge engineering." ;
     rdfs:label "Evolve and sustain KM capabilities" ;
     skos:definition "A Planned Act that develops and augments resources in order to improve and sustain an organization's knowledge-management and knowledge-engineering capabilities over time." ;
@@ -2532,6 +2655,7 @@ bpo:P20969 a owl:Class ;
 # --- 13.5.4.1 (PCF 11113) : Improvement (PROPOSE-EXT genus)
 bpo:P11113 a owl:Class ;
     bpo:pcfID "11113" ; bpo:hierarchyID "13.5.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11113. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Leveraging KM evaluations and identified gap to enhance existing approaches." ;
     rdfs:label "Enhance/Modify existing KM approaches" ;
     skos:definition "An Act of Improvement that, leveraging KM approach evaluations and identified gaps, enhances or modifies existing KM approaches to raise their performance." ;
@@ -2543,6 +2667,7 @@ bpo:P11113 a owl:Class ;
 # --- 13.5.4.2 (PCF 20970) : Implementation (PROPOSE-EXT genus)
 bpo:P20970 a owl:Class ;
     bpo:pcfID "20970" ; bpo:hierarchyID "13.5.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20970. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing awareness about available knowledge bases and promoting their use to maximize their impact." ;
     rdfs:label "Sustain awareness and engagement" ;
     skos:definition "An Act of Communication that develops awareness of available knowledge bases and promotes their use across the organization, producing awareness messaging directed at the organization's members in order to maximize the knowledge bases' impact." ;
@@ -2556,6 +2681,7 @@ bpo:P20970 a owl:Class ;
 # --- 13.5.4.3 (PCF 20971) : Improvement (PROPOSE-EXT genus)
 bpo:P20971 a owl:Class ;
     bpo:pcfID "20971" ; bpo:hierarchyID "13.5.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20971. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Augmenting available resources to better leverage the offerings of the organization to serve existing clients and to expand the client base." ;
     rdfs:label "Expand KM infrastructure to meet demand" ;
     skos:definition "An Act of Improvement that augments the available knowledge-management infrastructure and resources in order to increase capacity to serve existing and new clients." ;
@@ -2569,6 +2695,7 @@ bpo:P20971 a owl:Class ;
 
 bpo:P21584 a owl:Class ;
     bpo:pcfID "21584" ; bpo:hierarchyID "13.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21584. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining and managing measurement and benchmarking. Measure and benchmark the performance of internal processes, as well as the organization as a whole." ;
     rdfs:label "Measure and benchmark" ;
     skos:definition "A Planned Act that constitutes an organization's bounded enterprise cycle of defining performance strategy, measuring, and benchmarking the performance of its internal processes and of the organization as a whole against standards and other organizations." ;
@@ -2582,6 +2709,7 @@ bpo:P21584 a owl:Class ;
 # --- 13.6.1 (PCF 21585) : define/manage organizational performance strategy -> Formulation
 bpo:P21585 a owl:Class ;
     bpo:pcfID "21585" ; bpo:hierarchyID "13.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21585. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing a strategy for managing organizational performance. The strategy should include approaches for measuring, tracking, streamlining, and improving internal performance. It encompasses a blueprint for the tactical measurement of internal processes and work force improvement, in alignment with Employee Metrics Developed and Managed [10526]." ;
     rdfs:label "Define and manage organizational performance strategy" ;
     skos:definition "An Act of Formulation that composes an organizational performance strategy prescribing how an organization measures, tracks, streamlines, and improves its internal performance." ;
@@ -2595,6 +2723,7 @@ bpo:P21585 a owl:Class ;
 # --- 13.6.1.1 (PCF 11075) : Formulation -> Directive ICE
 bpo:P11075 a owl:Class ;
     bpo:pcfID "11075" ; bpo:hierarchyID "13.6.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11075. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a model for organization's management systems. Develop a high-level measurement system to track performance across the enterprise or in specific functions or business units. Determine which processes to measure, which measures to use, how often to measure, and measurement targets. Review strategic decisions about how to best measure an organization." ;
     rdfs:label "Define enterprise measurement models" ;
     skos:definition "An Act of Formulation that composes an enterprise measurement model prescribing which processes to measure, which measures to use, how often to measure, and the measurement targets across an enterprise or business unit." ;
@@ -2606,6 +2735,7 @@ bpo:P11075 a owl:Class ;
 # --- 13.6.1.2 (PCF 21586) : Improvement of an existing artifact
 bpo:P21586 a owl:Class ;
     bpo:pcfID "21586" ; bpo:hierarchyID "13.6.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21586. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing, evaluating, and updating enterprise measurement models. Align measurement models to current and future goals and performance targets, and make adjustments to support visibility and reporting needs across the organization." ;
     rdfs:label "Maintain enterprise measurement models" ;
     skos:definition "An Act of Formulation that reviews, evaluates, and recomposes an existing enterprise measurement model to align it with current and future goals, performance targets, and reporting needs." ;
@@ -2618,6 +2748,7 @@ bpo:P21586 a owl:Class ;
 # --- 13.6.2 (PCF 11072) : benchmark performance -> Appraisal
 bpo:P11072 a owl:Class ;
     bpo:pcfID "11072" ; bpo:hierarchyID "13.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11072. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Comparing organizational performance internally or externally with other organizations." ;
     rdfs:label "Benchmark performance" ;
     skos:definition "An Act of Appraisal that compares an organization's performance internally or externally against other organizations and produces a benchmark analysis." ;
@@ -2634,6 +2765,7 @@ bpo:P11072 a owl:Class ;
 # --- 13.6.2.1 (PCF 11083) : Appraisal -> Descriptive ICE
 bpo:P11083 a owl:Class ;
     bpo:pcfID "11083" ; bpo:hierarchyID "13.6.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11083. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Measuring, researching, and recording the performance of people, processes, mechanisms, or other areas of the business that the organization wants to benchmark or track." ;
     rdfs:label "Conduct performance assessments" ;
     skos:definition "An Act of Appraisal that measures, researches, and records the performance of people, processes, or other areas of a business and produces a performance assessment." ;
@@ -2645,6 +2777,7 @@ bpo:P11083 a owl:Class ;
 # --- 13.6.2.2 (PCF 11084) : Improvement of a standing capability
 bpo:P11084 a owl:Class ;
     bpo:pcfID "11084" ; bpo:hierarchyID "13.6.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11084. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Improving an organization's ability to compare its performance internally or externally, and maintaining benchmarking relationships with other organizations. Train staff in benchmarking. Develop technological solutions or other materials to aid benchmarking efforts. Consult with external entities to gain knowledge or tools to help benchmark." ;
     rdfs:label "Develop benchmarking capabilities" ;
     skos:definition "An Act of Improvement that enhances an organization's benchmarking capability by training staff, developing tools, and maintaining benchmarking relationships with other organizations." ;
@@ -2655,6 +2788,7 @@ bpo:P11084 a owl:Class ;
 # --- 13.6.2.3 (PCF 11085) : Appraisal -> Descriptive ICE
 bpo:P11085 a owl:Class ;
     bpo:pcfID "11085" ; bpo:hierarchyID "13.6.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11085. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Benchmarking internal processes and against external competitors." ;
     rdfs:label "Conduct internal and external benchmarking" ;
     skos:definition "An Act of Appraisal that compares internal processes against one another and against external competitors and produces a benchmark analysis." ;
@@ -2666,6 +2800,7 @@ bpo:P11085 a owl:Class ;
 # --- 13.6.2.4 (PCF 11087) : Analysis -> Descriptive ICE
 bpo:P11087 a owl:Class ;
     bpo:pcfID "11087" ; bpo:hierarchyID "13.6.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11087. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining performance against benchmarked organizations or entities. Determine how much performance needs to change to meet expectations. Reach strategic goals." ;
     rdfs:label "Conduct gap analysis" ;
     skos:definition "An Act of Analysis that examines performance against benchmarked organizations and produces a gap and needs analysis quantifying how much performance must change to meet expectations." ;
@@ -2678,6 +2813,7 @@ bpo:P11087 a owl:Class ;
 # --- 13.6.2.5 (PCF 11088) : Formulation -> Directive ICE
 bpo:P11088 a owl:Class ;
     bpo:pcfID "11088" ; bpo:hierarchyID "13.6.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11088. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing a need for changing the performance of the organization. Make use of the gap analysis results in order to define the need for change." ;
     rdfs:label "Establish need for change" ;
     skos:definition "An Act of Formulation that uses gap analysis results to compose a change need statement defining the required change in organizational performance." ;
@@ -2690,6 +2826,7 @@ bpo:P11088 a owl:Class ;
 # --- 13.6.3 (PCF 20147) : evaluate performance -> Appraisal
 bpo:P20147 a owl:Class ;
     bpo:pcfID "20147" ; bpo:hierarchyID "13.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20147. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing process data, measures, and trends in an effort to evaluate process performance and identify possible improvements." ;
     rdfs:label "Evaluate performance" ;
     skos:definition "An Act of Appraisal that assesses process data, measures, and trends to evaluate process performance and identify possible improvements, producing a performance assessment." ;
@@ -2709,6 +2846,7 @@ bpo:P20147 a owl:Class ;
 # --- 13.6.3.1 (PCF 10270) : Formulation -> Directive ICE
 bpo:P10270 a owl:Class ;
     bpo:pcfID "10270" ; bpo:hierarchyID "13.6.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10270. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing key measures that analyze and interpret how effectively the business is achieving its objectives." ;
     rdfs:label "Establish performance indicators (measures)" ;
     skos:definition "An Act of Formulation that designs key performance measures and composes a performance indicator specification prescribing how effectively the business is achieving its objectives." ;
@@ -2720,6 +2858,7 @@ bpo:P10270 a owl:Class ;
 # --- 13.6.3.2 (PCF 10271) : Formulation -> Directive ICE
 bpo:P10271 a owl:Class ;
     bpo:pcfID "10271" ; bpo:hierarchyID "13.6.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10271. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Deciding on the appropriate amount of supervisions that are needed to effectively assess the performance of business plans." ;
     rdfs:label "Establish monitoring frequency" ;
     skos:definition "An Act of Formulation that decides and composes a monitoring frequency specification prescribing how often performance is to be supervised and assessed." ;
@@ -2731,6 +2870,7 @@ bpo:P10271 a owl:Class ;
 # --- 13.6.3.3 (PCF 20148) : Information Processing -> Descriptive ICE
 bpo:P20148 a owl:Class ;
     bpo:pcfID "20148" ; bpo:hierarchyID "13.6.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20148. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Consolidating acquired metrics and trends. Provide data that can be benchmarked against historical data." ;
     rdfs:label "Collect performance data" ;
     skos:definition "An Act of Information Processing that consolidates acquired metrics and trends into performance data suitable for benchmarking against historical data." ;
@@ -2742,6 +2882,7 @@ bpo:P20148 a owl:Class ;
 # --- 13.6.3.4 (PCF 10272) : Measuring -> Descriptive ICE
 bpo:P10272 a owl:Class ;
     bpo:pcfID "10272" ; bpo:hierarchyID "13.6.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10272. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Measuring the performance of process planning. Quantify the performance, record results of the performance tests, and report them to the appropriate authority." ;
     rdfs:label "Calculate performance measures" ;
     skos:definition "An Act of Measuring that quantifies process performance against defined indicators and records the results as a performance measurement." ;
@@ -2755,6 +2896,7 @@ bpo:P10272 a owl:Class ;
 # --- 13.6.3.5 (PCF 10273) : Analysis -> Descriptive ICE
 bpo:P10273 a owl:Class ;
     bpo:pcfID "10273" ; bpo:hierarchyID "13.6.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10273. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing the trends in performance. Carefully and strategically assess the results in order to effectively spot the trends." ;
     rdfs:label "Identify performance trends" ;
     skos:definition "An Act of Analysis that examines performance measurements over time and produces a performance trend analysis representing the recognized trends." ;
@@ -2767,6 +2909,7 @@ bpo:P10273 a owl:Class ;
 # --- 13.6.3.6 (PCF 10274) : Analysis -> Descriptive ICE
 bpo:P10274 a owl:Class ;
     bpo:pcfID "10274" ; bpo:hierarchyID "13.6.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10274. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the gaps between achieved and benchmarked performance. Analyze how performance differs from the optimal or expected performance." ;
     rdfs:label "Analyze performance" ;
     skos:definition "An Act of Appraisal that evaluates the gaps between achieved and benchmarked or expected performance and produces a performance assessment of how performance differs from the optimum." ;
@@ -2779,6 +2922,7 @@ bpo:P10274 a owl:Class ;
 # --- 13.6.3.7 (PCF 10275) : Information Processing -> Descriptive ICE
 bpo:P10275 a owl:Class ;
     bpo:pcfID "10275" ; bpo:hierarchyID "13.6.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10275. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating reports that systematically record and represent the performance planning. Construct a detailed report specifying the performance, and include indicators such as the performance gaps, performance trends, and analysis." ;
     rdfs:label "Prepare performance reports" ;
     skos:definition "An Act of Information Processing that assembles performance measurements, trends, and analyses into a performance report that systematically records and represents performance." ;
@@ -2792,6 +2936,7 @@ bpo:P10275 a owl:Class ;
 # --- 13.6.3.8 (PCF 10276) : Formulation -> Directive ICE
 bpo:P10276 a owl:Class ;
     bpo:pcfID "10276" ; bpo:hierarchyID "13.6.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10276. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using performance indicators to report, analyze, and create a detailed performance improvement plan to bridge the performance gaps." ;
     rdfs:label "Develop performance improvement plan" ;
     skos:definition "An Act of Formulation that uses performance indicators and assessments to compose a performance improvement plan prescribing actions to bridge identified performance gaps." ;
@@ -2811,6 +2956,7 @@ bpo:P10276 a owl:Class ;
 # --- 13.2.1.1 (PCF 16402) : establish portfolio strategy -> Formulation
 bpo:P16402 a owl:Class ;
     bpo:pcfID "16402" ; bpo:hierarchyID "13.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16402. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Instituting the strategy for managing business portfolio. Create a systematic plan that defines the strategy for managing investments, holdings, products, businesses, and brands." ;
     rdfs:label "Establish portfolio strategy" ;
     skos:definition "An Act of Formulation that composes a portfolio strategy prescribing how an organization manages its portfolio of investments, holdings, products, businesses, and brands." ;
@@ -2822,6 +2968,7 @@ bpo:P16402 a owl:Class ;
 # --- 13.2.1.2 (PCF 16403) : define portfolio governance -> Formulation
 bpo:P16403 a owl:Class ;
     bpo:pcfID "16403" ; bpo:hierarchyID "13.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16403. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the administration of business portfolio of the organization. Create and manage the rules and regulations regarding the business processes in order to identify, select, prioritize, and monitor portfolio components. Include a set of metrics to indicate the health and progress of the portfolio in the most vital area." ;
     rdfs:label "Define portfolio governance" ;
     skos:definition "An Act of Formulation that composes a portfolio governance framework prescribing the rules, metrics, and procedures for identifying, selecting, prioritizing, and monitoring portfolio components." ;
@@ -2833,6 +2980,7 @@ bpo:P16403 a owl:Class ;
 # --- 13.2.1.3 (PCF 16404) : monitor and control portfolio -> Monitoring
 bpo:P16404 a owl:Class ;
     bpo:pcfID "16404" ; bpo:hierarchyID "13.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16404. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Overseeing and administering the business portfolio of the organization. Monitor all activities related to investments, holdings, products, businesses, and brands by effectively monitoring and supervising these activities." ;
     rdfs:label "Monitor and control portfolio" ;
     skos:definition "An Act of Monitoring that oversees and supervises the activities of an organization's business portfolio and produces a portfolio status report." ;
@@ -2845,6 +2993,7 @@ bpo:P16404 a owl:Class ;
 # --- 13.2.2.1 (PCF 16406) : establish program structure -> Formulation
 bpo:P16406 a owl:Class ;
     bpo:pcfID "16406" ; bpo:hierarchyID "13.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16406. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Constructing and instituting the framework and approach to manage business programs. Monitor key factors such as governance, alignment with the overall business vision, assurance, and management." ;
     rdfs:label "Establish program structure and approach" ;
     skos:definition "An Act of Formulation that composes a program structure specification prescribing the framework and approach -- governance, alignment, assurance, and management -- for managing a business program." ;
@@ -2856,6 +3005,7 @@ bpo:P16406 a owl:Class ;
 # --- 13.2.2.2 (PCF 16407) : manage program stakeholders and partners -> Planned Act
 bpo:P16407 a owl:Class ;
     bpo:pcfID "16407" ; bpo:hierarchyID "13.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16407. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing relationships with stakeholders and partners of the business programs." ;
     rdfs:label "Manage program stakeholders and partners" ;
     skos:definition "A Planned Act that manages the relationships with the stakeholders and partners of a business program." ;
@@ -2867,6 +3017,7 @@ bpo:P16407 a owl:Class ;
 # --- 13.2.2.3 (PCF 16408) : manage program execution -> Implementation
 bpo:P16408 a owl:Class ;
     bpo:pcfID "16408" ; bpo:hierarchyID "13.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16408. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering and implementing business programs. Implement and execute programs with the intention of improving an organization's performance. Execute all the individual projects of the program to ensure the desired success." ;
     rdfs:label "Manage program execution" ;
     skos:definition "An Act of Implementation that administers and executes a business program by carrying out its constituent projects." ;
@@ -2877,6 +3028,7 @@ bpo:P16408 a owl:Class ;
 # --- 13.2.2.4 (PCF 16409) : review and report program performance -> Monitoring
 bpo:P16409 a owl:Class ;
     bpo:pcfID "16409" ; bpo:hierarchyID "13.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16409. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating and documenting the performance of business programs. Evaluate the performance of the programs. Create reports on the basis of the analysis. Use performance indicators and metrics such as desired/achieved goals, completion dates, issues and defects, and cost effectiveness." ;
     rdfs:label "Review and report program performance" ;
     skos:definition "An Act of Monitoring that evaluates and documents the performance of a business program against its indicators and produces a program performance report." ;
@@ -2888,6 +3040,7 @@ bpo:P16409 a owl:Class ;
 # --- 13.2.3.1 (PCF 16411) : establish project scope -> Formulation (parent)
 bpo:P16411 a owl:Class ;
     bpo:pcfID "16411" ; bpo:hierarchyID "13.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16411. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing the horizons of business projects. Identify the objectives of the program, along with the resource requirements. Assess the readiness for the project management approach. Identify methodologies for project management. Obtain funding. Develop performance measures and indicators." ;
     rdfs:label "Establish project scope" ;
     skos:definition "An Act of Formulation that establishes the scope of a business project -- its objectives, resource requirements, and measures -- producing a project scope statement." ;
@@ -2905,6 +3058,7 @@ bpo:P16411 a owl:Class ;
 # --- 13.2.3.1.1 (PCF 11117) : identify project requirements -> Identification
 bpo:P11117 a owl:Class ;
     bpo:pcfID "11117" ; bpo:hierarchyID "13.2.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11117. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing and defining what the project is ultimately supposed to do. Specify the capabilities, features, or attributes of the project's deliverables, as well as any kind of formal documentation." ;
     rdfs:label "Identify project requirements and objectives" ;
     skos:definition "An Act of Identification that discerns and defines what a project is to accomplish -- the capabilities, features, and attributes of its deliverables -- registering them in a project requirements statement." ;
@@ -2916,6 +3070,7 @@ bpo:P11117 a owl:Class ;
 # --- 13.2.3.1.2 (PCF 16412) : identify project resource requirements -> Identification
 bpo:P16412 a owl:Class ;
     bpo:pcfID "16412" ; bpo:hierarchyID "13.2.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16412. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the prerequisites of business projects. Identify the people with appropriate and applicable skills and competencies. Locate resources such as capital, facilities, equipment, material, and information required to accomplish the objectives of a specific project." ;
     rdfs:label "Identify project resource requirements" ;
     skos:definition "An Act of Identification that discerns the people, skills, and resources a project requires and registers them in a project resource requirements statement." ;
@@ -2927,6 +3082,7 @@ bpo:P16412 a owl:Class ;
 # --- 13.2.3.1.3 (PCF 11118) : assess culture and readiness -> Appraisal
 bpo:P11118 a owl:Class ;
     bpo:pcfID "11118" ; bpo:hierarchyID "13.2.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11118. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the culture and readiness of the organizational environment is order to implement the project management approach." ;
     rdfs:label "Assess culture and readiness for project management approach" ;
     skos:definition "An Act of Appraisal that evaluates the culture and readiness of an organizational environment for adopting a project-management approach and produces a project readiness assessment." ;
@@ -2938,6 +3094,7 @@ bpo:P11118 a owl:Class ;
 # --- 13.2.3.1.4 (PCF 11120) : create business case -> Analysis (descriptive)
 bpo:P11120 a owl:Class ;
     bpo:pcfID "11120" ; bpo:hierarchyID "13.2.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11120. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a document that includes the current situation, proposed solution, financial analysis, conclusion, etc. Convince a decision maker and investors to approve the project. Obtain funding." ;
     rdfs:label "Create business case" ;
     skos:definition "An Act of Analysis that examines the current situation, proposed solution, and financial analysis and produces a business case justifying the project to decision makers." ;
@@ -2949,6 +3106,7 @@ bpo:P11120 a owl:Class ;
 # --- 13.2.3.1.5 (PCF 11121) : develop project measures and indicators -> Formulation
 bpo:P11121 a owl:Class ;
     bpo:pcfID "11121" ; bpo:hierarchyID "13.2.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11121. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing procedures and indictors to assess performance of business projects. Design and develop metrics and indicators--such as cost, schedule, resources, risk, and quality--that exhibit the performance of the business projects." ;
     rdfs:label "Develop project measures and indicators" ;
     skos:definition "An Act of Formulation that designs and prescribes the metrics and indicators -- cost, schedule, resources, risk, and quality -- used to assess project performance, producing a performance indicator specification." ;
@@ -2960,6 +3118,7 @@ bpo:P11121 a owl:Class ;
 # --- 13.2.3.1.6 (PCF 21454) : prioritize and select projects -> Selection
 bpo:P21454 a owl:Class ;
     bpo:pcfID "21454" ; bpo:hierarchyID "13.2.3.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21454. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Stack ranking of projects in the portfolio based upon preestablished criteria." ;
     rdfs:label "Prioritize and select projects for the portfolio" ;
     skos:definition "An Act of Selection that stack-ranks and chooses the projects for the portfolio against preestablished criteria and produces a project portfolio selection." ;
@@ -2971,6 +3130,7 @@ bpo:P21454 a owl:Class ;
 # --- 13.2.3.2 (PCF 11119) : identify PM methodologies -> Selection
 bpo:P11119 a owl:Class ;
     bpo:pcfID "11119" ; bpo:hierarchyID "13.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11119. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and implementing the techniques and procedures for managing business projects. Identify the most appropriate models, which are to be employed by the project managers for the purpose of designing, planning, implementing, and achieving project objectives. Examine and assess various project management methodologies such as adaptive project framework, agile development, crystal methods, and feature-driven development." ;
     rdfs:label "Identify appropriate project management methodologies" ;
     skos:definition "An Act of Selection that examines and chooses the most appropriate project-management methodology from candidate models and produces a project management methodology selection." ;
@@ -2982,6 +3142,7 @@ bpo:P11119 a owl:Class ;
 # --- 13.2.3.3 (PCF 16413) : develop project plans -> Formulation (parent)
 bpo:P16413 a owl:Class ;
     bpo:pcfID "16413" ; bpo:hierarchyID "13.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16413. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the resources and their roles. Identify IT requirements. Create plans for effective training and communication. Design reward approaches. Plan the launch of project. Deploy the project." ;
     rdfs:label "Develop project plans" ;
     skos:definition "An Act of Formulation that composes a project plan prescribing the resources, roles, IT requirements, training, communication, reward approaches, and launch for executing a business project." ;
@@ -3000,6 +3161,7 @@ bpo:P16413 a owl:Class ;
 # --- 13.2.3.3.1 (PCF 11123) : define roles and resources -> Formulation
 bpo:P11123 a owl:Class ;
     bpo:pcfID "11123" ; bpo:hierarchyID "13.2.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11123. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the resources and their roles in the business projects." ;
     rdfs:label "Define roles and resources" ;
     skos:definition "An Act of Formulation that defines and assigns the roles and resources of a business project, producing a role definition specification." ;
@@ -3011,6 +3173,7 @@ bpo:P11123 a owl:Class ;
 # --- 13.2.3.3.2 (PCF 20142) : acquire/secure project resources -> Acquisition
 bpo:P20142 a owl:Class ;
     bpo:pcfID "20142" ; bpo:hierarchyID "13.2.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20142. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Procuring the necessary resources outlined in Define roles and resources [11123]" ;
     rdfs:label "Acquire/secure project resources" ;
     skos:definition "An Act of Acquisition that procures and secures the resources outlined for a business project that the organization did not previously hold." ;
@@ -3021,6 +3184,7 @@ bpo:P20142 a owl:Class ;
 # --- 13.2.3.3.3 (PCF 11124) : identify specific IT requirements -> Identification
 bpo:P11124 a owl:Class ;
     bpo:pcfID "11124" ; bpo:hierarchyID "13.2.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11124. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the IT requirements for specific business projects. Identify the requirements of computers and telecommunications equipment to store, retrieve, transmit, and manipulate data related to the project. Consider factors such as functional requirements, design requirements, project phases, and project schedule." ;
     rdfs:label "Identify specific IT requirements" ;
     skos:definition "An Act of Identification that discerns the information-technology requirements of a specific business project and registers them in an IT requirements statement." ;
@@ -3032,6 +3196,7 @@ bpo:P11124 a owl:Class ;
 # --- 13.2.3.3.4 (PCF 11125) : create training and communication plans -> Formulation
 bpo:P11125 a owl:Class ;
     bpo:pcfID "11125" ; bpo:hierarchyID "13.2.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11125. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing a plan for equipping the project team with the necessary skills and abilities to fulfill their roles and responsibilities in the project effectively and efficiently. Offer formal training, mentoring, or coaching. Initiate informal conversations. Communicate messages during the project." ;
     rdfs:label "Create training and communication plans" ;
     skos:definition "An Act of Formulation that composes a training plan and a communication plan for equipping the project team with the necessary skills and for communicating during the project." ;
@@ -3044,6 +3209,7 @@ bpo:P11125 a owl:Class ;
 # --- 13.2.3.3.5 (PCF 11127) : design recognition and reward approaches -> Formulation
 bpo:P11127 a owl:Class ;
     bpo:pcfID "11127" ; bpo:hierarchyID "13.2.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11127. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for recognizing and rewarding extraordinary performances within the business projects. Use incentives, bonuses, and certificates for recognition and rewarding purposes." ;
     rdfs:label "Design recognition and reward approaches" ;
     skos:definition "An Act of Formulation that composes a recognition and reward plan prescribing the incentives, bonuses, and recognition for extraordinary performance within a project." ;
@@ -3055,6 +3221,7 @@ bpo:P11127 a owl:Class ;
 # --- 13.2.3.3.6 (PCF 11128) : design and plan launch of project -> Formulation
 bpo:P11128 a owl:Class ;
     bpo:pcfID "11128" ; bpo:hierarchyID "13.2.3.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11128. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan specifying when to initiate the project, and introducing it to the target audience. Clearly define the project team, objectives, timelines, and milestone." ;
     rdfs:label "Design and plan launch of project" ;
     skos:definition "An Act of Formulation that composes a project launch plan prescribing when to initiate the project and how to introduce it to its target audience, including team, objectives, timelines, and milestones." ;
@@ -3066,6 +3233,7 @@ bpo:P11128 a owl:Class ;
 # --- 13.2.3.3.7 (PCF 11129) : deploy the project -> Implementation
 bpo:P11129 a owl:Class ;
     bpo:pcfID "11129" ; bpo:hierarchyID "13.2.3.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11129. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Putting the project into position by effectively bringing it into action." ;
     rdfs:label "Deploy the project" ;
     skos:definition "An Act of Implementation that puts a business project into position and brings it into action per its project plan." ;
@@ -3076,6 +3244,7 @@ bpo:P11129 a owl:Class ;
 # --- 13.2.3.4 (PCF 16414) : execute projects -> Implementation (parent)
 bpo:P16414 a owl:Class ;
     bpo:pcfID "16414" ; bpo:hierarchyID "13.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16414. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing the business projects of the organization. Evaluate the impact of project management. Record and report the status of the project. Manage the project scope. Promote and sustain activities and involvement. Realign and revamp the project management strategy and approach." ;
     rdfs:label "Execute projects" ;
     skos:definition "An Act of Implementation that carries out a business project by evaluating impact, reporting status, managing scope, sustaining involvement, and realigning approach." ;
@@ -3093,6 +3262,7 @@ bpo:P16414 a owl:Class ;
 # --- 13.2.3.4.1 (PCF 11131) : evaluate impact of project management -> Appraisal
 bpo:P11131 a owl:Class ;
     bpo:pcfID "11131" ; bpo:hierarchyID "13.2.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11131. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assessing the impact of business project management on the measures and outcomes of the projects. Gauge non-financial measures, frequency of measurement, action plan, etc." ;
     rdfs:label "Evaluate impact of project management (strategy and projects) on measures and outcomes" ;
     skos:definition "An Act of Appraisal that evaluates the impact of project-management strategy and projects on the organization's measures and outcomes and produces a project management impact assessment." ;
@@ -3104,6 +3274,7 @@ bpo:P11131 a owl:Class ;
 # --- 13.2.3.4.2 (PCF 16415) : report the status of project -> Information Processing
 bpo:P16415 a owl:Class ;
     bpo:pcfID "16415" ; bpo:hierarchyID "13.2.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16415. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recording and documenting the current status and position of the project. Record and report items such as completed tasks, incomplete tasks, planned tasks, and problems faced." ;
     rdfs:label "Report the status of project" ;
     skos:definition "An Act of Information Processing that records and documents the current status of a project -- completed, incomplete, and planned tasks and problems -- and produces a project status report." ;
@@ -3115,6 +3286,7 @@ bpo:P16415 a owl:Class ;
 # --- 13.2.3.4.3 (PCF 16416) : manage project scope -> Formulation
 bpo:P16416 a owl:Class ;
     bpo:pcfID "16416" ; bpo:hierarchyID "13.2.3.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16416. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining and documenting a list of specific project goals, deliverables, tasks, costs, and deadlines. Use the scope statement to explain the boundaries of the project. Assign responsibilities for team members. Set up procedures for verifying and approving the completed tasks." ;
     rdfs:label "Manage project scope" ;
     skos:definition "An Act of Formulation that determines and documents the project's goals, deliverables, tasks, costs, and deadlines, maintaining the project scope statement that bounds the project." ;
@@ -3126,6 +3298,7 @@ bpo:P16416 a owl:Class ;
 # --- 13.2.3.4.4 (PCF 11132) : promote and sustain activity and involvement -> Implementation
 bpo:P11132 a owl:Class ;
     bpo:pcfID "11132" ; bpo:hierarchyID "13.2.3.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11132. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Encouraging and sustaining the activities and involvement while executing projects. Promote the execution activities of the projects. Encourage employee involvement in project implementation." ;
     rdfs:label "Promote and sustain activity and involvement" ;
     skos:definition "An Act of Implementation that encourages and sustains the execution activities and employee involvement during project implementation." ;
@@ -3137,6 +3310,7 @@ bpo:P11132 a owl:Class ;
 # --- 13.2.3.4.5 (PCF 21455) : conduct project reviews -> Appraisal
 bpo:P21455 a owl:Class ;
     bpo:pcfID "21455" ; bpo:hierarchyID "13.2.3.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21455. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Hold post project reviews, lessons learned, or After Action Reviews (AARs) at the end of each project to understand what could be improved during future projects." ;
     rdfs:label "Conduct Project Reviews with Program Managers and other stakeholders" ;
     skos:definition "An Act of Appraisal that conducts a post-project or after-action review with program managers and stakeholders and produces a project review record of lessons learned." ;
@@ -3150,6 +3324,7 @@ bpo:P21455 a owl:Class ;
 # --- 13.2.3.4.6 (PCF 11133) : realign and refresh PM strategy -> Improvement
 bpo:P11133 a owl:Class ;
     bpo:pcfID "11133" ; bpo:hierarchyID "13.2.3.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11133. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reorganizing and stimulating the approach and strategy for managing business projects. Make improvements based on the project scope and on findings from Evaluate the impact of project management (strategy and projects) on measures and outcomes [11131]." ;
     rdfs:label "Realign and refresh project management strategy and approaches" ;
     skos:definition "An Act of Improvement that reorganizes and refreshes an organization's project-management strategy and approaches based on impact findings to raise their effectiveness." ;
@@ -3160,6 +3335,7 @@ bpo:P11133 a owl:Class ;
 # --- 13.2.3.4.7 (PCF 21456) : adjust project plan as needed -> Improvement
 bpo:P21456 a owl:Class ;
     bpo:pcfID "21456" ; bpo:hierarchyID "13.2.3.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21456. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Changes to project plans based upon internal and or external influences on the project.  This would include the update to the project plan file, as well as the communication to the team." ;
     rdfs:label "Adjust project plan as needed" ;
     skos:definition "An Act of Improvement that makes required changes to an existing project plan in response to internal and external influences and produces the updated project plan." ;
@@ -3172,6 +3348,7 @@ bpo:P21456 a owl:Class ;
 # --- 13.2.3.5 (PCF 16417) : review and report project performance -> Monitoring
 bpo:P16417 a owl:Class ;
     bpo:pcfID "16417" ; bpo:hierarchyID "13.2.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16417. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Measuring the performance of a business project against key performance indicators including the project scope, schedule, quality, cost, and risk criteria. Identify any deviations from the plan. Assess the impact of these deviations on the project, as well as on the overall program. Report results to key stakeholders." ;
     rdfs:label "Review and report project performance" ;
     skos:definition "An Act of Monitoring that measures a project's performance against its key performance indicators, identifies deviations from plan, and produces a project performance report for stakeholders." ;
@@ -3184,6 +3361,7 @@ bpo:P16417 a owl:Class ;
 # --- 13.2.3.6 (PCF 16418) : close projects -> Planned Act
 bpo:P16418 a owl:Class ;
     bpo:pcfID "16418" ; bpo:hierarchyID "13.2.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16418. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Settling each contract. Close each contract applicable to the project or project phase. Finalize all activities across all of the process groups in order to formally close the project or a project phase." ;
     rdfs:label "Close projects" ;
     skos:definition "A Planned Act that settles the project's contracts and finalizes all activities to formally close a business project or project phase." ;
@@ -3201,6 +3379,7 @@ bpo:P16418 a owl:Class ;
 # --- 13.7.1 (PCF 21459) : identify needs from stakeholders -> Identification
 bpo:P21459 a owl:Class ;
     bpo:pcfID "21459" ; bpo:hierarchyID "13.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21459. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gathering information from stakeholders prior to conducting analytics." ;
     rdfs:label "Identify needs from stakeholders" ;
     skos:definition "An Act of Identification that gathers and discerns the needs of stakeholders prior to conducting analytics and produces a stakeholder needs statement." ;
@@ -3213,6 +3392,7 @@ bpo:P21459 a owl:Class ;
 # --- 13.7.2 (PCF 21460) : scope analytics project -> Formulation
 bpo:P21460 a owl:Class ;
     bpo:pcfID "21460" ; bpo:hierarchyID "13.7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21460. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the size and scale of the project based upon the collected information and analytics." ;
     rdfs:label "Scope analytics project" ;
     skos:definition "An Act of Formulation that determines the size and scale of an analytics project from collected information and produces an analytics project scope statement." ;
@@ -3225,6 +3405,7 @@ bpo:P21460 a owl:Class ;
 # --- 13.7.3 (PCF 20960) : develop and manage hypotheses -> Analysis (descriptive)
 bpo:P20960 a owl:Class ;
     bpo:pcfID "20960" ; bpo:hierarchyID "13.7.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20960. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating theories that explain empirical data. Use the hypotheses to guide feature selection in the process of data collection." ;
     rdfs:label "Develop and manage hypotheses" ;
     skos:definition "An Act of Information Processing that composes and frames the hypotheses explaining empirical data, producing a hypothesis used to guide feature selection during data collection." ;
@@ -3236,6 +3417,7 @@ bpo:P20960 a owl:Class ;
 # --- 13.7.4 (PCF 20961) : collect data -> Acquisition
 bpo:P20961 a owl:Class ;
     bpo:pcfID "20961" ; bpo:hierarchyID "13.7.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20961. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gathering and harvesting structured and unstructured data from disparate sources. Clean and pre-process data. Remove duplicates. Convert to a uniform format to make records comparable." ;
     rdfs:label "Collect data" ;
     skos:definition "An Act of Acquisition that gathers and harvests structured and unstructured data from disparate sources and cleans, deduplicates, and normalizes it into an analytics dataset." ;
@@ -3247,6 +3429,7 @@ bpo:P20961 a owl:Class ;
 # --- 13.7.5 (PCF 21461) : prepare data -> Information Processing
 bpo:P21461 a owl:Class ;
     bpo:pcfID "21461" ; bpo:hierarchyID "13.7.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21461. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creation and validation of data in order to initiate the process of analysis." ;
     rdfs:label "Prepare data" ;
     skos:definition "An Act of Information Processing that creates and validates an analytics dataset so as to produce a prepared dataset fit to initiate analysis." ;
@@ -3259,6 +3442,7 @@ bpo:P21461 a owl:Class ;
 # --- 13.7.6 (PCF 20962) : analyze data -> Analysis
 bpo:P20962 a owl:Class ;
     bpo:pcfID "20962" ; bpo:hierarchyID "13.7.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20962. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting data analysis. Choose statistical algorithms that best reveal patterns and trends in the data. Compare with hypotheses and time series forecasts. Determine error rates and significant outliers." ;
     rdfs:label "Analyze data" ;
     skos:definition "An Act of Analysis that applies statistical algorithms to a prepared dataset to reveal patterns, trends, error rates, and outliers and produces a data analysis result." ;
@@ -3271,6 +3455,7 @@ bpo:P20962 a owl:Class ;
 # --- 13.7.7 (PCF 21462) : create data models -> Formulation
 bpo:P21462 a owl:Class ;
     bpo:pcfID "21462" ; bpo:hierarchyID "13.7.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21462. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creation of conceptual and physical data models as an outline for data structure and storage." ;
     rdfs:label "Create data models" ;
     skos:definition "An Act of Formulation that composes conceptual and physical data models prescribing how data is to be structured and stored, producing a data model." ;
@@ -3282,6 +3467,7 @@ bpo:P21462 a owl:Class ;
 # --- 13.7.8 (PCF 21463) : review data models with stakeholders -> Appraisal
 bpo:P21463 a owl:Class ;
     bpo:pcfID "21463" ; bpo:hierarchyID "13.7.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21463. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Confirm data models represent the hypothesis supporting the original research question" ;
     rdfs:label "Review data models with stakeholders" ;
     skos:definition "An Act of Appraisal that reviews data models with stakeholders against the original research question and hypothesis and produces a data model review record." ;
@@ -3295,6 +3481,7 @@ bpo:P21463 a owl:Class ;
 # --- 13.7.9 (PCF 21464) : refine data models -> Formulation
 bpo:P21464 a owl:Class ;
     bpo:pcfID "21464" ; bpo:hierarchyID "13.7.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21464. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Make required changes to data model based upon review with stakeholders." ;
     rdfs:label "Refine data models" ;
     skos:definition "An Act of Formulation that makes the required changes to a data model based on the stakeholder review and produces the revised data model." ;
@@ -3307,6 +3494,7 @@ bpo:P21464 a owl:Class ;
 # --- 13.7.10 (PCF 20963) : report on analysis -> Information Processing
 bpo:P20963 a owl:Class ;
     bpo:pcfID "20963" ; bpo:hierarchyID "13.7.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20963. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Summarizing and documenting the results of data analysis. Create graphs and visualizations to illustrate numerical findings to make them more accessible to readers." ;
     rdfs:label "Report on analysis" ;
     skos:definition "An Act of Information Processing that summarizes and documents the results of data analysis, including graphs and visualizations, and produces an analysis report." ;
@@ -3319,6 +3507,7 @@ bpo:P20963 a owl:Class ;
 # --- 13.7.11 (PCF 20964) : identify remedial actions -> Formulation (directive)
 bpo:P20964 a owl:Class ;
     bpo:pcfID "20964" ; bpo:hierarchyID "13.7.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20964. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the steps that need to be taken to correct the shortcomings." ;
     rdfs:label "Identify remedial actions" ;
     skos:definition "An Act of Formulation that determines the steps required to correct identified shortcomings and produces a remedial action specification prescribing them." ;
@@ -3335,6 +3524,7 @@ bpo:P20964 a owl:Class ;
 # --- 13.8.1 (PCF 11180) : determine EHS impacts -> Analysis (parent)
 bpo:P11180 a owl:Class ;
     bpo:pcfID "11180" ; bpo:hierarchyID "13.8.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11180. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the impact of EHS offering--and the procedures it employs to process them--on the environment at large, as well as the health and safety of employees. Evaluate the environmental impact of the organization's products, services, and operations. Conduct health, safety, and environmental audits." ;
     rdfs:label "Determine environmental health and safety impacts" ;
     skos:definition "An Act of Analysis that examines audit and lifecycle data to determine the environmental, health, and safety impacts of an organization's offerings and operations." ;
@@ -3347,6 +3537,7 @@ bpo:P11180 a owl:Class ;
 # --- 13.8.1.1 (PCF 11186) : evaluate environmental impact -> Analysis
 bpo:P11186 a owl:Class ;
     bpo:pcfID "11186" ; bpo:hierarchyID "13.8.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11186. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the impact of offerings and the auxiliary operations required to process them on the immediate ecosystem and the environment at large. Study the lifecycle of the products/services offered by the organization. Estimate any affect on the environment through metrics such as a calculation of carbon footprint." ;
     rdfs:label "Evaluate environmental impact of products, services, and operations" ;
     skos:definition "An Act of Analysis that studies the lifecycle of an organization's products, services, and operations and produces an environmental impact assessment." ;
@@ -3358,6 +3549,7 @@ bpo:P11186 a owl:Class ;
 # --- 13.8.1.2 (PCF 11187) : conduct EHS audits -> Appraisal
 bpo:P11187 a owl:Class ;
     bpo:pcfID "11187" ; bpo:hierarchyID "13.8.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11187. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting an inspection to verify that the organization adequately complies with the environmental, health, and safety standards. Audit procedures and records regarding responsibility for the environment, health, and safety." ;
     rdfs:label "Conduct health and safety and environmental audits" ;
     skos:definition "An Act of Appraisal that inspects and verifies an organization's compliance with environmental, health, and safety standards and produces an EHS audit report." ;
@@ -3369,6 +3561,7 @@ bpo:P11187 a owl:Class ;
 # --- 13.8.2 (PCF 11181) : develop EHS program -> Formulation (parent)
 bpo:P11181 a owl:Class ;
     bpo:pcfID "11181" ; bpo:hierarchyID "13.8.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11181. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identify the requirements for regulation and shareholders. Assess future risks and opportunities. Develop a policy for the EHS program. Record and manage EHS program events." ;
     rdfs:label "Develop EHS program" ;
     skos:definition "An Act of Formulation that composes an organization's environmental, health, and safety program by establishing its requirements, risk assessment, and policy." ;
@@ -3383,6 +3576,7 @@ bpo:P11181 a owl:Class ;
 # --- 13.8.2.1 (PCF 11188) : identify regulatory/stakeholder requirements -> Identification
 bpo:P11188 a owl:Class ;
     bpo:pcfID "11188" ; bpo:hierarchyID "13.8.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11188. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining any protocols or standards to comply with, set by regulatory agencies or the organization's stakeholders. Closely examine all standards and matters of compliance relating to the environment, health, and safety." ;
     rdfs:label "Identify regulatory and stakeholder requirements" ;
     skos:definition "An Act of Identification that discerns the regulatory and stakeholder protocols and standards an organization must comply with for environment, health, and safety and registers them in an EHS requirement register." ;
@@ -3395,6 +3589,7 @@ bpo:P11188 a owl:Class ;
 # --- 13.8.2.2 (PCF 11189) : assess future risks and opportunities -> Appraisal
 bpo:P11189 a owl:Class ;
     bpo:pcfID "11189" ; bpo:hierarchyID "13.8.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11189. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating any risks and opportunities that might affect the environmental, health, and safety of products/services. Leverage techniques such as cost-benefit analysis, trend extrapolation, systems analysis, social surveys, historical surveys, historical analogy, Delphi, conferences, workshops, briefings, hearings, advisory committees, moot courts, artistic judgment, on-site field investigation, scaling techniques, and scenario creation." ;
     rdfs:label "Assess future risks and opportunities" ;
     skos:definition "An Act of Appraisal that evaluates the future risks and opportunities affecting the environmental, health, and safety of products and services and produces an EHS risk and opportunity assessment." ;
@@ -3406,6 +3601,7 @@ bpo:P11189 a owl:Class ;
 # --- 13.8.2.3 (PCF 11190) : create EHS policy -> Formulation
 bpo:P11190 a owl:Class ;
     bpo:pcfID "11190" ; bpo:hierarchyID "13.8.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11190. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for managing the environmental, health, and safety impact of products/services. Establish minimum requirements for the organization regarding the environment at large and the health and safety of employees. Develop policies, written procedures, and supporting tools to dictate how the organization will meet policy requirements." ;
     rdfs:label "Create EHS policy" ;
     skos:definition "An Act of Formulation that composes an EHS policy prescribing the minimum requirements, procedures, and tools by which an organization will manage its environmental, health, and safety impact." ;
@@ -3417,6 +3613,7 @@ bpo:P11190 a owl:Class ;
 # --- 13.8.2.4 (PCF 11191) : record and manage EHS events -> Information Processing
 bpo:P11191 a owl:Class ;
     bpo:pcfID "11191" ; bpo:hierarchyID "13.8.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11191. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recording and managing all events and activities associated with complying with environmental, health and safety standards. Create event calendars. Assign funds. Educate employees. Conduct events." ;
     rdfs:label "Record and manage EHS events" ;
     skos:definition "An Act of Information Processing that records the events and activities associated with environmental, health, and safety compliance and produces an EHS event record." ;
@@ -3428,6 +3625,7 @@ bpo:P11191 a owl:Class ;
 # --- 13.8.3 (PCF 21587) : monitor and manage EHS program -> Planned Act (parent)
 bpo:P21587 a owl:Class ;
     bpo:pcfID "21587" ; bpo:hierarchyID "13.8.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21587. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the performance, costs and benefits of EHS. Measure and report the performance of EHS. Implement plans for emergency response and pollution prevention. Train and educate employees. Provide EHS support." ;
     rdfs:label "Monitor and manage EHS program" ;
     skos:definition "A Planned Act that constitutes an organization's bounded EHS management and oversight cycle -- measuring and reporting EHS performance, appraising costs and benefits, implementing emergency-response and pollution-prevention programs, training employees, and providing support." ;
@@ -3444,6 +3642,7 @@ bpo:P21587 a owl:Class ;
 # --- 13.8.3.1 (PCF 11193) : manage EHS costs and benefits -> Appraisal
 bpo:P11193 a owl:Class ;
     bpo:pcfID "11193" ; bpo:hierarchyID "13.8.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11193. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the costs and benefits of EHS management program. Evaluate program costs to ensure that the benefits of the program always outweigh its costs." ;
     rdfs:label "Manage EHS costs and benefits" ;
     skos:definition "An Act of Appraisal that evaluates the costs and benefits of an EHS program and produces an EHS cost-benefit assessment of whether benefits outweigh costs." ;
@@ -3455,6 +3654,7 @@ bpo:P11193 a owl:Class ;
 # --- 13.8.3.2 (PCF 11194) : measure and report EHS performance -> Measuring
 bpo:P11194 a owl:Class ;
     bpo:pcfID "11194" ; bpo:hierarchyID "13.8.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11194. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using performance techniques and indicators. Utilize number of audits or inspections performed, safety committee meetings, the number and types of findings and observations, timely preventive maintenance tasks performed, etc." ;
     rdfs:label "Measure and report EHS performance" ;
     skos:definition "An Act of Measuring that uses defined performance indicators to measure environmental, health, and safety performance and produces an EHS performance report." ;
@@ -3468,6 +3668,7 @@ bpo:P11194 a owl:Class ;
 # --- 13.8.3.3 (PCF 11196) : implement emergency response program -> Implementation
 bpo:P11196 a owl:Class ;
     bpo:pcfID "11196" ; bpo:hierarchyID "13.8.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11196. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing a program for organizing, coordinating, and directing available resources to respond to the event. Conduct a risk assessment to identify potential emergency scenarios in order to create a program that ensures that resources are on hand--or quickly available--in case of emergencies." ;
     rdfs:label "Implement emergency response program" ;
     skos:definition "An Act of Implementation that puts an emergency response program into operation so that resources are organized, coordinated, and available to respond to emergency events." ;
@@ -3479,6 +3680,7 @@ bpo:P11196 a owl:Class ;
 # --- 13.8.3.4 (PCF 11197) : implement pollution prevention program -> Implementation
 bpo:P11197 a owl:Class ;
     bpo:pcfID "11197" ; bpo:hierarchyID "13.8.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11197. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing a program that reduces or eliminates the creation of pollutants through increased efficiency in the use of raw materials, energy, water, or other resources. Implement a program to inspect facilities that store, manufacture, or use hazardous, toxic, or polluting materials." ;
     rdfs:label "Implement pollution prevention program" ;
     skos:definition "An Act of Implementation that puts a pollution prevention program into operation to reduce or eliminate the creation of pollutants through increased resource efficiency." ;
@@ -3490,6 +3692,7 @@ bpo:P11197 a owl:Class ;
 # --- 13.8.3.5 (PCF 11182) : train and educate functional employees -> Training
 bpo:P11182 a owl:Class ;
     bpo:pcfID "11182" ; bpo:hierarchyID "13.8.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11182. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting programs such as on-the-job training sessions, group training workshops, and online training." ;
     rdfs:label "Train and educate functional employees" ;
     skos:definition "An Act of Training in which environmental, health, and safety knowledge and skills are imparted to the organization's functional employees through on-the-job, workshop, and online training programs." ;
@@ -3502,6 +3705,7 @@ bpo:P11182 a owl:Class ;
 # --- 13.8.3.6 (PCF 11195) : provide EHS support -> Planned Act
 bpo:P11195 a owl:Class ;
     bpo:pcfID "11195" ; bpo:hierarchyID "13.8.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11195. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Supporting employees in light of the organization's environmental, health, and safety policies and standards. Provide medical insurance, maternity leave, environmental education, training over safety, etc." ;
     rdfs:label "Provide EHS support" ;
     skos:definition "A Planned Act that provides employees with support services -- such as medical insurance, leave, environmental education, and safety training -- in light of an organization's environmental, health, and safety policies and standards." ;
@@ -3520,6 +3724,7 @@ bpo:P11195 a owl:Class ;
 # --- 13.9.1 (PCF 21589) : develop sustainability capability -> Formulation (parent)
 bpo:P21589 a owl:Class ;
     bpo:pcfID "21589" ; bpo:hierarchyID "13.9.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21589. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing sustainability (ESG) capabilities for the organization. Understand and communicate legal, regulatory, and social/environmental requirements. Establish policies, objectives, guidelines and approaches for ESG efforts and reporting." ;
     rdfs:label "Develop sustainability capability" ;
     skos:definition "An Act of Formulation that develops an organization's sustainability (ESG) capability by establishing its requirements, goals, policies, measures, and plans." ;
@@ -3535,6 +3740,7 @@ bpo:P21589 a owl:Class ;
 # --- 13.9.1.1 (PCF 21590) : identify sustainability requirements -> Formulation (parent)
 bpo:P21590 a owl:Class ;
     bpo:pcfID "21590" ; bpo:hierarchyID "13.9.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21590. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying, documenting, and communicating sustainability requirements. Closely examine all standards and matters of compliance relating to ESG. Determine protocols or standards to comply with, set by regulatory agencies or the organizations stakeholders." ;
     rdfs:label "Identify sustainability requirements" ;
     skos:definition "An Act of Formulation that identifies, documents, and composes the disclosure, governance, functional, and performance requirements for sustainability, producing a sustainability requirement specification." ;
@@ -3549,6 +3755,7 @@ bpo:P21590 a owl:Class ;
 # --- 13.9.1.1.1 (PCF 21591) : define disclosure requirements -> Formulation
 bpo:P21591 a owl:Class ;
     bpo:pcfID "21591" ; bpo:hierarchyID "13.9.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21591. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining and communicating sustainability disclosure requirements. Clarify and align disclosure requirements to other organizational reporting requirements and needs. Integrate preparation and reporting activities." ;
     rdfs:label "Define sustainability disclosure requirements" ;
     skos:definition "An Act of Formulation that defines and aligns the sustainability disclosure requirements an organization must satisfy, producing a sustainability requirement specification." ;
@@ -3560,6 +3767,7 @@ bpo:P21591 a owl:Class ;
 # --- 13.9.1.1.2 (PCF 21592) : define governance requirements -> Formulation
 bpo:P21592 a owl:Class ;
     bpo:pcfID "21592" ; bpo:hierarchyID "13.9.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21592. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining governance requirements for sustainability. Include structure, roles, alignment to organization models, processes and standards to be applied." ;
     rdfs:label "Define sustainability governance requirements" ;
     skos:definition "An Act of Formulation that defines the governance requirements for sustainability -- structure, roles, and standards -- producing a sustainability requirement specification." ;
@@ -3571,6 +3779,7 @@ bpo:P21592 a owl:Class ;
 # --- 13.9.1.1.3 (PCF 21593) : define functional/performance requirements -> Formulation
 bpo:P21593 a owl:Class ;
     bpo:pcfID "21593" ; bpo:hierarchyID "13.9.1.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21593. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining functional and performance requirements for sustainability. Align with ESG strategies, goals, and the implementation of sustainability efforts across the organization, provide a roadmap and visibility to shared and collective requirements." ;
     rdfs:label "Define sustainability functional and performance requirements" ;
     skos:definition "An Act of Formulation that defines the functional and performance requirements for sustainability, aligned to ESG strategies and goals, producing a sustainability requirement specification." ;
@@ -3582,6 +3791,7 @@ bpo:P21593 a owl:Class ;
 # --- 13.9.1.2 (PCF 21594) : establish goals/objectives -> Formulation
 bpo:P21594 a owl:Class ;
     bpo:pcfID "21594" ; bpo:hierarchyID "13.9.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21594. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing organizational sustainability goals/objectives. Gather, align, and promote organization-wide sustainability goals that collectively address the overall sustainability requirements. Ensure the goals are measurable and have qualitative and quantitative targets." ;
     rdfs:label "Establish sustainability goals/objectives" ;
     skos:definition "An Act of Formulation that composes the organization's measurable sustainability goals and targets, producing a sustainability goal specification." ;
@@ -3593,6 +3803,7 @@ bpo:P21594 a owl:Class ;
 # --- 13.9.1.3 (PCF 21595) : create policies -> Formulation
 bpo:P21595 a owl:Class ;
     bpo:pcfID "21595" ; bpo:hierarchyID "13.9.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21595. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing, documenting, and communicating sustainability policies. Develop policies, written procedures, and supporting tools to dictate how the organization will meet policy requirements." ;
     rdfs:label "Create sustainability policies" ;
     skos:definition "An Act of Formulation that composes the written sustainability policies and procedures dictating how an organization will meet its sustainability requirements, producing a sustainability policy." ;
@@ -3604,6 +3815,7 @@ bpo:P21595 a owl:Class ;
 # --- 13.9.1.4 (PCF 21596) : define measures -> Formulation
 bpo:P21596 a owl:Class ;
     bpo:pcfID "21596" ; bpo:hierarchyID "13.9.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21596. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining sustainability measures. Provide organization-wide measures, to include data collection strategies, calculations, analytics, and reporting formats." ;
     rdfs:label "Define sustainability measures" ;
     skos:definition "An Act of Formulation that composes organization-wide sustainability measures -- including data-collection strategies, calculations, and reporting formats -- producing a sustainability measure specification." ;
@@ -3615,6 +3827,7 @@ bpo:P21596 a owl:Class ;
 # --- 13.9.1.5 (PCF 21597) : create plan(s) -> Formulation
 bpo:P21597 a owl:Class ;
     bpo:pcfID "21597" ; bpo:hierarchyID "13.9.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21597. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating sustainability plans. Develop and socialize sustainability plans for the organization, functional units, and support services. Ensure alignment to sustainability requirements, goals, and governance." ;
     rdfs:label "Create sustainability plan(s)" ;
     skos:definition "An Act of Formulation that composes sustainability plans for the organization, its functional units, and support services, aligned to sustainability requirements, goals, and governance, producing a sustainability plan." ;
@@ -3626,6 +3839,7 @@ bpo:P21597 a owl:Class ;
 # --- 13.9.2 (PCF 21598) : manage sustainability capability -> Planned Act (parent)
 bpo:P21598 a owl:Class ;
     bpo:pcfID "21598" ; bpo:hierarchyID "13.9.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21598. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing sustainability across the organization. Provide training, support, reporting, and oversight to the distributed sustainability efforts across functional units and support services." ;
     rdfs:label "Manage sustainability capability" ;
     skos:definition "A Planned Act that administers distributed sustainability efforts across an organization by providing training, support, and reporting and oversight to functional units and support services." ;
@@ -3639,6 +3853,7 @@ bpo:P21598 a owl:Class ;
 # --- 13.9.2.1 (PCF 21599) : provide sustainability training -> Training
 bpo:P21599 a owl:Class ;
     bpo:pcfID "21599" ; bpo:hierarchyID "13.9.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21599. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing sustainability training and awareness. Plan, prepare, and oversee delivery of sustainability education and enablement activities." ;
     rdfs:label "Provide sustainability training" ;
     skos:definition "An Act of Training in which sustainability education and enablement are imparted to an organization's personnel." ;
@@ -3651,6 +3866,7 @@ bpo:P21599 a owl:Class ;
 # --- 13.9.2.2 (PCF 21600) : provide sustainability support -> Implementation
 bpo:P21600 a owl:Class ;
     bpo:pcfID "21600" ; bpo:hierarchyID "13.9.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21600. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing support for sustainability activities. Augment functional units and support teams with coaching, mentoring, and SME capacity to perform sustainability projects and activities." ;
     rdfs:label "Provide sustainability support" ;
     skos:definition "An Act of Implementation that augments functional units and support teams with coaching, mentoring, and subject-matter-expert capacity to carry out sustainability projects and activities." ;
@@ -3661,6 +3877,7 @@ bpo:P21600 a owl:Class ;
 # --- 13.9.2.3 (PCF 21601) : perform sustainability reporting -> Information Processing (parent)
 bpo:P21601 a owl:Class ;
     bpo:pcfID "21601" ; bpo:hierarchyID "13.9.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21601. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conducting and supporting sustainability reporting. Collect, analyze, and report sustainability performance to requirements. Align reporting across functional units and support teams." ;
     rdfs:label "Perform sustainability reporting" ;
     skos:definition "An Act of Reporting that collects, analyzes, and reports sustainability performance against requirements, aligning reporting across functional units, and disseminates the resulting sustainability statement to its reporting audiences." ;
@@ -3674,6 +3891,7 @@ bpo:P21601 a owl:Class ;
 # --- 13.9.2.3.1 (PCF 21602) : measure sustainability performance -> Appraisal
 bpo:P21602 a owl:Class ;
     bpo:pcfID "21602" ; bpo:hierarchyID "13.9.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21602. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Measuring sustainability performance. Setup, collect, and validate sustainability data. Conduct audits and inspections. Evaluate results to requirements and targets. Identify and track resolution of gaps and variances." ;
     rdfs:label "Measure sustainability performance" ;
     skos:definition "An Act of Appraisal that collects and validates sustainability data, conducts audits and inspections, and evaluates sustainability performance against requirements and targets -- tracking gaps and variances -- producing a sustainability performance assessment." ;
@@ -3686,6 +3904,7 @@ bpo:P21602 a owl:Class ;
 # --- 13.9.2.3.2 (PCF 21603) : prepare sustainability statements -> Information Processing
 bpo:P21603 a owl:Class ;
     bpo:pcfID "21603" ; bpo:hierarchyID "13.9.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21603. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Preparing sustainability statements. Given the multitude of potential audiences for reporting, alignment and consistency of sustainability statements provides clarity and reusability for those audiences." ;
     rdfs:label "Prepare sustainability statements" ;
     skos:definition "An Act of Information Processing that assembles measured sustainability performance into aligned, consistent sustainability statements for an organization's reporting audiences." ;

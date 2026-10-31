@@ -583,6 +583,7 @@ bpo:RegulatoryAuthority a owl:Class ;
 
 bpo:P10937 a owl:Class ;
     bpo:pcfID "10937" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10937. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1" ;
     bpo:apqcSourceText "Planning, acquiring, and managing facilities, workspaces, and supporting assets. Acquire, configure, and manage facilities and workspaces, to include supporting equipment and materials." ;
     rdfs:label "Plan and acquire assets" ;
@@ -600,6 +601,7 @@ bpo:P10937 a owl:Class ;
 
 bpo:P10941 a owl:Class ;
     bpo:pcfID "10941" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10941. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.1" ;
     bpo:apqcSourceText "Strategizing a long-term vision for managing properties. Prepare strategies and a long-term vision for managing purchased/retained properties." ;
     rdfs:label "Develop property strategy and long term vision" ;
@@ -615,6 +617,7 @@ bpo:P10941 a owl:Class ;
 # --- 10.1.1.1 (PCF 10955) : Appraisal -> Descriptive output
 bpo:P10955 a owl:Class ;
     bpo:pcfID "10955" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10955. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.1.1" ;
     bpo:apqcSourceText "Creating alignment between the requirement of properties and the overall business strategy. This process requires the organization to align the requirement of properties in accordance with its business strategies of the organization." ;
     rdfs:label "Confirm alignment of property requirements with business strategy" ;
@@ -629,6 +632,7 @@ bpo:P10955 a owl:Class ;
 # --- 10.1.1.2 (PCF 10956) : Appraisal -> Descriptive output
 bpo:P10956 a owl:Class ;
     bpo:pcfID "10956" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10956. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.1.2" ;
     bpo:apqcSourceText "Evaluating the impact of the external environment. Evaluate the circumstances, objects, events, and aspects surrounding an organization that affects its actions and selections and that recognizes its opportunities and risks." ;
     rdfs:label "Appraise the external environment" ;
@@ -641,6 +645,7 @@ bpo:P10956 a owl:Class ;
 # --- 10.1.1.3 (PCF 10957) : Selection -> Directive output
 bpo:P10957 a owl:Class ;
     bpo:pcfID "10957" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10957. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.1.3" ;
     bpo:apqcSourceText "Deciding whether to buy or build properties. Study the market forces about property prices and cost of construction in order to take decisions based on the market research." ;
     rdfs:label "Determine build, buy, or lease decision" ;
@@ -657,6 +662,7 @@ bpo:P10957 a owl:Class ;
 
 bpo:P10943 a owl:Class ;
     bpo:pcfID "10943" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10943. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.2" ;
     bpo:apqcSourceText "Recognizing the needs of facility users in order to construct a project proposal that meets those needs." ;
     rdfs:label "Plan facility" ;
@@ -673,6 +679,7 @@ bpo:P10943 a owl:Class ;
 # --- 10.1.2.1 (PCF 10958) : Formulation -> Directive output
 bpo:P10958 a owl:Class ;
     bpo:pcfID "10958" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10958. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.2.1" ;
     bpo:apqcSourceText "Preparing and analyzing different designs for a facility in order to finalize which design will be the most suitable option." ;
     rdfs:label "Design facility" ;
@@ -685,6 +692,7 @@ bpo:P10958 a owl:Class ;
 # --- 10.1.2.2 (PCF 10959) : Analysis -> Descriptive output
 bpo:P10959 a owl:Class ;
     bpo:pcfID "10959" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10959. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.2.2" ;
     bpo:apqcSourceText "Evaluating the feasibility of budgets prepared for the construction of facilities." ;
     rdfs:label "Analyze budget" ;
@@ -698,6 +706,7 @@ bpo:P10959 a owl:Class ;
 # --- 10.1.2.3 (PCF 10960) : Selection -> Directive output
 bpo:P10960 a owl:Class ;
     bpo:pcfID "10960" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10960. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.2.3" ;
     bpo:apqcSourceText "Assessing and choosing the appropriate property. Analyze the property requirements. Review the available property options. Finalize the most suitable option." ;
     rdfs:label "Select property" ;
@@ -711,6 +720,7 @@ bpo:P10960 a owl:Class ;
 # --- 10.1.2.4 (PCF 10961) : Negotiation -> Directive output
 bpo:P10961 a owl:Class ;
     bpo:pcfID "10961" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10961. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.2.4" ;
     bpo:apqcSourceText "Discussing the terms and conditions of facilities to be occupied according to the business requirements and availability of budgets." ;
     rdfs:label "Negotiate terms for facility" ;
@@ -734,6 +744,7 @@ bpo:ManageBuildingRenovation a owl:Class ;
 # --- 10.1.2.5 (PCF 10962) : Construction/modification -> Material output (operations)
 bpo:P10962 a owl:Class ;
     bpo:pcfID "10962" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10962. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.2.5" ;
     bpo:apqcSourceText "Constructing the buildings. Manage renovations according to requirements and demands." ;
     rdfs:label "Manage construction or modification to building" ;
@@ -752,6 +763,7 @@ bpo:P10962 a owl:Class ;
 
 bpo:P10944 a owl:Class ;
     bpo:pcfID "10944" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10944. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.3" ;
     bpo:apqcSourceText "Managing the provision of the workspace and its assets. Arrange an office space with all assets (tables, chairs, computers, admin staff, etc.) according to requirements." ;
     rdfs:label "Provide workspace and facilities" ;
@@ -765,6 +777,7 @@ bpo:P10944 a owl:Class ;
 # --- 10.1.3.1 (PCF 10963) : Acquisition -> Material output (operations)
 bpo:P10963 a owl:Class ;
     bpo:pcfID "10963" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10963. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.3.1" ;
     bpo:apqcSourceText "Attaining the office space with all assets (tables, chairs, computers, admin staff, etc.) according to requirements." ;
     rdfs:label "Acquire workspace and facilities" ;
@@ -777,6 +790,7 @@ bpo:P10963 a owl:Class ;
 # --- 10.1.3.2 (PCF 10964) : Material Artifact Processing -> Material I/O (operations)
 bpo:P10964 a owl:Class ;
     bpo:pcfID "10964" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10964. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.3.2" ;
     bpo:apqcSourceText "Modifying the formation of the workspace and its assets. Make necessary changes in an office space with all assets (tables, chairs, computers, admin staff, interior designing, etc.) according to requirements." ;
     rdfs:label "Change fit/form/function of workspace and facilities" ;
@@ -797,6 +811,7 @@ bpo:P10964 a owl:Class ;
 # --- 10.1.4.1 (PCF 10965) : Location Change (operations)
 bpo:P10965 a owl:Class ;
     bpo:pcfID "10965" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10965. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.4.1" ;
     bpo:apqcSourceText "Shifting staff or employees from one place to another place according to changes in business requirements." ;
     rdfs:label "Relocate people" ;
@@ -810,6 +825,7 @@ bpo:P10965 a owl:Class ;
 # --- 10.1.4.2 (PCF 10966) : Location Change -> Material I/O (operations)
 bpo:P10966 a owl:Class ;
     bpo:pcfID "10966" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10966. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.1.4.2" ;
     bpo:apqcSourceText "Relocating the tools and raw materials. Shift raw or finished material and machines of company from one place to another place according to changes in business requirements." ;
     rdfs:label "Relocate material and tools" ;
@@ -836,6 +852,7 @@ bpo:FacilityManagementCapability rdfs:subClassOf
 
 bpo:P21575 a owl:Class ;
     bpo:pcfID "21575" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21575. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2" ;
     bpo:apqcSourceText "Designing and constructing assets such as machines, tools, factories, etc. Manage steps to acquire assets including managing capital, as well as planning, scheduling, and overseeing acquisition/construction." ;
     rdfs:label "Design and construct assets" ;
@@ -854,6 +871,7 @@ bpo:P21575 a owl:Class ;
 
 bpo:P19209 a owl:Class ;
     bpo:pcfID "19209" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19209. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.1" ;
     bpo:apqcSourceText "Producing and maintaining a planning schedule and a financial plan to purchase or manufacture productive assets. Determine the investment plan, monitor capital, and secure the necessary financing in order to realize completion of the program." ;
     rdfs:label "Manage capital program for assets" ;
@@ -869,6 +887,7 @@ bpo:P19209 a owl:Class ;
 # --- 10.2.1.1 (PCF 19210) : Formulation -> Directive ICE
 bpo:P19210 a owl:Class ;
     bpo:pcfID "19210" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19210. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.1.1" ;
     bpo:apqcSourceText "Establishing what funds will be invested in the construction of productive assets for the advancement of established business objectives." ;
     rdfs:label "Define capital investment plan" ;
@@ -881,6 +900,7 @@ bpo:P19210 a owl:Class ;
 # --- 10.2.1.2 (PCF 19211) : Monitoring -> Descriptive ICE
 bpo:P19211 a owl:Class ;
     bpo:pcfID "19211" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19211. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.1.2" ;
     bpo:apqcSourceText "Monitoring plans on capital projects. Capital projects can be purchasing buildings, lands, etc." ;
     rdfs:label "Monitor capital program" ;
@@ -894,6 +914,7 @@ bpo:P19211 a owl:Class ;
 # --- 10.2.1.3 (PCF 19212) : Acquisition -> Directive financing arrangement
 bpo:P19212 a owl:Class ;
     bpo:pcfID "19212" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19212. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.1.3" ;
     bpo:apqcSourceText "Acquiring the loans needed to construct necessary assets." ;
     rdfs:label "Secure construction financing" ;
@@ -909,6 +930,7 @@ bpo:P19212 a owl:Class ;
 
 bpo:P20139 a owl:Class ;
     bpo:pcfID "20139" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20139. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.2" ;
     bpo:apqcSourceText "Outlining the steps and strategies needed to construct assets. Verify that all regulations are adhered to and that all permissions have been granted. Organize and plan for resources to complete construction." ;
     rdfs:label "Design and plan asset construction" ;
@@ -925,6 +947,7 @@ bpo:P20139 a owl:Class ;
 # --- 10.2.2.1 (PCF 19220) : Formulation -> Directive ICE
 bpo:P19220 a owl:Class ;
     bpo:pcfID "19220" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19220. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.2.1" ;
     bpo:apqcSourceText "Developing a strategy to perform asset construction. Assure that timelines, regulations, and resources are on task and on budget." ;
     rdfs:label "Develop construction strategy" ;
@@ -937,6 +960,7 @@ bpo:P19220 a owl:Class ;
 # --- 10.2.2.2 (PCF 11276) : Monitoring -> Descriptive ICE
 bpo:P11276 a owl:Class ;
     bpo:pcfID "11276" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11276. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.2.2" ;
     bpo:apqcSourceText "Managing the construction process to ensure that activates are on task, on budget, and are being performed with safety and quality in mind." ;
     rdfs:label "Perform construction performance management" ;
@@ -949,6 +973,7 @@ bpo:P11276 a owl:Class ;
 # --- 10.2.2.3 (PCF 19221) : Acquisition -> Directive permit
 bpo:P19221 a owl:Class ;
     bpo:pcfID "19221" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19221. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.2.3" ;
     bpo:apqcSourceText "Gathering the required permits for construction from the proper jurisdiction. This may include inspections during and after construction to verify that the new asset meets all national, regional, and local codes." ;
     rdfs:label "Obtain construction permissions" ;
@@ -962,6 +987,7 @@ bpo:P19221 a owl:Class ;
 # --- 10.2.2.4 (PCF 19222) : Formulation (designing) -> Directive ICE
 bpo:P19222 a owl:Class ;
     bpo:pcfID "19222" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19222. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.2.4" ;
     bpo:apqcSourceText "Designing assets to meet organizational needs as well as ensuring that the asset adheres to all national, regional, and local construction codes." ;
     rdfs:label "Design assets" ;
@@ -974,6 +1000,7 @@ bpo:P19222 a owl:Class ;
 # --- 10.2.2.5 (PCF 19223) : Formulation (planning) -> Directive ICE
 bpo:P19223 a owl:Class ;
     bpo:pcfID "19223" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19223. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.2.5" ;
     bpo:apqcSourceText "Determining what resources will need to be acquired in order to carry out construction. Plan when, where, and how resources will be used. Determine the length of time resources will be utilized." ;
     rdfs:label "Plan construction resources" ;
@@ -989,6 +1016,7 @@ bpo:P19223 a owl:Class ;
 
 bpo:P19229 a owl:Class ;
     bpo:pcfID "19229" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19229. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.3" ;
     bpo:apqcSourceText "Arranging a timetable for which to perform construction work. Schedule resources to contract assets for new or replacement assets. Reschedule or redesign assets if needed." ;
     rdfs:label "Schedule and perform construction work" ;
@@ -1005,6 +1033,7 @@ bpo:P19229 a owl:Class ;
 # --- 10.2.3.1 (PCF 19230) : Formulation (scheduling) -> Directive ICE
 bpo:P19230 a owl:Class ;
     bpo:pcfID "19230" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19230. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.3.1" ;
     bpo:apqcSourceText "Defining a timetable for which to execute the construction of the asset." ;
     rdfs:label "Schedule construction work" ;
@@ -1017,6 +1046,7 @@ bpo:P19230 a owl:Class ;
 # --- 10.2.3.2 (PCF 19231) : Acquisition -> MATERIAL output (operations)
 bpo:P19231 a owl:Class ;
     bpo:pcfID "19231" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19231. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.3.2" ;
     bpo:apqcSourceText "Gathering resources needed to complete all construction work. Verify that all resources have the proper training and skills to perform the work." ;
     rdfs:label "Obtain resources" ;
@@ -1029,6 +1059,7 @@ bpo:P19231 a owl:Class ;
 # --- 10.2.3.3 (PCF 19232) : Act of Construction (CCO) -> MATERIAL output
 bpo:P19232 a owl:Class ;
     bpo:pcfID "19232" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19232. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.3.3" ;
     bpo:apqcSourceText "Building new assets necessary for the organization. Be aware of any construction codes and permits that need to be addressed." ;
     rdfs:label "Construct new assets" ;
@@ -1043,6 +1074,7 @@ bpo:P19232 a owl:Class ;
 # --- 10.2.3.4 (PCF 19233) : Act of Artifact Modification (CCO) -> MATERIAL I/O
 bpo:P19233 a owl:Class ;
     bpo:pcfID "19233" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19233. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.3.4" ;
     bpo:apqcSourceText "Modifying existing assets to align with the changing needs of the organization. Be aware of any construction codes and permits that need to be addressed." ;
     rdfs:label "Augment existing assets" ;
@@ -1057,6 +1089,7 @@ bpo:P19233 a owl:Class ;
 # --- 10.2.3.5 (PCF 19234) : Act of Appraisal (determine replacement need) -> Descriptive output
 bpo:P19234 a owl:Class ;
     bpo:pcfID "19234" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19234. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.3.5" ;
     bpo:apqcSourceText "Determining the need to replace existing assets. Be aware of any construction codes and permits that need to be addressed." ;
     rdfs:label "Renew/Replace assets" ;
@@ -1074,6 +1107,7 @@ bpo:P19234 a owl:Class ;
 
 bpo:P19224 a owl:Class ;
     bpo:pcfID "19224" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19224. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.4" ;
     bpo:apqcSourceText "Overseeing the performance and quality of work. Assure that records are maintained throughout the construction process. Adhere to all safety, security, and access regulations set forth by the organization and all government standards." ;
     rdfs:label "Manage asset construction" ;
@@ -1088,6 +1122,7 @@ bpo:P19224 a owl:Class ;
 # --- 10.2.4.1 (PCF 19225) : Monitoring -> Descriptive ICE
 bpo:P19225 a owl:Class ;
     bpo:pcfID "19225" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19225. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.4.1" ;
     bpo:apqcSourceText "Monitoring construction to insure that all regulatory laws are being adhered to, that all work is being performed in a timely manner, and that quality assurance is met at all steps of the construction process." ;
     rdfs:label "Monitor work performance" ;
@@ -1100,6 +1135,7 @@ bpo:P19225 a owl:Class ;
 # --- 10.2.4.2 (PCF 19226) : Appraisal -> Descriptive ICE
 bpo:P19226 a owl:Class ;
     bpo:pcfID "19226" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19226. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.4.2" ;
     bpo:apqcSourceText "Implementing a checks and balances system to verify that the construction was performed correctly. Rework when errors are found." ;
     rdfs:label "Undertake construction quality control" ;
@@ -1112,6 +1148,7 @@ bpo:P19226 a owl:Class ;
 # --- 10.2.4.3 (PCF 19227) : Information Processing -> Descriptive record
 bpo:P19227 a owl:Class ;
     bpo:pcfID "19227" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19227. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.4.3" ;
     bpo:apqcSourceText "Implementing records to include all construction work that has been performed. Include all new or modified construction, and any construction or regulatory issues that might have occurred." ;
     rdfs:label "Create work and asset records" ;
@@ -1124,6 +1161,7 @@ bpo:P19227 a owl:Class ;
 # --- 10.2.4.4 (PCF 19228) : STANDING FUNCTION -> Organization Capability (R6)
 bpo:P19228 a owl:Class ;
     bpo:pcfID "19228" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19228. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.2.4.4" ;
     bpo:apqcSourceText "Ensuring that safety, security, and access is maintained. Provide a workplace that meets and exceeds all local, state, and federal guidelines. Provide security and access to the building site as set forth by safety and organizational guidelines." ;
     rdfs:label "Manage safety, security, and access to sites" ;
@@ -1153,6 +1191,7 @@ bpo:AssetMaintenanceCapability rdfs:subClassOf
 
 bpo:P19239 a owl:Class ;
     bpo:pcfID "19239" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19239. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.3.1" ;
     bpo:apqcSourceText "Ensuring that necessary resources are available and tasks are prioritized accordingly through planning. Provide strategies and policies that identify tasks that need to be completed, and the resources necessary to fulfill those tasks." ;
     rdfs:label "Plan asset maintenance" ;
@@ -1172,6 +1211,7 @@ bpo:P19239 a owl:Class ;
 # --- 10.3.1.1 (PCF 19240) : Formulation -> Directive output
 bpo:P19240 a owl:Class ;
     bpo:pcfID "19240" ; bpo:hierarchyID "10.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19240. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating goals and agendas to better realize the success of the maintenance policies that have been put into place." ;
     rdfs:label "Develop maintenance strategies" ;
     skos:definition "An Act of Formulation that composes the goals and agendas guiding asset maintenance and has as output a maintenance strategy." ;
@@ -1183,6 +1223,7 @@ bpo:P19240 a owl:Class ;
 # --- 10.3.1.2 (PCF 10967) : Analysis -> Descriptive output
 bpo:P10967 a owl:Class ;
     bpo:pcfID "10967" ; bpo:hierarchyID "10.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10967. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating assets in order to project future requirements for maintenance. Evaluate the present working condition of assets. Determine the future maintenance requirements of assets." ;
     rdfs:label "Analyze assets and predict maintenance requirements" ;
     skos:definition "An Act of Forecasting that examines the present working condition of productive assets and has as output a maintenance requirements forecast projecting their uncertain future maintenance needs." ;
@@ -1194,6 +1235,7 @@ bpo:P10967 a owl:Class ;
 # --- 10.3.1.3 (PCF 19241) : Formulation -> Directive output
 bpo:P19241 a owl:Class ;
     bpo:pcfID "19241" ; bpo:hierarchyID "10.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19241. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Communicating policies in regards to asset maintenance. Provide a clear set of procedures and policies that outline what will be involved in the maintenance process." ;
     rdfs:label "Specify maintenance policies" ;
     skos:definition "An Act of Formulation that articulates the procedures and rules governing asset maintenance and has as output a maintenance policy." ;
@@ -1205,6 +1247,7 @@ bpo:P19241 a owl:Class ;
 # --- 10.3.1.4 (PCF 10968) : Planning -> Directive output
 bpo:P10968 a owl:Class ;
     bpo:pcfID "10968" ; bpo:hierarchyID "10.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10968. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Devising a methodology and procedure for assimilating the works of planned maintenance into the schedule scheme for the processing of finished products that utilizes the same machinery." ;
     rdfs:label "Integrate preventive maintenance into operations schedule" ;
     skos:definition "An Act of Planning that assimilates planned preventive maintenance into the production operations timetable and has as output a maintenance schedule." ;
@@ -1216,6 +1259,7 @@ bpo:P10968 a owl:Class ;
 # --- 10.3.1.5 (PCF 19242) : Formulation -> Directive (prioritized task list)
 bpo:P19242 a owl:Class ;
     bpo:pcfID "19242" ; bpo:hierarchyID "10.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19242. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the steps needed for asset maintenance. List out the those tasks that are involved in completing this process. Prioritize the tasks that are created." ;
     rdfs:label "Identify work management tasks & priorities" ;
     skos:definition "An Act of Formulation that enumerates and prioritizes the tasks required for asset maintenance and has as output a work task list." ;
@@ -1227,6 +1271,7 @@ bpo:P19242 a owl:Class ;
 # --- 10.3.1.6 (PCF 19243) : Planning -> Directive output
 bpo:P19243 a owl:Class ;
     bpo:pcfID "19243" ; bpo:hierarchyID "10.3.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19243. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing workload needs in relation to asset maintenance and plan resources around those needs." ;
     rdfs:label "Conduct resource planning" ;
     skos:definition "An Act of Planning that determines the resources required to meet asset-maintenance workload and has as output a resource plan." ;
@@ -1238,6 +1283,7 @@ bpo:P19243 a owl:Class ;
 # --- 10.3.1.7 (PCF 19244) : Formulation -> Directive output
 bpo:P19244 a owl:Class ;
     bpo:pcfID "19244" ; bpo:hierarchyID "10.3.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19244. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating procedures on how to maintain productive assets." ;
     rdfs:label "Create work plans" ;
     skos:definition "An Act of Formulation that composes the procedures for maintaining productive assets and has as output a work plan." ;
@@ -1252,6 +1298,7 @@ bpo:P19244 a owl:Class ;
 
 bpo:P19245 a owl:Class ;
     bpo:pcfID "19245" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19245. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.3.2" ;
     bpo:apqcSourceText "Ensuring that asset maintenance is conducted in a timely manner and successfully. Schedule work with the required resources with an eye on quality control and safety. Verify that contracted maintenance meets performance targets." ;
     rdfs:label "Manage asset maintenance" ;
@@ -1270,6 +1317,7 @@ bpo:P19245 a owl:Class ;
 # --- 10.3.2.1 (PCF 19246) : Planning -> Directive output
 bpo:P19246 a owl:Class ;
     bpo:pcfID "19246" ; bpo:hierarchyID "10.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19246. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining a timetable for which to execute the maintenance of the asset." ;
     rdfs:label "Schedule maintenance work" ;
     skos:definition "An Act of Planning that defines the timetable for executing asset maintenance and has as output a maintenance schedule." ;
@@ -1281,6 +1329,7 @@ bpo:P19246 a owl:Class ;
 # --- 10.3.2.2 (PCF 19247) : Acquisition -> material output (operations)
 bpo:P19247 a owl:Class ;
     bpo:pcfID "19247" ; bpo:hierarchyID "10.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19247. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gathering resources needed to complete all maintenance work. Verify that all resources have the proper training and skills to perform the work." ;
     rdfs:label "Obtain required resources" ;
     skos:definition "An Act of Acquisition that obtains the spare parts, consumables, and material resources needed to complete maintenance work, which participate in the act as the gathered maintenance resources." ;
@@ -1292,6 +1341,7 @@ bpo:P19247 a owl:Class ;
 # --- 10.3.2.3 (PCF 19248) : Appraisal -> Descriptive output
 bpo:P19248 a owl:Class ;
     bpo:pcfID "19248" ; bpo:hierarchyID "10.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19248. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing a checks and balances system to verify that the maintenance was performed correctly. Rework when errors are found." ;
     rdfs:label "Undertake quality control" ;
     skos:definition "An Act of Appraisal that verifies whether maintenance work was performed correctly and has as output a quality control report." ;
@@ -1303,6 +1353,7 @@ bpo:P19248 a owl:Class ;
 # --- 10.3.2.4 (PCF 19249) : Information Processing -> Descriptive output
 bpo:P19249 a owl:Class ;
     bpo:pcfID "19249" ; bpo:hierarchyID "10.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19249. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Modifying existing maintenance records to include all new work that has been performed, what assets were serviced, and any issues that might have arisen." ;
     rdfs:label "Update work and asset records" ;
     skos:definition "An Act of Information Processing that revises maintenance records to register the work performed, the assets serviced, and any issues, and has as output an updated work and asset record." ;
@@ -1314,6 +1365,7 @@ bpo:P19249 a owl:Class ;
 # --- 10.3.2.5 (PCF 19250) : STANDING FUNCTION -> Organization Capability (R5/R6)
 bpo:P19250 a owl:Class ;
     bpo:pcfID "19250" ; bpo:hierarchyID "10.3.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19250. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assuring that all safety laws and regulations are being implemented and followed. Align practices with regulatory bureaus such as OSHA , EHS, and ISO." ;
     rdfs:label "Manage maintenance work safety" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to continuously assure that maintenance work practices implement and follow applicable safety laws and regulations and align with regulatory bureaus such as OSHA, EHS, and ISO." ;
@@ -1336,6 +1388,7 @@ bpo:MaintenanceSafetyAssuranceAct a owl:Class ;
 # --- 10.3.2.6 (PCF 19251) : Formulation -> Directive output
 bpo:P19251 a owl:Class ;
     bpo:pcfID "19251" ; bpo:hierarchyID "10.3.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19251. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining what should be achieved through predictive indicators with regard to performing maintenance. This could include the length of time it takes to perform routine maintenance or how often unplanned maintenance feasibly occur." ;
     rdfs:label "Define maintenance performance targets" ;
     skos:definition "An Act of Formulation that establishes the predictive performance indicators to be achieved in maintenance and has as output a maintenance performance target." ;
@@ -1347,6 +1400,7 @@ bpo:P19251 a owl:Class ;
 # --- 10.3.2.7 (PCF 19252) : Monitoring -> Descriptive output
 bpo:P19252 a owl:Class ;
     bpo:pcfID "19252" ; bpo:hierarchyID "10.3.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19252. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Following set performance targets, monitor and gage the success of the organization in meeting those targets." ;
     rdfs:label "Monitor maintenance performance against targets/contracts" ;
     skos:definition "An Act of Monitoring that gauges maintenance performance against established targets and contracts and has as output a maintenance performance report." ;
@@ -1363,6 +1417,7 @@ bpo:P19252 a owl:Class ;
 
 bpo:P19253 a owl:Class ;
     bpo:pcfID "19253" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19253. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.3.3" ;
     bpo:apqcSourceText "Engaging in all aspects of asset maintenance. Ensure that all assets are functioning properly and to all specified codes and regulations where applicable. Maintenance includes all preventative, routine, and corrective activates." ;
     rdfs:label "Perform asset maintenance" ;
@@ -1380,6 +1435,7 @@ bpo:P19253 a owl:Class ;
 # --- 10.3.3.1 (PCF 10947) : Act of Maintenance, material input
 bpo:P10947 a owl:Class ;
     bpo:pcfID "10947" ; bpo:hierarchyID "10.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10947. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Performing prophylactic maintenance in an effort to avoid corrective or unplanned repairs." ;
     rdfs:label "Perform preventative asset maintenance" ;
     skos:definition "An Act of Maintenance that acts upon a productive asset prophylactically to preserve its designed functions and avert future corrective or unplanned repairs." ;
@@ -1392,6 +1448,7 @@ bpo:P10947 a owl:Class ;
 # --- 10.3.3.2 (PCF 19254) : Act of Maintenance, material input
 bpo:P19254 a owl:Class ;
     bpo:pcfID "19254" ; bpo:hierarchyID "10.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19254. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out required maintenance to continue upkeep of equipment or assets." ;
     rdfs:label "Perform routine asset maintenance" ;
     skos:definition "An Act of Maintenance that carries out the recurring upkeep required to keep a productive asset in working condition." ;
@@ -1404,6 +1461,7 @@ bpo:P19254 a owl:Class ;
 # --- 10.3.3.3 (PCF 19255) : Act of Maintenance (corrective/repair), material input
 bpo:P19255 a owl:Class ;
     bpo:pcfID "19255" ; bpo:hierarchyID "10.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19255. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Repairing or correcting faults that occur with an asset. This could be a break or other repairable damage." ;
     rdfs:label "Perform corrective asset maintenance and repairs" ;
     skos:definition "An Act of Maintenance that repairs or corrects a fault in a productive asset to restore its designed functions." ;
@@ -1416,6 +1474,7 @@ bpo:P19255 a owl:Class ;
 # --- 10.3.3.4 (PCF 19256) : Identification (discernment) -> non-definitional I/O
 bpo:P19256 a owl:Class ;
     bpo:pcfID "19256" ; bpo:hierarchyID "10.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19256. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Realizing potential or current problems with assets that would require unplanned maintenance. Unplanned maintenance is a repair or change that needs to be made that is not preventative or routine." ;
     rdfs:label "Identify unplanned maintenance requirements" ;
     skos:definition "An Act of Identification that discerns current or potential asset problems requiring unplanned maintenance and registers the resulting requirements." ;
@@ -1426,6 +1485,7 @@ bpo:P19256 a owl:Class ;
 # --- 10.3.3.5 (PCF 19257) : Act of Maintenance (unplanned/repair), material input
 bpo:P19257 a owl:Class ;
     bpo:pcfID "19257" ; bpo:hierarchyID "10.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19257. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Performing repairs that occur outside of normal routine or preventative maintenance." ;
     rdfs:label "Perform unplanned maintenance and repairs" ;
     skos:definition "An Act of Maintenance that performs repairs on a productive asset outside the routine or preventive maintenance schedule to restore its designed functions." ;
@@ -1447,6 +1507,7 @@ bpo:P19257 a owl:Class ;
 
 bpo:P21576 a owl:Class ;
     bpo:pcfID "21576" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21576. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4" ;
     bpo:apqcSourceText "Managing the disposition of assets at their end-of-life. End-of-life for an asset may be due to obsolescence, replacement, excess capacity, or disrepair among other potential factors. Steps may include decommissioning, disassembly, recycling, etc. Tracking and reporting may also be appropriate for some or all asset types due to law, regulation, or social/environmental responsibility." ;
     rdfs:label "Manage asset end-of-life" ;
@@ -1471,6 +1532,7 @@ bpo:P21576 a owl:Class ;
 
 bpo:P10952 a owl:Class ;
     bpo:pcfID "10952" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10952. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.1" ;
     bpo:apqcSourceText "Creating a strategy for managing asset exits." ;
     rdfs:label "Develop exit strategy" ;
@@ -1484,6 +1546,7 @@ bpo:P10952 a owl:Class ;
 
 bpo:P18592 a owl:Class ;
     bpo:pcfID "18592" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 18592. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.1.1" ;
     bpo:apqcSourceText "Monitoring assets against their planned useful life. Each asset may have specific criteria that indicate their usability. This may include time-based, maintenance history, capacity planning, etc." ;
     rdfs:label "Monitor useful life of assets" ;
@@ -1495,6 +1558,7 @@ bpo:P18592 a owl:Class ;
 
 bpo:P21577 a owl:Class ;
     bpo:pcfID "21577" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21577. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.1.2" ;
     bpo:apqcSourceText "Cost/benefit analysis of assets to determine retention or end-of-life. Evaluating asset total lifecycle cost against other factors such as repair/refurbishment, replacement, and alternate solutions." ;
     rdfs:label "Perform cost vs. benefit analysis for replacement" ;
@@ -1510,6 +1574,7 @@ bpo:P21577 a owl:Class ;
 
 bpo:P19258 a owl:Class ;
     bpo:pcfID "19258" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19258. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.2" ;
     bpo:apqcSourceText "Retiring assets that are no longer viable to the business. Decommission assets that are no longer in working order, are out of date, or whose maintenance exceeds the cost of replacement." ;
     rdfs:label "Decommission productive assets" ;
@@ -1525,6 +1590,7 @@ bpo:P19258 a owl:Class ;
 
 bpo:P10953 a owl:Class ;
     bpo:pcfID "10953" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10953. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.3" ;
     bpo:apqcSourceText "Performing the sale of assets. Achieve and complete the sale process. Deliver the end product to the customers." ;
     rdfs:label "Perform sale or trade" ;
@@ -1541,6 +1607,7 @@ bpo:P10953 a owl:Class ;
 
 bpo:P21579 a owl:Class ;
     bpo:pcfID "21579" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21579. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.5" ;
     bpo:apqcSourceText "Dismantling an asset into manageable parts. The parts may follow different dispositions, such as resale, reuse, recycle, etc." ;
     rdfs:label "Dismantle assets" ;
@@ -1558,6 +1625,7 @@ bpo:P21579 a owl:Class ;
 
 bpo:P21580 a owl:Class ;
     bpo:pcfID "21580" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21580. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.6" ;
     bpo:apqcSourceText "Tracking the disposition of all parts from end-of-life assets. Tracking should provide an audit trail to include source, rational for disposition, and destination." ;
     rdfs:label "Track parts" ;
@@ -1573,6 +1641,7 @@ bpo:P21580 a owl:Class ;
 
 bpo:P21581 a owl:Class ;
     bpo:pcfID "21581" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21581. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.7" ;
     bpo:apqcSourceText "Recycling parts in accordance with legal, regulatory, and social/environmental responsibilities." ;
     rdfs:label "Recycle parts" ;
@@ -1589,6 +1658,7 @@ bpo:P21581 a owl:Class ;
 
 bpo:P12721 a owl:Class ;
     bpo:pcfID "12721" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12721. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.8" ;
     bpo:apqcSourceText "Planning, conducting, and tracking shipment of hazardous materials." ;
     rdfs:label "Ship hazardous material" ;
@@ -1605,6 +1675,7 @@ bpo:P12721 a owl:Class ;
 
 bpo:P12722 a owl:Class ;
     bpo:pcfID "12722" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12722. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.9" ;
     bpo:apqcSourceText "Preparing and distributing government reports." ;
     rdfs:label "Provide government reporting" ;
@@ -1622,6 +1693,7 @@ bpo:P12722 a owl:Class ;
 
 bpo:P21582 a owl:Class ;
     bpo:pcfID "21582" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21582. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.10" ;
     bpo:apqcSourceText "Planning and performing abandonment activities. Whether facilities  or equipment, ensure assets to be abandoned are safe, secure, and meet all legal, regulatory, and social/environmental responsibilities." ;
     rdfs:label "Perform abandonment" ;
@@ -1636,6 +1708,7 @@ bpo:P21582 a owl:Class ;
 
 bpo:P13131 a owl:Class ;
     bpo:pcfID "13131" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 13131. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.10.1" ;
     bpo:apqcSourceText "Demolishing and securing asset and resulting parts/debris." ;
     rdfs:label "Demolish and secure" ;
@@ -1649,6 +1722,7 @@ bpo:P13131 a owl:Class ;
 
 bpo:P13132 a owl:Class ;
     bpo:pcfID "13132" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 13132. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.10.2" ;
     bpo:apqcSourceText "Performing remediation or restoration activities." ;
     rdfs:label "Restore site" ;
@@ -1660,6 +1734,7 @@ bpo:P13132 a owl:Class ;
 
 bpo:P19465 a owl:Class ;
     bpo:pcfID "19465" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19465. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.10.3" ;
     bpo:apqcSourceText "Managing and reporting site status. Align efforts to all legal, regulatory and social/environmental responsibilities." ;
     rdfs:label "Monitor site for duration of time required by regulators" ;
@@ -1671,6 +1746,7 @@ bpo:P19465 a owl:Class ;
 
 bpo:P13133 a owl:Class ;
     bpo:pcfID "13133" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 13133. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.10.4" ;
     bpo:apqcSourceText "Supporting handover to new operator or landowner. Include proper documentation on asset history and current state to enable orderly transition." ;
     rdfs:label "Prepare handover to new operator or landowner" ;
@@ -1687,6 +1763,7 @@ bpo:P13133 a owl:Class ;
 
 bpo:P21583 a owl:Class ;
     bpo:pcfID "21583" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21583. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11" ;
     bpo:apqcSourceText "Planning and performing waste and hazardous goods management. In compliance with all legal, regulatory, and social/environmental requirements, plan, document, and conduct hazardous material handling, disposal, and reporting." ;
     rdfs:label "Perform waste and hazardous goods management" ;
@@ -1706,6 +1783,7 @@ bpo:P21583 a owl:Class ;
 
 bpo:P12180 a owl:Class ;
     bpo:pcfID "12180" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12180. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.1" ;
     bpo:apqcSourceText "Preparing material safety sheets. Capture material safety records to properly apply handling and disposal requirements." ;
     rdfs:label "Maintain material safety data sheets" ;
@@ -1717,6 +1795,7 @@ bpo:P12180 a owl:Class ;
 
 bpo:P12181 a owl:Class ;
     bpo:pcfID "12181" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12181. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.2" ;
     bpo:apqcSourceText "Understanding and communicating hazardous material regulatory requirements." ;
     rdfs:label "Maintain awareness of and communicate regulatory requirements" ;
@@ -1730,6 +1809,7 @@ bpo:P12181 a owl:Class ;
 
 bpo:P12182 a owl:Class ;
     bpo:pcfID "12182" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12182. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.3" ;
     bpo:apqcSourceText "Planning, overseeing, and tracking hazardous material handling and disposal." ;
     rdfs:label "Maintain hazardous material handling and disposal" ;
@@ -1741,6 +1821,7 @@ bpo:P12182 a owl:Class ;
 
 bpo:P12183 a owl:Class ;
     bpo:pcfID "12183" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12183. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.4" ;
     bpo:apqcSourceText "Planning, supporting, and documenting hazardous material audits." ;
     rdfs:label "Manage compliance audits" ;
@@ -1752,6 +1833,7 @@ bpo:P12183 a owl:Class ;
 
 bpo:P12184 a owl:Class ;
     bpo:pcfID "12184" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12184. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.5" ;
     bpo:apqcSourceText "Identifying and establishing approaches to dispose of hazardous materials/waste." ;
     rdfs:label "Recognize need to disposition hazardous materials/waste" ;
@@ -1763,6 +1845,7 @@ bpo:P12184 a owl:Class ;
 
 bpo:P12185 a owl:Class ;
     bpo:pcfID "12185" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12185. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.6" ;
     bpo:apqcSourceText "Evaluating hazardous materials and waste for appropriate disposition. Apply requirements and initiate disposition activities." ;
     rdfs:label "Determine disposition and associated processing" ;
@@ -1775,6 +1858,7 @@ bpo:P12185 a owl:Class ;
 
 bpo:P12186 a owl:Class ;
     bpo:pcfID "12186" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12186. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.7" ;
     bpo:apqcSourceText "Performing disposition, disposal, and reprocessing activities." ;
     rdfs:label "Manage disposition, disposal, reprocessing activities" ;
@@ -1786,6 +1870,7 @@ bpo:P12186 a owl:Class ;
 
 bpo:P12187 a owl:Class ;
     bpo:pcfID "12187" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12187. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "10.4.11.8" ;
     bpo:apqcSourceText "Documenting and reporting disposition, disposal, and reprocessing activities." ;
     rdfs:label "Manage documentation and reporting" ;

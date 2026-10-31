@@ -835,6 +835,7 @@ bpo:FleetManagementCapability a owl:Class ;
 
 bpo:P10221 a owl:Class ;
     bpo:pcfID "10221" ; bpo:hierarchyID "4.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10221. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating strategies for production processes, as well as the process of managing materials. Define production and supply constraints. Design a blueprint of the workplace. Establish rules and regulations regarding the employees, outsourcing of services, and the expenditure to be incurred on the manufacturing capital." ;
     rdfs:label "Develop production and materials strategies" ;
     skos:definition "An Act of Formulation that composes the strategies, policies, and constraints governing an organization's production processes and materials management, producing a production and materials strategy." ;
@@ -854,6 +855,7 @@ bpo:P10221 a owl:Class ;
 
 bpo:P10229 a owl:Class ;
     bpo:pcfID "10229" ; bpo:hierarchyID "4.1.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10229. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating quantifiable strategic objectives for each manufacturing segment in conjunction with sales projections." ;
     rdfs:label "Define manufacturing goals" ;
     skos:definition "An Act of Formulation that has as output a manufacturing goal specification setting quantifiable strategic objectives for each manufacturing segment." ;
@@ -863,6 +865,7 @@ bpo:P10229 a owl:Class ;
 
 bpo:P10230 a owl:Class ;
     bpo:pcfID "10230" ; bpo:hierarchyID "4.1.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10230. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Setting up internal rules and regulations regarding the employees and the materials." ;
     rdfs:label "Define labor and materials policies" ;
     skos:definition "An Act of Formulation that has as output a labor and materials policy prescribing internal rules governing employees and materials." ;
@@ -872,6 +875,7 @@ bpo:P10230 a owl:Class ;
 
 bpo:P10231 a owl:Class ;
     bpo:pcfID "10231" ; bpo:hierarchyID "4.1.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10231. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating rules and regulations regarding contracting out of a business process to another party in order to reduce costs." ;
     rdfs:label "Define outsourcing policies" ;
     skos:definition "An Act of Formulation that has as output an outsourcing policy prescribing rules for contracting business processes to external parties." ;
@@ -881,6 +885,7 @@ bpo:P10231 a owl:Class ;
 
 bpo:P10232 a owl:Class ;
     bpo:pcfID "10232" ; bpo:hierarchyID "4.1.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10232. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Designing rules and regulations pertaining to the expenditure incurred in acquiring or upgrading the existing stock of manufacturing capital." ;
     rdfs:label "Define capital expense policies" ;
     skos:definition "An Act of Formulation that has as output a capital expense policy prescribing rules for spending on acquiring or upgrading manufacturing capital." ;
@@ -890,6 +895,7 @@ bpo:P10232 a owl:Class ;
 
 bpo:P10233 a owl:Class ;
     bpo:pcfID "10233" ; bpo:hierarchyID "4.1.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10233. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the manufacturing and processing capacities of the organization. Delineate the capabilities required for optimizing output with available resources. Analyze capabilities possessed by the organization concerning the raw materials required and the process necessitated for producing finished products." ;
     rdfs:label "Define capacities" ;
     skos:definition "An Act of Analysis that examines the organization's manufacturing and processing capabilities and has as output a capacity assessment." ;
@@ -900,6 +906,7 @@ bpo:P10233 a owl:Class ;
 
 bpo:P10234 a owl:Class ;
     bpo:pcfID "10234" ; bpo:hierarchyID "4.1.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10234. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining limitations in the ability of the organization's supply chain to deliver a new stock, and creating a network of production stakeholders. Frame and manage relationships within the flow of manufacturing and processing operations. Identify probable supply issues." ;
     rdfs:label "Define production network and supply constraints" ;
     skos:definition "An Act of Formulation that has as output a production network model representing the network of production stakeholders and its supply constraints." ;
@@ -909,6 +916,7 @@ bpo:P10234 a owl:Class ;
 
 bpo:P14193 a owl:Class ;
     bpo:pcfID "14193" ; bpo:hierarchyID "4.1.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14193. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the scheme of processing inventory into finished products/services. This includes the use of raw materials, machinery, skill sets, and knowledge to create new offerings." ;
     rdfs:label "Define production process" ;
     skos:definition "An Act of Formulation that has as output a production process specification describing the scheme for processing inventory into finished products." ;
@@ -918,6 +926,7 @@ bpo:P14193 a owl:Class ;
 
 bpo:P19551 a owl:Class ;
     bpo:pcfID "19551" ; bpo:hierarchyID "4.1.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19551. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing or prescribing methods to be followed routinely for the performance of designated operations or in designated situations. This may include step-by-step instructions to help workers carry out complex routine operations. The goal is to improve efficiency, quality, and uniformity of performance, while reducing miscommunication, failure, or rework." ;
     rdfs:label "Define standard operating procedures" ;
     skos:definition "An Act of Formulation that has as output a standard operating procedure prescribing methods to be followed routinely for designated operations." ;
@@ -927,6 +936,7 @@ bpo:P19551 a owl:Class ;
 
 bpo:P14194 a owl:Class ;
     bpo:pcfID "14194" ; bpo:hierarchyID "4.1.1.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14194. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the floor plans for the processing facility that is meant for delivering finished products/services. Identify the totality of infrastructure needed for using this space in the manufacturing process, including machinery, factory floors, offices, and furniture." ;
     rdfs:label "Define production workplace layout and infrastructure" ;
     skos:definition "An Act of Formulation that has as output a production workplace layout plan specifying the floor plan and infrastructure of a processing facility." ;
@@ -940,6 +950,7 @@ bpo:P14194 a owl:Class ;
 
 bpo:P10222 a owl:Class ;
     bpo:pcfID "10222" ; bpo:hierarchyID "4.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10222. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Forecasting demand for products using secondary research and customer feedback. Refine these forecasts. Inspect the approach used in creating forecasts, and determine its accuracy." ;
     rdfs:label "Manage demand for products" ;
     skos:definition "An Act of Analysis that forecasts and refines demand for an organization's products and has as output a consensus demand forecast." ;
@@ -957,6 +968,7 @@ bpo:P10222 a owl:Class ;
 
 bpo:P10235 a owl:Class ;
     bpo:pcfID "10235" ; bpo:hierarchyID "4.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10235. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identify the bedrock levels of market demand anticipated for the organization's products/services. Estimate future demand for product and services using historical data, analysis of the market environment and any externalities, etc. to create ex ante approximations." ;
     rdfs:label "Develop baseline demand forecasts" ;
     skos:definition "An Act of Analysis that has as output a baseline demand forecast estimating anticipated market demand from historical and market data." ;
@@ -966,6 +978,7 @@ bpo:P10235 a owl:Class ;
 
 bpo:P10236 a owl:Class ;
     bpo:pcfID "10236" ; bpo:hierarchyID "4.1.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10236. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Working closely with the organization's customers to understand their drives and behavior, with the objective of estimating future demand. Reach out to customers through various means to understand their behavior patterns, usage elasticity, and degree of variability--and ultimately determine demand for each offering." ;
     rdfs:label "Collaborate demand with customers" ;
     skos:definition "An Act of Forecasting that works with customers to understand their behavior and, with that input, estimates future demand, producing a demand forecast." ;
@@ -977,6 +990,7 @@ bpo:P10236 a owl:Class ;
 
 bpo:P10237 a owl:Class ;
     bpo:pcfID "10237" ; bpo:hierarchyID "4.1.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10237. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arriving at a consensus over the forecasted levels of demand for products/services. Consensus is achieved by juxtaposing decisions developed in the baseline forecast with those reached at by collaborating with customers. Enlist senior-level decision makers of the sales and marketing functions." ;
     rdfs:label "Develop demand consensus forecast" ;
     skos:definition "An Act of Analysis that has as input a baseline demand forecast and has as output a consensus demand forecast reconciling baseline and customer-collaboration estimates." ;
@@ -989,6 +1003,7 @@ bpo:P10237 a owl:Class ;
 
 bpo:P10238 a owl:Class ;
     bpo:pcfID "10238" ; bpo:hierarchyID "4.1.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10238. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identify the volume of products/services that may be committed for delivery to fulfill sales. Figure out the amount of stock available. Forecast its volumes." ;
     rdfs:label "Determine available to promise" ;
     skos:definition "An Act of Analysis that has as output an available-to-promise quantity stating the volume of product that may be committed for delivery." ;
@@ -998,6 +1013,7 @@ bpo:P10238 a owl:Class ;
 
 bpo:P10239 a owl:Class ;
     bpo:pcfID "10239" ; bpo:hierarchyID "4.1.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10239. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Picking out any activity that deviates from the forecast, and adjusting it. Closely track and study the levels of demand as they emerge. Refine the consensus forecast as needed." ;
     rdfs:label "Monitor activity against demand forecast and revise forecast" ;
     skos:definition "An Act of Monitoring that has as input a consensus demand forecast, tracks emerging demand against it, and has as output a revised consensus demand forecast." ;
@@ -1008,6 +1024,7 @@ bpo:P10239 a owl:Class ;
 
 bpo:P10240 a owl:Class ;
     bpo:pcfID "10240" ; bpo:hierarchyID "4.1.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10240. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the methodology used to estimate future demand. Refine it in light of current market realities and demand." ;
     rdfs:label "Evaluate and revise demand forecasting approach" ;
     skos:definition "An Act of Appraisal that examines the demand-forecasting methodology and produces a forecasting methodology assessment judging its fitness for current market realities." ;
@@ -1018,6 +1035,7 @@ bpo:P10240 a owl:Class ;
 
 bpo:P10241 a owl:Class ;
     bpo:pcfID "10241" ; bpo:hierarchyID "4.1.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10241. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Calculating and inspecting the accuracy of demand forecasts. Use metrics to check the reliability of the forecasts created." ;
     rdfs:label "Measure demand forecast accuracy" ;
     skos:definition "An Act of Appraisal that has as input a consensus demand forecast and has as output a demand forecast accuracy report judging the reliability of the forecasts." ;
@@ -1032,6 +1050,7 @@ bpo:P10241 a owl:Class ;
 
 bpo:P10223 a owl:Class ;
     bpo:pcfID "10223" ; bpo:hierarchyID "4.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10223. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a scheme that allows for advance planning for the availability of raw materials and spares. Start with an unconstrained plan, and refine based on supply chain realities by identifying critical materials required for production, checking material specifications, and collaborating with all vendors over the supply." ;
     rdfs:label "Create materials plan" ;
     skos:definition "An Act of Formulation that produces a materials plan for the advance availability of raw materials and spares, refined from an unconstrained to a constrained plan." ;
@@ -1048,6 +1067,7 @@ bpo:P10223 a owl:Class ;
 
 bpo:P10242 a owl:Class ;
     bpo:pcfID "10242" ; bpo:hierarchyID "4.1.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10242. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a plan for raw materials and other inventory items in order to meet market demand. Ensure the availability of all inventory items such as raw materials and spares. Create a blueprint in line with Define labor and materials policies [10230]." ;
     rdfs:label "Create unconstrained plan" ;
     skos:definition "An Act of Formulation that has as output an unconstrained materials plan ensuring the availability of raw materials and spares to meet market demand." ;
@@ -1058,6 +1078,7 @@ bpo:P10242 a owl:Class ;
 
 bpo:P10243 a owl:Class ;
     bpo:pcfID "10243" ; bpo:hierarchyID "4.1.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10243. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collaborating with vendors and contractual manufacturers with the objective of ensuring a continual supply of raw materials and spares. Leverage long-term connections/relationships with various suppliers, and cultivate new ones. Track the activities of all vendors. Receive regular updates to prepare for any fluctuations in supply." ;
     rdfs:label "Collaborate with supplier and contract manufacturers" ;
     skos:definition "An Act of Information Processing in which an organization coordinates with suppliers and contract manufacturers to secure a continual supply of raw materials and spares." ;
@@ -1069,6 +1090,7 @@ bpo:P10243 a owl:Class ;
 
 bpo:P10244 a owl:Class ;
     bpo:pcfID "10244" ; bpo:hierarchyID "4.1.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10244. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying principal materials needed for the manufacturing process and the levels of supply that may be ensured for them. Determine the essential and crucial inventory items required for the smooth functioning of all manufacturing processes. Estimate the average, peak, and baseline capacities of various vendors and suppliers. Establish the capability of individual suppliers from the market and the vendors." ;
     rdfs:label "Identify critical materials and supplier capacity" ;
     skos:definition "An Act of Identification that discerns the critical materials required for production and has as output a supplier capacity profile estimating vendor supply levels." ;
@@ -1078,6 +1100,7 @@ bpo:P10244 a owl:Class ;
 
 bpo:P10245 a owl:Class ;
     bpo:pcfID "10245" ; bpo:hierarchyID "4.1.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10245. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Observing and surveying all inventory items in order to check for the veracity of their specifications. Monitor various attributes and characteristics for respective inventory items such as density, volume, and size, as well as contextualized specifications particular to the respective materials." ;
     rdfs:label "Monitor material specifications" ;
     skos:definition "An Act of Monitoring that has as input material specifications and surveys inventory items to verify their conformance to those specifications." ;
@@ -1087,6 +1110,7 @@ bpo:P10245 a owl:Class ;
 
 bpo:P10246 a owl:Class ;
     bpo:pcfID "10246" ; bpo:hierarchyID "4.1.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10246. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Generating a bounded plan that takes stock of the actual supply chain scenario. Take stock of all information collected while creating an inventory supply plan." ;
     rdfs:label "Generate constrained plan" ;
     skos:definition "An Act of Formulation that has as input an unconstrained materials plan and a supplier capacity profile and has as output a constrained materials plan reflecting actual supply realities." ;
@@ -1098,6 +1122,7 @@ bpo:P10246 a owl:Class ;
 
 bpo:P14196 a owl:Class ;
     bpo:pcfID "14196" ; bpo:hierarchyID "4.1.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 14196. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining an equitable volume for the production of products/services that adheres to an equilibrium value, and creating a scheme of control for processing items. Create schematics for systematically planning, coordinating, and directing the manufacturing activities in line with the production balance determined." ;
     rdfs:label "Define production balance and control" ;
     skos:definition "An Act of Formulation that has as output a production balance and control scheme prescribing an equilibrium production volume and the control of processing items." ;
@@ -1111,6 +1136,7 @@ bpo:P14196 a owl:Class ;
 
 bpo:P10224 a owl:Class ;
     bpo:pcfID "10224" ; bpo:hierarchyID "4.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10224. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Taking care of the master production plan. The master production includes creation and implementation of the site-level production plan, as well as management of the inventory that is currently in the production process." ;
     rdfs:label "Create and manage master production schedule" ;
     skos:definition "An Act of Scheduling that creates and maintains the site-level master production schedule and has as output a master production schedule." ;
@@ -1124,6 +1150,7 @@ bpo:P10224 a owl:Class ;
 
 bpo:P20023 a owl:Class ;
     bpo:pcfID "20023" ; bpo:hierarchyID "4.1.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20023. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Create representative logical system that provides the framework to attain strategic objectives based on resources, product volumes, and processes. Provides the general sequential flow and capacity requirement relationships among raw materials, parts, resources, finished products, and product families." ;
     rdfs:label "Model production network to enable simulation and optimization" ;
     skos:definition "An Act of Formulation that has as output a production network model providing the sequential-flow and capacity-requirement framework among materials, resources, and finished products." ;
@@ -1134,6 +1161,7 @@ bpo:P20023 a owl:Class ;
 
 bpo:P20024 a owl:Class ;
     bpo:pcfID "20024" ; bpo:hierarchyID "4.1.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20024. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating the plan for internal activities such as production, inventory, and staffing. Include forecasted quantity of items to produce based on inputs from sales planning, demand planning/forecasting, and supply chain partners." ;
     rdfs:label "Create master production schedule" ;
     skos:definition "An Act of Scheduling that has as input a consensus demand forecast and has as output a master production schedule for production, inventory, and staffing." ;
@@ -1144,6 +1172,7 @@ bpo:P20024 a owl:Class ;
 
 bpo:P17041 a owl:Class ;
     bpo:pcfID "17041" ; bpo:hierarchyID "4.1.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17041. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Supervising and overseeing the plan for internal activities such as production, inventory, and staffing. Set the quantity of items to produce each week of a short-range planning horizon." ;
     rdfs:label "Maintain master production schedule" ;
     skos:definition "An Act of Scheduling that has as input an existing master production schedule and re-sets the weekly production quantities over the short-range planning horizon." ;
@@ -1158,6 +1187,7 @@ bpo:P17041 a owl:Class ;
 
 bpo:P17042 a owl:Class ;
     bpo:pcfID "17042" ; bpo:hierarchyID "4.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 17042. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining master data of finished products and inventory. Identify the requirements of finished products at the destination, as well as partner requirements. Calculate the consolidation at source. Manage replenishment planning. Create and administer a dispatch plan. Calculate load plans for destinations and partners. Manage the cost of supplying these products. Ensure effective utilization of capacity." ;
     rdfs:label "Plan distribution requirements" ;
     skos:definition "An Act of Planning that determines finished-product and partner distribution requirements and has as output a distribution requirements plan." ;
@@ -1180,6 +1210,7 @@ bpo:P17042 a owl:Class ;
 
 bpo:P10252 a owl:Class ;
     bpo:pcfID "10252" ; bpo:hierarchyID "4.1.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10252. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Maintaining and preserving the master data plan for distribution requirements. Create a systematic collection of facts and figures regarding the distribution of the inventories. Maintain policies, processes, and tools covering the distribution function." ;
     rdfs:label "Maintain master data" ;
     skos:definition "An Act of Information Processing that performs a bounded, repeatable update of distribution master data describing the organization's distribution of inventory." ;
@@ -1190,6 +1221,7 @@ bpo:P10252 a owl:Class ;
 
 bpo:P10253 a owl:Class ;
     bpo:pcfID "10253" ; bpo:hierarchyID "4.1.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10253. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Interact with the concerned person at the destination to validate the requirements and to avoid any miscommunication of information." ;
     rdfs:label "Determine finished goods inventory requirements at destination" ;
     skos:definition "An Act of Analysis that interacts with the concerned party at a destination to validate the finished-goods inventory requirements and produces a validated requirement assessment confirming them." ;
@@ -1200,6 +1232,7 @@ bpo:P10253 a owl:Class ;
 
 bpo:P19555 a owl:Class ;
     bpo:pcfID "19555" ; bpo:hierarchyID "4.1.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19555. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluate constraints, needs, parameters, and conditions for physical storage and retrieval of components or products for future use or shipment in a storage facility within a certain timeframe." ;
     rdfs:label "Determine product storage facility requirements" ;
     skos:definition "An Act of Appraisal that evaluates the constraints, needs, parameters, and conditions for physical storage and retrieval in a storage facility and produces a storage requirement assessment." ;
@@ -1210,6 +1243,7 @@ bpo:P19555 a owl:Class ;
 
 bpo:P10254 a owl:Class ;
     bpo:pcfID "10254" ; bpo:hierarchyID "4.1.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10254. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Interact with the concerned authority at the destination to reach a specific figure that correctly represents requirements." ;
     rdfs:label "Calculate requirements at destination" ;
     skos:definition "An Act of Analysis that computes and has as output a destination requirement quantity giving the specific figure that correctly represents the requirements at a destination." ;
@@ -1220,6 +1254,7 @@ bpo:P10254 a owl:Class ;
 
 bpo:P10255 a owl:Class ;
     bpo:pcfID "10255" ; bpo:hierarchyID "4.1.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10255. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the aggregate volume of products/services consolidated at the source. Calculate the number of finished products that are ready to be delivered to the customers, particularly at one date." ;
     rdfs:label "Calculate consolidation at source" ;
     skos:definition "An Act of Analysis that computes and has as output a consolidation quantity giving the aggregate volume of finished products consolidated at the source for a given date." ;
@@ -1229,6 +1264,7 @@ bpo:P10255 a owl:Class ;
 
 bpo:P10256 a owl:Class ;
     bpo:pcfID "10256" ; bpo:hierarchyID "4.1.5.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10256. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the plan for collaborative replenishment of goods. Replenish inventory by creating a plan in case of faulty production." ;
     rdfs:label "Manage collaborative replenishment planning" ;
     skos:definition "An Act of Formulation that has as output a replenishment plan for the collaborative replenishment of inventory." ;
@@ -1239,6 +1275,7 @@ bpo:P10256 a owl:Class ;
 
 bpo:P10258 a owl:Class ;
     bpo:pcfID "10258" ; bpo:hierarchyID "4.1.5.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10258. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Estimating the timing and duration of the delivery of the inventory from the source to the destination. Plan the logistic details of all the distribution routes and activities." ;
     rdfs:label "Calculate and optimize destination dispatch plan" ;
     skos:definition "An Act of Formulation that has as output a dispatch plan specifying the timing, duration, and routing of inventory delivery from source to destination." ;
@@ -1248,6 +1285,7 @@ bpo:P10258 a owl:Class ;
 
 bpo:P10259 a owl:Class ;
     bpo:pcfID "10259" ; bpo:hierarchyID "4.1.5.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10259. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Accomplishing the dispatch plan. Strictly follow the schedule, and adjust for deviations. Coordinate with the concerned authorities at various destinations." ;
     rdfs:label "Manage dispatch plan attainment" ;
     skos:definition "An Act of Monitoring that has as input a dispatch plan, tracks adherence to it, and adjusts for deviations from the schedule." ;
@@ -1257,6 +1295,7 @@ bpo:P10259 a owl:Class ;
 
 bpo:P10260 a owl:Class ;
     bpo:pcfID "10260" ; bpo:hierarchyID "4.1.5.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10260. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the plans for delivering loads to destinations. Create a systematic plan that specifies the load plans for every single destination." ;
     rdfs:label "Calculate and optimize destination load plans" ;
     skos:definition "An Act of Formulation that has as output a load plan specifying how loads are built and delivered to each destination." ;
@@ -1266,6 +1305,7 @@ bpo:P10260 a owl:Class ;
 
 bpo:P10261 a owl:Class ;
     bpo:pcfID "10261" ; bpo:hierarchyID "4.1.5.10" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10261. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the load plan for partners. Manage the delivery, and dispatch from the source to the partners." ;
     rdfs:label "Manage partner load plan" ;
     skos:definition "An Act of Monitoring that has as input a load plan and oversees its attainment for partner deliveries and dispatch from the source." ;
@@ -1275,6 +1315,7 @@ bpo:P10261 a owl:Class ;
 
 bpo:P10262 a owl:Class ;
     bpo:pcfID "10262" ; bpo:hierarchyID "4.1.5.11" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10262. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing all expenses to provide products/services in the market. Estimate the overall cost of supplying of products/inventory, including the cost distributing it through various partners and channels. Consider the cost of all the logistical processes that occur from the moment a product is ready to be dispatched to the time it reaches the destination." ;
     rdfs:label "Manage cost of supply" ;
     skos:definition "An Act of Appraisal that estimates and has as output a supply cost estimate of the overall cost of supplying products through distribution channels." ;
@@ -1285,6 +1326,7 @@ bpo:P10262 a owl:Class ;
 
 bpo:P10263 a owl:Class ;
     bpo:pcfID "10263" ; bpo:hierarchyID "4.1.5.12" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10263. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the capacity utilization of the organization's production process. Realize the extent to which an enterprise uses its installed productive capacity (i.e., the relationship between output and the potential output if capacity was fully used)." ;
     rdfs:label "Manage capacity utilization" ;
     skos:definition "An Act of Appraisal that determines and has as output a capacity utilization report on the extent to which installed productive capacity is used." ;
@@ -1298,6 +1340,7 @@ bpo:P10263 a owl:Class ;
 
 bpo:P10226 a owl:Class ;
     bpo:pcfID "10226" ; bpo:hierarchyID "4.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10226. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Instituting the constraints for planning of distribution process. Create a plan that specifies every element in the distribution process from the blueprint of the distribution centers to how and when the inventory would reach the distribution centers." ;
     rdfs:label "Establish distribution planning constraints" ;
     skos:definition "An Act of Formulation that has as output a distribution planning constraint specification instituting the constraints governing the distribution process." ;
@@ -1312,6 +1355,7 @@ bpo:P10226 a owl:Class ;
 
 bpo:P10267 a owl:Class ;
     bpo:pcfID "10267" ; bpo:hierarchyID "4.1.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10267. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Instituting the constraints for creating a layout for distribution center. Consider factors such as the number of customers, demand forecasting, product groups, condition of product conservation, warehousing, and transportation management." ;
     rdfs:label "Establish distribution center layout constraints" ;
     skos:definition "An Act of Formulation that has as output a distribution planning constraint specification governing distribution-center layout." ;
@@ -1321,6 +1365,7 @@ bpo:P10267 a owl:Class ;
 
 bpo:P10268 a owl:Class ;
     bpo:pcfID "10268" ; bpo:hierarchyID "4.1.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10268. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining any problems that might be faced while managing inventory. Identify problems and possible issues in managing the warehousing of the raw materials, spares, and other items of inventory. Take stock of inventory needs, and determine the exact quantity of the inventory needed in the near future." ;
     rdfs:label "Establish inventory management constraints" ;
     skos:definition "An Act of Analysis that discerns the problems and issues in managing inventory and quantifies inventory needs, producing an inventory needs assessment." ;
@@ -1331,6 +1376,7 @@ bpo:P10268 a owl:Class ;
 
 bpo:P10269 a owl:Class ;
     bpo:pcfID "10269" ; bpo:hierarchyID "4.1.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10269. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying any potential constraints while deciding on the dispatch and delivery plan from the source to the various distribution centers. Decide how the inventory will be transported , which and how many transportation means to use, what route to take, etc." ;
     rdfs:label "Establish transportation management constraints" ;
     skos:definition "An Act of Formulation that has as output a distribution planning constraint specification governing transportation management." ;
@@ -1340,6 +1386,7 @@ bpo:P10269 a owl:Class ;
 
 bpo:P19558 a owl:Class ;
     bpo:pcfID "19558" ; bpo:hierarchyID "4.1.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19558. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining potential constraints for physical storage and retrieval of components or products in a storage facility within a certain timeframe. Consider factors such as the building shape, height, capacity, door locations, lift equipment, automation, etc." ;
     rdfs:label "Establish storage management constraints" ;
     skos:definition "An Act of Formulation that has as output a distribution planning constraint specification governing physical storage and retrieval in a storage facility." ;
@@ -1353,6 +1400,7 @@ bpo:P19558 a owl:Class ;
 
 bpo:P10227 a owl:Class ;
     bpo:pcfID "10227" ; bpo:hierarchyID "4.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10227. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Revisiting and refurbishing the policies for planning the distribution process. Asses the distribution strategies, including how the products are to be made available and sent to different distributors. Set guidelines regarding relationships between the sources and the distribution centers." ;
     rdfs:label "Review distribution planning policies" ;
     skos:definition "An Act of Appraisal that has as input a distribution policy and reassesses the organization's distribution strategies and sourcing guidelines." ;
@@ -1366,6 +1414,7 @@ bpo:P10227 a owl:Class ;
 
 bpo:P10264 a owl:Class ;
     bpo:pcfID "10264" ; bpo:hierarchyID "4.1.7.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10264. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the system that defines how the products/inventory would reach from the source (i.e., manufacturer) to the destination (i.e., retailer/distributer)." ;
     rdfs:label "Review distribution network" ;
     skos:definition "An Act of Appraisal that has as input a logistics network design and evaluates how products reach destinations from the source." ;
@@ -1376,6 +1425,7 @@ bpo:P10264 a owl:Class ;
 
 bpo:P10265 a owl:Class ;
     bpo:pcfID "10265" ; bpo:hierarchyID "4.1.7.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10265. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing relationships with transportation/distribution sources in order to ensure an effective distribution network and strategy. Screen and evaluate various sources available to pick out the best among them." ;
     rdfs:label "Establish sourcing relationships" ;
     skos:definition "An Act of Selection that screens candidate transportation and distribution sources and has as output a supplier selection decision identifying the chosen source." ;
@@ -1387,6 +1437,7 @@ bpo:P10265 a owl:Class ;
 
 bpo:P10266 a owl:Class ;
     bpo:pcfID "10266" ; bpo:hierarchyID "4.1.7.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10266. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating strategic guidelines on the availability of the products at all the distribution centers. Create a dynamic network to ensure availability at all times, even in cases of defaults." ;
     rdfs:label "Establish dynamic deployment policies" ;
     skos:definition "An Act of Formulation that has as output a distribution policy of strategic guidelines ensuring product availability across all distribution centers." ;
@@ -1400,6 +1451,7 @@ bpo:P10266 a owl:Class ;
 
 bpo:P10368 a owl:Class ;
     bpo:pcfID "10368" ; bpo:hierarchyID "4.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10368. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing standards and procedures for maintaining the quality of products/services. Establish desired quality targets. Create standardized procedures for the quality. Ensure quality specifications are effectively communicated." ;
     rdfs:label "Develop quality standards and procedures" ;
     skos:definition "An Act of Formulation that composes the quality targets and testing procedures for products and has as output a quality standard and a quality testing procedure." ;
@@ -1414,6 +1466,7 @@ bpo:P10368 a owl:Class ;
 
 bpo:P10371 a owl:Class ;
     bpo:pcfID "10371" ; bpo:hierarchyID "4.1.8.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10371. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining specific qualitative and quantitative target figures." ;
     rdfs:label "Establish quality targets" ;
     skos:definition "An Act of Formulation that has as output a quality standard defining specific qualitative and quantitative quality target figures." ;
@@ -1423,6 +1476,7 @@ bpo:P10371 a owl:Class ;
 
 bpo:P10372 a owl:Class ;
     bpo:pcfID "10372" ; bpo:hierarchyID "4.1.8.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10372. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating standard procedures for testing the quality of products/services. Describe the steps of key processes to help ensure consistent and quality output. Define the routine instructions for performing the quality testing activity." ;
     rdfs:label "Develop standard testing procedures" ;
     skos:definition "An Act of Formulation that has as output a quality testing procedure prescribing the routine steps for testing product quality." ;
@@ -1432,6 +1486,7 @@ bpo:P10372 a owl:Class ;
 
 bpo:P10373 a owl:Class ;
     bpo:pcfID "10373" ; bpo:hierarchyID "4.1.8.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10373. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Communicating the desired quality specifications to the manufacturing units, as well as the distribution centers, to avoid any misunderstanding or misinterpretation." ;
     rdfs:label "Communicate quality specifications" ;
     skos:definition "An Act of Communication that has as input a quality standard and transfers the desired quality specifications to manufacturing units and distribution centers." ;
@@ -1447,6 +1502,7 @@ bpo:P10373 a owl:Class ;
 
 bpo:P10215 a owl:Class ;
     bpo:pcfID "10215" ; bpo:hierarchyID "4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10215. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating strategies for production and materials. Handle the demand for the products of the organization. Develop plans for handling materials. Develop and administer the schedule for master production. Plan for distribution requirements and its constraints by reviewing and assessing distribution policies and performance and by establishing quality standards and procedures." ;
     rdfs:label "Plan for and align supply chain resources" ;
     skos:definition "An Act of Planning that aligns an organization's supply chain resources by formulating production, materials, demand, scheduling, distribution, and quality plans." ;
@@ -1471,6 +1527,7 @@ bpo:P10215 a owl:Class ;
 
 bpo:P10216 a owl:Class ;
     bpo:pcfID "10216" ; bpo:hierarchyID "4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10216. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for procuring materials and services. Develop strategies for sourcing materials and services. Choose the most appropriate suppliers, and develop contracts with them. Order the materials and services as per the requirements. Manage relationships with suppliers." ;
     rdfs:label "Procure materials and services" ;
     skos:definition "An Act of Acquisition that obtains the materials and services an organization requires by planning sourcing, selecting suppliers, ordering, and managing supplier relationships." ;
@@ -1488,6 +1545,7 @@ bpo:P10216 a owl:Class ;
 
 bpo:P10277 a owl:Class ;
     bpo:pcfID "10277" ; bpo:hierarchyID "4.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10277. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating strategies for procuring materials and services from various sources, and for managing and evaluating categories. Establish a procurement process that describes the approach for obtaining products and purchasing activities. Evaluate the sources. Create sourcing relationships in order to continuously improve. Re-evaluate purchasing activities." ;
     rdfs:label "Provide sourcing governance and perform category management" ;
     skos:definition "An Act of Formulation that composes the sourcing strategies and procurement process governing how an organization obtains materials and services across categories." ;
@@ -1504,6 +1562,7 @@ bpo:P10277 a owl:Class ;
 
 bpo:P10281 a owl:Class ;
     bpo:pcfID "10281" ; bpo:hierarchyID "4.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10281. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan for procuring materials and services. Plan what to buy, when, and from what sources. Include project requirements, the procurement team, the justification for the procurement, a timeline of events, and an explanation of the supplier selection process. Outline specific actions to start and complete purchases in order to adhere to best practices." ;
     rdfs:label "Develop procurement plan" ;
     skos:definition "An Act of Formulation that composes a Procurement Plan prescribing what to buy, when, and from which sources." ;
@@ -1513,6 +1572,7 @@ bpo:P10281 a owl:Class ;
 
 bpo:P10282 a owl:Class ;
     bpo:pcfID "10282" ; bpo:hierarchyID "4.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10282. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining the purchasing requirements for materials and services. Specify the exact inventory required for the production process. Create a specific quotation for all the sources in order to avoid any duplication or overlap." ;
     rdfs:label "Clarify purchasing requirements" ;
     skos:definition "An Act of Formulation that specifies the exact materials and services to be purchased, producing a Purchasing Requirement Specification." ;
@@ -1523,6 +1583,7 @@ bpo:P10282 a owl:Class ;
 
 bpo:P10283 a owl:Class ;
     bpo:pcfID "10283" ; bpo:hierarchyID "4.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10283. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a strategy to deal with issues projected to arise during implementation of the inventory plan. Identify how to react to issues that arise and require changes to the inventory plan, such as a vendor failing to deliver materials on time. Collaborate with production and suppliers to prepare solutions to projected problems." ;
     rdfs:label "Establish materials management contingency plans" ;
     skos:definition "An Act of Formulation that composes a Materials Management Contingency Plan prescribing responses to projected materials-supply disruptions." ;
@@ -1532,6 +1593,7 @@ bpo:P10283 a owl:Class ;
 
 bpo:P10284 a owl:Class ;
     bpo:pcfID "10284" ; bpo:hierarchyID "4.2.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10284. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Synchronizing the requirements of materials and services and the capacity of suppliers for providing these materials and services. Revamp the procurement needs of the company in consideration of the capabilities of the suppliers." ;
     rdfs:label "Match needs to supply capabilities" ;
     skos:definition "An Act of Analysis that examines purchasing requirements against supplier capacity and produces a needs-supply alignment assessment." ;
@@ -1544,6 +1606,7 @@ bpo:P10284 a owl:Class ;
 
 bpo:P10285 a owl:Class ;
     bpo:pcfID "10285" ; bpo:hierarchyID "4.2.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10285. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the spend profile of the organization. Collect, cleanse, classify, and analyze the procurement data with the purpose of reducing procurement costs, improving efficiency, and monitoring compliance." ;
     rdfs:label "Analyze organization's spend profile" ;
     skos:definition "An Act of Analysis that examines collected procurement data and produces a Spend Profile Analysis." ;
@@ -1553,6 +1616,7 @@ bpo:P10285 a owl:Class ;
 
 bpo:P10286 a owl:Class ;
     bpo:pcfID "10286" ; bpo:hierarchyID "4.2.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10286. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Seeking the most efficient sourcing and procurement opportunities." ;
     rdfs:label "Seek opportunities to improve efficiency and value" ;
     skos:definition "An Act of Identification that discerns sourcing and procurement opportunities for improved efficiency and value, producing a sourcing-opportunity assessment." ;
@@ -1563,6 +1627,7 @@ bpo:P10286 a owl:Class ;
 
 bpo:P10287 a owl:Class ;
     bpo:pcfID "10287" ; bpo:hierarchyID "4.2.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10287. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collaborating with the suppliers of materials and services in order to determine new opportunities for sourcing." ;
     rdfs:label "Collaborate with suppliers to identify sourcing opportunities" ;
     skos:definition "An Act of Identification that, in collaboration with suppliers, discerns new sourcing opportunities and produces a sourcing-opportunity assessment." ;
@@ -1578,6 +1643,7 @@ bpo:P10287 a owl:Class ;
 
 bpo:P10278 a owl:Class ;
     bpo:pcfID "10278" ; bpo:hierarchyID "4.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10278. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating supplier options to select the most effective and efficient suppliers. Validate selected suppliers. Establish and manage supplier contracts." ;
     rdfs:label "Select suppliers and develop/maintain contracts" ;
     skos:definition "An Act of Selection that chooses suppliers from evaluated options and establishes the contracts that bind them, producing a Supplier Selection Decision." ;
@@ -1592,6 +1658,7 @@ bpo:P10278 a owl:Class ;
 
 bpo:P10288 a owl:Class ;
     bpo:pcfID "10288" ; bpo:hierarchyID "4.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10288. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Evaluating the pros and cons of various suppliers. Choose the most appropriate and cost-effective suppliers on the basis of their material quality, delivery schedules, and costs." ;
     rdfs:label "Select suppliers" ;
     skos:definition "An Act of Selection that chooses one or more suppliers from candidate supplier quotes and produces a Supplier Selection Decision." ;
@@ -1602,6 +1669,7 @@ bpo:P10288 a owl:Class ;
 
 bpo:P10289 a owl:Class ;
     bpo:pcfID "10289" ; bpo:hierarchyID "4.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10289. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Validating the supply sources, and provide certification as an official supplier." ;
     rdfs:label "Certify and validate suppliers" ;
     skos:definition "An Act of Appraisal that validates a supply source and produces a supplier validation assessment judging its fitness to be an approved supplier." ;
@@ -1612,6 +1680,7 @@ bpo:P10289 a owl:Class ;
 
 bpo:P10290 a owl:Class ;
     bpo:pcfID "10290" ; bpo:hierarchyID "4.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10290. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Legally binding suppliers with the company. Negotiate contracts individually with all the suppliers that include the promised material delivery, the delivery dates and duration, etc." ;
     rdfs:label "Negotiate and establish contracts" ;
     skos:definition "An Act of Contract Formation that, through negotiation with a supplier, establishes a legally binding Supplier Contract governing material delivery terms." ;
@@ -1624,6 +1693,7 @@ bpo:P10290 a owl:Class ;
 
 bpo:P10291 a owl:Class ;
     bpo:pcfID "10291" ; bpo:hierarchyID "4.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10291. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping contracts up-to-date with routine evaluation. Maintain order and discipline with the contracts in order to avoid any loss of information and mishaps." ;
     rdfs:label "Manage contracts" ;
     skos:definition "An Act of Appraisal that periodically evaluates a Supplier Contract for currency and compliance and produces a contract review assessment." ;
@@ -1639,6 +1709,7 @@ bpo:P10291 a owl:Class ;
 
 bpo:P10279 a owl:Class ;
     bpo:pcfID "10279" ; bpo:hierarchyID "4.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10279. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and approving requisitions and distributing purchase orders accordingly. Hasten the procurement process to satisfy internal needs." ;
     rdfs:label "Order materials and services" ;
     skos:definition "An Act of Acquisition that obtains required materials and services by creating and approving requisitions and issuing purchase orders to suppliers." ;
@@ -1655,6 +1726,7 @@ bpo:P10279 a owl:Class ;
 
 bpo:P10292 a owl:Class ;
     bpo:pcfID "10292" ; bpo:hierarchyID "4.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10292. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Handling operations related to processing/reviewing the requisitions. Establish and maintain procedures for the initiation, authorization, and processing of purchase requirements to procure products/services." ;
     rdfs:label "Process/Review requisitions" ;
     skos:definition "An Act of Information Processing that receives and reviews purchase requisitions and produces a reviewed requisition ready for authorization." ;
@@ -1666,6 +1738,7 @@ bpo:P10292 a owl:Class ;
 
 bpo:P10293 a owl:Class ;
     bpo:pcfID "10293" ; bpo:hierarchyID "4.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10293. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Approving requisitions for materials and services. Examine distributor-specific requests, and validate them individually." ;
     rdfs:label "Approve requisitions" ;
     skos:definition "A Planned Act that ratifies a purchase requisition and produces a Requisition Approval Decision authorizing procurement to proceed." ;
@@ -1677,6 +1750,7 @@ bpo:P10293 a owl:Class ;
 
 bpo:P10294 a owl:Class ;
     bpo:pcfID "10294" ; bpo:hierarchyID "4.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10294. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Requesting quotes from suppliers. Use a request for quotation (RFQ) to invite suppliers into a bidding process for specific products/services." ;
     rdfs:label "Solicit supplier quotes" ;
     skos:definition "An Act of Formulation that composes and issues a Request for Quotation inviting suppliers to bid on specified products or services." ;
@@ -1687,6 +1761,7 @@ bpo:P10294 a owl:Class ;
 
 bpo:P10295 a owl:Class ;
     bpo:pcfID "10295" ; bpo:hierarchyID "4.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10295. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and placing the orders for purchasing materials and services from suppliers. Analyze vendor quotes. Choose the most cost-effective vendors. Create vendor-specific orders. Distribute them in order to initiate the purchasing process." ;
     rdfs:label "Create/Distribute purchase orders" ;
     skos:definition "An Act of Formulation that, from analyzed supplier quotes, composes and distributes vendor-specific Purchase Orders." ;
@@ -1698,6 +1773,7 @@ bpo:P10295 a owl:Class ;
 
 bpo:P10296 a owl:Class ;
     bpo:pcfID "10296" ; bpo:hierarchyID "4.2.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10296. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Accelerating the purchase orders in order to fulfill the internal needs (for raw materials) depicted through inquiries." ;
     rdfs:label "Expedite orders and satisfy inquiries" ;
     skos:definition "A Planned Act that accelerates outstanding purchase orders to satisfy urgent internal needs for raw materials expressed through inquiries." ;
@@ -1707,6 +1783,7 @@ bpo:P10296 a owl:Class ;
 
 bpo:P10297 a owl:Class ;
     bpo:pcfID "10297" ; bpo:hierarchyID "4.2.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10297. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Verify that purchase orders are filled as expected: verify that items and quantities are delivered as expected, based on purchase order details and goods receipts." ;
     rdfs:label "Reconcile purchase orders" ;
     skos:definition "An Act of Analysis that compares purchase orders against goods receipts and produces a Purchase Order Reconciliation Report." ;
@@ -1719,6 +1796,7 @@ bpo:P10297 a owl:Class ;
 
 bpo:P10298 a owl:Class ;
     bpo:pcfID "10298" ; bpo:hierarchyID "4.2.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10298. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and resolving any exceptions. Address the internal needs/inquiries for materials that cannot be procured immediately. Research inquiries that require the need of exceptional materials." ;
     rdfs:label "Research/Resolve order exceptions" ;
     skos:definition "An Act of Selection that researches order exceptions and chooses a resolution, producing a Disposition Decision for the exceptional material need." ;
@@ -1733,6 +1811,7 @@ bpo:P10298 a owl:Class ;
 
 bpo:P10280 a owl:Class ;
     bpo:pcfID "10280" ; bpo:hierarchyID "4.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10280. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collecting and analyzing new information in order to track and rate suppliers through a supplier information management system." ;
     rdfs:label "Manage suppliers" ;
     skos:definition "An Act of Analysis that collects and analyzes supplier information to track and rate suppliers, producing a Supplier Performance Report." ;
@@ -1747,6 +1826,7 @@ bpo:P10280 a owl:Class ;
 
 bpo:P10299 a owl:Class ;
     bpo:pcfID "10299" ; bpo:hierarchyID "4.2.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10299. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining procurement and vendor performance. Report delivery timing and the quality of the materials procured through different vendors." ;
     rdfs:label "Monitor/Manage supplier information" ;
     skos:definition "An Act of Monitoring that tracks procurement and vendor performance over time and produces a Supplier Performance Report." ;
@@ -1757,6 +1837,7 @@ bpo:P10299 a owl:Class ;
 
 bpo:P10300 a owl:Class ;
     bpo:pcfID "10300" ; bpo:hierarchyID "4.2.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10300. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Assisting the production and inventory processes through the information and reports created. Use the information and metrics of the procurement and vendor performance to enhance or improve the production process." ;
     rdfs:label "Prepare/Analyze procurement and supplier performance" ;
     skos:definition "An Act of Analysis that examines procurement and supplier performance metrics and produces a Supplier Performance Report supporting production improvement." ;
@@ -1766,6 +1847,7 @@ bpo:P10300 a owl:Class ;
 
 bpo:P10301 a owl:Class ;
     bpo:pcfID "10301" ; bpo:hierarchyID "4.2.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10301. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Support inventory and production processes by analyzing impact of procurement decisions and collaborating to constantly improve. (For example, perhaps minimum order requirements could be negotiated to be lower, to reduce excessive inventory and make production more flexible.)" ;
     rdfs:label "Support inventory and production processes" ;
     skos:definition "An Act of Analysis that examines the impact of procurement decisions on inventory and production and produces a procurement-impact analysis." ;
@@ -1776,6 +1858,7 @@ bpo:P10301 a owl:Class ;
 
 bpo:P10302 a owl:Class ;
     bpo:pcfID "10302" ; bpo:hierarchyID "4.2.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10302. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Track the performance of the suppliers on product quality. Use this information to further improve sourcing and supplier performance." ;
     rdfs:label "Monitor quality of product delivered" ;
     skos:definition "An Act of Monitoring that tracks the quality of products delivered by suppliers and produces a Supplier Performance Report on product quality." ;
@@ -1794,6 +1877,7 @@ bpo:P10302 a owl:Class ;
 
 bpo:P10217 a owl:Class ;
     bpo:pcfID "10217" ; bpo:hierarchyID "4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10217. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Processing and delivering the finished goods manufactured by the organization. Schedule the production of products. Execute the product production activities. Perform tests to oversee and ensure quality of production. Maintain records of the production process. Track lots." ;
     rdfs:label "Produce/Assemble/Test product" ;
     skos:definition "An Act of Production that schedules, executes, tests, and records the manufacture of an organization's physical products, yielding tested finished products and production records." ;
@@ -1812,6 +1896,7 @@ bpo:P10217 a owl:Class ;
 
 bpo:P10303 a owl:Class ;
     bpo:pcfID "10303" ; bpo:hierarchyID "4.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10303. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Scheduling the production of final products. Generate a detailed schedule plan. Create and release production orders and lots. Schedule the planned and unplanned maintenance orders." ;
     rdfs:label "Schedule production" ;
     skos:definition "An Act of Scheduling that allocates production activities, orders, and maintenance to times and resources and produces a production schedule." ;
@@ -1829,6 +1914,7 @@ bpo:P10303 a owl:Class ;
 
 bpo:P19563 a owl:Class ;
     bpo:pcfID "19563" ; bpo:hierarchyID "4.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19563. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a representation of plant facilities to optimize material flow, resource utilization, and logistics for all levels of plant planning from global production facilities, through local plants, to specific lines and enabling the comparison of production alternatives." ;
     rdfs:label "Model and simulate plant" ;
     skos:definition "An Act of Formulation that produces a production network model of plant facilities enabling optimization and comparison of production alternatives." ;
@@ -1840,6 +1926,7 @@ bpo:P19563 a owl:Class ;
 
 bpo:P10306 a owl:Class ;
     bpo:pcfID "10306" ; bpo:hierarchyID "4.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10306. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Initiating the line-level plan for production. Break down the production schedule into specific lines, specifying the various objectives the production schedule." ;
     rdfs:label "Generate line level plan" ;
     skos:definition "An Act of Scheduling that breaks down the production schedule into line-level objectives and produces a line-level production schedule." ;
@@ -1851,6 +1938,7 @@ bpo:P10306 a owl:Class ;
 
 bpo:P10307 a owl:Class ;
     bpo:pcfID "10307" ; bpo:hierarchyID "4.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10307. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Broadening the line-level plan. Specify all the individual production processes, along with the timing and the duration to come up with a working schedule that tracks the whole process and any deviations that might occur." ;
     rdfs:label "Generate detailed schedule" ;
     skos:definition "An Act of Scheduling that elaborates the line-level plan into a working production schedule specifying the timing and duration of all individual production processes." ;
@@ -1861,6 +1949,7 @@ bpo:P10307 a owl:Class ;
 
 bpo:P10308 a owl:Class ;
     bpo:pcfID "10308" ; bpo:hierarchyID "4.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10308. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a schedule to commence production of orders received, and creating lots to consolidate the processing. Plan when the production orders are to be initiated by commencing the operations for processing products/services. Specify which materials to produce, where to produce them, which operations will facilitate this, and on which date production is to start. Define the size of production lots, demarcating the durations of batch production." ;
     rdfs:label "Schedule production orders and create lots" ;
     skos:definition "An Act of Scheduling that plans the initiation of received production orders and defines production lots, producing a production order and a production lot." ;
@@ -1872,6 +1961,7 @@ bpo:P10308 a owl:Class ;
 
 bpo:P10315 a owl:Class ;
     bpo:pcfID "10315" ; bpo:hierarchyID "4.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10315. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Scheduling planned maintenance of the production equipment." ;
     rdfs:label "Plan for preventive maintenance" ;
     skos:definition "An Act of Scheduling that allocates planned maintenance of production equipment to specific times and produces a maintenance schedule." ;
@@ -1881,6 +1971,7 @@ bpo:P10315 a owl:Class ;
 
 bpo:P10316 a owl:Class ;
     bpo:pcfID "10316" ; bpo:hierarchyID "4.3.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10316. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Scheduling requested maintenance in order to address breakdowns where repairs or corrective remedies are needed immediately. Create a scheme for undertaking unplanned maintenance work on equipment/machinery that has come to be in urgent need for it. Express turnaround to redress using specialized personnel." ;
     rdfs:label "Request unplanned maintenance" ;
     skos:definition "An Act of Scheduling that creates a scheme for urgent unplanned maintenance of broken-down equipment and produces a maintenance schedule." ;
@@ -1890,6 +1981,7 @@ bpo:P10316 a owl:Class ;
 
 bpo:P10309 a owl:Class ;
     bpo:pcfID "10309" ; bpo:hierarchyID "4.3.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10309. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Initiating the delivery of production orders, and creating lots. Communicate the order that specifies which material to produce, where to produce it, which operations to require, and on which date production takes place. Define how to settle the order costs. Create production lots, which is a particular production unit of an assembly that is planned and manufactured." ;
     rdfs:label "Release production orders and create lots" ;
     skos:definition "A Planned Act that issues an already-formulated production order to the floor and creates the corresponding production lot." ;
@@ -1905,6 +1997,7 @@ bpo:P10309 a owl:Class ;
 
 bpo:P10304 a owl:Class ;
     bpo:pcfID "10304" ; bpo:hierarchyID "4.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10304. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Manufacturing the product. Convert the raw materials to develop consumer-ready products. Manage the raw materials to implement the detailed production schedule. Reproduce defectives to establish and remediate cause. Ensure production optimization and benchmark performance." ;
     rdfs:label "Produce/Assemble product" ;
     skos:definition "An Act of Production that converts raw materials into consumer-ready finished products as prescribed by the detailed production schedule." ;
@@ -1921,6 +2014,7 @@ bpo:P10304 a owl:Class ;
 
 bpo:P10311 a owl:Class ;
     bpo:pcfID "10311" ; bpo:hierarchyID "4.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10311. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and implementing the detailed line production schedule on the ground level." ;
     rdfs:label "Execute detailed line schedule" ;
     skos:definition "An Act of Production that implements the detailed line production schedule on the floor, converting raw materials into finished product." ;
@@ -1933,6 +2027,7 @@ bpo:P10311 a owl:Class ;
 
 bpo:P10319 a owl:Class ;
     bpo:pcfID "10319" ; bpo:hierarchyID "4.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10319. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recording and reporting any deviations or issues in the maintenance schedule, in the performance to the production management team, and for unplanned maintenance." ;
     rdfs:label "Report maintenance issues" ;
     skos:definition "An Act of Monitoring that records deviations and issues in scheduled maintenance and produces a maintenance issue report for the production management team." ;
@@ -1943,6 +2038,7 @@ bpo:P10319 a owl:Class ;
 
 bpo:P10313 a owl:Class ;
     bpo:pcfID "10313" ; bpo:hierarchyID "4.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10313. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reproducing the items produced defectively. Assess the produced items by conducting quality and standardization tests in order to diagnose any discrepancies. Reproduce defective items." ;
     rdfs:label "Rerun defective items" ;
     skos:definition "An Act of Production that reproduces items found defective, taking the defective production lot as input and producing conforming finished product." ;
@@ -1955,6 +2051,7 @@ bpo:P10313 a owl:Class ;
 
 bpo:P19566 a owl:Class ;
     bpo:pcfID "19566" ; bpo:hierarchyID "4.3.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19566. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Integrating different resources in the production process: material, personnel, equipment, robotics, etc. Includes automating and controlling the plant, performing advanced process control and real-time optimization. This activity also includes managing plant alarms and alerts." ;
     rdfs:label "Monitor and optimize production process" ;
     skos:definition "An Act of Monitoring that integrates production resources and oversees the running production process, producing a production state report on its current state and deviations." ;
@@ -1969,6 +2066,7 @@ bpo:P19566 a owl:Class ;
 
 bpo:P19567 a owl:Class ;
     bpo:pcfID "19567" ; bpo:hierarchyID "4.3.2.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19567. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and applying technology to monitor and control the production and delivery of products and services. Automation involves a broad range of technologies." ;
     rdfs:label "Automate and control plant" ;
     skos:definition "An Act of Process Control that applies automation technology to monitor and control plant production and delivery by regulating the controlled production equipment." ;
@@ -1979,6 +2077,7 @@ bpo:P19567 a owl:Class ;
 
 bpo:P19568 a owl:Class ;
     bpo:pcfID "19568" ; bpo:hierarchyID "4.3.2.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19568. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Including a broad range of techniques and technologies implemented within industrial process control systems that are routinely reviewed, audited, and improved, advanced process controls typically address particular performance or economic improvement opportunities. An advanced set of process control measures can be used to reduce variation and identify primary improvement options. Results of analysis are fed back into process design for incorporation into production." ;
     rdfs:label "Perform advanced process control" ;
     skos:definition "An Act of Process Control that applies advanced process-control techniques to reduce process variation and identify improvement options for incorporation into production." ;
@@ -1988,6 +2087,7 @@ bpo:P19568 a owl:Class ;
 
 bpo:P19569 a owl:Class ;
     bpo:pcfID "19569" ; bpo:hierarchyID "4.3.2.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19569. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Helping organizations increase performance and efficiency, real-time optimization is a category of closed-loop process control that aims at optimizing process performance in real time for systems. It is normally built upon model-based optimization systems and is usually large scale. Real-time optimization automatically detects errors, and can modify and eliminate both random and non-random errors, as well as analyze and monitor all systems involved." ;
     rdfs:label "Perform real-time optimization" ;
     skos:definition "An Act of Process Control that runs closed-loop, model-based real-time optimization of process performance, detecting and eliminating errors and modifying the running process across the controlled systems." ;
@@ -1997,6 +2097,7 @@ bpo:P19569 a owl:Class ;
 
 bpo:P19570 a owl:Class ;
     bpo:pcfID "19570" ; bpo:hierarchyID "4.3.2.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19570. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Applying human factors and instrumentation engineering and systems thinking to manage the design of an alarm or alert system to increase its usability. Typical challenges include having too many alarms in a plant, poorly designed alarms/alerts, improperly set alarm/alert points, unclear alarm/alert messages, etc. Poor alarm management is one of the leading causes of unplanned downtime." ;
     rdfs:label "Manage plant alarms and alerts" ;
     skos:definition "An Act of Monitoring that handles and tunes plant alarms and alerts to surface abnormal process conditions reliably." ;
@@ -2006,6 +2107,7 @@ bpo:P19570 a owl:Class ;
 
 bpo:P10314 a owl:Class ;
     bpo:pcfID "10314" ; bpo:hierarchyID "4.3.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10314. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing and benchmarking the production process to judge its effectiveness and efficiency. Create production metrics to numerically calculate the performance of the production process." ;
     rdfs:label "Assess production performance" ;
     skos:definition "An Act of Appraisal that benchmarks and judges the effectiveness and efficiency of the production process and produces a production performance assessment." ;
@@ -2021,6 +2123,7 @@ bpo:P10314 a owl:Class ;
 
 bpo:P10369 a owl:Class ;
     bpo:pcfID "10369" ; bpo:hierarchyID "4.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10369. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Executing tests to evaluate the quality of the products manufactured. Calibrate the test equipment. Conduct the actual tests. Record the results and outcomes of the quality test conducted." ;
     rdfs:label "Perform quality testing" ;
     skos:definition "An Act of Measuring that evaluates the quality of manufactured products against a quality standard and produces a quality test result." ;
@@ -2038,6 +2141,7 @@ bpo:P10369 a owl:Class ;
 
 bpo:P10318 a owl:Class ;
     bpo:pcfID "10318" ; bpo:hierarchyID "4.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10318. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Regulating the equipment used for performing quality tests. Assess correspondence between the quality testing equipment and the desired quality standards. Ensure the calibration standard is more accurate than the instrument being tested." ;
     rdfs:label "Calibrate test equipment" ;
     skos:definition "An Act of Maintenance that regulates quality-test equipment to a calibration standard so as to preserve its measurement accuracy." ;
@@ -2050,6 +2154,7 @@ bpo:P10318 a owl:Class ;
 
 bpo:P10374 a owl:Class ;
     bpo:pcfID "10374" ; bpo:hierarchyID "4.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10374. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Performing testing using calibrated equipment and in consent with the standard testing procedure, including testing time." ;
     rdfs:label "Perform testing using the standard testing procedure" ;
     skos:definition "An Act of Measuring that tests sampled product with calibrated equipment per the standard testing procedure and produces a quality test result." ;
@@ -2063,6 +2168,7 @@ bpo:P10374 a owl:Class ;
 
 bpo:P20956 a owl:Class ;
     bpo:pcfID "20956" ; bpo:hierarchyID "4.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20956. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Selecting a set of elements from a product lot to draw conclusions or make inferences about the quality of the product lot from which the sample is drawn. Sampling is frequently used because gathering data on every product produced by a company is often impossible, impractical, or too costly to collect." ;
     rdfs:label "Manage quality samples" ;
     skos:definition "A Planned Act that draws a set of elements from a production lot to obtain a product sample representative of the lot's quality." ;
@@ -2074,6 +2180,7 @@ bpo:P20956 a owl:Class ;
 
 bpo:P10375 a owl:Class ;
     bpo:pcfID "10375" ; bpo:hierarchyID "4.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10375. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Documenting the results and outcomes of the quality tests. Track the performance of the production process. Record/Document it to evaluate the qualitative efficiency of the production process. Use electronic devices and software in order to ensure effectiveness in recording the results and outcomes of the test." ;
     rdfs:label "Record test results" ;
     skos:definition "An Act of Information Processing that documents the outcomes of quality tests into a quality test result record." ;
@@ -2084,6 +2191,7 @@ bpo:P10375 a owl:Class ;
 
 bpo:P12045 a owl:Class ;
     bpo:pcfID "12045" ; bpo:hierarchyID "4.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12045. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing and monitoring the occurrences of problems with a process or product. It is important that nonconformance occurrences are tracked in a standardized way so the data can easily be reviewed to assess the impact of the problem. Ongoing analysis of trends in nonconformance gives an organization the ability to make process changes to reduce the incidence and cost of nonconformances." ;
     rdfs:label "Track and analyze non-conformance trends" ;
     skos:definition "An Act of Analysis that examines tracked nonconformance occurrences over time and produces a nonconformance trend analysis." ;
@@ -2094,6 +2202,7 @@ bpo:P12045 a owl:Class ;
 
 bpo:P12046 a owl:Class ;
     bpo:pcfID "12046" ; bpo:hierarchyID "4.3.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12046. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Using a technique that helps people answer the question of why a problem occurred in the first place. It seeks to identify the origin of a problem using a specific set of steps, with associated tools, to find the primary cause of the problem to determine what happened, why, and how to reduce the likelihood that it will happen again." ;
     rdfs:label "Perform root cause analysis" ;
     skos:definition "An Act of Analysis that traces a quality problem to its primary cause and produces a root cause analysis." ;
@@ -2109,6 +2218,7 @@ bpo:P12046 a owl:Class ;
 
 bpo:P10370 a owl:Class ;
     bpo:pcfID "10370" ; bpo:hierarchyID "4.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10370. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Perpetuating the production records by systematically documenting and using it to ensure the effective management of lots. Determine the lot numbering system and its use. (The lot number enables tracking of the constituent parts, as well as labor and equipment records involved in the manufacturing of a product. It enables manufacturers and to perform quality control checks, calculate expiration dates, and issue corrections of their production output.)" ;
     rdfs:label "Maintain production records and manage lot traceability" ;
     skos:definition "An Act of Information Processing that systematically documents production into production records and establishes lot identification enabling traceability." ;
@@ -2121,6 +2231,7 @@ bpo:P10370 a owl:Class ;
 
 bpo:P10376 a owl:Class ;
     bpo:pcfID "10376" ; bpo:hierarchyID "4.3.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10376. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Allotting an identification number to a particular quantity or lot of material manufactured. Assign lot numbers on the basis of specific production units, material similarity, etc. Place lot numbers on the outside of packaging." ;
     rdfs:label "Determine lot numbering system" ;
     skos:definition "An Act of Formulation that composes a lot numbering system specification prescribing how identification numbers are assigned to production lots." ;
@@ -2131,6 +2242,7 @@ bpo:P10376 a owl:Class ;
 
 bpo:P10377 a owl:Class ;
     bpo:pcfID "10377" ; bpo:hierarchyID "4.3.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10377. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the use of production lots. Define where, how, and when to use a specific production lot." ;
     rdfs:label "Determine lot use" ;
     skos:definition "An Act of Formulation that defines where, how, and when a production lot is to be used and produces a lot usage specification for the lot." ;
@@ -2156,6 +2268,7 @@ bpo:P10377 a owl:Class ;
 
 bpo:P10338 a owl:Class ;
     bpo:pcfID "10338" ; bpo:hierarchyID "4.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10338. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining the strategy for managing logistics. Translate customer requirements logistic requirements. Create an efficient logistic network and outsourcing portions of logistics activities. Design a logistics strategy that optimizes transportation costs and schedule. Define key performance indicators." ;
     rdfs:label "Provide logistics governance" ;
     skos:definition "An Act of Formulation that composes the directive specifications governing an organization's logistics function - its logistics requirements, network design, outsourcing policy, delivery service policy, logistics strategy, performance measures, and reverse-logistics strategy." ;
@@ -2172,6 +2285,7 @@ bpo:P10338 a owl:Class ;
 
 bpo:P10343 a owl:Class ;
     bpo:pcfID "10343" ; bpo:hierarchyID "4.4.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10343. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining the requirements for managing the flow of things between the point of origin and the point of consumption by assessing the service requirements of the customers." ;
     rdfs:label "Translate customer service requirements into logistics requirements" ;
     skos:definition "An Act of Formulation that derives from customer service requirements and composes a logistics requirement specification for managing the flow of goods between origin and consumption." ;
@@ -2181,6 +2295,7 @@ bpo:P10343 a owl:Class ;
 
 bpo:P10344 a owl:Class ;
     bpo:pcfID "10344" ; bpo:hierarchyID "4.4.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10344. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing a network for logistical activities. Create a network of entities through which materials and information flow, encompassing all related activities associated with the flow of transformation of products." ;
     rdfs:label "Design logistics network" ;
     skos:definition "An Act of Formulation that composes a logistics network design specifying the entities through which materials and information flow." ;
@@ -2190,6 +2305,7 @@ bpo:P10344 a owl:Class ;
 
 bpo:P10345 a owl:Class ;
     bpo:pcfID "10345" ; bpo:hierarchyID "4.4.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10345. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Conveying outsourcing needs within the organization, with the objective of sourcing the assistance required. Define the portion of logistical activities that can be transferred to outside suppliers. Assess third-party agencies to carefully select the most appropriate agencies for outsourcing. Convey these needs to management or the appropriate authority." ;
     rdfs:label "Communicate outsourcing needs" ;
     skos:definition "An Act of Communication in which an Agent determines which logistics activities to transfer to outside suppliers and conveys the resulting outsourcing needs statement to management or the appropriate authority." ;
@@ -2201,6 +2317,7 @@ bpo:P10345 a owl:Class ;
 
 bpo:P10346 a owl:Class ;
     bpo:pcfID "10346" ; bpo:hierarchyID "4.4.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10346. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing rules and regulations, as well as the terms and conditions regarding the delivery of service by the company. Develop a delivery plan that specifies what, how, when, and in which way to deliver services to the customer." ;
     rdfs:label "Develop and maintain delivery service policy" ;
     skos:definition "An Act of Formulation that composes a delivery service policy prescribing the terms and conditions for delivering services to customers." ;
@@ -2210,6 +2327,7 @@ bpo:P10346 a owl:Class ;
 
 bpo:P10347 a owl:Class ;
     bpo:pcfID "10347" ; bpo:hierarchyID "4.4.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10347. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Optimizing the schedule and costs of transportation services. Design a logistics strategy by strategically creating delivery routes and systems, which optimizes the overall transportation schedules and costs. Evaluate different transportation sources in order to select the most appropriate and cost-effective sources." ;
     rdfs:label "Optimize transportation schedules and costs" ;
     skos:definition "An Act of Formulation that composes a logistics strategy of delivery routes and systems optimizing transportation schedules and costs and selecting cost-effective transportation sources." ;
@@ -2220,6 +2338,7 @@ bpo:P10347 a owl:Class ;
 
 bpo:P10348 a owl:Class ;
     bpo:pcfID "10348" ; bpo:hierarchyID "4.4.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10348. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing measures for evaluating the performance of the logistics strategy of the organization. Establish key performance indicators, including the logistics performance index, delivery in full, and delivery on time." ;
     rdfs:label "Define key performance measures" ;
     skos:definition "An Act of Formulation that composes a key performance indicator specification for evaluating the organization's logistics strategy." ;
@@ -2229,6 +2348,7 @@ bpo:P10348 a owl:Class ;
 
 bpo:P16905 a owl:Class ;
     bpo:pcfID "16905" ; bpo:hierarchyID "4.4.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16905. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establish a strategy that includes rules and regulations for the physical handling, information processing, and disposition of product and packaging returned by the buyer to the seller or an intermediary. Include return approval, transportation coordination, advance communication, product tracking, receipt, disposition of the return, and processing warranty claims in the strategy." ;
     rdfs:label "Define reverse logistics strategy" ;
     skos:definition "An Act of Formulation that composes a reverse logistics strategy prescribing the handling, processing, and disposition of returned product and packaging." ;
@@ -2242,6 +2362,7 @@ bpo:P16905 a owl:Class ;
 
 bpo:P20936 a owl:Class ;
     bpo:pcfID "20936" ; bpo:hierarchyID "4.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20936. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and executing a strategy for all the internal activities related to the flow/transfer of inbound materials. This process includes planning inbound material receipts, managing inbound material flow, monitoring inbound delivery performance, managing the flow of returned products, controlling the quality of returned parts, and salvaging or repairing returned products." ;
     rdfs:label "Plan and manage inbound material flow" ;
     skos:definition "A Planned Act that plans and carries out the internal activities for the flow and transfer of inbound materials, including receipt planning, material handling, delivery monitoring, and returns disposition." ;
@@ -2256,6 +2377,7 @@ bpo:P20936 a owl:Class ;
 
 bpo:P10349 a owl:Class ;
     bpo:pcfID "10349" ; bpo:hierarchyID "4.4.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10349. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the receipts of inbound materials. Create a plan accounting for the materials procured from the source of supply and the materials delivered to the distribution center or the warehouse." ;
     rdfs:label "Plan inbound material receipts" ;
     skos:definition "An Act of Formulation that composes an inbound material receipt plan accounting for materials procured from supply and delivered to the distribution center or warehouse." ;
@@ -2265,6 +2387,7 @@ bpo:P10349 a owl:Class ;
 
 bpo:P10350 a owl:Class ;
     bpo:pcfID "10350" ; bpo:hierarchyID "4.4.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10350. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing all the internal activities related to the flow/transfer of materials. Manage materials being delivered to distribution center or warehouse. Gauge the time taken for delivery and if the delivery process is on time." ;
     rdfs:label "Manage inbound material flow" ;
     skos:definition "A Planned Act that coordinates all the internal activities related to the flow and transfer of inbound materials to the distribution center or warehouse, including handling the materials and gauging whether delivery is on time." ;
@@ -2275,6 +2398,7 @@ bpo:P10350 a owl:Class ;
 
 bpo:P10351 a owl:Class ;
     bpo:pcfID "10351" ; bpo:hierarchyID "4.4.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10351. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Overseeing the performance of an inbound delivery system. Check the present delivery system's efficiency, cost effectiveness, and adherence to a delivery schedule." ;
     rdfs:label "Monitor inbound delivery performance" ;
     skos:definition "An Act of Monitoring that tracks the efficiency, cost-effectiveness, and schedule adherence of the inbound delivery system and produces a delivery performance report." ;
@@ -2284,6 +2408,7 @@ bpo:P10351 a owl:Class ;
 
 bpo:P10352 a owl:Class ;
     bpo:pcfID "10352" ; bpo:hierarchyID "4.4.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10352. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking and taking care of the products that have been internally returned either because of their deficiency or in cases of incorrect delivery." ;
     rdfs:label "Manage flow of returned products" ;
     skos:definition "An Act of Transportation that moves and handles internally returned products through their reverse-logistics flow." ;
@@ -2294,6 +2419,7 @@ bpo:P10352 a owl:Class ;
 
 bpo:P20109 a owl:Class ;
     bpo:pcfID "20109" ; bpo:hierarchyID "4.4.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20109. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Determining if a returned product can be salvaged or repaired. Salvage or repair is dependent upon the product, the condition of the product, or the availability of a like item." ;
     rdfs:label "Manage disposition of returned products" ;
     skos:definition "An Act of Selection that chooses the disposition - salvage, repair, or restock - for a returned product and produces a disposition decision." ;
@@ -2308,6 +2434,7 @@ bpo:P20109 a owl:Class ;
 
 bpo:P12708 a owl:Class ;
     bpo:pcfID "12708" ; bpo:hierarchyID "4.4.2.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12708. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implement a checks and balances system to verify that returned parts meet acceptable quality standards to determine appropriate disposition activity." ;
     rdfs:label "Determine quality of controlled part" ;
     skos:definition "An Act of Appraisal that has as input returned products and a quality standard and produces a returned-part quality assessment used to determine the appropriate disposition." ;
@@ -2320,6 +2447,7 @@ bpo:P12708 a owl:Class ;
 
 bpo:P10366 a owl:Class ;
     bpo:pcfID "10366" ; bpo:hierarchyID "4.4.2.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10366. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Executing activities for reinstating the returned products. Present the customer with additional incentives of compensation in case of any defective products delivery or any discrepancy in the product specifications in order to save the order from being permanently returned." ;
     rdfs:label "Perform salvage activities" ;
     skos:definition "An Act of Communication in which an Agent presents a customer with additional incentives or compensation for a defective delivery or specification discrepancy, conveying a customer compensation offer in order to save the order from being permanently returned." ;
@@ -2331,6 +2459,7 @@ bpo:P10366 a owl:Class ;
 
 bpo:P21604 a owl:Class ;
     bpo:pcfID "21604" ; bpo:hierarchyID "4.4.2.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21604. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the reinstatement of the returned product in order to return them back to customers. Repair or remanufacture the defective or ineffective products returned by the customer. Process the delivery of the repaired or remanufactured products back to the customer." ;
     rdfs:label "Manage repair/refurbishment" ;
     skos:definition "An Act of Maintenance in which defective or ineffective returned products are repaired or remanufactured to restore their designed qualities for return to customers." ;
@@ -2342,6 +2471,7 @@ bpo:P21604 a owl:Class ;
 
 bpo:P21605 a owl:Class ;
     bpo:pcfID "21605" ; bpo:hierarchyID "4.4.2.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 21605. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Moving a returned product back to inventory or stock. Whether a product is sufficient as returned, repaired, or refurbished, moving that product back to inventory for resale or returning to customer is the fnal step in Manage disposition of returned products." ;
     rdfs:label "Return to finished goods inventory" ;
     skos:definition "An Act of Transportation that moves a returned, repaired, or refurbished product back into finished-goods inventory for resale." ;
@@ -2356,6 +2486,7 @@ bpo:P21605 a owl:Class ;
 
 bpo:P10340 a owl:Class ;
     bpo:pcfID "10340" ; bpo:hierarchyID "4.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10340. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking the inventory deployment. Accept and store products. Ship the products. Measure the accuracy of the inventory. Assess the performance of the outsourced logistics activities." ;
     rdfs:label "Operate warehousing" ;
     skos:definition "A Planned Act that carries out warehousing operations - inventory tracking, receipt and storage, picking and shipping, and accuracy and performance measurement - for an organization's goods." ;
@@ -2373,6 +2504,7 @@ bpo:P10340 a owl:Class ;
 
 bpo:P10353 a owl:Class ;
     bpo:pcfID "10353" ; bpo:hierarchyID "4.4.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10353. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking the logistical act of delivering or releasing an inventory item or entity to targeted end users. Track how much inventory has been deployed at all the distribution centers, individually." ;
     rdfs:label "Manage and track inventory deployment" ;
     skos:definition "An Act of Monitoring that tracks how much inventory has been deployed and released to end users at each distribution center and produces an inventory record." ;
@@ -2382,6 +2514,7 @@ bpo:P10353 a owl:Class ;
 
 bpo:P10354 a owl:Class ;
     bpo:pcfID "10354" ; bpo:hierarchyID "4.4.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10354. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Coordinating the incoming inbound materials/products. Accept the delivery of these materials and the subsequent storage. Track them at the warehouse/distribution center." ;
     rdfs:label "Receive, inspect, and store inbound deliveries" ;
     skos:definition "An Act of Transportation that accepts inbound materials and moves them into storage within the warehouse or distribution center." ;
@@ -2393,6 +2526,7 @@ bpo:P10354 a owl:Class ;
 
 bpo:P10355 a owl:Class ;
     bpo:pcfID "10355" ; bpo:hierarchyID "4.4.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10355. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping track of the availability of different materials/products at the warehouse and distribution centers." ;
     rdfs:label "Track product availability" ;
     skos:definition "An Act of Monitoring that tracks the availability of materials and products across warehouses and distribution centers and produces an inventory record." ;
@@ -2402,6 +2536,7 @@ bpo:P10355 a owl:Class ;
 
 bpo:P10356 a owl:Class ;
     bpo:pcfID "10356" ; bpo:hierarchyID "4.4.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10356. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Packing and shipping the product to deliver to the customer. Take care of the internal and external packaging of the products in order to ensure safe transportation of the products from the warehouse to delivery locations. Notify the ERP system and/or Accounts Receivable Dept." ;
     rdfs:label "Pick, pack, and ship product for delivery" ;
     skos:definition "An Act of Transportation that picks, packs, and moves finished product out of the warehouse for delivery to the customer." ;
@@ -2412,6 +2547,7 @@ bpo:P10356 a owl:Class ;
 
 bpo:P10357 a owl:Class ;
     bpo:pcfID "10357" ; bpo:hierarchyID "4.4.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10357. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Monitoring any discrepancies between electronic records that represent the inventory and the physical state of the inventory. Look for discrepancies such as phantom inventory, which includes products that an inventory accounting system considers to be available at the storage location but are not actually available." ;
     rdfs:label "Track inventory accuracy" ;
     skos:definition "An Act of Monitoring that tracks discrepancies between inventory records and the physical state of inventory and produces an inventory accuracy report." ;
@@ -2421,6 +2557,7 @@ bpo:P10357 a owl:Class ;
 
 bpo:P10358 a owl:Class ;
     bpo:pcfID "10358" ; bpo:hierarchyID "4.4.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10358. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping a track on the storage and shipping performance of third-party agencies. Monitor logistics storage and shipping performance for third-party agencies. Use measures such as a logistics scoreboard, activity-based costing, economic value analysis, and balanced scorecards." ;
     rdfs:label "Track third-party logistics storage and shipping performance" ;
     skos:definition "An Act of Monitoring that tracks the storage and shipping performance of third-party logistics agencies and produces a third-party logistics performance report." ;
@@ -2430,6 +2567,7 @@ bpo:P10358 a owl:Class ;
 
 bpo:P10359 a owl:Class ;
     bpo:pcfID "10359" ; bpo:hierarchyID "4.4.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10359. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the movement of the finished products that are processed by the organization through its warehouses. Track goods through the use of systems such as barcodes in order to monitor the volumes available, quantity of out-flowing goods, remaining shelf life of the product, etc.--ultimately, to best manage the warehouse capacity." ;
     rdfs:label "Manage physical finished goods inventory" ;
     skos:definition "An Act of Monitoring that tracks finished goods through the warehouses -- volumes available, out-flowing quantities, and remaining shelf life -- to best manage warehouse capacity, producing an inventory record." ;
@@ -2440,6 +2578,7 @@ bpo:P10359 a owl:Class ;
 
 bpo:P20957 a owl:Class ;
     bpo:pcfID "20957" ; bpo:hierarchyID "4.4.3.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20957. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Shipping items from one warehouse to another in a multi-warehouse environment. A warehouse transfer is typically handled electronically in a system designed to replicate the physical processes involved with transferring items from one warehouse to another." ;
     rdfs:label "Manage warehouse transfers" ;
     skos:definition "An Act of Transportation that ships inventory items from one warehouse to another in a multi-warehouse environment." ;
@@ -2454,6 +2593,7 @@ bpo:P20957 a owl:Class ;
 
 bpo:P10341 a owl:Class ;
     bpo:pcfID "10341" ; bpo:hierarchyID "4.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10341. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan that specifies the schedule and system for transportation and delivery of the outbound products, as well as tracking the performance of the carrier delivery system. Conduct vehicle management and processing of all carrier-related documents." ;
     rdfs:label "Operate outbound transportation" ;
     skos:definition "A Planned Act that carries out outbound transportation operations - planning and executing transport and delivery of outbound products, tracking carrier performance, and auditing carrier documents." ;
@@ -2466,6 +2606,7 @@ bpo:P10341 a owl:Class ;
 
 bpo:P10360 a owl:Class ;
     bpo:pcfID "10360" ; bpo:hierarchyID "4.4.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10360. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Organizing the transportation and delivery of outbound products. Plan and organize the transportation, shipping, and delivery of the end products. Create a plan that specifies dispatch and delivery of the product to its destination, as well the transportation." ;
     rdfs:label "Plan, transport, and deliver outbound product" ;
     skos:definition "An Act of Transportation that moves and delivers outbound finished products to their destination." ;
@@ -2476,6 +2617,7 @@ bpo:P10360 a owl:Class ;
 
 bpo:P10361 a owl:Class ;
     bpo:pcfID "10361" ; bpo:hierarchyID "4.4.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10361. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Monitoring delivery performance when carrying products from the warehouse/distribution centers to the retailers or end consumers. Create a performance metrics based on the key performance indicators." ;
     rdfs:label "Track carrier delivery performance" ;
     skos:definition "An Act of Monitoring that tracks carrier delivery performance from warehouses to retailers or consumers and produces a carrier performance report." ;
@@ -2491,6 +2633,7 @@ bpo:P10361 a owl:Class ;
 
 bpo:P10363 a owl:Class ;
     bpo:pcfID "10363" ; bpo:hierarchyID "4.4.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10363. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Organizing and inspecting all account statements and any other documentation for the carriers used in delivery. Create, manage, and inspect all documents related to the financial, regulatory, and administrative accounts of all the carriers/freights. Generate receipts for all freight transactions." ;
     rdfs:label "Process and audit carrier invoices and documents" ;
     skos:definition "An Act of Information Processing that organizes and inspects carrier invoices and account documents and produces a carrier invoice audit result." ;
