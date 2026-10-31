@@ -44,13 +44,16 @@ apqc:PCF a skos:ConceptScheme ;
 ####################################################################
 
 
+apqc:PCF skos:hasTopConcept bpo:PCF_10002, bpo:PCF_10003, bpo:PCF_10004, bpo:PCF_20022, bpo:PCF_20025, bpo:PCF_20085, bpo:PCF_10007, bpo:PCF_20607, bpo:PCF_17058, bpo:PCF_19207, bpo:PCF_16437, bpo:PCF_10012, bpo:PCF_10013 .
+
 bpo:PCF_10002 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
     skos:prefLabel """Develop Vision and Strategy""" ;
     bpo:pcfID "10002" ;
     bpo:hierarchyID "1.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Establishing a direction and vision for an organization. This involves defining the business concept and long-term vision, as well as developing the business strategy and managing strategic initiatives. Processes in this category focus on creating a vision, a mission, and strategic objectives, and culminate in creating measures to ensure that the organization is moving in the desired direction.""" .
+    bpo:apqcSourceText """Establishing a direction and vision for an organization. This involves defining the business concept and long-term vision, as well as developing the business strategy and managing strategic initiatives. Processes in this category focus on creating a vision, a mission, and strategic objectives, and culminate in creating measures to ensure that the organization is moving in the desired direction.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_17040 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -1219,7 +1222,8 @@ bpo:PCF_10003 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "10003" ;
     bpo:hierarchyID "2.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Detailing practices and procedures related to the concept of developing and managing products and services. These are reflected in the process groups Govern and manage product/service development program [19696], Generate and define new product/service ideas [19698], and Develop products and services [10062].""" .
+    bpo:apqcSourceText """Detailing practices and procedures related to the concept of developing and managing products and services. These are reflected in the process groups Govern and manage product/service development program [19696], Generate and define new product/service ideas [19698], and Develop products and services [10062].""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_19696 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -2118,7 +2122,8 @@ bpo:PCF_10004 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "10004" ;
     bpo:hierarchyID "3.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Outlining process groups related to understanding markets, customers, and capabilities; developing marketing strategies; executing marketing plans; developing sales strategies; developing and managing marketing plans; and managing sales partners and alliances.""" .
+    bpo:apqcSourceText """Outlining process groups related to understanding markets, customers, and capabilities; developing marketing strategies; executing marketing plans; developing sales strategies; developing and managing marketing plans; and managing sales partners and alliances.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_10101 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -3962,7 +3967,8 @@ bpo:PCF_20022 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "20022" ;
     bpo:hierarchyID "4.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Performing supply chain activities include planning supply chain, procuring materials and services, and managing logistics.""" .
+    bpo:apqcSourceText """Performing supply chain activities include planning supply chain, procuring materials and services, and managing logistics.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_10215 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -5284,7 +5290,8 @@ bpo:PCF_20025 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "20025" ;
     bpo:hierarchyID "5.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Offering services to customers. This is the act of providing service delivery as a core business practice and covers identifying strategies for performing service delivery, managing resources, and delivering services to the customer.""" .
+    bpo:apqcSourceText """Offering services to customers. This is the act of providing service delivery as a core business practice and covers identifying strategies for performing service delivery, managing resources, and delivering services to the customer.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_20026 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -5886,7 +5893,8 @@ bpo:PCF_20085 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "20085" ;
     bpo:hierarchyID "6.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Managing customers before and after the delivery of services. This includes developing and planning customer service practices with an eye on steering processes relating to inquiries after sales, feedback, warranties, and recalls. """ .
+    bpo:apqcSourceText """Managing customers before and after the delivery of services. This includes developing and planning customer service practices with an eye on steering processes relating to inquiries after sales, feedback, warranties, and recalls. """ ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_10378 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -6821,7 +6829,8 @@ bpo:PCF_10007 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "10007" ;
     bpo:hierarchyID "7.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Delivering processes traditionally defined as \"human resources\". Process groups include those related to developing and maintaining workforce strategy, recruiting employees, developing and counseling employees, managing employee relations, rewarding and retaining employees, redeploying and retiring employees, managing employee information, and managing employee communications.""" .
+    bpo:apqcSourceText """Delivering processes traditionally defined as \"human resources\". Process groups include those related to developing and maintaining workforce strategy, recruiting employees, developing and counseling employees, managing employee relations, rewarding and retaining employees, redeploying and retiring employees, managing employee information, and managing employee communications.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_17043 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -8197,7 +8206,8 @@ bpo:PCF_20607 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "20607" ;
     bpo:hierarchyID "8.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Managing process groups relevant to the business of information technology within an organization. The process groups include \"Develop and manage IT customer relationships\", \"Develop and manage IT business strategy\", \" Develop and manage IT resilience and risk\", \" Manage information\", \" Develop and manage services/solutions\", \"Deploy services/solutions\", and \" Create and manage support services/solutions\".""" .
+    bpo:apqcSourceText """Managing process groups relevant to the business of information technology within an organization. The process groups include \"Develop and manage IT customer relationships\", \"Develop and manage IT business strategy\", \" Develop and manage IT resilience and risk\", \" Manage information\", \" Develop and manage services/solutions\", \"Deploy services/solutions\", and \" Create and manage support services/solutions\".""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_20608 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -11085,7 +11095,8 @@ bpo:PCF_17058 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "17058" ;
     bpo:hierarchyID "9.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Overseeing key back-office processes for organizations. This category includes process groups related to planning and management accounting, revenue accounting, general accounting and reporting, fixed-asset project accounting, payroll, accounts payable and expense reimbursements, treasury operations, internal controls, tax management, international funds/consolidation, and global trade services.""" .
+    bpo:apqcSourceText """Overseeing key back-office processes for organizations. This category includes process groups related to planning and management accounting, revenue accounting, general accounting and reporting, fixed-asset project accounting, payroll, accounts payable and expense reimbursements, treasury operations, internal controls, tax management, international funds/consolidation, and global trade services.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_10728 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -13478,7 +13489,8 @@ bpo:PCF_19207 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "19207" ;
     bpo:hierarchyID "10.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Relating to the design, construction, acquisition, and management of both productive and non-productive assets.""" .
+    bpo:apqcSourceText """Relating to the design, construction, acquisition, and management of both productive and non-productive assets.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_10937 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -14278,7 +14290,8 @@ bpo:PCF_16437 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "16437" ;
     bpo:hierarchyID "11.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Ensuring that an organization effectively manages its risk. Process groups are aligned with traditional risk management activities.""" .
+    bpo:apqcSourceText """Ensuring that an organization effectively manages its risk. Process groups are aligned with traditional risk management activities.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_17060 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -14781,7 +14794,8 @@ bpo:PCF_10012 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "10012" ;
     bpo:hierarchyID "12.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Fostering external relationships with stakeholders of the entity, including investors, government and industry, the board of directors, and the general public. This is not related to customer management.""" .
+    bpo:apqcSourceText """Fostering external relationships with stakeholders of the entity, including investors, government and industry, the board of directors, and the general public. This is not related to customer management.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_11010 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
@@ -15266,7 +15280,8 @@ bpo:PCF_10013 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     bpo:pcfID "10013" ;
     bpo:hierarchyID "13.0" ;
     rdfs:comment "APQC level: Category" ;
-    bpo:apqcSourceText """Performing activities by an organization that are fundamental to the successful operation of the organization, even across functions in a business. Capabilities defined in the PCF include business process management; portfolio, program, and project management; quality management; change management; benchmarking; environmental health and safety management; and knowledge management.""" .
+    bpo:apqcSourceText """Performing activities by an organization that are fundamental to the successful operation of the organization, even across functions in a business. Capabilities defined in the PCF include business process management; portfolio, program, and project management; quality management; change management; benchmarking; environmental health and safety management; and knowledge management.""" ;
+    skos:topConceptOf apqc:PCF .
 
 bpo:PCF_16378 a owl:NamedIndividual, cco:ont00000853, skos:Concept ;
     skos:inScheme apqc:PCF ;
