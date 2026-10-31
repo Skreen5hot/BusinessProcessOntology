@@ -121,8 +121,9 @@ capability layer is a **merge-only shared overlay** (no slice imports it).
 **Artifacts (in `ontology/`):**
 - `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers; `bpo:enablesProcess`/
   `bpo:bearsPermission` (annotation) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
-  (object properties — range enforced by SHACL C5–C7, **not** `rdfs:range`, to avoid forcing
-  entailments into the merged corpus). `requiresPermission` seam declared but **unpopulated** (RDM/IEE
+  (annotation properties since WP6 B6, 2026-10-31: asserted class-to-class, which as object
+  properties was only punning; targets still checked by SHACL C5–C7, which test the triples, not
+  the property type). `requiresPermission` seam declared but **unpopulated** (RDM/IEE
   owns the permission catalogue, `cco:ont00000751`).
 - `delivery_processes.ttl` — `AuthorRoadmap`/`AuthorImplementationPlan` (⊑ `bpo:ActOfFormulation`) +
   `ApproveImplementationPlan` gate act. (The "agile-loop" set PHASE1 §6b cites does not exist in the

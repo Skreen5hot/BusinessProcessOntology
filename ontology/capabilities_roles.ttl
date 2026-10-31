@@ -60,22 +60,24 @@ bpo:bearsPermission a owl:AnnotationProperty ;
     rdfs:label "bears permission" ;
     rdfs:comment "Role -> Action Permission class the role carries. The deontic hook (RDM/IEE authors the permission)." .
 
-# ---- the three process-side wiring properties (promoted from the seed's
-#      shape-referenced markers to declared object properties) ----
-# Range is enforced by SHACL (coherence shapes C5-C7), NOT by rdfs:range:
-# asserting rdfs:domain/range here would force class entailments into the
-# merged corpus and risk perturbing the v0.3.0 ELK closure. The intended
-# domain/range is documented per property and tested structurally instead.
+# ---- the three process-side wiring properties ----
+# Annotation properties (WP6 B6, option (a), BPO architect 2026-10-31). They
+# are asserted only class-to-class; as object properties OWL 2 DL read that
+# as punning (the classes taken as individuals), which says nothing about
+# the processes' instances. As annotations they make no OWL claim at all.
+# Their targets are still checked by SHACL C5-C7 (which test the triples,
+# not the property type). An OWL requirement semantics, if wanted, is a
+# class-level restriction -- deliberately not introduced here.
 
-bpo:requiresCapability a owl:ObjectProperty ;
+bpo:requiresCapability a owl:AnnotationProperty ;
     rdfs:label "requires capability" ;
     rdfs:comment "Process class -> the capability an agent must bear to perform it. DERIVED from bpo:enablesProcess (author scope once on the capability; generate this inverse onto the process, so the two never drift -- PHASE1 §8). Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
 
-bpo:requiresRole a owl:ObjectProperty ;
+bpo:requiresRole a owl:AnnotationProperty ;
     rdfs:label "requires role" ;
     rdfs:comment "Process class -> the role in whose capacity the work must be performed. Intended domain: a process universal; intended range: a class reaching obo:BFO_0000023 Role (typically a cco:ont00000984 Occupation Role or cco:ont00000187 Authority Role). Same species-satisfies-genus matching as bpo:requiresCapability. Range enforced by SHACL C6." .
 
-bpo:requiresPermission a owl:ObjectProperty ;
+bpo:requiresPermission a owl:AnnotationProperty ;
     rdfs:label "requires permission" ;
     rdfs:comment "Process class -> the Action Permission that must be held for the work to be authorized. Intended range: a class reaching cco:ont00000751 Action Permission. The RDM/IEE layer owns the permission catalogue and the gate conflict-resolution; this seam is declared but LEFT UNPOPULATED in Phase 1. Range enforced by SHACL C7." .
 
