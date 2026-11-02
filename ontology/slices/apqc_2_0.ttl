@@ -27,7 +27,7 @@
 #   Act of Information Proc.    cco:ont00000366
 #   Act of Training            cco:ont00000234
 #   Descriptive ICE            cco:ont00000853
-#   Prescriptive (Directive)   cco:ont00000965
+#   Directive ICE              cco:ont00000965
 #   Information Content Entity  cco:ont00000958
 #   Agent                      cco:ont00001017
 #   Organization               cco:ont00001180
@@ -83,7 +83,7 @@ bpo:ActOfDesign a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
     rdfs:label "Act of Design" ;
     skos:definition "An Act of Planning in which an Agent devises and specifies the form, structure, and behavior of a prospective product, service, solution, process, or architecture and produces a Directive Information Content Entity (a design specification) that prescribes how it is to be realized." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic design act; designing produces a Directive ICE (a design/architecture specification) prescribing an artifact-to-be, so it is anchored under cco:ont00000511 (Act of Planning), not under cco:ont00000908 (Act of Material Artifact Processing), which physically operates on existing matter. Rejected cco:ont00000051 (Act of Construction) and cco:ont00001359 (Act of Manufacturing) as both build/mass-produce finished goods rather than authoring a concept-stage design. Recurs across develop/design categories (2.0, 4.0, 7.0, 8.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic design act; designing produces a Directive ICE (a design/architecture specification) prescribing an artifact-to-be, so it is anchored under cco:ont00000511 (Act of Planning), not under cco:ont00000908 (Act of Artifact Processing), which physically operates on existing matter. Rejected cco:ont00000051 (Act of Construction) and cco:ont00001359 (Act of Manufacturing) as both build/mass-produce finished goods rather than authoring a concept-stage design. Recurs across develop/design categories (2.0, 4.0, 7.0, 8.0)." .
 
 bpo:ActOfDevelopment a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act

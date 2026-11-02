@@ -136,7 +136,7 @@ bpo:designatesProcessType a owl:AnnotationProperty ;
 #
 # Verified reuse anchors:
 #   Descriptive ICE      cco:ont00000853
-#   Prescriptive ICE     cco:ont00000965  (Directive ICE)
+#   Directive ICE        cco:ont00000965
 #   is about             cco:ont00001808
 #   has input            cco:ont00001921
 #   has output           cco:ont00001986

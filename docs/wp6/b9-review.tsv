@@ -2,7 +2,7 @@ finding	term	parent_named_by_check	disposition	note
 K04	bpo:AccountantRole	Occupation Role	open: pattern	"""A Role that ..."" in the slice, whose only asserted parent is BFO role; the Occupation/Authority/Contractor anchor is added by the generated wiring overlay (capabilities/role_anchors.json), so the genus the check expects lives in another module"
 K04	bpo:ActOfCommunication	Act of Communication	open: decision	duplicates CCO Act of Communication (402); waits on the deprecation question
 K04	bpo:ActOfFinancialTransaction	Act of Financial Instrument Use	fixed	definition genus now names the asserted parent
-K04	bpo:ActOfProduction	Act of Artifact Processing	open: CCO pin	"the definition names 908 by its 2026-04-04 label; under the declared pin (2024-11-06) 908 is ""Act of Artifact Processing"""
+K04	bpo:ActOfProduction	Act of Artifact Processing	fixed	the definition named 908 by its 2026-04-04 label; corrected to the pinned label ("Act of Artifact Processing") with the CCO pin (docs/wp6/cco-pin.md)
 K05	bpo:AnalystRelationsManagementCapability	Stakeholder Relationship Management Capability	fixed	definition genus now names the asserted parent
 K05	bpo:ApproveImplementationPlanPermission	Action Permission	fixed	definition rewritten in genus-differentia form
 K04	bpo:ApproverRole	FNSR Role	fixed with B13 K07	marker parent bpo:Role removed; definition rewritten in genus-differentia form naming the CCO role

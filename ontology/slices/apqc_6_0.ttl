@@ -142,7 +142,7 @@ bpo:ActOfServiceProvision a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Service Provision" ;
     skos:definition "A Planned Act in which an Agent renders a service to a customer by carrying out and completing the tasks that fulfil an agreed service need." ;
-    rdfs:comment "PROPOSE-EXT (D9). Operations-category signature genus for 'deliver/render/execute/deploy/operate a service' processes. Anchored at the generic cco:ont00000228 (Planned Act) because service provision need not produce or modify an artifact and need not transfer an ICE. Rejected cco:ont00000908 (Act of Material Artifact Processing: its product is a modified Material Artifact, whereas a service need not modify matter) and cco:ont00000402 (Act of Communication: mere ICE transfer). Recurs in operations/IT-service categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). Operations-category signature genus for 'deliver/render/execute/deploy/operate a service' processes. Anchored at the generic cco:ont00000228 (Planned Act) because service provision need not produce or modify an artifact and need not transfer an ICE. Rejected cco:ont00000908 (Act of Artifact Processing: its product is a modified Material Artifact, whereas a service need not modify matter) and cco:ont00000402 (Act of Communication: mere ICE transfer). Recurs in operations/IT-service categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0)." .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES

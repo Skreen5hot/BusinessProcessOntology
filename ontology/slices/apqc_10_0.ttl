@@ -29,7 +29,7 @@
 #     uses 366. (cco:ont00000037 rejected: a single sensory acquisition,
 #     not sustained criterion-referenced information processing.)
 #   * bpo:ActOfDisposition -- drafts anchored it under cco:ont00000908
-#     (Act of Material Artifact Processing) and cco:ont00000228 (Planned
+#     (Act of Artifact Processing) and cco:ont00000228 (Planned
 #     Act). RECONCILED to cco:ont00000228: 10.4 applies the genus to
 #     ownership transfer (sale/trade) and waste-stream removal, which do
 #     not always physically process a material artifact, so the broader
@@ -81,7 +81,7 @@ bpo:ActOfDisposition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Disposition" ;
     skos:definition "A Planned Act in which an Agent removes an asset or portion of material from active service, ownership, or possession at its end-of-life by retiring, selling, dismantling, recycling, abandoning, or otherwise applying a terminal disposition to it or its parts in accordance with applicable requirements." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic disposal/disposition Act. Anchored at the generic cco:ont00000228 (Planned Act) because disposition spans physical destruction/recycling AND ownership transfer (sale/trade) AND waste-stream removal -- not all of which physically process a material artifact. Rejected cco:ont00000908 (Act of Material Artifact Processing: too narrow -- excludes sale/abandonment), cco:ont00000950 (Act of Maintenance: preserves/restores Qualities, the opposite of retiring an asset), and cco:ont00000970 (Act of Artifact Modification: changes an artifact's qualities, not its service/ownership status). Recurs across asset end-of-life: decommission, sale/trade, recycle, abandonment, hazardous-material/waste disposition (10.0). Also rejected cco:ont00001336 (Act of Ownership) and its parent cco:ont00001232 (Act of Possession): these model an agent HOLDING / exercising control over property (a state of possession), not relinquishing or transferring it; CCO 2.0 has no Act of Selling / Act of Ownership Transfer." .
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic disposal/disposition Act. Anchored at the generic cco:ont00000228 (Planned Act) because disposition spans physical destruction/recycling AND ownership transfer (sale/trade) AND waste-stream removal -- not all of which physically process a material artifact. Rejected cco:ont00000908 (Act of Artifact Processing: too narrow -- excludes sale/abandonment), cco:ont00000950 (Act of Maintenance: preserves/restores Qualities, the opposite of retiring an asset), and cco:ont00000970 (Act of Artifact Modification: changes an artifact's qualities, not its service/ownership status). Recurs across asset end-of-life: decommission, sale/trade, recycle, abandonment, hazardous-material/waste disposition (10.0). Also rejected cco:ont00001336 (Act of Ownership) and its parent cco:ont00001232 (Act of Possession): these model an agent HOLDING / exercising control over property (a state of possession), not relinquishing or transferring it; CCO 2.0 has no Act of Selling / Act of Ownership Transfer." .
 
 bpo:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
@@ -150,7 +150,7 @@ bpo:designatesProcessType a owl:AnnotationProperty ;
 #
 #    Verified reuse anchors:
 #      Descriptive ICE   cco:ont00000853   ("Descriptive Information Content Entity")
-#      Directive ICE     cco:ont00000965   ("Prescriptive Information Content Entity")
+#      Directive ICE     cco:ont00000965   ("Directive Information Content Entity")
 #      is about          cco:ont00001808
 #      Agent             cco:ont00001017
 #      Organization      cco:ont00001180
@@ -267,7 +267,7 @@ bpo:MaterialSafetyDataSheet a owl:Class ;
     rdfs:label "Material Safety Data Sheet" ;
     skos:definition "A Descriptive Information Content Entity, about a hazardous material, that records the safety properties and required handling and disposal information for that material." ;
     rdfs:comment "Descriptive: an MSDS records material properties; the handling requirements it cites are described, not authored, by it." ;
-    rdfs:comment "False-friend caution (Descriptive vs Directive): an MSDS is descriptive content (cco:ont00000853); any directive handling or disposal PROCEDURE it quotes is a separate Prescriptive ICE (cco:ont00000965) authored by the relevant authority, modeled as its own class if needed. Do not re-anchor the sheet to Directive on the strength of the rules it cites." .
+    rdfs:comment "False-friend caution (Descriptive vs Directive): an MSDS is descriptive content (cco:ont00000853); any directive handling or disposal PROCEDURE it quotes is a separate Directive ICE (cco:ont00000965) authored by the relevant authority, modeled as its own class if needed. Do not re-anchor the sheet to Directive on the strength of the rules it cites." .
 
 bpo:ComplianceAuditReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Compliance Audit Report" ;
@@ -802,7 +802,7 @@ bpo:P10964 a owl:Class ;
     bpo:apqcSourceText "Modifying the formation of the workspace and its assets. Make necessary changes in an office space with all assets (tables, chairs, computers, admin staff, interior designing, etc.) according to requirements." ;
     rdfs:label "Change fit/form/function of workspace and facilities" ;
     skos:definition "An Act of Artifact Modification that modifies the fit, form, or function of a workspace and its assets according to changed organizational requirements." ;
-    rdfs:comment "Re-anchored (Gate-F) from the over-general cco:ont00000908 (Act of Material Artifact Processing) to its nearest correct child cco:ont00000970 (Act of Artifact Modification): the source ('Modifying the formation of the workspace and its assets ... Make necessary changes ... according to requirements') is precisely 'an existing Material Artifact is acted upon in a manner that changes ... its Qualities, Dispositions, or Functions' (ont00000970). This matches the sibling-pattern 10.2.3.4 'Augment existing assets' (bpo:P19233), which anchors the same modify-existing-artifact act at ont00000970. ont00000908 retained as the (over-general) parent reached transitively. Rejected cco:ont00000950 (Act of Maintenance), which only preserves/restores existing qualities rather than altering fit/form/function. Operations layer permits the material input/output bpo:Workspace." ;
+    rdfs:comment "Re-anchored (Gate-F) from the over-general cco:ont00000908 (Act of Artifact Processing) to its nearest correct child cco:ont00000970 (Act of Artifact Modification): the source ('Modifying the formation of the workspace and its assets ... Make necessary changes ... according to requirements') is precisely 'an existing Material Artifact is acted upon in a manner that changes ... its Qualities, Dispositions, or Functions' (ont00000970). This matches the sibling-pattern 10.2.3.4 'Augment existing assets' (bpo:P19233), which anchors the same modify-existing-artifact act at ont00000970. ont00000908 retained as the (over-general) parent reached transitively. Rejected cco:ont00000950 (Act of Maintenance), which only preserves/restores existing qualities rather than altering fit/form/function. Operations layer permits the material input/output bpo:Workspace." ;
     skos:example "A facilities crew reconfigures an open-plan floor into team pods with new partitions." ;
     rdfs:subClassOf cco:ont00000970 ,
         cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000970, asserted so S2/S5 resolve standalone)
@@ -1429,7 +1429,7 @@ bpo:P19253 a owl:Class ;
     bpo:apqcSourceText "Engaging in all aspects of asset maintenance. Ensure that all assets are functioning properly and to all specified codes and regulations where applicable. Maintenance includes all preventative, routine, and corrective activates." ;
     rdfs:label "Perform asset maintenance" ;
     skos:definition "An Act of Maintenance in which an organization acts upon its productive assets to preserve or restore their designed functions, comprising preventive, routine, and corrective work." ;
-    rdfs:comment "Anchored at cco:ont00000950 (Act of Maintenance), verified: 'An Act of Artifact Modification in which a Material Artifact is modified in order to preserve or restore one or more of its designed Qualities or Functions.' Its APQC activities are process parts (cco:ont00001777)." ;
+    rdfs:comment "Anchored at cco:ont00000950 (Act of Maintenance), verified: 'An Act of Artifact Modification in which an Artifact is modified in order to preserve or restore one or more of its designed Qualities or Functions.' Its APQC activities are process parts (cco:ont00001777)." ;
     skos:example "A maintenance crew works through the preventive, routine, and corrective tasks on the plant's equipment." ;
     rdfs:subClassOf cco:ont00000950 ,
         cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000950, asserted so S2/S5 resolve standalone)

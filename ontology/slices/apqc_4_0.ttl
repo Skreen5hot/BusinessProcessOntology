@@ -27,12 +27,12 @@
 #   Act of Appraisal                 cco:ont00000636
 #   Act of Measuring                 cco:ont00000345
 #   Act of Maintenance               cco:ont00000950
-#   Act of Material Artifact Processing  cco:ont00000908
+#   Act of Artifact Processing  cco:ont00000908
 #   Act of Location Change           cco:ont00000065
 #   Act of Cargo Transportation      cco:ont00000595
 #   Act of Contract Formation        cco:ont00000684
 #   Descriptive ICE                  cco:ont00000853
-#   Prescriptive (Directive) ICE     cco:ont00000965
+#   Directive ICE                    cco:ont00000965
 #   Agent                            cco:ont00001017
 #   Organization                     cco:ont00001180
 #   Organization Capability          cco:ont00000568
@@ -108,11 +108,11 @@ bpo:ActOfProcessControl a owl:Class ;
     rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act): closed-loop control ACTS ON the plant (it changes setpoints and equipment state), so its product is a change in the controlled material participants, not a Descriptive ICE. Rejected bpo:ActOfMonitoring (cco:ont00000366, Act of Information Processing): monitoring is the OBSERVE half only and over-commits to a descriptive output, whereas advanced process control / real-time optimization also ACTUATE. The controlled equipment is attached via obo:BFO_0000057 (has participant). Recurs across automate/control-plant and industrial-control activities (4.0)." .
 
 bpo:ActOfProduction a owl:Class ;
-    rdfs:subClassOf cco:ont00000908 ,   # Act of Material Artifact Processing
+    rdfs:subClassOf cco:ont00000908 ,   # Act of Artifact Processing
         cco:ont00000228 ;               # Planned Act (explicit; entailed via ont00000908, asserted so SHACL S2/S5 resolve standalone)
     rdfs:label "Act of Production" ;
-    skos:definition "An Act of Material Artifact Processing in which an Agent transforms raw materials and components into finished Material Artifacts according to a production specification or schedule." ;
-    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Material Artifact Processing, verified: 'A Planned Act of performing a series of physical operations on a material artifact in order to change or preserve the artifact'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), NOT has output -- a deliberate CORPUS-LOCAL CONVENTION (not a missing output): cco:has output is used only for informational (ICE) outputs in these reality slices, so material products produced or moved by operations attach via bfo:has participant. CCO itself permits a material has-output; adopting that pattern corpus-wide is an open policy option (see methodology section 10). Recurs in physical-production categories (4.0, 6.0)." .
+    skos:definition "An Act of Artifact Processing in which an Agent transforms raw materials and components into finished Material Artifacts according to a production specification or schedule." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000908 (Act of Artifact Processing, verified: 'A Planned Act of performing a series of mechanical or chemical operations on something in order to change or preserve it'; parent cco:ont00000228), the common parent of Act of Manufacturing (cco:ont00001359) and Act of Artifact Assembly. Generalizes produce/assemble-product where APQC covers both mass manufacturing and assembly; cco:ont00001359 (mass production for sale) alone is too narrow and Assembly alone excludes non-assembly production, so the shared genus sits at their common parent. The material product is attached via obo:BFO_0000057 (has participant), NOT has output -- a deliberate CORPUS-LOCAL CONVENTION (not a missing output): cco:has output is used only for informational (ICE) outputs in these reality slices, so material products produced or moved by operations attach via bfo:has participant. CCO itself permits a material has-output; adopting that pattern corpus-wide is an open policy option (see methodology section 10). Recurs in physical-production categories (4.0, 6.0)." .
 
 bpo:ActOfScheduling a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
@@ -665,7 +665,7 @@ bpo:SupplierCertification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
 bpo:RawMaterial a owl:Class ; rdfs:subClassOf cco:ont00000457 , obo:BFO_0000040 ;   # Portion of Material (BFO material entity asserted so S4 resolves standalone)
     rdfs:label "Raw Material" ;
     skos:definition "A Portion of Material that is provided as input to an act of production and incorporated into, or consumed during, the manufacture of a finished product." ;
-    rdfs:comment "Anchored under cco:ont00000457 (Portion of Material), whose CCO definition is a portion produced to be used as the input for another Act of Material Artifact Processing -- an exact fit for raw materials." .
+    rdfs:comment "Anchored under cco:ont00000457 (Portion of Material), whose CCO definition is a portion produced to be used as the input for another Act of Artifact Processing -- an exact fit for raw materials." .
 
 bpo:InventoryItem a owl:Class ; rdfs:subClassOf cco:ont00000995 , obo:BFO_0000040 ;   # Material Artifact (BFO material entity asserted so S4 resolves standalone)
     rdfs:label "Inventory Item" ;
