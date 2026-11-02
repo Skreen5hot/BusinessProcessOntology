@@ -4944,18 +4944,18 @@ bpo:P21612	process	1	1.2.2.9	21612	Evaluate global support options	cco:ont000006
 bpo:P21613	process	1	1.2.2.10	21613	Evaluate shared services options	cco:ont00000636		An Act of Appraisal that evaluates options for shared services and delivery models and produces a strategic-option analysis.
 bpo:P21614	process	1	1.2.2.11	21614	Evaluate lean/continuous improvement options	cco:ont00000636		An Act of Appraisal that evaluates options to optimize processes and functional areas and produces a strategic-option analysis.
 bpo:SuggestionProgramManagement	process	7			Manage employee suggestion program	bpo:ActOfAdministration		An Act of Administration that collects and handles employee suggestions and runs the programs through which an organization taps into employee ideas, recording 
-bpo:apqcSourceText	property	10			APQC source description			
-bpo:bearsPermission	property	cap			bears permission			
-bpo:designatesProcessType	property	10			designates process type			
-bpo:enablesProcess	property	cap			enables process			
-bpo:hierarchyID	property	10			APQC Hierarchy ID			
+bpo:apqcSourceText	property	10			APQC source description			An annotation property that relates an ontology term to the verbatim element description of its source row in a specified release of the APQC Process Classifica
+bpo:bearsPermission	property	cap			bears permission			An annotation property that relates a Role class to an Action Permission class whose applicable instances authorize processes performed by agents bearing that R
+bpo:designatesProcessType	property	10			designates process type			An annotation property that relates an APQC PCF catalog concept to an OWL class representing the Process type or Organization Capability type designated by that
+bpo:enablesProcess	property	cap			enables process			An annotation property that relates an Agent Capability class to a Process class in which instances of that capability type can be realized, or whose performanc
+bpo:hierarchyID	property	10			APQC Hierarchy ID			An annotation property that relates an ontology term to the dotted-decimal hierarchy identifier assigned to its source row in a particular release of the APQC P
 bpo:inGrouping	property	cap			in grouping			An annotation property that relates a class to a BPO grouping class whose vocabulary it belongs to, without asserting that it is a subclass of the grouping.
-bpo:pcfID	property	10			APQC PCF ID			
+bpo:pcfID	property	10			APQC PCF ID			An annotation property that relates an ontology term to the unique process element identifier assigned by APQC to its source row, which remains stable across PC
 bpo:permissionApplicableToRole	property	cap			permission applicable to role			An annotation property that relates a Role class to an Action Permission class (cco:ont00000751) as a type-level association: permissions of that type apply to 
-bpo:requiresCapability	property	cap			requires capability			
-bpo:requiresPermission	property	cap			requires permission			
-bpo:requiresRole	property	cap			requires role			
-bpo:routable	property	delivery			routable			
+bpo:requiresCapability	property	cap			requires capability			An annotation property that relates a Process class to an Agent Capability class whose instances must be borne by an agent assigned to perform a process of that
+bpo:requiresPermission	property	cap			requires permission			An annotation property that relates a Process class to an Action Permission class whose applicable instances must permit processes of that type for their execut
+bpo:requiresRole	property	cap			requires role			An annotation property that relates a Process class to a Role class whose instances must be borne by an agent performing a process of that type in the required 
+bpo:routable	property	delivery			routable			An annotation property whose Boolean value indicates whether a Process class is eligible for routing by the composer to a registered agent, independently of whe
 bpo:AccountantRole	role	9			Accountant Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with recording, classifying, and reporting an Organization's financial transactions.
 bpo:AdvisorRole	role	12			Advisor Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of providing advice or counsel to support a focal organization's relationships or decisions.
 bpo:ApproverRole	role	cap			Approver role	cco:ont00000187		An Authority Role that is borne by an Agent in virtue of being empowered to approve passage through a review or approval gate.

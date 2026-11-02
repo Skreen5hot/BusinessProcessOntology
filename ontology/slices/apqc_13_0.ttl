@@ -116,18 +116,22 @@ bpo:ActOfReporting a owl:Class ;
 
 bpo:pcfID a owl:AnnotationProperty ;
     rdfs:label "APQC PCF ID" ;
+    skos:definition "An annotation property that relates an ontology term to the unique process element identifier assigned by APQC to its source row, which remains stable across PCF releases while the conceptual meaning of the element remains unchanged." ;
     rdfs:comment "Stable APQC identifier. Anchor IRIs to this; it persists across PCF versions." .
 
 bpo:hierarchyID a owl:AnnotationProperty ;
     rdfs:label "APQC Hierarchy ID" ;
+    skos:definition "An annotation property that relates an ontology term to the dotted-decimal hierarchy identifier assigned to its source row in a particular release of the APQC Process Classification Framework, whose value may change between releases." ;
     rdfs:comment "Positional dotted-decimal locator. NON-STABLE across PCF versions. Reference only; never for IRI minting or subsumption." .
 
 bpo:apqcSourceText a owl:AnnotationProperty ;
     rdfs:label "APQC source description" ;
+    skos:definition "An annotation property that relates an ontology term to the verbatim element description of its source row in a specified release of the APQC Process Classification Framework." ;
     rdfs:comment "Verbatim APQC Element Description retained for provenance." .
 
 bpo:designatesProcessType a owl:AnnotationProperty ;
     rdfs:label "designates process type" ;
+    skos:definition "An annotation property that relates an APQC PCF catalog concept to an OWL class representing the Process type or Organization Capability type designated by that concept." ;
     rdfs:comment "Bridges a catalog node (bpo:PCF_<pcfID>) to its reality-layer class (bpo:P<pcfID> or a supporting capability). The catalog nodes themselves are declared and typed (owl:NamedIndividual, cco:ont00000853 Descriptive ICE, skos:Concept) in apqc-catalog.ttl. An ANNOTATION property is used (not an object property) deliberately, to keep the slice in OWL DL and avoid ICE-to-class punning (ADR-001 R4)." .
 
 ####################################################################

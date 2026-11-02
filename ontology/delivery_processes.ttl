@@ -41,6 +41,7 @@
 # ---- bpo:routable: the Process-Contract facet marking a process as dispatchable (FNSR-side) ----
 bpo:routable a owl:AnnotationProperty ;
     rdfs:label "routable" ;
+    skos:definition "An annotation property whose Boolean value indicates whether a Process class is eligible for routing by the composer to a registered agent, independently of whether a particular agent satisfies the requirements for its execution." ;
     rdfs:comment "Process Contract facet: marks a process universal as one the composer may route to a registered agent. Asserted alongside bpo:requiresCapability/bpo:requiresRole so the compiled graph is maximally queryable without inference." .
 
 # ---- inlined act genera (mirror of ontology/apqc-ext.ttl; D9 source of truth) ----

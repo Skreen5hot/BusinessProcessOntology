@@ -59,6 +59,7 @@ bpo:inGrouping a owl:AnnotationProperty ;
 
 bpo:enablesProcess a owl:AnnotationProperty ;
     rdfs:label "enables process" ;
+    skos:definition "An annotation property that relates an Agent Capability class to a Process class in which instances of that capability type can be realized, or whose performance they enable, without asserting that bearing the capability is a necessary condition for an agent's performance." ;
     rdfs:comment "Capability -> process class whose execution it enables. BFO grounding is 'has realization' (a capability can be realized in such processes). It states a possible realization or an enabling relation, not that the process needs the capability: since WP6 B8 (BPO architect, 2026-11-02) bpo:requiresCapability is no longer its inverse, and each pair is classified in capabilities/b8_pairs.tsv. Used for authoring scope and wiring-coherence checks." .
 
 bpo:permissionApplicableToRole a owl:AnnotationProperty ;
@@ -68,6 +69,7 @@ bpo:permissionApplicableToRole a owl:AnnotationProperty ;
 
 bpo:bearsPermission a owl:AnnotationProperty ;
     rdfs:label "bears permission" ;
+    skos:definition "An annotation property that relates a Role class to an Action Permission class whose applicable instances authorize processes performed by agents bearing that Role, subject to the governing regulations." ;
     owl:deprecated true ;
     dct:isReplacedBy bpo:permissionApplicableToRole ;
     rdfs:comment "DEPRECATED 2026-10-31 (WP6 B7). Use bpo:permissionApplicableToRole. The label asserted a BFO bearer relation that cannot hold between a role and an Action Permission." .
@@ -83,14 +85,17 @@ bpo:bearsPermission a owl:AnnotationProperty ;
 
 bpo:requiresCapability a owl:AnnotationProperty ;
     rdfs:label "requires capability" ;
+    skos:definition "An annotation property that relates a Process class to an Agent Capability class whose instances must be borne by an agent assigned to perform a process of that type." ;
     rdfs:comment "Process class -> the capability an agent must bear to perform it. Generated only for capability -> process pairs that capabilities/b8_pairs.tsv classifies as necessary requirements (WP6 B8, BPO architect 2026-11-02); it was the inverse of every bpo:enablesProcess pair (PHASE1 §8), which made each possible realization a requirement. Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
 
 bpo:requiresRole a owl:AnnotationProperty ;
     rdfs:label "requires role" ;
+    skos:definition "An annotation property that relates a Process class to a Role class whose instances must be borne by an agent performing a process of that type in the required capacity." ;
     rdfs:comment "Process class -> the role in whose capacity the work must be performed. Intended domain: a process universal; intended range: a class reaching obo:BFO_0000023 Role (typically a cco:ont00000984 Occupation Role or cco:ont00000187 Authority Role). Same species-satisfies-genus matching as bpo:requiresCapability. Range enforced by SHACL C6." .
 
 bpo:requiresPermission a owl:AnnotationProperty ;
     rdfs:label "requires permission" ;
+    skos:definition "An annotation property that relates a Process class to an Action Permission class whose applicable instances must permit processes of that type for their execution to be authorized." ;
     rdfs:comment "Process class -> the Action Permission that must be held for the work to be authorized. Intended range: a class reaching cco:ont00000751 Action Permission. The RDM/IEE layer owns the permission catalogue and the gate conflict-resolution; this seam is declared but LEFT UNPOPULATED in Phase 1. Range enforced by SHACL C7." .
 
 # =====================================================================
