@@ -312,9 +312,15 @@ bpo:MaterialsManagementContingencyPlan a owl:Class ; rdfs:subClassOf cco:ont0000
     rdfs:label "Materials Management Contingency Plan" ;
     skos:definition "A Directive Information Content Entity that prescribes how to react to issues arising during execution of the inventory plan, such as a vendor failing to deliver on time." .
 
-bpo:RequestForQuotation a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
+bpo:SupplierSolicitation a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
+    rdfs:label "Supplier Solicitation" ;
+    skos:definition "A Directive Information Content Entity, issued by a prospective buyer, that requests suppliers to submit offers for specified products or services and prescribes the requirements their offers must address." ;
+    rdfs:comment "The shared parent of bpo:RequestForProposal and bpo:RequestForQuotation (WP6 (BPO architect, 2026-11-02)). Directive: it prescribes what a responding offer must address. CCO 2.0 has no solicitation ICE; issuing one is a cco:ont00000769 Act of Requesting." .
+
+bpo:RequestForQuotation a owl:Class ; rdfs:subClassOf bpo:SupplierSolicitation ;
     rdfs:label "Request for Quotation" ;
-    skos:definition "A Directive Information Content Entity that solicits suppliers to submit price quotes for specified products or services." .
+    skos:definition "A Supplier Solicitation that requests price quotations for specified products or services." ;
+    rdfs:comment "Under bpo:SupplierSolicitation since WP6 (BPO architect, 2026-11-02) (was a direct subclass of cco:ont00000965)." .
 
 bpo:PurchaseRequisition a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Purchase Requisition" ;
