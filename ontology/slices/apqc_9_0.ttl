@@ -193,10 +193,16 @@ bpo:AuditorRole a owl:Class ;
     skos:definition "A Role that is borne by an Agent in virtue of independently examining and attesting to an organization's records, controls, or compliance." ;
     rdfs:comment "Covers both internal and external auditors; the bearer (a Person or Organization) carries the role." .
 
+bpo:RegulatoryAuthorityRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
+    rdfs:label "Regulatory Authority Role" ;
+    skos:definition "A Role that is borne by an Organization in virtue of issuing, administering, or enforcing laws, statutes, permits, codes, or regulatory requirements binding on a focal organization, and overseeing its compliance with them." ;
+    rdfs:comment "Inlined in section 9.0 as the parent of bpo:RegulatorRole (WP6, 2026-11-02). Borne by the authority Organization, never by the rules it issues." .
+
 bpo:RegulatorRole a owl:Class ;
-    rdfs:subClassOf obo:BFO_0000023 ;
+    rdfs:subClassOf bpo:RegulatoryAuthorityRole ;
     rdfs:label "Regulator Role" ;
-    skos:definition "A Role that is borne by an authority in virtue of having legal power to issue and enforce financial, tax, or trade rules binding on an Organization." .
+    skos:definition "A Regulatory Authority Role that is borne by an Organization in virtue of having legal power to issue and enforce financial, tax, or trade rules binding on other Organizations." ;
+    rdfs:comment "The financial, tax and trade case of bpo:RegulatoryAuthorityRole (WP6, BPO architect, 2026-11-02); until then a direct subclass of obo:BFO_0000023, borne by 'an authority'. Borne in 9.0 by bpo:RegulatoryAuthority, an Organization, as its parent is." .
 
 bpo:CustomerRole a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;

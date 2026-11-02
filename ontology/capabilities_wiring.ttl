@@ -470,7 +470,7 @@ bpo:ITRiskOwnerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 9 -- Manage Financial Resources =====
-#   requiresCapability 0  requiresRole 29  enrichment 5  bare 6  unclassified 0
+#   requiresCapability 0  requiresRole 29  enrichment 6  bare 6  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:AccountingCapability bpo:enablesProcess bpo:P10729 .
@@ -537,6 +537,7 @@ bpo:AccountantRole rdfs:subClassOf cco:ont00000984 .
 bpo:AuditorRole rdfs:subClassOf cco:ont00000984 .
 bpo:EmployeeRole rdfs:subClassOf cco:ont00000984 .
 bpo:RegulatorRole rdfs:subClassOf cco:ont00000187 .
+bpo:RegulatoryAuthorityRole rdfs:subClassOf cco:ont00000187 .
 bpo:TreasurerRole rdfs:subClassOf cco:ont00000984 .
 
 
