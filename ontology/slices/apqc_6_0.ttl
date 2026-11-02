@@ -565,7 +565,7 @@ bpo:CustomerProfile a owl:Class ;
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:Customer ] ;
     rdfs:label "Customer Profile" ;
     skos:definition "A Descriptive Information Content Entity that describes an individual customer's service requirements and personal information." ;
-    rdfs:comment "Output of 6.3.4.1.2 (Create customer profile); about a Customer." .
+    rdfs:comment "Output of 6.3.4.1.2 (Create customer profile); about a Customer. The individual-customer sense only, WP6 (BPO architect, 2026-11-02): profiles of customer groups or personas are bpo:CustomerSegmentProfile, and the single-view specification is bpo:CustomerDataSpecification." .
 
 bpo:ContactVolumeForecast a owl:Class ;
     rdfs:subClassOf cco:ont00000626 ,   # Predictive ICE

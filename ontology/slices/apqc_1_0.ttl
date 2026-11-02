@@ -324,12 +324,12 @@ bpo:CustomerNeedsAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Needs Assessment" ;
     skos:definition "A Descriptive Information Content Entity that describes the products and services that are needed or wanted by customers in a relevant market." .
 
-bpo:CustomerProfile a owl:Class ;
+bpo:CustomerSegmentProfile a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:Customer ] ;
-    rdfs:label "Customer Profile" ;
-    skos:definition "A Descriptive Information Content Entity that describes a group of customers with respect to their characteristics, needs, and behavioral patterns." ;
-    rdfs:comment "Covers APQC customer profiles, personas, and the 'single view of the customer'." .
+    rdfs:label "Customer Segment Profile" ;
+    skos:definition "A Descriptive Information Content Entity that describes a group or segment of customers, or a persona constructed to represent one, with respect to their characteristics, needs, and behavioral patterns." ;
+    rdfs:comment "Split from bpo:CustomerProfile (WP6 (BPO architect, 2026-11-02)), which keeps the individual-customer sense (slice 6). Output of 1.1.2.3 (P19947, Assess customer needs and wants) and 1.2.8.2.1 (P16612, Define and manage personas)." .
 
 bpo:InternalEnvironmentAssessment a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Internal Environment Assessment" ;
@@ -528,6 +528,11 @@ bpo:MissionStatement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Mission Statement" ;
     skos:definition "A Directive Information Content Entity that prescribes the overarching purpose and practicable targets an organization aims to pursue." ;
     rdfs:comment "Directive: a mission prescribes intended direction rather than describing a state of affairs." .
+
+bpo:CustomerDataSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
+    rdfs:label "Customer Data Specification" ;
+    skos:definition "A Directive Information Content Entity that prescribes the parameters by which an organization's data about its customers is to be aggregated and represented, as in a single view of the customer." ;
+    rdfs:comment "Output of P19966 (Define single view of the customer). WP6 (BPO architect, 2026-11-02): it was typed bpo:CustomerProfile, a Descriptive ICE, which broke the GOLDEN PRINCIPLE for a formulation act." .
 
 bpo:StrategicVision a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Strategic Vision" ;
@@ -936,12 +941,12 @@ bpo:P19947 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19947. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating customer profiles to get a picture of customers and their needs. Identify particular groups of people/organizations that benefit from your product/services and then selling to them." ;
     rdfs:label "Assess customer needs and wants" ;
-    skos:definition "An Act of Identification that discerns and characterizes groups of customers who benefit from an organization's products or services and produces a customer profile of those groups and their needs." ;
-    rdfs:comment "Re-anchored (Gate-F) from cco:ont00000636 (Act of Appraisal) to bpo:ActOfIdentification: the source is 'creating customer profiles ... identify particular groups of people/organizations' -- profiling/segmentation is discernment, and its Descriptive output bpo:CustomerProfile agrees with the Information-Processing genus. Rejected Act of Appraisal: there is no evaluative value-judgement here, only characterization of segments." ;
+    skos:definition "An Act of Identification that discerns and characterizes groups of customers who benefit from an organization's products or services and produces a customer segment profile of those groups and their needs." ;
+    rdfs:comment "Re-anchored (Gate-F) from cco:ont00000636 (Act of Appraisal) to bpo:ActOfIdentification: the source is 'creating customer profiles ... identify particular groups of people/organizations' -- profiling/segmentation is discernment, and its Descriptive output bpo:CustomerSegmentProfile agrees with the Information-Processing genus. Rejected Act of Appraisal: there is no evaluative value-judgement here, only characterization of segments." ;
     skos:example "An analyst segments the market and builds customer profiles for the strategy team." ;
     rdfs:subClassOf bpo:ActOfIdentification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:CustomerNeedsAssessment ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CustomerProfile ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CustomerSegmentProfile ] .
 
 bpo:P10019 a owl:Class ;
     bpo:pcfID "10019" ; bpo:hierarchyID "1.1.3" ;
@@ -1861,12 +1866,12 @@ bpo:P16612 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 16612. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying a set of characteristics that define the demographic and behavioral patterns of the customer. Further, use persona scoring to design your marketing strategies around personas, and measure and optimize your interactions with the contacts classified by a certain persona." ;
     rdfs:label "Define and manage personas" ;
-    skos:definition "An Act of Identification that discerns the demographic and behavioral characteristics defining customer personas and produces a customer profile." ;
+    skos:definition "An Act of Identification that discerns the demographic and behavioral characteristics defining customer personas and produces a customer segment profile describing them." ;
     rdfs:comment "Anchored to bpo:ActOfIdentification: 'identifying a set of characteristics that define ... patterns of the customer'. Modeled as a bounded act despite 'manage' in the label, because the source describes a definable identification activity producing a customer profile. Gate-F split: the source's standing 'manage and optimize your interactions with the contacts classified by a persona' aspect is NOT part of this bounded act -- it is a continuant standing function carried by the already-minted bpo:CustomerExperienceManagementCapability (Organization Capability), realized in repeated CX-management acts. This leaf captures only the bounded persona-definition occurrent (R5 bounded-occurrent test)." ;
     skos:example "A marketer defines three buyer personas from demographic and behavioral data." ;
     rdfs:subClassOf bpo:ActOfIdentification ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:CustomerData ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CustomerProfile ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CustomerSegmentProfile ] .
 
 bpo:P19965 a owl:Class ;
     bpo:pcfID "19965" ; bpo:hierarchyID "1.2.8.2.2" ;
@@ -1885,11 +1890,11 @@ bpo:P19966 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 19966. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defining parameters to show aggregated, consistent, and holistic representation of known data about customers. Define key parameters which enable the tracking of customers and communications across every channel." ;
     rdfs:label "Define single view of the customer for the organization" ;
-    skos:definition "An Act of Formulation that defines the parameters for an aggregated, holistic representation of customer data and produces a customer profile specification." ;
-    rdfs:comment "Anchored to bpo:ActOfFormulation (Act of Planning): 'defining parameters ... which enable the tracking of customers' composes a prescriptive specification." ;
+    skos:definition "An Act of Formulation that defines the parameters for an aggregated, holistic representation of customer data and produces a customer data specification." ;
+    rdfs:comment "Anchored to bpo:ActOfFormulation (Act of Planning): 'defining parameters ... which enable the tracking of customers' composes a prescriptive specification. Output re-typed WP6 (BPO architect, 2026-11-02) from bpo:CustomerProfile (Descriptive) to bpo:CustomerDataSpecification (Directive), as the GOLDEN PRINCIPLE requires." ;
     skos:example "A data team defines the unified customer-record parameters spanning all channels." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CustomerProfile ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:CustomerDataSpecification ] .
 
 bpo:P19967 a owl:Class ;
     bpo:pcfID "19967" ; bpo:hierarchyID "1.2.8.2.4" ;
