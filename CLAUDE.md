@@ -70,8 +70,11 @@ python scripts/consistency_audit.py # cross-slice anchor / drift audit
   `# 1b. CCO SUPERCLASS BRIDGES` block locally asserts the chains the shapes need offline
   (e.g. `371⊑228`, `626⊑853`). This is why a class anchored to an out-of-allowlist CCO term still
   passes: the bridge (or an explicit co-parent) carries it to an allowlisted parent.
-- **CCO pin:** CommonCoreOntologiesMerged **v2.0 (2024-11-06)**, vendored under `vendor/cco/`
-  (gitignored — fetch per `vendor/cco/README.md`). `tools/robot.jar` likewise fetched, not committed.
+- **CCO pin:** CommonCoreOntologiesMerged **v2.0 (2024-11-06)** — tag `v2.0-2024-11-06`, commit
+  `510dad7`, sha256 `e609db27…` (`config.CCO_*`) — vendored under `vendor/cco/` (gitignored — fetch
+  per `vendor/cco/README.md`). Gate B and `corpus_check.sh` refuse any other file (digest and version
+  IRI: CCO's develop branch kept the 2024-11-06 version IRI on relabelled content, see
+  `docs/wp6/cco-pin.md`). `tools/robot.jar` likewise fetched, not committed.
 
 ## Conventions that hold corpus-wide (verify before changing)
 

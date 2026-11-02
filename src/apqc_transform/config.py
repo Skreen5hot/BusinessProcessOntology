@@ -57,6 +57,13 @@ CCO_RELEASE_DATE = "2024-11-06"
 CCO_VERSION_IRI = (
     "https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged"
 )
+# The release file itself: tag v2.0-2024-11-06 = commit 510dad7,
+# src/cco-merged/CommonCoreOntologiesMerged.ttl. Gate B checks
+# both, because CCO's develop branch carried this version IRI on later,
+# relabelled content (e.g. 965 "Prescriptive", 2025-06 to 2026-04).
+CCO_COMMIT = "510dad76be0ef710b65a421075af912af25342b7"
+CCO_FILE = "CommonCoreOntologiesMerged.ttl"
+CCO_SHA256 = "e609db27478a2c8b52b9bb5eb5ac979ac323510e851c368e4d9ec7d1c153fe5b"
 
 # --- Namespaces (D7 IRI scheme; base per ADR-002) ----
 NS = {

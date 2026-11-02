@@ -18,6 +18,8 @@ if git grep -nP "(?i)prefix\s+e[x]:" -- ontology src scripts tools qa ':!*.md'; 
 fi
 echo "Namespace guard: no retired example.org IRIs or ex: prefix (ADR-002)"
 python scripts/notice_check.py   # APQC notice on every PCF-bearing module (NOTICE.md)
+# The vendored CCO must be the pinned release file (name, SHA-256, version IRI).
+PYTHONPATH=src python -c "import sys; from apqc_transform.validate import cco_pin_problem as p; e = p(); print('FAIL  CCO pin: ' + e if e else 'CCO pin: vendored file is the pinned release'); sys.exit(1 if e else 0)"
 INPUTS=""
 for f in ontology/slices/apqc_*_0.ttl ontology/apqc-ext.ttl ontology/apqc-catalog.ttl ontology/capabilities_roles.ttl ontology/delivery_processes.ttl ontology/capabilities_wiring.ttl vendor/cco/CommonCoreOntologiesMerged.ttl; do
   INPUTS="$INPUTS --input $f"

@@ -13,6 +13,7 @@ Mandatory gates that actually run and fail do block release.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import shutil
 import subprocess
@@ -66,6 +67,22 @@ def _closure_files() -> list[Path]:
     )
 
 
+def cco_pin_problem() -> str | None:
+    """None if the vendored closure is exactly the pinned CCO release file
+    (name, SHA-256, version IRI); otherwise what is wrong."""
+    closure = _closure_files()
+    names = [p.name for p in closure]
+    if names != [config.CCO_FILE]:
+        return f"vendor/cco must hold only {config.CCO_FILE}, found {names}"
+    data = closure[0].read_bytes()
+    digest = hashlib.sha256(data).hexdigest()
+    if digest != config.CCO_SHA256:
+        return f"{config.CCO_FILE} sha256 {digest[:12]}..., pinned {config.CCO_SHA256[:12]}..."
+    if f"owl:versionIRI <{config.CCO_VERSION_IRI}>".encode() not in data:
+        return f"{config.CCO_FILE} does not declare version IRI {config.CCO_VERSION_IRI}"
+    return None
+
+
 def _supporting_graphs(module: Path) -> list[Path]:
     """Slices are SELF-CONTAINED: each inlines the canonical act-genus anchors
     (mirrored from apqc-ext.ttl) so it validates standalone against CCO with no
@@ -103,6 +120,9 @@ def gate_b_iri_resolution(module: Path) -> GateResult:
             "B IRI resolution", Status.SKIP,
             f"no vendored CCO closure under {config.VENDOR_CCO} (see vendor/cco/README.md)",
         )
+    pin = cco_pin_problem()
+    if pin:
+        return GateResult("B IRI resolution", Status.FAIL, f"CCO pin: {pin}")
 
     cco = config.NS["cco"]
     obo = config.NS["obo"]
