@@ -287,15 +287,14 @@ bpo:ITAsset a owl:Class ;
     rdfs:subClassOf cco:ont00000995 ,   # Material Artifact
         obo:BFO_0000040 ;   # material entity -- explicit anchor (Material Artifact is a BFO material entity in CCO; asserted here so the standalone SHACL input-kind chain resolves)
     rdfs:label "IT Asset" ;
-    skos:definition "A Material Artifact that is a hardware or software resource owned or used by an organization to store, retrieve, transmit, or manipulate data in support of business operations." ;
-    rdfs:comment "Section-8.0 shared material entity. APQC 8.1.2.2 / 8.3 'IT Assets', 8.7.7.4 'IT asset records'. Genus Material Artifact (cco:ont00000995); use the narrower bpo:ITInfrastructureComponent for deployed computing/network hardware. Material I/O is legal in operations category 8.0." .
+    skos:definition "A Material Artifact that is a hardware resource owned or used by an organization to store, retrieve, transmit, or manipulate data in support of business operations." ;
+    rdfs:comment "Section-8.0 shared material entity. APQC 8.1.2.2 / 8.3 'IT Assets', 8.7.7.4 'IT asset records'. Genus Material Artifact (cco:ont00000995); use the narrower bpo:ITInfrastructureComponent for deployed computing/network hardware. Material I/O is legal in operations category 8.0. 'or software' left the definition in WP6 (BPO architect, 2026-11-02): software is information content, which a Material Artifact can carry but is not." .
 
 bpo:ITInfrastructureComponent a owl:Class ;
-    rdfs:subClassOf bpo:ITAsset ,
-        cco:ont00000117 ;   # Information Processing Artifact
+    rdfs:subClassOf bpo:ITAsset ;
     rdfs:label "IT Infrastructure Component" ;
-    skos:definition "An IT Asset that is also an Information Processing Artifact, comprising a discrete hardware, software, or network element of an organization's IT infrastructure (such as a server, network device, or installed software package)." ;
-    rdfs:comment "Section-8.0 shared. APQC 8.5.4.1.3 'build and test components', 8.6.4 / 8.7.7.3 install/configure/upgrade components, 8.7.7.1 configuration items. Doubly anchored: an IT Asset (cco:ont00000995) and an Information Processing Artifact (cco:ont00000117, designed to transform ICEs)." .
+    skos:definition "An IT Asset that is a discrete hardware or network element of an organization's IT infrastructure, such as a server, a storage unit, a network device, or cabling." ;
+    rdfs:comment "Section-8.0 shared. APQC 8.5.4.1.3 'build and test components', 8.6.4 / 8.7.7.3 install/configure/upgrade components, 8.7.7.1 configuration items. Until WP6 (BPO architect, 2026-11-02) also an Information Processing Artifact (cco:ont00000117), which is 'designed to use algorithms to transform' information content entities: true of a server, not of cabling, racks or other passive components, so that parent was removed. An information-processing device can be classified under CCO's own classes (e.g. Computer, cco:ont00000420, a subclass of 117) where a process needs it; none does. Installed software is no longer covered: no process definition here requires it as a participant." .
 
 bpo:ITServiceSolution a owl:Class ;
     rdfs:subClassOf cco:ont00000117 ;   # Information Processing Artifact
