@@ -118,7 +118,7 @@ competence, feasibility filter) ≠ **Role** (`obo:BFO_0000023`) ≠ **Process**
 **species-satisfies-genus** (`subClassOf*`); **`568 ⊑ 1379`** so slice Organization Capabilities
 already reach Agent Capability (match on "reaches 1379," slices left at 568). The four gating
 decisions were settled: (i) leave slice caps at 568; (ii) author `bpo:enablesProcess`, **derive**
-`bpo:requiresCapability`; (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
+`bpo:requiresCapability` (superseded by WP6 B8: derived only from pairs classified as necessary); (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
 capability layer is a **merge-only shared overlay** (no slice imports it).
 
 **Artifacts (in `ontology/`):**
@@ -135,11 +135,15 @@ capability layer is a **merge-only shared overlay** (no slice imports it).
   `ApproveImplementationPlan` gate act. (The "agile-loop" set PHASE1 §6b cites does not exist in the
   methodology, which ends at §12; left as a scope note, not invented.)
 - `capabilities_roles_shapes.ttl` — C1–C7. `capabilities_wiring.ttl` — **generated** merge-only overlay:
-  354 `requiresCapability` + 197 `requiresRole` + 197 `enablesProcess` + 62 role enrichment anchors.
+  342 `enablesProcess` + 197 `requiresRole` + 66 role enrichment anchors, and **0** `requiresCapability`:
+  since WP6 B8 (2026-11-02) a capability→process pair becomes a requirement only if
+  `capabilities/b8_pairs.tsv` classifies it as a *necessary requirement* (none is yet; 342 are
+  *possible realizations*, 14 capability targets are excluded). `enablesProcess` is no longer inverted.
 
 **Pipeline (deterministic, reproducible):** `scripts/harvest_caps_roles.py` (manifest) →
 `scripts/derive_wiring.py` (heuristic draft) → judgment tables `capabilities/role_anchors.json` +
-`capabilities/capability_scope.json` → `scripts/assemble_wiring.py` (regenerates the wiring; **edit
+`capabilities/capability_scope.json` + `capabilities/b8_pairs.tsv` (one classification per pair; the
+assembler stops on an unclassified pair) → `scripts/assemble_wiring.py` (regenerates the wiring; **edit
 the tables, not the ttl**) → `scripts/validate_caps.py` (C1–C7) + `scripts/matchability.py`
 (routability + coverage-gap report) + `corpus_check.sh` (ELK).
 
@@ -151,7 +155,7 @@ Occupation would falsely assert employment). All 87 distinct roles classified; a
 recurrences converged to one canonical definition each.
 
 **Validate the layer:** `python scripts/validate_caps.py` (C1–C7 zero violations) ·
-`python scripts/matchability.py` (12-agent fleet: 60 routable / 385 gaps over 445 required processes) ·
+`python scripts/matchability.py` (12-agent fleet, after B8: 30 routable / 167 gaps over 197 processes with requirements) ·
 `bash scripts/corpus_check.sh` EXIT 0 (now merges the capability layer + wiring).
 
 **Remaining / handoff:** 6 standing capabilities have no scopeable process (honest gaps); the 12-agent

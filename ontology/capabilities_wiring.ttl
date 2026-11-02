@@ -13,7 +13,8 @@
 #
 # The process<->agent BRIDGE WIRING, harvested per APQC section:
 #   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from realized-in + scope table)
-#   bpo:<proc> bpo:requiresCapability bpo:<cap>    (derived inverse -- PHASE1 decision ii)
+#   bpo:<proc> bpo:requiresCapability bpo:<cap>    (only pairs capabilities/b8_pairs.tsv
+#                                                   classifies as necessary requirements, WP6 B8)
 #   bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> process participant triad)
 #   bpo:<role> rdfs:subClassOf <cco role subclass>  (role enrichment)
 #
@@ -31,7 +32,7 @@
 
 
 # ===== SECTION 1 -- Develop Vision and Strategy =====
-#   requiresCapability 12  requiresRole 10  enrichment 4  bare 5  unclassified 0
+#   requiresCapability 0  requiresRole 10  enrichment 4  bare 5  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:BusinessModelGovernanceCapability bpo:enablesProcess bpo:P20955 .
@@ -46,20 +47,6 @@ bpo:StrategicPlanningCapability bpo:enablesProcess bpo:P10039 .
 bpo:StrategicPlanningCapability bpo:enablesProcess bpo:P10043 .
 bpo:StrategicPlanningCapability bpo:enablesProcess bpo:P10045 .
 bpo:StrategicPlanningCapability bpo:enablesProcess bpo:P19949 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P10020 bpo:requiresCapability bpo:StrategicPlanningCapability .
-bpo:P10037 bpo:requiresCapability bpo:StrategicPlanningCapability .
-bpo:P10039 bpo:requiresCapability bpo:StrategicPlanningCapability .
-bpo:P10043 bpo:requiresCapability bpo:StrategicPlanningCapability .
-bpo:P10045 bpo:requiresCapability bpo:StrategicPlanningCapability .
-bpo:P19945 bpo:requiresCapability bpo:CompetitiveAnalysisCapability .
-bpo:P19949 bpo:requiresCapability bpo:StrategicPlanningCapability .
-bpo:P19959 bpo:requiresCapability bpo:CustomerExperienceManagementCapability .
-bpo:P19960 bpo:requiresCapability bpo:CustomerExperienceManagementCapability .
-bpo:P19964 bpo:requiresCapability bpo:CustomerExperienceManagementCapability .
-bpo:P19971 bpo:requiresCapability bpo:CustomerExperienceManagementCapability .
-bpo:P20955 bpo:requiresCapability bpo:BusinessModelGovernanceCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:P10024 bpo:requiresRole bpo:SeniorManagerRole .
@@ -81,11 +68,10 @@ bpo:StrategyPersonnelRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 2 -- Develop and Manage Products and Services =====
-#   requiresCapability 13  requiresRole 12  enrichment 4  bare 2  unclassified 0
+#   requiresCapability 0  requiresRole 12  enrichment 4  bare 2  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:DesignCapability bpo:enablesProcess bpo:P19995 .
-bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P11049 .
 bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P12771 .
 bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P16826 .
 bpo:ProductDataManagementCapability bpo:enablesProcess bpo:P11741 .
@@ -97,21 +83,6 @@ bpo:ProductServicePortfolioManagementCapability bpo:enablesProcess bpo:P10074 .
 bpo:ResearchAndDevelopmentCapability bpo:enablesProcess bpo:P10070 .
 bpo:ResearchAndDevelopmentCapability bpo:enablesProcess bpo:P10071 .
 bpo:ResearchAndDevelopmentCapability bpo:enablesProcess bpo:P10072 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P10063 bpo:requiresCapability bpo:ProductServicePortfolioManagementCapability .
-bpo:P10070 bpo:requiresCapability bpo:ResearchAndDevelopmentCapability .
-bpo:P10071 bpo:requiresCapability bpo:ResearchAndDevelopmentCapability .
-bpo:P10072 bpo:requiresCapability bpo:ResearchAndDevelopmentCapability .
-bpo:P10074 bpo:requiresCapability bpo:ProductServicePortfolioManagementCapability .
-bpo:P10077 bpo:requiresCapability bpo:ProductServiceLifecycleManagementCapability .
-bpo:P10078 bpo:requiresCapability bpo:ProductServiceLifecycleManagementCapability .
-bpo:P11049 bpo:requiresCapability bpo:IntellectualPropertyManagementCapability .
-bpo:P11741 bpo:requiresCapability bpo:ProductDataManagementCapability .
-bpo:P11750 bpo:requiresCapability bpo:ProductDataManagementCapability .
-bpo:P12771 bpo:requiresCapability bpo:IntellectualPropertyManagementCapability .
-bpo:P16826 bpo:requiresCapability bpo:IntellectualPropertyManagementCapability .
-bpo:P19995 bpo:requiresCapability bpo:DesignCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:P10066 bpo:requiresRole bpo:SeniorManagerRole .
@@ -135,7 +106,7 @@ bpo:SeniorManagerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 3 -- Market and Sell Products and Services =====
-#   requiresCapability 35  requiresRole 9  enrichment 2  bare 5  unclassified 0
+#   requiresCapability 0  requiresRole 9  enrichment 2  bare 5  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:ChannelManagementCapability bpo:enablesProcess bpo:P16500 .
@@ -174,43 +145,6 @@ bpo:PricingCapability bpo:enablesProcess bpo:P18948 .
 bpo:PricingCapability bpo:enablesProcess bpo:P20009 .
 bpo:SalesManagementCapability bpo:enablesProcess bpo:ManageCustomerRelationships .
 
-# --- requiresCapability (process -> capability) ---
-bpo:ManageCustomerRelationships bpo:requiresCapability bpo:SalesManagementCapability .
-bpo:P10101 bpo:requiresCapability bpo:MarketIntelligenceCapability .
-bpo:P10106 bpo:requiresCapability bpo:MarketIntelligenceCapability .
-bpo:P10107 bpo:requiresCapability bpo:MarketIntelligenceCapability .
-bpo:P10130 bpo:requiresCapability bpo:PartnerManagementCapability .
-bpo:P10159 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10160 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10163 bpo:requiresCapability bpo:PricingCapability .
-bpo:P10164 bpo:requiresCapability bpo:PricingCapability .
-bpo:P10165 bpo:requiresCapability bpo:PricingCapability .
-bpo:P10166 bpo:requiresCapability bpo:PricingCapability .
-bpo:P10167 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10168 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10169 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10170 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10171 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10172 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10178 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10179 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10180 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10181 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P10187 bpo:requiresCapability bpo:PartnerManagementCapability .
-bpo:P11495 bpo:requiresCapability bpo:PricingCapability .
-bpo:P11496 bpo:requiresCapability bpo:PricingCapability .
-bpo:P11497 bpo:requiresCapability bpo:PricingCapability .
-bpo:P16500 bpo:requiresCapability bpo:ChannelManagementCapability .
-bpo:P16501 bpo:requiresCapability bpo:ChannelManagementCapability .
-bpo:P16573 bpo:requiresCapability bpo:ChannelManagementCapability .
-bpo:P16574 bpo:requiresCapability bpo:ChannelManagementCapability .
-bpo:P16575 bpo:requiresCapability bpo:ChannelManagementCapability .
-bpo:P16630 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P17684 bpo:requiresCapability bpo:PricingCapability .
-bpo:P18130 bpo:requiresCapability bpo:MarketingManagementCapability .
-bpo:P18948 bpo:requiresCapability bpo:PricingCapability .
-bpo:P20009 bpo:requiresCapability bpo:PricingCapability .
-
 # --- requiresRole (process -> role) ---
 bpo:ManageCustomerRelationships bpo:requiresRole bpo:CustomerRole .
 bpo:P10102 bpo:requiresRole bpo:MarketingProfessionalRole .
@@ -228,7 +162,7 @@ bpo:SalesProfessionalRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 4 -- Manage Supply Chain (Deliver Physical Products) =====
-#   requiresCapability 16  requiresRole 7  enrichment 3  bare 2  unclassified 0
+#   requiresCapability 0  requiresRole 7  enrichment 3  bare 2  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:FleetManagementCapability bpo:enablesProcess bpo:P10341 .
@@ -248,24 +182,6 @@ bpo:SupplyChainManagementCapability bpo:enablesProcess bpo:P10341 .
 bpo:SupplyChainManagementCapability bpo:enablesProcess bpo:P20936 .
 bpo:SupplyChainPlanningCapability bpo:enablesProcess bpo:P10215 .
 
-# --- requiresCapability (process -> capability) ---
-bpo:P10215 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-bpo:P10215 bpo:requiresCapability bpo:SupplyChainPlanningCapability .
-bpo:P10216 bpo:requiresCapability bpo:ProcurementCapability .
-bpo:P10216 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-bpo:P10217 bpo:requiresCapability bpo:ProductionCapability .
-bpo:P10217 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-bpo:P10304 bpo:requiresCapability bpo:RawMaterialInventoryManagementCapability .
-bpo:P10338 bpo:requiresCapability bpo:LogisticsManagementCapability .
-bpo:P10338 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-bpo:P10340 bpo:requiresCapability bpo:LogisticsManagementCapability .
-bpo:P10340 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-bpo:P10341 bpo:requiresCapability bpo:FleetManagementCapability .
-bpo:P10341 bpo:requiresCapability bpo:LogisticsManagementCapability .
-bpo:P10341 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-bpo:P20936 bpo:requiresCapability bpo:LogisticsManagementCapability .
-bpo:P20936 bpo:requiresCapability bpo:SupplyChainManagementCapability .
-
 # --- requiresRole (process -> role) ---
 bpo:P10236 bpo:requiresRole bpo:CustomerRole .
 bpo:P10237 bpo:requiresRole bpo:ManagerRole .
@@ -282,7 +198,7 @@ bpo:ManagerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 5 -- Deliver Services =====
-#   requiresCapability 14  requiresRole 11  enrichment 2  bare 3  unclassified 0
+#   requiresCapability 0  requiresRole 11  enrichment 2  bare 3  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:DemandForecastingCapability bpo:enablesProcess bpo:P20041 .
@@ -299,22 +215,6 @@ bpo:ServiceDeliveryDevelopmentManagementCapability bpo:enablesProcess bpo:P20027
 bpo:ServiceDeliveryGovernanceCapability bpo:enablesProcess bpo:P20026 .
 bpo:ServiceDeliveryGovernanceCapability bpo:enablesProcess bpo:P20027 .
 bpo:ServiceDeliveryPerformanceManagementCapability bpo:enablesProcess bpo:P20027 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P20026 bpo:requiresCapability bpo:ServiceDeliveryGovernanceCapability .
-bpo:P20027 bpo:requiresCapability bpo:ServiceDeliveryDevelopmentManagementCapability .
-bpo:P20027 bpo:requiresCapability bpo:ServiceDeliveryGovernanceCapability .
-bpo:P20027 bpo:requiresCapability bpo:ServiceDeliveryPerformanceManagementCapability .
-bpo:P20041 bpo:requiresCapability bpo:DemandForecastingCapability .
-bpo:P20043 bpo:requiresCapability bpo:DemandForecastingCapability .
-bpo:P20045 bpo:requiresCapability bpo:DemandForecastingCapability .
-bpo:P20050 bpo:requiresCapability bpo:ResourceManagementCapability .
-bpo:P20056 bpo:requiresCapability bpo:ResourceManagementCapability .
-bpo:P20058 bpo:requiresCapability bpo:ServiceDeliveryCapability .
-bpo:P20059 bpo:requiresCapability bpo:ServiceDeliveryCapability .
-bpo:P20069 bpo:requiresCapability bpo:ServiceDeliveryCapability .
-bpo:P20076 bpo:requiresCapability bpo:ServiceDeliveryCapability .
-bpo:P20077 bpo:requiresCapability bpo:ServiceDeliveryCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:P12132 bpo:requiresRole bpo:ServiceDeliveryPersonnelRole .
@@ -335,7 +235,7 @@ bpo:TrainerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 6 -- Manage Customer Service =====
-#   requiresCapability 29  requiresRole 20  enrichment 6  bare 2  unclassified 0
+#   requiresCapability 0  requiresRole 20  enrichment 6  bare 2  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:CustomerComplaintManagementCapability bpo:enablesProcess bpo:P10397 .
@@ -367,37 +267,6 @@ bpo:CustomerServiceWorkforceManagementCapability bpo:enablesProcess bpo:P10393 .
 bpo:RecallManagementCapability bpo:enablesProcess bpo:P20110 .
 bpo:WarrantyManagementCapability bpo:enablesProcess bpo:P12669 .
 bpo:WarrantyManagementCapability bpo:enablesProcess bpo:P12672 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P10390 bpo:requiresCapability bpo:CustomerServiceWorkforceManagementCapability .
-bpo:P10391 bpo:requiresCapability bpo:CustomerServiceWorkforceManagementCapability .
-bpo:P10392 bpo:requiresCapability bpo:CustomerServiceWorkforceManagementCapability .
-bpo:P10393 bpo:requiresCapability bpo:CustomerServiceWorkforceManagementCapability .
-bpo:P10394 bpo:requiresCapability bpo:CustomerInquiryManagementCapability .
-bpo:P10394 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P10395 bpo:requiresCapability bpo:CustomerInquiryManagementCapability .
-bpo:P10395 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P10396 bpo:requiresCapability bpo:CustomerInquiryManagementCapability .
-bpo:P10396 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P10397 bpo:requiresCapability bpo:CustomerComplaintManagementCapability .
-bpo:P10397 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P10398 bpo:requiresCapability bpo:CustomerComplaintManagementCapability .
-bpo:P10398 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P10399 bpo:requiresCapability bpo:CustomerComplaintManagementCapability .
-bpo:P10399 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P10400 bpo:requiresCapability bpo:CustomerComplaintManagementCapability .
-bpo:P10400 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P12669 bpo:requiresCapability bpo:WarrantyManagementCapability .
-bpo:P12672 bpo:requiresCapability bpo:WarrantyManagementCapability .
-bpo:P13482 bpo:requiresCapability bpo:CustomerInquiryManagementCapability .
-bpo:P13482 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P16928 bpo:requiresCapability bpo:CustomerInquiryManagementCapability .
-bpo:P16928 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P16937 bpo:requiresCapability bpo:CustomerInquiryManagementCapability .
-bpo:P19072 bpo:requiresCapability bpo:CustomerComplaintManagementCapability .
-bpo:P19072 bpo:requiresCapability bpo:CustomerServiceCapability .
-bpo:P20110 bpo:requiresCapability bpo:RecallManagementCapability .
-bpo:P20595 bpo:requiresCapability bpo:CustomerServiceManagementCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:P10331 bpo:requiresRole bpo:FieldServiceAgentRole .
@@ -431,7 +300,7 @@ bpo:WarrantyAdministratorRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 7 -- Develop and Manage Human Capital =====
-#   requiresCapability 64  requiresRole 40  enrichment 6  bare 4  unclassified 0
+#   requiresCapability 0  requiresRole 40  enrichment 6  bare 4  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:ApplicantDataManagementCapability bpo:enablesProcess bpo:P20124 .
@@ -499,72 +368,6 @@ bpo:WorkforcePlanningCapability bpo:enablesProcess bpo:P17045 .
 bpo:WorkforcePlanningCapability bpo:enablesProcess bpo:P17046 .
 bpo:WorkforcePlanningCapability bpo:enablesProcess bpo:P20958 .
 
-# --- requiresCapability (process -> capability) ---
-bpo:ActOfAdministration bpo:requiresCapability bpo:HumanResourcesInformationSystemCapability .
-bpo:ActOfAdministration bpo:requiresCapability bpo:TimeAndAttendanceManagementCapability .
-bpo:P10410 bpo:requiresCapability bpo:HumanCapitalManagementCapability .
-bpo:P10410 bpo:requiresCapability bpo:TalentAcquisitionCapability .
-bpo:P10413 bpo:requiresCapability bpo:HumanCapitalManagementCapability .
-bpo:P10413 bpo:requiresCapability bpo:WorkforceDeploymentCapability .
-bpo:P10417 bpo:requiresCapability bpo:HumanCapitalManagementCapability .
-bpo:P10417 bpo:requiresCapability bpo:WorkforcePlanningCapability .
-bpo:P10440 bpo:requiresCapability bpo:EmployeeReferralProgramCapability .
-bpo:P10440 bpo:requiresCapability bpo:RecruitmentChannelManagementCapability .
-bpo:P10440 bpo:requiresCapability bpo:RecruitmentVendorManagementCapability .
-bpo:P10474 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10474 bpo:requiresCapability bpo:EmployeeOrientationAndDeploymentCapability .
-bpo:P10479 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10479 bpo:requiresCapability bpo:EmployeePerformanceManagementCapability .
-bpo:P10481 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10481 bpo:requiresCapability bpo:EmployeePerformanceManagementCapability .
-bpo:P10484 bpo:requiresCapability bpo:EmployeeRelationsCapability .
-bpo:P10484 bpo:requiresCapability bpo:LaborRelationsCapability .
-bpo:P10487 bpo:requiresCapability bpo:EmployeeCareerDevelopmentCapability .
-bpo:P10487 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10488 bpo:requiresCapability bpo:EmployeeCareerDevelopmentCapability .
-bpo:P10488 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10490 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10490 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P10491 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10491 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P10492 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10492 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P10493 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P10493 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P10495 bpo:requiresCapability bpo:CompensationAndBenefitsCapability .
-bpo:P10497 bpo:requiresCapability bpo:CompensationAndBenefitsCapability .
-bpo:P10529 bpo:requiresCapability bpo:EmployeeCommunicationCapability .
-bpo:P10531 bpo:requiresCapability bpo:EmployeeRelationsCapability .
-bpo:P10531 bpo:requiresCapability bpo:LaborRelationsCapability .
-bpo:P10532 bpo:requiresCapability bpo:EmployeeCommunicationCapability .
-bpo:P11243 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P11243 bpo:requiresCapability bpo:EmployeeOrientationAndDeploymentCapability .
-bpo:P16940 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P16940 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P16944 bpo:requiresCapability bpo:EmployeeCommunicationCapability .
-bpo:P17045 bpo:requiresCapability bpo:HumanCapitalManagementCapability .
-bpo:P17045 bpo:requiresCapability bpo:WorkforcePlanningCapability .
-bpo:P17046 bpo:requiresCapability bpo:HumanCapitalManagementCapability .
-bpo:P17046 bpo:requiresCapability bpo:WorkforcePlanningCapability .
-bpo:P17050 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P17050 bpo:requiresCapability bpo:EmployeeOrientationAndDeploymentCapability .
-bpo:P17051 bpo:requiresCapability bpo:EmployeeCareerDevelopmentCapability .
-bpo:P17051 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P20124 bpo:requiresCapability bpo:ApplicantDataManagementCapability .
-bpo:P20125 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P20125 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P20958 bpo:requiresCapability bpo:HumanCapitalManagementCapability .
-bpo:P20958 bpo:requiresCapability bpo:WorkforcePlanningCapability .
-bpo:P21434 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P21434 bpo:requiresCapability bpo:EmployeePerformanceManagementCapability .
-bpo:P21436 bpo:requiresCapability bpo:EmployeeDevelopmentCapability .
-bpo:P21436 bpo:requiresCapability bpo:EmployeeTrainingCapability .
-bpo:P21437 bpo:requiresCapability bpo:EmployeeRelationsCapability .
-bpo:P21438 bpo:requiresCapability bpo:CompensationAndBenefitsCapability .
-bpo:P21439 bpo:requiresCapability bpo:CompensationAndBenefitsCapability .
-bpo:P21441 bpo:requiresCapability bpo:WorkforceAnalyticsCapability .
-bpo:P21447 bpo:requiresCapability bpo:WorkforceAnalyticsCapability .
-
 # --- requiresRole (process -> role) ---
 bpo:P10413 bpo:requiresRole bpo:EmployeeRole .
 bpo:P10419 bpo:requiresRole bpo:HumanResourcesProfessionalRole .
@@ -617,7 +420,7 @@ bpo:RecruitmentVendorRole rdfs:subClassOf cco:ont00000506 .
 
 
 # ===== SECTION 8 -- Manage Information Technology =====
-#   requiresCapability 29  requiresRole 9  enrichment 2  bare 3  unclassified 0
+#   requiresCapability 0  requiresRole 9  enrichment 2  bare 3  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:DevelopAndManageServicesSolutionsCapability bpo:enablesProcess bpo:P20785 .
@@ -650,37 +453,6 @@ bpo:InformationManagementCapability bpo:enablesProcess bpo:P20770 .
 bpo:InformationManagementCapability bpo:enablesProcess bpo:P20776 .
 bpo:InformationManagementCapability bpo:enablesProcess bpo:P20779 .
 
-# --- requiresCapability (process -> capability) ---
-bpo:P20608 bpo:requiresCapability bpo:ITCustomerRelationshipManagementCapability .
-bpo:P20632 bpo:requiresCapability bpo:ITServiceManagementCapability .
-bpo:P20655 bpo:requiresCapability bpo:ITStrategicIntelligenceCapability .
-bpo:P20657 bpo:requiresCapability bpo:ITStrategicAlignmentMaintenanceCapability .
-bpo:P20690 bpo:requiresCapability bpo:ITInterdependencyManagementCapability .
-bpo:P20706 bpo:requiresCapability bpo:ITRiskManagementCapability .
-bpo:P20721 bpo:requiresCapability bpo:ITRiskManagementCapability .
-bpo:P20766 bpo:requiresCapability bpo:InformationManagementCapability .
-bpo:P20770 bpo:requiresCapability bpo:InformationManagementCapability .
-bpo:P20776 bpo:requiresCapability bpo:InformationManagementCapability .
-bpo:P20779 bpo:requiresCapability bpo:InformationManagementCapability .
-bpo:P20785 bpo:requiresCapability bpo:DevelopAndManageServicesSolutionsCapability .
-bpo:P20808 bpo:requiresCapability bpo:DevelopAndManageServicesSolutionsCapability .
-bpo:P20817 bpo:requiresCapability bpo:DevelopAndManageServicesSolutionsCapability .
-bpo:P20857 bpo:requiresCapability bpo:ITRollBackManagementCapability .
-bpo:P20888 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20889 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20890 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20891 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20892 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20893 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20915 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20916 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20917 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20918 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20919 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20920 bpo:requiresCapability bpo:ITInfrastructureManagementCapability .
-bpo:P20921 bpo:requiresCapability bpo:ITSupportCapability .
-bpo:P20923 bpo:requiresCapability bpo:ITSupportCapability .
-
 # --- requiresRole (process -> role) ---
 bpo:P20610 bpo:requiresRole bpo:ITCustomerRole .
 bpo:P20638 bpo:requiresRole bpo:ITCustomerRole .
@@ -698,7 +470,7 @@ bpo:ITRiskOwnerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 9 -- Manage Financial Resources =====
-#   requiresCapability 27  requiresRole 29  enrichment 5  bare 6  unclassified 0
+#   requiresCapability 0  requiresRole 29  enrichment 5  bare 6  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:AccountingCapability bpo:enablesProcess bpo:P10729 .
@@ -728,35 +500,6 @@ bpo:TreasuryManagementCapability bpo:enablesProcess bpo:P10885 .
 bpo:TreasuryManagementCapability bpo:enablesProcess bpo:P10893 .
 bpo:TreasuryManagementCapability bpo:enablesProcess bpo:P12974 .
 bpo:TreasuryManagementCapability bpo:enablesProcess bpo:P14079 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P10729 bpo:requiresCapability bpo:AccountingCapability .
-bpo:P10729 bpo:requiresCapability bpo:FinancialManagementCapability .
-bpo:P10730 bpo:requiresCapability bpo:AccountingCapability .
-bpo:P10730 bpo:requiresCapability bpo:FinancialManagementCapability .
-bpo:P10732 bpo:requiresCapability bpo:FinancialManagementCapability .
-bpo:P10733 bpo:requiresCapability bpo:FinancialManagementCapability .
-bpo:P10751 bpo:requiresCapability bpo:FixedAssetProjectAccountingCapability .
-bpo:P10752 bpo:requiresCapability bpo:FixedAssetProjectAccountingCapability .
-bpo:P10762 bpo:requiresCapability bpo:InternalControlCapability .
-bpo:P10764 bpo:requiresCapability bpo:InternalControlCapability .
-bpo:P10767 bpo:requiresCapability bpo:InternationalFundsManagementCapability .
-bpo:P10768 bpo:requiresCapability bpo:InternationalFundsManagementCapability .
-bpo:P10769 bpo:requiresCapability bpo:InternationalFundsManagementCapability .
-bpo:P10770 bpo:requiresCapability bpo:InternationalFundsManagementCapability .
-bpo:P10816 bpo:requiresCapability bpo:FinancialPolicyManagementCapability .
-bpo:P10817 bpo:requiresCapability bpo:FinancialPolicyManagementCapability .
-bpo:P10818 bpo:requiresCapability bpo:FinancialPolicyManagementCapability .
-bpo:P10866 bpo:requiresCapability bpo:TaxManagementCapability .
-bpo:P10885 bpo:requiresCapability bpo:TreasuryManagementCapability .
-bpo:P10893 bpo:requiresCapability bpo:TreasuryManagementCapability .
-bpo:P12974 bpo:requiresCapability bpo:TreasuryManagementCapability .
-bpo:P14007 bpo:requiresCapability bpo:DefaultAccountManagementCapability .
-bpo:P14079 bpo:requiresCapability bpo:TreasuryManagementCapability .
-bpo:P17059 bpo:requiresCapability bpo:ImportExportControlCapability .
-bpo:P17059 bpo:requiresCapability bpo:RestitutionManagementCapability .
-bpo:P20604 bpo:requiresCapability bpo:FinancialPolicyManagementCapability .
-bpo:P21574 bpo:requiresCapability bpo:InternalControlCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:P10757 bpo:requiresRole bpo:EmployeeRole .
@@ -798,7 +541,7 @@ bpo:TreasurerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 10 -- Acquire, Construct, and Manage Assets =====
-#   requiresCapability 13  requiresRole 4  enrichment 5  bare 0  unclassified 0
+#   requiresCapability 0  requiresRole 4  enrichment 5  bare 0  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:AssetConstructionCapability bpo:enablesProcess bpo:P19209 .
@@ -815,21 +558,6 @@ bpo:AssetMaintenanceCapability bpo:enablesProcess bpo:P19253 .
 bpo:FacilityManagementCapability bpo:enablesProcess bpo:P10965 .
 bpo:FacilityManagementCapability bpo:enablesProcess bpo:P10966 .
 
-# --- requiresCapability (process -> capability) ---
-bpo:P10965 bpo:requiresCapability bpo:FacilityManagementCapability .
-bpo:P10966 bpo:requiresCapability bpo:FacilityManagementCapability .
-bpo:P19209 bpo:requiresCapability bpo:AssetConstructionCapability .
-bpo:P19224 bpo:requiresCapability bpo:AssetConstructionCapability .
-bpo:P19229 bpo:requiresCapability bpo:AssetConstructionCapability .
-bpo:P19239 bpo:requiresCapability bpo:AssetMaintenanceCapability .
-bpo:P19245 bpo:requiresCapability bpo:AssetMaintenanceCapability .
-bpo:P19253 bpo:requiresCapability bpo:AssetMaintenanceCapability .
-bpo:P19258 bpo:requiresCapability bpo:AssetDispositionCapability .
-bpo:P20139 bpo:requiresCapability bpo:AssetConstructionCapability .
-bpo:P21579 bpo:requiresCapability bpo:AssetDispositionCapability .
-bpo:P21581 bpo:requiresCapability bpo:AssetDispositionCapability .
-bpo:P21582 bpo:requiresCapability bpo:AssetDispositionCapability .
-
 # --- requiresRole (process -> role) ---
 bpo:P10962 bpo:requiresRole bpo:ConstructionContractorRole .
 bpo:P10965 bpo:requiresRole bpo:FacilityManagerRole .
@@ -845,7 +573,7 @@ bpo:RegulatoryAuthorityRole rdfs:subClassOf cco:ont00000187 .
 
 
 # ===== SECTION 11 -- Manage Enterprise Risk, Compliance, Remediation, and Resiliency =====
-#   requiresCapability 26  requiresRole 1  enrichment 4  bare 1  unclassified 0
+#   requiresCapability 0  requiresRole 1  enrichment 4  bare 1  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:BusinessResiliencyCapability bpo:enablesProcess bpo:P11221 .
@@ -875,34 +603,6 @@ bpo:RemediationManagementCapability bpo:enablesProcess bpo:P11204 .
 bpo:RemediationManagementCapability bpo:enablesProcess bpo:P11205 .
 bpo:RemediationManagementCapability bpo:enablesProcess bpo:P11206 .
 
-# --- requiresCapability (process -> capability) ---
-bpo:P10871 bpo:requiresCapability bpo:InternalAuditManagementCapability .
-bpo:P10889 bpo:requiresCapability bpo:InternalAuditManagementCapability .
-bpo:P11201 bpo:requiresCapability bpo:RemediationManagementCapability .
-bpo:P11202 bpo:requiresCapability bpo:RemediationManagementCapability .
-bpo:P11203 bpo:requiresCapability bpo:RemediationManagementCapability .
-bpo:P11204 bpo:requiresCapability bpo:RemediationManagementCapability .
-bpo:P11205 bpo:requiresCapability bpo:RemediationManagementCapability .
-bpo:P11206 bpo:requiresCapability bpo:RemediationManagementCapability .
-bpo:P11221 bpo:requiresCapability bpo:BusinessResiliencyCapability .
-bpo:P11222 bpo:requiresCapability bpo:BusinessResiliencyCapability .
-bpo:P11223 bpo:requiresCapability bpo:BusinessResiliencyCapability .
-bpo:P11224 bpo:requiresCapability bpo:BusinessResiliencyCapability .
-bpo:P16439 bpo:requiresCapability bpo:EnterpriseRiskManagementCapability .
-bpo:P16445 bpo:requiresCapability bpo:EnterpriseRiskManagementCapability .
-bpo:P16464 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P16465 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P16466 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P16467 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P16468 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P16469 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P16471 bpo:requiresCapability bpo:BusinessResiliencyCapability .
-bpo:P17462 bpo:requiresCapability bpo:EnterpriseRiskManagementCapability .
-bpo:P17468 bpo:requiresCapability bpo:ComplianceManagementCapability .
-bpo:P19595 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P19596 bpo:requiresCapability bpo:RegulatoryComplianceManagementCapability .
-bpo:P20782 bpo:requiresCapability bpo:InternalAuditManagementCapability .
-
 # --- requiresRole (process -> role) ---
 bpo:P11202 bpo:requiresRole bpo:SubjectMatterExpertRole .
 
@@ -914,49 +614,14 @@ bpo:RiskManagerRole rdfs:subClassOf cco:ont00000984 .
 
 
 # ===== SECTION 12 -- Manage External Relationships =====
-#   requiresCapability 19  requiresRole 21  enrichment 11  bare 6  unclassified 0
+#   requiresCapability 0  requiresRole 21  enrichment 11  bare 6  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
-bpo:AnalystRelationsManagementCapability bpo:enablesProcess bpo:P11036 .
-bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P11049 .
-bpo:InvestorRelationsCapability bpo:enablesProcess bpo:P11010 .
-bpo:LegalAndComplianceCapability bpo:enablesProcess bpo:P11013 .
-bpo:LegalAndComplianceCapability bpo:enablesProcess bpo:P11045 .
-bpo:LegalAndComplianceCapability bpo:enablesProcess bpo:P11047 .
-bpo:LegalAndComplianceCapability bpo:enablesProcess bpo:P11048 .
-bpo:LegalAndComplianceCapability bpo:enablesProcess bpo:P11049 .
-bpo:LenderRelationsManagementCapability bpo:enablesProcess bpo:P11035 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11066 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11067 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11068 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11069 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11070 .
-bpo:StakeholderRelationshipManagementCapability bpo:enablesProcess bpo:P11012 .
-bpo:StakeholderRelationshipManagementCapability bpo:enablesProcess bpo:P11038 .
-bpo:StakeholderRelationshipManagementCapability bpo:enablesProcess bpo:P11039 .
-bpo:StakeholderRelationshipManagementCapability bpo:enablesProcess bpo:P11040 .
-bpo:StakeholderRelationshipManagementCapability bpo:enablesProcess bpo:P11041 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P11010 bpo:requiresCapability bpo:InvestorRelationsCapability .
-bpo:P11012 bpo:requiresCapability bpo:StakeholderRelationshipManagementCapability .
-bpo:P11013 bpo:requiresCapability bpo:LegalAndComplianceCapability .
-bpo:P11035 bpo:requiresCapability bpo:LenderRelationsManagementCapability .
-bpo:P11036 bpo:requiresCapability bpo:AnalystRelationsManagementCapability .
-bpo:P11038 bpo:requiresCapability bpo:StakeholderRelationshipManagementCapability .
-bpo:P11039 bpo:requiresCapability bpo:StakeholderRelationshipManagementCapability .
-bpo:P11040 bpo:requiresCapability bpo:StakeholderRelationshipManagementCapability .
-bpo:P11041 bpo:requiresCapability bpo:StakeholderRelationshipManagementCapability .
-bpo:P11045 bpo:requiresCapability bpo:LegalAndComplianceCapability .
-bpo:P11047 bpo:requiresCapability bpo:LegalAndComplianceCapability .
-bpo:P11048 bpo:requiresCapability bpo:LegalAndComplianceCapability .
-bpo:P11049 bpo:requiresCapability bpo:IntellectualPropertyManagementCapability .
-bpo:P11049 bpo:requiresCapability bpo:LegalAndComplianceCapability .
-bpo:P11066 bpo:requiresCapability bpo:PublicRelationsCapability .
-bpo:P11067 bpo:requiresCapability bpo:PublicRelationsCapability .
-bpo:P11068 bpo:requiresCapability bpo:PublicRelationsCapability .
-bpo:P11069 bpo:requiresCapability bpo:PublicRelationsCapability .
-bpo:P11070 bpo:requiresCapability bpo:PublicRelationsCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:CultivateAnalystRelations bpo:requiresRole bpo:FinancialAnalystRole .
@@ -996,7 +661,7 @@ bpo:RegulatoryAuthorityRole rdfs:subClassOf cco:ont00000187 .
 
 
 # ===== SECTION 13 -- Develop and Manage Business Capabilities =====
-#   requiresCapability 60  requiresRole 24  enrichment 12  bare 2  unclassified 0
+#   requiresCapability 0  requiresRole 24  enrichment 12  bare 2  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
 bpo:AnalyticsCapability bpo:enablesProcess bpo:P20960 .
@@ -1059,68 +724,6 @@ bpo:ProjectManagementCapability bpo:enablesProcess bpo:P16417 .
 bpo:ProjectManagementCapability bpo:enablesProcess bpo:P16418 .
 bpo:SustainabilityManagementCapability bpo:enablesProcess bpo:P21589 .
 bpo:SustainabilityManagementCapability bpo:enablesProcess bpo:P21598 .
-
-# --- requiresCapability (process -> capability) ---
-bpo:P11095 bpo:requiresCapability bpo:KnowledgeManagementCapability .
-bpo:P11096 bpo:requiresCapability bpo:KnowledgeManagementCapability .
-bpo:P11119 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P11119 bpo:requiresCapability bpo:ProjectManagementCapability .
-bpo:P11135 bpo:requiresCapability bpo:ChangeManagementCapability .
-bpo:P11136 bpo:requiresCapability bpo:ChangeManagementCapability .
-bpo:P11137 bpo:requiresCapability bpo:ChangeManagementCapability .
-bpo:P11180 bpo:requiresCapability bpo:EHSManagementCapability .
-bpo:P11181 bpo:requiresCapability bpo:EHSManagementCapability .
-bpo:P16379 bpo:requiresCapability bpo:BusinessProcessManagementCapability .
-bpo:P16384 bpo:requiresCapability bpo:BusinessProcessManagementCapability .
-bpo:P16387 bpo:requiresCapability bpo:BusinessProcessManagementCapability .
-bpo:P16392 bpo:requiresCapability bpo:BusinessProcessManagementCapability .
-bpo:P16402 bpo:requiresCapability bpo:PortfolioManagementCapability .
-bpo:P16402 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16403 bpo:requiresCapability bpo:PortfolioManagementCapability .
-bpo:P16403 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16404 bpo:requiresCapability bpo:PortfolioManagementCapability .
-bpo:P16404 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16406 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16406 bpo:requiresCapability bpo:ProgramManagementCapability .
-bpo:P16407 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16407 bpo:requiresCapability bpo:ProgramManagementCapability .
-bpo:P16408 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16408 bpo:requiresCapability bpo:ProgramManagementCapability .
-bpo:P16409 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16409 bpo:requiresCapability bpo:ProgramManagementCapability .
-bpo:P16411 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16411 bpo:requiresCapability bpo:ProjectManagementCapability .
-bpo:P16413 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16413 bpo:requiresCapability bpo:ProjectManagementCapability .
-bpo:P16414 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16414 bpo:requiresCapability bpo:ProjectManagementCapability .
-bpo:P16417 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16417 bpo:requiresCapability bpo:ProjectManagementCapability .
-bpo:P16418 bpo:requiresCapability bpo:PortfolioProgramProjectManagementCapability .
-bpo:P16418 bpo:requiresCapability bpo:ProjectManagementCapability .
-bpo:P17472 bpo:requiresCapability bpo:EnterpriseQualityManagementCapability .
-bpo:P17482 bpo:requiresCapability bpo:EnterpriseQualityManagementCapability .
-bpo:P17492 bpo:requiresCapability bpo:EnterpriseQualityManagementCapability .
-bpo:P17498 bpo:requiresCapability bpo:EnterpriseQualityManagementCapability .
-bpo:P20960 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P20961 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P20962 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P20963 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P20964 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P20965 bpo:requiresCapability bpo:KnowledgeManagementCapability .
-bpo:P20969 bpo:requiresCapability bpo:KnowledgeManagementCapability .
-bpo:P21453 bpo:requiresCapability bpo:BusinessProcessManagementCapability .
-bpo:P21457 bpo:requiresCapability bpo:ChangeManagementCapability .
-bpo:P21459 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P21460 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P21461 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P21462 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P21463 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P21464 bpo:requiresCapability bpo:AnalyticsCapability .
-bpo:P21584 bpo:requiresCapability bpo:BenchmarkingCapability .
-bpo:P21587 bpo:requiresCapability bpo:EHSManagementCapability .
-bpo:P21589 bpo:requiresCapability bpo:SustainabilityManagementCapability .
-bpo:P21598 bpo:requiresCapability bpo:SustainabilityManagementCapability .
 
 # --- requiresRole (process -> role) ---
 bpo:P11132 bpo:requiresRole bpo:StakeholderRole .

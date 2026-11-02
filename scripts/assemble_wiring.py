@@ -6,18 +6,24 @@ Inputs:
   - capabilities/capability_scope.json {cap_iri: [process_iri,...]} -- judgment table
                                        (enablesProcess for standing capabilities
                                         that have NO realized-in restriction)
+  - capabilities/b8_pairs.tsv          one row per capability->process pair   -- judgment table
+                                       (WP6 B8: possible-realization | enabling |
+                                        necessary-requirement | excluded-capability-target)
 
 Output per section:
-  bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (realized-in  +  capability_scope table)
-  bpo:<proc> bpo:requiresCapability bpo:<cap>    (derived inverse)
+  bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (pairs classified possible-realization,
+                                                  enabling or necessary-requirement)
+  bpo:<proc> bpo:requiresCapability bpo:<cap>    (only pairs classified necessary-requirement)
   bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> participant triad)
   bpo:<role> rdfs:subClassOf <cco anchor>      (role_anchors table; null => left bare)
 
 Re-running is idempotent. Unclassified roles (absent from role_anchors.json) are
 left bare and listed in a trailing comment so the judgment pass can see the residue.
+A capability->process pair with no row in b8_pairs.tsv (or a row with no pair) stops
+the run: every pair needs a classification before it reaches the wiring.
 """
 from __future__ import annotations
-import json, sys
+import csv, json, sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -27,6 +33,10 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "ontology" / "capabilities_wiring.ttl"
 ROLE_ANCHORS = ROOT / "capabilities" / "role_anchors.json"
 CAP_SCOPE = ROOT / "capabilities" / "capability_scope.json"
+PAIRS = ROOT / "capabilities" / "b8_pairs.tsv"
+ENABLES = {"possible-realization", "enabling", "necessary-requirement"}
+REQUIRES = {"necessary-requirement"}
+CLASSES = ENABLES | {"excluded-capability-target"}
 
 SECTION_NAMES = {
     "1": "Develop Vision and Strategy", "2": "Develop and Manage Products and Services",
@@ -54,7 +64,8 @@ HEADER = """\
 #
 # The process<->agent BRIDGE WIRING, harvested per APQC section:
 #   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from realized-in + scope table)
-#   bpo:<proc> bpo:requiresCapability bpo:<cap>    (derived inverse -- PHASE1 decision ii)
+#   bpo:<proc> bpo:requiresCapability bpo:<cap>    (only pairs capabilities/b8_pairs.tsv
+#                                                   classifies as necessary requirements, WP6 B8)
 #   bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> process participant triad)
 #   bpo:<role> rdfs:subClassOf <cco role subclass>  (role enrichment)
 #
@@ -75,16 +86,32 @@ def main() -> int:
     graphs, recur = H.load_all()
     role_anchors = json.loads(ROLE_ANCHORS.read_text(encoding="utf-8")) if ROLE_ANCHORS.exists() else {}
     cap_scope = json.loads(CAP_SCOPE.read_text(encoding="utf-8")) if CAP_SCOPE.exists() else {}
+    with PAIRS.open(encoding="utf-8") as f:
+        pair_class = {(r["capability"], r["target"]): r["classification"]
+                      for r in csv.DictReader(f, delimiter="\t")}
+    bad = sorted(k for k, v in pair_class.items() if v not in CLASSES)
+    if bad:
+        raise SystemExit(f"{PAIRS.name}: unknown classification for {bad}")
 
     parts = [HEADER]
-    tot = {"rc": 0, "rr": 0, "enr": 0, "scope": 0, "bare": 0}
+    tot = {"en": 0, "rc": 0, "rr": 0, "enr": 0, "scope": 0, "bare": 0, "excluded": 0}
+    seen, missing = set(), []
     for sec in sorted(graphs, key=int):
         man = H.harvest_section(sec, graphs, recur)
         enables, req_cap, req_role, enrich, bare, unclassified = [], [], [], [], [], []
         for c in man["capabilities"]:
             procs = list(c["realized_in"]) + cap_scope.get(c["iri"], [])
             for p in dict.fromkeys(procs):                       # dedup, keep order
-                enables.append((c["iri"], p)); req_cap.append((p, c["iri"]))
+                cls = pair_class.get((c["iri"], p))
+                seen.add((c["iri"], p))
+                if cls is None:
+                    missing.append((c["iri"], p))
+                elif cls in ENABLES:
+                    enables.append((c["iri"], p))
+                    if cls in REQUIRES:
+                        req_cap.append((p, c["iri"]))
+                else:
+                    tot["excluded"] += 1
         for r in man["roles"]:
             for p in r["participates_processes"]:
                 req_role.append((p, r["iri"]))
@@ -98,7 +125,7 @@ def main() -> int:
                 unclassified.append(r["iri"])
         req_cap = sorted(set(req_cap)); req_role = sorted(set(req_role))
         enables = sorted(set(enables)); enrich = sorted(set(enrich))
-        tot["rc"] += len(req_cap); tot["rr"] += len(req_role)
+        tot["en"] += len(enables); tot["rc"] += len(req_cap); tot["rr"] += len(req_role)
         tot["enr"] += len(enrich); tot["bare"] += len(bare)
         tot["scope"] += sum(len(cap_scope.get(c["iri"], [])) for c in man["capabilities"])
 
@@ -122,9 +149,14 @@ def main() -> int:
                      + ", ".join(sorted(unclassified)))
         parts.append("\n".join(b) + "\n")
 
+    stale = sorted(set(pair_class) - seen)
+    if missing or stale:
+        raise SystemExit(f"{PAIRS.name} out of step with the slices: unclassified pairs "
+                         f"{sorted(missing)}; rows with no pair {stale}")
     OUT.write_text("\n".join(parts), encoding="utf-8")
     print(f"wrote {OUT.relative_to(ROOT)}")
-    print(f"  requiresCapability={tot['rc']} (incl. {tot['scope']} from scope table)  "
+    print(f"  enablesProcess={tot['en']}  requiresCapability={tot['rc']}  "
+          f"excluded={tot['excluded']}  ({tot['scope']} pairs from scope table)  "
           f"requiresRole={tot['rr']}  enrichment={tot['enr']}  bare={tot['bare']}")
     return 0
 

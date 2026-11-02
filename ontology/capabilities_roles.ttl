@@ -59,7 +59,7 @@ bpo:inGrouping a owl:AnnotationProperty ;
 
 bpo:enablesProcess a owl:AnnotationProperty ;
     rdfs:label "enables process" ;
-    rdfs:comment "Capability -> process class whose execution it enables. Operational inverse of bpo:requiresCapability; BFO grounding is 'has realization' (a capability is realized in such processes). Used for authoring scope and wiring-coherence checks." .
+    rdfs:comment "Capability -> process class whose execution it enables. BFO grounding is 'has realization' (a capability can be realized in such processes). It states a possible realization or an enabling relation, not that the process needs the capability: since WP6 B8 (BPO architect, 2026-11-02) bpo:requiresCapability is no longer its inverse, and each pair is classified in capabilities/b8_pairs.tsv. Used for authoring scope and wiring-coherence checks." .
 
 bpo:permissionApplicableToRole a owl:AnnotationProperty ;
     rdfs:label "permission applicable to role" ;
@@ -83,7 +83,7 @@ bpo:bearsPermission a owl:AnnotationProperty ;
 
 bpo:requiresCapability a owl:AnnotationProperty ;
     rdfs:label "requires capability" ;
-    rdfs:comment "Process class -> the capability an agent must bear to perform it. DERIVED from bpo:enablesProcess (author scope once on the capability; generate this inverse onto the process, so the two never drift -- PHASE1 §8). Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
+    rdfs:comment "Process class -> the capability an agent must bear to perform it. Generated only for capability -> process pairs that capabilities/b8_pairs.tsv classifies as necessary requirements (WP6 B8, BPO architect 2026-11-02); it was the inverse of every bpo:enablesProcess pair (PHASE1 §8), which made each possible realization a requirement. Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
 
 bpo:requiresRole a owl:AnnotationProperty ;
     rdfs:label "requires role" ;
