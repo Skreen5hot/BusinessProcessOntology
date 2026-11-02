@@ -32,13 +32,6 @@ bpo:ActOfAnalysis a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent examines one or more input Information Content Entities and produces an Information Content Entity that represents an understanding of their subject matter." ;
     rdfs:comment "Local extension (D9). CCO 2.0 has no generic analysis class; analysis is information processing, so it is anchored under cco:ont00000366." .
 
-bpo:ActOfCommunication a owl:Class ;
-    rdfs:subClassOf cco:ont00000402 ,   # Act of Communication (VERIFIED)
-        cco:ont00000228 ;               # Planned Act -- explicit allowlist anchor: the SHACL S2 graph does not merge the CCO closure, so the verified ont00000402 ⊑ ont00000228 edge is asserted here so the chain resolves to an allowlisted Act.
-    rdfs:label "Act of Communication (shared anchor)" ;
-    skos:definition "A Planned Act in which an Agent transfers one or more Information Content Entities to one or more other Agents." ;
-    rdfs:comment "PROPOSE-EXT (D9). Shared anchor that wraps the VERIFIED cco:ont00000402 (Act of Communication, def: 'A Planned Act in which some Information Content Entity is transferred from some Agent to Another'; parent cco:ont00000228) so the recurring 'communicate'/'convey'/'escalate'/'route' rows reuse one consistent, D6-verified parent rather than re-citing the raw IRI per class. NOT cco:ont00000379 'Act of Representative Communication' (the methodology's flagged false-friend, the truth-committing subclass): plain conveyance/escalation does not assert truth, whereas reporting (bpo:ActOfReporting) does and therefore anchors under ont00000379. The cco:ont00000228 co-anchor is retained because SHACL S2 evaluates rdfs:subClassOf+ over the module graph only. Recurs in 8.0." .
-
 bpo:ActOfDataManagement a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
     rdfs:label "Act of Data Management" ;
@@ -1589,9 +1582,10 @@ bpo:P20645 a owl:Class ;
     bpo:apqcSourceText "Conveying the goals and objectives of the IT function and how it contributes to the overall business objectives to staff and departments across the organization." ;
     rdfs:label "Communicate IT capabilities" ;
     skos:definition "An Act of Communication that transfers the goals and objectives of the IT function and its contribution to business objectives to staff and departments across the organization, producing an IT capability communication." ;
-    rdfs:comment "Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication': 'A Planned Act in which some Information Content Entity is transferred from some Agent to Another.', parent cco:ont00000228). Verification recorded in the §6 record at the bpo:ActOfCommunication declaration. NOT cco:ont00000379 'Act of Representative Communication' (the flagged false-friend, truth-committing). Gate-F fix: re-anchored from the raw IRI to the shared genus and added a has-output (bpo:ITCapabilityCommunication, Descriptive) so the communication act now produces the conveyed ICE it characteristically transfers. Keeps has-input bpo:BusinessObjectives. Realizes bpo:ITCustomerRelationshipManagementCapability (R6)." ;
+    rdfs:comment "WP6 (BPO architect, 2026-11-02): now a direct subclass of cco:ont00000402 (Act of Communication), with cco:ont00000228 co-asserted for the standalone SHACL S2 graph; the shared bpo:ActOfCommunication it was anchored to is deprecated as the same class. Earlier note: Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication': 'A Planned Act in which some Information Content Entity is transferred from some Agent to Another.', parent cco:ont00000228). Verification recorded in the §6 record at the bpo:ActOfCommunication declaration. NOT cco:ont00000379 'Act of Representative Communication' (the flagged false-friend, truth-committing). Gate-F fix: re-anchored from the raw IRI to the shared genus and added a has-output (bpo:ITCapabilityCommunication, Descriptive) so the communication act now produces the conveyed ICE it characteristically transfers. Keeps has-input bpo:BusinessObjectives. Realizes bpo:ITCustomerRelationshipManagementCapability (R6)." ;
     skos:example "An IT director presents the IT function's goals and business contribution at a town hall." ;
-    rdfs:subClassOf bpo:ActOfCommunication ,
+    rdfs:subClassOf cco:ont00000402 ,   # Act of Communication
+        cco:ont00000228 ,   # Planned Act (allowlist anchor, SHACL S2)
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:BusinessObjectives ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:ITCapabilityCommunication ] .
 
@@ -3876,9 +3870,10 @@ bpo:P20838 a owl:Class ;
     bpo:apqcSourceText "Coordinating change implementation in IT services and solutions communications with employees and stakeholders." ;
     rdfs:label "Create implementation communications" ;
     skos:definition "An Act of Communication that coordinates and transfers communications about IT change implementation to employees and stakeholders, producing an IT deployment communication." ;
-    rdfs:comment "Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication'; verification recorded in the §6 record at the bpo:ActOfCommunication declaration). Gate-F consistency: re-anchored from the per-class raw IRI + redundant cco:ont00000228 co-anchor to the shared genus, which supplies the chain to the allowlisted Planned Act for the SHACL S2 graph. Has-output bpo:ITDeploymentCommunication (the prepared/transferred deployment notice)." ;
+    rdfs:comment "WP6 (BPO architect, 2026-11-02): now a direct subclass of cco:ont00000402 (Act of Communication), with cco:ont00000228 co-asserted for the standalone SHACL S2 graph; the shared bpo:ActOfCommunication it was anchored to is deprecated as the same class. Earlier note: Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication'; verification recorded in the §6 record at the bpo:ActOfCommunication declaration). Gate-F consistency: re-anchored from the per-class raw IRI + redundant cco:ont00000228 co-anchor to the shared genus, which supplies the chain to the allowlisted Planned Act for the SHACL S2 graph. Has-output bpo:ITDeploymentCommunication (the prepared/transferred deployment notice)." ;
     skos:example "A change manager drafts and sends the go-live notice and FAQ to affected departments." ;
-    rdfs:subClassOf bpo:ActOfCommunication ,
+    rdfs:subClassOf cco:ont00000402 ,   # Act of Communication
+        cco:ont00000228 ,   # Planned Act (allowlist anchor, SHACL S2)
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:ITDeploymentCommunication ] .
 
 bpo:P20840 a owl:Class ;
@@ -4131,9 +4126,10 @@ bpo:P20860 a owl:Class ;
     bpo:apqcSourceText "Coordinating communications regarding the changes in IT services and solutions with employees in the organization." ;
     rdfs:label "Prepare and distribute service/solution communications" ;
     skos:definition "An Act of Communication that prepares and transfers communications regarding changes in IT services and solutions to employees in the organization, producing an IT deployment communication." ;
-    rdfs:comment "Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication'; verification recorded in the §6 record at the bpo:ActOfCommunication declaration). Gate-F consistency: re-anchored from the per-class raw IRI + redundant cco:ont00000228 co-anchor to the shared genus, which supplies the chain to the allowlisted Planned Act for the SHACL S2 graph. Has-output bpo:ITDeploymentCommunication." ;
+    rdfs:comment "WP6 (BPO architect, 2026-11-02): now a direct subclass of cco:ont00000402 (Act of Communication), with cco:ont00000228 co-asserted for the standalone SHACL S2 graph; the shared bpo:ActOfCommunication it was anchored to is deprecated as the same class. Earlier note: Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication'; verification recorded in the §6 record at the bpo:ActOfCommunication declaration). Gate-F consistency: re-anchored from the per-class raw IRI + redundant cco:ont00000228 co-anchor to the shared genus, which supplies the chain to the allowlisted Planned Act for the SHACL S2 graph. Has-output bpo:ITDeploymentCommunication." ;
     skos:example "A communications lead emails the rollout schedule and what-changes summary to all staff." ;
-    rdfs:subClassOf bpo:ActOfCommunication ,
+    rdfs:subClassOf cco:ont00000402 ,   # Act of Communication
+        cco:ont00000228 ,   # Planned Act (allowlist anchor, SHACL S2)
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:ITDeploymentCommunication ] .
 
 bpo:P20862 a owl:Class ;
@@ -4572,9 +4568,10 @@ bpo:P20899 a owl:Class ;
     bpo:apqcSourceText "Conveying service support needs within the organization, with the objective of providing required support services. Define processes and procedures needed to support users of IT services and solutions. Convey these procedures to appropriate governing authority." ;
     rdfs:label "Communicate service support needs" ;
     skos:definition "An Act of Communication that conveys the defined service-support needs and procedures to the appropriate governing authority within the organization, producing the conveyed IT standard." ;
-    rdfs:comment "Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication'; verification recorded in the §6 record at the bpo:ActOfCommunication declaration). NOT cco:ont00000379 'Act of Representative Communication' (the flagged false-friend). Gate-F DE-CONFLATION: the source fuses (1) a Formulation facet ('Define processes and procedures needed to support users', authored as the Directive bpo:ITStandard upstream/at the support-planning rows) with (2) the Communication facet modeled here ('Convey these procedures to appropriate governing authority'); the lead gerund is 'Conveying', so this row is the conveyance act. Gate-F fix: added a has-output (bpo:ITStandard, the conveyed procedures, Directive) so the I/O is coherent with the conveyance -- the has-input bpo:ITRequirementsAnalysis (the analysis informing the needs) is retained, and the procedures-defining step is the upstream Formulation it transfers." ;
+    rdfs:comment "WP6 (BPO architect, 2026-11-02): now a direct subclass of cco:ont00000402 (Act of Communication), with cco:ont00000228 co-asserted for the standalone SHACL S2 graph; the shared bpo:ActOfCommunication it was anchored to is deprecated as the same class. Earlier note: Anchored to the shared bpo:ActOfCommunication (wraps the D6-VERIFIED cco:ont00000402 'Act of Communication'; verification recorded in the §6 record at the bpo:ActOfCommunication declaration). NOT cco:ont00000379 'Act of Representative Communication' (the flagged false-friend). Gate-F DE-CONFLATION: the source fuses (1) a Formulation facet ('Define processes and procedures needed to support users', authored as the Directive bpo:ITStandard upstream/at the support-planning rows) with (2) the Communication facet modeled here ('Convey these procedures to appropriate governing authority'); the lead gerund is 'Conveying', so this row is the conveyance act. Gate-F fix: added a has-output (bpo:ITStandard, the conveyed procedures, Directive) so the I/O is coherent with the conveyance -- the has-input bpo:ITRequirementsAnalysis (the analysis informing the needs) is retained, and the procedures-defining step is the upstream Formulation it transfers." ;
     skos:example "A support lead briefs IT governance on resourcing and the support procedures to adopt." ;
-    rdfs:subClassOf bpo:ActOfCommunication ,
+    rdfs:subClassOf cco:ont00000402 ,   # Act of Communication
+        cco:ont00000228 ,   # Planned Act (allowlist anchor, SHACL S2)
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:ITRequirementsAnalysis ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:ITStandard ] .
 
@@ -4859,9 +4856,10 @@ bpo:P20926 a owl:Class ;
     bpo:apqcSourceText "Follow processes and procedures to escalate IT requests to required levels for resolution or effective decision making when necessary." ;
     rdfs:label "Escalate IT requests" ;
     skos:definition "An Act of Communication that conveys an unresolved IT request to a higher support or decision-making level per defined escalation procedures." ;
-    rdfs:comment "Gate-F D6 fix: re-anchored to the shared bpo:ActOfCommunication, which wraps the D6-VERIFIED cco:ont00000402 'Act of Communication' ('A Planned Act in which some Information Content Entity is transferred from some Agent to Another.', parent cco:ont00000228); verification recorded in the §6 record at the bpo:ActOfCommunication declaration. The verified CCO Act of Communication denotes GENERIC ICE-transfer (not only the truth-committing cco:ont00000379 'Act of Representative Communication'), so escalation-as-conveyance of the request ICE fits. The prior per-class raw cco:ont00000402 IRI and the explanatory-only cco:ont00000228 co-anchor are REMOVED: the chain to the allowlisted Planned Act now comes from the shared genus bpo:ActOfCommunication (which carries cco:ont00000228 for the SHACL S2 graph), so the workaround no longer masks an unverified IRI." ;
+    rdfs:comment "WP6 (BPO architect, 2026-11-02): now a direct subclass of cco:ont00000402 (Act of Communication), with cco:ont00000228 co-asserted for the standalone SHACL S2 graph; the shared bpo:ActOfCommunication it was anchored to is deprecated as the same class. Earlier note: Gate-F D6 fix: re-anchored to the shared bpo:ActOfCommunication, which wraps the D6-VERIFIED cco:ont00000402 'Act of Communication' ('A Planned Act in which some Information Content Entity is transferred from some Agent to Another.', parent cco:ont00000228); verification recorded in the §6 record at the bpo:ActOfCommunication declaration. The verified CCO Act of Communication denotes GENERIC ICE-transfer (not only the truth-committing cco:ont00000379 'Act of Representative Communication'), so escalation-as-conveyance of the request ICE fits. The prior per-class raw cco:ont00000402 IRI and the explanatory-only cco:ont00000228 co-anchor are REMOVED: the chain to the allowlisted Planned Act now comes from the shared genus bpo:ActOfCommunication (which carries cco:ont00000228 for the SHACL S2 graph), so the workaround no longer masks an unverified IRI." ;
     skos:example "A second-line agent escalates a major incident to the on-call manager." ;
-    rdfs:subClassOf bpo:ActOfCommunication ,
+    rdfs:subClassOf cco:ont00000402 ,   # Act of Communication
+        cco:ont00000228 ,   # Planned Act (allowlist anchor, SHACL S2)
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:ITIssueRequest ] .
 
 bpo:P20927 a owl:Class ;
