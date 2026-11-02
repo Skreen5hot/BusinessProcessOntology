@@ -329,7 +329,7 @@ bpo:BuildBuyLeaseDecision a owl:Class ;
 
 bpo:FacilityDesign a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom bpo:Facility ] ;
+        [ a owl:Restriction ; owl:onProperty cco:ont00001808 ; owl:someValuesFrom cco:ont00000192 ] ;
     rdfs:label "Facility Design" ;
     skos:definition "A Directive Information Content Entity, about a facility, that prescribes the configuration, layout, and specifications of that facility to be built or modified." ;
     rdfs:comment "Directive (a blueprint/specification prescribing how the facility shall be realized), per CCO's Directive-ICE elucidation citing blueprints." .
@@ -448,11 +448,6 @@ bpo:RealProperty a owl:Class ; rdfs:subClassOf obo:BFO_0000040 ;
     skos:definition "A Material Entity, comprising land together with any buildings or fixtures on it, that an organization may build, buy, lease, retain, or dispose of." ;
     rdfs:comment "Anchored at BFO material entity rather than Material Artifact because raw land is not an artifact. Subject of property-selection and build/buy/lease decisions." ;
     rdfs:comment "Scope caution (material asset vs legal interest): this class denotes the MATERIAL real-property asset (land + buildings/fixtures, obo:BFO_0000040). It does NOT represent legal rights or interests in the property (title, freehold/leasehold, easements, liens); those are generically-dependent continuants, not material entities, and would be modeled separately (e.g. a Directive/role-bearing ICE) if the corpus later covers property law." .
-
-bpo:Facility a owl:Class ; rdfs:subClassOf cco:ont00000192 ;
-    rdfs:label "Facility (asset)" ;
-    skos:definition "A Facility that an organization plans, designs, constructs, modifies, operates, maintains, or disposes of as part of managing its assets." ;
-    rdfs:comment "Specialization of CCO Facility (ont00000192, 'a building or campus dedicated to some specific purpose') scoped to the managed-asset role in section 10.0." .
 
 bpo:Workspace a owl:Class ; rdfs:subClassOf cco:ont00000192 ;
     rdfs:label "Workspace" ;
@@ -747,7 +742,7 @@ bpo:P10961 a owl:Class ;
 bpo:ManageBuildingRenovation a owl:Class ;
     rdfs:subClassOf cco:ont00000970 ,   # Act of Artifact Modification
         cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000970)
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Facility ] ;
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom cco:ont00000192 ] ;
     rdfs:label "Manage building renovation" ;
     skos:definition "An Act of Artifact Modification that renovates an existing building on site, changing its qualities or functions according to requirements and demands." ;
     rdfs:comment "Minted (Gate-F, Phase-1 de-conflation) for the 'Manage renovations according to requirements and demands' half of PCF 10962, which fuses two act kinds (build NEW + renovate EXISTING). Anchored to cco:ont00000970 (Act of Artifact Modification) because renovating an existing building changes the qualities/functions of an existing Material Artifact, mirroring 10.2.3.4 (bpo:P19233), which rejects cco:ont00000051 (Act of Construction, builds NEW) for the same modify-existing sense. Attached as a process part of bpo:P10962 so the modification sense is not mis-genused under Construction nor silently dropped." .
@@ -764,7 +759,7 @@ bpo:P10962 a owl:Class ;
     skos:example "A general contractor erects the warehouse shell per the approved design and manages later renovations to it." ;
     rdfs:subClassOf cco:ont00000051 ,
         cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000051, asserted so S2/S5 resolve standalone)
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Facility ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom cco:ont00000192 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:ConstructionContractor ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:ManageBuildingRenovation ] .
 
@@ -1728,7 +1723,7 @@ bpo:P13131 a owl:Class ;
     skos:example "A demolition crew razes a disused warehouse and fences off the rubble." ;
     rdfs:subClassOf cco:ont00000970 ,
         cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000970, asserted so S2/S5 resolve standalone)
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Facility ] ,
+        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom cco:ont00000192 ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:AssetPart ] .
 
 bpo:P13132 a owl:Class ;
