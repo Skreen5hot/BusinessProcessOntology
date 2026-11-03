@@ -141,7 +141,7 @@ bpo:AuthorArchitecture a owl:Class ;
     skos:definition "An Act of Formulation in which an architect agent composes a build's structural plan - its module boundaries, exported interfaces, and layering - from a normative specification." ;
     bpo:routable true ;
     bpo:requiresCapability bpo:ArchitectureCapability ;
-    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:ArchitectureCapability is kept as a necessary requirement. The capability is defined as the ability to author a build's structural plan: its module boundaries, exported interfaces, and layering, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md)." ;
+    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:ArchitectureCapability is kept as a necessary requirement. The capability is defined as the ability to author a build's structural plan: its module boundaries, exported interfaces, and layering, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md). Accepted by the BPO architect (2026-11-03) as a definition-supported necessity, not an OWL entailment: an agent that successfully performs an act of this kind demonstrates the ability to perform it. The capability must be borne by the agent that performs the act, and dispatch relies on evidence of that agent's abilities available before assignment (see the scope note of bpo:requiresCapability). The principle does not generate requirements for other processes." ;
     bpo:requiresRole bpo:ArchitectRole .
 
 bpo:ImplementPhase a owl:Class ;
@@ -151,7 +151,7 @@ bpo:ImplementPhase a owl:Class ;
     skos:definition "An Act of Development in which a developer agent brings a planned module from its implementation plan into an existent working code change set." ;
     bpo:routable true ;
     bpo:requiresCapability bpo:CodeImplementationCapability ;
-    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:CodeImplementationCapability is kept as a necessary requirement. The capability is defined as the ability to implement a planned module as a working code change set, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md)." ;
+    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:CodeImplementationCapability is kept as a necessary requirement. The capability is defined as the ability to implement a planned module as a working code change set, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md). Accepted by the BPO architect (2026-11-03) as a definition-supported necessity, not an OWL entailment: an agent that successfully performs an act of this kind demonstrates the ability to perform it. The capability must be borne by the agent that performs the act, and dispatch relies on evidence of that agent's abilities available before assignment (see the scope note of bpo:requiresCapability). The principle does not generate requirements for other processes." ;
     bpo:requiresRole bpo:DeveloperRole .
 
 bpo:EvaluateOutput a owl:Class ;
@@ -161,5 +161,5 @@ bpo:EvaluateOutput a owl:Class ;
     skos:definition "An Act of Verification in which an evaluator agent appraises an artifact against its acceptance criteria and records a verdict." ;
     bpo:routable true ;
     bpo:requiresCapability bpo:EvaluationCapability ;
-    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:EvaluationCapability is kept as a necessary requirement. The capability is defined as the ability to evaluate an artifact against its acceptance criteria, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md)." ;
+    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:EvaluationCapability is kept as a necessary requirement. The capability is defined as the ability to evaluate an artifact against its acceptance criteria, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md). Accepted by the BPO architect (2026-11-03) as a definition-supported necessity, not an OWL entailment: an agent that successfully performs an act of this kind demonstrates the ability to perform it. The capability must be borne by the agent that performs the act, and dispatch relies on evidence of that agent's abilities available before assignment (see the scope note of bpo:requiresCapability). The principle does not generate requirements for other processes." ;
     bpo:requiresRole bpo:EvaluatorRole .
