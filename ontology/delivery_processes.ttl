@@ -107,7 +107,7 @@ bpo:AuthorRoadmap a owl:Class ;
     rdfs:label "Author roadmap" ;
     skos:definition "An Act of Formulation in which a planning agent composes a phased roadmap from a normative specification." ;
     bpo:routable true ;
-    bpo:requiresCapability bpo:PlanAuthoringCapability ;
+    rdfs:comment "WP6 B8 (BPO architect, 2026-11-03): the triple 'bpo:requiresCapability bpo:PlanAuthoringCapability' was removed after the necessity audit (docs/wp6/b8-audit.md). That capability is the ability to author both phased roadmaps and implementation plans, so an agent able to author only roadmaps still performs this process without bearing it. The capability can be realized in this process (bpo:enablesProcess on the capability is kept)." ;
     bpo:requiresRole bpo:PlannerRole .
 
 bpo:AuthorImplementationPlan a owl:Class ;
@@ -116,7 +116,7 @@ bpo:AuthorImplementationPlan a owl:Class ;
     rdfs:label "Author implementation plan" ;
     skos:definition "An Act of Formulation in which a planning agent composes a tactical implementation plan, with falsifiable acceptance criteria, for a roadmap phase." ;
     bpo:routable true ;
-    bpo:requiresCapability bpo:PlanAuthoringCapability ;
+    rdfs:comment "WP6 B8 (BPO architect, 2026-11-03): the triple 'bpo:requiresCapability bpo:PlanAuthoringCapability' was removed after the necessity audit (docs/wp6/b8-audit.md). That capability is the ability to author both phased roadmaps and implementation plans, so an agent able to author only implementation plans still performs this process without bearing it. The capability can be realized in this process (bpo:enablesProcess on the capability is kept)." ;
     bpo:requiresRole bpo:PlannerRole .
 
 # ---- approval-gate act (the Process the role's Action Permission regulates) ----
@@ -141,6 +141,7 @@ bpo:AuthorArchitecture a owl:Class ;
     skos:definition "An Act of Formulation in which an architect agent composes a build's structural plan - its module boundaries, exported interfaces, and layering - from a normative specification." ;
     bpo:routable true ;
     bpo:requiresCapability bpo:ArchitectureCapability ;
+    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:ArchitectureCapability is kept as a necessary requirement. The capability is defined as the ability to author a build's structural plan: its module boundaries, exported interfaces, and layering, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md)." ;
     bpo:requiresRole bpo:ArchitectRole .
 
 bpo:ImplementPhase a owl:Class ;
@@ -150,6 +151,7 @@ bpo:ImplementPhase a owl:Class ;
     skos:definition "An Act of Development in which a developer agent brings a planned module from its implementation plan into an existent working code change set." ;
     bpo:routable true ;
     bpo:requiresCapability bpo:CodeImplementationCapability ;
+    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:CodeImplementationCapability is kept as a necessary requirement. The capability is defined as the ability to implement a planned module as a working code change set, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md)." ;
     bpo:requiresRole bpo:DeveloperRole .
 
 bpo:EvaluateOutput a owl:Class ;
@@ -159,4 +161,5 @@ bpo:EvaluateOutput a owl:Class ;
     skos:definition "An Act of Verification in which an evaluator agent appraises an artifact against its acceptance criteria and records a verdict." ;
     bpo:routable true ;
     bpo:requiresCapability bpo:EvaluationCapability ;
+    rdfs:comment "WP6 B8 necessity audit (BPO architect, 2026-11-03): bpo:requiresCapability bpo:EvaluationCapability is kept as a necessary requirement. The capability is defined as the ability to evaluate an artifact against its acceptance criteria, which is what every instance of this process does, so an agent that performs the process has that ability (docs/wp6/b8-audit.md)." ;
     bpo:requiresRole bpo:EvaluatorRole .

@@ -72,10 +72,9 @@ Current totals: **343 possible realizations, 0 enabling, 0 necessary, 12 exclude
 - **Of the 197 that still carry requirements, none lost routability.** 24 were
   routable before and after; 6 became routable, because their only unmet
   requirement was a capability.
-- **The 3 remaining capability gaps** come from 5 `requiresCapability` triples
-  authored directly in `delivery_processes.ttl` (AuthorRoadmap,
-  AuthorImplementationPlan, and the three FNSR delivery acts). They are not among the
-  356 wiring pairs and were not audited here.
+- **The 3 remaining capability gaps** come from `requiresCapability` triples
+  authored directly in `delivery_processes.ttl` (the three FNSR delivery acts). They
+  are not among the 356 wiring pairs; they are audited below.
 
 The drop in routable processes is not a regression. The earlier figure counted
 assignments justified by requirements nobody had shown to be necessary. As the
@@ -125,6 +124,29 @@ depends on each class's assessment (`capability-as-process-backlog.md`).
 acts of some kind.** Read literally, that is the same necessity claim in prose. They
 are reported, not reworded: a reword (to "can be realized in") is for the architect to
 decide.
+
+## The 5 requirements authored in `delivery_processes.ttl` (2026-11-03)
+
+The architect's decision (§4B): the same evidence rule as the generated pairs, each
+reviewed on its own. For each: the process, the capability and its bearer (an agent
+assigned to the process), and the evidence that every performance needs it.
+
+| Original triple | Disposition | Evidence |
+|---|---|---|
+| `AuthorRoadmap requiresCapability PlanAuthoringCapability` | **removed** from dispatch | The capability is the ability to author phased roadmaps *and* implementation plans. An agent able to author only roadmaps performs AuthorRoadmap without bearing it. Not necessary |
+| `AuthorImplementationPlan requiresCapability PlanAuthoringCapability` | **removed** from dispatch | The same, the other way round |
+| `AuthorArchitecture requiresCapability ArchitectureCapability` | **kept**, necessary | The capability is defined as the ability to author a build's structural plan (module boundaries, exported interfaces, layering), which is what every instance does |
+| `ImplementPhase requiresCapability CodeImplementationCapability` | **kept**, necessary | Defined as the ability to implement a planned module as a working code change set, which is what every instance does |
+| `EvaluateOutput requiresCapability EvaluationCapability` | **kept**, necessary | Defined as the ability to evaluate an artifact against its acceptance criteria, which every instance does |
+
+The three kept rest on one principle: an agent that performs an act of a kind has the
+ability to perform acts of that kind. Where the capability is defined as exactly that
+ability, the requirement follows from the definitions. **For the architect to confirm.**
+
+The removed triples are kept in this table and in each process's comment;
+`enablesProcess` on `PlanAuthoringCapability` (possible realization) is unchanged. If
+roadmap and implementation-plan authoring should each be a requirement, the capability
+would have to be split in two, which is not done here.
 
 ## Open, for the architect
 
