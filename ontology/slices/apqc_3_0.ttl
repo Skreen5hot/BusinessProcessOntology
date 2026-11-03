@@ -376,10 +376,10 @@ bpo:ExecutionRoadmap a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     skos:definition "A Directive Information Content Entity that prescribes the actions, ordering, timing, and dependencies for executing a strategy or delivering a proposed solution." ;
     rdfs:comment "Output of 3.2.3.8, 3.4.2.6, and 3.5.3.7. Directive (Formulation)." .
 
-bpo:PerformanceMeasure a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
+bpo:PerformanceMeasureSpecification a owl:Class ; rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Performance Measure Specification" ;
-    skos:definition "A Directive Information Content Entity that prescribes the metrics, benchmarks, and targets used to gauge performance." ;
-    rdfs:comment "Output of 3.2.4.1, 3.3.1, 3.4.4. Directive: establishing a measure prescribes what to track and the target to meet (Formulation genus)." .
+    skos:definition "A Directive Information Content Entity that prescribes measures and associated benchmarks or targets for evaluating the performance of an entity or process." ;
+    rdfs:comment "Output of 3.2.4.1, 3.3.1, 3.4.4 and an input of 3.2.4.2. Directive: establishing a measure prescribes what to track and the target to meet (Formulation genus). Distinct from bpo:PerformanceMeasure, which describes a measured performance value, and from bpo:PerformanceIndicatorSpecification, whose prescribed content is specifically indicators; no equivalence or subclass relation to the latter is asserted. Minted 2026-11-03 (WP6, BPO architect): slice 3 had used bpo:PerformanceMeasure, a Descriptive ICE, for this Directive sense." .
 
 bpo:PerformanceReport a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Performance Report" ;
@@ -1352,10 +1352,10 @@ bpo:P16573 a owl:Class ;
     bpo:apqcSourceText "Determining measurable parameters to be used for comparing the performance of different marketing channels. Decide on benchmarks and values for optimum or desired performance." ;
     rdfs:label "Establish channel-specific measures and targets" ;
     skos:definition "An Act of Formulation that determines the measurable parameters, benchmarks, and target values for comparing channel performance and produces a performance measure specification." ;
-    rdfs:comment "Output bpo:PerformanceMeasure is Directive (a prescriptive specification of metrics and targets), agreeing with the Formulation genus." ;
+    rdfs:comment "Output bpo:PerformanceMeasureSpecification is Directive (a prescriptive specification of metrics and targets), agreeing with the Formulation genus." ;
     skos:example "A team defines conversion-rate and cost-per-sale targets per channel." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:PerformanceMeasure ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:PerformanceMeasureSpecification ] .
 
 bpo:P16574 a owl:Class ;
     bpo:pcfID "16574" ; bpo:hierarchyID "3.2.4.2" ;
@@ -1385,10 +1385,10 @@ bpo:P16500 a owl:Class ;
     bpo:apqcSourceText "Conducting an analysis to review channel performance with respect to chosen metrics, benchmarks and performance targets [16573]. Compare to past performance and forecasts for the channel." ;
     rdfs:label "Analyze channel performance" ;
     skos:definition "An Act of Analysis that reviews channel performance against chosen metrics, benchmarks, and targets and produces a channel performance analysis." ;
-    rdfs:comment "Output bpo:ChannelPerformanceAnalysis is Descriptive (is-about MarketingChannel), agreeing with the Information-Processing genus. bpo:PerformanceMeasure (the metrics/targets from 16573) and bpo:PerformanceReport are definitional inputs." ;
+    rdfs:comment "Output bpo:ChannelPerformanceAnalysis is Descriptive (is-about MarketingChannel), agreeing with the Information-Processing genus. bpo:PerformanceMeasureSpecification (the metrics/targets from 16573) and bpo:PerformanceReport are definitional inputs." ;
     skos:example "An analyst compares this quarter's channel results to targets and prior periods." ;
     rdfs:subClassOf bpo:ActOfAnalysis ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:PerformanceMeasure ] ,
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:PerformanceMeasureSpecification ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:PerformanceReport ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:ChannelPerformanceAnalysis ] .
 
@@ -1603,7 +1603,7 @@ bpo:P10148 a owl:Class ;
     skos:example "A marketing leader sets target market-share and conversion goals with the metrics that will track them." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:MarketingGoal ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:PerformanceMeasure ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:PerformanceMeasureSpecification ] .
 
 bpo:P10149 a owl:Class ;
     bpo:pcfID "10149" ; bpo:hierarchyID "3.3.2" ;
@@ -2421,11 +2421,11 @@ bpo:P10132 a owl:Class ;
     bpo:apqcSourceText "Establishing specific quantitative and qualitative measures of realizing sales targets. Create sales targets by analyzing historical sales data and comparing the forecasts to results, in light of customer and market intelligence. Examine the performance of sales personnel in light of market opportunities. Based on this review, establish sales targets along with metrics to quantify these goals, corresponding with the overall business strategy." ;
     rdfs:label "Establish sales goals and measures" ;
     skos:definition "An Act of Formulation that establishes sales targets and the quantitative and qualitative metrics used to track their realization and produces a sales goal and a performance-measure specification." ;
-    rdfs:comment "Genus bpo:ActOfFormulation: establishing targets and metrics is a directive output (bpo:SalesGoal and bpo:PerformanceMeasure; per the section vocab mapping of 3.4.4). 'Establish' here is a bounded act with a clear deliverable, not a standing function. The sales forecast and market intelligence are typical inputs." ;
+    rdfs:comment "Genus bpo:ActOfFormulation: establishing targets and metrics is a directive output (bpo:SalesGoal and bpo:PerformanceMeasureSpecification; per the section vocab mapping of 3.4.4). 'Establish' here is a bounded act with a clear deliverable, not a standing function. The sales forecast and market intelligence are typical inputs." ;
     skos:example "Sales leadership sets the quarter's revenue targets and the KPI set that quantifies them." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:SalesGoal ] ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:PerformanceMeasure ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:PerformanceMeasureSpecification ] .
 
 bpo:P10133 a owl:Class ;
     bpo:pcfID "10133" ; bpo:hierarchyID "3.4.5" ;
