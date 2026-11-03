@@ -114,6 +114,13 @@ bpo:ActOfSelection a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent chooses one or more options from a set of candidates and produces a Directive Information Content Entity that prescribes the chosen option(s)." ;
     rdfs:comment "Local extension (D9). Anchored under cco:ont00000366 (Act of Information Processing): receives candidate-option ICEs and yields a decision ICE. Distinct from Act of Appraisal (judges without committing) and Act of Planning. NOTE: ratifying a single already-settled option is NOT selection (no candidate set) -- anchor such acts at cco:ont00000228 (Planned Act)." .
 
+bpo:ActOfTransportation a owl:Class ;
+    rdfs:subClassOf cco:ont00000065 ,   # Act of Location Change
+        cco:ont00000228 ;               # Planned Act (explicit; entailed via ont00000065, asserted so SHACL S2/S5 resolve standalone)
+    rdfs:label "Act of Transportation" ;
+    skos:definition "An Act of Location Change in which an Agent moves materials or finished products from one supply-chain location to another, such as from a source to a warehouse, distribution center, or customer." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000065 (Act of Location Change, verified: 'An Act of Motion in which the location of some Object is changed by some Agent'; parent cco:ont00000357 Act of Motion -> ... -> Planned Act), the parent of cco:ont00000595 'Act of Cargo Transportation'. Generalizes inbound/outbound movement, picking-packing-shipping, and warehouse transfers; cco:ont00000595 is a close fit but is scoped to manufactured goods moved through some Transportation Agent (pinned CCO 2024-11-06), whereas bpo:ActOfTransportation also covers internal warehouse transfers and deployment. Recurs across physical-logistics categories (4.0, 6.0, 9.0)." .
+
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES
 ####################################################################
@@ -1663,11 +1670,10 @@ bpo:P12721 a owl:Class ;
     bpo:hierarchyID "10.4.8" ;
     bpo:apqcSourceText "Planning, conducting, and tracking shipment of hazardous materials." ;
     rdfs:label "Ship hazardous material" ;
-    skos:definition "An Act of Location Change in which an agent transports hazardous material from one location to another as part of a shipping operation." ;
-    rdfs:comment "Anchored to cco:ont00000065 (Act of Location Change, pinned CCO 2024-11-06: 'An Act of Motion in which the location of some Object is changed by some Agent'): the hazardous material changes location. Hazardous material is a definitional material input. Semantic correction (BPO architect, 2026-11-03): previously anchored to cco:ont00000595 (Act of Cargo Transportation), whose pinned definition is 'the movement of manufactured goods through some Transportation Agent'; hazardous material also includes raw materials, waste and other substances that are not manufactured goods, so that parent narrowed the class. An instance that moves manufactured goods may also be an Act of Cargo Transportation; that does not make 595 a universal parent." ;
+    skos:definition "An Act of Transportation in which an agent moves hazardous material from one location to another as part of a shipping operation." ;
+    rdfs:comment "Anchored to bpo:ActOfTransportation (the BPO act genus from the apqc-ext.ttl registry, itself under cco:ont00000065 Act of Location Change, pinned CCO 2024-11-06: 'An Act of Motion in which the location of some Object is changed by some Agent'): the hazardous material is moved between locations. Hazardous material is a definitional material input. Semantic corrections (BPO architect, 2026-11-03): (1) previously anchored to cco:ont00000595 (Act of Cargo Transportation), whose pinned definition is 'the movement of manufactured goods through some Transportation Agent'; hazardous material also includes raw materials, waste and other substances that are not manufactured goods, so that parent narrowed the class. An instance that moves manufactured goods may also be an Act of Cargo Transportation; that does not make 595 a universal parent. (2) The first correction anchored the class directly to cco:ont00000065 with the definition 'An Act of Location Change in which an agent transports hazardous material from one location to another as part of a shipping operation.' The architect then chose the existing BPO intermediate genus, which already sits under 065, so that the corpus reuses its own transportation genus rather than bypassing it." ;
     skos:example "A licensed carrier transports drums of spent solvent from a plant to a treatment facility with manifest tracking." ;
-    rdfs:subClassOf cco:ont00000065 ,   # Act of Location Change
-        cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000065, asserted so S2/S5 resolve standalone)
+    rdfs:subClassOf bpo:ActOfTransportation ,   # -> cco:ont00000065 Act of Location Change
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:HazardousMaterial ] .
 
 ####################################################################

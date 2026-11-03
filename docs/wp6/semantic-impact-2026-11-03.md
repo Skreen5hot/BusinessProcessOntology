@@ -17,6 +17,7 @@ last commit.
 | `027be8a` | P12721 under Act of Location Change | 1 parent changed (595 → 065) | **1 pair changes** | unchanged |
 | `1686f4e` | `enablesProcess` label/definition; P21437 uncertain | annotation text; 1 wiring triple removed | no change | unchanged; P21437 had no requirement |
 | `cadaa1d` | delivery requirements audited | 2 `requiresCapability` triples removed | no change | 2 processes still routable, by role alone |
+| (P12721 commit) | P12721 parent revised to `bpo:ActOfTransportation` (architect, second decision) | 1 direct parent changed (065 → `ActOfTransportation`); redundant explicit `228` dropped; the registry genus inlined in slice 10 | **1 pair changes** (`P12721 ⊑ 065` → `P12721 ⊑ ActOfTransportation`; 065 stays an ancestor); 4,554 pairs | unchanged; C1–C7 57,793 triples (−1, the dropped `228`); Gate F 37, run with the 900 s linter limit lifted (two timeouts under machine load, then 774 s) |
 
 
 **Dispatch** stays at 30 routable / 167 gaps over 197 processes with requirements
