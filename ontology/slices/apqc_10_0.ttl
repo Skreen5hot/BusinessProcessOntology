@@ -1663,11 +1663,11 @@ bpo:P12721 a owl:Class ;
     bpo:hierarchyID "10.4.8" ;
     bpo:apqcSourceText "Planning, conducting, and tracking shipment of hazardous materials." ;
     rdfs:label "Ship hazardous material" ;
-    skos:definition "An Act of Cargo Transportation that moves a portion of hazardous material from one location to another under controlled, tracked conditions." ;
-    rdfs:comment "Anchored to cco:ont00000595 (Act of Cargo Transportation): the payload (hazardous material) changes location. Hazardous material is a definitional material input/payload." ;
+    skos:definition "An Act of Location Change in which an agent transports hazardous material from one location to another as part of a shipping operation." ;
+    rdfs:comment "Anchored to cco:ont00000065 (Act of Location Change, pinned CCO 2024-11-06: 'An Act of Motion in which the location of some Object is changed by some Agent'): the hazardous material changes location. Hazardous material is a definitional material input. Semantic correction (BPO architect, 2026-11-03): previously anchored to cco:ont00000595 (Act of Cargo Transportation), whose pinned definition is 'the movement of manufactured goods through some Transportation Agent'; hazardous material also includes raw materials, waste and other substances that are not manufactured goods, so that parent narrowed the class. An instance that moves manufactured goods may also be an Act of Cargo Transportation; that does not make 595 a universal parent." ;
     skos:example "A licensed carrier transports drums of spent solvent from a plant to a treatment facility with manifest tracking." ;
-    rdfs:subClassOf cco:ont00000595 ,
-        cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000595, asserted so S2/S5 resolve standalone)
+    rdfs:subClassOf cco:ont00000065 ,   # Act of Location Change
+        cco:ont00000228 ,   # Planned Act (explicit anchor; entailed via cco:ont00000065, asserted so S2/S5 resolve standalone)
         [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:HazardousMaterial ] .
 
 ####################################################################
