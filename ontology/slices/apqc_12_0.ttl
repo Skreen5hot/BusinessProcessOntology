@@ -362,13 +362,13 @@ bpo:LenderRelationsManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:StakeholderRelationshipManagementCapability ;   # => cco:ont00000568 Organization Capability
     rdfs:label "Lender Relations Management Capability" ;
     skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
-    rdfs:comment "Minted for 12.1.1 (P11035), re-judged under R5 as a standing function -> Organization Capability, reconciled with the parallel 'manage relations' rows 12.2.1-3 which are likewise capabilities (Gate-F cross-row consistency). Realized in the bounded lender-relationship-cultivation episodes via obo:BFO_0000054." .
+    rdfs:comment "Minted for 12.1.1 (P11035), re-judged under R5 as a standing function -> Organization Capability, reconciled with the parallel 'manage relations' rows 12.2.1-3 which are likewise capabilities (Gate-F cross-row consistency). Realized in the bounded lender-relationship-cultivation episodes via obo:BFO_0000054. Since Decision A (BPO architect, 2026-11-03), bpo:P11035 is the activity, a process, and this class is the capability that can be realized in it." .
 
 bpo:AnalystRelationsManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:StakeholderRelationshipManagementCapability ;   # => cco:ont00000568 Organization Capability
     rdfs:label "Analyst Relations Management Capability" ;
     skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
-    rdfs:comment "Minted for 12.1.2 (P11036), re-judged under R5 as a standing function -> Organization Capability ('creating and maintaining LONG-TERM relations' signals the no-natural-end / standing-capacity branch), reconciled with 12.2.1-3 (Gate-F cross-row consistency). Realized in the bounded analyst-relationship-cultivation episodes via obo:BFO_0000054." .
+    rdfs:comment "Minted for 12.1.2 (P11036), re-judged under R5 as a standing function -> Organization Capability ('creating and maintaining LONG-TERM relations' signals the no-natural-end / standing-capacity branch), reconciled with 12.2.1-3 (Gate-F cross-row consistency). Realized in the bounded analyst-relationship-cultivation episodes via obo:BFO_0000054. Since Decision A (BPO architect, 2026-11-03), bpo:P11036 is the activity, a process, and this class is the capability that can be realized in it." .
 
 ####################################################################
 # 5. INPUT INFORMATION CONTENT ENTITIES
@@ -592,7 +592,7 @@ bpo:PaymentInstrument a owl:Class ;
 bpo:CultivateLenderRelations a owl:Class ;
     rdfs:label "Cultivate Lender Relations" ;
     skos:definition "An Act of Relationship Management that cultivates and sustains an organization's relationship with one or more lenders during a bounded engagement episode, fostering a receptive environment for favorable lending terms, and has a lender as participant." ;
-    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.1: the discrete episodes (a cultivation act, a banking meeting, a communication) in which bpo:LenderRelationsManagementCapability is realized (obo:BFO_0000054). The Lender is a definitional participant; typical relationship/contact data I/O is non-definitional (Phase-3) and omitted." ;
+    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.1: the discrete episodes (a cultivation act, a banking meeting, a communication) in which bpo:LenderRelationsManagementCapability is realized (obo:BFO_0000054). The Lender is a definitional participant; typical relationship/contact data I/O is non-definitional (Phase-3) and omitted. Since Decision A (BPO architect, 2026-11-03), bpo:P11035 is the activity, a process; episodes of this kind may be its process parts, but no restriction says every instance has one." ;
     skos:example "A treasury team's quarterly banker briefing to secure a low-rate credit line." ;
     rdfs:subClassOf bpo:ActOfRelationshipManagement ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Lender ] .
@@ -600,7 +600,7 @@ bpo:CultivateLenderRelations a owl:Class ;
 bpo:CultivateAnalystRelations a owl:Class ;
     rdfs:label "Cultivate Analyst Relations" ;
     skos:definition "An Act of Relationship Management that cultivates and sustains an organization's relationship with one or more financial analysts during a bounded engagement episode in order to elicit market intelligence, and has a financial analyst as participant." ;
-    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.2: the discrete episodes (analyst meetings, briefings) in which bpo:AnalystRelationsManagementCapability is realized (obo:BFO_0000054). The FinancialAnalyst is a definitional participant of these episode acts (not of a capability), per the Gate-F fix." ;
+    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.2: the discrete episodes (analyst meetings, briefings) in which bpo:AnalystRelationsManagementCapability is realized (obo:BFO_0000054). The FinancialAnalyst is a definitional participant of these episode acts (not of a capability), per the Gate-F fix. Since Decision A (BPO architect, 2026-11-03), bpo:P11036 is the activity, a process; episodes of this kind may be its process parts, but no restriction says every instance has one." ;
     skos:example "An investor-relations officer's briefing with a sell-side analyst ahead of an earnings release." ;
     rdfs:subClassOf bpo:ActOfRelationshipManagement ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:FinancialAnalyst ] .
@@ -613,7 +613,7 @@ bpo:P11010 a owl:Class ;
     bpo:apqcSourceText "Creating a strategic management responsibility for integrating finance, communication, marketing, and securities law compliance. Allow the most effective two-way communication among the organization, the financial community, and other constituencies. Enlist the investor relations function to provide market intelligence to corporate management." ;
     rdfs:label "Build investor relationships" ;
     skos:definition "An Investor Relations Capability that inheres in an Organization in virtue of its capacity to realize the integrated two-way engagement of the organization with lenders, analysts, and shareholders." ;
-    rdfs:comment "Modeled as an Organization Capability (R6), not a process: APQC describes a standing 'strategic management responsibility' / 'investor relations function' with no natural end. Specializes the shared bpo:InvestorRelationsCapability. Two of its three APQC children (12.1.1, 12.1.2) are themselves standing functions re-judged as capabilities under R5 (bpo:LenderRelationsManagementCapability, bpo:AnalystRelationsManagementCapability); a capability is realized only in PROCESSES (BFO_0000054), so this umbrella capability is realized in the bounded episode acts bpo:CultivateLenderRelations / bpo:CultivateAnalystRelations and in the shareholder-communication process bpo:P11037, not in the sub-capabilities." ;
+    rdfs:comment "Modeled as an Organization Capability (R6), not a process: APQC describes a standing 'strategic management responsibility' / 'investor relations function' with no natural end. Specializes the shared bpo:InvestorRelationsCapability. Two of its three APQC children (12.1.1, 12.1.2) are themselves standing functions re-judged as capabilities under R5 (bpo:LenderRelationsManagementCapability, bpo:AnalystRelationsManagementCapability); a capability is realized only in PROCESSES (BFO_0000054), so this umbrella capability is realized in the bounded episode acts bpo:CultivateLenderRelations / bpo:CultivateAnalystRelations and in the shareholder-communication process bpo:P11037, not in the sub-capabilities. Since Decision A (BPO architect, 2026-11-03), 12.1.1 and 12.1.2 (bpo:P11035, bpo:P11036) are acts, not capabilities; this class's own status is in the capability-as-process backlog (docs/wp6/capability-as-process-backlog.md)." ;
     skos:example "An organization's standing investor-relations office that cultivates lender, analyst, and shareholder relationships across fiscal periods." ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
         bpo:InvestorRelationsCapability ,
@@ -621,33 +621,29 @@ bpo:P11010 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:CultivateAnalystRelations ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11037 ] .
 
-# --- 12.1.1 (PCF 11035) : standing lender-relations function -> Capability [R5/R6]
+# --- 12.1.1 (PCF 11035) : lender-relations activity -> Act of Relationship Management (decision A)
 bpo:P11035 a owl:Class ;
     bpo:pcfID "11035" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11035. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.1.1" ;
     bpo:apqcSourceText "Building and managing relations with bankers or lenders through strong products/services strategies that bankers would want to invest in. Foster a receptive environment for low rates of interest, easy access to loans, etc." ;
     rdfs:label "Plan, build, and manage lender relations" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
-    rdfs:comment "RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Plan, build, and manage an ongoing relation ... foster a receptive environment' has no natural beginning or end; it is a standing capacity realized in recurring episodes -- exactly the R5 'standing function -> capability' branch already applied to the parallel 'Manage ... relations' rows 12.2.1 (P11038), 12.2.2 (P11039), 12.2.3 (P11040). Leaf-vs-nonleaf is NOT the R5 ground (R5 is per-node bounded-occurrent, independent of whether children were enumerated), so the prior split mistyped parallel rows. Now an Organization Capability (cco:ont00000568) specializing bpo:LenderRelationsManagementCapability, realized in the bounded bpo:CultivateLenderRelations episodes (obo:BFO_0000054). The Lender participates in those episode acts, not in the capability." ;
-    skos:example "An organization's standing treasury function that nurtures banking relationships across fiscal periods to secure low-rate credit lines." ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        bpo:LenderRelationsManagementCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:CultivateLenderRelations ] .
+    skos:definition "An Act of Relationship Management in which an organization plans, builds, and manages its relationships with bankers and lenders over time, so as to foster a receptive environment for favorable lending terms." ;
+    rdfs:comment "Decision A (BPO architect, 2026-11-03): the APQC row names an activity that is performed, so this class is a process, an Act of Relationship Management; the standing capacity is the separate bpo:LenderRelationsManagementCapability, which can be realized in it (bpo:enablesProcess). The bounded bpo:CultivateLenderRelations episodes may be process parts of an instance, but no has-process-part restriction is asserted: the definition does not make an episode necessary (a programme planned and stopped before any engagement with a lender is still an instance). Earlier: RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Plan, build, and manage an ongoing relation ... foster a receptive environment' has no natural beginning or end; it is a standing capacity realized in recurring episodes -- exactly the R5 'standing function -> capability' branch already applied to the parallel 'Manage ... relations' rows 12.2.1 (P11038), 12.2.2 (P11039), 12.2.3 (P11040). Leaf-vs-nonleaf is NOT the R5 ground (R5 is per-node bounded-occurrent, independent of whether children were enumerated), so the prior split mistyped parallel rows. Now an Organization Capability (cco:ont00000568) specializing bpo:LenderRelationsManagementCapability, realized in the bounded bpo:CultivateLenderRelations episodes (obo:BFO_0000054). The Lender participates in those episode acts, not in the capability." ;
+    skos:example "A treasury function's programme of banker briefings and credit negotiations over a fiscal year." ;
+    rdfs:subClassOf bpo:ActOfRelationshipManagement .
 
-# --- 12.1.2 (PCF 11036) : standing analyst-relations function -> Capability [R5/R6]
+# --- 12.1.2 (PCF 11036) : analyst-relations activity -> Act of Relationship Management (decision A)
 bpo:P11036 a owl:Class ;
     bpo:pcfID "11036" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11036. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.1.2" ;
     bpo:apqcSourceText "Creating and maintaining long-term relations with analysts. Involve analysts in strategy and product decisions in order to elicit valuable information." ;
     rdfs:label "Plan, build, and manage analyst relations" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
-    rdfs:comment "RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Creating and maintaining LONG-TERM relations with analysts' is the paradigm of a standing function with no natural end -- 'long-term' actively signals the no-natural-end (standing-capacity) branch of R5 -- the same pattern the module treats as a capability at 12.2.1-3. Reconciled to the same R5 verdict chosen for P11035. Now an Organization Capability (cco:ont00000568) specializing bpo:AnalystRelationsManagementCapability, realized in the bounded bpo:CultivateAnalystRelations episodes (analyst meetings, briefings) via obo:BFO_0000054. The FinancialAnalyst participates in those episode acts, not in the capability." ;
-    skos:example "An organization's standing investor-relations function that maintains relationships with sell-side analysts covering the firm across reporting cycles." ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        bpo:AnalystRelationsManagementCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:CultivateAnalystRelations ] .
+    skos:definition "An Act of Relationship Management in which an organization plans, builds, and manages long-term relationships with financial analysts, so as to elicit market intelligence." ;
+    rdfs:comment "Decision A (BPO architect, 2026-11-03): the APQC row names an activity that is performed, so this class is a process, an Act of Relationship Management; the standing capacity is the separate bpo:AnalystRelationsManagementCapability, which can be realized in it (bpo:enablesProcess). The bounded bpo:CultivateAnalystRelations episodes may be process parts of an instance, but no has-process-part restriction is asserted: the definition does not make an episode necessary (a programme planned and stopped before any engagement with a financial analyst is still an instance). Earlier: RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Creating and maintaining LONG-TERM relations with analysts' is the paradigm of a standing function with no natural end -- 'long-term' actively signals the no-natural-end (standing-capacity) branch of R5 -- the same pattern the module treats as a capability at 12.2.1-3. Reconciled to the same R5 verdict chosen for P11035. Now an Organization Capability (cco:ont00000568) specializing bpo:AnalystRelationsManagementCapability, realized in the bounded bpo:CultivateAnalystRelations episodes (analyst meetings, briefings) via obo:BFO_0000054. The FinancialAnalyst participates in those episode acts, not in the capability." ;
+    skos:example "An investor-relations team's programme of analyst briefings across reporting cycles." ;
+    rdfs:subClassOf bpo:ActOfRelationshipManagement .
 
 # --- 12.1.3 (PCF 11037) : Communication (shareholders) -> CCO Act of Communication
 bpo:P11037 a owl:Class ;

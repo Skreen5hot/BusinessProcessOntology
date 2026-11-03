@@ -66,3 +66,23 @@ Entailed subclass pairs, before and after (direct pairs, ELK): exactly four chan
 3. **The episode classes.** `CultivateLenderRelations` / `CultivateAnalystRelations`
    become parts of the activity. An alternative is to merge them into it. The trial
    keeps them, because the episodes are bounded and the activity is not.
+
+## Decision (BPO architect, 2026-11-03): adopted, with one safeguard
+
+1. **Adopted for P11035 and P11036.** Both are Acts of Relationship Management; the
+   capability classes stay separate, and can be realized in them (`enablesProcess`).
+   Gate F's `BASELINE` went from 39 to 37 in the same commit. The earlier baseline, 39,
+   is kept in this record, in `scripts/refintegrity_check.py`'s comment and in
+   CLAUDE.md.
+2. **Not extended automatically to the other 37.** They are registered as a backlog of
+   classification candidates, and the R5/R6 question as a separate methodology issue
+   (`capability-as-process-backlog.md`).
+3. **Episode classes kept, without the trial's restriction.** The trial asserted
+   `P11035 ⊑ ∃ has process part . CultivateLenderRelations`: every instance would
+   contain a cultivation episode. The definition does not support that: a programme
+   that is planned and stopped before any engagement with a lender is still an
+   instance. So no restriction is asserted. The possible parthood is stated in the
+   comments of the act and of the episode class. The same for P11036.
+
+The P-classes' own `realized in` restrictions to the episodes (from when they were
+capabilities) are gone with the capability parent.

@@ -618,8 +618,10 @@ bpo:RiskManagerRole rdfs:subClassOf cco:ont00000984 .
 #   requiresCapability 0  requiresRole 21  enrichment 11  bare 6  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
+bpo:AnalystRelationsManagementCapability bpo:enablesProcess bpo:P11036 .
 bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P12771 .
 bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P16826 .
+bpo:LenderRelationsManagementCapability bpo:enablesProcess bpo:P11035 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11066 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11067 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11068 .

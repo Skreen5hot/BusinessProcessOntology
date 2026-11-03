@@ -63,9 +63,10 @@ python scripts/consistency_audit.py # cross-slice anchor / drift audit
 - **Gate F** (`scripts/refintegrity_check.py`, run by `corpus_check.sh`) — `bpo:`/`perf:` **referential
   integrity** (every reference resolves to a declared term) + **D7 scheme** conformance, via the
   vendored RefIntegrity linter (`tools/refintegrity/`, needs `node`; SKIPs if absent). Asserts the
-  FR-18 baseline: `dangling_ref 0 · readable_label 0 · capability-as-process 39 · pcf-without-P-iri 0`
-  — the 39 (capabilities wearing `bpo:P<id>` IRIs, `⊑568`) are a tracked backlog, so a **deviation**
-  fails, not the known 39. Update `BASELINE` in the script deliberately if the corpus changes.
+  FR-18 baseline: `dangling_ref 0 · readable_label 0 · capability-as-process 37 · pcf-without-P-iri 0`
+  — the 37 (capabilities wearing `bpo:P<id>` IRIs, `⊑568`) are a tracked backlog
+  (`docs/wp6/capability-as-process-backlog.md`; 39 until WP6 decision A, 2026-11-03, made P11035/P11036
+  acts), so a **deviation** fails, not the known 37. Update `BASELINE` in the script deliberately if the corpus changes.
 - **Gate C does NOT merge CCO** — it validates the slice alone. Each slice's
   `# 1b. CCO SUPERCLASS BRIDGES` block locally asserts the chains the shapes need offline
   (e.g. `371⊑228`, `626⊑853`). This is why a class anchored to an out-of-allowlist CCO term still
