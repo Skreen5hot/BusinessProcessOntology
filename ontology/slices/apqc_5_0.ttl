@@ -496,25 +496,25 @@ bpo:TrainerRole a owl:Class ;
 bpo:ServiceDeliveryCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
     rdfs:label "Service Delivery Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization renders services to its customers." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization renders services to its customers." ;
     rdfs:comment "Shared section-5.0 capability. Standing-function nodes (R5) realize this; the group agent that mints those acts adds the 'realized in some <act>' restriction (R6)." .
 
 bpo:ServiceDeliveryGovernanceCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Service Delivery Governance Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization governs the performance, development, and direction of its service delivery." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization governs the performance, development, and direction of its service delivery." ;
     rdfs:comment "Shared section-5.0 capability for the governance standing-functions in 5.1.1 (e.g. 5.1.1.1-5.1.1.3 'Manage ...' nodes that R5 resolves to capability, not process)." .
 
 bpo:ResourceManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Resource Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization plans, allocates, and monitors the resources needed for service delivery." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization plans, allocates, and monitors the resources needed for service delivery." ;
     rdfs:comment "Shared section-5.0 capability for resource-management standing-functions in 5.2 (e.g. 5.2.2.6 'Monitor and manage resource capacity')." .
 
 bpo:DemandForecastingCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Demand Forecasting Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization forecasts and revises demand for its services." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization forecasts and revises demand for its services." ;
     rdfs:comment "Shared section-5.0 capability underlying the forecasting acts in 5.2.1." .
 
 ####################################################################
@@ -765,13 +765,13 @@ bpo:P20039 a owl:Class ;
 bpo:ServiceDeliveryPerformanceManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability  ;
     rdfs:label "Service Delivery Performance Management Capability" ;
-    skos:definition "A Service Delivery Governance Capability that is realized in the ongoing acts by which an organization conducts and implements performance measures to ensure successful delivery of service to the customer." ;
+    skos:definition "A Service Delivery Governance Capability that can be realized in the ongoing acts by which an organization conducts and implements performance measures to ensure successful delivery of service to the customer." ;
     rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.2 'Manage service delivery performance' [20029]: a standing oversight function with no natural end, so an Organization Capability (cco:ont00000568) rather than a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ServiceDeliveryDevelopmentManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability  ;
     rdfs:label "Service Delivery Development and Direction Management Capability" ;
-    skos:definition "A Service Delivery Governance Capability that is realized in the ongoing acts by which an organization guides the resources that keep the development and direction of service delivery in line with customer needs." ;
+    skos:definition "A Service Delivery Governance Capability that can be realized in the ongoing acts by which an organization guides the resources that keep the development and direction of service delivery in line with customer needs." ;
     rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.3 'Manage service delivery development and direction' [20030]: a standing guidance/management function with no natural end, hence an Organization Capability (cco:ont00000568) not a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################

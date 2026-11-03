@@ -125,6 +125,39 @@ acts of some kind.** Read literally, that is the same necessity claim in prose. 
 are reported, not reworded: a reword (to "can be realized in") is for the architect to
 decide.
 
+**Reworded (BPO architect, 2026-11-03): 57 definitions, not 53.** The 53 above came
+from a search for "is realized in" and "that is realized" only; it missed the
+", realized in" form. A full scan of every `skos:definition` finds 78 that use "realized":
+57 state as fact that a capability (or, for `SupplyChainOrganization`, the capability an
+organization bears) is realized; 20 are backlog P-classes in slice 9; 1 (P19586) uses
+"realized" in the financial sense (collateral realized to recover loans) and is out of
+scope. The 20 backlog P-classes keep their wording: their realized-in axioms are also
+kept, and both are decided with each class's assessment.
+
+Each of the 57 was reviewed. `b8-realization-definitions.tsv` holds, per class, the
+module, the original definition, the revised definition and the rationale:
+
+- **52 modal only.** "is realized in" becomes "can be realized in"; the genus and the
+  differentia are unchanged. Where the definition reads "inheres in … in virtue of its
+  capacity to …, realized in …", the clause becomes ", and that can be realized in …",
+  so that it attaches to the capability, not to the last noun. In four (Benchmarking,
+  Analytics, EHS, Sustainability) "its bounded … acts" becomes "bounded … acts": in the
+  revised clause "its" would refer to the capability, which performs no acts.
+- **5 reworded beyond the modal.** Portfolio, Program and Project Management said
+  "realized in its constituent acts", which makes acts parts of the capability; the
+  acts are now named from each definition's own capacity clause. Human Capital
+  Management said "the human-resources acts of section 7.0", which reads as all and only
+  the acts in that section; the section is now a pointer ("such as those classified in
+  APQC PCF section 7.0"). `SupplyChainOrganization` is an organization's definition: it
+  now "bears a supply-chain management capability that can be realized in" the acts.
+
+These are clarifications of the natural-language definitions. No axiom changes; the
+measured effect is in `semantic-impact-2026-11-03.md`. The architect's alternative
+form ("inheres in … in virtue of that Organization's capacity to perform acts of …")
+was not applied wholesale: where a definition already had that form it was kept, and
+elsewhere the modal change was enough to remove the factual claim without rewriting the
+differentia.
+
 ## The 5 requirements authored in `delivery_processes.ttl` (2026-11-03)
 
 The architect's decision (§4B): the same evidence rule as the generated pairs, each
@@ -141,7 +174,26 @@ assigned to the process), and the evidence that every performance needs it.
 
 The three kept rest on one principle: an agent that performs an act of a kind has the
 ability to perform acts of that kind. Where the capability is defined as exactly that
-ability, the requirement follows from the definitions. **For the architect to confirm.**
+ability, the requirement follows from the definitions.
+
+**Accepted (BPO architect, 2026-11-03)**, as the principle "an agent that successfully
+performs an act of a particular kind demonstrates the ability to perform an act of that
+kind". The three are recorded as accepted, definition-supported necessities, not as
+OWL entailments (`requiresCapability` is an annotation property; nothing is inferred
+from it). Two interpretations go with them, and are now in the scope note of
+`bpo:requiresCapability`:
+
+1. **The bearer is the performer.** The capability must be borne by the agent that
+   actually performs the act. The ability of an organization, a team or a supporting
+   participant is not attributed to an individual.
+2. **Evidence before assignment.** Performing the act is evidence of the capability; it
+   does not show that an agent has the capability before it is assigned. Dispatch relies
+   on evidence of the agent's abilities that is available independently. In
+   `scripts/matchability.py` that evidence is the capabilities each agent declares in
+   `capabilities/agents.json` (a demo fleet), not the assignment itself.
+
+The principle does not license a capability requirement for every process. It applies
+to these three because their capability definitions were reviewed and match the acts.
 
 The removed triples are kept in this table and in each process's comment;
 `enablesProcess` on `PlanAuthoringCapability` (possible realization) is unchanged. If
@@ -152,4 +204,5 @@ would have to be split in two, which is not done here.
 
 1. **The 111 restrictions on the backlog P-classes:** decided per class, with the
    backlog.
-2. **The 53 definitions** that say "is realized in".
+2. ~~**The 53 definitions** that say "is realized in".~~ Decided 2026-11-03: 57
+   reworded (above). The 20 backlog P-class definitions go with item 1.

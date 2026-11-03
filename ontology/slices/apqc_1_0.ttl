@@ -705,7 +705,7 @@ bpo:CompetitorRole a owl:Class ;
 bpo:CompetitiveAnalysisCapability a owl:Class ;
     rdfs:subClassOf cco:ont00001379  ;   # Agent Capability
     rdfs:label "Competitive Analysis Capability" ;
-    skos:definition "An Agent Capability that is realized in Acts of Analyzing Competitors." ;
+    skos:definition "An Agent Capability that can be realized in Acts of Analyzing Competitors." ;
     rdfs:comment "Carried over from the 1.1.1 reference module; the realized-in filler is re-pointed to bpo:P19945 (this module's IRI for 'Identify competitors / Analyze competitors'). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:CompetitiveIntelligenceAnalyst a owl:Class ;

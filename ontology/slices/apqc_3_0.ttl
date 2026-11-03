@@ -703,32 +703,32 @@ bpo:CompetitorRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
 
 bpo:MarketIntelligenceCapability a owl:Class ; rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Market Intelligence Capability" ;
-    skos:definition "An Organization Capability that is realized in Acts of gathering and analyzing market and customer intelligence." ;
+    skos:definition "An Organization Capability that can be realized in Acts of gathering and analyzing market and customer intelligence." ;
     rdfs:comment "Standing capability behind 3.1 (R6)." .
 
 bpo:MarketingManagementCapability a owl:Class ; rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Marketing Management Capability" ;
-    skos:definition "An Organization Capability that is realized in Acts of formulating and managing marketing strategy, plans, channels, and promotions." ;
+    skos:definition "An Organization Capability that can be realized in Acts of formulating and managing marketing strategy, plans, channels, and promotions." ;
     rdfs:comment "Standing capability behind the 'Manage...' nodes of 3.2 and 3.3 (R6). Realized-in axioms for groups 3.3 (PCF 20010 / 10154 / 16629) are attached additively below. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:PricingCapability a owl:Class ; rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Pricing Capability" ;
-    skos:definition "An Organization Capability that is realized in Acts of formulating, executing, and refining pricing." ;
+    skos:definition "An Organization Capability that can be realized in Acts of formulating, executing, and refining pricing." ;
     rdfs:comment "Standing capability behind 3.2.2 and 3.3.3 (R6, the 'Develop and manage pricing' standing function PCF 20593). Realized-in axioms attached additively below. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:SalesManagementCapability a owl:Class ; rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Sales Management Capability" ;
-    skos:definition "An Organization Capability that is realized in Acts of managing leads, accounts, proposals, orders, and sales execution, and the ongoing relationships with customers." ;
+    skos:definition "An Organization Capability that can be realized in Acts of managing leads, accounts, proposals, orders, and sales execution, and the ongoing relationships with customers." ;
     rdfs:comment "Standing capability behind the 'Manage...' nodes of 3.5 (R6). R6 target for PCF 11174 'Manage customer relationships' (a standing function with no natural end, NOT minted as a process); realized in the bounded customer-relationship-management acts (bpo:ManageCustomerRelationships). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ChannelManagementCapability a owl:Class ; rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Channel Management Capability" ;
-    skos:definition "An Organization Capability that is realized in Acts of defining, analyzing, and managing marketing and distribution channels." ;
+    skos:definition "An Organization Capability that can be realized in Acts of defining, analyzing, and managing marketing and distribution channels." ;
     rdfs:comment "Standing capability behind 3.2.3, 3.2.4 ('Define and manage channel strategy', 'Analyze and manage channel performance') (R6). Realized-in axioms for PCF 20006 are attached additively below. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:PartnerManagementCapability a owl:Class ; rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Partner and Alliance Management Capability" ;
-    skos:definition "An Organization Capability that is realized in Acts of developing and managing sales partner and alliance relationships." ;
+    skos:definition "An Organization Capability that can be realized in Acts of developing and managing sales partner and alliance relationships." ;
     rdfs:comment "Standing capability behind 3.4.2 and 3.5.5 (R6)." .
 
 ####################################################################

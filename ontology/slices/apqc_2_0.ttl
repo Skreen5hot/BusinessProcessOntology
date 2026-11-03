@@ -224,13 +224,13 @@ bpo:ProductDataManagementCapability a owl:Class ;
 bpo:DesignCapability a owl:Class ;
     rdfs:subClassOf cco:ont00001379  ;
     rdfs:label "Design Capability" ;
-    skos:definition "An Agent Capability that is realized in Acts of Design of products, services, and processes." ;
+    skos:definition "An Agent Capability that can be realized in Acts of Design of products, services, and processes." ;
     rdfs:comment "Borne by design staff Agents; bearer-agnostic between individual and organization, hence Agent Capability. Realized in the design acts of group 2.3 (e.g. bpo:P19995). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ResearchAndDevelopmentCapability a owl:Class ;
     rdfs:subClassOf cco:ont00001379 ;
     rdfs:label "Research and Development Capability" ;
-    skos:definition "An Agent Capability that is realized in Acts of discovering, developing, and assessing new technologies and product/service concepts." .
+    skos:definition "An Agent Capability that can be realized in Acts of discovering, developing, and assessing new technologies and product/service concepts." .
 
 # --- 2c. Agents / Organizations ---
 

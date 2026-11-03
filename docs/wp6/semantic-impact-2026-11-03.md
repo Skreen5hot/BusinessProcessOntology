@@ -18,7 +18,8 @@ last commit.
 | `1686f4e` | `enablesProcess` label/definition; P21437 uncertain | annotation text; 1 wiring triple removed | no change | unchanged; P21437 had no requirement |
 | `cadaa1d` | delivery requirements audited | 2 `requiresCapability` triples removed | no change | 2 processes still routable, by role alone |
 | `0e2791b` | P12721 parent revised to `bpo:ActOfTransportation` (architect, second decision) | 1 direct parent changed (065 → `ActOfTransportation`); redundant explicit `228` dropped; the registry genus inlined in slice 10 | **1 pair changes** (`P12721 ⊑ 065` → `P12721 ⊑ ActOfTransportation`; 065 stays an ancestor); 4,554 pairs | unchanged; C1–C7 57,793 triples (−1, the dropped `228`); Gate F 37, run with the 900 s linter limit lifted (two timeouts under machine load, then 774 s) |
-| (ITServiceSolution commit) | `ITServiceSolution` narrowed to a material Infrastructure System (`870`) | parent `117` → `870` (+ explicit `BFO_0000040`); new definition; 4 of 20 participant restrictions removed (P20679, P20697, P20815, P20823), 16 kept; slice 8 −15 triples | **1 pair changes** (`ITServiceSolution ⊑ 117` → `⊑ 870`); the class leaves Material Artifact; 4,554 pairs | unchanged; C1–C7 57,778 triples (−15); Gate F 37 (linter 570 s, limit lifted); matchability 30/167 |
+| `6d2b1fa` | `ITServiceSolution` narrowed to a material Infrastructure System (`870`) | parent `117` → `870` (+ explicit `BFO_0000040`); new definition; 4 of 20 participant restrictions removed (P20679, P20697, P20815, P20823), 16 kept; slice 8 −15 triples | **1 pair changes** (`ITServiceSolution ⊑ 117` → `⊑ 870`); the class leaves Material Artifact; 4,554 pairs | unchanged; C1–C7 57,778 triples (−15); Gate F 37 (linter 570 s, limit lifted); matchability 30/167 |
+| (definitions commit) | 57 realization definitions reworded to possible realization | 57 `skos:definition` literals in 12 slices; no axiom (checked: each slice graph minus its definitions is isomorphic to before) | **no change** (4,554 pairs) | unchanged; Gate F 37 (linter 450 s); C1–C7 0; matchability 30/167 |
 
 
 **Dispatch** stays at 30 routable / 167 gaps over 197 processes with requirements
@@ -28,8 +29,9 @@ comparable as rates with the pre-B8 453/64/389.
 
 **Not changed, registered for decision:** `ITServiceSolution` (suspected defect,
 `itservicesolution-review.md`); the 37-class capability-as-process backlog and its
-111 restrictions; the 53 definitions saying "is realized in"; the principle the three
-kept delivery requirements rest on.
+111 restrictions, and the definitions of the 20 backlog P-classes that say they are
+realized (decided with each class). The 53 definitions registered here earlier were
+57, and are reworded (`b8-realization-definitions.tsv`).
 
 **The A9 comparison is untouched.** No template check was added to or removed from
 the instruments that measured S0 and S1.

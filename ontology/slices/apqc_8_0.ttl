@@ -1085,7 +1085,7 @@ bpo:ITRollBackManagementCapability a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20839. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "8.6.2.7" ;
     bpo:apqcSourceText "Manage IT roll-back procedures to return a deployment to its previous operating state when a change or release impedes operational expectations." ;
-    skos:definition "An Organization Capability that is realized in acts of executing IT roll-back plans to return a deployment to its previous operating state." ;
+    skos:definition "An Organization Capability that can be realized in acts of executing IT roll-back plans to return a deployment to its previous operating state." ;
     rdfs:comment "R5/R6: APQC 8.6.2.7 [20839] 'Manage IT roll-back procedures' is a standing roll-back governance function with no natural end, so it is an Organization Capability (cco:ont00000568), not a process. Realized in bpo:P20857 (Execute roll-back plan). Specialization of the shared bpo:ITServiceManagementCapability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 # --- 8.7 (PCF 20866) group umbrella ---

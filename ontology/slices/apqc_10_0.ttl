@@ -529,24 +529,24 @@ bpo:RegulatoryAuthorityRole a owl:Class ; rdfs:subClassOf obo:BFO_0000023 ;
 bpo:FacilityManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Facility Management Capability" ;
-    skos:definition "An Organization Capability that is realized in acts of planning, providing, operating, and maintaining facilities and workspaces." ;
+    skos:definition "An Organization Capability that can be realized in acts of planning, providing, operating, and maintaining facilities and workspaces." ;
     rdfs:comment "Organization Capability (cco:ont00000568) because 'Manage facilities operations' (10.1.4) is a standing organizational function (R5). Realized in the operational location-change acts via obo:BFO_0000054 (see R6 axioms in the 10.1 process block). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:AssetConstructionCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Asset Construction Capability" ;
-    skos:definition "An Organization Capability that is realized in acts of designing, planning, scheduling, and performing the construction of assets." .
+    skos:definition "An Organization Capability that can be realized in acts of designing, planning, scheduling, and performing the construction of assets." .
 
 bpo:AssetMaintenanceCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Asset Maintenance Capability" ;
-    skos:definition "An Organization Capability that is realized in acts of planning, managing, and performing asset maintenance." ;
+    skos:definition "An Organization Capability that can be realized in acts of planning, managing, and performing asset maintenance." ;
     rdfs:comment "Models the 10.3 process-group standing function (R5/R6). Realized in 10.3.1/.2/.3 (see R6 axioms in the 10.3 process block); 10.3 mints no bpo:P19238 process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:AssetDispositionCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Asset Disposition Capability" ;
-    skos:definition "An Organization Capability that is realized in acts of managing the end-of-life disposition of assets, including decommissioning, dismantling, recycling, and abandonment." ;
+    skos:definition "An Organization Capability that can be realized in acts of managing the end-of-life disposition of assets, including decommissioning, dismantling, recycling, and abandonment." ;
     rdfs:comment "Models the 10.4.4 'Manage take-back centers' standing function (R5/R6): a never-ending capacity, not a bounded process. Catalog bridge bpo:PCF_12717 -> this capability." .
 
 # --- 4c. AGENTS / ORGANIZATIONS (cco:ont00001017 / cco:ont00001180) ---

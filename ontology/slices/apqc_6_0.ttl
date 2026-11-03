@@ -303,25 +303,25 @@ bpo:ManagerRole a owl:Class ;
 bpo:CustomerServiceCapability a owl:Class ;
     rdfs:subClassOf cco:ont00001379 ;   # Agent Capability
     rdfs:label "Customer Service Capability" ;
-    skos:definition "An Agent Capability that is realized in acts of handling customer problems, requests, inquiries, and complaints." ;
+    skos:definition "An Agent Capability that can be realized in acts of handling customer problems, requests, inquiries, and complaints." ;
     rdfs:comment "Borne by bpo:CustomerServiceRepresentative. Use bpo:CustomerServiceManagementCapability (Organization Capability) for the org-level standing function." .
 
 bpo:CustomerServiceManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
     rdfs:label "Customer Service Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization plans, delivers, and evaluates customer service." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization plans, delivers, and evaluates customer service." ;
     rdfs:comment "Target for any R5 'Manage ...' node (e.g. the standing function 'Plan and manage customer service work force') that resolves to a capability rather than a process." .
 
 bpo:WarrantyManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
     rdfs:label "Warranty Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization defines, processes, and evaluates product warranties and warranty claims." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization defines, processes, and evaluates product warranties and warranty claims." ;
     rdfs:comment "Target for R5 'Manage warranty ...' standing functions (group 6.3 / 6.5.4)." .
 
 bpo:RecallManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Recall Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization initiates, communicates, reports on, and terminates product recalls." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization initiates, communicates, reports on, and terminates product recalls." ;
     rdfs:comment "Target for R5 'Manage product recalls ...' standing functions (group 6.4). Realized in the end-to-end recall-execution process bpo:P20110 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################

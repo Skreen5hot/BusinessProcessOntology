@@ -700,7 +700,7 @@ bpo:AccountApprovalDecision a owl:Class ;
 bpo:DefaultAccountManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Default Account Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the recovery and collection acts by which an organization handles customer accounts that have not met their agreed repayment obligations." ;
+    skos:definition "An Organization Capability that can be realized in the recovery and collection acts by which an organization handles customer accounts that have not met their agreed repayment obligations." ;
     rdfs:comment "Models APQC 9.2.4.7 'Manage default accounts' (PCF 14008). R5: a standing function with no natural end, so modeled as an Organization Capability (cco:ont00000568) per R6 rather than a process. Bears no bpo:pcfID (supporting class); realized in bpo:P14007 (Perform recovery workout) as a bounded act of that management. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 # -- group 9.3 supporting --
@@ -714,7 +714,7 @@ bpo:ApprovalLimitSpecification a owl:Class ;
 bpo:FinancialPolicyManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Financial Policy Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts of establishing, publishing, and enforcing an organization's accounting policies and procedures." ;
+    skos:definition "An Organization Capability that can be realized in the acts of establishing, publishing, and enforcing an organization's accounting policies and procedures." ;
     rdfs:comment "R5/R6: APQC 9.3.1 'Manage financial policies and procedures' is a standing function (no natural end), so modeled as a capability realized in its bounded child acts. No bpo:pcfID (capability, not a PCF process). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A finance department's ongoing capacity to keep accounting policy current and enforced." .
 
@@ -889,7 +889,7 @@ bpo:TaxInquiryResponse a owl:Class ;
 bpo:InternationalFundsManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "International Funds Management Capability" ;
-    skos:definition "An Organization Capability that is realized in acts of monitoring international rates and currency exposure, managing cross-border fund transfers, hedging currency, and reporting foreign-exchange results so as to manage and consolidate funds across an enterprise's operating units." ;
+    skos:definition "An Organization Capability that can be realized in acts of monitoring international rates and currency exposure, managing cross-border fund transfers, hedging currency, and reporting foreign-exchange results so as to manage and consolidate funds across an enterprise's operating units." ;
     rdfs:comment "Models APQC process group 9.10 (PCF 10737), a standing 'Manage...' function. Per R5/R6 it is an Organization Capability (cco:ont00000568) realized in its four child acts, NOT a process: it has no identifiable single beginning and end. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "An enterprise treasury team's ongoing program for consolidating subsidiary cash and managing cross-border currency risk." .
 
@@ -939,14 +939,14 @@ bpo:TradePreferenceDocumentation a owl:Class ;
 bpo:ImportExportControlCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Import-Export Control Capability" ;
-    skos:definition "An Organization Capability that is realized in the ongoing oversight and direction of the flow of trade into and out of an organization so as to secure financial gains." ;
+    skos:definition "An Organization Capability that can be realized in the ongoing oversight and direction of the flow of trade into and out of an organization so as to secure financial gains." ;
     rdfs:comment "Models APQC 9.11.2 'Control exports and imports' (PCF 14091). R5: 'overseeing and directing the flow of trade' is a standing control function with no natural end -- a capability, not a bounded process. Realized in the global-trade-servicing acts (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A trade-compliance department's standing capacity to govern what the firm imports and exports." .
 
 bpo:RestitutionManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Restitution Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the ongoing administration and oversight of an organization's restitution obligations, including maintaining compliance with applicable legal frameworks and discharging any fines or non-financial measures imposed by authorities." ;
+    skos:definition "An Organization Capability that can be realized in the ongoing administration and oversight of an organization's restitution obligations, including maintaining compliance with applicable legal frameworks and discharging any fines or non-financial measures imposed by authorities." ;
     rdfs:comment "Models APQC 9.11.9 'Handle restitution' (PCF 14097). R5: 'Administering and overseeing all restitution activities... Manage compliance' is a standing managerial function with no natural end -- a capability, not a bounded process. Realized in the underlying restitution/compliance acts (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A legal function's standing capacity to manage court-ordered restitution and regulatory penalties." .
 

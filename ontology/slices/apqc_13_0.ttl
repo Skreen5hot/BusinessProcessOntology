@@ -293,7 +293,7 @@ bpo:TraineeRole a owl:Class ;
 bpo:BusinessProcessManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Business Process Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to govern, define, administer, and improve its business processes, realized in the acts of establishing process governance, defining process frameworks, defining processes, managing process performance, and improving processes." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to govern, define, administer, and improve its business processes, and that can be realized in the acts of establishing process governance, defining process frameworks, defining processes, managing process performance, and improving processes." ;
     rdfs:comment "Models APQC group 13.1 'Manage business processes' (PCF 16378). Per R5/R6 the verb 'Manage' denotes a standing organizational function with no natural end, so it is an Organization Capability realized in the child acts -- NOT a process class. No bpo:P16378 is minted. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 # 13.2 group node (PCF 16400) modeled as an aggregate Organization Capability
@@ -307,19 +307,19 @@ bpo:PortfolioProgramProjectManagementCapability a owl:Class ;
 bpo:PortfolioManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Portfolio Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to establish strategy for, govern, and monitor its business portfolio of investments, holdings, products, businesses, and brands, realized in its constituent acts." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to establish strategy for, govern, and monitor its business portfolio of investments, holdings, products, businesses, and brands, and that can be realized in acts of establishing strategy for, governing, and monitoring that portfolio." ;
     rdfs:comment "Standing-function reading of APQC 13.2.1 'Manage portfolio' (PCF 16401). No bpo:P16401 process is minted; the catalog node bpo:PCF_16401 designates this capability. Wired with obo:BFO_0000054 (realized in) to its constituent acts bpo:P16402/bpo:P16403/bpo:P16404, mirroring the 13.1/13.5 capability pattern. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ProgramManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Program Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to establish, execute, and report on business programs comprising related projects, realized in its constituent acts." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to establish, execute, and report on business programs comprising related projects, and that can be realized in acts of establishing, executing, and reporting on such programs." ;
     rdfs:comment "Standing-function reading of APQC 13.2.2 'Manage programs' (PCF 16405). No bpo:P16405 process is minted; the catalog node bpo:PCF_16405 designates this capability. Wired with obo:BFO_0000054 (realized in) to bpo:P16406..bpo:P16409, mirroring the 13.1/13.5 capability pattern. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ProjectManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Project Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to scope, plan, execute, review, and close business projects, realized in its constituent acts." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to scope, plan, execute, review, and close business projects, and that can be realized in acts of scoping, planning, executing, reviewing, and closing such projects." ;
     rdfs:comment "Standing-function reading of APQC 13.2.3 'Manage projects' (PCF 16410). No bpo:P16410 process is minted; the catalog node bpo:PCF_16410 designates this capability. Wired with obo:BFO_0000054 (realized in) to its constituent Activity acts bpo:P16411/bpo:P11119/bpo:P16413/bpo:P16414/bpo:P16417/bpo:P16418, mirroring the 13.1/13.5 capability pattern. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:EnterpriseQualityManagementCapability a owl:Class ;
@@ -337,31 +337,31 @@ bpo:ChangeManagementCapability a owl:Class ;
 bpo:KnowledgeManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Knowledge Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop strategy for, assess, design, implement, and sustain the management of its collective knowledge, realized in the acts of developing KM strategy, assessing KM capabilities, designing and implementing KM capabilities, and evolving and sustaining them." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop strategy for, assess, design, implement, and sustain the management of its collective knowledge, and that can be realized in the acts of developing KM strategy, assessing KM capabilities, designing and implementing KM capabilities, and evolving and sustaining them." ;
     rdfs:comment "Models APQC group 13.5 'Develop and manage enterprise-wide knowledge management capability' (PCF 11073). Per R5/R6 a standing function -> Organization Capability realized in its child acts; the catalog node bpo:PCF_11073 designates this capability. No bpo:P11073 process is minted. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:BenchmarkingCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Benchmarking Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to measure and benchmark the performance of its internal processes and of the organization as a whole against internal or external reference points, realized in its bounded measure-and-benchmark cycles." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to measure and benchmark the performance of its internal processes and of the organization as a whole against internal or external reference points, and that can be realized in bounded measure-and-benchmark cycles." ;
     rdfs:comment "Standing-function reading of APQC 13.6 'Measure and benchmark'. Improved by the bounded act bpo:P11084 'Develop benchmarking capabilities'. Carries a realized-in restriction to the bounded enterprise measure-and-benchmark cycle bpo:P21584 so the dual model (standing capability + bounded cycle) is coherent. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:AnalyticsCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Analytics Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop, manage, and deliver analytics across its data-management pipeline, realized in its bounded analytics acts." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop, manage, and deliver analytics across its data-management pipeline, and that can be realized in bounded analytics acts." ;
     rdfs:comment "Standing-function reading of APQC 13.7 'Develop, manage, and deliver analytics' (PCF 20959). Per R5 the 'Develop/manage/deliver' group node is a standing function -> Organization Capability; the catalog node bpo:PCF_20959 designates this capability. Its 11 bounded leaf acts (bpo:P21459..bpo:P20964) are wired as obo:BFO_0000054 (realized in) fillers, mirroring the 13.1/13.5 capability pattern; they are NOT has-process-part of a capability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:EHSManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "EHS Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to determine, develop, monitor, and manage its environmental, health, and safety program, realized in its bounded EHS acts." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to determine, develop, monitor, and manage its environmental, health, and safety program, and that can be realized in bounded EHS acts." ;
     rdfs:comment "Standing-function reading of APQC 13.8 'Manage environmental health and safety' (PCF 11179). Per R5 the 'Manage' group node is a standing function -> Organization Capability; the catalog node bpo:PCF_11179 designates this capability. Its three bounded group children (bpo:P11180 determine impacts, bpo:P11181 develop program, bpo:P21587 monitor and manage) are wired as obo:BFO_0000054 (realized in) fillers, mirroring the 13.1/13.5 capability pattern. No bpo:P11179 process is minted. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:SustainabilityManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Sustainability Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop and manage its sustainability (ESG) practices, policies, requirements, and reporting, realized in its bounded sustainability acts." ;
+    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop and manage its sustainability (ESG) practices, policies, requirements, and reporting, and that can be realized in bounded sustainability acts." ;
     rdfs:comment "Standing-function reading of APQC 13.9 'Manage sustainability' (PCF 21588). Per R5 the 'Manage' group node is a standing function -> Organization Capability; the catalog node bpo:PCF_21588 designates this capability. Its two bounded process children (bpo:P21589 Develop sustainability capability, bpo:P21598 Manage sustainability capability) are wired as obo:BFO_0000054 (realized in) fillers, mirroring the 13.1/13.5 capability pattern (previously a hollow stub with no realized-in restrictions). No bpo:P21588 process is minted. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
