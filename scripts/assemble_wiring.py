@@ -11,7 +11,8 @@ Inputs:
                                         a slice is harvested too.)
   - capabilities/b8_pairs.tsv          one row per capability->process pair   -- judgment table
                                        (WP6 B8: possible-realization | enabling |
-                                        necessary-requirement | excluded-capability-target)
+                                        necessary-requirement | excluded-capability-target |
+                                        uncertain; the last two are not wired)
 
 Output per section:
   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (pairs classified possible-realization,
@@ -39,7 +40,7 @@ CAP_SCOPE = ROOT / "capabilities" / "capability_scope.json"
 PAIRS = ROOT / "capabilities" / "b8_pairs.tsv"
 ENABLES = {"possible-realization", "enabling", "necessary-requirement"}
 REQUIRES = {"necessary-requirement"}
-CLASSES = ENABLES | {"excluded-capability-target"}
+CLASSES = ENABLES | {"excluded-capability-target", "uncertain"}
 
 SECTION_NAMES = {
     "1": "Develop Vision and Strategy", "2": "Develop and Manage Products and Services",

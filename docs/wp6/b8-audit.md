@@ -41,6 +41,16 @@ The two weak possible realizations:
 - `EmployeeRelationsCapability` → P21437 (monitor employment law): in the same APQC
   group (7.4), but outside the definition's wording.
 
+**Changes after 2026-11-02** (BPO architect, 2026-11-03):
+
+| Pair | Was | Now | Why |
+|---|---|---|---|
+| `LenderRelationsManagementCapability` → P11035, `AnalystRelationsManagementCapability` → P11036 | excluded (capability target) | possible realization | decision A: P11035/P11036 are acts |
+| `EmployeeRelationsCapability` → P21437 | possible realization (weak) | **uncertain**, not wired | outside the capability's definition, no independent evidence (§4C); the count is not kept at 342 for its own sake |
+
+Current totals: **343 possible realizations, 0 enabling, 0 necessary, 12 excluded
+(capability targets: the backlog P-classes), 1 uncertain** (356 pairs).
+
 ## Wiring
 
 | | Before | After |

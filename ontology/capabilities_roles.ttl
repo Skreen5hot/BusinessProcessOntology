@@ -58,9 +58,10 @@ bpo:inGrouping a owl:AnnotationProperty ;
     rdfs:comment "Replaces the delivery roles' subclass axioms to the bpo:Role marker (WP6 B13 K07, BPO architect 2026-10-31): a marker used as a genus wrote a selection vocabulary as a primitive class. SHACL C2 targets members through this property as well as through subclassing." .
 
 bpo:enablesProcess a owl:AnnotationProperty ;
-    rdfs:label "enables process" ;
-    skos:definition "An annotation property that relates an Agent Capability class to a Process class in which instances of that capability type can be realized, or whose performance they enable, without asserting that bearing the capability is a necessary condition for an agent's performance." ;
-    rdfs:comment "Capability -> process class whose execution it enables. BFO grounding is 'has realization' (a capability can be realized in such processes). It states a possible realization or an enabling relation, not that the process needs the capability: since WP6 B8 (BPO architect, 2026-11-02) bpo:requiresCapability is no longer its inverse, and each pair is classified in capabilities/b8_pairs.tsv. Used for authoring scope and wiring-coherence checks." .
+    rdfs:label "can be realized in process" ;
+    skos:definition "An annotation property that relates an Agent Capability class to a Process class whose instances can realize instances of that capability type." ;
+    skos:scopeNote "This class-level association entails neither that any instance of the capability is actually realized, nor that bearing the capability is a necessary requirement for performing a process of that type. That a particular capability instance is realized in a particular process instance is stated with BFO's realized in (obo:BFO_0000054) between the instances." ;
+    rdfs:comment "Capability class -> process class. Each pair is classified in capabilities/b8_pairs.tsv (WP6 B8); bpo:requiresCapability is no longer its inverse. The IRI keeps its historical name: labelled 'enables process' until 2026-11-03, when the BPO architect (WP6 B5 review) narrowed the label and definition to possible realization, because B8 found no enabling-only relation (docs/migrations.tsv). Used for authoring scope and wiring-coherence checks." .
 
 bpo:permissionApplicableToRole a owl:AnnotationProperty ;
     rdfs:label "permission applicable to role" ;

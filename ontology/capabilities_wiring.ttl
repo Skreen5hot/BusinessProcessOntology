@@ -339,7 +339,6 @@ bpo:EmployeePerformanceManagementCapability bpo:enablesProcess bpo:P21434 .
 bpo:EmployeeReferralProgramCapability bpo:enablesProcess bpo:P10440 .
 bpo:EmployeeRelationsCapability bpo:enablesProcess bpo:P10484 .
 bpo:EmployeeRelationsCapability bpo:enablesProcess bpo:P10531 .
-bpo:EmployeeRelationsCapability bpo:enablesProcess bpo:P21437 .
 bpo:EmployeeTrainingCapability bpo:enablesProcess bpo:P10490 .
 bpo:EmployeeTrainingCapability bpo:enablesProcess bpo:P10491 .
 bpo:EmployeeTrainingCapability bpo:enablesProcess bpo:P10492 .
