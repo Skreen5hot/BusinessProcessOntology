@@ -12,7 +12,7 @@
 # then re-run the generator.
 #
 # The process<->agent BRIDGE WIRING, harvested per APQC section:
-#   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from realized-in + scope table)
+#   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from the scope table; possible realizations)
 #   bpo:<proc> bpo:requiresCapability bpo:<cap>    (only pairs capabilities/b8_pairs.tsv
 #                                                   classifies as necessary requirements, WP6 B8)
 #   bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> process participant triad)
@@ -618,6 +618,8 @@ bpo:RiskManagerRole rdfs:subClassOf cco:ont00000984 .
 #   requiresCapability 0  requiresRole 21  enrichment 11  bare 6  unclassified 0
 
 # --- enablesProcess (capability -> process) ---
+bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P12771 .
+bpo:IntellectualPropertyManagementCapability bpo:enablesProcess bpo:P16826 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11066 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11067 .
 bpo:PublicRelationsCapability bpo:enablesProcess bpo:P11068 .

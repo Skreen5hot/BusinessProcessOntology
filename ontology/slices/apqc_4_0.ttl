@@ -813,28 +813,22 @@ bpo:ProductionCapability a owl:Class ; rdfs:subClassOf bpo:SupplyChainManagement
     skos:definition "A Supply Chain Management Capability that is realized in acts of scheduling, producing, assembling, and quality-testing physical products." .
 
 bpo:LogisticsManagementCapability a owl:Class ;
-    rdfs:subClassOf bpo:SupplyChainManagementCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10338 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20936 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10340 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10341 ] ;
+    rdfs:subClassOf bpo:SupplyChainManagementCapability  ;
     rdfs:label "Logistics Management Capability" ;
     skos:definition "A Supply Chain Management Capability that is realized in acts of governing logistics, managing inbound material flow, operating warehousing, and operating outbound transportation." ;
-    rdfs:comment "R5/R6: APQC group 4.4 'Manage logistics and warehousing' (PCF 10219) is a standing oversight function with no natural end, so it is modeled as this Organization Capability rather than a process. It is realized in the four bounded sub-processes 4.4.1-4.4.4. Reconciled: the realization axioms (originally added to bpo:LogisticsManagementCapability in the 4.4 group module) are folded into this single shared declaration." .
+    rdfs:comment "R5/R6: APQC group 4.4 'Manage logistics and warehousing' (PCF 10219) is a standing oversight function with no natural end, so it is modeled as this Organization Capability rather than a process. It is realized in the four bounded sub-processes 4.4.1-4.4.4. Reconciled: the realization axioms (originally added to bpo:LogisticsManagementCapability in the 4.4 group module) are folded into this single shared declaration. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:RawMaterialInventoryManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10304 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Raw Material Inventory Management Capability" ;
     skos:definition "An Organization Capability that inheres in a supply-chain organization in virtue of its capacity to administer the stock and total cost of raw materials supporting production." ;
-    rdfs:comment "Minted for APQC 4.3.2.1 'Manage raw material inventory', a standing administrative function (R5/R6) rather than a bounded process. Realized in bpo:P10304 (Produce/Assemble product), the production acts that consume the managed inventory. Not in the shared vocabulary (bpo:ProductionCapability is broader); proposed as a section-4.0 capability addition." .
+    rdfs:comment "Minted for APQC 4.3.2.1 'Manage raw material inventory', a standing administrative function (R5/R6) rather than a bounded process. Realized in bpo:P10304 (Produce/Assemble product), the production acts that consume the managed inventory. Not in the shared vocabulary (bpo:ProductionCapability is broader); proposed as a section-4.0 capability addition. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:FleetManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10341 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Fleet Management Capability" ;
     skos:definition "An Organization Capability that inheres in a supply-chain organization in virtue of its capacity to administer the transportation vehicles used for delivering end products, covering vehicle financing, maintenance, telematics, driver, speed, fuel, and health-and-safety management." ;
-    rdfs:comment "Gate-F R5 fix for APQC 4.4.4.3 'Manage transportation fleet' [10362]: the source is a textbook STANDING administrative function with no natural end ('Taking care of a range of functions... Manage vehicle financing, maintenance, telematics, driver management, speed management, fuel management, and health and safety management'), so it is modeled as an Organization Capability rather than a bounded Planned Act -- mirroring how group 10219 is handled as bpo:LogisticsManagementCapability. Realized in bpo:P10341, the bounded outbound-transport operations (including fleet maintenance and telematics-monitoring acts) that exercise the fleet. The catalog node bpo:PCF_10362 designates this capability per the ADR-001 R4 bridge." .
+    rdfs:comment "Gate-F R5 fix for APQC 4.4.4.3 'Manage transportation fleet' [10362]: the source is a textbook STANDING administrative function with no natural end ('Taking care of a range of functions... Manage vehicle financing, maintenance, telematics, driver management, speed management, fuel management, and health and safety management'), so it is modeled as an Organization Capability rather than a bounded Planned Act -- mirroring how group 10219 is handled as bpo:LogisticsManagementCapability. Realized in bpo:P10341, the bounded outbound-transport operations (including fleet maintenance and telematics-monitoring acts) that exercise the fleet. The catalog node bpo:PCF_10362 designates this capability per the ADR-001 R4 bridge. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
 # 3. PROCESS CLASSES
@@ -2611,7 +2605,7 @@ bpo:P10341 a owl:Class ;
     bpo:apqcSourceText "Creating a plan that specifies the schedule and system for transportation and delivery of the outbound products, as well as tracking the performance of the carrier delivery system. Conduct vehicle management and processing of all carrier-related documents." ;
     rdfs:label "Operate outbound transportation" ;
     skos:definition "A Planned Act that carries out outbound transportation operations - planning and executing transport and delivery of outbound products, tracking carrier performance, and auditing carrier documents." ;
-    rdfs:comment "Heterogeneous operational aggregate anchored at the generic cco:ont00000228 (Planned Act). Its APQC children are process parts. Gate-F: 4.4.4.3 'Manage transportation fleet' [10362] is NOT a process part here -- it is a standing function demoted to bpo:FleetManagementCapability (R5), which is in turn realized in this bounded outbound-transport cycle." ;
+    rdfs:comment "Heterogeneous operational aggregate anchored at the generic cco:ont00000228 (Planned Act). Its APQC children are process parts. Gate-F: 4.4.4.3 'Manage transportation fleet' [10362] is NOT a process part here -- it is a standing function demoted to bpo:FleetManagementCapability (R5), which is in turn realized in this bounded outbound-transport cycle. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions of the capabilities named here were removed; the link is now a possible realization (bpo:enablesProcess)." ;
     skos:example "A transportation team's cycle from outbound dispatch planning through carrier-invoice audit." ;
     rdfs:subClassOf cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:P10360 ] ,

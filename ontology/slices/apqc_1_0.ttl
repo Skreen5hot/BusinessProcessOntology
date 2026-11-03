@@ -703,11 +703,10 @@ bpo:CompetitorRole a owl:Class ;
     rdfs:comment "Borne by an independent continuant (the rival Organization), never by the analysis ICE that is about it." .
 
 bpo:CompetitiveAnalysisCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00001379 ,   # Agent Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19945 ] ;
+    rdfs:subClassOf cco:ont00001379  ;   # Agent Capability
     rdfs:label "Competitive Analysis Capability" ;
     skos:definition "An Agent Capability that is realized in Acts of Analyzing Competitors." ;
-    rdfs:comment "Carried over from the 1.1.1 reference module; the realized-in filler is re-pointed to bpo:P19945 (this module's IRI for 'Identify competitors / Analyze competitors')." .
+    rdfs:comment "Carried over from the 1.1.1 reference module; the realized-in filler is re-pointed to bpo:P19945 (this module's IRI for 'Identify competitors / Analyze competitors'). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:CompetitiveIntelligenceAnalyst a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,   # Agent
@@ -2383,17 +2382,14 @@ bpo:P20955 a owl:Class ;
     bpo:apqcSourceText "Creating and implementing a strategy, responsibilities and control mechanisms for managing business models that are timely, efficient and cost-effective." ;
     rdfs:label "Establish business model governance" ;
     skos:definition "An Act of Planning that creates and implements the strategy, responsibilities, and control mechanisms for governing an organization's business models and produces a business-model governance policy." ;
-    rdfs:comment "R5/R6: the bounded establishing act passes R5 and is modeled here as a process; the standing governance function it stands up is the pre-existing shared bpo:BusinessModelGovernanceCapability (Organization Capability), reused (not re-minted) and linked via obo:BFO_0000054 (realized in)." ;
+    rdfs:comment "R5/R6: the bounded establishing act passes R5 and is modeled here as a process; the standing governance function it stands up is the pre-existing shared bpo:BusinessModelGovernanceCapability (Organization Capability), reused (not re-minted) and linked via obo:BFO_0000054 (realized in). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions of the capabilities named here were removed; the link is now a possible realization (bpo:enablesProcess)." ;
     skos:example "An organization stands up a model-governance board with a charter, owners, and review controls." ;
     rdfs:subClassOf cco:ont00000511 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:BusinessModelGovernancePolicy ] .
 
 # R6 cross-reference (capability reused from the shared vocabulary, not redefined):
 # the standing function set up by bpo:P20955 is realized in such acts.
-bpo:BusinessModelGovernanceCapability
-    rdfs:subClassOf [ a owl:Restriction ;
-        owl:onProperty obo:BFO_0000054 ;   # realized in
-        owl:someValuesFrom bpo:P20955 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 ####################################################################
 # 4. CATALOG -> REALITY BRIDGES (ADR-001 R4)

@@ -237,11 +237,10 @@ bpo:EnterpriseArchitectRole a owl:Class ;
 ####################################################################
 
 bpo:ITServiceManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20632 ] ;   # realized in
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "IT Service Management Capability" ;
     skos:definition "An Organization Capability that inheres in an IT service provider in virtue of its capacity to design, deliver, manage, and improve the IT services used within an organization." ;
-    rdfs:comment "Section-8.0 shared. Carries the standing 'Define IT service management strategy' heading (8.2.4) that fails the R5 bounded-occurrent test. Organization Capability per CCO (realized in Intentional Acts of a certain type). Gate-F fix on P20632: 8.1.5 'Develop and manage IT service levels' is modeled as a bounded bpo:ActOfFormulation (its concrete deliverable, the SLA, passes R5), so it is NOT listed here as an R5 failure; the standing 'manage service levels' aspect is wired up via the obo:BFO_0000054 (realized in) restriction onto bpo:P20632 above, mirroring how bpo:ITCustomerRelationshipManagementCapability is realized in bpo:P20608." .
+    rdfs:comment "Section-8.0 shared. Carries the standing 'Define IT service management strategy' heading (8.2.4) that fails the R5 bounded-occurrent test. Organization Capability per CCO (realized in Intentional Acts of a certain type). Gate-F fix on P20632: 8.1.5 'Develop and manage IT service levels' is modeled as a bounded bpo:ActOfFormulation (its concrete deliverable, the SLA, passes R5), so it is NOT listed here as an R5 failure; the standing 'manage service levels' aspect is wired up via the obo:BFO_0000054 (realized in) restriction onto bpo:P20632 above, mirroring how bpo:ITCustomerRelationshipManagementCapability is realized in bpo:P20608. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ITRiskManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
@@ -250,14 +249,10 @@ bpo:ITRiskManagementCapability a owl:Class ;
     rdfs:comment "Section-8.0 shared. Target for standing 'Develop and manage IT resilience and risk' / 'Control IT risk, compliance, and security' headings (8.3, 8.3.3) that fail the R5 test." .
 
 bpo:InformationManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20766 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20770 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20776 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20779 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Information Management Capability" ;
     skos:definition "An Organization Capability that inheres in an organization in virtue of its capacity to govern, administer, and control its information and content across the information lifecycle." ;
-    rdfs:comment "Section-8.0 shared. Target for the standing 'Manage information' / 'Manage business information' headings (8.4 [PCF 20765], 8.4.4) that fail the R5 test. Realized (R6) in its four bounded child processes 8.4.1-8.4.4; the capability gets no has-process-part to its children (R3)." .
+    rdfs:comment "Section-8.0 shared. Target for the standing 'Manage information' / 'Manage business information' headings (8.4 [PCF 20765], 8.4.4) that fail the R5 test. Realized (R6) in its four bounded child processes 8.4.1-8.4.4; the capability gets no has-process-part to its children (R3). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ITSupportCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
@@ -272,11 +267,10 @@ bpo:ITInfrastructureManagementCapability a owl:Class ;
     rdfs:comment "Section-8.0 shared. Target for standing 'Develop and manage infrastructure resource planning' / 'Manage infrastructure resource administration' headings (8.7.4, 8.7.7) that fail the R5 test." .
 
 bpo:ITCustomerRelationshipManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20608 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "IT Customer Relationship Management Capability" ;
     skos:definition "An Organization Capability that inheres in an IT service provider in virtue of its capacity to establish, coordinate, and sustain relationships with its IT customers over multiple touch points." ;
-    rdfs:comment "Section-8.0 shared. Target for standing 'Develop and manage IT customer relationships' / 'Manage IT customer relationships' headings (8.1, 8.1.6) that fail the R5 test. 8.1.3.1 (PCF 20618) and 8.1.6 (PCF 20641) are standing functions realized (R6) in the bounded IT-customer-relationship acts of group 8.1." .
+    rdfs:comment "Section-8.0 shared. Target for standing 'Develop and manage IT customer relationships' / 'Manage IT customer relationships' headings (8.1, 8.1.6) that fail the R5 test. 8.1.3.1 (PCF 20618) and 8.1.6 (PCF 20641) are standing functions realized (R6) in the bounded IT-customer-relationship acts of group 8.1. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
 # 2d. MATERIAL ENTITIES (IT assets / infrastructure / components.
@@ -1036,69 +1030,62 @@ bpo:ITIssueRequestData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 # --- 8.2.1.1 (PCF 20654) ---
 bpo:ITStrategicIntelligenceCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20655 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "IT Strategic Intelligence Capability" ;
     bpo:pcfID "20654" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20654. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "8.2.1.1" ;
     bpo:apqcSourceText "Building and maintaining intelligence towards changing organizational goals, supporting management, and operational or functional levels of the business. It is the ability to understand business trends that present threats or opportunities for IT in an organization." ;
     skos:definition "An Organization Capability that inheres in an IT service provider in virtue of its capacity to understand business trends presenting threats or opportunities for IT and to maintain intelligence supporting management and operational levels." ;
-    rdfs:comment "R5/R6 fix for APQC 8.2.1.1 [20654]: the source explicitly states 'It is the ability to understand business trends', a standing capacity with no natural end, so it is modeled as an Organization Capability rather than a bounded act. Realized in bpo:P20655 (Monitor and map current and emerging technologies), the bounded acts that exercise this intelligence. The catalog node bpo:PCF_20654 designates this capability per the ADR-001 R4 bridge." ;
+    rdfs:comment "R5/R6 fix for APQC 8.2.1.1 [20654]: the source explicitly states 'It is the ability to understand business trends', a standing capacity with no natural end, so it is modeled as an Organization Capability rather than a bounded act. Realized in bpo:P20655 (Monitor and map current and emerging technologies), the bounded acts that exercise this intelligence. The catalog node bpo:PCF_20654 designates this capability per the ADR-001 R4 bridge. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "An IT strategy office's standing market-and-technology-intelligence function feeding IT planning." .
 
 # --- 8.2.1.6 (PCF 20659) ---
 bpo:ITStrategicAlignmentMaintenanceCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20657 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "IT Strategic Alignment Maintenance Capability" ;
     bpo:pcfID "20659" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20659. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "8.2.1.6" ;
     bpo:apqcSourceText "Maintaining alignment of the organization's business divisions and staff members with the organization's planned objectives for IT." ;
     skos:definition "An Organization Capability that inheres in an IT service provider in virtue of its capacity to keep the organization's business divisions and staff continuously aligned with its planned IT objectives." ;
-    rdfs:comment "R5/R6 fix for APQC 8.2.1.6 [20659]: 'Maintaining alignment ...' is a standing function with no natural end, modeled as an Organization Capability rather than a bounded act. Realized in bpo:P20657 (Develop IT strategic alignment), the bounded act that establishes the alignment this capability sustains. The catalog node bpo:PCF_20659 designates this capability." ;
+    rdfs:comment "R5/R6 fix for APQC 8.2.1.6 [20659]: 'Maintaining alignment ...' is a standing function with no natural end, modeled as an Organization Capability rather than a bounded act. Realized in bpo:P20657 (Develop IT strategic alignment), the bounded act that establishes the alignment this capability sustains. The catalog node bpo:PCF_20659 designates this capability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "An IT governance team's ongoing function of keeping business units aligned to IT objectives." .
 
 # --- 8.2.5.7 (PCF 20689) ---
 bpo:ITInterdependencyManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20690 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "IT Projects and Services Interdependency Management Capability" ;
     bpo:pcfID "20689" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20689. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "8.2.5.7" ;
     bpo:apqcSourceText "Manage capabilities required for the successful delivery of information technology projects, which, by extension, affect the success of the overall IT services." ;
     skos:definition "An Organization Capability that inheres in an IT service provider in virtue of its capacity to manage the interdependencies among IT projects and services required for their successful delivery." ;
-    rdfs:comment "R5/R6 fix for APQC 8.2.5.7 [20689]: managing interdependencies among projects and services is a standing coordination function with no natural end, modeled as an Organization Capability rather than a bounded act. Realized in bpo:P20690 (Report IT service and project performance), among the bounded control acts that exercise this coordination. The catalog node bpo:PCF_20689 designates this capability." ;
+    rdfs:comment "R5/R6 fix for APQC 8.2.5.7 [20689]: managing interdependencies among projects and services is a standing coordination function with no natural end, modeled as an Organization Capability rather than a bounded act. Realized in bpo:P20690 (Report IT service and project performance), among the bounded control acts that exercise this coordination. The catalog node bpo:PCF_20689 designates this capability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A portfolio office's continuous coordination of cross-project and cross-service dependencies." .
 
 # --- 8.5 (PCF 20784) group umbrella ---
 bpo:DevelopAndManageServicesSolutionsCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20785 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20808 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20817 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Develop and Manage Services/Solutions Capability" ;
     bpo:pcfID "20784" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20784. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "8.5" ;
     bpo:apqcSourceText "Develop and manage services/solutions. Create a strategy, plan the lifecycle, develop the architecture, create and test, and maintain IT services and solutions." ;
     skos:definition "An Organization Capability that inheres in an IT service provider in virtue of its capacity to develop, build, deploy, and maintain IT services and solutions." ;
-    rdfs:comment "APQC group 8.5 [PCF 20784] is a standing 'develop and manage' function with no natural end, so it is modeled as an Organization Capability (R5/R6) realized in its bounded child processes, not as a process with existential has-process-part (R3). The catalog node bpo:PCF_20784 designates this capability." ;
+    rdfs:comment "APQC group 8.5 [PCF 20784] is a standing 'develop and manage' function with no natural end, so it is modeled as an Organization Capability (R5/R6) realized in its bounded child processes, not as a process with existential has-process-part (R3). The catalog node bpo:PCF_20784 designates this capability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "An IT service provider's standing capability to design, build, release, and maintain its service catalogue." .
 
 # --- 8.6.2.7 (PCF 20839) ---
 bpo:ITRollBackManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20857 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "IT Roll-Back Management Capability" ;
     bpo:pcfID "20839" ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20839. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "8.6.2.7" ;
     bpo:apqcSourceText "Manage IT roll-back procedures to return a deployment to its previous operating state when a change or release impedes operational expectations." ;
     skos:definition "An Organization Capability that is realized in acts of executing IT roll-back plans to return a deployment to its previous operating state." ;
-    rdfs:comment "R5/R6: APQC 8.6.2.7 [20839] 'Manage IT roll-back procedures' is a standing roll-back governance function with no natural end, so it is an Organization Capability (cco:ont00000568), not a process. Realized in bpo:P20857 (Execute roll-back plan). Specialization of the shared bpo:ITServiceManagementCapability." .
+    rdfs:comment "R5/R6: APQC 8.6.2.7 [20839] 'Manage IT roll-back procedures' is a standing roll-back governance function with no natural end, so it is an Organization Capability (cco:ont00000568), not a process. Realized in bpo:P20857 (Execute roll-back plan). Specialization of the shared bpo:ITServiceManagementCapability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 # --- 8.7 (PCF 20866) group umbrella ---
 bpo:P20866 a owl:Class ;
@@ -1449,7 +1436,7 @@ bpo:P20632 a owl:Class ;
     bpo:apqcSourceText "Establishing and maintaining service levels for the provision of IT services and solutions. Design and maintain the IT services and solution catalogue, as well as service level agreements. Evaluate the performance of IT service level agreements. Communicate the results to the management." ;
     rdfs:label "Develop and manage IT service levels" ;
     skos:definition "An Act of Formulation that establishes service levels for IT services and solutions and produces a service level agreement, coordinating the maintenance and evaluation of those service levels." ;
-    rdfs:comment "Directive output (SLA). Maintenance/evaluation aspects are decomposed into the data-management and appraisal children below. Gate-F R5/R6 reconciliation: 8.1.5 is kept as this bounded bpo:ActOfFormulation because its concrete deliverable (the SLA) passes the R5 bounded-occurrent test; the standing 'manage service levels' aspect is carried separately by bpo:ITServiceManagementCapability, which is obo:BFO_0000054 (realized in) this act (R6). The earlier self-contradiction -- the capability claiming 8.1.5 fails R5 while 8.1.5 was a bounded process with no realized-in back-edge -- is resolved: one model (bounded process + realizing capability), consistently wired." ;
+    rdfs:comment "Directive output (SLA). Maintenance/evaluation aspects are decomposed into the data-management and appraisal children below. Gate-F R5/R6 reconciliation: 8.1.5 is kept as this bounded bpo:ActOfFormulation because its concrete deliverable (the SLA) passes the R5 bounded-occurrent test; the standing 'manage service levels' aspect is carried separately by bpo:ITServiceManagementCapability, which is obo:BFO_0000054 (realized in) this act (R6). The earlier self-contradiction -- the capability claiming 8.1.5 fails R5 while 8.1.5 was a bounded process with no realized-in back-edge -- is resolved: one model (bounded process + realizing capability), consistently wired. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions of the capabilities named here were removed; the link is now a possible realization (bpo:enablesProcess)." ;
     skos:example "A service-management function defines and publishes the IT SLAs for the year." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:ServiceLevelAgreement ] ,

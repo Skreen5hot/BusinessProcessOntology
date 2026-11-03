@@ -319,11 +319,10 @@ bpo:WarrantyManagementCapability a owl:Class ;
     rdfs:comment "Target for R5 'Manage warranty ...' standing functions (group 6.3 / 6.5.4)." .
 
 bpo:RecallManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20110 ] ;   # realized in
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Recall Management Capability" ;
     skos:definition "An Organization Capability that is realized in the acts by which an organization initiates, communicates, reports on, and terminates product recalls." ;
-    rdfs:comment "Target for R5 'Manage product recalls ...' standing functions (group 6.4). Realized in the end-to-end recall-execution process bpo:P20110 (R6)." .
+    rdfs:comment "Target for R5 'Manage product recalls ...' standing functions (group 6.4). Realized in the end-to-end recall-execution process bpo:P20110 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
 # 2.4 MATERIAL ENTITIES  (operations: bfo:material I/O is legal here, D4)
@@ -967,37 +966,22 @@ bpo:P20092 a owl:Class ;
 ####################################################################
 
 bpo:CustomerServiceWorkforceManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10390 ] ,   # realized in
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10391 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10392 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10393 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Customer Service Workforce Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to plan, schedule, track, and assure the quality of the workforce deployed for customer service provision." ;
-    rdfs:comment "R5/R6: models APQC 6.2.1 'Plan and manage customer service work force' (PCF 10387), a standing function with no natural end, as a capability realized in its four bounded child acts (forecast, schedule, track utilization, monitor interaction quality) rather than as a process." .
+    rdfs:comment "R5/R6: models APQC 6.2.1 'Plan and manage customer service work force' (PCF 10387), a standing function with no natural end, as a capability realized in its four bounded child acts (forecast, schedule, track utilization, monitor interaction quality) rather than as a process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:CustomerInquiryManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10394 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P13482 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10395 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10396 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P16928 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P16937 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Customer Inquiry Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to receive, analyze, resolve, and respond to customer problems, requests, and inquiries and to surface sales opportunities arising from them." ;
-    rdfs:comment "R5/R6: models APQC 6.2.2 'Manage customer service problems, requests, and inquiries' (PCF 10388), a standing 'Manage X' function, as a capability realized in its six bounded child acts rather than as a process." .
+    rdfs:comment "R5/R6: models APQC 6.2.2 'Manage customer service problems, requests, and inquiries' (PCF 10388), a standing 'Manage X' function, as a capability realized in its six bounded child acts rather than as a process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:CustomerComplaintManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10397 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10398 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10399 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10400 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19072 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Customer Complaint Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to receive, route, resolve, respond to, and analyze customer complaints." ;
-    rdfs:comment "R5/R6: models APQC 6.2.3 'Manage customer complaints' (PCF 10389), a standing 'Manage X' function, as a capability realized in its five bounded child acts rather than as a process." .
+    rdfs:comment "R5/R6: models APQC 6.2.3 'Manage customer complaints' (PCF 10389), a standing 'Manage X' function, as a capability realized in its five bounded child acts rather than as a process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:P10390 a owl:Class ;
     bpo:pcfID "10390" ; bpo:hierarchyID "6.2.1.1" ;
@@ -1731,7 +1715,7 @@ bpo:P20110 a owl:Class ;
     bpo:apqcSourceText "Removing defective products from the distribution chain. Participate in audits from watchdog agencies." ;
     rdfs:label "Manage product recalls and regulatory audits" ;
     skos:definition "A Planned Act in which an Organization removes defective products from the distribution chain and participates in audits by regulatory authorities, comprising the initiation, hazard assessment, communication, regulatory reporting, effectiveness monitoring, and termination of a product recall." ;
-    rdfs:comment "Models APQC process group 6.4 as a bounded end-to-end recall-execution occurrent. Its APQC children are process parts (cco:ont00001777), not subclasses. The standing-function 'Manage...' reading is carried by shared bpo:RecallManagementCapability (Organization Capability), which is realized in this process (R6). Anchored at the generic cco:ont00000228 (Planned Act) because the group aggregates heterogeneous sub-acts (planning, appraisal, communication) under no single narrower CCO Act." ;
+    rdfs:comment "Models APQC process group 6.4 as a bounded end-to-end recall-execution occurrent. Its APQC children are process parts (cco:ont00001777), not subclasses. The standing-function 'Manage...' reading is carried by shared bpo:RecallManagementCapability (Organization Capability), which is realized in this process (R6). Anchored at the generic cco:ont00000228 (Planned Act) because the group aggregates heterogeneous sub-acts (planning, appraisal, communication) under no single narrower CCO Act. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions of the capabilities named here were removed; the link is now a possible realization (bpo:enablesProcess)." ;
     skos:example "A manufacturer's end-to-end campaign to recall a defective product batch, from issuing the recall through filing closing reports with the regulator." ;
     rdfs:subClassOf cco:ont00000228 ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:P20111 ] ,

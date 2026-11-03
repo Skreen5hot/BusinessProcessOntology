@@ -280,7 +280,7 @@ bpo:CompensationAndBenefitsCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Compensation and Benefits Capability" ;
     skos:definition "An Organization Capability that inheres in an organization in virtue of its capacity to reward, recognize, compensate, and retain its employees and to administer their benefits and payroll." ;
-    rdfs:comment "For standing functions in group 7.5. Group 7.5's group node (PCF 10412) is mapped to this capability; its R6 realized-in axioms for group 7.5 are added in the group 7.5 section." .
+    rdfs:comment "For standing functions in group 7.5. Group 7.5's group node (PCF 10412) is mapped to this capability; its R6 realized-in axioms for group 7.5 are added in the group 7.5 section. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:WorkforceDeploymentCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
@@ -1128,28 +1128,22 @@ bpo:P17046 a owl:Class ;
 # --- group-7.2 standing functions modeled as capabilities (R5/R6) ---
 
 bpo:RecruitmentVendorManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;   # realized in
-          owl:someValuesFrom bpo:P10440 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Recruitment Vendor Management Capability" ;
     skos:definition "An Organization Capability that is realized in Acts of establishing and maintaining ongoing relationships with recruitment vendors to support sourcing." ;
-    rdfs:comment "APQC 7.2.2.3 (PCF 10455) is a standing function ('establishing and maintaining relationships', no natural end), so per R5/R6 it is modeled as a capability rather than a process class. R6 fix: realized-in relaxed from the narrow bpo:P10454 (Perform recruiting activities/events = career fairs/campus events, which does not realize vendor-relationship management) to the group sourcing process bpo:P10440 (Recruit/Source candidates), whose source text explicitly covers 'Manage relationships with third-party agencies'." .
+    rdfs:comment "APQC 7.2.2.3 (PCF 10455) is a standing function ('establishing and maintaining relationships', no natural end), so per R5/R6 it is modeled as a capability rather than a process class. R6 fix: realized-in relaxed from the narrow bpo:P10454 (Perform recruiting activities/events = career fairs/campus events, which does not realize vendor-relationship management) to the group sourcing process bpo:P10440 (Recruit/Source candidates), whose source text explicitly covers 'Manage relationships with third-party agencies'. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:EmployeeReferralProgramCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P10440 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Employee Referral Program Capability" ;
     skos:definition "An Organization Capability that is realized in Acts of operating an employee-referral program in which employees are rewarded for referring qualified candidates." ;
-    rdfs:comment "APQC 7.2.2.4 (PCF 17047) is a standing function (ongoing program/strategy management), modeled as a capability per R5/R6. R6 fix: realized-in corrected from the narrow bpo:P10454 (Perform recruiting activities/events) -- a copy-paste mis-anchor, since running career fairs does not realize referral-program operation -- to the group sourcing process bpo:P10440 (Recruit/Source candidates), whose source text explicitly covers 'Manage employee referral programs'." .
+    rdfs:comment "APQC 7.2.2.4 (PCF 17047) is a standing function (ongoing program/strategy management), modeled as a capability per R5/R6. R6 fix: realized-in corrected from the narrow bpo:P10454 (Perform recruiting activities/events) -- a copy-paste mis-anchor, since running career fairs does not realize referral-program operation -- to the group sourcing process bpo:P10440 (Recruit/Source candidates), whose source text explicitly covers 'Manage employee referral programs'. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:RecruitmentChannelManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P10440 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Recruitment Channel Management Capability" ;
     skos:definition "An Organization Capability that is realized in Acts of establishing and maintaining recruitment channels and the processes that operate them." ;
-    rdfs:comment "APQC 7.2.2.5 (PCF 17048) is a standing function ('establishing and maintaining channels', open-ended), modeled as a capability per R5/R6. R6 fix: realized-in corrected from the narrow bpo:P10454 (Perform recruiting activities/events) -- which does not realize channel-management -- to the group sourcing process bpo:P10440 (Recruit/Source candidates), under which recruitment-channel operation occurs (P10453 Determine recruitment methods and channels is a part of P10440)." .
+    rdfs:comment "APQC 7.2.2.5 (PCF 17048) is a standing function ('establishing and maintaining channels', open-ended), modeled as a capability per R5/R6. R6 fix: realized-in corrected from the narrow bpo:P10454 (Perform recruiting activities/events) -- which does not realize channel-management -- to the group sourcing process bpo:P10440 (Recruit/Source candidates), under which recruitment-channel operation occurs (P10453 Determine recruitment methods and channels is a part of P10440). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
 # 7.2 (PCF 10410) + 7.2.1 (PCF 10439) and children
@@ -1276,7 +1270,7 @@ bpo:P10440 a owl:Class ;
     bpo:apqcSourceText "Recruiting new candidates for deployment across various functional areas inside the organization. Select methods for sourcing new employees. Manage relationships with third-party agencies. Stage recruitment fairs and drives. Manage employee referral programs." ;
     rdfs:label "Recruit/Source candidates" ;
     skos:definition "An Act of Administration that determines recruitment methods and conducts recruiting activities to source candidates for an organization's open positions." ;
-    rdfs:comment "Process parts are the two bounded sub-acts (determine methods, perform events). The 'manage relationships/programs/channels' children are standing functions modeled as Organization Capabilities (bpo:RecruitmentVendorManagementCapability, bpo:EmployeeReferralProgramCapability, bpo:RecruitmentChannelManagementCapability), realized in this process's acts, not asserted as process parts." ;
+    rdfs:comment "Process parts are the two bounded sub-acts (determine methods, perform events). The 'manage relationships/programs/channels' children are standing functions modeled as Organization Capabilities (bpo:RecruitmentVendorManagementCapability, bpo:EmployeeReferralProgramCapability, bpo:RecruitmentChannelManagementCapability), realized in this process's acts, not asserted as process parts. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions of the capabilities named here were removed; the link is now a possible realization (bpo:enablesProcess)." ;
     skos:example "A talent team selects sourcing channels and runs a campus recruiting drive." ;
     rdfs:subClassOf bpo:ActOfAdministration ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001777 ; owl:someValuesFrom bpo:P10453 ] ,
@@ -1473,14 +1467,12 @@ bpo:P10466 a owl:Class ;
 # task child P20124 (position classification) is re-parented as a realizing act
 # (a capability cannot carry has-process-part).
 bpo:ApplicantDataManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;   # realized in
-          owl:someValuesFrom bpo:P20124 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     bpo:hierarchyID "7.2.5.3" ;
     bpo:apqcSourceText "Keeping track of all the information about the candidates who apply for jobs. Use applicant-tracking systems that can be accessed online as a central location and database for recruitment efforts." ;
     rdfs:label "Applicant Data Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to keep track of and maintain applicant information through an applicant-tracking system, realized in the bounded acts of classifying and recording applicants." ;
-    rdfs:comment "Models APQC 7.2.5.3 (PCF 10467) 'Manage/track applicant data' under R5/R6: an open-ended standing function ('Keeping track of all the information ... a central location and database'), with no natural end, so an Organization Capability (cco:ont00000568) realized in its bounded acts rather than a process. This matches the R5 treatment of its sibling 'Manage X' rows (PCF 10455, 17048). Operates on bpo:ApplicantRecord (non-definitional). The former process-part link to P20124 is re-expressed as a realized-in axiom because capabilities cannot carry has-process-part." ;
+    rdfs:comment "Models APQC 7.2.5.3 (PCF 10467) 'Manage/track applicant data' under R5/R6: an open-ended standing function ('Keeping track of all the information ... a central location and database'), with no natural end, so an Organization Capability (cco:ont00000568) realized in its bounded acts rather than a process. This matches the R5 treatment of its sibling 'Manage X' rows (PCF 10455, 17048). Operates on bpo:ApplicantRecord (non-definitional). The former process-part link to P20124 is re-expressed as a realized-in axiom because capabilities cannot carry has-process-part. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "An organization's standing ability to maintain applicant records in its ATS across hiring rounds." .
 
 bpo:P20124 a owl:Class ;
@@ -1513,55 +1505,39 @@ bpo:P10468 a owl:Class ;
 # --- group-7.3 standing functions modeled as capabilities (R5/R6) ---
 
 bpo:EmployeeOrientationAndDeploymentCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10474 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11243 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P17050 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     bpo:hierarchyID "7.3.1" ;
     bpo:apqcSourceText "Creating and maintaining various employee on-boarding programs typically known as induction programs in order to ensure that the new employees are effectively introduced to the organization and its existing employees. Examine and evaluate the performance of these induction programs. Execute these programs on the ground level." ;
     rdfs:label "Employee Orientation and Deployment Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization to the extent of its capacity to create, maintain, evaluate, and execute employee onboarding and orientation programs." ;
-    rdfs:comment "R6 (R5 = standing function): APQC 7.3.1 'Manage employee orientation and deployment' (PCF 10469) has no natural end, so it is modeled as an Organization Capability realized in its bounded onboarding acts, not as a process." ;
+    rdfs:comment "R6 (R5 = standing function): APQC 7.3.1 'Manage employee orientation and deployment' (PCF 10469) has no natural end, so it is modeled as an Organization Capability realized in its bounded onboarding acts, not as a process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A firm's standing ability to onboard and deploy new hires through its induction program." .
 
 bpo:EmployeePerformanceManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10479 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P21434 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10481 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     bpo:hierarchyID "7.3.2" ;
     bpo:apqcSourceText "Defining individual performance objectives. Review performance in order to provide appraisals. Evaluate the efficiency and effectiveness of the current performance program. Update it regularly." ;
     rdfs:label "Employee Performance Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization to the extent of its capacity to define performance objectives, appraise employee performance, and evaluate and revise its performance-management program." ;
-    rdfs:comment "R6: APQC 7.3.2 'Manage employee performance' (PCF 10470) is a standing function realized in its bounded acts. The sibling APQC node 7.3.2.3 (PCF 21435), itself the standing 'management of reviewing', is subsumed by this capability rather than minted as a process." ;
+    rdfs:comment "R6: APQC 7.3.2 'Manage employee performance' (PCF 10470) is a standing function realized in its bounded acts. The sibling APQC node 7.3.2.3 (PCF 21435), itself the standing 'management of reviewing', is subsumed by this capability rather than minted as a process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "An organization's standing ability to run its annual performance-review cycle." .
 
 bpo:EmployeeCareerDevelopmentCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10487 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10488 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P17051 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     bpo:hierarchyID "7.3.3" ;
     bpo:apqcSourceText "Establishing employee development guidelines. Lay out career paths and plans for them. Manage the development of their skills to enhance their skills, ability, and knowledge." ;
     rdfs:label "Employee Career Development Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization to the extent of its capacity to establish development guidelines, lay out career plans and paths, and administer the development of employee skills and competencies." ;
-    rdfs:comment "R6: APQC 7.3.3 'Manage employee career development' (PCF 10472) is a standing function realized in its bounded acts." ;
+    rdfs:comment "R6: APQC 7.3.3 'Manage employee career development' (PCF 10472) is a standing function realized in its bounded acts. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A firm's standing ability to maintain career ladders and grow its employees' competencies." .
 
 bpo:EmployeeTrainingCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10490 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P16940 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10491 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10492 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10493 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20125 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P21436 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     bpo:hierarchyID "7.3.4" ;
     bpo:apqcSourceText "Creating a link between employee and organizational development needs. Conduct and manage employee training programs by considering the need and availability of these programs." ;
     rdfs:label "Employee Training Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization to the extent of its capacity to align development needs, define competencies, and conduct and manage employee and management training programs." ;
-    rdfs:comment "R6: APQC 7.3.4 'Develop and train employees' (PCF 10473) is a standing function with no natural end, realized in its bounded training acts. Narrower companion to the shared bpo:EmployeeDevelopmentCapability." ;
+    rdfs:comment "R6: APQC 7.3.4 'Develop and train employees' (PCF 10473) is a standing function with no natural end, realized in its bounded training acts. Narrower companion to the shared bpo:EmployeeDevelopmentCapability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." ;
     skos:example "A firm's standing ability to run its corporate training and certification programs." .
 
 ####################################################################
@@ -1828,12 +1804,10 @@ bpo:P21436 a owl:Class ;
 # --- group-7.4 standing functions modeled as capabilities (R5/R6) ---
 
 bpo:LaborRelationsCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10484 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10531 ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Labor Relations Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to administer the relationship between labor and management, realized in acts of collective bargaining and employee-grievance resolution." ;
-    rdfs:comment "Models APQC 7.4.1 'Manage labor relations' (PCF 10483) under R5/R6: a standing function with no natural end, so an Organization Capability (cco:ont00000568) realized in the underlying bounded acts, not a process. Narrower than the shared bpo:EmployeeRelationsCapability." .
+    rdfs:comment "Models APQC 7.4.1 'Manage labor relations' (PCF 10483) under R5/R6: a standing function with no natural end, so an Organization Capability (cco:ont00000568) realized in the underlying bounded acts, not a process. Narrower than the shared bpo:EmployeeRelationsCapability. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:LaborManagementPartnershipCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
@@ -1889,11 +1863,7 @@ bpo:P21437 a owl:Class ;
 #   only the R6 'realized in' axioms for group 7.5 are added here.
 ####################################################################
 
-bpo:CompensationAndBenefitsCapability rdfs:subClassOf
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P21438 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10495 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P21439 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10497 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 ####################################################################
 # 7.5.1 (PCF 21438) and activities
@@ -2505,24 +2475,20 @@ bpo:SuggestionProgramManagement a owl:Class ;
 # --- group-7.7 standing system-administration functions (R5/R6) ---
 
 bpo:HumanResourcesInformationSystemCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:ActOfAdministration ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Human Resources Information System Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to administer and maintain the HR information systems supporting HR, accounting, management, and payroll activities, realized in repeated acts of HR-system administration." ;
-    rdfs:comment "R5/R6: APQC 7.7.4 (PCF 10525) 'Manage human resource information systems HRIS' is a standing function with no natural end ('administering and maintaining' a system), so it is modeled as an Organization Capability rather than a process. Realized in Acts of Administration." .
+    rdfs:comment "R5/R6: APQC 7.7.4 (PCF 10525) 'Manage human resource information systems HRIS' is a standing function with no natural end ('administering and maintaining' a system), so it is modeled as an Organization Capability rather than a process. Realized in Acts of Administration. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:TimeAndAttendanceManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:ActOfAdministration ] ;
+    rdfs:subClassOf cco:ont00000568  ;   # Organization Capability
     rdfs:label "Time and Attendance Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to develop and maintain the systems that track employee time and attendance, realized in repeated acts of time-and-attendance system administration." ;
-    rdfs:comment "R5/R6: APQC 7.7.6 (PCF 10527) 'Develop and manage time and attendance systems' is a standing system-administration function with no natural end, so it is modeled as an Organization Capability rather than a process. Realized in Acts of Administration." .
+    rdfs:comment "R5/R6: APQC 7.7.6 (PCF 10527) 'Develop and manage time and attendance systems' is a standing system-administration function with no natural end, so it is modeled as an Organization Capability rather than a process. Realized in Acts of Administration. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 # R6: the shared standing analytics function is realized in the bounded
 # analytics acts modeled above.
-bpo:WorkforceAnalyticsCapability rdfs:subClassOf
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P21441 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P21447 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 ####################################################################
 # GROUP 7.8 "Manage employee communication" (PCF 21451)
@@ -2570,10 +2536,7 @@ bpo:P10532 a owl:Class ;
 # R6: the shared standing 'Manage employee communication' function is
 # realized in its three constituent acts (additive wiring only; the
 # shared class is not redefined here).
-bpo:EmployeeCommunicationCapability rdfs:subClassOf
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10529 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P16944 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10532 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 ####################################################################
 # 7. CATALOG -> REALITY BRIDGES

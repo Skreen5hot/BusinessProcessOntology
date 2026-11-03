@@ -198,52 +198,34 @@ bpo:CustomerRole a owl:Class ;
 # all present in this single assembled module.
 
 bpo:ProductServicePortfolioManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P10063 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P10074 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Product/Service Portfolio Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to maintain and revamp a portfolio of product/service offerings in alignment with business strategy and market opportunities." ;
-    rdfs:comment "Models APQC 2.1.1 (PCF 10061) as a standing function, not a process (R5/R6); realized in its bounded child acts. Bearer is an Organization." .
+    rdfs:comment "Models APQC 2.1.1 (PCF 10061) as a standing function, not a process (R5/R6); realized in its bounded child acts. Bearer is an Organization. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ProductServiceLifecycleManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P10077 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P10078 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Product/Service Lifecycle Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to introduce, sustain, and withdraw product/service offerings across their life cycle." ;
     rdfs:comment "Models APQC 2.1.2 (PCF 10067) as a standing function, not a process (R5/R6)." .
 
 bpo:IntellectualPropertyManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P16826 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P12771 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Intellectual Property Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to secure, maintain, protect, value, and govern its intellectual property rights, such as patents and copyrights, for its products and services." ;
     rdfs:comment "Models APQC 2.1.3 (PCF 19985) as a standing function, not a process (R5/R6)." .
 
 bpo:ProductDataManagementCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P11741 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P11750 ] ;
+    rdfs:subClassOf cco:ont00000568  ;
     rdfs:label "Product/Service Master Data Management Capability" ;
     skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to securely store, control, and govern access to product/service master data and other critical data." ;
-    rdfs:comment "Models APQC 2.1.4 (PCF 11740) as a standing function, not a process (R5/R6); realized in bpo:ActOfDataManagement instances." .
+    rdfs:comment "Models APQC 2.1.4 (PCF 11740) as a standing function, not a process (R5/R6); realized in bpo:ActOfDataManagement instances. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:DesignCapability a owl:Class ;
-    rdfs:subClassOf cco:ont00001379 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ;
-          owl:someValuesFrom bpo:P19995 ] ;
+    rdfs:subClassOf cco:ont00001379  ;
     rdfs:label "Design Capability" ;
     skos:definition "An Agent Capability that is realized in Acts of Design of products, services, and processes." ;
-    rdfs:comment "Borne by design staff Agents; bearer-agnostic between individual and organization, hence Agent Capability. Realized in the design acts of group 2.3 (e.g. bpo:P19995)." .
+    rdfs:comment "Borne by design staff Agents; bearer-agnostic between individual and organization, hence Agent Capability. Realized in the design acts of group 2.3 (e.g. bpo:P19995). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ResearchAndDevelopmentCapability a owl:Class ;
     rdfs:subClassOf cco:ont00001379 ;

@@ -4,8 +4,11 @@ Inputs:
   - the slices (via scripts/harvest_caps_roles.py)           -- deterministic
   - capabilities/role_anchors.json     {role_iri: cco_anchor|null}  -- judgment table
   - capabilities/capability_scope.json {cap_iri: [process_iri,...]} -- judgment table
-                                       (enablesProcess for standing capabilities
-                                        that have NO realized-in restriction)
+                                       (the processes each capability can be realized
+                                        in; since WP6 B8 step 1, 2026-11-03, it also
+                                        holds the pairs that were slice realized-in
+                                        restrictions. A realized-in restriction still in
+                                        a slice is harvested too.)
   - capabilities/b8_pairs.tsv          one row per capability->process pair   -- judgment table
                                        (WP6 B8: possible-realization | enabling |
                                         necessary-requirement | excluded-capability-target)
@@ -63,7 +66,7 @@ HEADER = """\
 # then re-run the generator.
 #
 # The process<->agent BRIDGE WIRING, harvested per APQC section:
-#   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from realized-in + scope table)
+#   bpo:<cap>  bpo:enablesProcess     bpo:<proc>   (from the scope table; possible realizations)
 #   bpo:<proc> bpo:requiresCapability bpo:<cap>    (only pairs capabilities/b8_pairs.tsv
 #                                                   classifies as necessary requirements, WP6 B8)
 #   bpo:<proc> bpo:requiresRole       bpo:<role>   (bearer -> process participant triad)

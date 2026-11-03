@@ -523,7 +523,7 @@ bpo:FacilityManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Facility Management Capability" ;
     skos:definition "An Organization Capability that is realized in acts of planning, providing, operating, and maintaining facilities and workspaces." ;
-    rdfs:comment "Organization Capability (cco:ont00000568) because 'Manage facilities operations' (10.1.4) is a standing organizational function (R5). Realized in the operational location-change acts via obo:BFO_0000054 (see R6 axioms in the 10.1 process block)." .
+    rdfs:comment "Organization Capability (cco:ont00000568) because 'Manage facilities operations' (10.1.4) is a standing organizational function (R5). Realized in the operational location-change acts via obo:BFO_0000054 (see R6 axioms in the 10.1 process block). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:AssetConstructionCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
@@ -534,7 +534,7 @@ bpo:AssetMaintenanceCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Asset Maintenance Capability" ;
     skos:definition "An Organization Capability that is realized in acts of planning, managing, and performing asset maintenance." ;
-    rdfs:comment "Models the 10.3 process-group standing function (R5/R6). Realized in 10.3.1/.2/.3 (see R6 axioms in the 10.3 process block); 10.3 mints no bpo:P19238 process." .
+    rdfs:comment "Models the 10.3 process-group standing function (R5/R6). Realized in 10.3.1/.2/.3 (see R6 axioms in the 10.3 process block); 10.3 mints no bpo:P19238 process. WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:AssetDispositionCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
@@ -842,9 +842,7 @@ bpo:P10966 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:ProductiveAsset ] .
 
 # --- R6 REALIZATION: 10.1.4 standing capability realized in operational acts ---
-bpo:FacilityManagementCapability rdfs:subClassOf
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10965 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10966 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 ####################################################################
 # ================================================================
@@ -1186,10 +1184,7 @@ bpo:P19228 a owl:Class ;
 ####################################################################
 
 # --- R6 REALIZATION: 10.3 standing capability realized in its sub-processes ---
-bpo:AssetMaintenanceCapability rdfs:subClassOf
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19239 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19245 ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P19253 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 ####################################################################
 # 5.11  PROCESS GROUP 10.3.1  --  Plan asset maintenance  (PCF 19239)

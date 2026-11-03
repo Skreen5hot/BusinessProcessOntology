@@ -139,6 +139,8 @@ capability layer is a **merge-only shared overlay** (no slice imports it).
   since WP6 B8 (2026-11-02) a capability→process pair becomes a requirement only if
   `capabilities/b8_pairs.tsv` classifies it as a *necessary requirement* (none is yet; 342 are
   *possible realizations*, 14 capability targets are excluded). `enablesProcess` is no longer inverted.
+  Since B8 step 1 (2026-11-03) every pair lives in `capability_scope.json`: slices no longer assert
+  `C ⊑ ∃ obo:BFO_0000054 P` on capability classes (ADR-001 R6 amendment; a capability can be unrealized).
 
 **Pipeline (deterministic, reproducible):** `scripts/harvest_caps_roles.py` (manifest) →
 `scripts/derive_wiring.py` (heuristic draft) → judgment tables `capabilities/role_anchors.json` +

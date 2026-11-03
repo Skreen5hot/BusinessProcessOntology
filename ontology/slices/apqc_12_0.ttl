@@ -1265,12 +1265,7 @@ bpo:P11052 a owl:Class ;
 #     Modeled by reusing the shared bpo:PublicRelationsCapability and
 #     asserting its realization in the modeled child acts. The catalog
 #     node bpo:PCF_11014 designates bpo:PublicRelationsCapability.
-bpo:PublicRelationsCapability rdfs:subClassOf
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11066 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11067 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11068 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11069 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11070 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 # --- 12.5.1 (PCF 11066) : Relationship management (community)
 bpo:P11066 a owl:Class ;

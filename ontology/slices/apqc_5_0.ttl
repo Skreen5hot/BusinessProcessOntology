@@ -763,18 +763,16 @@ bpo:P20039 a owl:Class ;
 ####################################################################
 
 bpo:ServiceDeliveryPerformanceManagementCapability a owl:Class ;
-    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20027 ] ;
+    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability  ;
     rdfs:label "Service Delivery Performance Management Capability" ;
     skos:definition "A Service Delivery Governance Capability that is realized in the ongoing acts by which an organization conducts and implements performance measures to ensure successful delivery of service to the customer." ;
-    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.2 'Manage service delivery performance' [20029]: a standing oversight function with no natural end, so an Organization Capability (cco:ont00000568) rather than a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6)." .
+    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.2 'Manage service delivery performance' [20029]: a standing oversight function with no natural end, so an Organization Capability (cco:ont00000568) rather than a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ServiceDeliveryDevelopmentManagementCapability a owl:Class ;
-    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20027 ] ;
+    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability  ;
     rdfs:label "Service Delivery Development and Direction Management Capability" ;
     skos:definition "A Service Delivery Governance Capability that is realized in the ongoing acts by which an organization guides the resources that keep the development and direction of service delivery in line with customer needs." ;
-    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.3 'Manage service delivery development and direction' [20030]: a standing guidance/management function with no natural end, hence an Organization Capability (cco:ont00000568) not a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6)." .
+    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.3 'Manage service delivery development and direction' [20030]: a standing guidance/management function with no natural end, hence an Organization Capability (cco:ont00000568) not a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
 # ===== APQC PROCESS GROUP 5.2 (PCF 20040)
