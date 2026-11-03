@@ -291,10 +291,11 @@ bpo:ITInfrastructureComponent a owl:Class ;
     rdfs:comment "Section-8.0 shared. APQC 8.5.4.1.3 'build and test components', 8.6.4 / 8.7.7.3 install/configure/upgrade components, 8.7.7.1 configuration items. Until WP6 (BPO architect, 2026-11-02) also an Information Processing Artifact (cco:ont00000117), which is 'designed to use algorithms to transform' information content entities: true of a server, not of cabling, racks or other passive components, so that parent was removed. An information-processing device can be classified under CCO's own classes (e.g. Computer, cco:ont00000420, a subclass of 117) where a process needs it; none does. Installed software is no longer covered: no process definition here requires it as a participant." .
 
 bpo:ITServiceSolution a owl:Class ;
-    rdfs:subClassOf cco:ont00000117 ;   # Information Processing Artifact
+    rdfs:subClassOf cco:ont00000870 ,   # Infrastructure System
+        obo:BFO_0000040 ;   # material entity -- explicit anchor (entailed via cco:ont00000870; asserted so the standalone SHACL chain resolves)
     rdfs:label "IT Service/Solution" ;
-    skos:definition "An Information Processing Artifact that is an assembled, deployable information-technology offering (a configured system, application, or service package) made available by an IT function for use by its customers." ;
-    rdfs:comment "Section-8.0 shared. The realized, deployable 'IT service/solution' that 8.5 creates/tests, 8.6 deploys, and 8.7 supports -- as a built artifact (material output of development/deployment via obo:BFO_0000057 has participant, never has output which is reserved for ICEs). Distinct from the INFORMATIONAL descriptors bpo:ITServiceCatalog / bpo:ITSolutionDesignSpecification, which are ICEs about it." .
+    skos:definition "An Infrastructure System that consists of configured information-technology equipment and related material components organized to provide an IT service to an organization or its customers." ;
+    rdfs:comment "Section-8.0 shared. The deployed IT service/solution that 8.5 creates and tests, 8.6 deploys, and 8.7 supports, as a material participant (obo:BFO_0000057). Anchored to cco:ont00000870 (Infrastructure System, pinned CCO 2024-11-06: 'A Material Entity that is composed of elements bearing Infrastructure Roles and is by itself sufficient to provide a planned service or benefit to some organization that maintains its elements'). It covers physical systems that execute software: the software is concretized in the equipment, and is not asserted to be a material component. It excludes software-only applications, service specifications, and the service-provision processes themselves. The Infrastructure Roles its elements bear are stated by the definition, not axiomatized. Distinct from the ICEs about or prescribing it (bpo:ITServiceCatalog, bpo:ITSolutionDesignSpecification, bpo:ITServiceSolutionApproach, bpo:ITServiceSolutionRegister). Semantic correction (BPO architect, 2026-11-03; docs/wp6/itservicesolution-review.md): until then a subclass of cco:ont00000117 (Information Processing Artifact), defined as 'An Information Processing Artifact that is an assembled, deployable information-technology offering (a configured system, application, or service package) made available by an IT function for use by its customers.' That definition named three kinds of entity (a material system, software, an offering) under one material parent. The class is narrowed to the material system; four of its twenty participant restrictions, whose referent was a plan or the services being managed, were removed." .
 
 ####################################################################
 # 2e. INPUT INFORMATION CONTENT ENTITIES (Descriptive unless noted)
@@ -1938,11 +1939,10 @@ bpo:P20679 a owl:Class ;
     bpo:apqcSourceText "Defining and implementing activities involved in designing, creating, delivering, supporting, and managing the lifecycle of information technology services within an organization." ;
     rdfs:label "Define and implement IT service management" ;
     skos:definition "An Act of Deployment that puts IT service management into operational use by defining and implementing the activities across the lifecycle of IT services." ;
-    rdfs:comment "bpo:ActOfDeployment because the act stands up operational ITSM, not merely a directive; the ITSM plan that prescribes it is noted as the governing directive." ;
+    rdfs:comment "bpo:ActOfDeployment because the act stands up operational ITSM, not merely a directive; the ITSM plan that prescribes it is noted as the governing directive. WP6 (BPO architect, 2026-11-03): the restriction 'obo:BFO_0000057 some bpo:ITServiceSolution' was removed when that class was narrowed to a material Infrastructure System (docs/wp6/itservicesolution-review.md): the act puts IT service management (a set of service-management activities, prescribed by the IT Service Management Plan it takes as input) into operation; no configured IT system is a participant of every such act. The existing class already on this process is the referent's class; no class was added." ;
     skos:example "An IT organization rolls out its service-management processes into day-to-day operation." ;
     rdfs:subClassOf bpo:ActOfDeployment ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:ITServiceManagementPlan ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:ITServiceSolution ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:ITServiceManagementPlan ] .
 
 bpo:P20680 a owl:Class ;
     bpo:pcfID "20680" ; bpo:hierarchyID "8.2.4.6" ;
@@ -2129,11 +2129,10 @@ bpo:P20697 a owl:Class ;
     bpo:apqcSourceText "Determining and implementing IT investments, projects, and activities based on trending technological advancements in the existing environment in order to achieve overall business objectives." ;
     rdfs:label "Determine and implement IT portfolio adjustments" ;
     skos:definition "An Act of Deployment that determines and implements adjustments to IT investments, projects, and activities, guided by an IT portfolio adjustment decision, to achieve business objectives." ;
-    rdfs:comment "bpo:ActOfDeployment because the act not only decides but enacts the portfolio changes; the decision is the directive guiding it (has input)." ;
+    rdfs:comment "bpo:ActOfDeployment because the act not only decides but enacts the portfolio changes; the decision is the directive guiding it (has input). WP6 (BPO architect, 2026-11-03): the restriction 'obo:BFO_0000057 some bpo:ITServiceSolution' was removed when that class was narrowed to a material Infrastructure System (docs/wp6/itservicesolution-review.md): the act adjusts IT investments, projects and activities, guided by the IT Portfolio Adjustment Decision it takes as input; an adjustment may cancel or re-fund a project without any configured IT system participating. The existing class already on this process is the referent's class; no class was added." ;
     skos:example "A portfolio board reweights and enacts changes to the IT investment mix." ;
     rdfs:subClassOf bpo:ActOfDeployment ,
-        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:ITPortfolioAdjustmentDecision ] ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:ITServiceSolution ] .
+        [ a owl:Restriction ; owl:onProperty cco:ont00001921 ; owl:someValuesFrom bpo:ITPortfolioAdjustmentDecision ] .
 
 bpo:P20699 a owl:Class ;
     bpo:pcfID "20699" ; bpo:hierarchyID "8.2.7" ;
@@ -3570,10 +3569,9 @@ bpo:P20815 a owl:Class ;
     bpo:apqcSourceText "Creating and implementing a strategy for the deployment of IT service/solution by defining all of the activities that make the IT function available for use. Define the deployment process, procedures, and tools. Select the most feasible and practical methodologies for the deployment process." ;
     rdfs:label "Bundle service/solution deployment packaging" ;
     skos:definition "An Act of Formulation that defines the deployment process, procedures, and tools for an IT service/solution and produces a deployment plan." ;
-    rdfs:comment "Produces the deployment plan (directive); the actual release is bpo:ActOfDeployment downstream and not part of this act. The packaged IT service/solution is a material participant (obo:BFO_0000057)." ;
+    rdfs:comment "Produces the deployment plan (directive); the actual release is bpo:ActOfDeployment downstream and not part of this act. The packaged IT service/solution is a material participant (obo:BFO_0000057). WP6 (BPO architect, 2026-11-03): the restriction 'obo:BFO_0000057 some bpo:ITServiceSolution' was removed when that class was narrowed to a material Infrastructure System (docs/wp6/itservicesolution-review.md): the act formulates the Deployment Plan it outputs; what is packaged is the build (software), and the deployed system is what the plan is about, not a participant of the planning. The existing class already on this process is the referent's class; no class was added." ;
     skos:example "A release manager packages the build and writes the deployment runbook." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:ITServiceSolution ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:DeploymentPlan ] .
 
 bpo:P20816 a owl:Class ;
@@ -3668,10 +3666,9 @@ bpo:P20823 a owl:Class ;
     bpo:apqcSourceText "Developing packaging for fixed/enhanced service/solution based on the standalone or bundled offerings to be used by the organization." ;
     rdfs:label "Prepare fixed/enhanced service/solution packaging" ;
     skos:definition "An Act of Formulation that develops deployment packaging for a fixed or enhanced service/solution and produces a deployment plan." ;
-    rdfs:comment "The packaged IT service/solution is a material participant (obo:BFO_0000057); the deployment plan is the ICE output." ;
+    rdfs:comment "The packaged IT service/solution is a material participant (obo:BFO_0000057); the deployment plan is the ICE output. WP6 (BPO architect, 2026-11-03): the restriction 'obo:BFO_0000057 some bpo:ITServiceSolution' was removed when that class was narrowed to a material Infrastructure System (docs/wp6/itservicesolution-review.md): the act formulates the Deployment Plan it outputs for a fixed or enhanced solution; what is packaged is software, and the deployed system is what the plan is about, not a participant of the planning. The existing class already on this process is the referent's class; no class was added." ;
     skos:example "A release manager packages a patched service as a standalone deployable unit." ;
     rdfs:subClassOf bpo:ActOfFormulation ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:ITServiceSolution ] ,
         [ a owl:Restriction ; owl:onProperty cco:ont00001986 ; owl:someValuesFrom bpo:DeploymentPlan ] .
 
 # ================================================================

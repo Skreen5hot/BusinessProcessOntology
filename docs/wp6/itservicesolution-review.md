@@ -102,3 +102,49 @@ in a broader sense, is to split the class: an Infrastructure System for the depl
 solution, with the offering left to the existing specification and register classes.
 Only the first would be a participant of the 20 processes, so the split would not
 change their axioms.
+
+## Decision and application (BPO architect, 2026-11-03)
+
+**Conditionally approved:** re-anchor under Infrastructure System (`870`), restricted to
+material infrastructure systems, as an intentional semantic correction. The architect's
+definition, applied:
+
+> An Infrastructure System that consists of configured information-technology equipment
+> and related material components organized to provide an IT service to an organization
+> or its customers.
+
+It covers physical systems that execute software, without asserting that the software
+(information content) is a material component. It excludes software-only applications,
+service specifications, and the service-provision processes. This narrows the
+recommendation above, which kept applications in the class "as concretized".
+
+**The 20 references, checked against the narrowed meaning.** The table above said all
+20 fit the material reading. Checked one by one against each process's definition, APQC
+source text and example, four do not:
+
+| Process | Referent of the participant | Disposition |
+|---|---|---|
+| P20679 Define and implement IT service management | the service-management activities being put into operation, prescribed by the input `ITServiceManagementPlan`. No configured system participates in every instance | restriction **removed**; the plan (input) is the existing class |
+| P20697 Determine and implement IT portfolio adjustments | IT investments, projects and activities, guided by the input `ITPortfolioAdjustmentDecision`. An adjustment can cancel or re-fund a project with no system participating | restriction **removed**; the decision (input) is the existing class |
+| P20815 Bundle service/solution deployment packaging | the build being packaged (software; the example: "packages the build and writes the deployment runbook") and the output `DeploymentPlan`, which is *about* the deployed system | restriction **removed**; `DeploymentPlan` (output) is the existing class |
+| P20823 Prepare fixed/enhanced service/solution packaging | as P20815, for a fixed or enhanced solution | restriction **removed**; `DeploymentPlan` (output) |
+| the other 16 (build/test, validate, integrate, maintain, remediate, operate, consolidate change, deploy, release, distribute, roll back, roll out) | the configured system that is built and tested, changed, run or rolled back | **kept** |
+
+Two of the 16 kept are judgment calls, recorded so they can be revisited:
+- **P20814** validation: the APQC text says "the *proposed* IT service/solution", which
+  could be a design. It is kept because the element follows integration (8.5.4.1.4) in
+  the lifecycle, so what it validates is the integrated system.
+- **P20844** consolidate IT change: the consolidation could be read as scheduling (an
+  information act). It is kept because its definition and source text describe
+  integrating the changes into the system, "to make more efficient use of resources and
+  down time".
+
+No class and no property was added. Where the participant was the only object of the
+act, the act keeps its input or output plan. The software-only referent (the build in
+P20815/P20823) is not given a class: no process needs it as a participant, and the
+architect asked that such a class be justified independently.
+
+**Not changed:** P20824 "Deploy services/solutions" has no `ITServiceSolution` participant
+today. Adding one is not in scope here.
+
+Inferred-hierarchy and validation effects: `semantic-impact-2026-11-03.md`.
