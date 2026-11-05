@@ -4,7 +4,8 @@
     python scripts/communications.py          # findings, then open threads
     python scripts/communications.py --json   # the same, as one JSON object
 
-The protocol is communications/README.md. This is the part of it a tool
+The protocol is PROTOCOL.md in Skreen5hot/communications, at the version
+communications/README.md names. This is the part of it a tool
 can hold: the header has every field and each is well formed; the id,
 date, team and direction agree with where the file sits; a reply names a
 message that exists and is not later than itself; every ref names a
@@ -209,9 +210,23 @@ def check_local_ref(root: Path, ref: dict) -> list[str]:
     return []
 
 
-def edits(root: Path, relative: str) -> int:
-    code, out = git(root, "log", "--format=%H", "--", relative)
-    return len(out.split()) if code == 0 else 0
+def edits(root: Path, relative: str) -> list[str]:
+    """The commits that changed a message after it was added, following
+    renames (protocol 1.1, Rule 1): a move that keeps the bytes (git's
+    R100) is not a change; a move that also edits them is."""
+    code, out = git(root, "log", "--follow", "--raw", "--no-abbrev",
+                     "--format=C %H", "--", relative)
+    if code:
+        return []
+    changed, commit = [], None
+    for line in out.decode().splitlines():
+        if line.startswith("C "):
+            commit = line[2:]
+        elif line.startswith(":") and commit:
+            if line.split()[4] not in ("A", "R100"):
+                changed.append(commit)
+            commit = None
+    return changed
 
 
 def collect(root: Path) -> tuple[list[dict], list[str]]:
@@ -279,11 +294,13 @@ def check(root: Path | None = None) -> dict:
                     and not check_ref(ref):
                 problems.extend("%s: %s" % (path, p)
                                 for p in check_local_ref(root, ref))
-        if edits(root, path) > 1:
+        changed = edits(root, path)
+        if changed:
             problems.append(
-                "%s: changed by %d commits. A committed message is never "
-                "edited; send a correction that replies to it."
-                % (path, edits(root, path)))
+                "%s: changed after it was committed (%s). A committed "
+                "message is never edited, even when it moves; send a "
+                "correction that replies to it."
+                % (path, ", ".join(c[:12] for c in changed)))
 
     closed = {m["header"].get("in_reply_to") for m in messages
               if m["header"].get("type") in CLOSING}
