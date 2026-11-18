@@ -149,10 +149,12 @@ bpo:designatesProcessType a owl:AnnotationProperty ;
 # --- 2a. Roles ---
 
 bpo:SeniorManagementRole a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 ;   # role
     rdfs:label "Senior Management Role" ;
+    skos:definition "A Role that is borne by an Agent in virtue of holding senior executive authority over strategy, investment, or product decisions within an Organization." ;
     owl:deprecated true ;
     dct:isReplacedBy bpo:SeniorManagerRole ;
-    rdfs:comment "DEPRECATED 2026-10-31 (WP6 B1): the same role as bpo:SeniorManagerRole -- both borne by an individual Agent in virtue of senior executive authority over an Organization's strategy and direction; this one listed investment and product decisions as well. Consolidated into bpo:SeniorManagerRole (docs/migrations.tsv)." .
+    rdfs:comment "DEPRECATED 2026-10-31 (WP6 B1): the same role as bpo:SeniorManagerRole -- both borne by an individual Agent in virtue of senior executive authority over an Organization's strategy and direction; this one listed investment and product decisions as well. Consolidated into bpo:SeniorManagerRole (docs/migrations.tsv). Definition and parent restored 2026-11-18 (WP6 recommendation 1): a deprecated term keeps its label, definition and parent so what it meant stays readable, as bpo:ActOfCommunication does." .
 
 # Inlined from apqc_1_0.ttl (WP6 B1 consolidation): the role SeniorManagement bears.
 bpo:SeniorManagerRole a owl:Class ;

@@ -5037,7 +5037,7 @@ bpo:Role	role	cap			FNSR Role	obo:BFO_0000023		A Role that an Agent occupies whi
 bpo:SalesAgentRole	role	6			Sales Agent Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with pursuing sales leads and selling an organization's offerings.
 bpo:SalesPartnerRole	role	3			Sales Partner/Alliance Role	obo:BFO_0000023		A Role that is borne by an Organization or Agent in virtue of partnering with a focal organization to market, sell, or distribute its offerings.
 bpo:SalesProfessionalRole	role	3			Sales Professional Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being tasked with selling an organization's offerings.
-bpo:SeniorManagementRole	role	2			Senior Management Role			
+bpo:SeniorManagementRole	role	2			Senior Management Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of holding senior executive authority over strategy, investment, or product decisions within an Organization.
 bpo:SeniorManagerRole	role	1			Senior Manager Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of exercising senior managerial or executive authority over the strategy and direction of an Organization.
 bpo:ServiceDeliveryPersonnelRole	role	5			Service Delivery Personnel Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of being assigned to perform the work of delivering a service to a customer.
 bpo:ShareholderRole	role	12			Shareholder Role	obo:BFO_0000023		A Role that is borne by an Agent in virtue of holding an equity interest in a focal organization.
