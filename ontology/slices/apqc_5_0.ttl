@@ -34,7 +34,7 @@
 #   Act of Planning             cco:ont00000511
 #   Act of Training Instruction cco:ont00001075
 #   Descriptive ICE             cco:ont00000853
-#   Prescriptive (Directive)ICE cco:ont00000965
+#   Directive ICE               cco:ont00000965
 #   Agent                       cco:ont00001017
 #   Organization                cco:ont00001180
 #   Agent Capability            cco:ont00001379
@@ -51,6 +51,7 @@
 <https://fandaws.com/ontology/bpo/slice/5.0> a owl:Ontology ;
     dct:rights """Contains material derived from the APQC Process Classification Framework® (PCF), Cross-Industry version 7.4 (element IDs, hierarchy IDs, names and descriptions), used under APQC's licence, whose notice follows. That material is not covered by this repository's MIT licence (see NOTICE.md). This module is not endorsed by APQC.\n\n©2024 APQC. ALL RIGHTS RESERVED. This Process Classification Framework® (“PCF”) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain a copy of this notice.""" ;
     dct:title "APQC reality-layer slice 5.0: Deliver Services" ;
+    dct:source "APQC Process Classification Framework (Cross-Industry) v7.4" ;
     owl:versionInfo "0.4.1" ;
     rdfs:comment "Reality-layer BFO 2020 / CCO 2.0 module for APQC section 5.0 'Deliver Services'. CCO pin v2.0 (2024-11-06); modeled per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE genus<->output agreement). Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
@@ -64,7 +65,7 @@ bpo:ActOfAcquisition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Acquisition" ;
     skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0). Also rejected cco:ont00001334 (Act of Purchasing) and cco:ont00000389 (Act of Buying): both require a Financial Instrument and descend from cco:ont00000836 (Act of Financial Instrument Use), too narrow for non-purchase acquisitions such as obtaining permits/licenses from an authority or securing financing; purchasing is a species of acquisition, not its genus." .
 
 bpo:ActOfAnalysis a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
@@ -76,8 +77,8 @@ bpo:ActOfForecasting a owl:Class ;
     rdfs:subClassOf cco:ont00000371 ,   # Act of Prediction
         cco:ont00000228 ;               # Planned Act (explicit; Act of Prediction subClassOf Planned Act in CCO, asserted so standalone SHACL S2 resolves)
     rdfs:label "Act of Forecasting" ;
-    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates a future quantity such as demand, volume, revenue, or value." ;
-    rdfs:comment "Inlined canonical shared genus (apqc-ext.ttl registry). Anchored under cco:ont00000371 (Act of Prediction; parent cco:ont00000228), whose definitional output is a Predictive ICE (cco:ont00000626 subClassOf cco:ont00000853) -- exactly the genus of a demand/sales/volume forecast. Recurs in 3.0 and 6.0." .
+    skos:definition "An Act of Prediction in which an Agent extrapolates from historical and current Information Content Entities to produce a Predictive Information Content Entity that estimates an uncertain future quantity, event, or condition, such as demand, volume, revenue, or value." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000371 (Act of Prediction, verified: 'A Planned Act that involves the generation of a Predictive Information Content entity that is intended to describe an uncertain possible future event, value, entity, or attribute'; parent cco:ont00000228), whose definitional output is a Predictive ICE (cco:ont00000626 subClassOf cco:ont00000853 Descriptive ICE) -- exactly the genus of a sales/demand/volume/ROI forecast. Used where a process's definitional output is a forecast or projection of an uncertain future state, as opposed to bpo:ActOfAnalysis, whose output is a plain Descriptive ICE about an existing subject. Output is a PREDICTIVE ICE (a Descriptive ICE about an uncertain future), per the GOLDEN PRINCIPLE. cco:ont00000228 co-asserted so the class anchors to an S2-allowlisted Planned Act. Recurs in slices 3.0, 4.0, 5.0, 6.0, 8.0 and 10.0." .
 
 bpo:ActOfFormulation a owl:Class ;
     rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
@@ -87,7 +88,8 @@ bpo:ActOfFormulation a owl:Class ;
 
 bpo:ActOfIdentification a owl:Class ;
     rdfs:subClassOf cco:ont00000366 ;   # Act of Information Processing
-    rdfs:label "Act of Identification (discernment sense)" ;
+    rdfs:label "Act of Identification" ;
+    skos:scopeNote "Identification in the sense of discerning and enumerating entities of a given kind (risks, needs, opportunities), not of establishing which particular individual something is. The sense was written into the label as '(discernment sense)' until WP6 B10, 2026-10-31." ;
     skos:definition "An Act of Information Processing in which an Agent discerns and enumerates entities of a given kind and produces an Information Content Entity that registers them." ;
     rdfs:comment "Local extension (D9). NOT cco:ont00001261 'Act of Identifying' (a communication act). APQC 'Identify ...' denotes discernment, i.e. information processing." .
 
@@ -107,7 +109,7 @@ bpo:ActOfServiceProvision a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Service Provision" ;
     skos:definition "A Planned Act in which an Agent renders a service to a customer by carrying out and completing the tasks that fulfil an agreed service need." ;
-    rdfs:comment "PROPOSE-EXT (D9). Operations-category signature genus for 'deliver/render/execute/deploy/operate a service' processes. Anchored at the generic cco:ont00000228 (Planned Act) because service provision need not produce or modify an artifact and need not transfer an ICE. Rejected cco:ont00000908 (Act of Material Artifact Processing: its product is a modified Material Artifact, whereas a service need not modify matter) and cco:ont00000402 (Act of Communication: mere ICE transfer). Recurs in operations/IT-service categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0)." .
+    rdfs:comment "PROPOSE-EXT (D9). Operations-category signature genus for 'deliver/render/execute/deploy/operate a service' processes. Anchored at the generic cco:ont00000228 (Planned Act) because service provision need not produce or modify an artifact and need not transfer an ICE. Rejected cco:ont00000908 (Act of Artifact Processing: its product is a modified Material Artifact, whereas a service need not modify matter) and cco:ont00000402 (Act of Communication: mere ICE transfer). Recurs in operations/IT-service categories (4.0, 5.0, 6.0, 8.0, 9.0, 10.0)." .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES
@@ -115,18 +117,22 @@ bpo:ActOfServiceProvision a owl:Class ;
 
 bpo:pcfID a owl:AnnotationProperty ;
     rdfs:label "APQC PCF ID" ;
+    skos:definition "An annotation property that relates an ontology term to the unique process element identifier assigned by APQC to its source row, which remains stable across PCF releases while the conceptual meaning of the element remains unchanged." ;
     rdfs:comment "Stable APQC identifier. Anchor process-class IRIs (bpo:P<pcfID>) to this; it persists across PCF versions." .
 
 bpo:hierarchyID a owl:AnnotationProperty ;
     rdfs:label "APQC Hierarchy ID" ;
+    skos:definition "An annotation property that relates an ontology term to the dotted-decimal hierarchy identifier assigned to its source row in a particular release of the APQC Process Classification Framework, whose value may change between releases." ;
     rdfs:comment "Positional dotted-decimal locator. NON-STABLE across PCF versions. Reference only; never for IRI minting or subsumption." .
 
 bpo:apqcSourceText a owl:AnnotationProperty ;
     rdfs:label "APQC source description" ;
+    skos:definition "An annotation property that relates an ontology term to the verbatim element description of its source row in a specified release of the APQC Process Classification Framework." ;
     rdfs:comment "Verbatim APQC Element Description retained for provenance." .
 
 bpo:designatesProcessType a owl:AnnotationProperty ;
     rdfs:label "designates process type" ;
+    skos:definition "An annotation property that relates an APQC PCF catalog concept to an OWL class representing the Process type or Organization Capability type designated by that concept." ;
     rdfs:comment "Catalog->reality bridge: relates an APQC catalog node (bpo:PCF_<pcfID>) to the reality-layer class (process or capability) it designates." .
 
 ####################################################################
@@ -155,7 +161,8 @@ bpo:CustomerRequirements a owl:Class ;
 bpo:CustomerFeedback a owl:Class ;
     rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Customer Feedback" ;
-    skos:definition "A Descriptive Information Content Entity that describes a customer's evaluation of services rendered, solicited to inform improvement of service delivery." ;
+    skos:definition "A Descriptive Information Content Entity that describes customers' responses to, opinions of, or evaluations of an organization's products, services, or experiences." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes a customer's evaluation of services rendered, solicited to inform improvement of service delivery." ;
     rdfs:comment "Shared section-5.0 input. Recurs across 5.1.1.4, 5.2.3.7, 5.3.3.6." .
 
 bpo:HistoricalDemandData a owl:Class ;
@@ -190,13 +197,14 @@ bpo:DemandForecast a owl:Class ;
     rdfs:subClassOf cco:ont00000626 ,   # Predictive ICE
         cco:ont00000853 ;   # its parent Descriptive ICE, asserted so standalone SHACL S3 resolves
     rdfs:label "Demand Forecast" ;
-    skos:definition "A Predictive Information Content Entity that describes the anticipated (uncertain, future) level of customer demand for an organization's services." ;
+    skos:definition "A Predictive Information Content Entity that estimates the anticipated future demand for an organization's products or services." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Predictive Information Content Entity that describes the anticipated (uncertain, future) level of customer demand for an organization's services." ;
     rdfs:comment "Shared section-5.0 output. Baseline (5.2.1.2) and consensus (5.2.1.4) forecasts are both Demand Forecasts; bpo:ConsensusDemandForecast specialises this. PREDICTIVE (cco:ont00000626, a Descriptive ICE about an uncertain future), matching the Slice-3 forecast pattern -- produced by bpo:ActOfForecasting." .
 
 bpo:ConsensusDemandForecast a owl:Class ;
     rdfs:subClassOf bpo:DemandForecast ;
     rdfs:label "Consensus Demand Forecast" ;
-    skos:definition "A Demand Forecast that describes a level of future demand agreed upon by reconciling baseline forecasts with customer input." ;
+    skos:definition "A Demand Forecast that describes a level of anticipated demand agreed upon by reconciling baseline forecasts with customer input." ;
     rdfs:comment "Shared section-5.0 output (5.2.1.4)." .
 
 bpo:ForecastAccuracyAssessment a owl:Class ;
@@ -320,19 +328,22 @@ bpo:WorkplaceLayoutPlan a owl:Class ;
 bpo:ResourcePlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Resource Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes how the personnel, physical resources, and capabilities required to deliver services are to be provisioned and allocated." ;
+    skos:definition "A Directive Information Content Entity that prescribes how personnel, physical resources, and capabilities are to be provisioned and allocated to a body of work." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes how the personnel, physical resources, and capabilities required to deliver services are to be provisioned and allocated." ;
     rdfs:comment "Shared section-5.0 output (5.2.2.2, 5.3.1.6). Directive: a plan prescribes intended provisioning." .
 
 bpo:TrainingPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Training Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors for teaching service-delivery personnel a skill or behaviour." ;
+    skos:definition "A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors by which personnel are to be taught the skills and behaviours their roles require." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the actions, timing, locations, and instructors for teaching service-delivery personnel a skill or behaviour." ;
     rdfs:comment "Shared section-5.0 output (5.2.3.1). Directive: a training plan prescribes how training is to be conducted." .
 
 bpo:ProjectPlan a owl:Class ;
     rdfs:subClassOf cco:ont00000965 ;
     rdfs:label "Project Plan" ;
-    skos:definition "A Directive Information Content Entity that prescribes the scope, tasks, and sequence by which a service-delivery engagement is to be carried out." ;
+    skos:definition "A Directive Information Content Entity that prescribes the scope, tasks, sequence, resources, and roles by which a project is to be carried out." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the scope, tasks, and sequence by which a service-delivery engagement is to be carried out." ;
     rdfs:comment "Shared section-5.0 output/input (5.3.1.3). Directive: a project plan prescribes intended work." .
 
 bpo:ServiceDeliveryPlan a owl:Class ;
@@ -390,7 +401,8 @@ bpo:TrainingMaterial a owl:Class ;
 
 bpo:ServiceDeliverySolution a owl:Class ;
     rdfs:subClassOf obo:BFO_0000040 ;   # material entity
-    rdfs:label "Service Delivery Solution (deployed artifact)" ;
+    rdfs:label "Service Delivery Solution" ;
+    skos:scopeNote "The deployed artifact itself, not its design or specification. Written into the label as '(deployed artifact)' until WP6 B10, 2026-10-31." ;
     skos:definition "A Material Entity (a built or purchased artifact) that is deployed to a customer to fulfil a service-delivery need." ;
     rdfs:comment "Shared section-5.0 output (5.3.2.6, 5.3.2.7). Modeled as a material entity per the operations material-I/O allowance; where a particular solution is purely informational, group agents may instead use bpo:SolutionSpecification. bpo:SolutionSpecification (Directive ICE) prescribes it; this class is the delivered artifact." .
 
@@ -404,7 +416,8 @@ bpo:Customer a owl:Class ;
           owl:onProperty obo:BFO_0000196 ;   # bearer of
           owl:someValuesFrom bpo:CustomerRole ] ;
     rdfs:label "Customer" ;
-    skos:definition "An Agent that bears a customer role in relation to an organization delivering a service." ;
+    skos:definition "An Agent that bears a customer role in relation to an organization from which it obtains, or seeks to obtain, products or services." ;
+    skos:scopeNote "As used in section 5.0 before WP6 B1 (2026-10-31): An Agent that bears a customer role in relation to an organization delivering a service." ;
     rdfs:comment "Shared section-5.0 participant. Modeled as cco:Agent (not Organization) so that both individual and organizational customers are admitted; group agents may narrow to cco:ont00001180 where the customer is specifically an organization." .
 
 bpo:ServiceProvider a owl:Class ;
@@ -422,7 +435,7 @@ bpo:Supplier a owl:Class ;
           owl:onProperty obo:BFO_0000196 ;
           owl:someValuesFrom bpo:SupplierRole ] ;
     rdfs:label "Supplier" ;
-    skos:definition "An Agent that bears a supplier role in virtue of providing resources, skills, or capabilities that supplement an organization's service delivery." ;
+    skos:definition "An Organization that bears a supplier role in relation to an organization to which it provides materials, goods, parts, services, or capabilities." ;
     rdfs:comment "Shared section-5.0 participant (5.2.2.4, 5.2.2.5, 5.3.1.1). Modeled as cco:Agent to admit both organizational and individual suppliers." .
 
 bpo:DeliveryPartner a owl:Class ;
@@ -483,25 +496,25 @@ bpo:TrainerRole a owl:Class ;
 bpo:ServiceDeliveryCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;   # Organization Capability
     rdfs:label "Service Delivery Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization renders services to its customers." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization renders services to its customers." ;
     rdfs:comment "Shared section-5.0 capability. Standing-function nodes (R5) realize this; the group agent that mints those acts adds the 'realized in some <act>' restriction (R6)." .
 
 bpo:ServiceDeliveryGovernanceCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Service Delivery Governance Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization governs the performance, development, and direction of its service delivery." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization governs the performance, development, and direction of its service delivery." ;
     rdfs:comment "Shared section-5.0 capability for the governance standing-functions in 5.1.1 (e.g. 5.1.1.1-5.1.1.3 'Manage ...' nodes that R5 resolves to capability, not process)." .
 
 bpo:ResourceManagementCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Resource Management Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization plans, allocates, and monitors the resources needed for service delivery." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization plans, allocates, and monitors the resources needed for service delivery." ;
     rdfs:comment "Shared section-5.0 capability for resource-management standing-functions in 5.2 (e.g. 5.2.2.6 'Monitor and manage resource capacity')." .
 
 bpo:DemandForecastingCapability a owl:Class ;
     rdfs:subClassOf cco:ont00000568 ;
     rdfs:label "Demand Forecasting Capability" ;
-    skos:definition "An Organization Capability that is realized in the acts by which an organization forecasts and revises demand for its services." ;
+    skos:definition "An Organization Capability that can be realized in the acts by which an organization forecasts and revises demand for its services." ;
     rdfs:comment "Shared section-5.0 capability underlying the forecasting acts in 5.2.1." .
 
 ####################################################################
@@ -600,6 +613,7 @@ bpo:ServiceDeliveryCompletionConfirmation a owl:Class ;
 # ---- 5.1 group node (PCF 20026): bounded establishment act -------------
 bpo:P20026 a owl:Class ;
     bpo:pcfID "20026" ; bpo:hierarchyID "5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20026. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating rules and regulations for service delivery to the customer. Establish a system to manage performance, delivery, and direction of service delivery. Engage with the customer for satisfaction feedback. Define goals, policies, processes, and workplace layout and infrastructure as a part of the service delivery strategy." ;
     rdfs:label "Establish service delivery governance and strategies" ;
     skos:definition "An Act of Formulation that establishes the governance and strategies for service delivery by standing up service delivery governance and developing the service delivery strategies that define its goals, policies, processes, and workplace layout." ;
@@ -612,6 +626,7 @@ bpo:P20026 a owl:Class ;
 # ---- 5.1.1 (PCF 20027): establish governance -------------------------
 bpo:P20027 a owl:Class ;
     bpo:pcfID "20027" ; bpo:hierarchyID "5.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20027. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing service delivery governance through a system that manages performance, development, and direction. Allow for customer feedback on delivery satisfaction." ;
     rdfs:label "Establish service delivery governance" ;
     skos:definition "An Act of Formulation that establishes service delivery governance by standing up a system to manage delivery performance, development, and direction and to gather customer satisfaction feedback." ;
@@ -623,6 +638,7 @@ bpo:P20027 a owl:Class ;
 # ---- 5.1.1.4 (PCF 20031): solicit customer feedback ------------------
 bpo:P20031 a owl:Class ;
     bpo:pcfID "20031" ; bpo:hierarchyID "5.1.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20031. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Engaging the customer post delivery to gauge the effectiveness of services rendered in order to improve on key delivery functions going forward." ;
     rdfs:label "Solicit feedback from customer on service delivery satisfaction" ;
     skos:definition "An Act of Appraisal that engages the customer after delivery to gauge the effectiveness of services rendered and produces a service delivery satisfaction assessment about that customer." ;
@@ -635,6 +651,7 @@ bpo:P20031 a owl:Class ;
 # ---- 5.1.2 (PCF 20032): develop service delivery strategies ----------
 bpo:P20032 a owl:Class ;
     bpo:pcfID "20032" ; bpo:hierarchyID "5.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20032. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Constructing strategies that identify goals, policies, processes, and procedures in relation to service delivery. Review and validate strategies. Define the workplace layout and infrastructure." ;
     rdfs:label "Develop service delivery strategies" ;
     skos:definition "An Act of Formulation that constructs an organization's service delivery strategies, defining the goals, policies, processes, and workplace layout that govern how services are delivered." ;
@@ -653,6 +670,7 @@ bpo:P20032 a owl:Class ;
 # ---- 5.1.2.1 (PCF 20033): define service delivery goals --------------
 bpo:P20033 a owl:Class ;
     bpo:pcfID "20033" ; bpo:hierarchyID "5.1.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20033. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aligning organization practices to meet the needs of the customer by creating service delivery goals." ;
     rdfs:label "Define service delivery goals" ;
     skos:definition "An Act of Formulation that aligns organizational practice to customer needs by composing the service delivery goals an organization sets for itself." ;
@@ -664,6 +682,7 @@ bpo:P20033 a owl:Class ;
 # ---- 5.1.2.2 (PCF 20034): define labor policies ----------------------
 bpo:P20034 a owl:Class ;
     bpo:pcfID "20034" ; bpo:hierarchyID "5.1.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20034. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Outlining labor policies for resources and ensuring that those policies meet the needs of the organization, the customer, and government regulations." ;
     rdfs:label "Define labor policies" ;
     skos:definition "An Act of Formulation that outlines an organization's labor policies for its delivery resources so as to satisfy the needs of the organization, the customer, and government regulations." ;
@@ -675,6 +694,7 @@ bpo:P20034 a owl:Class ;
 # ---- 5.1.2.3 (PCF 20035): evaluate resource availability -------------
 bpo:P20035 a owl:Class ;
     bpo:pcfID "20035" ; bpo:hierarchyID "5.1.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20035. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understanding the needs of the customer and providing the necessary resources to meet those requirements." ;
     rdfs:label "Evaluate resource availability" ;
     skos:definition "An Act of Appraisal that judges the availability of the resources required to meet customer needs and produces a resource availability assessment." ;
@@ -686,6 +706,7 @@ bpo:P20035 a owl:Class ;
 # ---- 5.1.2.4 (PCF 20036): define network and supply constraints ------
 bpo:P20036 a owl:Class ;
     bpo:pcfID "20036" ; bpo:hierarchyID "5.1.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20036. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying and understanding the limitations imposed upon service delivery network and supply." ;
     rdfs:label "Define service delivery network and supply constraints" ;
     skos:definition "An Act of Analysis that identifies and examines the limitations imposed upon an organization's service delivery network and supply and produces a supply constraint analysis." ;
@@ -697,6 +718,7 @@ bpo:P20036 a owl:Class ;
 # ---- 5.1.2.5 (PCF 20037): define service delivery process ------------
 bpo:P20037 a owl:Class ;
     bpo:pcfID "20037" ; bpo:hierarchyID "5.1.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20037. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Defanging policies and procedures that focus on meeting the needs and expectations of the customer within the working parameters of the organization." ;
     rdfs:label "Define service delivery process" ;
     skos:definition "An Act of Formulation that composes the policies and procedures focused on meeting customer needs and expectations within the organization's working parameters, yielding a service delivery process specification." ;
@@ -708,6 +730,7 @@ bpo:P20037 a owl:Class ;
 # ---- 5.1.2.6 (PCF 20038): review and validate procedures -------------
 bpo:P20038 a owl:Class ;
     bpo:pcfID "20038" ; bpo:hierarchyID "5.1.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20038. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Revisioning service delivery procedures that fall short of performance parameters. Realign procedures with specified expectations in order to provide successful service delivery." ;
     rdfs:label "Review and validate service delivery procedures" ;
     skos:definition "An Act of Appraisal that reviews and validates existing service delivery procedures against performance parameters and produces a service delivery review identifying where they fall short of expectations." ;
@@ -719,6 +742,7 @@ bpo:P20038 a owl:Class ;
 # ---- 5.1.2.7 (PCF 20039): define workplace layout and infrastructure -
 bpo:P20039 a owl:Class ;
     bpo:pcfID "20039" ; bpo:hierarchyID "5.1.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20039. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a workplace that best serves the needs of the organization and customer through strategic layout and infrastructure." ;
     rdfs:label "Define service delivery workplace layout and infrastructure" ;
     skos:definition "An Act of Formulation that designs a service delivery workplace best serving the needs of the organization and customer, yielding a workplace layout plan for its layout and infrastructure." ;
@@ -739,18 +763,16 @@ bpo:P20039 a owl:Class ;
 ####################################################################
 
 bpo:ServiceDeliveryPerformanceManagementCapability a owl:Class ;
-    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20027 ] ;
+    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability  ;
     rdfs:label "Service Delivery Performance Management Capability" ;
-    skos:definition "A Service Delivery Governance Capability that is realized in the ongoing acts by which an organization conducts and implements performance measures to ensure successful delivery of service to the customer." ;
-    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.2 'Manage service delivery performance' [20029]: a standing oversight function with no natural end, so an Organization Capability (cco:ont00000568) rather than a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6)." .
+    skos:definition "A Service Delivery Governance Capability that can be realized in the ongoing acts by which an organization conducts and implements performance measures to ensure successful delivery of service to the customer." ;
+    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.2 'Manage service delivery performance' [20029]: a standing oversight function with no natural end, so an Organization Capability (cco:ont00000568) rather than a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 bpo:ServiceDeliveryDevelopmentManagementCapability a owl:Class ;
-    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P20027 ] ;
+    rdfs:subClassOf bpo:ServiceDeliveryGovernanceCapability  ;
     rdfs:label "Service Delivery Development and Direction Management Capability" ;
-    skos:definition "A Service Delivery Governance Capability that is realized in the ongoing acts by which an organization guides the resources that keep the development and direction of service delivery in line with customer needs." ;
-    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.3 'Manage service delivery development and direction' [20030]: a standing guidance/management function with no natural end, hence an Organization Capability (cco:ont00000568) not a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6)." .
+    skos:definition "A Service Delivery Governance Capability that can be realized in the ongoing acts by which an organization guides the resources that keep the development and direction of service delivery in line with customer needs." ;
+    rdfs:comment "Minted for the R5/R6 demotion of APQC activity 5.1.1.3 'Manage service delivery development and direction' [20030]: a standing guidance/management function with no natural end, hence an Organization Capability (cco:ont00000568) not a bounded process. Specializes the shared bpo:ServiceDeliveryGovernanceCapability; realized in the bounded governance establishment act bpo:P20027 (R6). WP6 B8 step 1 (BPO architect, 2026-11-03): the realized-in (obo:BFO_0000054) restrictions were removed, because a capability can exist unrealized; the processes it can be realized in are bpo:enablesProcess pairs from capabilities/capability_scope.json." .
 
 ####################################################################
 # ===== APQC PROCESS GROUP 5.2 (PCF 20040)
@@ -760,6 +782,7 @@ bpo:ServiceDeliveryDevelopmentManagementCapability a owl:Class ;
 
 bpo:P20040 a owl:Class ;
     bpo:pcfID "20040" ; bpo:hierarchyID "5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20040. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understanding the demands on resources and creating a plan to enable the delivery of services via those resources." ;
     rdfs:label "Manage service delivery resources" ;
     skos:definition "An Act of Planning that understands the demands placed on service delivery resources and produces a resource plan enabling those resources to deliver services." ;
@@ -774,6 +797,7 @@ bpo:P20040 a owl:Class ;
 # ---- 5.2.1 (PCF 20041): manage service delivery resource demand ------
 bpo:P20041 a owl:Class ;
     bpo:pcfID "20041" ; bpo:hierarchyID "5.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20041. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring necessary resources are maintained through monitoring pipeline, developing forecasts, and collaborating with customers. Determine skills needed for service deliver and forecast customer orders. Monitor forecasted orders and modify if where needed. Measure forecast accuracy." ;
     rdfs:label "Manage service delivery resource demand" ;
     skos:definition "An Act of Analysis that monitors opportunity pipeline and demand signals and produces a consensus demand forecast for service delivery resources." ;
@@ -793,6 +817,7 @@ bpo:P20041 a owl:Class ;
 # --- 5.2.1.1 (PCF 20042) : Monitoring
 bpo:P20042 a owl:Class ;
     bpo:pcfID "20042" ; bpo:hierarchyID "5.2.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20042. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Tracking potential opportunities as they move through the various stages of the pipeline." ;
     rdfs:label "Monitor pipeline" ;
     skos:definition "An Act of Monitoring that has as input opportunity pipeline data and has as output a pipeline status assessment of opportunities moving through the pipeline." ;
@@ -805,6 +830,7 @@ bpo:P20042 a owl:Class ;
 # --- 5.2.1.2 (PCF 20043) : Analysis
 bpo:P20043 a owl:Class ;
     bpo:pcfID "20043" ; bpo:hierarchyID "5.2.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20043. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the demand anticipated for the organization's services. Estimate future demand for services using historical data, analysis of the market environment, and external data." ;
     rdfs:label "Develop baseline forecasts" ;
     skos:definition "An Act of Forecasting that has as input historical demand data and market environment data and has as output a demand forecast for the organization's services." ;
@@ -818,6 +844,7 @@ bpo:P20043 a owl:Class ;
 # --- 5.2.1.3 (PCF 20044) : Analysis / requirements elicitation (customer engagement)
 bpo:P20044 a owl:Class ;
     bpo:pcfID "20044" ; bpo:hierarchyID "5.2.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20044. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing a collaborative meeting in which to engage the customer to understand the scope of their needs and constructing solutions based on need and constraints." ;
     rdfs:label "Collaborate with customers" ;
     skos:definition "An Act of Analysis that engages a customer in a collaborative meeting to elicit and understand the scope of their needs and has as output a customer-needs analysis." ;
@@ -830,6 +857,7 @@ bpo:P20044 a owl:Class ;
 # --- 5.2.1.4 (PCF 20045) : Analysis (consensus)
 bpo:P20045 a owl:Class ;
     bpo:pcfID "20045" ; bpo:hierarchyID "5.2.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20045. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Arriving at a consensus over the forecasted levels of demand for services by analyzing baseline forecasts and customer input." ;
     rdfs:label "Develop consensus forecast" ;
     skos:definition "An Act of Forecasting that has as input a demand forecast and customer feedback and has as output a consensus demand forecast." ;
@@ -843,6 +871,7 @@ bpo:P20045 a owl:Class ;
 # --- 5.2.1.5 (PCF 20046) : Analysis (skills/availability)
 bpo:P20046 a owl:Class ;
     bpo:pcfID "20046" ; bpo:hierarchyID "5.2.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20046. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying what skillset is necessary for the delivery of opportunities. Determine the forecast of customer orders based upon those skillsets and the resources available." ;
     rdfs:label "Determine availability of skills to deliver on current and forecast customer orders" ;
     skos:definition "An Act of Analysis that has as input a demand forecast and has as output a resource availability assessment of the skills available to deliver on current and forecast customer orders." ;
@@ -855,6 +884,7 @@ bpo:P20046 a owl:Class ;
 # --- 5.2.1.6 (PCF 20047) : Monitoring (track + revise)
 bpo:P20047 a owl:Class ;
     bpo:pcfID "20047" ; bpo:hierarchyID "5.2.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20047. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Overseeing all activities necessary to deliver services to customer. Revise forecast to account for any issues that may arise. This could be changes in market trend, resource changes, etc." ;
     rdfs:label "Monitor activity against forecast and revise forecast" ;
     skos:definition "An Act of Monitoring that has as input a consensus demand forecast and has as output a revised demand forecast reflecting observed delivery activity and emerging issues." ;
@@ -867,6 +897,7 @@ bpo:P20047 a owl:Class ;
 # --- 5.2.1.7 (PCF 20048) : Analysis (evaluate/revise approach)
 bpo:P20048 a owl:Class ;
     bpo:pcfID "20048" ; bpo:hierarchyID "5.2.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20048. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recognizing potential problems in the current forecast and making the necessary changes to align the forecast meet demand." ;
     rdfs:label "Evaluate and revise forecasting approach" ;
     skos:definition "An Act of Analysis that has as input a forecast accuracy assessment and has as output a revised demand forecast that better aligns the forecasting approach with demand." ;
@@ -879,6 +910,7 @@ bpo:P20048 a owl:Class ;
 # --- 5.2.1.8 (PCF 20049) : Analysis (measure accuracy)
 bpo:P20049 a owl:Class ;
     bpo:pcfID "20049" ; bpo:hierarchyID "5.2.1.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20049. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing forecasting against actuals to determine accuracy. Modify forecasting to align with actual need." ;
     rdfs:label "Measure forecast accuracy" ;
     skos:definition "An Act of Analysis that has as input a demand forecast and has as output a forecast accuracy assessment determined by comparing the forecast against actuals." ;
@@ -891,6 +923,7 @@ bpo:P20049 a owl:Class ;
 # ---- 5.2.2 (PCF 20050): create and manage resource plan --------------
 bpo:P20050 a owl:Class ;
     bpo:pcfID "20050" ; bpo:hierarchyID "5.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20050. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying the need for and creating a resource plan. Understand resource demand and align with capacity, skills, and capabilities. Enlist suppliers and partners to supplement needed skills and capabilities. Monitor and manage capabilities and skills with an eye on critical resources and supplier capacity." ;
     rdfs:label "Create and manage resource plan" ;
     skos:definition "An Act of Formulation that aligns resource demand with capacity, skills, and capabilities and has as output a resource plan." ;
@@ -908,6 +941,7 @@ bpo:P20050 a owl:Class ;
 # --- 5.2.2.1 (PCF 20051) : Analysis (skills taxonomy)
 bpo:P20051 a owl:Class ;
     bpo:pcfID "20051" ; bpo:hierarchyID "5.2.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20051. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Analyzing the skills needed to perform services to be delivered. Classify and organize these skills requirements." ;
     rdfs:label "Define and manage skills taxonomy" ;
     skos:definition "An Act of Analysis that has as input customer requirements and has as output a skills taxonomy classifying and organizing the skills needed to deliver services." ;
@@ -920,6 +954,7 @@ bpo:P20051 a owl:Class ;
 # --- 5.2.2.2 (PCF 20052) : Formulation (resource plan)
 bpo:P20052 a owl:Class ;
     bpo:pcfID "20052" ; bpo:hierarchyID "5.2.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20052. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan to ensure that all resources are available to carry out services required for the customer. This can include physical resources and personnel." ;
     rdfs:label "Create resource plan" ;
     skos:definition "An Act of Formulation that has as input a resource availability assessment and has as output a resource plan ensuring all resources are available to carry out required services." ;
@@ -932,6 +967,7 @@ bpo:P20052 a owl:Class ;
 # --- 5.2.2.3 (PCF 20053) : Analysis (match demand to supply)
 bpo:P20053 a owl:Class ;
     bpo:pcfID "20053" ; bpo:hierarchyID "5.2.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20053. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Matching demand with skills and capability. Enlisting suppliers and partners to help with demand when needed." ;
     rdfs:label "Match resource demand with capacity, skills, and capabilities" ;
     skos:definition "An Act of Analysis that has as input a demand forecast and has as output a resource availability assessment matching demand against capacity, skills, and capabilities." ;
@@ -944,6 +980,7 @@ bpo:P20053 a owl:Class ;
 # --- 5.2.2.4 (PCF 20054) : Acquisition (supplier/partner engagement)
 bpo:P20054 a owl:Class ;
     bpo:pcfID "20054" ; bpo:hierarchyID "5.2.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20054. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understanding organizational need to enlist suppliers to provide resources for gaps in skills and capabilities. Identify where additional skills are needed and collaborate with third parties to fill those demands." ;
     rdfs:label "Collaborate with suppliers and partners to supplement skills and capabilities" ;
     skos:definition "An Act of Acquisition that obtains from suppliers and delivery partners the resources, skills, and capabilities needed to supplement gaps in an organization's own service delivery, and has as input a supply constraint analysis." ;
@@ -957,6 +994,7 @@ bpo:P20054 a owl:Class ;
 # --- 5.2.2.5 (PCF 20055) : Identification (critical resources)
 bpo:P20055 a owl:Class ;
     bpo:pcfID "20055" ; bpo:hierarchyID "5.2.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20055. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Realizing critical resources required to perform and carry out customer needs. Engage with suppliers to fulfill those needs, if necessary. Identify supplier threshold for performing those needs." ;
     rdfs:label "Identify critical resources and supplier capacity" ;
     skos:definition "An Act of Identification that has as input customer requirements and has as output a supply constraint analysis registering the critical resources required and the capacity thresholds of suppliers." ;
@@ -969,6 +1007,7 @@ bpo:P20055 a owl:Class ;
 # --- 5.2.2.6 (PCF 20056) : Monitoring (capacity/availability)
 bpo:P20056 a owl:Class ;
     bpo:pcfID "20056" ; bpo:hierarchyID "5.2.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20056. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Directing and managing workforce needs. Ensure that resources are at full capacity. Monitor that all resources are able to skilled in their respective rolls. Make sure that necessary resources are available to provide the needed services." ;
     rdfs:label "Monitor and manage resource capacity and availability" ;
     skos:definition "An Act of Monitoring that has as input a resource plan and has as output a resource availability assessment confirming that resources are at capacity and available for service delivery." ;
@@ -981,6 +1020,7 @@ bpo:P20056 a owl:Class ;
 # ---- 5.2.3 (PCF 12127): enable service delivery resources ------------
 bpo:P12127 a owl:Class ;
     bpo:pcfID "12127" ; bpo:hierarchyID "5.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12127. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Instituting training to enable resources to provide service delivery to the customer. Develop a training plan. Create materials that provide for operation and technical training. Schedule, perform, and evaluate training." ;
     rdfs:label "Enable service delivery resources" ;
     skos:definition "A Planned Act that institutes training to enable service delivery personnel to provide service delivery, comprising planning, material development, scheduling, delivery, and evaluation of training." ;
@@ -998,6 +1038,7 @@ bpo:P12127 a owl:Class ;
 # --- 5.2.3.1 (PCF 12128) : Formulation (training plan)
 bpo:P12128 a owl:Class ;
     bpo:pcfID "12128" ; bpo:hierarchyID "5.2.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12128. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a detailed summary of all the actions relevant to teaching a person a particular skill or type of behavior. Determine who will deliver the training. Determine when and where the apprentice or trainee needs to go to receive the structured component of the training." ;
     rdfs:label "Develop service delivery training plan" ;
     skos:definition "An Act of Formulation that has as input a skills taxonomy and has as output a training plan detailing the actions, deliverers, timing, and location for teaching service delivery skills." ;
@@ -1010,6 +1051,7 @@ bpo:P12128 a owl:Class ;
 # --- 5.2.3.2 (PCF 12129) : Production of material training materials (operations)
 bpo:P12129 a owl:Class ;
     bpo:pcfID "12129" ; bpo:hierarchyID "5.2.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12129. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Developing materials necessary to provide comprehensive training for the skills or behavior needed to deliver services. This can be any number for formats such as classroom or computer based training." ;
     rdfs:label "Develop training materials" ;
     skos:definition "A Planned Act that has as input a training plan and has as output training material used to provide comprehensive training in service delivery skills." ;
@@ -1022,6 +1064,7 @@ bpo:P12129 a owl:Class ;
 # --- 5.2.3.3 (PCF 12131) : Formulation (training schedule)
 bpo:P12131 a owl:Class ;
     bpo:pcfID "12131" ; bpo:hierarchyID "5.2.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12131. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing training to the employee within a manageable timeframe to meet the needs of both the individual and the organization." ;
     rdfs:label "Manage training schedule" ;
     skos:definition "An Act of Formulation that has as input a training plan and has as output a training schedule prescribing the timeframe in which training is delivered to meet individual and organizational needs." ;
@@ -1034,6 +1077,7 @@ bpo:P12131 a owl:Class ;
 # --- 5.2.3.4 (PCF 12132) : Training Instruction (operations)
 bpo:P12132 a owl:Class ;
     bpo:pcfID "12132" ; bpo:hierarchyID "5.2.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12132. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Educating service delivery personnel on all aspects of the operations process of the organization." ;
     rdfs:label "Deliver operations training" ;
     skos:definition "An Act of Training Instruction that imparts knowledge of the organization's operations processes to service delivery personnel using training material." ;
@@ -1047,6 +1091,7 @@ bpo:P12132 a owl:Class ;
 # --- 5.2.3.5 (PCF 12133) : Training Instruction (technical)
 bpo:P12133 a owl:Class ;
     bpo:pcfID "12133" ; bpo:hierarchyID "5.2.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12133. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring that all personnel are trained on all technical aspects of service delivery." ;
     rdfs:label "Deliver technical training" ;
     skos:definition "An Act of Training Instruction that imparts knowledge of the technical aspects of service delivery to service delivery personnel using training material." ;
@@ -1060,6 +1105,7 @@ bpo:P12133 a owl:Class ;
 # --- 5.2.3.6 (PCF 20057) : Appraisal (skill/capability testing)
 bpo:P20057 a owl:Class ;
     bpo:pcfID "20057" ; bpo:hierarchyID "5.2.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20057. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Verifying that training provided to the person was successful through the administration testing and the application of skills for practical use." ;
     rdfs:label "Perform skill and capability testing" ;
     skos:definition "An Act of Appraisal that administers a test and has as output a skills and capability test result judging whether training was successful through testing and practical application of skills." ;
@@ -1072,6 +1118,7 @@ bpo:P20057 a owl:Class ;
 # --- 5.2.3.7 (PCF 12135) : Appraisal (evaluate effectiveness)
 bpo:P12135 a owl:Class ;
     bpo:pcfID "12135" ; bpo:hierarchyID "5.2.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12135. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Eliciting feedback from various sources to evaluate the training provided. This can be achieved through testing and the practical application of skills. Additionally, manager or student feedback can be garnered to evaluate training effectiveness." ;
     rdfs:label "Evaluate training effectiveness" ;
     skos:definition "An Act of Appraisal that has as input a skills and capability test result and training feedback and has as output a training effectiveness evaluation judging how effectively the training imparted the targeted skills." ;
@@ -1090,6 +1137,7 @@ bpo:P12135 a owl:Class ;
 
 bpo:P20058 a owl:Class ;
     bpo:pcfID "20058" ; bpo:hierarchyID "5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20058. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Rendering service to the customer by initiating, executing, and completing tasks associated with service delivery." ;
     rdfs:label "Deliver service to customer" ;
     skos:definition "An Act of Service Provision that renders a service to a customer by initiating, executing, and completing the tasks associated with service delivery." ;
@@ -1103,6 +1151,7 @@ bpo:P20058 a owl:Class ;
 # ---- 5.3.1 (PCF 20059) Initiate service delivery ----
 bpo:P20059 a owl:Class ;
     bpo:pcfID "20059" ; bpo:hierarchyID "5.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20059. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Collaborating with the customer to understand service needs. Review, understand, and modify the delivery scope with the organization needs of the customer in mind. Confirm readiness and identify, select, and assign resources. Plan for service delivery." ;
     rdfs:label "Initiate service delivery" ;
     skos:definition "An Act of Service Provision that initiates a service delivery by reviewing scope with the customer, confirming readiness, and identifying, selecting, and assigning resources, as the initiation sub-phase of rendering the service." ;
@@ -1120,6 +1169,7 @@ bpo:P20059 a owl:Class ;
 # ---- 5.3.1.1 (PCF 20060) Review contract and agreed terms ----
 bpo:P20060 a owl:Class ;
     bpo:pcfID "20060" ; bpo:hierarchyID "5.3.1.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20060. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Meeting with the customer, partner, and/or supplier to review the terms of the solutions contract and agree on the terms set forth." ;
     rdfs:label "Review contract and agreed terms" ;
     skos:definition "An Act of Appraisal that has as input a service-delivery contract and has as output a contract-terms review of its terms, and has the customer as participant." ;
@@ -1133,6 +1183,7 @@ bpo:P20060 a owl:Class ;
 # ---- 5.3.1.2 (PCF 20061) Understand customer requirements and define/refine approach ----
 bpo:P20061 a owl:Class ;
     bpo:pcfID "20061" ; bpo:hierarchyID "5.3.1.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20061. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Taking the customer requirements for a solution and applying those requirements to a refined approach for service." ;
     rdfs:label "Understand customer requirements and define refine approach" ;
     skos:definition "An Act of Formulation that has as input customer requirements and has as output a service-delivery process specification expressing a refined service approach." ;
@@ -1145,6 +1196,7 @@ bpo:P20061 a owl:Class ;
 # ---- 5.3.1.3 (PCF 20062) Modify/revise and approve project plan ----
 bpo:P20062 a owl:Class ;
     bpo:pcfID "20062" ; bpo:hierarchyID "5.3.1.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20062. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Updating the project plan to align with the new solution approach agreed upon with the customer." ;
     rdfs:label "Modify/revise and approve project plan" ;
     skos:definition "An Act of Formulation that has as output an updated and approved project plan aligned with the agreed solution approach." ;
@@ -1156,6 +1208,7 @@ bpo:P20062 a owl:Class ;
 # ---- 5.3.1.4 (PCF 20063) Review customer business objectives ----
 bpo:P20063 a owl:Class ;
     bpo:pcfID "20063" ; bpo:hierarchyID "5.3.1.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20063. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Aligning the customer business objectives with the agreed service delivery solution." ;
     rdfs:label "Review customer business objectives" ;
     skos:definition "An Act of Analysis that has as input customer business objectives and has as output an objective-alignment assessment relating them to the agreed solution." ;
@@ -1168,6 +1221,7 @@ bpo:P20063 a owl:Class ;
 # ---- 5.3.1.5 (PCF 20064) Confirm environmental readiness ----
 bpo:P20064 a owl:Class ;
     bpo:pcfID "20064" ; bpo:hierarchyID "5.3.1.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20064. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Confirming that the organization has the recourses necessary to meet the expectations for the solution for service delivery." ;
     rdfs:label "Confirm environmental readiness" ;
     skos:definition "An Act of Appraisal that has as output an environmental-readiness confirmation that the organization holds the resources needed for the solution." ;
@@ -1179,6 +1233,7 @@ bpo:P20064 a owl:Class ;
 # ---- 5.3.1.6 (PCF 20065) Identify, select, and assign resources ----
 bpo:P20065 a owl:Class ;
     bpo:pcfID "20065" ; bpo:hierarchyID "5.3.1.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20065. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Identifying, selecting, and assigning resources required to deliver service to the customer. Ensure that all objectives are established and met, and the all rules of engagement have been identified and communicated." ;
     rdfs:label "Identify, select, and assign resources" ;
     skos:definition "An Act of Selection that chooses and assigns the resources required to deliver a service and has as output a resource plan." ;
@@ -1193,6 +1248,7 @@ bpo:P20065 a owl:Class ;
 # ---- 5.3.1.6.1 (PCF 20066) Establish people objectives ----
 bpo:P20066 a owl:Class ;
     bpo:pcfID "20066" ; bpo:hierarchyID "5.3.1.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20066. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing the workforce with a plan of action and goals necessary to provide a service. Make sure that those objectives are met." ;
     rdfs:label "Establish people objectives" ;
     skos:definition "An Act of Formulation that has as output people objectives prescribing the plan of action and goals for the workforce." ;
@@ -1204,6 +1260,7 @@ bpo:P20066 a owl:Class ;
 # ---- 5.3.1.6.2 (PCF 20067) Establish engagement rules ----
 bpo:P20067 a owl:Class ;
     bpo:pcfID "20067" ; bpo:hierarchyID "5.3.1.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20067. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing guidelines for how resources engage with the customer. For example, set rules of accountability, interaction, and accommodation when engaging the customer. Resources should be polite, empathetic, and attentive." ;
     rdfs:label "Establish engagement rules" ;
     skos:definition "An Act of Formulation that has as output engagement rules prescribing how delivery resources are to interact with the customer." ;
@@ -1215,6 +1272,7 @@ bpo:P20067 a owl:Class ;
 # ---- 5.3.1.7 (PCF 20068) Plan for service delivery ----
 bpo:P20068 a owl:Class ;
     bpo:pcfID "20068" ; bpo:hierarchyID "5.3.1.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20068. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Establishing a plan of action to successfully render a solution for service delivery." ;
     rdfs:label "Plan for service delivery" ;
     skos:definition "An Act of Formulation that has as output a service-delivery plan prescribing the action by which the solution is to be rendered." ;
@@ -1226,6 +1284,7 @@ bpo:P20068 a owl:Class ;
 # ---- 5.3.2 (PCF 20069) Execute service delivery ----
 bpo:P20069 a owl:Class ;
     bpo:pcfID "20069" ; bpo:hierarchyID "5.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20069. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Carrying out service delivery to the customer by creating and deploying the necessary solution. Analyze need and create a solution. Validate the solution and make changes if needed. Obtain approval to build/buy solution and then deploy solution to customer." ;
     rdfs:label "Execute service delivery" ;
     skos:definition "An Act of Service Provision that carries out a service delivery by creating, validating, building, and deploying the necessary solution to the customer." ;
@@ -1243,6 +1302,7 @@ bpo:P20069 a owl:Class ;
 # ---- 5.3.2.1 (PCF 20070) Analyze environment and customer needs ----
 bpo:P20070 a owl:Class ;
     bpo:pcfID "20070" ; bpo:hierarchyID "5.3.2.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20070. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Understanding the needs of the customer and providing the necessary resources to meet those requirements within the scope of the organization." ;
     rdfs:label "Analyze environment and customer needs" ;
     skos:definition "An Act of Analysis that has as input customer requirements and has as output a customer-needs analysis within the organization's scope." ;
@@ -1255,6 +1315,7 @@ bpo:P20070 a owl:Class ;
 # ---- 5.3.2.2 (PCF 20071) Define solution ----
 bpo:P20071 a owl:Class ;
     bpo:pcfID "20071" ; bpo:hierarchyID "5.3.2.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20071. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a plan of action to provide service delivery to the customer through a possible solution. This solution should be in response to a collaborative effort made by the organization and the customer to meet service delivery needs." ;
     rdfs:label "Define solution" ;
     skos:definition "An Act of Formulation that has as input a customer-needs analysis and has as output a solution specification for providing the service." ;
@@ -1267,6 +1328,7 @@ bpo:P20071 a owl:Class ;
 # ---- 5.3.2.3 (PCF 20072) Validate solution ----
 bpo:P20072 a owl:Class ;
     bpo:pcfID "20072" ; bpo:hierarchyID "5.3.2.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20072. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Validating that the proposed solution is feasible and provides the needed services for the customer." ;
     rdfs:label "Validate solution" ;
     skos:definition "An Act of Appraisal that has as input a solution specification and has as output a solution-validation result judging its feasibility and fit." ;
@@ -1279,6 +1341,7 @@ bpo:P20072 a owl:Class ;
 # ---- 5.3.2.4 (PCF 20073) Identify changes ----
 bpo:P20073 a owl:Class ;
     bpo:pcfID "20073" ; bpo:hierarchyID "5.3.2.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20073. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Realizing issues within the original drafted solution and providing changes to correct those issues." ;
     rdfs:label "Identify changes" ;
     skos:definition "An Act of Formulation that has as input a solution-validation result and has as output a solution-change specification prescribing corrections to the drafted solution." ;
@@ -1291,6 +1354,7 @@ bpo:P20073 a owl:Class ;
 # ---- 5.3.2.5 (PCF 20074) Obtain approval to proceed ----
 bpo:P20074 a owl:Class ;
     bpo:pcfID "20074" ; bpo:hierarchyID "5.3.2.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20074. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Gaining approval from all avenues to proceed with providing solutions for service delivery." ;
     rdfs:label "Obtain approval to proceed" ;
     skos:definition "An Act of Acquisition that obtains from the relevant authorities a proceed-approval decision authorizing the service-delivery solution." ;
@@ -1302,6 +1366,7 @@ bpo:P20074 a owl:Class ;
 # ---- 5.3.2.6 (PCF 20075) Make build/buy solution ----
 bpo:P20075 a owl:Class ;
     bpo:pcfID "20075" ; bpo:hierarchyID "5.3.2.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20075. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Constructing or purchasing solutions necessary to provide service delivery." ;
     rdfs:label "Make build/buy solution" ;
     skos:definition "A Planned Act that constructs or purchases a service-delivery solution and produces a record that the solution has been built or bought." ;
@@ -1313,6 +1378,7 @@ bpo:P20075 a owl:Class ;
 # ---- 5.3.2.7 (PCF 20076) Deploy solution ----
 bpo:P20076 a owl:Class ;
     bpo:pcfID "20076" ; bpo:hierarchyID "5.3.2.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20076. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing the customer with promised services and solutions." ;
     rdfs:label "Deploy solution" ;
     skos:definition "An Act of Service Provision that has as input a service-delivery solution, delivers the promised services to the customer, and has as output a service-delivery record, with the customer as participant." ;
@@ -1326,6 +1392,7 @@ bpo:P20076 a owl:Class ;
 # ---- 5.3.3 (PCF 20077) Complete service delivery ----
 bpo:P20077 a owl:Class ;
     bpo:pcfID "20077" ; bpo:hierarchyID "5.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20077. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing final steps to complete service delivery to the customer. Evaluate success through project review, complete finance activities, and confirm delivery. Release resources and manage completion by harvesting knowledge and systems by archiving records." ;
     rdfs:label "Complete service delivery" ;
     skos:definition "An Act of Service Provision that completes a service delivery by reviewing success, closing finances, confirming delivery, releasing resources, harvesting knowledge, and archiving records." ;
@@ -1343,6 +1410,7 @@ bpo:P20077 a owl:Class ;
 # ---- 5.3.3.1 (PCF 20078) Conduct service delivery/project review and evaluate success ----
 bpo:P20078 a owl:Class ;
     bpo:pcfID "20078" ; bpo:hierarchyID "5.3.3.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20078. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Reviewing the entire service delivery process to evaluate the success of the project from beginning to end." ;
     rdfs:label "Conduct service delivery/project review and evaluate success" ;
     skos:definition "An Act of Appraisal that reviews the whole service delivery and has as output a service-delivery review evaluating its success." ;
@@ -1354,6 +1422,7 @@ bpo:P20078 a owl:Class ;
 # ---- 5.3.3.2 (PCF 20079) Complete/finalize financial management activities ----
 bpo:P20079 a owl:Class ;
     bpo:pcfID "20079" ; bpo:hierarchyID "5.3.3.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20079. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Insuring all payments are received and all activates therein are completed." ;
     rdfs:label "Complete/finalize financial management activities" ;
     skos:definition "A Planned Act that closes out the financial activities of a service delivery by ensuring all payments are received and all related activities are completed." ;
@@ -1364,6 +1433,7 @@ bpo:P20079 a owl:Class ;
 # ---- 5.3.3.3 (PCF 20080) Confirm delivery according to contract terms ----
 bpo:P20080 a owl:Class ;
     bpo:pcfID "20080" ; bpo:hierarchyID "5.3.3.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20080. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Confirming that the organization has satisfied all terms of the delivery contract set forth in collaboration between the organization and customer." ;
     rdfs:label "Confirm delivery according to contract terms" ;
     skos:definition "An Act of Appraisal that has as input a service-delivery contract and has as output a contract-fulfillment confirmation that all its terms are satisfied." ;
@@ -1376,6 +1446,7 @@ bpo:P20080 a owl:Class ;
 # ---- 5.3.3.4 (PCF 20081) Release resources ----
 bpo:P20081 a owl:Class ;
     bpo:pcfID "20081" ; bpo:hierarchyID "5.3.3.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20081. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Discharging leveraged resources from service delivery commitments upon completion. Returning resources to the resource pool." ;
     rdfs:label "Release resources" ;
     skos:definition "A Planned Act that discharges the resources leveraged for a service delivery and returns them to the resource pool, with service-delivery personnel as participants." ;
@@ -1387,6 +1458,7 @@ bpo:P20081 a owl:Class ;
 # ---- 5.3.3.5 (PCF 20082) Manage service delivery completion ----
 bpo:P20082 a owl:Class ;
     bpo:pcfID "20082" ; bpo:hierarchyID "5.3.3.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20082. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring that all aspects of the service delivery process are completed both internally and externally." ;
     rdfs:label "Manage service delivery completion" ;
     skos:definition "An Act of Appraisal that judges whether all internal and external aspects of a service delivery's closeout are completed and has as output a service-delivery completion confirmation." ;
@@ -1398,6 +1470,7 @@ bpo:P20082 a owl:Class ;
 # ---- 5.3.3.6 (PCF 20083) Harvest knowledge ----
 bpo:P20083 a owl:Class ;
     bpo:pcfID "20083" ; bpo:hierarchyID "5.3.3.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20083. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Garnering feedback from all avenues to collect a knowledge base concerning services rendered." ;
     rdfs:label "Harvest knowledge" ;
     skos:definition "An Act of Analysis that has as input customer feedback and has as output a service knowledge base concerning the services rendered." ;
@@ -1410,6 +1483,7 @@ bpo:P20083 a owl:Class ;
 # ---- 5.3.3.7 (PCF 20084) Archive records and update systems ----
 bpo:P20084 a owl:Class ;
     bpo:pcfID "20084" ; bpo:hierarchyID "5.3.3.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 20084. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Completing and archiving all records associated with requested services. Update all necessary systems to reflect those changes." ;
     rdfs:label "Archive records and update systems" ;
     skos:definition "An Act of Information Processing that has as input service-delivery records and stores them by archiving the records and updating the relevant systems." ;

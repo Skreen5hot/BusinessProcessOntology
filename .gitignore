@@ -32,6 +32,7 @@ build/
 /mkdocs.yml
 /docs/index.md
 /docs/qa.md
+/docs/migrations.md
 /docs/ontologies/
 /docs/artifacts/
 webhost-tool/

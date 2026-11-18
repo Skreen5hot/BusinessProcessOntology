@@ -1,0 +1,260 @@
+# WP6 B8: the processes whose only requirements were capability requirements, removed by B8
+# (2026-11-02). They carry no requirement, so requirement-based dispatch does not assess them:
+# they are neither valid nor invalid assignments (BPO architect, 2026-11-03, §4D).
+process	before_b8	capability_requirements_removed	status_after_b8
+bpo:ActOfAdministration	gap	bpo:HumanResourcesInformationSystemCapability bpo:TimeAndAttendanceManagementCapability	not assessed
+bpo:P10020	routable	bpo:StrategicPlanningCapability	not assessed
+bpo:P10037	routable	bpo:StrategicPlanningCapability	not assessed
+bpo:P10039	routable	bpo:StrategicPlanningCapability	not assessed
+bpo:P10043	routable	bpo:StrategicPlanningCapability	not assessed
+bpo:P10045	routable	bpo:StrategicPlanningCapability	not assessed
+bpo:P10063	gap	bpo:ProductServicePortfolioManagementCapability	not assessed
+bpo:P10074	gap	bpo:ProductServicePortfolioManagementCapability	not assessed
+bpo:P10077	gap	bpo:ProductServiceLifecycleManagementCapability	not assessed
+bpo:P10078	gap	bpo:ProductServiceLifecycleManagementCapability	not assessed
+bpo:P10101	gap	bpo:MarketIntelligenceCapability	not assessed
+bpo:P10106	gap	bpo:MarketIntelligenceCapability	not assessed
+bpo:P10107	gap	bpo:MarketIntelligenceCapability	not assessed
+bpo:P10130	gap	bpo:PartnerManagementCapability	not assessed
+bpo:P10159	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10160	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10163	gap	bpo:PricingCapability	not assessed
+bpo:P10164	gap	bpo:PricingCapability	not assessed
+bpo:P10165	gap	bpo:PricingCapability	not assessed
+bpo:P10166	gap	bpo:PricingCapability	not assessed
+bpo:P10167	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10168	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10169	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10170	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10171	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10172	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10178	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10179	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10180	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10181	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P10187	gap	bpo:PartnerManagementCapability	not assessed
+bpo:P10215	gap	bpo:SupplyChainManagementCapability bpo:SupplyChainPlanningCapability	not assessed
+bpo:P10216	gap	bpo:ProcurementCapability bpo:SupplyChainManagementCapability	not assessed
+bpo:P10217	gap	bpo:ProductionCapability bpo:SupplyChainManagementCapability	not assessed
+bpo:P10304	gap	bpo:RawMaterialInventoryManagementCapability	not assessed
+bpo:P10338	gap	bpo:LogisticsManagementCapability bpo:SupplyChainManagementCapability	not assessed
+bpo:P10340	gap	bpo:LogisticsManagementCapability bpo:SupplyChainManagementCapability	not assessed
+bpo:P10341	gap	bpo:FleetManagementCapability bpo:LogisticsManagementCapability bpo:SupplyChainManagementCapability	not assessed
+bpo:P10390	gap	bpo:CustomerServiceWorkforceManagementCapability	not assessed
+bpo:P10391	gap	bpo:CustomerServiceWorkforceManagementCapability	not assessed
+bpo:P10392	gap	bpo:CustomerServiceWorkforceManagementCapability	not assessed
+bpo:P10398	gap	bpo:CustomerComplaintManagementCapability bpo:CustomerServiceCapability	not assessed
+bpo:P10399	gap	bpo:CustomerComplaintManagementCapability bpo:CustomerServiceCapability	not assessed
+bpo:P10410	gap	bpo:HumanCapitalManagementCapability bpo:TalentAcquisitionCapability	not assessed
+bpo:P10417	gap	bpo:HumanCapitalManagementCapability bpo:WorkforcePlanningCapability	not assessed
+bpo:P10440	gap	bpo:EmployeeReferralProgramCapability bpo:RecruitmentChannelManagementCapability bpo:RecruitmentVendorManagementCapability	not assessed
+bpo:P10474	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeOrientationAndDeploymentCapability	not assessed
+bpo:P10479	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeePerformanceManagementCapability	not assessed
+bpo:P10481	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeePerformanceManagementCapability	not assessed
+bpo:P10487	gap	bpo:EmployeeCareerDevelopmentCapability bpo:EmployeeDevelopmentCapability	not assessed
+bpo:P10488	gap	bpo:EmployeeCareerDevelopmentCapability bpo:EmployeeDevelopmentCapability	not assessed
+bpo:P10490	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeTrainingCapability	not assessed
+bpo:P10491	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeTrainingCapability	not assessed
+bpo:P10492	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeTrainingCapability	not assessed
+bpo:P10497	gap	bpo:CompensationAndBenefitsCapability	not assessed
+bpo:P10529	gap	bpo:EmployeeCommunicationCapability	not assessed
+bpo:P10729	routable	bpo:AccountingCapability bpo:FinancialManagementCapability	not assessed
+bpo:P10730	routable	bpo:AccountingCapability bpo:FinancialManagementCapability	not assessed
+bpo:P10732	routable	bpo:FinancialManagementCapability	not assessed
+bpo:P10733	routable	bpo:FinancialManagementCapability	not assessed
+bpo:P10751	gap	bpo:FixedAssetProjectAccountingCapability	not assessed
+bpo:P10752	gap	bpo:FixedAssetProjectAccountingCapability	not assessed
+bpo:P10762	gap	bpo:InternalControlCapability	not assessed
+bpo:P10764	gap	bpo:InternalControlCapability	not assessed
+bpo:P10767	gap	bpo:InternationalFundsManagementCapability	not assessed
+bpo:P10768	gap	bpo:InternationalFundsManagementCapability	not assessed
+bpo:P10769	gap	bpo:InternationalFundsManagementCapability	not assessed
+bpo:P10770	gap	bpo:InternationalFundsManagementCapability	not assessed
+bpo:P10816	gap	bpo:FinancialPolicyManagementCapability	not assessed
+bpo:P10817	gap	bpo:FinancialPolicyManagementCapability	not assessed
+bpo:P10818	gap	bpo:FinancialPolicyManagementCapability	not assessed
+bpo:P10866	gap	bpo:TaxManagementCapability	not assessed
+bpo:P10871	gap	bpo:InternalAuditManagementCapability	not assessed
+bpo:P10885	gap	bpo:TreasuryManagementCapability	not assessed
+bpo:P10889	gap	bpo:InternalAuditManagementCapability	not assessed
+bpo:P10893	gap	bpo:TreasuryManagementCapability	not assessed
+bpo:P10966	gap	bpo:FacilityManagementCapability	not assessed
+bpo:P11010	gap	bpo:InvestorRelationsCapability	not assessed
+bpo:P11012	gap	bpo:StakeholderRelationshipManagementCapability	not assessed
+bpo:P11013	gap	bpo:LegalAndComplianceCapability	not assessed
+bpo:P11035	gap	bpo:LenderRelationsManagementCapability	not assessed
+bpo:P11036	gap	bpo:AnalystRelationsManagementCapability	not assessed
+bpo:P11038	gap	bpo:StakeholderRelationshipManagementCapability	not assessed
+bpo:P11039	gap	bpo:StakeholderRelationshipManagementCapability	not assessed
+bpo:P11040	gap	bpo:StakeholderRelationshipManagementCapability	not assessed
+bpo:P11041	gap	bpo:StakeholderRelationshipManagementCapability	not assessed
+bpo:P11045	gap	bpo:LegalAndComplianceCapability	not assessed
+bpo:P11047	gap	bpo:LegalAndComplianceCapability	not assessed
+bpo:P11048	gap	bpo:LegalAndComplianceCapability	not assessed
+bpo:P11049	gap	bpo:IntellectualPropertyManagementCapability bpo:LegalAndComplianceCapability	not assessed
+bpo:P11069	gap	bpo:PublicRelationsCapability	not assessed
+bpo:P11095	gap	bpo:KnowledgeManagementCapability	not assessed
+bpo:P11096	gap	bpo:KnowledgeManagementCapability	not assessed
+bpo:P11119	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProjectManagementCapability	not assessed
+bpo:P11135	gap	bpo:ChangeManagementCapability	not assessed
+bpo:P11136	gap	bpo:ChangeManagementCapability	not assessed
+bpo:P11137	gap	bpo:ChangeManagementCapability	not assessed
+bpo:P11180	gap	bpo:EHSManagementCapability	not assessed
+bpo:P11181	gap	bpo:EHSManagementCapability	not assessed
+bpo:P11201	gap	bpo:RemediationManagementCapability	not assessed
+bpo:P11203	gap	bpo:RemediationManagementCapability	not assessed
+bpo:P11204	gap	bpo:RemediationManagementCapability	not assessed
+bpo:P11205	gap	bpo:RemediationManagementCapability	not assessed
+bpo:P11206	gap	bpo:RemediationManagementCapability	not assessed
+bpo:P11221	gap	bpo:BusinessResiliencyCapability	not assessed
+bpo:P11222	gap	bpo:BusinessResiliencyCapability	not assessed
+bpo:P11223	gap	bpo:BusinessResiliencyCapability	not assessed
+bpo:P11224	gap	bpo:BusinessResiliencyCapability	not assessed
+bpo:P11243	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeOrientationAndDeploymentCapability	not assessed
+bpo:P11495	gap	bpo:PricingCapability	not assessed
+bpo:P11496	gap	bpo:PricingCapability	not assessed
+bpo:P11497	gap	bpo:PricingCapability	not assessed
+bpo:P11741	gap	bpo:ProductDataManagementCapability	not assessed
+bpo:P11750	gap	bpo:ProductDataManagementCapability	not assessed
+bpo:P12669	gap	bpo:WarrantyManagementCapability	not assessed
+bpo:P12672	gap	bpo:WarrantyManagementCapability	not assessed
+bpo:P12974	gap	bpo:TreasuryManagementCapability	not assessed
+bpo:P13482	gap	bpo:CustomerInquiryManagementCapability bpo:CustomerServiceCapability	not assessed
+bpo:P14079	gap	bpo:TreasuryManagementCapability	not assessed
+bpo:P16379	gap	bpo:BusinessProcessManagementCapability	not assessed
+bpo:P16384	gap	bpo:BusinessProcessManagementCapability	not assessed
+bpo:P16387	gap	bpo:BusinessProcessManagementCapability	not assessed
+bpo:P16392	gap	bpo:BusinessProcessManagementCapability	not assessed
+bpo:P16402	gap	bpo:PortfolioManagementCapability bpo:PortfolioProgramProjectManagementCapability	not assessed
+bpo:P16403	gap	bpo:PortfolioManagementCapability bpo:PortfolioProgramProjectManagementCapability	not assessed
+bpo:P16406	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProgramManagementCapability	not assessed
+bpo:P16408	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProgramManagementCapability	not assessed
+bpo:P16409	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProgramManagementCapability	not assessed
+bpo:P16411	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProjectManagementCapability	not assessed
+bpo:P16413	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProjectManagementCapability	not assessed
+bpo:P16414	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProjectManagementCapability	not assessed
+bpo:P16418	gap	bpo:PortfolioProgramProjectManagementCapability bpo:ProjectManagementCapability	not assessed
+bpo:P16439	routable	bpo:EnterpriseRiskManagementCapability	not assessed
+bpo:P16445	routable	bpo:EnterpriseRiskManagementCapability	not assessed
+bpo:P16464	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P16465	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P16466	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P16467	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P16468	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P16469	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P16471	gap	bpo:BusinessResiliencyCapability	not assessed
+bpo:P16500	gap	bpo:ChannelManagementCapability	not assessed
+bpo:P16501	gap	bpo:ChannelManagementCapability	not assessed
+bpo:P16573	gap	bpo:ChannelManagementCapability	not assessed
+bpo:P16574	gap	bpo:ChannelManagementCapability	not assessed
+bpo:P16575	gap	bpo:ChannelManagementCapability	not assessed
+bpo:P16630	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P16826	gap	bpo:IntellectualPropertyManagementCapability	not assessed
+bpo:P16928	gap	bpo:CustomerInquiryManagementCapability bpo:CustomerServiceCapability	not assessed
+bpo:P16940	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeTrainingCapability	not assessed
+bpo:P17045	gap	bpo:HumanCapitalManagementCapability bpo:WorkforcePlanningCapability	not assessed
+bpo:P17046	gap	bpo:HumanCapitalManagementCapability bpo:WorkforcePlanningCapability	not assessed
+bpo:P17050	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeOrientationAndDeploymentCapability	not assessed
+bpo:P17059	gap	bpo:ImportExportControlCapability bpo:RestitutionManagementCapability	not assessed
+bpo:P17462	routable	bpo:EnterpriseRiskManagementCapability	not assessed
+bpo:P17468	gap	bpo:ComplianceManagementCapability	not assessed
+bpo:P17472	gap	bpo:EnterpriseQualityManagementCapability	not assessed
+bpo:P17482	gap	bpo:EnterpriseQualityManagementCapability	not assessed
+bpo:P17492	gap	bpo:EnterpriseQualityManagementCapability	not assessed
+bpo:P17498	gap	bpo:EnterpriseQualityManagementCapability	not assessed
+bpo:P17684	gap	bpo:PricingCapability	not assessed
+bpo:P18130	routable	bpo:MarketingManagementCapability	not assessed
+bpo:P18948	gap	bpo:PricingCapability	not assessed
+bpo:P19072	gap	bpo:CustomerComplaintManagementCapability bpo:CustomerServiceCapability	not assessed
+bpo:P19209	gap	bpo:AssetConstructionCapability	not assessed
+bpo:P19224	gap	bpo:AssetConstructionCapability	not assessed
+bpo:P19229	gap	bpo:AssetConstructionCapability	not assessed
+bpo:P19239	gap	bpo:AssetMaintenanceCapability	not assessed
+bpo:P19245	gap	bpo:AssetMaintenanceCapability	not assessed
+bpo:P19253	gap	bpo:AssetMaintenanceCapability	not assessed
+bpo:P19258	gap	bpo:AssetDispositionCapability	not assessed
+bpo:P19595	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P19596	gap	bpo:RegulatoryComplianceManagementCapability	not assessed
+bpo:P19949	routable	bpo:StrategicPlanningCapability	not assessed
+bpo:P19959	gap	bpo:CustomerExperienceManagementCapability	not assessed
+bpo:P19960	gap	bpo:CustomerExperienceManagementCapability	not assessed
+bpo:P19964	gap	bpo:CustomerExperienceManagementCapability	not assessed
+bpo:P19971	gap	bpo:CustomerExperienceManagementCapability	not assessed
+bpo:P19995	routable	bpo:DesignCapability	not assessed
+bpo:P20009	gap	bpo:PricingCapability	not assessed
+bpo:P20026	gap	bpo:ServiceDeliveryGovernanceCapability	not assessed
+bpo:P20027	gap	bpo:ServiceDeliveryDevelopmentManagementCapability bpo:ServiceDeliveryGovernanceCapability bpo:ServiceDeliveryPerformanceManagementCapability	not assessed
+bpo:P20041	gap	bpo:DemandForecastingCapability	not assessed
+bpo:P20043	gap	bpo:DemandForecastingCapability	not assessed
+bpo:P20045	gap	bpo:DemandForecastingCapability	not assessed
+bpo:P20050	gap	bpo:ResourceManagementCapability	not assessed
+bpo:P20056	gap	bpo:ResourceManagementCapability	not assessed
+bpo:P20058	gap	bpo:ServiceDeliveryCapability	not assessed
+bpo:P20059	gap	bpo:ServiceDeliveryCapability	not assessed
+bpo:P20069	gap	bpo:ServiceDeliveryCapability	not assessed
+bpo:P20077	gap	bpo:ServiceDeliveryCapability	not assessed
+bpo:P20110	gap	bpo:RecallManagementCapability	not assessed
+bpo:P20124	gap	bpo:ApplicantDataManagementCapability	not assessed
+bpo:P20125	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeTrainingCapability	not assessed
+bpo:P20139	gap	bpo:AssetConstructionCapability	not assessed
+bpo:P20595	gap	bpo:CustomerServiceManagementCapability	not assessed
+bpo:P20604	gap	bpo:FinancialPolicyManagementCapability	not assessed
+bpo:P20608	gap	bpo:ITCustomerRelationshipManagementCapability	not assessed
+bpo:P20632	gap	bpo:ITServiceManagementCapability	not assessed
+bpo:P20655	gap	bpo:ITStrategicIntelligenceCapability	not assessed
+bpo:P20657	gap	bpo:ITStrategicAlignmentMaintenanceCapability	not assessed
+bpo:P20690	gap	bpo:ITInterdependencyManagementCapability	not assessed
+bpo:P20706	gap	bpo:ITRiskManagementCapability	not assessed
+bpo:P20721	gap	bpo:ITRiskManagementCapability	not assessed
+bpo:P20766	gap	bpo:InformationManagementCapability	not assessed
+bpo:P20770	gap	bpo:InformationManagementCapability	not assessed
+bpo:P20776	gap	bpo:InformationManagementCapability	not assessed
+bpo:P20779	gap	bpo:InformationManagementCapability	not assessed
+bpo:P20782	gap	bpo:InternalAuditManagementCapability	not assessed
+bpo:P20785	gap	bpo:DevelopAndManageServicesSolutionsCapability	not assessed
+bpo:P20808	gap	bpo:DevelopAndManageServicesSolutionsCapability	not assessed
+bpo:P20817	gap	bpo:DevelopAndManageServicesSolutionsCapability	not assessed
+bpo:P20857	gap	bpo:ITRollBackManagementCapability	not assessed
+bpo:P20888	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20889	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20890	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20891	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20892	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20893	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20915	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20916	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20917	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20918	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20919	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20920	routable	bpo:ITInfrastructureManagementCapability	not assessed
+bpo:P20921	gap	bpo:ITSupportCapability	not assessed
+bpo:P20923	gap	bpo:ITSupportCapability	not assessed
+bpo:P20936	gap	bpo:LogisticsManagementCapability bpo:SupplyChainManagementCapability	not assessed
+bpo:P20955	gap	bpo:BusinessModelGovernanceCapability	not assessed
+bpo:P20958	gap	bpo:HumanCapitalManagementCapability bpo:WorkforcePlanningCapability	not assessed
+bpo:P20960	gap	bpo:AnalyticsCapability	not assessed
+bpo:P20961	gap	bpo:AnalyticsCapability	not assessed
+bpo:P20962	gap	bpo:AnalyticsCapability	not assessed
+bpo:P20963	gap	bpo:AnalyticsCapability	not assessed
+bpo:P20964	gap	bpo:AnalyticsCapability	not assessed
+bpo:P20965	gap	bpo:KnowledgeManagementCapability	not assessed
+bpo:P20969	gap	bpo:KnowledgeManagementCapability	not assessed
+bpo:P21434	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeePerformanceManagementCapability	not assessed
+bpo:P21436	gap	bpo:EmployeeDevelopmentCapability bpo:EmployeeTrainingCapability	not assessed
+bpo:P21437	gap	bpo:EmployeeRelationsCapability	not assessed
+bpo:P21441	gap	bpo:WorkforceAnalyticsCapability	not assessed
+bpo:P21447	gap	bpo:WorkforceAnalyticsCapability	not assessed
+bpo:P21453	gap	bpo:BusinessProcessManagementCapability	not assessed
+bpo:P21457	gap	bpo:ChangeManagementCapability	not assessed
+bpo:P21460	gap	bpo:AnalyticsCapability	not assessed
+bpo:P21461	gap	bpo:AnalyticsCapability	not assessed
+bpo:P21462	gap	bpo:AnalyticsCapability	not assessed
+bpo:P21464	gap	bpo:AnalyticsCapability	not assessed
+bpo:P21574	gap	bpo:InternalControlCapability	not assessed
+bpo:P21579	gap	bpo:AssetDispositionCapability	not assessed
+bpo:P21581	gap	bpo:AssetDispositionCapability	not assessed
+bpo:P21582	gap	bpo:AssetDispositionCapability	not assessed
+bpo:P21584	gap	bpo:BenchmarkingCapability	not assessed
+bpo:P21587	gap	bpo:EHSManagementCapability	not assessed
+bpo:P21589	gap	bpo:SustainabilityManagementCapability	not assessed
+bpo:P21598	gap	bpo:SustainabilityManagementCapability	not assessed

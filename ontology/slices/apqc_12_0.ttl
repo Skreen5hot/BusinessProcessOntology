@@ -38,7 +38,7 @@
 <https://fandaws.com/ontology/bpo/slice/12.0> a owl:Ontology ;
     dct:rights """Contains material derived from the APQC Process Classification Framework® (PCF), Cross-Industry version 7.4 (element IDs, hierarchy IDs, names and descriptions), used under APQC's licence, whose notice follows. That material is not covered by this repository's MIT licence (see NOTICE.md). This module is not endorsed by APQC.\n\n©2024 APQC. ALL RIGHTS RESERVED. This Process Classification Framework® (“PCF”) is the copyrighted intellectual property of APQC. APQC encourages the wide distribution, discussion, and use of the PCF for classifying and defining organizational processes. Accordingly, APQC hereby grants you a perpetual, worldwide, royalty-free license to use, copy, publish, modify, and create derivative works of the PCF, provided that all copies of the PCF and any derivative works contain a copy of this notice.""" ;
     dct:title "APQC reality-layer slice 12.0: Manage External Relationships" ;
-    dct:source "APQC Process Classification Framework (Cross-Industry)" ;
+    dct:source "APQC Process Classification Framework (Cross-Industry) v7.4" ;
     owl:versionInfo "0.4.1" ;
     rdfs:comment "Reality-layer module for APQC section 12.0. CCO pin v2.0 (2024-11-06). Modeling rules per ADR-001 (two-layer model, R5 bounded-occurrent test, GOLDEN PRINCIPLE). New recurring genera (bpo:ActOfRelationshipManagement, bpo:ActOfMonitoring, bpo:ActOfNegotiation, bpo:ActOfPayment, bpo:ActOfReporting) are emitted below as PROPOSE-EXT for human promotion. Self-contained: the shared act genera it uses are inlined from the apqc-ext.ttl registry, so it validates standalone against the pinned CCO/BFO closure with no extension merge." .
 
@@ -52,7 +52,7 @@ bpo:ActOfAcquisition a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Acquisition" ;
     skos:definition "A Planned Act in which an Agent obtains from some authority or supplier an entity (such as an authorization, license, or resource) that the Agent did not previously hold." ;
-    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0)." .
+    rdfs:comment "Local extension (D9). Rejected cco:ont00000950 'Act of Maintenance' (modifying Material Artifacts) and cco:ont00000402 'Act of Communication' (mere ICE transfer). Securing/obtaining a held entity anchors at the generic Planned Act. Expected to recur in procurement/asset-acquisition categories (4.0, 10.0). Also rejected cco:ont00001334 (Act of Purchasing) and cco:ont00000389 (Act of Buying): both require a Financial Instrument and descend from cco:ont00000836 (Act of Financial Instrument Use), too narrow for non-purchase acquisitions such as obtaining permits/licenses from an authority or securing financing; purchasing is a species of acquisition, not its genus." .
 
 bpo:ActOfAdvocacy a owl:Class ;
     rdfs:subClassOf cco:ont00001327 ,   # Social Act
@@ -97,8 +97,8 @@ bpo:ActOfReporting a owl:Class ;
     rdfs:subClassOf cco:ont00000379 ,   # Act of Representative Communication
         cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; ont00000379 -> ont00000402 -> ont00000228 in the CCO closure, asserted locally so the standalone SHACL S2 Act-anchor chain resolves)
     rdfs:label "Act of Reporting" ;
-    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity (such as a report, statement, scorecard, or filing) that asserts, as true, a representation of an organization's condition or results." ;
-    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no broad reporting class spanning compilation and assertion. Anchored under cco:ont00000379 (Act of Representative Communication), with cco:ont00000228 (Planned Act) co-anchored so standalone SHACL resolves the act chain: reporting transfers to recipients a descriptive account (report, statement, scorecard, filing) asserting an organization's condition or results. Pure submission of an already-prepared report may use the verified leaf cco:ont00000151 directly." .
+    skos:definition "An Act of Representative Communication in which an Agent transfers to one or more recipients a Descriptive Information Content Entity (such as a report, statement, scorecard, or filing) that asserts, as true, a detailed account of some subject matter, such as an organization's condition or results." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no broad reporting class spanning compilation and assertion. Anchored under cco:ont00000379 (Act of Representative Communication), with cco:ont00000228 (Planned Act) co-anchored so standalone SHACL resolves the act chain {366,636,511,228}. The genus of DISSEMINATE-class reporting acts, whose source makes sharing/reporting to an audience definitional; COMPILE-class acts that merely create, record or summarize a report ICE stay at cco:ont00000366 (Act of Information Processing). Pure submission of an already-prepared report may use the verified leaf cco:ont00000151 (Act of Reporting, subClassOf 379 subClassOf 402: 'performed by giving a detailed account or statement') directly." .
 
 ####################################################################
 # 0. PROVENANCE ANNOTATION PROPERTIES
@@ -106,18 +106,22 @@ bpo:ActOfReporting a owl:Class ;
 
 bpo:pcfID a owl:AnnotationProperty ;
     rdfs:label "APQC PCF ID" ;
+    skos:definition "An annotation property that relates an ontology term to the unique process element identifier assigned by APQC to its source row, which remains stable across PCF releases while the conceptual meaning of the element remains unchanged." ;
     rdfs:comment "Stable APQC identifier. Anchor IRIs to this; it persists across PCF versions." .
 
 bpo:hierarchyID a owl:AnnotationProperty ;
     rdfs:label "APQC Hierarchy ID" ;
+    skos:definition "An annotation property that relates an ontology term to the dotted-decimal hierarchy identifier assigned to its source row in a particular release of the APQC Process Classification Framework, whose value may change between releases." ;
     rdfs:comment "Positional dotted-decimal locator. NON-STABLE across PCF versions. Reference only; never for IRI minting or subsumption." .
 
 bpo:apqcSourceText a owl:AnnotationProperty ;
     rdfs:label "APQC source description" ;
+    skos:definition "An annotation property that relates an ontology term to the verbatim element description of its source row in a specified release of the APQC Process Classification Framework." ;
     rdfs:comment "Verbatim APQC Element Description retained for provenance." .
 
 bpo:designatesProcessType a owl:AnnotationProperty ;
     rdfs:label "designates process type" ;
+    skos:definition "An annotation property that relates an APQC PCF catalog concept to an OWL class representing the Process type or Organization Capability type designated by that concept." ;
     rdfs:comment "Bridges a catalog node (bpo:PCF_<pcfID>) to its reality-layer class (bpo:P<pcfID> or a supporting capability)." .
 
 ####################################################################
@@ -192,7 +196,8 @@ bpo:RegulatoryAuthority a owl:Class ;
     rdfs:subClassOf cco:ont00001180 ,            # Organization
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:RegulatoryAuthorityRole ] ;
     rdfs:label "Regulatory Authority" ;
-    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing and enforcing statutes, regulatory directions, or legal principles binding on an organization." ;
+    skos:definition "An Organization that bears a regulatory-authority role in virtue of issuing, administering, or enforcing laws, statutes, permits, or regulatory requirements binding on other organizations, and overseeing their compliance." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): An Organization that bears a regulatory-authority role in virtue of issuing and enforcing statutes, regulatory directions, or legal principles binding on an organization." ;
     rdfs:comment "Minted for 12.4.4 (Ensure compliance); e.g. the Securities and Exchange Commission." .
 
 bpo:MediaOutlet a owl:Class ;
@@ -241,7 +246,8 @@ bpo:Auditor a owl:Class ;
     rdfs:subClassOf cco:ont00001017 ,            # Agent
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000196 ; owl:someValuesFrom bpo:AuditorRole ] ;
     rdfs:label "Auditor" ;
-    skos:definition "An Agent that bears an auditor role in virtue of conducting an examination of an organization's records, controls, or compliance." ;
+    skos:definition "An Agent that bears an auditor role in virtue of examining an organization's records, controls, or compliance." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): An Agent that bears an auditor role in virtue of conducting an examination of an organization's records, controls, or compliance." ;
     rdfs:comment "Minted for 12.2.2.2 (Respond to audit inquiries) and 12.3.2 (Report audit findings). Agent because an auditor may be an individual or an audit firm." .
 
 ####################################################################
@@ -355,14 +361,14 @@ bpo:IntellectualPropertyManagementCapability a owl:Class ;
 bpo:LenderRelationsManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:StakeholderRelationshipManagementCapability ;   # => cco:ont00000568 Organization Capability
     rdfs:label "Lender Relations Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
-    rdfs:comment "Minted for 12.1.1 (P11035), re-judged under R5 as a standing function -> Organization Capability, reconciled with the parallel 'manage relations' rows 12.2.1-3 which are likewise capabilities (Gate-F cross-row consistency). Realized in the bounded lender-relationship-cultivation episodes via obo:BFO_0000054." .
+    skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
+    rdfs:comment "Minted for 12.1.1 (P11035), re-judged under R5 as a standing function -> Organization Capability, reconciled with the parallel 'manage relations' rows 12.2.1-3 which are likewise capabilities (Gate-F cross-row consistency). Realized in the bounded lender-relationship-cultivation episodes via obo:BFO_0000054. Since Decision A (BPO architect, 2026-11-03), bpo:P11035 is the activity, a process, and this class is the capability that can be realized in it." .
 
 bpo:AnalystRelationsManagementCapability a owl:Class ;
     rdfs:subClassOf bpo:StakeholderRelationshipManagementCapability ;   # => cco:ont00000568 Organization Capability
     rdfs:label "Analyst Relations Management Capability" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
-    rdfs:comment "Minted for 12.1.2 (P11036), re-judged under R5 as a standing function -> Organization Capability ('creating and maintaining LONG-TERM relations' signals the no-natural-end / standing-capacity branch), reconciled with 12.2.1-3 (Gate-F cross-row consistency). Realized in the bounded analyst-relationship-cultivation episodes via obo:BFO_0000054." .
+    skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
+    rdfs:comment "Minted for 12.1.2 (P11036), re-judged under R5 as a standing function -> Organization Capability ('creating and maintaining LONG-TERM relations' signals the no-natural-end / standing-capacity branch), reconciled with 12.2.1-3 (Gate-F cross-row consistency). Realized in the bounded analyst-relationship-cultivation episodes via obo:BFO_0000054. Since Decision A (BPO architect, 2026-11-03), bpo:P11036 is the activity, a process, and this class is the capability that can be realized in it." .
 
 ####################################################################
 # 5. INPUT INFORMATION CONTENT ENTITIES
@@ -391,7 +397,7 @@ bpo:AuditInquiry a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:FinancialData a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Financial Data" ;
-    skos:definition "A Descriptive Information Content Entity that describes an organization's financial position and performance." ;
+    skos:definition "A Descriptive Information Content Entity that describes an organization's financial transactions, balances, position, or performance." ;
     rdfs:comment "Input for 12.3.1 (Report financial results)." .
 
 bpo:LegalProblemStatement a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -406,7 +412,8 @@ bpo:LegalWorkProduct a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:Invoice a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
     rdfs:label "Invoice" ;
-    skos:definition "A Descriptive Information Content Entity that describes fees claimed by a service provider for services rendered." ;
+    skos:definition "A Descriptive Information Content Entity that describes a commercial transaction between a seller and a buyer, itemizing the goods or services provided, their quantities, prices, dates, and taxes, and the amount claimed." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): A Descriptive Information Content Entity that describes fees claimed by a service provider for services rendered." ;
     rdfs:comment "Input for 12.4.5.5 (Process payment for legal services)." .
 
 bpo:PaymentRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
@@ -416,7 +423,7 @@ bpo:PaymentRecord a owl:Class ; rdfs:subClassOf cco:ont00000853 ;
 
 bpo:RegulatoryRequirement a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Regulatory Requirement" ;
-    skos:definition "A Directive Information Content Entity that prescribes a statute, regulatory direction, or legal principle with which an organization must comply." ;
+    skos:definition "A Directive Information Content Entity, issued by a governing authority, that prescribes a law, statute, regulatory direction, guideline, or legal principle with which an organization must comply." ;
     rdfs:comment "Directive (not Descriptive): it prescribes obligations. Input for 12.4.4 (Ensure compliance), 12.4.3 (preventive law programs)." .
 
 ####################################################################
@@ -497,7 +504,8 @@ bpo:CorporateGovernancePolicy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   
 
 bpo:CompliancePolicy a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Compliance Policy" ;
-    skos:definition "A Directive Information Content Entity that prescribes the framework, rules, and procedures by which an organization maintains adherence to applicable statutes and regulations." ;
+    skos:definition "A Directive Information Content Entity that prescribes an organization's rules, approach, and procedures for adhering to applicable statutes, regulations, guidelines, and ethical standards." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes the framework, rules, and procedures by which an organization maintains adherence to applicable statutes and regulations." ;
     rdfs:comment "Output of 12.4.4 / 12.4.4.1 (compliance framework and programs)." .
 
 bpo:ComplianceProgram a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
@@ -537,7 +545,8 @@ bpo:DisputeResolution a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Direct
 
 bpo:Budget a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
     rdfs:label "Budget" ;
-    skos:definition "A Directive Information Content Entity that prescribes, using figures, an organization's expected future financial results for an activity." ;
+    skos:definition "A Directive Information Content Entity that prescribes the planned allocation of an organization's funds, and the financial results expected from them, for an activity, project, program, or period." ;
+    skos:scopeNote "As used in section 12.0 before WP6 B1 (2026-10-31): A Directive Information Content Entity that prescribes, using figures, an organization's expected future financial results for an activity." ;
     rdfs:comment "Input for 12.4.5.3 (Receive strategy/budget). Directive: a financial plan that constrains spending." .
 
 bpo:ExecutiveAppointment a owl:Class ; rdfs:subClassOf cco:ont00000965 ;   # Directive ICE
@@ -583,7 +592,7 @@ bpo:PaymentInstrument a owl:Class ;
 bpo:CultivateLenderRelations a owl:Class ;
     rdfs:label "Cultivate Lender Relations" ;
     skos:definition "An Act of Relationship Management that cultivates and sustains an organization's relationship with one or more lenders during a bounded engagement episode, fostering a receptive environment for favorable lending terms, and has a lender as participant." ;
-    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.1: the discrete episodes (a cultivation act, a banking meeting, a communication) in which bpo:LenderRelationsManagementCapability is realized (obo:BFO_0000054). The Lender is a definitional participant; typical relationship/contact data I/O is non-definitional (Phase-3) and omitted." ;
+    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.1: the discrete episodes (a cultivation act, a banking meeting, a communication) in which bpo:LenderRelationsManagementCapability is realized (obo:BFO_0000054). The Lender is a definitional participant; typical relationship/contact data I/O is non-definitional (Phase-3) and omitted. Since Decision A (BPO architect, 2026-11-03), bpo:P11035 is the activity, a process; episodes of this kind may be its process parts, but no restriction says every instance has one." ;
     skos:example "A treasury team's quarterly banker briefing to secure a low-rate credit line." ;
     rdfs:subClassOf bpo:ActOfRelationshipManagement ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:Lender ] .
@@ -591,7 +600,7 @@ bpo:CultivateLenderRelations a owl:Class ;
 bpo:CultivateAnalystRelations a owl:Class ;
     rdfs:label "Cultivate Analyst Relations" ;
     skos:definition "An Act of Relationship Management that cultivates and sustains an organization's relationship with one or more financial analysts during a bounded engagement episode in order to elicit market intelligence, and has a financial analyst as participant." ;
-    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.2: the discrete episodes (analyst meetings, briefings) in which bpo:AnalystRelationsManagementCapability is realized (obo:BFO_0000054). The FinancialAnalyst is a definitional participant of these episode acts (not of a capability), per the Gate-F fix." ;
+    rdfs:comment "Supporting bounded act (no pcfID) minted for 12.1.2: the discrete episodes (analyst meetings, briefings) in which bpo:AnalystRelationsManagementCapability is realized (obo:BFO_0000054). The FinancialAnalyst is a definitional participant of these episode acts (not of a capability), per the Gate-F fix. Since Decision A (BPO architect, 2026-11-03), bpo:P11036 is the activity, a process; episodes of this kind may be its process parts, but no restriction says every instance has one." ;
     skos:example "An investor-relations officer's briefing with a sell-side analyst ahead of an earnings release." ;
     rdfs:subClassOf bpo:ActOfRelationshipManagement ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000057 ; owl:someValuesFrom bpo:FinancialAnalyst ] .
@@ -599,11 +608,12 @@ bpo:CultivateAnalystRelations a owl:Class ;
 # --- 12.1 (PCF 11010) : standing investor-relations function -> Capability [R6]
 bpo:P11010 a owl:Class ;
     bpo:pcfID "11010" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11010. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.1" ;
     bpo:apqcSourceText "Creating a strategic management responsibility for integrating finance, communication, marketing, and securities law compliance. Allow the most effective two-way communication among the organization, the financial community, and other constituencies. Enlist the investor relations function to provide market intelligence to corporate management." ;
     rdfs:label "Build investor relationships" ;
     skos:definition "An Investor Relations Capability that inheres in an Organization in virtue of its capacity to realize the integrated two-way engagement of the organization with lenders, analysts, and shareholders." ;
-    rdfs:comment "Modeled as an Organization Capability (R6), not a process: APQC describes a standing 'strategic management responsibility' / 'investor relations function' with no natural end. Specializes the shared bpo:InvestorRelationsCapability. Two of its three APQC children (12.1.1, 12.1.2) are themselves standing functions re-judged as capabilities under R5 (bpo:LenderRelationsManagementCapability, bpo:AnalystRelationsManagementCapability); a capability is realized only in PROCESSES (BFO_0000054), so this umbrella capability is realized in the bounded episode acts bpo:CultivateLenderRelations / bpo:CultivateAnalystRelations and in the shareholder-communication process bpo:P11037, not in the sub-capabilities." ;
+    rdfs:comment "Modeled as an Organization Capability (R6), not a process: APQC describes a standing 'strategic management responsibility' / 'investor relations function' with no natural end. Specializes the shared bpo:InvestorRelationsCapability. Two of its three APQC children (12.1.1, 12.1.2) are themselves standing functions re-judged as capabilities under R5 (bpo:LenderRelationsManagementCapability, bpo:AnalystRelationsManagementCapability); a capability is realized only in PROCESSES (BFO_0000054), so this umbrella capability is realized in the bounded episode acts bpo:CultivateLenderRelations / bpo:CultivateAnalystRelations and in the shareholder-communication process bpo:P11037, not in the sub-capabilities. Since Decision A (BPO architect, 2026-11-03), 12.1.1 and 12.1.2 (bpo:P11035, bpo:P11036) are acts, not capabilities; this class's own status is in the capability-as-process backlog (docs/wp6/capability-as-process-backlog.md)." ;
     skos:example "An organization's standing investor-relations office that cultivates lender, analyst, and shareholder relationships across fiscal periods." ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
         bpo:InvestorRelationsCapability ,
@@ -611,35 +621,34 @@ bpo:P11010 a owl:Class ;
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:CultivateAnalystRelations ] ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11037 ] .
 
-# --- 12.1.1 (PCF 11035) : standing lender-relations function -> Capability [R5/R6]
+# --- 12.1.1 (PCF 11035) : lender-relations activity -> Act of Relationship Management (decision A)
 bpo:P11035 a owl:Class ;
     bpo:pcfID "11035" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11035. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.1.1" ;
     bpo:apqcSourceText "Building and managing relations with bankers or lenders through strong products/services strategies that bankers would want to invest in. Foster a receptive environment for low rates of interest, easy access to loans, etc." ;
     rdfs:label "Plan, build, and manage lender relations" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to build, maintain, and advance ongoing relationships with bankers and lenders so as to foster a receptive environment for favorable lending terms." ;
-    rdfs:comment "RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Plan, build, and manage an ongoing relation ... foster a receptive environment' has no natural beginning or end; it is a standing capacity realized in recurring episodes -- exactly the R5 'standing function -> capability' branch already applied to the parallel 'Manage ... relations' rows 12.2.1 (P11038), 12.2.2 (P11039), 12.2.3 (P11040). Leaf-vs-nonleaf is NOT the R5 ground (R5 is per-node bounded-occurrent, independent of whether children were enumerated), so the prior split mistyped parallel rows. Now an Organization Capability (cco:ont00000568) specializing bpo:LenderRelationsManagementCapability, realized in the bounded bpo:CultivateLenderRelations episodes (obo:BFO_0000054). The Lender participates in those episode acts, not in the capability." ;
-    skos:example "An organization's standing treasury function that nurtures banking relationships across fiscal periods to secure low-rate credit lines." ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        bpo:LenderRelationsManagementCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:CultivateLenderRelations ] .
+    skos:definition "An Act of Relationship Management in which an organization plans, builds, and manages its relationships with bankers and lenders over time, so as to foster a receptive environment for favorable lending terms." ;
+    rdfs:comment "Decision A (BPO architect, 2026-11-03): the APQC row names an activity that is performed, so this class is a process, an Act of Relationship Management; the standing capacity is the separate bpo:LenderRelationsManagementCapability, which can be realized in it (bpo:enablesProcess). The bounded bpo:CultivateLenderRelations episodes may be process parts of an instance, but no has-process-part restriction is asserted: the definition does not make an episode necessary (a programme planned and stopped before any engagement with a lender is still an instance). Earlier: RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Plan, build, and manage an ongoing relation ... foster a receptive environment' has no natural beginning or end; it is a standing capacity realized in recurring episodes -- exactly the R5 'standing function -> capability' branch already applied to the parallel 'Manage ... relations' rows 12.2.1 (P11038), 12.2.2 (P11039), 12.2.3 (P11040). Leaf-vs-nonleaf is NOT the R5 ground (R5 is per-node bounded-occurrent, independent of whether children were enumerated), so the prior split mistyped parallel rows. Now an Organization Capability (cco:ont00000568) specializing bpo:LenderRelationsManagementCapability, realized in the bounded bpo:CultivateLenderRelations episodes (obo:BFO_0000054). The Lender participates in those episode acts, not in the capability." ;
+    skos:example "A treasury function's programme of banker briefings and credit negotiations over a fiscal year." ;
+    rdfs:subClassOf bpo:ActOfRelationshipManagement .
 
-# --- 12.1.2 (PCF 11036) : standing analyst-relations function -> Capability [R5/R6]
+# --- 12.1.2 (PCF 11036) : analyst-relations activity -> Act of Relationship Management (decision A)
 bpo:P11036 a owl:Class ;
     bpo:pcfID "11036" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11036. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.1.2" ;
     bpo:apqcSourceText "Creating and maintaining long-term relations with analysts. Involve analysts in strategy and product decisions in order to elicit valuable information." ;
     rdfs:label "Plan, build, and manage analyst relations" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to create and maintain long-term relationships with financial analysts so as to elicit market intelligence." ;
-    rdfs:comment "RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Creating and maintaining LONG-TERM relations with analysts' is the paradigm of a standing function with no natural end -- 'long-term' actively signals the no-natural-end (standing-capacity) branch of R5 -- the same pattern the module treats as a capability at 12.2.1-3. Reconciled to the same R5 verdict chosen for P11035. Now an Organization Capability (cco:ont00000568) specializing bpo:AnalystRelationsManagementCapability, realized in the bounded bpo:CultivateAnalystRelations episodes (analyst meetings, briefings) via obo:BFO_0000054. The FinancialAnalyst participates in those episode acts, not in the capability." ;
-    skos:example "An organization's standing investor-relations function that maintains relationships with sell-side analysts covering the firm across reporting cycles." ;
-    rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
-        bpo:AnalystRelationsManagementCapability ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:CultivateAnalystRelations ] .
+    skos:definition "An Act of Relationship Management in which an organization plans, builds, and manages long-term relationships with financial analysts, so as to elicit market intelligence." ;
+    rdfs:comment "Decision A (BPO architect, 2026-11-03): the APQC row names an activity that is performed, so this class is a process, an Act of Relationship Management; the standing capacity is the separate bpo:AnalystRelationsManagementCapability, which can be realized in it (bpo:enablesProcess). The bounded bpo:CultivateAnalystRelations episodes may be process parts of an instance, but no has-process-part restriction is asserted: the definition does not make an episode necessary (a programme planned and stopped before any engagement with a financial analyst is still an instance). Earlier: RE-ANCHORED (Gate-F, R5 cross-row consistency): previously modeled as a bounded bpo:ActOfRelationshipManagement. 'Creating and maintaining LONG-TERM relations with analysts' is the paradigm of a standing function with no natural end -- 'long-term' actively signals the no-natural-end (standing-capacity) branch of R5 -- the same pattern the module treats as a capability at 12.2.1-3. Reconciled to the same R5 verdict chosen for P11035. Now an Organization Capability (cco:ont00000568) specializing bpo:AnalystRelationsManagementCapability, realized in the bounded bpo:CultivateAnalystRelations episodes (analyst meetings, briefings) via obo:BFO_0000054. The FinancialAnalyst participates in those episode acts, not in the capability." ;
+    skos:example "An investor-relations team's programme of analyst briefings across reporting cycles." ;
+    rdfs:subClassOf bpo:ActOfRelationshipManagement .
 
 # --- 12.1.3 (PCF 11037) : Communication (shareholders) -> CCO Act of Communication
 bpo:P11037 a owl:Class ;
     bpo:pcfID "11037" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11037. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.1.3" ;
     bpo:apqcSourceText "Practicing regular, transparent communication with shareholders through annual shareholders' meetings, quarterly earnings calls, shareholders letters, one-on-one emails or calls, etc." ;
     rdfs:label "Communicate with shareholders" ;
@@ -658,6 +667,7 @@ bpo:P11037 a owl:Class ;
 # --- 12.2.1 (PCF 11038) : standing government-relations function -> Capability
 bpo:P11038 a owl:Class ;
     bpo:pcfID "11038" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11038. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1" ;
     bpo:apqcSourceText "Persuading public and government policy at the local, regional, national, and global level (subject to government regulations)." ;
     rdfs:label "Manage government relations" ;
@@ -675,6 +685,7 @@ bpo:P11038 a owl:Class ;
 # --- 12.2.2 (PCF 11039) : standing quasi-gov-relations function -> Capability
 bpo:P11039 a owl:Class ;
     bpo:pcfID "11039" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11039. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.2" ;
     bpo:apqcSourceText "Managing relations with quasi-governmental organizations, corporations, businesses, or any other agency that is treated by national laws and principles to be under the supervision of the government but also distinct and self-directed from the government." ;
     rdfs:label "Manage relations with quasi-government bodies" ;
@@ -690,6 +701,7 @@ bpo:P11039 a owl:Class ;
 # --- 12.2.3 (PCF 11040) : standing trade/industry-relations function -> Capability
 bpo:P11040 a owl:Class ;
     bpo:pcfID "11040" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11040. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.3" ;
     bpo:apqcSourceText "Managing relations with organizations established and financed by businesses that operate in a specific industry. Participate in public relations actions such as lobbying and publishing, advertising, education, and political donations." ;
     rdfs:label "Manage relations with trade or industry groups" ;
@@ -704,6 +716,7 @@ bpo:P11040 a owl:Class ;
 # --- 12.2.4 (PCF 11041) : standing lobbying function -> Capability (no modeled children)
 bpo:P11041 a owl:Class ;
     bpo:pcfID "11041" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11041. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.4" ;
     bpo:apqcSourceText "Managing lobbying activities to affect government policies." ;
     rdfs:label "Manage lobby activities" ;
@@ -715,6 +728,7 @@ bpo:P11041 a owl:Class ;
 # --- 12.2.1.1 (PCF 12869) : Appraisal -> descriptive output
 bpo:P12869 a owl:Class ;
     bpo:pcfID "12869" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12869. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1.1" ;
     bpo:apqcSourceText "Ascertaining how the business entity relates to all levels of government. Identify areas that needs further growth and resources to foster those relationships." ;
     rdfs:label "Assess relationships" ;
@@ -728,6 +742,7 @@ bpo:P12869 a owl:Class ;
 # --- 12.2.1.2 (PCF 12870) : Formulation -> directive output (appointment)
 bpo:P12870 a owl:Class ;
     bpo:pcfID "12870" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12870. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1.2" ;
     bpo:apqcSourceText "Assigning executive level resources to manage, grow, and drive relationships with government bodies." ;
     rdfs:label "Appoint responsible executives" ;
@@ -741,6 +756,7 @@ bpo:P12870 a owl:Class ;
 # --- 12.2.1.3 (PCF 12871) : Monitoring -> descriptive output
 bpo:P12871 a owl:Class ;
     bpo:pcfID "12871" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12871. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1.3" ;
     bpo:apqcSourceText "Analyzing current relationships with government bodies and entities." ;
     rdfs:label "Monitor relationships" ;
@@ -754,6 +770,7 @@ bpo:P12871 a owl:Class ;
 # --- 12.2.1.4 (PCF 12872) : Communication (input advisory) -- internal
 bpo:P12872 a owl:Class ;
     bpo:pcfID "12872" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12872. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1.4" ;
     bpo:apqcSourceText "Garnering internal advice from an informal group in order to successfully maintain and advance relationships." ;
     rdfs:label "Receive input from internal advisors" ;
@@ -768,6 +785,7 @@ bpo:P12872 a owl:Class ;
 # --- 12.2.1.5 (PCF 12873) : Communication (input advisory) -- external
 bpo:P12873 a owl:Class ;
     bpo:pcfID "12873" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12873. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1.5" ;
     bpo:apqcSourceText "Garnering third party advice from an informal group in order to successfully maintain and advance relationships." ;
     rdfs:label "Receive input from external advisors" ;
@@ -782,6 +800,7 @@ bpo:P12873 a owl:Class ;
 # --- 12.2.1.6 (PCF 12874) : Relationship management (liaison with authorities)
 bpo:P12874 a owl:Class ;
     bpo:pcfID "12874" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12874. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.1.6" ;
     bpo:apqcSourceText "Meeting with government heads and representatives." ;
     rdfs:label "Liaise with authorities" ;
@@ -794,6 +813,7 @@ bpo:P12874 a owl:Class ;
 # --- 12.2.2.1 (PCF 12875) : Relationship management
 bpo:P12875 a owl:Class ;
     bpo:pcfID "12875" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12875. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.2.1" ;
     bpo:apqcSourceText "Engaging government, regulatory, or industry agencies to establish relationships. Analyze steps and requirements necessary for inclusion, if needed." ;
     rdfs:label "Establish relationships with agencies" ;
@@ -806,6 +826,7 @@ bpo:P12875 a owl:Class ;
 # --- 12.2.2.2 (PCF 12876) : Communication (input audit inquiry) -> participant auditor
 bpo:P12876 a owl:Class ;
     bpo:pcfID "12876" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12876. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.2.2" ;
     bpo:apqcSourceText "Cooperating with auditors regarding potential or ongoing inquiries." ;
     rdfs:label "Respond to audit inquiries" ;
@@ -820,6 +841,7 @@ bpo:P12876 a owl:Class ;
 # --- 12.2.2.3 (PCF 12877) : Information processing -> descriptive output (contact record)
 bpo:P12877 a owl:Class ;
     bpo:pcfID "12877" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12877. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.2.3" ;
     bpo:apqcSourceText "Keeping a repository of documents that contain information about the network of partners, prospects and customers. Keep records up-to-date with routine reviews and modify as needed." ;
     rdfs:label "Maintain documentation of contacts" ;
@@ -832,6 +854,7 @@ bpo:P12877 a owl:Class ;
 # --- 12.2.2.4 (PCF 12878) : Relationship management -> output meeting record; participant quasi-gov body
 bpo:P12878 a owl:Class ;
     bpo:pcfID "12878" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12878. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.2.4" ;
     bpo:apqcSourceText "Ensuring regular interaction between business entity and quasi-government bodies in order to maintain established relationships. Collect and record meeting data for further analysis and use." ;
     rdfs:label "Plan and manage meetings" ;
@@ -845,6 +868,7 @@ bpo:P12878 a owl:Class ;
 # --- 12.2.3.1 (PCF 12879) : Formulation -> directive output (requirements spec)
 bpo:P12879 a owl:Class ;
     bpo:pcfID "12879" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12879. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.3.1" ;
     bpo:apqcSourceText "Determining the requirements to enter in to an agreement with trade or industry agencies. Discover what activities or processes can be conducted to provide the best mutual outcome." ;
     rdfs:label "Evaluate the requirements for strategic relationships" ;
@@ -858,6 +882,7 @@ bpo:P12879 a owl:Class ;
 # --- 12.2.3.2 (PCF 12880) : Monitoring -> descriptive output
 bpo:P12880 a owl:Class ;
     bpo:pcfID "12880" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12880. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.3.2" ;
     bpo:apqcSourceText "Analyzing current relationships with trade and industry groups. Ensure that the partnership in successful and make modifications where needed." ;
     rdfs:label "Monitor the success of the partnerships" ;
@@ -871,6 +896,7 @@ bpo:P12880 a owl:Class ;
 # --- 12.2.3.3 (PCF 12881) : Relationship management
 bpo:P12881 a owl:Class ;
     bpo:pcfID "12881" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 12881. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.2.3.3" ;
     bpo:apqcSourceText "Providing additional information or inclusion for third party trade or industry entities; or changing existing parameters to modify the current relationship. Communicate and execute changes." ;
     rdfs:label "Extend or change the relationships" ;
@@ -887,10 +913,11 @@ bpo:P12881 a owl:Class ;
 # --- 12.3 (PCF 11012) : standing board-relations function -> Capability [R6]
 bpo:P11012 a owl:Class ;
     bpo:pcfID "11012" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11012. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.3" ;
     bpo:apqcSourceText "Maintaining relations with representatives of the stockholders. Establish corporate management-related policies and to make decisions on major company issues. Implement practices designed to engender communication, trust, and cooperation." ;
     rdfs:label "Manage relations with board of directors" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to sustain communicative and reporting relations with its board of directors and the stockholders the board represents." ;
+    skos:definition "A Stakeholder Relationship Management Capability that inheres in an Organization in virtue of its capacity to sustain communicative and reporting relations with its board of directors and the stockholders the board represents." ;
     rdfs:comment "R5 = capability, not a process: 'manage/maintain relations' denotes a standing function with no natural beginning or end, so it is modeled as an Organization Capability (cco:ont00000568) realized in its underlying acts (R6), not as a bounded occurrent. Subsumed under the shared StakeholderRelationshipManagementCapability. The realized-in restrictions link it to the bounded acts that exercise it." ;
     skos:example "A corporate secretariat's ongoing capacity to deliver financial and audit reporting to the board and shareholders." ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
@@ -901,6 +928,7 @@ bpo:P11012 a owl:Class ;
 # --- 12.3.1 (PCF 11042) : Reporting -> Act of Representative Communication
 bpo:P11042 a owl:Class ;
     bpo:pcfID "11042" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11042. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.3.1" ;
     bpo:apqcSourceText "Reporting financial results to management, and releasing results to the public. Report financial statements, including the income statement, balance sheet, and statement of cash flows." ;
     rdfs:label "Report financial results" ;
@@ -915,6 +943,7 @@ bpo:P11042 a owl:Class ;
 # --- 12.3.2 (PCF 11043) : Reporting -> Act of Representative Communication
 bpo:P11043 a owl:Class ;
     bpo:pcfID "11043" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11043. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.3.2" ;
     bpo:apqcSourceText "Reporting audit findings to management. Practice an internal audit with criteria for confirming a problem, a description of the situation, and the root cause of the problem. Make recommendations that resolve the issue." ;
     rdfs:label "Report audit findings" ;
@@ -933,9 +962,10 @@ bpo:P11043 a owl:Class ;
 # --- 12.4 (PCF 11013) : standing umbrella function -> Organization Capability
 bpo:P11013 a owl:Class ;
     bpo:pcfID "11013" ; bpo:hierarchyID "12.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11013. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing legal practices to abide by the law, as well as ethical practices." ;
     rdfs:label "Manage legal and ethical issues" ;
-    skos:definition "An Organization Capability that an Organization realizes in the acts by which it manages its legal and ethical practices so as to abide by the law." ;
+    skos:definition "A Legal and Compliance Capability that an Organization realizes in the acts by which it manages its legal and ethical practices so as to abide by the law." ;
     rdfs:comment "R5/R6: 'Manage legal and ethical issues' is a standing function with no natural end, so it is an Organization Capability (cco:ont00000568), not a process. Realized in the modeled child acts. Narrower, pcf-bearing refinement of the shared bpo:LegalAndComplianceCapability. NOTE: 12.4.4 (P11047 Ensure compliance) is itself re-judged as a sub-capability under R5 (Gate-F), and a capability is realized only in processes, so this umbrella capability is realized in P11047's bounded acts bpo:P11053 / bpo:P11054 rather than in the P11047 sub-capability." ;
     rdfs:subClassOf cco:ont00000568 , bpo:LegalAndComplianceCapability ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11044 ] ,
@@ -949,6 +979,7 @@ bpo:P11013 a owl:Class ;
 # --- 12.4.1 (PCF 11044) : Formulation -> Directive ICE (EthicsPolicy)
 bpo:P11044 a owl:Class ;
     bpo:pcfID "11044" ; bpo:hierarchyID "12.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11044. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating a code of ethics that communicate the organization's philosophy to employees, vendors, customers, clients, and the public." ;
     rdfs:label "Create ethics policies" ;
     skos:definition "An Act of Formulation that composes a code of ethics and has as output an ethics policy expressing the organization's philosophy." ;
@@ -960,15 +991,17 @@ bpo:P11044 a owl:Class ;
 # --- 12.4.2 (PCF 11045) : standing governance administration -> Organization Capability
 bpo:P11045 a owl:Class ;
     bpo:pcfID "11045" ; bpo:hierarchyID "12.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11045. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering the system of rules, practices, and processes through which a company is directed and controlled. Balance stakeholder interests including shareholders, management, customers, suppliers, financiers, government, and the community. Outline a strategy for achieving organizational goals, from action plans and internal controls to performance measurement and corporate disclosure." ;
     rdfs:label "Manage corporate governance policies" ;
-    skos:definition "An Organization Capability that an Organization realizes in administering the system of rules, practices, and processes through which it is directed and controlled while balancing stakeholder interests." ;
+    skos:definition "A Legal and Compliance Capability that an Organization realizes in administering the system of rules, practices, and processes through which it is directed and controlled while balancing stakeholder interests." ;
     rdfs:comment "R5/R6: administering the standing governance 'system' has no natural end, so it is an Organization Capability (cco:ont00000568). The corporate governance policy it maintains is the shared bpo:CorporateGovernancePolicy (a Directive ICE) produced by the underlying formulation acts." ;
     rdfs:subClassOf cco:ont00000568 , bpo:LegalAndComplianceCapability .
 
 # --- 12.4.3 (PCF 11046) : Formulation -> Directive ICE (PreventiveLawProgram)
 bpo:P11046 a owl:Class ;
     bpo:pcfID "11046" ; bpo:hierarchyID "12.4.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11046. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Creating and applying programs and activities. Encourage the adherence preventive laws, such as environmental law, sex discrimination, computer law, estate planning, corporate compliance, business planning, and property transactions." ;
     rdfs:label "Develop and perform preventive law programs" ;
     skos:definition "An Act of Formulation that creates programs and activities encouraging adherence to preventive laws and has as output a preventive law program." ;
@@ -980,9 +1013,10 @@ bpo:P11046 a owl:Class ;
 # --- 12.4.4 (PCF 11047) : standing compliance-oversight function -> Organization Capability [R5/R6]
 bpo:P11047 a owl:Class ;
     bpo:pcfID "11047" ; bpo:hierarchyID "12.4.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11047. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Ensuring the organization's compliance position. Validate compliance with different statutes, regulatory directions, and legal principles (using Establish compliance framework and policies [17468]). Coordinate with compliance and risk management personnel." ;
     rdfs:label "Ensure compliance" ;
-    skos:definition "An Organization Capability that inheres in an Organization in virtue of its capacity to ensure and oversee its compliance position by designing compliance programs and validating adherence to statutes, regulatory directions, and legal principles." ;
+    skos:definition "A Legal and Compliance Capability that inheres in an Organization in virtue of its capacity to ensure and oversee its compliance position by designing compliance programs and validating adherence to statutes, regulatory directions, and legal principles." ;
     rdfs:comment "RE-ANCHORED (Gate-F, R5 / genus-vs-parts tension): previously a single bounded Act of Appraisal. (a) 'Ensuring the organization's compliance position' / 'coordinate with personnel' reads as a standing oversight function with no natural end -- like its modeled-as-Capability siblings P11045/P11048/P11049. (b) It was given cco:has process part to a FORMULATION act (P11053 design a compliance program) and an EXECUTION act (P11054), neither of which is an occurrent part of judging compliance -- an appraisal does not have 'design a program' as a part. Re-modeled as an Organization Capability (cco:ont00000568) specializing bpo:LegalAndComplianceCapability, realized (obo:BFO_0000054) in its bounded child acts P11053 and P11054, which are thereby re-parented as realizations of the capability rather than process parts of an appraisal. The bounded validation judgement against bpo:RegulatoryRequirement, performed with bpo:CompliancePersonnel, is itself one of the acts that realize this capability." ;
     skos:example "A standing compliance office that designs anti-trust programs and continually validates the firm's standing against SEC and consumer-protection statutes." ;
     rdfs:subClassOf cco:ont00000568 ,   # Organization Capability
@@ -993,6 +1027,7 @@ bpo:P11047 a owl:Class ;
 # --- 12.4.4.1 (PCF 11053) : Formulation -> Directive ICE (ComplianceProgram)
 bpo:P11053 a owl:Class ;
     bpo:pcfID "11053" ; bpo:hierarchyID "12.4.4.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11053. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Employing an internal system or process to identify and reduce the risk of breaching the Competition and Consumer Act 2010. Remedy any breach. Create a culture of compliance. Design compliance programs." ;
     rdfs:label "Plan and initiate compliance program" ;
     skos:definition "An Act of Formulation that designs an internal system to identify and reduce the risk of statutory breach and has as output a compliance program." ;
@@ -1004,6 +1039,7 @@ bpo:P11053 a owl:Class ;
 # --- 12.4.4.2 (PCF 11054) : Planned Act executing the program
 bpo:P11054 a owl:Class ;
     bpo:pcfID "11054" ; bpo:hierarchyID "12.4.4.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11054. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Implementing the established compliance program in order to meet the government laws and regulations. Create a compliance team that scrutinizes the rules set out by government bodies such as the Securities and Exchange Commission." ;
     rdfs:label "Execute compliance program" ;
     skos:definition "A Planned Act that implements an established compliance program to meet government laws and regulations, prescribed by that compliance program." ;
@@ -1016,9 +1052,10 @@ bpo:P11054 a owl:Class ;
 # --- 12.4.5 (PCF 11048) : standing counsel-management function -> Organization Capability
 bpo:P11048 a owl:Class ;
     bpo:pcfID "11048" ; bpo:hierarchyID "12.4.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11048. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing professionals, sought externally for assistance over legal and ethical concerns. Administer and oversee assistance from subject matter experts and professionals for sourcing expert opinion and counseling over legal and ethical matters." ;
     rdfs:label "Manage outside counsel" ;
-    skos:definition "An Organization Capability that an Organization realizes in the acts by which it engages, oversees, pays, and monitors externally sourced professionals for legal and ethical assistance." ;
+    skos:definition "A Legal and Compliance Capability that an Organization realizes in the acts by which it engages, oversees, pays, and monitors externally sourced professionals for legal and ethical assistance." ;
     rdfs:comment "R5/R6: a standing 'administer and oversee' function with no natural end, so an Organization Capability (cco:ont00000568). Realized in its six bounded child acts (12.4.5.1-12.4.5.6)." ;
     rdfs:subClassOf cco:ont00000568 , bpo:LegalAndComplianceCapability ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11056 ] ,
@@ -1040,6 +1077,7 @@ bpo:DetermineLegalWorkRequirements a owl:Class ;
 # --- 12.4.5.1 (PCF 11056) : Appraisal -> Descriptive judgement (Directive facet split out)
 bpo:P11056 a owl:Class ;
     bpo:pcfID "11056" ; bpo:hierarchyID "12.4.5.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11056. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Examining the problems and deciding the action requirements for engaging outside counsel. This process element calls upon the organization to internally analyze the issues for which assistance from external counsel is needed. Additionally, the organization needs to break-down the issue, identifying the tasks and exercises where outside counsel can help." ;
     rdfs:label "Assess problem and determine work requirements" ;
     skos:definition "An Act of Appraisal that examines the legal issues for which external counsel is needed and has as output a legal problem statement, and which has as process part the determination of the legal work requirements." ;
@@ -1052,6 +1090,7 @@ bpo:P11056 a owl:Class ;
 # --- 12.4.5.2 (PCF 11057) : Acquisition (obtain counsel services)
 bpo:P11057 a owl:Class ;
     bpo:pcfID "11057" ; bpo:hierarchyID "12.4.5.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11057. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Recruiting the assistance of outside counsel for any legal and/or ethical concerns. Engage and/or retain any external counsel sought from subject matter experts and professionals." ;
     rdfs:label "Engage/Retain outside counsel if necessary" ;
     skos:definition "An Act of Acquisition that obtains the assistance of outside counsel for legal or ethical concerns, taking a work requirements specification as input." ;
@@ -1064,6 +1103,7 @@ bpo:P11057 a owl:Class ;
 # --- 12.4.5.3 (PCF 11058) : Information Processing (receive a budget)
 bpo:P11058 a owl:Class ;
     bpo:pcfID "11058" ; bpo:hierarchyID "12.4.5.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11058. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making a financial plan. This strategy sets out, using figures, an organization's expected future results. Enlist the finance function to support work generated by other business functions in order to build and secure their support for the budget." ;
     rdfs:label "Receive strategy/budget" ;
     skos:definition "An Act of Information Processing that receives a budget, a financial plan setting out expected future results in figures, for the engaged legal work." ;
@@ -1075,6 +1115,7 @@ bpo:P11058 a owl:Class ;
 # --- 12.4.5.4 (PCF 11059) : Monitoring -> Descriptive ICE (work-product record)
 bpo:P11059 a owl:Class ;
     bpo:pcfID "11059" ; bpo:hierarchyID "12.4.5.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11059. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Receiving deliverables from outside counsel, and monitoring the efforts committed by them. Track the progress of, collect, and validate the required work product from the subject matter experts and professionals engaged as external counsel. Verify the amount of effort dedicated by these counsels to the issue at hand, in order to confirm their fees." ;
     rdfs:label "Receive work product and manage/monitor case and work performed" ;
     skos:definition "An Act of Monitoring that receives the work product of engaged outside counsel, tracks and validates the committed effort, and has as output a work product validation record used to confirm fees." ;
@@ -1088,6 +1129,7 @@ bpo:P11059 a owl:Class ;
 # --- 12.4.5.5 (PCF 11060) : Payment (material output) ; informational input = Invoice
 bpo:P11060 a owl:Class ;
     bpo:pcfID "11060" ; bpo:hierarchyID "12.4.5.5" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11060. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Making payments to legal advisers for their services. Payments include addressing issues or suits by customers, suppliers, competitors, bankers, government agencies, etc." ;
     rdfs:label "Process payment for legal services" ;
     skos:definition "An Act of Payment that transfers consideration to a legal adviser for services rendered, taking an invoice as input, transferring a payment as a material participant, and having a payment record as its informational output." ;
@@ -1102,6 +1144,7 @@ bpo:P11060 a owl:Class ;
 # --- 12.4.5.6 (PCF 11061) : Monitoring -> Descriptive ICE (LegalActivityRecord)
 bpo:P11061 a owl:Class ;
     bpo:pcfID "11061" ; bpo:hierarchyID "12.4.5.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11061. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Keeping track of the legal activities and performance of the organization." ;
     rdfs:label "Track legal activity/performance" ;
     skos:definition "An Act of Monitoring that tracks the legal activities and performance of the organization and has as output a legal activity record." ;
@@ -1113,9 +1156,10 @@ bpo:P11061 a owl:Class ;
 # --- 12.4.6 (PCF 11049) : standing IP-protection function -> Organization Capability
 bpo:P11049 a owl:Class ;
     bpo:pcfID "11049" ; bpo:hierarchyID "12.4.6" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11049. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Safeguarding the intellectual property of the organization. This process requires the organization to protect a wide variety of intellectual property created by it. It involves creating and managing non-disclosure agreements (NDAs), following up on current developments in the areas where the organization holds patents, tracking the use of the organization's copyrighted material, creating and upholding licensing terms, and administering policies for safeguarding intellectual property." ;
     rdfs:label "Protect intellectual property" ;
-    skos:definition "An Organization Capability that an Organization realizes in the acts by which it safeguards, registers, licenses, and polices its intellectual property." ;
+    skos:definition "An Intellectual Property Management Capability that an Organization realizes in the acts by which it safeguards, registers, licenses, and polices its intellectual property." ;
     rdfs:comment "R5/R6: an ongoing 'safeguarding/administering policies' function with no natural end, so an Organization Capability (cco:ont00000568). Realized in its four bounded child acts (12.4.6.1-12.4.6.4). Narrower, pcf-bearing refinement of the shared bpo:IntellectualPropertyManagementCapability." ;
     rdfs:subClassOf cco:ont00000568 , bpo:IntellectualPropertyManagementCapability ,
         [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11062 ] ,
@@ -1126,6 +1170,7 @@ bpo:P11049 a owl:Class ;
 # --- 12.4.6.1 (PCF 11062) : Relationship Management of the IP portfolio
 bpo:P11062 a owl:Class ;
     bpo:pcfID "11062" ; bpo:hierarchyID "12.4.6.1" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11062. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the patents and copyrights already held or sought by the organization. Administer and oversee applying for, securing, and maintaining intellectual property rights in the form of patents and copyrights. Submit applications for such rights. Handle associated legal issues. Draft and communicate proper attributions. Collect royalties. Monitor any misuse of the intellectual property rights." ;
     rdfs:label "Manage copyrights, patents, and trademarks" ;
     skos:definition "An Act of Acquisition that applies for, secures, and maintains the organization's patents, copyrights, and trademarks and has as output the resulting intellectual property right." ;
@@ -1137,6 +1182,7 @@ bpo:P11062 a owl:Class ;
 # --- 12.4.6.2 (PCF 11063) : Formulation -> Directive ICE (IntellectualPropertyPolicy)
 bpo:P11063 a owl:Class ;
     bpo:pcfID "11063" ; bpo:hierarchyID "12.4.6.2" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11063. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing the upkeep of intellectual property rights by creating and managing a framework of rules, policies, procedures, and restrictions. Outline a clear policy for any possible scenario of their use by any external agent." ;
     rdfs:label "Maintain intellectual property rights and restrictions" ;
     skos:definition "An Act of Formulation that creates a framework of rules, procedures, and restrictions governing the use of the organization's intellectual property and has as output an intellectual property policy." ;
@@ -1148,6 +1194,7 @@ bpo:P11063 a owl:Class ;
 # --- 12.4.6.3 (PCF 11064) : Formulation -> Directive ICE (LicensingTerms)
 bpo:P11064 a owl:Class ;
     bpo:pcfID "11064" ; bpo:hierarchyID "12.4.6.3" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11064. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Administering and overseeing the terms and policies associated with licensing the organization's intellectual property. Create and manage the policies and terms governing the possible granting of a license to any external agent. Demarcate a clear framework that governs the licensing of any patents or copyrights held by the organization." ;
     rdfs:label "Administer licensing terms" ;
     skos:definition "An Act of Formulation that creates the policies and terms governing the licensing of the organization's intellectual property and has as output licensing terms." ;
@@ -1159,6 +1206,7 @@ bpo:P11064 a owl:Class ;
 # --- 12.4.6.4 (PCF 11065) : Relationship Management of licensing options
 bpo:P11065 a owl:Class ;
     bpo:pcfID "11065" ; bpo:hierarchyID "12.4.6.4" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11065. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Managing options regarding licensing agreements. Follow favorable terms and conditions." ;
     rdfs:label "Administer options" ;
     skos:definition "A Planned Act that administers and exercises the options available under the organization's licensing agreements so as to follow favorable terms and conditions, taking the governing licensing terms as input." ;
@@ -1170,6 +1218,7 @@ bpo:P11065 a owl:Class ;
 # --- 12.4.7 (PCF 11050) : Formulation -> Directive ICE (DisputeResolution)
 bpo:P11050 a owl:Class ;
     bpo:pcfID "11050" ; bpo:hierarchyID "12.4.7" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11050. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Resolving disputes or civil lawsuits internally or externally." ;
     rdfs:label "Resolve disputes and litigations" ;
     skos:definition "An Act of Negotiation that settles a dispute or civil lawsuit between adverse parties, internally or externally, and has as output a dispute resolution." ;
@@ -1181,6 +1230,7 @@ bpo:P11050 a owl:Class ;
 # --- 12.4.8 (PCF 11051) : Act of Communication -> Descriptive ICE (LegalAdvice)
 bpo:P11051 a owl:Class ;
     bpo:pcfID "11051" ; bpo:hierarchyID "12.4.8" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11051. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Providing legal advice concerning the substance or procedure of a law in relation to a particular situation." ;
     rdfs:label "Provide legal advice/counseling" ;
     skos:definition "An Act of Communication that conveys legal advice concerning the substance or procedure of a law in relation to a particular situation and has that legal advice as output." ;
@@ -1194,6 +1244,7 @@ bpo:P11051 a owl:Class ;
 # --- 12.4.9 (PCF 11052) : Negotiation -> Directive ICE (Contract)
 bpo:P11052 a owl:Class ;
     bpo:pcfID "11052" ; bpo:hierarchyID "12.4.9" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11052. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:apqcSourceText "Negotiating terms to reach a final draft of a contract that is acceptable to all parties." ;
     rdfs:label "Negotiate and document agreements/contracts" ;
     skos:definition "An Act of Negotiation that exchanges offers among parties to reach a final draft of a contract acceptable to all of them and has that contract as output." ;
@@ -1210,16 +1261,12 @@ bpo:P11052 a owl:Class ;
 #     Modeled by reusing the shared bpo:PublicRelationsCapability and
 #     asserting its realization in the modeled child acts. The catalog
 #     node bpo:PCF_11014 designates bpo:PublicRelationsCapability.
-bpo:PublicRelationsCapability rdfs:subClassOf
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11066 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11067 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11068 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11069 ] ,
-    [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P11070 ] .
+# WP6 B8 step 1 (2026-11-03): the realized-in restrictions stated here were removed; the pairs are possible realizations in capabilities/capability_scope.json.
 
 # --- 12.5.1 (PCF 11066) : Relationship management (community)
 bpo:P11066 a owl:Class ;
     bpo:pcfID "11066" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11066. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.5.1" ;
     bpo:apqcSourceText "Developing and administering community relations. Establish business connections with the people constituting the environment the organization operates in and draws resources from in order to foster mutual understanding, trust, and support. Create programs that promote the organization's image in a positive and community-oriented way." ;
     rdfs:label "Manage community relations" ;
@@ -1232,6 +1279,7 @@ bpo:P11066 a owl:Class ;
 # --- 12.5.2 (PCF 11067) : Relationship management (media / journalists)
 bpo:P11067 a owl:Class ;
     bpo:pcfID "11067" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11067. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.5.2" ;
     bpo:apqcSourceText "Developing and managing relations with media. Develop connections with journalists to solicit critical, third-party endorsements for a product, issue, service, or organization." ;
     rdfs:label "Manage media relations" ;
@@ -1244,6 +1292,7 @@ bpo:P11067 a owl:Class ;
 # --- 12.5.3 (PCF 11068) : Advocacy / civic engagement
 bpo:P11068 a owl:Class ;
     bpo:pcfID "11068" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11068. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.5.3" ;
     bpo:apqcSourceText "Promoting political security and stability in the regions where the organization conducts business. Encourage political stability in the regions where the organization operates. Support civic programs, citizen engagement, connection platforms, etc." ;
     rdfs:label "Promote political stability" ;
@@ -1256,6 +1305,7 @@ bpo:P11068 a owl:Class ;
 # --- 12.5.4 (PCF 11069) : Information processing -> compose a Descriptive ICE
 bpo:P11069 a owl:Class ;
     bpo:pcfID "11069" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11069. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.5.4" ;
     bpo:apqcSourceText "Developing press releases to communicate developments and generate interest in the organization." ;
     rdfs:label "Create press releases" ;
@@ -1268,6 +1318,7 @@ bpo:P11069 a owl:Class ;
 # --- 12.5.5 (PCF 11070) : Mass media communication -> issue/disseminate
 bpo:P11070 a owl:Class ;
     bpo:pcfID "11070" ;
+    cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 11070. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "12.5.5" ;
     bpo:apqcSourceText "Issuing press releases to carefully selected media in distribution channels such as the web, newspapers, and social media." ;
     rdfs:label "Issue press releases" ;

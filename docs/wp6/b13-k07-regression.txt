@@ -1,0 +1,17 @@
+WP6 B13 K07 regression, 2026-10-31 (base 103405b; vendored CCO file; ELK, indirect subclass pairs between named classes)
+
+## Entailments
+before 28215, after 28208
+ - bpo:ApproverRole ⊑ bpo:Role
+ - bpo:ArchitectRole ⊑ bpo:Role
+ - bpo:DeveloperRole ⊑ bpo:Role
+ - bpo:EvaluatorRole ⊑ bpo:Role
+ - bpo:MarketAnalystRole ⊑ bpo:Role
+ - bpo:PlannerRole ⊑ bpo:Role
+ - bpo:StrategistRole ⊑ bpo:Role
+
+## Dispatch (scripts/matchability.py report, before vs after)
+identical: True  (ROUTABLE=64, GAPS=389)
+
+## SHACL C2 targets after the change (via bpo:inGrouping)
+ApproverRole ArchitectRole DeveloperRole EvaluatorRole MarketAnalystRole PlannerRole StrategistRole (7 of 7)

@@ -6,7 +6,8 @@ the FR-18 baseline:
 
     dangling_ref           0   (every bpo:/perf: reference resolves to a declared term)
     readable_label         0   (not exercised here -- no --register)
-    capability-as-process 39   (the known capabilities-wearing-process-IRIs; a tracked backlog)
+    capability-as-process 37   (the known capabilities-wearing-process-IRIs; a tracked backlog,
+                                docs/wp6/capability-as-process-backlog.md; 39 until 2026-11-03)
     pcf-without-P-iri      0
 
 Gate F PASSES iff the actual counts equal the baseline -- so the 39 known findings do NOT
@@ -28,7 +29,8 @@ CLI = ROOT / "tools" / "refintegrity" / "src" / "ri-cli.mjs"
 
 # FR-18 baseline (R1.1). Update deliberately if the corpus changes (and say why in the commit).
 BASELINE = {"dangling_ref": 0, "readable_label": 0,
-            "capability-as-process": 39, "pcf-without-P-iri": 0}
+            "capability-as-process": 37,   # 39 until 2026-11-03: P11035/P11036 repaired (decision A)
+            "pcf-without-P-iri": 0}
 
 def modules() -> list[str]:
     """Every project-minted (bpo:/perf:) module; NOT the CCO closure (Gate B owns cco:/obo:)."""

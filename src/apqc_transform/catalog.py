@@ -78,11 +78,15 @@ _HEADER = f"""\
     rdfs:comment "Generated deterministically from the PCF export. Curatorial taxonomy only; process semantics live in the reality-layer slice modules." .
 
 # Provenance annotation properties (mirror the reference module)
-bpo:pcfID a owl:AnnotationProperty ; rdfs:label "APQC PCF ID" .
+bpo:pcfID a owl:AnnotationProperty ; rdfs:label "APQC PCF ID" ;
+    skos:definition "An annotation property that relates an ontology term to the unique process element identifier assigned by APQC to its source row, which remains stable across PCF releases while the conceptual meaning of the element remains unchanged." .
 bpo:hierarchyID a owl:AnnotationProperty ; rdfs:label "APQC Hierarchy ID" ;
+    skos:definition "An annotation property that relates an ontology term to the dotted-decimal hierarchy identifier assigned to its source row in a particular release of the APQC Process Classification Framework, whose value may change between releases." ;
     rdfs:comment "Positional dotted-decimal locator. NON-STABLE across PCF versions." .
-bpo:apqcSourceText a owl:AnnotationProperty ; rdfs:label "APQC source description" .
+bpo:apqcSourceText a owl:AnnotationProperty ; rdfs:label "APQC source description" ;
+    skos:definition "An annotation property that relates an ontology term to the verbatim element description of its source row in a specified release of the APQC Process Classification Framework." .
 bpo:designatesProcessType a owl:AnnotationProperty ; rdfs:label "designates process type" ;
+    skos:definition "An annotation property that relates an APQC PCF catalog concept to an OWL class representing the Process type or Organization Capability type designated by that concept." ;
     rdfs:comment "ADR-001 R4 bridge: catalog node -> reality-layer process universal or capability. Populated during reality-layer modeling, NOT by the catalog generator." .
 
 apqc:PCF a skos:ConceptScheme ;
@@ -98,6 +102,13 @@ apqc:PCF a skos:ConceptScheme ;
 def render(rows: list[PcfRow]) -> str:
     by_hierarchy = {r.hierarchy_id: r for r in rows}
     parts: list[str] = [_HEADER]
+    # The scheme's entry points: the rows with no parent row, i.e. the 13
+    # categories (WP6 B12, BPO architect 2026-10-31; SKOS consumers need a
+    # top concept to enter the scheme).
+    tops = [r for r in sorted(rows, key=lambda x: _sortkey(x.hierarchy_id))
+            if not (r.parent_hierarchy and r.parent_hierarchy in by_hierarchy)]
+    parts.append("apqc:PCF skos:hasTopConcept "
+                 + ", ".join(f"bpo:PCF_{r.pcf_id}" for r in tops) + " .")
 
     for r in sorted(rows, key=lambda x: _sortkey(x.hierarchy_id)):
         iri = f"bpo:PCF_{r.pcf_id}"
@@ -114,6 +125,8 @@ def render(rows: list[PcfRow]) -> str:
         if r.parent_hierarchy and r.parent_hierarchy in by_hierarchy:
             parent = by_hierarchy[r.parent_hierarchy]
             lines.append(f"    skos:broader bpo:PCF_{parent.pcf_id} ;")
+        else:
+            lines.append("    skos:topConceptOf apqc:PCF ;")
         # terminate
         lines[-1] = lines[-1].rstrip(" ;") + " ."
         parts.append("\n".join(lines))

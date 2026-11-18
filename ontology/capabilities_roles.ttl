@@ -43,40 +43,61 @@
 bpo:Capability a owl:Class ;
     rdfs:subClassOf cco:ont00001379 ;          # Agent Capability
     rdfs:label "FNSR Capability" ;
-    skos:definition "A competence borne by an agent in virtue of which it can successfully perform some kind of process. Realized in process executions; a feasibility filter for dispatch." .
+    skos:definition "An Agent Capability in virtue of which its bearer can successfully perform some kind of process. Realized in process executions; a feasibility filter for dispatch." .
 
 bpo:Role a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;          # Role
     rdfs:label "FNSR Role" ;
-    skos:definition "A position an agent occupies while performing work. Frames the work and may bear permissions; not a competence and not an action." .
+    skos:definition "A Role that an Agent occupies while performing work. It frames the work and may have permissions applicable to it; it is neither a competence nor an action." .
 
 # ---- module-local properties (could migrate to apqc-ext.ttl) ----
 
+bpo:inGrouping a owl:AnnotationProperty ;
+    rdfs:label "in grouping" ;
+    skos:definition "An annotation property that relates a class to a BPO grouping class whose vocabulary it belongs to, without asserting that it is a subclass of the grouping." ;
+    rdfs:comment "Replaces the delivery roles' subclass axioms to the bpo:Role marker (WP6 B13 K07, BPO architect 2026-10-31): a marker used as a genus wrote a selection vocabulary as a primitive class. SHACL C2 targets members through this property as well as through subclassing." .
+
 bpo:enablesProcess a owl:AnnotationProperty ;
-    rdfs:label "enables process" ;
-    rdfs:comment "Capability -> process class whose execution it enables. Operational inverse of bpo:requiresCapability; BFO grounding is 'has realization' (a capability is realized in such processes). Used for authoring scope and wiring-coherence checks." .
+    rdfs:label "can be realized in process" ;
+    skos:definition "An annotation property that relates an Agent Capability class to a Process class whose instances can realize instances of that capability type." ;
+    skos:scopeNote "This class-level association entails neither that any instance of the capability is actually realized, nor that bearing the capability is a necessary requirement for performing a process of that type. That a particular capability instance is realized in a particular process instance is stated with BFO's realized in (obo:BFO_0000054) between the instances." ;
+    rdfs:comment "Capability class -> process class. Each pair is classified in capabilities/b8_pairs.tsv (WP6 B8); bpo:requiresCapability is no longer its inverse. The IRI keeps its historical name: labelled 'enables process' until 2026-11-03, when the BPO architect (WP6 B5 review) narrowed the label and definition to possible realization, because B8 found no enabling-only relation (docs/migrations.tsv). Used for authoring scope and wiring-coherence checks." .
+
+bpo:permissionApplicableToRole a owl:AnnotationProperty ;
+    rdfs:label "permission applicable to role" ;
+    skos:definition "An annotation property that relates a Role class to an Action Permission class (cco:ont00000751) as a type-level association: permissions of that type apply to agents in roles of that type. It is not the BFO bearer relation, and it does not by itself establish that any agent holds an effective permission." ;
+    rdfs:comment "Role -> Action Permission class. The deontic hook (RDM/IEE authors the permission). Replaces bpo:bearsPermission (WP6 B7, BPO architect 2026-10-31): an Action Permission is a Process Regulation, a Directive ICE (cco:ont00000751 -> 1324 -> 965), a generically dependent continuant that no role can bear." .
 
 bpo:bearsPermission a owl:AnnotationProperty ;
     rdfs:label "bears permission" ;
-    rdfs:comment "Role -> Action Permission class the role carries. The deontic hook (RDM/IEE authors the permission)." .
+    skos:definition "An annotation property that relates a Role class to an Action Permission class whose applicable instances authorize processes performed by agents bearing that Role, subject to the governing regulations." ;
+    owl:deprecated true ;
+    dct:isReplacedBy bpo:permissionApplicableToRole ;
+    rdfs:comment "DEPRECATED 2026-10-31 (WP6 B7). Use bpo:permissionApplicableToRole. The label asserted a BFO bearer relation that cannot hold between a role and an Action Permission." .
 
-# ---- the three process-side wiring properties (promoted from the seed's
-#      shape-referenced markers to declared object properties) ----
-# Range is enforced by SHACL (coherence shapes C5-C7), NOT by rdfs:range:
-# asserting rdfs:domain/range here would force class entailments into the
-# merged corpus and risk perturbing the v0.3.0 ELK closure. The intended
-# domain/range is documented per property and tested structurally instead.
+# ---- the three process-side wiring properties ----
+# Annotation properties (WP6 B6, option (a), BPO architect 2026-10-31). They
+# are asserted only class-to-class; as object properties OWL 2 DL read that
+# as punning (the classes taken as individuals), which says nothing about
+# the processes' instances. As annotations they make no OWL claim at all.
+# Their targets are still checked by SHACL C5-C7 (which test the triples,
+# not the property type). An OWL requirement semantics, if wanted, is a
+# class-level restriction -- deliberately not introduced here.
 
-bpo:requiresCapability a owl:ObjectProperty ;
+bpo:requiresCapability a owl:AnnotationProperty ;
     rdfs:label "requires capability" ;
-    rdfs:comment "Process class -> the capability an agent must bear to perform it. DERIVED from bpo:enablesProcess (author scope once on the capability; generate this inverse onto the process, so the two never drift -- PHASE1 §8). Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
+    skos:scopeNote "A requirement is asserted only where the capability's definition shows that every performance of the process exercises it (WP6 B8; BPO architect, 2026-11-03); it is a definition-supported necessity, not an OWL entailment, and it is not generated for every process. Two interpretations hold. (1) The capability must be borne by the agent that actually performs the process: the ability of an organization, a team or a supporting participant is not attributed to an individual. (2) Performing the process is evidence of the capability, but not evidence available before assignment: dispatch must rely on independent evidence of the agent's abilities (in scripts/matchability.py, the capabilities each agent declares in capabilities/agents.json)." ;
+    skos:definition "An annotation property that relates a Process class to an Agent Capability class whose instances must be borne by an agent assigned to perform a process of that type." ;
+    rdfs:comment "Process class -> the capability an agent must bear to perform it. Generated only for capability -> process pairs that capabilities/b8_pairs.tsv classifies as necessary requirements (WP6 B8, BPO architect 2026-11-02); it was the inverse of every bpo:enablesProcess pair (PHASE1 §8), which made each possible realization a requirement. Intended domain: a process universal (reaches obo:BFO_0000015); intended range: a class reaching cco:ont00001379 Agent Capability (an Organization Capability cco:ont00000568 qualifies, since 568 ⊑ 1379). Matching is species-satisfies-genus: an agent bearing C_a satisfies a requirement C_p iff C_a rdfs:subClassOf* C_p. Range enforced by SHACL C5." .
 
-bpo:requiresRole a owl:ObjectProperty ;
+bpo:requiresRole a owl:AnnotationProperty ;
     rdfs:label "requires role" ;
+    skos:definition "An annotation property that relates a Process class to a Role class whose instances must be borne by an agent performing a process of that type in the required capacity." ;
     rdfs:comment "Process class -> the role in whose capacity the work must be performed. Intended domain: a process universal; intended range: a class reaching obo:BFO_0000023 Role (typically a cco:ont00000984 Occupation Role or cco:ont00000187 Authority Role). Same species-satisfies-genus matching as bpo:requiresCapability. Range enforced by SHACL C6." .
 
-bpo:requiresPermission a owl:ObjectProperty ;
+bpo:requiresPermission a owl:AnnotationProperty ;
     rdfs:label "requires permission" ;
+    skos:definition "An annotation property that relates a Process class to an Action Permission class whose applicable instances must permit processes of that type for their execution to be authorized." ;
     rdfs:comment "Process class -> the Action Permission that must be held for the work to be authorized. Intended range: a class reaching cco:ont00000751 Action Permission. The RDM/IEE layer owns the permission catalogue and the gate conflict-resolution; this seam is declared but LEFT UNPOPULATED in Phase 1. Range enforced by SHACL C7." .
 
 # =====================================================================
@@ -98,7 +119,7 @@ bpo:requiresPermission a owl:ObjectProperty ;
 bpo:PlanAuthoringCapability a owl:Class ;
     rdfs:subClassOf bpo:Capability ;
     rdfs:label "Plan authoring capability" ;
-    skos:definition "Competence to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance criteria." ;
+    skos:definition "An Agent Capability that enables its bearer to author phased roadmaps and tactical implementation plans from a normative spec, with falsifiable acceptance criteria." ;
     bpo:enablesProcess bpo:AuthorRoadmap , bpo:AuthorImplementationPlan .
 
 # ---- Process-Contract participant capabilities (FNSR factory; see delivery_processes.ttl) ----
@@ -126,44 +147,51 @@ bpo:EvaluationCapability a owl:Class ;
 # =====================================================================
 
 bpo:MarketAnalystRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Market analyst role" ;
-    skos:definition "The occupation role of an agent acting as a market/competitive analyst within a strategy effort." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of acting as a market or competitive analyst within a strategy effort." .
 
 bpo:StrategistRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;
+    rdfs:subClassOf cco:ont00000984 ;
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Strategist role" ;
-    skos:definition "The occupation role of an agent acting as a strategy author/owner." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of authoring and owning a strategy." .
 
 bpo:PlannerRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;
+    rdfs:subClassOf cco:ont00000984 ;
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Planner role" ;
-    skos:definition "The occupation role of an agent producing planning documents in a delivery loop." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of producing planning documents in a delivery loop." .
 
 bpo:DeveloperRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Developer role" ;
-    skos:definition "The occupation role of an agent implementing planned modules as code change sets." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of implementing planned modules as code change sets." .
 
 bpo:ArchitectRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Architect role" ;
-    skos:definition "The occupation role of an agent authoring and reviewing a build's structural decisions." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of authoring and reviewing a build's structural decisions." .
 
 bpo:EvaluatorRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000984 ;   # Occupation Role
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Evaluator role" ;
-    skos:definition "The occupation role of an agent evaluating artifacts against their acceptance criteria." .
+    skos:definition "An Occupation Role that is borne by an Agent in virtue of evaluating artifacts against their acceptance criteria." .
 
 bpo:ApproverRole a owl:Class ;
-    rdfs:subClassOf bpo:Role , cco:ont00000187 ;   # Authority Role
+    rdfs:subClassOf cco:ont00000187 ;   # Authority Role
+    bpo:inGrouping bpo:Role ;
     rdfs:label "Approver role" ;
-    skos:definition "The authority role occupied by the party who may approve passage through a review/approval gate." ;
-    bpo:bearsPermission bpo:ApproveImplementationPlanPermission .
+    skos:definition "An Authority Role that is borne by an Agent in virtue of being empowered to approve passage through a review or approval gate." ;
+    bpo:permissionApplicableToRole bpo:ApproveImplementationPlanPermission .
 
 # ---- deontic stub (normally authored by the RDM/IEE layer; shown for the seam) ----
 
 bpo:ApproveImplementationPlanPermission a owl:Class ;
     rdfs:subClassOf cco:ont00000751 ;          # Action Permission
-    rdfs:label "Approve implementation plan (permission)" ;
-    skos:definition "Permission to authorize passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam." .
+    rdfs:label "Approve Implementation Plan Permission" ;
+    skos:definition "An Action Permission that authorizes passage of an implementation plan beyond its review gate. RDM/IEE-owned; stubbed here to show the role->permission seam." .

@@ -33,3 +33,11 @@ Requires `node` on PATH (Gate F SKIPs gracefully if absent, like Gates B/D witho
 When upstream updates: re-copy `src/ri-*.mjs` + `vendor/n3.mjs` from the named commit, update the
 **Commit** line above, and re-run `scripts/refintegrity_check.py` to confirm the baseline still holds
 (or update `scripts/refintegrity_check.py`'s `BASELINE` deliberately if the expected counts changed).
+
+## Local modification (WP6 Phase B, 2026-10-31)
+`src/ri-resolve.mjs`: the scheme checks decide "is a capability" by following `rdfs:subClassOf`
+through the loaded classes to `cco:ont00000568`, not by a directly asserted parent only. The WP6
+B13 trial removed redundant co-parents (an entailment-neutral change), and the asserted-only test
+then counted capability-as-process 30 instead of 39, though all 39 were still capabilities. Approved
+by the BPO architect, 2026-10-31. Upstream is not changed from this repo; on a re-sync, re-apply it
+unless upstream has made the check transitive.

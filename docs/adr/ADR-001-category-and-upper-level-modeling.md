@@ -45,6 +45,8 @@ Model a node in the reality layer **iff** it denotes a *repeatable occurrent wit
 **R6 — Function enrichment.**
 A standing-function category or group ("Manage IT", "Manage Financial Resources", "Develop and Manage Human Capital") **SHOULD** be modeled as an `owl:Class rdfs:subClassOf cco:ont00000568` (Organization Capability), borne by the organization and `realized in` the underlying acts, and bridged from its catalog node via R4.
 
+> **Amendment, 2026-11-03 (BPO architect, WP6 B8 step 1).** "Realized in the underlying acts" is not asserted as `C ⊑ ∃ realized in (obo:BFO_0000054) P`: that axiom says every instance of the capability *is* realized in some instance of the act, and a realizable entity can exist unrealized. The acts a capability can be realized in are recorded at class level with `bpo:enablesProcess` ("can be realized in process"), from `capabilities/capability_scope.json`. BFO's `realized in` relates particular capability and process instances. A restriction is kept only where independent evidence supports necessary realization, with that evidence documented. Record: `docs/wp6/b8-audit.md`. A separate amendment to R5/R6 on activities versus capabilities is pending (`docs/wp6/capability-as-process-backlog.md`).
+
 **R7 — No layer mixing.**
 `skos:broader` appears **only** in the catalog layer; `cco:has process part` and `rdfs:subClassOf`-to-an-Act appear **only** in the reality layer. The curatorial hierarchy and the mereological/taxonomic structure **MUST NOT** be conflated.
 

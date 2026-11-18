@@ -28,11 +28,14 @@ bpo:CapabilityWellFormedShape a sh:NodeShape ;
           NOT EXISTS { $this <http://www.w3.org/2000/01/rdf-schema#label> ?l } ||
           NOT EXISTS { $this <http://www.w3.org/2004/02/skos/core#definition> ?d } ) }""" ] .
 
-# C2: every bpo:Role subclass reaches bfo:Role, with label + definition.
+# C2: every bpo:Role subclass or member (bpo:inGrouping, WP6 B13 K07) reaches
+#     bfo:Role, with label + definition.
 bpo:RoleWellFormedShape a sh:NodeShape ;
     sh:target [ a sh:SPARQLTarget ;
         sh:select """SELECT ?this WHERE {
-          ?this <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://fandaws.com/ontology/bpo#Role> }""" ] ;
+          { ?this <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://fandaws.com/ontology/bpo#Role> }
+          UNION
+          { ?this <https://fandaws.com/ontology/bpo#inGrouping> <https://fandaws.com/ontology/bpo#Role> } }""" ] ;
     sh:sparql
       [ a sh:SPARQLConstraint ;
         sh:message "Role must reach bfo:Role (BFO_0000023) via subClassOf+." ;
@@ -54,11 +57,12 @@ bpo:CapRoleDisjointShape a sh:NodeShape ;
           $this <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <https://www.commoncoreontologies.org/ont00001379> .
           $this <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <http://purl.obolibrary.org/obo/BFO_0000023> }""" ] .
 
-# C4: bearsPermission must target an Action Permission.
+# C4: permissionApplicableToRole must target an Action Permission
+#     (was bearsPermission until WP6 B7, 2026-10-31).
 bpo:BearsPermissionTargetShape a sh:NodeShape ;
-    sh:targetObjectsOf bpo:bearsPermission ;
+    sh:targetObjectsOf bpo:permissionApplicableToRole ;
     sh:sparql [ a sh:SPARQLConstraint ;
-        sh:message "bpo:bearsPermission must target a class reaching cco:Action Permission (ont00000751)." ;
+        sh:message "bpo:permissionApplicableToRole must target a class reaching cco:Action Permission (ont00000751)." ;
         sh:select """SELECT $this WHERE { FILTER NOT EXISTS {
           $this <http://www.w3.org/2000/01/rdf-schema#subClassOf>* <https://www.commoncoreontologies.org/ont00000751> } }""" ] .
 

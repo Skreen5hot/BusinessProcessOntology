@@ -63,15 +63,19 @@ python scripts/consistency_audit.py # cross-slice anchor / drift audit
 - **Gate F** (`scripts/refintegrity_check.py`, run by `corpus_check.sh`) — `bpo:`/`perf:` **referential
   integrity** (every reference resolves to a declared term) + **D7 scheme** conformance, via the
   vendored RefIntegrity linter (`tools/refintegrity/`, needs `node`; SKIPs if absent). Asserts the
-  FR-18 baseline: `dangling_ref 0 · readable_label 0 · capability-as-process 39 · pcf-without-P-iri 0`
-  — the 39 (capabilities wearing `bpo:P<id>` IRIs, `⊑568`) are a tracked backlog, so a **deviation**
-  fails, not the known 39. Update `BASELINE` in the script deliberately if the corpus changes.
+  FR-18 baseline: `dangling_ref 0 · readable_label 0 · capability-as-process 37 · pcf-without-P-iri 0`
+  — the 37 (capabilities wearing `bpo:P<id>` IRIs, `⊑568`) are a tracked backlog
+  (`docs/wp6/capability-as-process-backlog.md`; 39 until WP6 decision A, 2026-11-03, made P11035/P11036
+  acts), so a **deviation** fails, not the known 37. Update `BASELINE` in the script deliberately if the corpus changes.
 - **Gate C does NOT merge CCO** — it validates the slice alone. Each slice's
   `# 1b. CCO SUPERCLASS BRIDGES` block locally asserts the chains the shapes need offline
   (e.g. `371⊑228`, `626⊑853`). This is why a class anchored to an out-of-allowlist CCO term still
   passes: the bridge (or an explicit co-parent) carries it to an allowlisted parent.
-- **CCO pin:** CommonCoreOntologiesMerged **v2.0 (2024-11-06)**, vendored under `vendor/cco/`
-  (gitignored — fetch per `vendor/cco/README.md`). `tools/robot.jar` likewise fetched, not committed.
+- **CCO pin:** CommonCoreOntologiesMerged **v2.0 (2024-11-06)** — tag `v2.0-2024-11-06`, commit
+  `510dad7`, sha256 `e609db27…` (`config.CCO_*`) — vendored under `vendor/cco/` (gitignored — fetch
+  per `vendor/cco/README.md`). Gate B and `corpus_check.sh` refuse any other file (digest and version
+  IRI: CCO's develop branch kept the 2024-11-06 version IRI on relabelled content, see
+  `docs/wp6/cco-pin.md`). `tools/robot.jar` likewise fetched, not committed.
 
 ## Conventions that hold corpus-wide (verify before changing)
 
@@ -115,24 +119,34 @@ competence, feasibility filter) ≠ **Role** (`obo:BFO_0000023`) ≠ **Process**
 **species-satisfies-genus** (`subClassOf*`); **`568 ⊑ 1379`** so slice Organization Capabilities
 already reach Agent Capability (match on "reaches 1379," slices left at 568). The four gating
 decisions were settled: (i) leave slice caps at 568; (ii) author `bpo:enablesProcess`, **derive**
-`bpo:requiresCapability`; (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
+`bpo:requiresCapability` (superseded by WP6 B8: derived only from pairs classified as necessary); (iii) delivery universals live in `delivery_processes.ttl`; (iv) the
 capability layer is a **merge-only shared overlay** (no slice imports it).
 
 **Artifacts (in `ontology/`):**
-- `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers; `bpo:enablesProcess`/
-  `bpo:bearsPermission` (annotation) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
-  (object properties — range enforced by SHACL C5–C7, **not** `rdfs:range`, to avoid forcing
-  entailments into the merged corpus). `requiresPermission` seam declared but **unpopulated** (RDM/IEE
+- `capabilities_roles.ttl` — foundation: `bpo:Capability`/`bpo:Role` markers (the 7 delivery roles
+  are members of `bpo:Role` by the annotation `bpo:inGrouping`, not subclasses, since WP6 B13 K07;
+  SHACL C2 targets both); `bpo:enablesProcess`/
+  `bpo:permissionApplicableToRole` (annotation; was `bearsPermission`, deprecated in WP6 B7 —
+  see `docs/migrations.tsv`) + `bpo:requiresCapability`/`bpo:requiresRole`/`bpo:requiresPermission`
+  (annotation properties since WP6 B6, 2026-10-31: asserted class-to-class, which as object
+  properties was only punning; targets still checked by SHACL C5–C7, which test the triples, not
+  the property type). `requiresPermission` seam declared but **unpopulated** (RDM/IEE
   owns the permission catalogue, `cco:ont00000751`).
 - `delivery_processes.ttl` — `AuthorRoadmap`/`AuthorImplementationPlan` (⊑ `bpo:ActOfFormulation`) +
   `ApproveImplementationPlan` gate act. (The "agile-loop" set PHASE1 §6b cites does not exist in the
   methodology, which ends at §12; left as a scope note, not invented.)
 - `capabilities_roles_shapes.ttl` — C1–C7. `capabilities_wiring.ttl` — **generated** merge-only overlay:
-  354 `requiresCapability` + 197 `requiresRole` + 197 `enablesProcess` + 62 role enrichment anchors.
+  342 `enablesProcess` + 197 `requiresRole` + 66 role enrichment anchors, and **0** `requiresCapability`:
+  since WP6 B8 (2026-11-02) a capability→process pair becomes a requirement only if
+  `capabilities/b8_pairs.tsv` classifies it as a *necessary requirement* (none is yet; 342 are
+  *possible realizations*, 14 capability targets are excluded). `enablesProcess` is no longer inverted.
+  Since B8 step 1 (2026-11-03) every pair lives in `capability_scope.json`: slices no longer assert
+  `C ⊑ ∃ obo:BFO_0000054 P` on capability classes (ADR-001 R6 amendment; a capability can be unrealized).
 
 **Pipeline (deterministic, reproducible):** `scripts/harvest_caps_roles.py` (manifest) →
 `scripts/derive_wiring.py` (heuristic draft) → judgment tables `capabilities/role_anchors.json` +
-`capabilities/capability_scope.json` → `scripts/assemble_wiring.py` (regenerates the wiring; **edit
+`capabilities/capability_scope.json` + `capabilities/b8_pairs.tsv` (one classification per pair; the
+assembler stops on an unclassified pair) → `scripts/assemble_wiring.py` (regenerates the wiring; **edit
 the tables, not the ttl**) → `scripts/validate_caps.py` (C1–C7) + `scripts/matchability.py`
 (routability + coverage-gap report) + `corpus_check.sh` (ELK).
 
@@ -144,7 +158,7 @@ Occupation would falsely assert employment). All 87 distinct roles classified; a
 recurrences converged to one canonical definition each.
 
 **Validate the layer:** `python scripts/validate_caps.py` (C1–C7 zero violations) ·
-`python scripts/matchability.py` (12-agent fleet: 60 routable / 385 gaps over 445 required processes) ·
+`python scripts/matchability.py` (12-agent fleet, after B8: 30 routable / 167 gaps over 197 processes with requirements) ·
 `bash scripts/corpus_check.sh` EXIT 0 (now merges the capability layer + wiring).
 
 **Remaining / handoff:** 6 standing capabilities have no scopeable process (honest gaps); the 12-agent

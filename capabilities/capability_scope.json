@@ -1,5 +1,5 @@
 {
-  "_doc": "standing capability IRI (no realized-in restriction) -> [process IRIs it enables]. Filled by the judgment pass (judge per capability). enablesProcess + derived requiresCapability are generated from this.",
+  "_doc": "capability IRI -> [process IRIs in which instances of the capability can be realized]: the class-level possible realizations. bpo:enablesProcess is generated from this table, and capabilities/b8_pairs.tsv classifies every pair. Since WP6 B8 step 1 (2026-11-03) it also holds the pairs that were slice realized-in restrictions (b8_pairs.tsv source 'axiom'), which were removed as unsupported necessity claims.",
   "bpo:StrategicPlanningCapability": [
     "bpo:P10037",
     "bpo:P10045",
@@ -201,7 +201,9 @@
     "bpo:P11049"
   ],
   "bpo:IntellectualPropertyManagementCapability": [
-    "bpo:P11049"
+    "bpo:P11049",
+    "bpo:P12771",
+    "bpo:P16826"
   ],
   "bpo:AnalystRelationsManagementCapability": [
     "bpo:P11036"
@@ -240,5 +242,330 @@
     "bpo:P10871",
     "bpo:P10889",
     "bpo:P20782"
+  ],
+  "bpo:BusinessModelGovernanceCapability": [
+    "bpo:P20955"
+  ],
+  "bpo:CompetitiveAnalysisCapability": [
+    "bpo:P19945"
+  ],
+  "bpo:AssetMaintenanceCapability": [
+    "bpo:P19239",
+    "bpo:P19245",
+    "bpo:P19253"
+  ],
+  "bpo:FacilityManagementCapability": [
+    "bpo:P10965",
+    "bpo:P10966"
+  ],
+  "bpo:BusinessResiliencyCapability": [
+    "bpo:P11221",
+    "bpo:P11222",
+    "bpo:P11223",
+    "bpo:P11224",
+    "bpo:P16471"
+  ],
+  "bpo:ComplianceManagementCapability": [
+    "bpo:P17468"
+  ],
+  "bpo:RegulatoryComplianceManagementCapability": [
+    "bpo:P16464",
+    "bpo:P16465",
+    "bpo:P16466",
+    "bpo:P16467",
+    "bpo:P16468",
+    "bpo:P16469",
+    "bpo:P19595",
+    "bpo:P19596"
+  ],
+  "bpo:RemediationManagementCapability": [
+    "bpo:P11201",
+    "bpo:P11202",
+    "bpo:P11203",
+    "bpo:P11204",
+    "bpo:P11205",
+    "bpo:P11206"
+  ],
+  "bpo:PublicRelationsCapability": [
+    "bpo:P11066",
+    "bpo:P11067",
+    "bpo:P11068",
+    "bpo:P11069",
+    "bpo:P11070"
+  ],
+  "bpo:AnalyticsCapability": [
+    "bpo:P20960",
+    "bpo:P20961",
+    "bpo:P20962",
+    "bpo:P20963",
+    "bpo:P20964",
+    "bpo:P21459",
+    "bpo:P21460",
+    "bpo:P21461",
+    "bpo:P21462",
+    "bpo:P21463",
+    "bpo:P21464"
+  ],
+  "bpo:BenchmarkingCapability": [
+    "bpo:P21584"
+  ],
+  "bpo:BusinessProcessManagementCapability": [
+    "bpo:P16379",
+    "bpo:P16384",
+    "bpo:P16387",
+    "bpo:P16392",
+    "bpo:P21453"
+  ],
+  "bpo:EHSManagementCapability": [
+    "bpo:P11180",
+    "bpo:P11181",
+    "bpo:P21587"
+  ],
+  "bpo:KnowledgeManagementCapability": [
+    "bpo:P11095",
+    "bpo:P11096",
+    "bpo:P20965",
+    "bpo:P20969"
+  ],
+  "bpo:PortfolioManagementCapability": [
+    "bpo:P16402",
+    "bpo:P16403",
+    "bpo:P16404"
+  ],
+  "bpo:ProgramManagementCapability": [
+    "bpo:P16406",
+    "bpo:P16407",
+    "bpo:P16408",
+    "bpo:P16409"
+  ],
+  "bpo:ProjectManagementCapability": [
+    "bpo:P11119",
+    "bpo:P16411",
+    "bpo:P16413",
+    "bpo:P16414",
+    "bpo:P16417",
+    "bpo:P16418"
+  ],
+  "bpo:SustainabilityManagementCapability": [
+    "bpo:P21589",
+    "bpo:P21598"
+  ],
+  "bpo:DesignCapability": [
+    "bpo:P19995"
+  ],
+  "bpo:ProductDataManagementCapability": [
+    "bpo:P11741",
+    "bpo:P11750"
+  ],
+  "bpo:ProductServiceLifecycleManagementCapability": [
+    "bpo:P10077",
+    "bpo:P10078"
+  ],
+  "bpo:ProductServicePortfolioManagementCapability": [
+    "bpo:P10063",
+    "bpo:P10074"
+  ],
+  "bpo:ChannelManagementCapability": [
+    "bpo:P16500",
+    "bpo:P16501",
+    "bpo:P16573",
+    "bpo:P16574",
+    "bpo:P16575"
+  ],
+  "bpo:MarketingManagementCapability": [
+    "bpo:P10159",
+    "bpo:P10160",
+    "bpo:P10167",
+    "bpo:P10168",
+    "bpo:P10169",
+    "bpo:P10170",
+    "bpo:P10171",
+    "bpo:P10172",
+    "bpo:P10178",
+    "bpo:P10179",
+    "bpo:P10180",
+    "bpo:P10181",
+    "bpo:P16630",
+    "bpo:P18130"
+  ],
+  "bpo:PricingCapability": [
+    "bpo:P10163",
+    "bpo:P10164",
+    "bpo:P10165",
+    "bpo:P10166",
+    "bpo:P11495",
+    "bpo:P11496",
+    "bpo:P11497",
+    "bpo:P17684",
+    "bpo:P18948",
+    "bpo:P20009"
+  ],
+  "bpo:SalesManagementCapability": [
+    "bpo:ManageCustomerRelationships"
+  ],
+  "bpo:FleetManagementCapability": [
+    "bpo:P10341"
+  ],
+  "bpo:LogisticsManagementCapability": [
+    "bpo:P10338",
+    "bpo:P10340",
+    "bpo:P10341",
+    "bpo:P20936"
+  ],
+  "bpo:RawMaterialInventoryManagementCapability": [
+    "bpo:P10304"
+  ],
+  "bpo:ServiceDeliveryDevelopmentManagementCapability": [
+    "bpo:P20027"
+  ],
+  "bpo:ServiceDeliveryPerformanceManagementCapability": [
+    "bpo:P20027"
+  ],
+  "bpo:CustomerComplaintManagementCapability": [
+    "bpo:P10397",
+    "bpo:P10398",
+    "bpo:P10399",
+    "bpo:P10400",
+    "bpo:P19072"
+  ],
+  "bpo:CustomerInquiryManagementCapability": [
+    "bpo:P10394",
+    "bpo:P10395",
+    "bpo:P10396",
+    "bpo:P13482",
+    "bpo:P16928",
+    "bpo:P16937"
+  ],
+  "bpo:CustomerServiceWorkforceManagementCapability": [
+    "bpo:P10390",
+    "bpo:P10391",
+    "bpo:P10392",
+    "bpo:P10393"
+  ],
+  "bpo:RecallManagementCapability": [
+    "bpo:P20110"
+  ],
+  "bpo:ApplicantDataManagementCapability": [
+    "bpo:P20124"
+  ],
+  "bpo:CompensationAndBenefitsCapability": [
+    "bpo:P10495",
+    "bpo:P10497",
+    "bpo:P21438",
+    "bpo:P21439"
+  ],
+  "bpo:EmployeeCareerDevelopmentCapability": [
+    "bpo:P10487",
+    "bpo:P10488",
+    "bpo:P17051"
+  ],
+  "bpo:EmployeeCommunicationCapability": [
+    "bpo:P10529",
+    "bpo:P10532",
+    "bpo:P16944"
+  ],
+  "bpo:EmployeeOrientationAndDeploymentCapability": [
+    "bpo:P10474",
+    "bpo:P11243",
+    "bpo:P17050"
+  ],
+  "bpo:EmployeePerformanceManagementCapability": [
+    "bpo:P10479",
+    "bpo:P10481",
+    "bpo:P21434"
+  ],
+  "bpo:EmployeeReferralProgramCapability": [
+    "bpo:P10440"
+  ],
+  "bpo:EmployeeTrainingCapability": [
+    "bpo:P10490",
+    "bpo:P10491",
+    "bpo:P10492",
+    "bpo:P10493",
+    "bpo:P16940",
+    "bpo:P20125",
+    "bpo:P21436"
+  ],
+  "bpo:HumanResourcesInformationSystemCapability": [
+    "bpo:ActOfAdministration"
+  ],
+  "bpo:LaborRelationsCapability": [
+    "bpo:P10484",
+    "bpo:P10531"
+  ],
+  "bpo:RecruitmentChannelManagementCapability": [
+    "bpo:P10440"
+  ],
+  "bpo:RecruitmentVendorManagementCapability": [
+    "bpo:P10440"
+  ],
+  "bpo:TimeAndAttendanceManagementCapability": [
+    "bpo:ActOfAdministration"
+  ],
+  "bpo:WorkforceAnalyticsCapability": [
+    "bpo:P21441",
+    "bpo:P21447"
+  ],
+  "bpo:DevelopAndManageServicesSolutionsCapability": [
+    "bpo:P20785",
+    "bpo:P20808",
+    "bpo:P20817"
+  ],
+  "bpo:ITCustomerRelationshipManagementCapability": [
+    "bpo:P20608"
+  ],
+  "bpo:ITInterdependencyManagementCapability": [
+    "bpo:P20690"
+  ],
+  "bpo:ITRollBackManagementCapability": [
+    "bpo:P20857"
+  ],
+  "bpo:ITServiceManagementCapability": [
+    "bpo:P20632"
+  ],
+  "bpo:ITStrategicAlignmentMaintenanceCapability": [
+    "bpo:P20657"
+  ],
+  "bpo:ITStrategicIntelligenceCapability": [
+    "bpo:P20655"
+  ],
+  "bpo:InformationManagementCapability": [
+    "bpo:P20766",
+    "bpo:P20770",
+    "bpo:P20776",
+    "bpo:P20779"
+  ],
+  "bpo:DefaultAccountManagementCapability": [
+    "bpo:P14007"
+  ],
+  "bpo:FinancialPolicyManagementCapability": [
+    "bpo:P10816",
+    "bpo:P10817",
+    "bpo:P10818",
+    "bpo:P20604"
+  ],
+  "bpo:FixedAssetProjectAccountingCapability": [
+    "bpo:P10751",
+    "bpo:P10752"
+  ],
+  "bpo:ImportExportControlCapability": [
+    "bpo:P17059"
+  ],
+  "bpo:InternalControlCapability": [
+    "bpo:P10762",
+    "bpo:P10764",
+    "bpo:P21574"
+  ],
+  "bpo:InternationalFundsManagementCapability": [
+    "bpo:P10767",
+    "bpo:P10768",
+    "bpo:P10769",
+    "bpo:P10770"
+  ],
+  "bpo:RestitutionManagementCapability": [
+    "bpo:P17059"
+  ],
+  "bpo:TaxManagementCapability": [
+    "bpo:P10866"
   ]
 }

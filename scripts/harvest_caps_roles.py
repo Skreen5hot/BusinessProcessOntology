@@ -65,6 +65,8 @@ def load_all():
         for s in g.subjects(RDF.type, OWL.Class):
             if not isinstance(s, URIRef) or not str(s).startswith(EX):
                 continue
+            if (s, OWL.deprecated, rdflib.Literal(True)) in g:
+                continue  # a retired term is not wired (WP6, docs/migrations.tsv)
             ln = str(s)[len(EX):]
             if ln.endswith("Capability") or ln.endswith("Role"):
                 recur[ln].add(sec)
@@ -86,6 +88,8 @@ def harvest_section(sec: str, graphs, recur) -> dict:
     for s in g.subjects(RDF.type, OWL.Class):
         if not isinstance(s, URIRef) or not str(s).startswith(EX):
             continue
+        if (s, OWL.deprecated, rdflib.Literal(True)) in g:
+            continue  # a retired term is not wired (WP6, docs/migrations.tsv)
         ln = str(s)[len(EX):]
         if not (ln.endswith("Capability") or ln.endswith("Role")):
             continue

@@ -39,7 +39,7 @@ Before using any `cco:ont…` IRI, confirm its label+definition+parent in the cl
 
 ## R5 (the one judgement per node) — apply to EVERY row, record the decision + reason
 - repeatable occurrent with begin/end, can be a proper part → process `owl:Class ⊑ <CCO Act / ext genus>`.
-- standing function/capacity ("Manage…", no natural end) → NOT a process; `owl:Class ⊑ cco:ont00000568` (Organization Capability), `realized in` the acts (R6).
+- standing function/capacity ("Manage…", no natural end) → NOT a process; `owl:Class ⊑ cco:ont00000568` (Organization Capability) that can be realized in the acts (R6). Record those acts in `capabilities/capability_scope.json` (→ `bpo:enablesProcess`); do NOT assert `⊑ ∃ obo:BFO_0000054 <act>` (ADR-001 R6 amendment, WP6 B8 step 1, 2026-11-03).
 - pure grouping/heading → model NOTHING in the reality layer (catalog already has it).
 
 ## GOLDEN PRINCIPLE (genus ↔ output agreement)

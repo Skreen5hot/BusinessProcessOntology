@@ -9,6 +9,10 @@ This directory holds the **pinned** Common Core Ontologies closure that Gates B
 - **CommonCoreOntologies Merged v2.0** — release date **2024-11-06**
 - Version IRI: `https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged`
 - Includes BFO 2020 via CCO's import.
+- Tag `v2.0-2024-11-06` = commit `510dad76be0ef710b65a421075af912af25342b7`; the file is
+  <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/510dad76be0ef710b65a421075af912af25342b7/src/cco-merged/CommonCoreOntologiesMerged.ttl>
+- sha256 `e609db27478a2c8b52b9bb5eb5ac979ac323510e851c368e4d9ec7d1c153fe5b`. Gate B refuses any
+  other file (`config.CCO_SHA256`); a later develop snapshot can carry this version IRI.
 
 ## How to populate
 

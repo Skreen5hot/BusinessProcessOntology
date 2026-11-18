@@ -1,0 +1,41 @@
+# WP6: the capability-as-process backlog (Gate F), 37 classes after decision A (2026-11-03).
+# Each is a P-class modelled as an Organization Capability. Unresolved classification candidates,
+# not 37 errors: each needs its own act-versus-capability assessment. 'triage' reads the label only.
+section	iri	hierarchy	label	realized_in_restrictions	triage	assessment
+8	bpo:P20866	8.7	Create and manage support services/solutions	7	label names a performed activity (Create): the P11035 pattern is likely	open
+8	bpo:P20914	8.7.7	Manage infrastructure resource administration	6	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10728	9.1	Planning and Management Accounting Capability	4	label names a capability, not the APQC activity: check the element's APQC name	open
+9	bpo:P10788	9.1.4.7	Continuous Cost Improvement Capability	1	label names a capability, not the APQC activity: check the element's APQC name	open
+9	bpo:P10734	9.7	Manage treasury operations	4	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10758	9.7.1	Manage treasury policies and procedures	8	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10759	9.7.2	Manage cash	5	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10894	9.7.2.2	Manage cash equivalents	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10897	9.7.2.5	Manage cash flows	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10899	9.7.2.7	Manage and oversee banking relationships	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10760	9.7.3	Manage in-house bank accounts	6	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10901	9.7.3.1	Manage in-house bank accounts for subsidiaries	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10761	9.7.4	Manage debt and investment	5	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10908	9.7.4.2	Manage financial intermediary relationships	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10909	9.7.4.3	Manage liquidity	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P10910	9.7.4.4	Manage issuer exposure	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P11208	9.7.5	Monitor and execute risk and hedging transactions	2	label names a performed activity (Monitor): the P11035 pattern is likely	open
+9	bpo:P11209	9.7.5.2	Manage interest rate risk	4	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P11210	9.7.5.3	Manage foreign exchange risk	5	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P11211	9.7.5.4	Manage exposure risk	4	'Manage ...': either reading; decide from the definition and the APQC description	open
+9	bpo:P20137	9.7.5.5	Execute hedging transactions	5	label names a performed activity (Execute): the P11035 pattern is likely	open
+9	bpo:P16958	9.7.6	Manage financial fraud/dispute cases	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+10	bpo:P19228	10.2.4.4	Manage safety, security, and access to sites	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+10	bpo:P19250	10.3.2.5	Manage maintenance work safety	1	'Manage ...': either reading; decide from the definition and the APQC description	open
+11	bpo:P17060	11.1	Manage enterprise risk	3	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11010	12.1	Build investor relationships	3	label names a performed activity (Build): the P11035 pattern is likely	open
+12	bpo:P11038	12.2.1	Manage government relations	6	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11039	12.2.2	Manage relations with quasi-government bodies	4	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11040	12.2.3	Manage relations with trade or industry groups	3	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11041	12.2.4	Manage lobby activities	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11012	12.3	Manage relations with board of directors	2	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11013	12.4	Manage legal and ethical issues	7	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11045	12.4.2	Manage corporate governance policies	0	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11047	12.4.4	Ensure compliance	2	label names a performed activity (Ensure): the P11035 pattern is likely	open
+12	bpo:P11048	12.4.5	Manage outside counsel	6	'Manage ...': either reading; decide from the definition and the APQC description	open
+12	bpo:P11049	12.4.6	Protect intellectual property	4	label names a performed activity (Protect): the P11035 pattern is likely	open
+13	bpo:P17471	13.3	Manage enterprise quality	4	'Manage ...': either reading; decide from the definition and the APQC description	open
