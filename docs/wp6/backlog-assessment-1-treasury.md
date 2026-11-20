@@ -66,3 +66,24 @@ For each class decided as an act, following decision A:
 **Not settled by this:** the ADR-001 R5/R6 amendment. It follows the assessments. These
 eight would be its first evidence after decision A: all eight are "Manage …" rows, the
 most common pattern in the backlog (29 of 37).
+
+## Decided (BPO architect, 2026-11-20)
+
+All eight are acts, with the proposed genera:
+
+- the four high-confidence rows as proposed;
+- the three medium-confidence rows as proposed, with liquidity as Financial Transaction,
+  not Administration;
+- P10897 as `bpo:ActOfScheduling`.
+
+What was applied, in `apqc_9_0.ttl`:
+
+- **Each class** was given its new parent and a definition under the genus. The decision
+  comment comes first, and the earlier comment is kept after it as history.
+- **P10788** got back the APQC name, "Manage continuous cost improvement", and lost its
+  realized-in restriction.
+- **Four genera were inlined** from `apqc-ext.ttl`: Relationship Management, Resolution,
+  Improvement and Scheduling.
+- **Gate F's baseline** went from 37 to 29, and the eight rows left the backlog TSV.
+
+The BCO receives a `notice`.

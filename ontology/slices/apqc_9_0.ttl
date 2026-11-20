@@ -83,6 +83,32 @@ bpo:ActOfMonitoring a owl:Class ;
     skos:definition "An Act of Information Processing in which an Agent repeatedly or continuously observes the state, progress, or performance of some process, system, or quantity over time and produces a Descriptive Information Content Entity that represents its tracked status against expected conditions, targets, or requirements." ;
     rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic monitoring/tracking class. Anchored under cco:ont00000366 (Act of Information Processing) because monitoring ingests repeated observations (including electronic records, not only senses) and yields a descriptive status/deviation ICE -- the GOLDEN PRINCIPLE (descriptive output => information-processing genus) holds. Rejected cco:ont00000037 (Act of Observation: a single sense-based acquisition, too narrow -- monitoring also processes ICEs and is sustained); cco:ont00000636 (Act of Appraisal: renders a single bounded value/quality judgement rather than tracking status over time); and cco:ont00000345 (Act of Measuring: a single quantification against a standard at one time -- at most a method sub-step of the monitoring cycle; a node that is purely one quantification, e.g. Calculate performance measures, anchors to cco:ont00000345 directly, not here). Distinct from bpo:ActOfAnalysis (one-shot examination of a fixed input set) by its continuous, longitudinal character. A standing 'Manage/Monitor X' function with no natural end is an Organization Capability (cco:ont00000568) realized in such acts, not itself a process. Recurs corpus-wide (slices 3.0/4.0/5.0/6.0/8.0/9.0/10.0/11.0/12.0/13.0). Reconciled from 10 divergent slice restatements to one definition." .
 
+# Inlined from apqc-ext.ttl (D9) for backlog decision 1, 2026-11-20.
+bpo:ActOfRelationshipManagement a owl:Class ;
+    rdfs:subClassOf cco:ont00000433 ,   # Act of Association
+        cco:ont00000228 ;               # Planned Act (explicit allowlist anchor; ont00000433 -> Social Act ont00001327 -> Planned Act ont00000228 in the CCO closure)
+    rdfs:label "Act of Relationship Management" ;
+    skos:definition "An Act of Association in which an Agent builds, maintains, extends, or advances an ongoing relationship between an organization and one or more external parties or held assets." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000433 'Act of Association' (verified: 'A Social Act wherein an Agent unites with some other Agent in a Planned Act, enterprise or business'; parent cco:ont00001327 Social Act -> cco:ont00000228) because relationship-building is a sustained social uniting, not mere ICE transfer. Rejected cco:ont00000402 'Act of Communication' (a single ICE-transfer event, too narrow), cco:ont00000511 'Act of Planning' (output is a relationship, not a plan), and cco:ont00000168 'Act of Interpersonal Relationship' (restricted to Persons, whereas the external counterparties here are typically Organizations). Recurs across plan/build/manage-relationship nodes (12.0)." .
+
+bpo:ActOfResolution a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Resolution" ;
+    skos:definition "A Planned Act in which an Agent settles a raised case -- such as a customer inquiry, complaint, warranty claim, supplier-recovery matter, or product recall -- by determining and recording its disposition, comprising as needed the receipt, investigation, decision, and closure of the case." ;
+    rdfs:comment "PROPOSE-EXT (D9). CCO 2.0 has no generic resolution/case-management class. A leaf resolve act settles one complaint and records a Descriptive resolution; an end-to-end case-resolution process composes information-processing/appraisal/planning/communication sub-acts and is individuated by carrying a case from open to closed. Both are Planned Acts that settle a matter, so the coherent genus is the generic cco:ont00000228 (Planned Act), neutral on output kind. Rejected cco:ont00000636 (Act of Appraisal: resolution settles a matter rather than merely judging value) and cco:ont00000402 (Act of Communication: the downstream notify/respond to the customer is a separate communication act). Recurs in service/support case management (6.0)." .
+
+bpo:ActOfImprovement a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Act of Improvement" ;
+    skos:definition "A Planned Act in which an Agent modifies an existing process, system, or capability with the intent of raising its performance, quality, or fitness against stated objectives." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000228 (Planned Act): it alters an existing occurrent-type or system rather than merely processing information or composing a new plan. Distinct from bpo:ActOfImplementation (enacts a fixed directive). Rejected cco:ont00000950 'Act of Maintenance' (restores/preserves a Material Artifact's designed Qualities/Functions, whereas improvement raises performance of a process/system). Recurs in improve/reengineer/enhance/sustain processes (13.0)." .
+
+bpo:ActOfScheduling a owl:Class ;
+    rdfs:subClassOf cco:ont00000511 ;   # Act of Planning
+    rdfs:label "Act of Scheduling" ;
+    skos:definition "An Act of Planning in which an Agent fixes the timing, sequencing, and resource allocation of future activities and produces a schedule (a Directive Information Content Entity) that prescribes when, in what order, and by whom those activities are to be performed." ;
+    rdfs:comment "PROPOSE-EXT (D9). Anchored under cco:ont00000511 (Act of Planning, verified: 'A Planned Act that involves making a Plan to achieve some specified Objective'): a schedule is a plan whose differentia is the temporal/resource ordering of activities; its output is a Directive ICE, satisfying the GOLDEN PRINCIPLE. Distinct from bpo:ActOfFormulation (mission/strategy/design) by its specifically temporal/resource-allocation product. Recurs across operations and project categories (4.0, 6.0, 8.0)." .
+
 bpo:ActOfOrganizationalEstablishment a owl:Class ;
     rdfs:subClassOf cco:ont00000228 ;   # Planned Act
     rdfs:label "Act of Organizational Establishment" ;
@@ -1313,12 +1339,11 @@ bpo:P10788 a owl:Class ;
     cco:ont00001754 "APQC Process Classification Framework (Cross-Industry) v7.4, element 10788. The definition is BPO's own wording, written from the element's name and description." ;
     bpo:hierarchyID "9.1.4.7" ;
     bpo:apqcSourceText "Conducting activities to improve cost distribution regularly. Follow or adopt different ways of reducing costs." ;
-    rdfs:label "Continuous Cost Improvement Capability" ;
-    skos:definition "An Organization Capability that inheres in an organization in virtue of its capacity to regularly improve cost distribution, realized in recurring acts of cost reduction." ;
-    rdfs:comment "R5 = capability (R6). 'Continuous/regularly' denotes a standing function with no identifiable single beginning and end, so it is an Organization Capability (cco:ont00000568), not a bounded process. It is realized in cost-improvement acts and is realized-in-attached to its parent 10741 (the capability is realized in the process, per BFO_0000054 domain=realizable/range=process)." ;
+    rdfs:label "Manage continuous cost improvement" ;
+    skos:definition "An Act of Improvement in which an organization repeatedly modifies its cost structure and practices, adopting new ways of reducing costs, with the intent of improving how its costs are distributed." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Improvement, by the test of WP6 decision A (P11035). Earlier: R5 = capability (R6). 'Continuous/regularly' denotes a standing function with no identifiable single beginning and end, so it is an Organization Capability (cco:ont00000568), not a bounded process. It is realized in cost-improvement acts and is realized-in-attached to its parent 10741 (the capability is realized in the process, per BFO_0000054 domain=realizable/range=process). The label named the capability, not the APQC row; restored to the APQC name, and the realized-in restriction to P10741 removed, as for P11035." ;
     skos:example "A standing kaizen-style cost-improvement program run every quarter." ;
-    rdfs:subClassOf cco:ont00000568 ,
-        [ a owl:Restriction ; owl:onProperty obo:BFO_0000054 ; owl:someValuesFrom bpo:P10741 ] .
+    rdfs:subClassOf bpo:ActOfImprovement .
 
 # ================== group 9.2 ==================
 # Perform revenue accounting
@@ -3129,10 +3154,10 @@ bpo:P10894 a owl:Class ;
     bpo:hierarchyID "9.7.2.2" ;
     bpo:apqcSourceText "Taking care of all cash-related activities in the business. Utilize short-term assets that can be easily convertible into cash, such as marketable securities, commercial paper and short-term government bonds, and treasury bills." ;
     rdfs:label "Manage cash equivalents" ;
-    skos:definition "An Organization Capability that is realized in acts of holding and utilizing short-term assets readily convertible into cash." ;
-    rdfs:comment "R5: standing function of maintaining cash-equivalent holdings, no natural end -> Organization Capability (R6)." ;
+    skos:definition "An Act of Financial Transaction in which an organization places surplus cash in, holds, and draws on short-term assets readily convertible into cash, such as treasury bills, commercial paper, and marketable securities." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Financial Transaction, by the test of WP6 decision A (P11035). Earlier: R5: standing function of maintaining cash-equivalent holdings, no natural end -> Organization Capability (R6)." ;
     skos:example "Treasury parks surplus cash in treasury bills and commercial paper." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfFinancialTransaction .
 
 bpo:P10895 a owl:Class ;
     bpo:pcfID "10895" ; bpo:hierarchyID "9.7.2.3" ;
@@ -3163,10 +3188,10 @@ bpo:P10897 a owl:Class ;
     bpo:hierarchyID "9.7.2.5" ;
     bpo:apqcSourceText "Delaying the outflow of funds as long as possible, but encourage the inflow of as fast as possible." ;
     rdfs:label "Manage cash flows" ;
-    skos:definition "An Organization Capability that is realized in acts of optimizing the timing of cash inflows and outflows." ;
-    rdfs:comment "R5: standing optimization function with no natural end -> Organization Capability (R6)." ;
+    skos:definition "An Act of Scheduling in which an organization fixes when its payments are made and its receipts collected, delaying outflows and accelerating inflows, and produces a schedule that prescribes that timing." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Scheduling, by the test of WP6 decision A (P11035). Earlier: R5: standing optimization function with no natural end -> Organization Capability (R6)." ;
     skos:example "Treasury accelerates receivables collection while extending payables." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfScheduling .
 
 bpo:P10898 a owl:Class ;
     bpo:pcfID "10898" ; bpo:hierarchyID "9.7.2.6" ;
@@ -3186,10 +3211,10 @@ bpo:P10899 a owl:Class ;
     bpo:hierarchyID "9.7.2.7" ;
     bpo:apqcSourceText "Maintaining and directing the course of relationships with banking partners." ;
     rdfs:label "Manage and oversee banking relationships" ;
-    skos:definition "An Organization Capability that is realized in acts of maintaining and directing relationships with banking partners." ;
-    rdfs:comment "R5: standing relationship-maintenance function with no natural end -> Organization Capability (R6)." ;
+    skos:definition "An Act of Relationship Management in which an organization maintains and directs the course of its relationships with its banking partners over time." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Relationship Management, by the test of WP6 decision A (P11035). Earlier: R5: standing relationship-maintenance function with no natural end -> Organization Capability (R6)." ;
     skos:example "Treasury holds quarterly reviews with its relationship banks." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfRelationshipManagement .
 
 bpo:P10900 a owl:Class ;
     bpo:pcfID "10900" ; bpo:hierarchyID "9.7.2.8" ;
@@ -3337,10 +3362,10 @@ bpo:P10908 a owl:Class ;
     bpo:hierarchyID "9.7.4.2" ;
     bpo:apqcSourceText "Maintaining smooth relations with financial investment banks that help availing loans and services." ;
     rdfs:label "Manage financial intermediary relationships" ;
-    skos:definition "An Organization Capability that is realized in acts of maintaining relationships with financial intermediaries that provide loans and services." ;
-    rdfs:comment "R5: standing relationship-maintenance function -> Organization Capability (R6)." ;
+    skos:definition "An Act of Relationship Management in which an organization maintains its relationships with the investment banks and other financial intermediaries through which it obtains loans and financial services." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Relationship Management, by the test of WP6 decision A (P11035). Earlier: R5: standing relationship-maintenance function -> Organization Capability (R6)." ;
     skos:example "Treasury maintains its panel of investment-banking counterparties." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfRelationshipManagement .
 
 bpo:P10909 a owl:Class ;
     bpo:pcfID "10909" ;
@@ -3348,10 +3373,10 @@ bpo:P10909 a owl:Class ;
     bpo:hierarchyID "9.7.4.3" ;
     bpo:apqcSourceText "Managing and maintaining enough liquidity in form of cash and cash equivalents in the business to meet urgent and timely requirements" ;
     rdfs:label "Manage liquidity" ;
-    skos:definition "An Organization Capability that is realized in acts of maintaining sufficient cash and cash equivalents to meet the organization's obligations." ;
-    rdfs:comment "R5: standing liquidity-maintenance function with no natural end -> Organization Capability (R6)." ;
+    skos:definition "An Act of Financial Transaction in which an organization moves funds between cash, cash equivalents, and other Financial Instruments so as to keep enough liquidity to meet its urgent and timely obligations." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Financial Transaction, by the test of WP6 decision A (P11035). Earlier: R5: standing liquidity-maintenance function with no natural end -> Organization Capability (R6)." ;
     skos:example "Treasury keeps a liquidity buffer sized to a stressed cash-outflow scenario." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfFinancialTransaction .
 
 bpo:P10910 a owl:Class ;
     bpo:pcfID "10910" ;
@@ -3359,10 +3384,10 @@ bpo:P10910 a owl:Class ;
     bpo:hierarchyID "9.7.4.4" ;
     bpo:apqcSourceText "Managing the exposure incurred by the issuer for providing credit to the borrower." ;
     rdfs:label "Manage issuer exposure" ;
-    skos:definition "An Organization Capability that is realized in acts of controlling the credit exposure incurred toward issuers and borrowers." ;
-    rdfs:comment "R5: standing exposure-control function -> Organization Capability (R6)." ;
+    skos:definition "An Act of Monitoring in which an organization tracks the credit exposure it has incurred toward issuers and borrowers against its limits and produces a Descriptive Information Content Entity that represents that exposure." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Monitoring, by the test of WP6 decision A (P11035). Earlier: R5: standing exposure-control function -> Organization Capability (R6)." ;
     skos:example "Treasury monitors and caps exposure to each bond issuer in the portfolio." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfMonitoring .
 
 bpo:P10911 a owl:Class ;
     bpo:pcfID "10911" ; bpo:hierarchyID "9.7.4.5" ;
@@ -3723,10 +3748,10 @@ bpo:P16958 a owl:Class ;
     bpo:hierarchyID "9.7.6" ;
     bpo:apqcSourceText "Handling cases that involve financial fraud. Resolve disputes." ;
     rdfs:label "Manage financial fraud/dispute cases" ;
-    skos:definition "An Organization Capability that is realized in acts of handling financial-fraud cases and resolving disputes." ;
-    rdfs:comment "R5: standing case-handling function with no decomposed children and no natural end -> Organization Capability (R6)." ;
+    skos:definition "An Act of Resolution in which an Agent settles a case of suspected financial fraud or a financial dispute, by receiving, investigating, deciding and closing it." ;
+    rdfs:comment "Backlog decision 1 (BPO architect, 2026-11-20; docs/wp6/backlog-assessment-1-treasury.md): the APQC row names an activity that is performed, so this class is a process, an Act of Resolution, by the test of WP6 decision A (P11035). Earlier: R5: standing case-handling function with no decomposed children and no natural end -> Organization Capability (R6)." ;
     skos:example "A treasury controls team investigating and resolving suspected payment fraud." ;
-    rdfs:subClassOf cco:ont00000568 .
+    rdfs:subClassOf bpo:ActOfResolution .
 
 # ================== group 9.8 ==================
 # Manage internal controls. 9.8 (PCF 10735) is a standing function ->

@@ -7,9 +7,23 @@ incorrect classes**. Nothing here changes the ontology.
 
 ## The backlog
 
-`capability-as-process-backlog.tsv`, one row per class: the 37 `bpo:P<id>` classes
-modelled as Organization Capabilities (`cco:ont00000568`). Gate F's baseline is 37
-(39 until 2026-11-03).
+`capability-as-process-backlog.tsv`, one row per class: the `bpo:P<id>` classes
+modelled as Organization Capabilities (`cco:ont00000568`). Gate F's baseline is **29**:
+39 until 2026-11-03 (decision A), and 37 until 2026-11-20 (backlog decision 1, below).
+
+**Backlog decision 1 (BPO architect, 2026-11-20).** The eight classes the BCO depends on
+were assessed (`backlog-assessment-1-treasury.md`) and are now acts. They are out of the
+TSV:
+
+- P10899 and P10908: Relationship Management.
+- P16958: Resolution.
+- P10788: Improvement, with its APQC label restored and its realized-in restriction
+  removed.
+- P10894 and P10909: Financial Transaction.
+- P10910: Monitoring.
+- P10897: Scheduling.
+
+The sections below were written for the 37, and still hold for the 29 that remain.
 
 Each needs its own assessment: does the APQC row name an **activity** that is
 performed, whose standing capacity is a separate capability (the P11035 case), or a

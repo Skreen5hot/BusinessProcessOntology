@@ -29,7 +29,7 @@ CLI = ROOT / "tools" / "refintegrity" / "src" / "ri-cli.mjs"
 
 # FR-18 baseline (R1.1). Update deliberately if the corpus changes (and say why in the commit).
 BASELINE = {"dangling_ref": 0, "readable_label": 0,
-            "capability-as-process": 37,   # 39 until 2026-11-03: P11035/P11036 repaired (decision A)
+            "capability-as-process": 29,   # 39 until 2026-11-03 (decision A), 37 until 2026-11-20 (backlog decision 1)
             "pcf-without-P-iri": 0}
 
 def modules() -> list[str]:
