@@ -112,7 +112,13 @@ Full table in methodology §6 and `src/apqc_transform/config.py` (`CCO` dict). H
 `1986` has output · `1808` is about. BFO: `0000015` process · `0000040` material entity ·
 `0000017` realizable entity · `0000023` role · `0000054` realized in · `0000196` bearer of.
 
-## CURRENT PHASE — capability/role bridge **DELIVERED** (`ontology/capabilities_*.ttl`)
+## PAUSED 2026-11-20 — read `HANDOFF.md` first
+
+`HANDOFF.md` has the current state, the open items and owners, the communications check to
+run at session start, and the Windows/OneDrive working rules. It supersedes the "current
+phase" framing below. The section below is now background: Phase 1, delivered.
+
+## Capability/role bridge — **DELIVERED** (`ontology/capabilities_*.ttl`)
 
 **Authoritative brief: `PHASE1.md`.** The process→agent dispatch bridge is built and validated
 across all 13 sections. Governing distinction: **Capability** (`cco:ont00001379` Agent Capability —
